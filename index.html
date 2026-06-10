@@ -341,6 +341,32 @@ select.inp{appearance:none;-webkit-appearance:none;padding-right:38px;cursor:poi
 .step-arrow{flex:0 0 auto;width:46px;height:46px;border-radius:50%;border:2px solid var(--brand);color:var(--brand);display:grid;place-items:center}
 .step-arrow svg{width:20px;height:20px}
 
+/* =========================================================
+   What We Ship — category grid
+   ========================================================= */
+.ship-section{background:#fff;padding:78px 0 88px;border-top:1px solid var(--line)}
+.ship-head{max-width:760px;margin:0 0 36px}
+.ship-eyebrow{font-family:var(--font-display);font-weight:700;font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--brand);margin:0 0 12px}
+.ship-head h2{font-family:var(--font-display);font-weight:800;font-size:clamp(2rem,3.6vw,2.9rem);letter-spacing:-.01em;color:#101a3d;margin:0 0 14px}
+.ship-sub{font-size:18px;line-height:1.55;color:#586079;margin:0}
+.ship-grid{display:grid;grid-template-columns:1fr 1fr;gap:26px}
+.ship-card{
+  background:#fff;border:1px solid var(--line);border-radius:16px;overflow:hidden;
+  box-shadow:0 14px 34px -26px rgba(13,26,80,.4);
+  display:flex;flex-direction:column;transition:transform .18s ease,box-shadow .18s ease;
+}
+.ship-card:hover{transform:translateY(-4px);box-shadow:0 26px 54px -28px rgba(13,26,80,.5)}
+.ship-img{aspect-ratio:612/229;overflow:hidden;background:#eef2f8}
+.ship-img img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .4s ease}
+.ship-card:hover .ship-img img{transform:scale(1.04)}
+.ship-body{padding:22px 24px 24px}
+.ship-body h3{font-family:var(--font-display);font-weight:800;font-size:21px;color:#101a3d;margin:0 0 9px}
+.ship-body p{font-size:15.5px;line-height:1.55;color:#586079;margin:0 0 16px}
+.ship-link{display:inline-flex;align-items:center;gap:7px;color:var(--brand);font-weight:700;font-size:15px;font-family:var(--font-display)}
+.ship-link svg{width:17px;height:17px;transition:transform .15s ease}
+.ship-link:hover{color:var(--brand-press)}
+.ship-link:hover svg{transform:translateX(3px)}
+
 /* smooth in-page nav + offset for the sticky header */
 html{scroll-behavior:smooth}
 section[id]{scroll-margin-top:104px}
@@ -378,6 +404,7 @@ section[id]{scroll-margin-top:104px}
 @media (max-width:760px){
   .review-grid{grid-template-columns:1fr 1fr}
   .reviews-head{align-items:flex-start}
+  .ship-grid{grid-template-columns:1fr}
 }
 @media (max-width:600px){
   .btn-call{padding:11px 15px}
@@ -822,6 +849,55 @@ body.ready .reveal{opacity:1;transform:none}
         <div class="step-illus"><img src="assets/step-03.jpg" alt="Step 3: track your vehicle in transit from pickup to delivery" loading="lazy"></div>
         <h3>Track Delivery</h3>
         <p>Your vehicle is transported nationwide with support from pickup through final delivery.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== WHAT WE SHIP ===================== -->
+<section class="ship-section" id="services">
+  <div class="container">
+    <div class="ship-head">
+      <p class="ship-eyebrow">What We Ship</p>
+      <h2>We Ship More Than Cars</h2>
+      <p class="ship-sub">Nationwide transport solutions for vehicles, household goods, equipment, and freight.</p>
+    </div>
+
+    <div class="ship-grid">
+      <article class="ship-card">
+        <div class="ship-img"><img src="assets/ship-vehicles.jpg" alt="Blue auto-transport carrier loaded with cars and a boat on a mountain highway" loading="lazy"></div>
+        <div class="ship-body">
+          <h3>Vehicles &amp; Boats</h3>
+          <p>Cars, trucks, motorcycles, RVs, and boats shipped nationwide.</p>
+          <a class="ship-link" href="#">Learn More <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </div>
+      </article>
+
+      <article class="ship-card">
+        <div class="ship-img"><img src="assets/ship-household.jpg" alt="Living room with a sofa and packed moving boxes ready for transport" loading="lazy"></div>
+        <div class="ship-body">
+          <h3>Household Items</h3>
+          <p>Furniture, boxes, and personal items moved with care.</p>
+          <a class="ship-link" href="#">Learn More <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </div>
+      </article>
+
+      <article class="ship-card">
+        <div class="ship-img"><img src="assets/ship-equipment.jpg" alt="Green tractor secured on a flatbed trailer for heavy equipment transport" loading="lazy"></div>
+        <div class="ship-body">
+          <h3>Heavy Equipment</h3>
+          <p>Tractors, machinery, and oversized equipment transport.</p>
+          <a class="ship-link" href="#">Learn More <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </div>
+      </article>
+
+      <article class="ship-card">
+        <div class="ship-img"><img src="assets/ship-freight.jpg" alt="Palletized and shrink-wrapped cargo in a warehouse for freight shipping" loading="lazy"></div>
+        <div class="ship-body">
+          <h3>Freight</h3>
+          <p>Palletized cargo, crates, and commercial freight shipping.</p>
+          <a class="ship-link" href="#">Learn More <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </div>
       </article>
     </div>
   </div>
