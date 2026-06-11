@@ -480,10 +480,15 @@ section[id]{scroll-margin-top:104px}
    Responsive
    ========================================================= */
 @media (max-width:1180px){
-  .hero-grid{grid-template-columns:minmax(0,1fr);gap:36px;padding:54px 24px 60px}
-  .hero-copy{max-width:640px}
+  .hero-grid{grid-template-columns:minmax(0,1fr);gap:28px;padding:54px 24px 60px}
+  .hero-copy{display:contents}
+  .hero-head,.hero-rest{max-width:640px;width:100%}
+  .hero-head{order:1}
+  .quote-card{order:2;max-width:520px;width:100%}
+  .hero-rest{order:3}
+  .hero-head h1{margin-bottom:0}
+  .eyebrow{display:none}
   .lede{max-width:520px}
-  .quote-card{max-width:520px;width:100%}
   .hero-overlay{background:linear-gradient(180deg, rgba(4,9,22,.72) 0%, rgba(4,9,22,.8) 55%, rgba(4,9,22,.88) 100%)}
 }
 @media (max-width:1260px){
@@ -700,8 +705,11 @@ body.ready .reveal{opacity:1;transform:none}
 
   <div class="container hero-grid">
     <div class="hero-copy">
+      <div class="hero-head">
       <p class="eyebrow reveal">Licensed&nbsp;•&nbsp;Insured&nbsp;•&nbsp;Nationwide</p>
       <h1 class="reveal d2">Reliable Nationwide<br>Auto Transport</h1>
+      </div>
+      <div class="hero-rest">
       <p class="lede reveal d2">Licensed, insured vehicle shipping with transparent pricing, vetted carriers, and support from quote to delivery.</p>
 
       <ul class="trust-list reveal d3">
@@ -729,6 +737,7 @@ body.ready .reveal{opacity:1;transform:none}
         <div class="stat"><span class="num">50+</span><span class="lbl">States Served</span></div>
         <div class="stat"><span class="num">100%</span><span class="lbl">Insured Transport</span></div>
         <div class="stat"><span class="num">24/7</span><span class="lbl">Support &amp; Tracking</span></div>
+      </div>
       </div>
     </div>
 
