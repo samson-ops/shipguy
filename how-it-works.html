@@ -580,6 +580,14 @@ body.ready .reveal{opacity:1;transform:none}
 
 .menu.menu-mega{display:grid;grid-template-columns:1fr 1fr;column-gap:4px;min-width:452px}
 .menu.menu-mega .menu-all{grid-column:1 / -1;margin-top:6px;padding-top:12px;border-top:1px solid var(--line);color:var(--brand);font-weight:700}
+
+.related-section{background:#f5f8fc;padding:52px 0 60px;border-top:1px solid var(--line)}
+.related-section h2{text-align:center;font-family:var(--font-display);font-weight:800;font-size:1.4rem;color:#101a3d;margin:0 0 26px}
+.related-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.related-card{display:flex;align-items:center;justify-content:space-between;gap:10px;background:#fff;border:1px solid var(--line);border-radius:12px;padding:16px 18px;font-family:var(--font-display);font-weight:700;font-size:14.5px;color:#101a3d;transition:border-color .15s ease,color .15s ease}
+.related-card:hover{border-color:var(--brand);color:var(--brand)}
+.related-card svg{width:16px;height:16px;color:var(--brand);flex:0 0 auto}
+@media (max-width:760px){.related-grid{grid-template-columns:1fr}}
 </style>
 <script type="application/ld+json">
 {
@@ -615,7 +623,17 @@ body.ready .reveal{opacity:1;transform:none}
 
     <nav class="main-nav" aria-label="Primary">
       <a href="index.html#top">Home</a>
-      <a href="index.html#how">How It Works</a>
+      <div class="has-menu">
+        <button class="nav-toggle-btn" aria-haspopup="true" aria-expanded="false">How It Works
+          <span class="chev" aria-hidden="true"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></span>
+        </button>
+        <div class="menu" role="menu">
+          <a href="how-it-works.html" role="menuitem">How It Works</a>
+          <a href="car-shipping-cost.html" role="menuitem">Car Shipping Costs</a>
+          <a href="cross-country-car-shipping.html" role="menuitem">Cross Country Car Shipping</a>
+          <a href="car-shipping-preparation.html" role="menuitem">Car Prep Guide</a>
+        </div>
+      </div>
       <div class="has-menu">
         <button class="nav-toggle-btn" aria-haspopup="true" aria-expanded="false">Services
           <span class="chev" aria-hidden="true"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></span>
@@ -665,7 +683,11 @@ body.ready .reveal{opacity:1;transform:none}
   <nav class="mobile-nav" id="mobileNav" aria-label="Mobile">
     <div class="inner">
       <a href="index.html#top">Home</a>
-      <a href="index.html#how">How It Works</a>
+      <span class="m-sub">How It Works</span>
+      <a href="how-it-works.html">Overview</a>
+      <a href="car-shipping-cost.html">Car Shipping Costs</a>
+      <a href="cross-country-car-shipping.html">Cross Country Car Shipping</a>
+      <a href="car-shipping-preparation.html">Car Prep Guide</a>
       <span class="m-sub">Services</span>
                   <a href="open-car-transport.html">Open Car Transport</a>
       <a href="enclosed-auto-transport.html">Enclosed Auto Transport</a>
@@ -767,6 +789,15 @@ body.ready .reveal{opacity:1;transform:none}
 
   </div>
 </section>
+
+<!-- guides --><section class="related-section"><div class="container">
+      <h2>Car Shipping Guides</h2>
+      <div class="related-grid">
+        <a class="related-card" href="car-shipping-cost.html">Car Shipping Costs <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <a class="related-card" href="cross-country-car-shipping.html">Cross Country Car Shipping <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <a class="related-card" href="car-shipping-preparation.html">Car Prep Guide <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </div>
+</div></section>
 
 <!-- ===================== FINAL CTA ===================== -->
 <section class="cta-band" id="get-started">
