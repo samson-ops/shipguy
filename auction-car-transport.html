@@ -486,7 +486,7 @@ section[id]{scroll-margin-top:104px}
   .quote-card{max-width:520px;width:100%}
   .hero-overlay{background:linear-gradient(180deg, rgba(4,9,22,.72) 0%, rgba(4,9,22,.8) 55%, rgba(4,9,22,.88) 100%)}
 }
-@media (max-width:1180px){
+@media (max-width:1260px){
   .main-nav{display:none}
   .icon-burger{display:inline-flex}
   .header-inner{gap:14px;justify-content:space-between}
@@ -495,7 +495,7 @@ section[id]{scroll-margin-top:104px}
     display:block;overflow:hidden;max-height:0;background:#fff;border-top:1px solid transparent;
     transition:max-height .3s ease,border-color .3s ease;
   }
-  .site-header.nav-open .mobile-nav{max-height:520px;border-top-color:var(--line)}
+  .site-header.nav-open .mobile-nav{max-height:85vh;max-height:calc(100dvh - 64px);overflow-y:auto;-webkit-overflow-scrolling:touch;border-top-color:var(--line)}
   .mobile-nav .inner{padding:10px 24px 22px;display:grid;gap:4px}
   .mobile-nav a{padding:13px 12px;border-radius:10px;font-weight:600;color:var(--ink);font-size:16px}
   .mobile-nav a:hover{background:var(--brand-tint)}
@@ -597,6 +597,8 @@ body.ready .reveal{opacity:1;transform:none}
 @media (max-width:900px){.svc-grid{grid-template-columns:1fr 1fr}.related-grid{grid-template-columns:1fr 1fr}}
 @media (max-width:560px){.svc-grid{grid-template-columns:1fr}.related-grid{grid-template-columns:1fr}}
 
+
+@media (max-width:460px){.footer-top{grid-template-columns:1fr;gap:28px}}/* resp-polish-footer */
 </style>
 <script type="application/ld+json">
 {
