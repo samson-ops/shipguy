@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Enclosed Auto Transport — Protected Vehicle Shipping | Ship Guy</title>
-<meta name="description" content="Enclosed auto transport offers fully covered, premium protection for classic, luxury, and high-value vehicles. Learn how enclosed car shipping works and what it costs.">
+<title>California Auto Transport — Car Shipping to &amp; from California | Ship Guy</title>
+<meta name="description" content="Moving a vehicle to, from, or within California doesn&#x27;t have to be a headache. This guide covers everything you need to know about pricing, timelines, s…">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
@@ -273,7 +273,7 @@ select.inp{appearance:none;-webkit-appearance:none;padding-right:38px;cursor:poi
 .reviews-head{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;flex-wrap:wrap;margin-bottom:30px}
 .reviews-head h2{font-size:clamp(1.7rem,2.6vw,2.1rem);font-weight:800;color:var(--brand)}
 .reviews-head p{margin:8px 0 0;color:var(--muted);font-size:15.5px}
-.rating{display:flex;align-items:center;gap:12px}
+.rating{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
 .rating .score{font-family:var(--font-display);font-weight:800;font-size:22px;color:var(--ink)}
 .stars{display:inline-flex;gap:2px;color:var(--star)}
 .stars svg{width:18px;height:18px}
@@ -480,10 +480,15 @@ section[id]{scroll-margin-top:104px}
    Responsive
    ========================================================= */
 @media (max-width:1180px){
-  .hero-grid{grid-template-columns:minmax(0,1fr);gap:36px;padding:54px 24px 60px}
-  .hero-copy{max-width:640px}
+  .hero-grid{grid-template-columns:minmax(0,1fr);gap:28px;padding:54px 24px 60px}
+  .hero-copy{display:contents}
+  .hero-head,.hero-rest{max-width:640px;width:100%}
+  .hero-head{order:1}
+  .quote-card{order:2;max-width:520px;width:100%}
+  .hero-rest{order:3}
+  .hero-head h1{margin-bottom:0}
+  .eyebrow{display:none}
   .lede{max-width:520px}
-  .quote-card{max-width:520px;width:100%}
   .hero-overlay{background:linear-gradient(180deg, rgba(4,9,22,.72) 0%, rgba(4,9,22,.8) 55%, rgba(4,9,22,.88) 100%)}
 }
 @media (max-width:1180px){
@@ -504,6 +509,7 @@ section[id]{scroll-margin-top:104px}
 @media (max-width:980px){
   .wc-bento{grid-template-columns:1fr}
   .loc-bento{grid-template-columns:1fr;gap:32px}
+  .review-grid{grid-template-columns:1fr 1fr}
 }
 @media (max-width:880px){
   .steps-row{flex-direction:column;gap:0;max-width:440px;margin:0 auto}
@@ -544,6 +550,31 @@ section[id]{scroll-margin-top:104px}
   .step .slabel{font-size:11.5px}
 }
 
+/* compact hero on laptop screens only (~25% shorter) */
+@media (min-width:1181px) and (max-width:1600px){
+  .hero-grid{padding-top:34px;padding-bottom:40px;gap:40px}
+  .eyebrow{margin-bottom:12px}
+  .hero-copy h1{font-size:clamp(2rem,3vw,2.5rem);margin-bottom:14px}
+  .lede{font-size:15.5px;margin-bottom:18px}
+  .trust-list{margin-bottom:16px;gap:9px}
+  .trust-list li{font-size:14.5px}
+  .trust-ic{width:30px;height:30px}
+  .trust-ic svg{width:17px;height:17px}
+  .hero-divider{margin-bottom:16px}
+  .stat .num{font-size:26px}
+  .stat .lbl{font-size:12px;margin-top:5px}
+  .quote-card{padding:20px 24px 18px}
+  .quote-card h2{font-size:22px;margin-bottom:13px}
+  .steps{margin-bottom:13px}
+  .step .dot{width:30px;height:30px}
+  .field{margin-bottom:9px}
+  .flabel{margin-bottom:4px}
+  .inp{height:40px}
+  .opt{padding:8px 12px}
+  .btn-primary{height:46px}
+  .assure{margin-top:8px}
+}
+
 /* reduced motion */
 @media (prefers-reduced-motion:reduce){
   *{animation-duration:.001ms!important;transition-duration:.001ms!important}
@@ -555,6 +586,11 @@ section[id]{scroll-margin-top:104px}
 body.ready .reveal{opacity:1;transform:none}
 .reveal.d2{transition-delay:.08s}
 .reveal.d3{transition-delay:.16s}
+
+.menu.menu-mega{display:grid;grid-template-columns:1fr 1fr;column-gap:4px;min-width:452px}
+.menu.menu-mega .menu-all{grid-column:1 / -1;margin-top:6px;padding-top:12px;border-top:1px solid var(--line);color:var(--brand);font-weight:700}
+
+@media (max-width:460px){.footer-top{grid-template-columns:1fr;gap:28px}}/* resp-polish-footer */
 /* ===== Subpage / article / services styles ===== */
 .page-hero{background:linear-gradient(135deg,#0a2a9e 0%, var(--brand) 60%, #1f54e0 100%);color:#fff;padding:62px 0 56px}
 .crumbs{display:flex;flex-wrap:wrap;gap:9px;font-size:13.5px;font-weight:600;color:#bcd2f8;margin-bottom:16px}
@@ -594,19 +630,20 @@ body.ready .reveal{opacity:1;transform:none}
 @media (max-width:900px){.svc-grid{grid-template-columns:1fr 1fr}.related-grid{grid-template-columns:1fr 1fr}}
 @media (max-width:560px){.svc-grid{grid-template-columns:1fr}.related-grid{grid-template-columns:1fr}}
 
+.article table{width:100%;border-collapse:collapse;margin:16px 0 22px;font-size:15px}
+.article table td,.article table th{border:1px solid var(--line);padding:10px 14px;text-align:left;vertical-align:top}
+.article table tr:nth-child(even){background:#f7f9fd}
+.article table td:first-child{font-weight:600;color:#101a3d}
+.table-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:0 0 6px}
+.article h2{margin-top:30px}
+@media (max-width:560px){.article table{font-size:13.5px}.article table td,.article table th{padding:8px 10px}}
 
-.menu.menu-mega{display:grid;grid-template-columns:1fr 1fr;column-gap:4px;min-width:452px}
-.menu.menu-mega .menu-all{grid-column:1 / -1;margin-top:6px;padding-top:12px;border-top:1px solid var(--line);color:var(--brand);font-weight:700}
-
-@media (max-width:460px){.footer-top{grid-template-columns:1fr;gap:28px}}/* resp-polish-footer */
 </style>
 <script type="application/ld+json">
-{
-  "@context":"https://schema.org","@graph":[
-  {"@type":"Service","name":"Enclosed Auto Transport","serviceType":"Auto transport","provider":{"@type":"Organization","name":"Ship Guy","telephone":"+1-866-280-3481"},"areaServed":{"@type":"Country","name":"United States"},"description":"Enclosed auto transport offers fully covered, premium protection for classic, luxury, and high-value vehicles. Learn how enclosed car shipping works and what it costs."},
-  {"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"index.html"},{"@type":"ListItem","position":2,"name":"Services","item":"services.html"},{"@type":"ListItem","position":3,"name":"Enclosed Auto Transport","item":"enclosed-auto-transport.html"}]}
-  ]
-}
+{"@context":"https://schema.org","@graph":[
+{"@type":"Service","serviceType":"Auto Transport","name":"California Auto Transport","areaServed":{"@type":"State","name":"California"},"provider":{"@type":"Organization","name":"Ship Guy","telephone":"+1-866-280-3481"},"description":"Moving a vehicle to, from, or within California doesn&#x27;t have to be a headache. This guide covers everything you need to know about pricing, timelines, s…"},
+{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"index.html"},{"@type":"ListItem","position":2,"name":"California Auto Transport","item":"california-auto-transport.html"}]}
+]}
 </script>
 </head>
 <body>
@@ -698,65 +735,411 @@ body.ready .reveal{opacity:1;transform:none}
   </nav>
 </header>
 
-<!-- ===================== PAGE HERO ===================== -->
-<section class="page-hero"><div class="container">
-  <nav class="crumbs" aria-label="Breadcrumb"><a href="index.html">Home</a><span>/</span><a href="services.html">Services</a><span>/</span><span aria-current="page">Enclosed Auto Transport</span></nav>
-  <h1>Enclosed Auto Transport</h1>
-  <p class="page-hero-sub">Fully enclosed, premium protection for classic, luxury, and high-value vehicles.</p>
-</div></section>
+<!-- ===================== HERO ===================== -->
+<section class="hero">
+  <div class="hero-media" aria-hidden="true">
+    <img class="hero-img" alt="" src="assets/hero.jpg">
+    <div class="hero-overlay"></div>
+  </div>
 
-<section class="article-section"><div class="container article">
-<p class="article-lead">When your vehicle is rare, valuable, or simply irreplaceable, enclosed auto transport gives it the white-glove protection it deserves. Here's how enclosed car shipping works, what it costs, and when it's the right call.</p>
-
-<h2>What Is Enclosed Auto Transport?</h2>
-<p>Enclosed auto transport ships your vehicle inside a fully covered trailer rather than on an open deck. Sealed walls and a roof shield your car from rain, snow, road salt, dust, and debris for the entire journey. Enclosed trailers typically carry fewer vehicles than open carriers — often two to seven — and many use soft straps and hydraulic liftgates to load low-clearance cars without risk to bumpers or undercarriages.</p>
-<p>This is the same level of care used to move exotic cars to auctions, show vehicles between events, and high-value inventory between dealerships. With Ship Guy, your enclosed shipment is handled by a licensed, insured carrier from our vetted network that specializes in premium transport.</p>
-
-<h2>How Enclosed Car Shipping Works</h2>
-<p>Enclosed transport follows the same simple three steps as any Ship Guy shipment, with extra attention at every stage. You start with a free quote, then we match your vehicle to an enclosed carrier and coordinate a pickup window around your schedule. At pickup, the driver performs a detailed condition inspection, documents it on the Bill of Lading, and loads your vehicle using equipment designed for valuable cars. Throughout transit you can track progress and reach our 24/7 support team, and at delivery you inspect the vehicle against the pickup report before signing off.</p>
-<p>Because enclosed carriers are fewer in number and in higher demand, they can take a little longer to schedule than open trucks. Booking ahead helps secure the best carrier and timing for your vehicle.</p>
-
-<h2>How Much Does Enclosed Transport Cost?</h2>
-<p>Enclosed transport costs more than open transport — typically a meaningful premium — because the trailers carry fewer vehicles, require specialized equipment, and offer a higher level of protection. Your exact price depends on distance, vehicle size and value, the type of enclosed trailer, your timing, and route demand.</p>
-<p>For many owners, the added cost is well worth it: when you're shipping a vehicle worth tens or hundreds of thousands of dollars, full protection from the elements and road hazards is inexpensive peace of mind. As with every Ship Guy shipment, your quote is all-in with no hidden fees and no upfront deposit — you pay only once your vehicle is dispatched.</p>
-
-<h2>When Should You Choose Enclosed Transport?</h2>
-<p>Enclosed auto transport is the right choice when your vehicle is too valuable, rare, or delicate to expose to the open road. Consider it for:</p>
-<ul>
-  <li><strong>Classic and antique cars</strong> with original or irreplaceable finishes</li>
-  <li><strong>Luxury and exotic vehicles</strong> from premium manufacturers</li>
-  <li><strong>Sports cars and low-clearance vehicles</strong> that need liftgate loading</li>
-  <li><strong>Show cars and concours vehicles</strong> that must arrive spotless</li>
-  <li><strong>Custom builds, restorations, and high-value inventory</strong></li>
-</ul>
-<p>If your vehicle is a standard daily driver, <a href="open-car-transport.html">open car transport</a> is usually the more practical and economical choice. When in doubt, our team can help you decide.</p>
-
-<h2>Enclosed vs. Open Transport</h2>
-<p>The core trade-off is protection versus price. Open transport is affordable and widely available, and it's perfectly safe for everyday vehicles — it's how new cars reach dealerships. Enclosed transport adds a sealed, weatherproof trailer and gentler handling at a higher cost. If the thought of road spray, a stray pebble, or a sudden storm touching your vehicle makes you uneasy, enclosed is worth it. If your car is replaceable and you want to keep costs down, open is the smart pick.</p>
-
-<h2>How Your Vehicle Is Protected</h2>
-<p>Beyond the covered trailer itself, enclosed transport includes several layers of care. Many carriers use soft, padded straps that secure the wheels instead of the frame, reducing stress on the suspension. Hydraulic liftgates raise low cars gently rather than using steep ramps. Some carriers offer single-vehicle or "top-load" placement for added separation. And every enclosed carrier in our network carries active cargo insurance covering your vehicle in transit — we're happy to confirm coverage details before you book.</p>
-
-<h2>Preparing Your Vehicle for Enclosed Shipping</h2>
-<p>Preparation is similar to open transport, with a few extra notes for valuable cars. Clean the vehicle and take detailed, dated photos to document its exact condition. Remove personal items and toll tags, and note any aftermarket or fragile components such as spoilers or low splitters so the driver can plan loading. Leave about a quarter tank of fuel, disable alarms, and provide one set of keys. If your car has special starting procedures, a battery cutoff, or transport mode, share those instructions with the driver at pickup.</p>
-
-<h2>Single-Car and Multi-Car Enclosed Options</h2>
-<p>Enclosed transport comes in a few configurations, and the right one depends on your vehicle and budget. Multi-car enclosed trailers carry several vehicles at once and offer the full weather protection of an enclosed haul at a more accessible price — a great balance for most luxury and classic cars. Single-car or two-car enclosed carriers provide the highest level of exclusivity and the most direct routing, which collectors often prefer for irreplaceable vehicles. Some carriers also offer features like liftgate loading and "top-load only" placement for added separation. When you request your quote, tell us about your vehicle's value, ground clearance, and timeline, and we'll recommend the enclosed option that fits best.</p>
-
-<h2>Ship with Confidence Through Ship Guy</h2>
-<p>Ship Guy is a licensed, bonded, FMCSA-registered auto transport broker offering enclosed auto transport to and from all 50 states. With transparent all-in pricing, no upfront deposit, a vetted network of premium carriers, real-time tracking, and 24/7 U.S.-based support, your prized vehicle is in careful hands from quote to delivery.</p>
-<p>Ready to protect your investment? <a href="index.html#top">Get your free quote</a> in about 60 seconds, or call <a href="tel:+18662803481">(866) 280-3481</a> to talk through your options. You can also compare <a href="open-car-transport.html">open car transport</a>, explore <a href="door-to-door-car-shipping.html">door-to-door delivery</a>, or see <a href="how-it-works.html">how shipping works</a>.</p>
-
-</div></section>
-
-<!-- related --><section class="related-section"><div class="container">
-      <h2>Explore Other Services</h2>
-      <div class="related-grid">
-        <a class="related-card" href="open-car-transport.html">Open Car Transport <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-        <a class="related-card" href="door-to-door-car-shipping.html">Door-to-Door Shipping <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-        <a class="related-card" href="state-to-state-car-shipping.html">State-to-State Shipping <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-        <a class="related-card" href="expedited-car-shipping.html">Expedited Car Shipping <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+  <div class="container hero-grid">
+    <div class="hero-copy">
+      <div class="hero-head">
+      <p class="eyebrow reveal">Licensed&nbsp;•&nbsp;Insured&nbsp;•&nbsp;Nationwide</p>
+      <h1 class="reveal d2">California Auto Transport With Ship Guy</h1>
       </div>
+      <div class="hero-rest">
+      <p class="lede reveal d2">Moving a vehicle to, from, or within California doesn&#x27;t have to be a headache. This guide covers everything you need to know about pricing, timelines, service types, and preparation so you can make a confident decision and get your car where it needs to be.</p>
+
+      <ul class="trust-list reveal d3">
+        <li>
+          <span class="trust-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/><path d="m9 12 2 2 4-4"/></svg></span>
+          Licensed Broker &amp; Fully Insured
+        </li>
+        <li>
+          <span class="trust-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="2" width="8" height="4" rx="1"/><path d="M9 4H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2h-3"/><path d="m9 14 2 2 4-4"/></svg></span>
+          FMCSA Registered
+        </li>
+        <li>
+          <span class="trust-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></span>
+          Vetted Carrier Network
+        </li>
+        <li>
+          <span class="trust-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M4 13a8 8 0 0 1 16 0"/><rect x="2" y="13" width="4.4" height="7" rx="1.6"/><rect x="17.6" y="13" width="4.4" height="7" rx="1.6"/><path d="M20 19.5v.5a3 3 0 0 1-3 3h-3"/></svg></span>
+          Real-Time Tracking &amp; 24/7 Support
+        </li>
+      </ul>
+
+      <div class="hero-divider reveal d3"></div>
+
+      <div class="stats reveal d3">
+        <div class="stat"><span class="num">50+</span><span class="lbl">States Served</span></div>
+        <div class="stat"><span class="num">100%</span><span class="lbl">Insured Transport</span></div>
+        <div class="stat"><span class="num">24/7</span><span class="lbl">Support &amp; Tracking</span></div>
+      </div>
+      </div>
+    </div>
+
+    <!-- QUOTE CARD -->
+    <div class="quote-card reveal d2">
+      <h2>Get Your Instant Quote</h2>
+
+      <div class="steps" id="steps">
+        <div class="step is-active" data-step="1">
+          <span class="dot"><span class="num">1</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>
+          <span class="slabel">Destination</span>
+        </div>
+        <div class="track" data-track="1"></div>
+        <div class="step" data-step="2">
+          <span class="dot"><span class="num">2</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>
+          <span class="slabel">Vehicle</span>
+        </div>
+        <div class="track" data-track="2"></div>
+        <div class="step" data-step="3">
+          <span class="dot"><span class="num">3</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>
+          <span class="slabel">Contact</span>
+        </div>
+      </div>
+
+      <form id="quoteForm" novalidate>
+        <!-- STEP 1 -->
+        <div class="qstep is-current" data-panel="1">
+          <div class="field">
+            <label class="flabel" for="pickup">Pickup Location</label>
+            <div class="input-wrap">
+              <span class="lead"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg></span>
+              <input class="inp" id="pickup" name="pickup" type="text" placeholder="Enter city or zip code" autocomplete="address-level2" required>
+            </div>
+            <span class="err-msg">Please enter a pickup location.</span>
+          </div>
+
+          <div class="field">
+            <label class="flabel" for="delivery">Delivery Location</label>
+            <div class="input-wrap">
+              <span class="lead"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg></span>
+              <input class="inp" id="delivery" name="delivery" type="text" placeholder="Enter city or zip code" autocomplete="address-level2" required>
+            </div>
+            <span class="err-msg">Please enter a delivery location.</span>
+          </div>
+
+          <div class="field">
+            <label class="flabel" for="date">Pickup Date</label>
+            <div class="input-wrap">
+              <span class="lead"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg></span>
+              <input class="inp" id="date" name="date" type="text" placeholder="Select pickup date" onfocus="this.type='date'" onblur="if(!this.value)this.type='text'">
+            </div>
+          </div>
+
+          <div class="field">
+            <label class="flabel">Trailer Type</label>
+            <div class="opt-grid" data-radio-group>
+              <label class="opt is-selected">
+                <span class="opt-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M10 17V6a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1v10"/><path d="M10 8h7l4 4v4h-2"/><path d="M6 17h2M12 17h2"/><circle cx="6" cy="18" r="2"/><circle cx="17" cy="18" r="2"/></svg></span>
+                <span class="opt-text"><strong>Open Trailer</strong><small>Most common</small></span>
+                <input type="radio" name="trailer" value="open" checked>
+                <span class="radio"></span>
+              </label>
+              <label class="opt">
+                <span class="opt-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="6" width="14" height="11" rx="1.5"/><path d="M16 9h3l3 4v4h-2"/><path d="M6 17h2"/><circle cx="6" cy="18" r="2"/><circle cx="18" cy="18" r="2"/></svg></span>
+                <span class="opt-text"><strong>Enclosed Trailer</strong><small>Extra protection</small></span>
+                <input type="radio" name="trailer" value="enclosed">
+                <span class="radio"></span>
+              </label>
+            </div>
+          </div>
+
+          <button type="button" class="btn-primary" data-next>
+            Next: Vehicle Details
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </button>
+        </div>
+
+        <!-- STEP 2 -->
+        <div class="qstep" data-panel="2">
+          <div class="row-2">
+            <div class="field">
+              <label class="flabel" for="year">Year</label>
+              <div class="input-wrap">
+                <span class="lead"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg></span>
+                <span class="chev-r"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></span>
+                <select class="inp" id="year" name="year"><option value="">Year</option></select>
+              </div>
+            </div>
+            <div class="field">
+              <label class="flabel" for="make">Make</label>
+              <div class="input-wrap">
+                <span class="lead"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12l1.6-4.6A2 2 0 0 1 6.5 6h11a2 2 0 0 1 1.9 1.4L21 12"/><path d="M3 12h18v5a1 1 0 0 1-1 1h-1.2a1 1 0 0 1-1-1v-1H6.2v1a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-5Z"/><circle cx="7.5" cy="14.5" r="1"/><circle cx="16.5" cy="14.5" r="1"/></svg></span>
+                <input class="inp" id="make" name="make" type="text" placeholder="e.g. Toyota">
+              </div>
+            </div>
+          </div>
+
+          <div class="field">
+            <label class="flabel" for="model">Model</label>
+            <div class="input-wrap">
+              <span class="lead"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12l1.6-4.6A2 2 0 0 1 6.5 6h11a2 2 0 0 1 1.9 1.4L21 12"/><path d="M3 12h18v5a1 1 0 0 1-1 1h-1.2a1 1 0 0 1-1-1v-1H6.2v1a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-5Z"/><circle cx="7.5" cy="14.5" r="1"/><circle cx="16.5" cy="14.5" r="1"/></svg></span>
+              <input class="inp" id="model" name="model" type="text" placeholder="e.g. Camry">
+            </div>
+          </div>
+
+          <div class="field">
+            <label class="flabel">Is the vehicle running?</label>
+            <div class="opt-grid" data-radio-group>
+              <label class="opt is-selected">
+                <span class="opt-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5 10 8l4 3 5-4.5"/><path d="M9 16h6"/><circle cx="12" cy="12" r="9"/></svg></span>
+                <span class="opt-text"><strong>Runs &amp; drives</strong><small>Operable</small></span>
+                <input type="radio" name="running" value="yes" checked>
+                <span class="radio"></span>
+              </label>
+              <label class="opt">
+                <span class="opt-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 8v5M12 16h.01"/><circle cx="12" cy="12" r="9"/></svg></span>
+                <span class="opt-text"><strong>Not running</strong><small>Inoperable</small></span>
+                <input type="radio" name="running" value="no">
+                <span class="radio"></span>
+              </label>
+            </div>
+          </div>
+
+          <div class="btn-row">
+            <button type="button" class="btn-ghost" data-back>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 18l-6-6 6-6"/></svg>
+              Back
+            </button>
+            <button type="button" class="btn-primary" data-next>
+              Next: Your Details
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- STEP 3 -->
+        <div class="qstep" data-panel="3">
+          <div class="field">
+            <label class="flabel" for="name">Full Name</label>
+            <div class="input-wrap">
+              <span class="lead"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21v-1a6 6 0 0 1 6-6h4a6 6 0 0 1 6 6v1"/></svg></span>
+              <input class="inp" id="name" name="name" type="text" placeholder="Your name" autocomplete="name" required>
+            </div>
+            <span class="err-msg">Please enter your name.</span>
+          </div>
+          <div class="field">
+            <label class="flabel" for="email">Email</label>
+            <div class="input-wrap">
+              <span class="lead"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></span>
+              <input class="inp" id="email" name="email" type="email" placeholder="you@email.com" autocomplete="email" required>
+            </div>
+            <span class="err-msg">Please enter a valid email.</span>
+          </div>
+          <div class="field">
+            <label class="flabel" for="phone">Phone</label>
+            <div class="input-wrap">
+              <span class="lead"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/></svg></span>
+              <input class="inp" id="phone" name="phone" type="tel" placeholder="(555) 555-5555" autocomplete="tel" required>
+            </div>
+            <span class="err-msg">Please enter a phone number.</span>
+          </div>
+
+          <div class="btn-row">
+            <button type="button" class="btn-ghost" data-back>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 18l-6-6 6-6"/></svg>
+              Back
+            </button>
+            <button type="submit" class="btn-primary">Get My Quote</button>
+          </div>
+
+          <p class="assure">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="11" width="16" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg>
+            No spam — just your quote. Takes about 60 seconds.
+          </p>
+        </div>
+      </form>
+
+      <!-- success -->
+      <div class="quote-success" id="quoteSuccess" aria-live="polite">
+        <div class="success-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></div>
+        <h3>Your quote request is in!</h3>
+        <p>Thanks — a Ship Guy specialist will reach out shortly with your transparent, all-in price.</p>
+        <a class="btn-call" href="tel:+18662803481">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/></svg>
+          Or call us now: (866) 280-3481
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ===================== STATE CONTENT ===================== -->
+<section class="article-section"><div class="container article">
+  <nav class="crumbs" aria-label="Breadcrumb"><a href="index.html">Home</a><span>/</span><span aria-current="page">California Auto Transport</span></nav>
+  <h2>Quick Start: Shipping Your Car To or From California With Ship Guy</h2>
+  <p>Ship Guy specializes in California auto transport, offering fast quotes and stress-free service for customers across the country. Whether you need to ship a car for a cross-country relocation or move a vehicle between California cities, Ship Guy handles the logistics from start to finish.</p>
+  <p>You can ship cars, SUVs, trucks, and motorcycles anywhere in the US to or from California. That includes major cities like Los Angeles, San Diego, San Francisco, Sacramento, and San Jose, as well as smaller communities throughout the state.</p>
+  <p>Here&#x27;s what to expect on timing:</p>
+  <p>Most standard open car transport moves within California (for example, Los Angeles to San Diego) take about 1–2 days once picked up.</p>
+  <p>Cross-country routes like San Diego to New York typically take 7–10 days, depending on weather and traffic conditions.</p>
+  <p>Most shipments to or from California fall in the 5 to 9-day range for interstate moves.</p>
+  <p>Ship Guy offers both open-car transport and enclosed options, plus door-to-door vehicle pickup and delivery, where accessible by truck. Door-to-door service allows for closer pickup and drop-off locations, eliminating the need to drive to a remote terminal.</p>
+  <p>Ready to move your vehicle? Request an instant online quote or call Ship Guy for personalized auto transport services tailored to your route and timeline.</p>
+  <h2>California Auto Transport Basics</h2>
+  <p>California auto transport refers to professional vehicle transport to, from, and within the state using licensed motor carriers. These carriers operate multi-car trailer rigs, either open or enclosed, moving motor vehicles along established highway corridors under federal and state oversight. Strict state regulations apply to vehicle transport in California, so working with a properly credentialed company matters.</p>
+  <p>Major corridors like I-5, I-10, I-15, US-101, and CA-99 are the primary shipping routes in California. Because carriers prefer high-traffic routes for efficient shipping, these interstates keep prices competitive and transit times predictable. California has high transport traffic from major hubs like Los Angeles and San Francisco, which means more carrier availability and better scheduling flexibility on these lanes.</p>
+  <p>Large metro areas such as Los Angeles, San Diego, Sacramento, and San Jose are considered &quot;easy&quot; markets. Frequent truck traffic through these cities translates to more flexible pickup windows, often within 1–3 business days for open transport.</p>
+  <p>Dense or hilly areas present a different challenge. In parts of San Francisco, Oakland, and coastal CA-1 communities, drivers may need to meet at nearby shopping centers or highway exits due to street weight restrictions, steep grades, and narrow roads.</p>
+  <p>Ship Guy coordinates all logistics with vetted car shipping companies and carriers. Rather than juggling calls between brokers and drivers, you get a single point of contact managing your California car shipment from booking through delivery. Customers moving into the state should also plan for California vehicle registration requirements after transport. You should always ensure the transport company is , and Ship Guy verifies this for every carrier in its network.</p>
+  <h2>California Car Shipping Costs in 2026</h2>
+  <p>Car shipping costs change with fuel prices, seasonal demand, and distance. Ship Guy uses up-to-date market data to keep pricing accurate, so you&#x27;re not working off stale numbers from last year. This matters especially in California, where shipping costs are higher due to gas prices - among the highest in the country.</p>
+  <p>Here are sample ranges for open car transport on popular routes:</p>
+  <div class="table-wrap"><table><tbody><tr><td>San Diego → Los Angeles (~120 mi)</td><td>$275–$425</td><td>1–2 days</td></tr><tr><td>San Francisco → Los Angeles (~380 mi)</td><td>$400–$600</td><td>1–2 days</td></tr><tr><td>San Francisco → San Diego (~500 mi)</td><td>$450–$650</td><td>2–3 days</td></tr><tr><td>Los Angeles → Houston (~1,400 mi)</td><td>$850–$1,150</td><td>4–6 days</td></tr><tr><td>San Diego → Miami (~2,400 mi)</td><td>$1,200–$1,500</td><td>7–9 days</td></tr></tbody></table></div>
+  <p>Shipping costs increase with longer distances, though the per-mile rate tends to decrease on longer hauls. Shipping from San Francisco to Los Angeles takes 1–2 days and sits at the lower end of the cost spectrum, while cross-country shipping can take up to 9 days for long distances.</p>
+  <p>Enclosed auto transport typically costs 50% to 100% more than open transport, especially for high-value vehicles or classic car shipments that require extra protection.</p>
+  <p>Key factors that influence your California car shipping cost:</p>
+  <p><strong>Distance</strong>: The single biggest cost driver. Short-hauls under 500 miles have higher per-mile rates but lower total costs.</p>
+  <p><strong>Vehicle type and size</strong>: Vehicle type affects shipping costs - larger vehicles like SUVs and trucks cost more due to weight and space on the trailer.</p>
+  <p><strong>Operable vs inoperable</strong>: Inoperable vehicles require specialized equipment, such as winches, which adds to the price.</p>
+  <p><strong>Open or enclosed transport</strong>: Enclosed adds high cost but provides more protection.</p>
+  <p><strong>Pickup and delivery locations</strong>: Urban areas with easy truck access cost less than remote or restricted addresses.</p>
+  <p><strong>Seasonality</strong>: Summer is the peak season for car shipping in California, and January relocations also push rates upward.</p>
+  <p>Ship Guy provides binding, firm quotes with no hidden fees. Line items like fuel surcharges, insurance, and door-to-door service are included where applicable, so the price you see is the price you pay. Shipping from San Diego can be more expensive than from Los Angeles on certain routes due to corridor positioning and carrier routing preferences.</p>
+  <h2>How California Auto Shipping Works With Ship Guy</h2>
+  <p>Auto transport in California follows a structured process that starts with requesting quotes. Here&#x27;s how Ship Guy&#x27;s car transport process works from start to finish.</p>
+  <h2>Step 1 - Get a Quote</h2>
+  <p>You provide your pickup and delivery cities or ZIP codes, vehicle details (year, make, model), vehicle condition (running or not), and preferred dates. Ship Guy generates an instant or same-day car shipping quote using live market data from current carrier routes.</p>
+  <h2>Step 2 - Book Your Shipment</h2>
+  <p>Once you accept the quote, you confirm the order with Ship Guy and sign a digital transport agreement. This agreement covers terms, insurance information, pickup window, and payment schedule. In major California cities, the estimated pickup window is usually 1–3 business days. Carrier availability on popular corridors tends to be strong, keeping windows tight.</p>
+  <h2>Step 3 - Vehicle Pickup</h2>
+  <p>The carrier calls ahead to coordinate timing. At pickup, the driver performs a visual inspection and marks any existing damage on a Bill of Lading (BOL). Your vehicle is loaded at the curbside or a mutually agreed safe location. Documentation such as the vehicle&#x27;s title, proof of insurance, and vehicle registration may be required before shipping, especially for moves into California, so have it ready.</p>
+  <h2>Step 4 - Transit</h2>
+  <p>Your vehicle is transported via open or enclosed trailer along major California corridors and interstate highways. Ship Guy or the carrier provides periodic updates and an estimated arrival window. Unforeseen delays from weather, wildfires, or highway closures can occasionally shift delivery dates, but Ship Guy communicates changes proactively.</p>
+  <h2>Step 5 - Delivery</h2>
+  <p>Upon arrival, the driver calls ahead, meets you or your authorized representative, and unloads the vehicle. A final inspection is completed by comparing the vehicle&#x27;s condition against the original BOL. You sign the BOL after confirming everything checks out.</p>
+  <p>Ship Guy focuses on door-to-door California car shipping services whenever access allows. If the truck can&#x27;t reach your exact address, Ship Guy arranges convenient meeting points near major roads or parking lots.</p>
+  <h2>Types of California Car Shipping Services Offered by Ship Guy</h2>
+  <p>Ship Guy offers multiple auto transport services so you can match the protection level and budget to your specific situation. California car shipping offers open and enclosed transport options, available on intra-state and cross-country routes.</p>
+  <p>Core service types include:</p>
+  <p><strong>Open car shipping</strong> - the standard, most affordable option for everyday vehicles</p>
+  <p><strong>Enclosed car transport</strong> - fully covered trailers for vehicles needing maximum protection.</p>
+  <p><strong>Cross-country shipping</strong> - to and from California, covering routes to Texas, Florida, New York, and beyond</p>
+  <p><strong>Intra-California regional routes</strong> - LA to Bay Area, SoCal to Sacramento, San Diego to San Jose, and similar corridors</p>
+  <p><strong>Guaranteed pickup service</strong> - for customers who need a firm pickup date rather than a flexible window</p>
+  <p>Ship Guy also coordinates specialized moves: college student relocations, seasonal &quot;snowbird&quot; routes between California and Arizona or Florida, and dealer- or auction-vehicle transport.</p>
+  <p>Need to pick up a vehicle from a California dealership, auction, or private seller? Ship Guy can arrange vehicle pickup at the origin and deliver it directly to a home, storage facility, or business anywhere in the country. Every vehicle shipment is fully insured under the carrier&#x27;s cargo policy while on the truck, and Ship Guy verifies the carrier&#x27;s coverage before dispatch.</p>
+  <h2>Open vs Enclosed Transport: Choosing the Right Option</h2>
+  <p>Most Ship Guy customers use open car transport because it covers the vast majority of shipping needs at a lower price point. But for certain vehicles, an enclosed call is the smarter choice. Understanding the trade-off between open and enclosed transport helps you make the right choice.</p>
+  <h2>Open Car Transport</h2>
+  <p>Open transport is the most common and cost-effective method for shipping motor vehicles. These are the standard multi-car trailer rigs you see on interstates carrying 7–10 vehicles at a time.</p>
+  <p>Benefits of open car shipping:</p>
+  <p>Lower car shipping costs compared to enclosed</p>
+  <p>More frequent truck availability on busy lanes like Los Angeles to Phoenix or San Diego to Las Vegas</p>
+  <p>Faster scheduling because more carriers run open equipment</p>
+  <p>Suitable for standard vehicle shipping of sedans, SUVs, pickups, and minivans</p>
+  <p>The trade-off is that your vehicle rides exposed to weather, road dust, and minor debris. For most daily drivers, this is perfectly acceptable.</p>
+  <h2>Enclosed Car Transport</h2>
+  <p>Enclosed transport uses a fully covered enclosed trailer that shields vehicles from weather, dust, UV exposure, and road debris. Enclosed carriers provide more protection for high-value vehicles and typically carry higher insurance limits - sometimes $250,000 to $1,000,000 per load compared to $100,000–$250,000 on open carriers.</p>
+  <p>Enclosed car shipping is strongly recommended when:</p>
+  <p>The vehicle is valued at over $75,000</p>
+  <p>You&#x27;re shipping luxury, exotic, or other high-end vehicles from California collections.</p>
+  <p>A classic car has been newly restored and needs cosmetic protection.</p>
+  <p>The vehicle has low clearance or custom modifications requiring specialized equipment.</p>
+  <p>Collectors are shipping to auctions in Monterey, Los Angeles, or Scottsdale.</p>
+  <p>Enclosed transport costs 50% to 100% more than open transport, and pickup windows can be longer since fewer carriers run enclosed equipment. If you&#x27;re unsure which option fits, ask Ship Guy for both an open and an enclosed quote so you can compare costs with the level of protection your vehicle needs.</p>
+  <h2>California Routes, Cities, and Regional Considerations</h2>
+  <p>California shipping is shaped by geography, traffic density, and fuel costs. Ship Guy tailors route planning to leverage high-volume corridors while accounting for regional challenges.</p>
+  <h2>High-Volume Corridors</h2>
+  <p>Locations along I-5 are the friendliest for car shipping. This north-south backbone runs from San Diego through Los Angeles, up the Central Valley to Sacramento, and into Oregon. CA-99 parallels I-5 through the agricultural heartland, and US-101 connects Los Angeles to San Jose and beyond through coastal communities. Locations along I-5 are quicker for car shipping because carrier density is highest on these roads.</p>
+  <h2>Popular California Car Shipping Routes</h2>
+  <p>Los Angeles ↔ San Diego</p>
+  <p>San Diego ↔ San Francisco Bay Area</p>
+  <p>Sacramento ↔ Seattle</p>
+  <p>Southern California ↔ Texas and Florida</p>
+  <p>West coast ↔ East Coast (New York, Virginia, Georgia)</p>
+  <h2>Challenging Areas</h2>
+  <p>San Francisco is the most challenging shipping location in California. Steep hills, narrow Victorian-era streets, and strict weight limits mean carriers often can&#x27;t reach residential addresses directly. Customers in central San Francisco or similar hillside neighborhoods should expect to meet the driver at a nearby freeway exit or park-and-ride lot.</p>
+  <p>Coastal roads along CA-1 and remote mountain communities present similar access issues.</p>
+  <h2>Far Northern California</h2>
+  <p>Far northern California towns like Eureka, Redding, and Crescent City see fewer carriers on their routes. This translates to slightly higher rates, longer pickup windows, and occasionally longer transit times due to deadhead mileage. Shipping during the summer peak season further increases delivery times in these areas, as available equipment is first absorbed by higher-volume corridors.</p>
+  <h2>San Diego as a Key Hub</h2>
+  <p>San Diego deserves its own mention. It&#x27;s a major hub for California car shipping with frequent traffic to Arizona, Nevada, Texas, and East Coast destinations.  drive consistent year-round demand, which helps stabilize pricing and carrier availability in the region.</p>
+  <h2>How to Save on Car Shipping in California</h2>
+  <p>Ship Guy helps customers reduce car shipping costs without cutting corners on safety or reliability in California. Here&#x27;s how to save money on your next vehicle shipment.</p>
+  <h2>Book Early</h2>
+  <p>Booking 2–3 weeks in advance improves shipping options and pricing. Booking in advance can save money during peak seasons, giving Ship Guy more time to match your shipment with the most efficient carrier route. This is especially important during summer months and end-of-year relocation cycles.</p>
+  <h2>Stay Flexible on Dates</h2>
+  <p>Allow a multi-day window for both vehicle pickup and delivery. Rigid, single-day requirements limit which carriers can take your load. Flexibility in delivery dates lets Ship Guy optimize routing, often resulting in lower quotes.</p>
+  <h2>Choose Open When Appropriate</h2>
+  <p>Open transport is the most common and cost-effective method for standard vehicles. If your car doesn&#x27;t require the extra protection of an enclosed trailer, choosing open car transport is the easiest way to keep costs down.</p>
+  <h2>Meet Near Major Highways</h2>
+  <p>If you live in a remote area or a neighborhood with difficult truck access, offering to meet the driver near a major highway or a larger city can lower the price. For example, meeting in San Diego instead of a mountain community east of the city may shave dollars off the quote and speed up dispatch.</p>
+  <h2>Ship Multiple Vehicles Together</h2>
+  <p>Customers shipping multiple vehicles - whether for a household move or a dealer shipment - should ask Ship Guy about multi-car discounts. Consolidating vehicles on the same run saves the carrier time and fuel, and those savings often get passed along.</p>
+  <h2>Avoid Peak Timing When Possible</h2>
+  <p>California&#x27;s peak shipping season is during the summer months (May through August). If your schedule allows, shipping in the shoulder months of April or September can mean lower rates and shorter pickup windows.</p>
+  <h2>Preparing Your Vehicle for California Car Transport</h2>
+  <p>Proper preparation protects your vehicle and helps avoid delays during the car shipping process. A few simple steps before pickup day make a noticeable difference.</p>
+  <h2>Wash Your Vehicle</h2>
+  <p>A clean exterior lets the driver clearly document the vehicle&#x27;s condition during the pre-shipment inspection. Dirt and grime can hide existing scratches or chips, making it harder to distinguish pre-existing damage from damage that might occur during transit.</p>
+  <h2>Photograph Everything</h2>
+  <p>Document your vehicle&#x27;s condition with photos before shipping. Capture all four sides, the roof, wheels, and interior on the day of pickup. Save time-stamped images to your phone or cloud storage. This creates a clear record if you need to file a claim later.</p>
+  <h2>Remove Personal Belongings</h2>
+  <p>Remove all personal items from your vehicle before transport. Personal belongings are generally not allowed in the car due to DOT weight limits, and car shipping companies do not insure personal property. This includes phone mounts, toll tags, removable roof racks, and anything stored in the trunk or back seat.</p>
+  <h2>Manage Fuel Level</h2>
+  <p>Keep your fuel tank at about a quarter full during transit. This reduces the weight on the trailer while leaving enough fuel for the driver to move your vehicle on and off the truck at both ends.</p>
+  <h2>Check Mechanical Basics</h2>
+  <p>Before pickup, check tire pressure and coolant levels. Verify that the emergency brake functions properly, and look under the vehicle for fluid leaks. Provide one working key set to the transport driver. If you&#x27;re moving into the state, prepare for California vehicle registration after delivery.</p>
+  <h2>Inoperable or Non-Running Vehicles</h2>
+  <p>Vehicles must comply with basic safety standards to be loaded. Inoperable vehicles require specialized loading equipment, such as winches or liftgates, which Ship Guy can arrange at an additional cost. Let Ship Guy know about the vehicle&#x27;s condition upfront so the right carrier and equipment are assigned.</p>
+  <h2>Receiving Your Vehicle in California</h2>
+  <p>The final handoff matters. A careful inspection at delivery protects you and ensures the car shipment is properly closed out.</p>
+  <h2>Be Present or Send a Representative</h2>
+  <p>Be available or have an authorized representative present during delivery in California. Schedule enough daylight for a thorough inspection, and make sure there&#x27;s adequate space for the truck to park and unload safely.</p>
+  <h2>Compare Against the Bill of Lading</h2>
+  <p>Inspect your vehicle for new damage upon delivery. Carefully compare the vehicle&#x27;s condition to the original Bill of Lading and your pre-shipment photos. Look at every panel, the roof, bumpers, glass, and wheels. If the car arrived with any discrepancies, note them on the paperwork before signing.</p>
+  <h2>What&#x27;s Normal vs What&#x27;s Not</h2>
+  <p>Minor dust or road film is completely normal after long-distance vehicle transport. This washes off easily and doesn&#x27;t damage. New dents, scratches, cracked glass, or missing parts are not normal and should be documented immediately.</p>
+  <h2>If Damage Is Found</h2>
+  <p>If any transport-related damage is found:</p>
+  <p>Notify the driver on the spot.</p>
+  <p>Take clear, close-up photos of the damage.</p>
+  <p>Mark the Bill of Lading with a written description of the issue.</p>
+  <p>Contact Ship Guy promptly for assistance with the carrier&#x27;s insurance claim process.</p>
+  <p>Your vehicle is insured through the carrier&#x27;s cargo policy, which means you have recourse, but proper documentation at delivery is essential.</p>
+  <h2>Delivery in Busy California Locations</h2>
+  <p>In congested areas like Los Angeles, San Diego, or Oakland ports, Ship Guy or the carrier will coordinate delivery to a convenient, truck-friendly area if street access is limited. This keeps the process smooth and avoids the risk of a large trailer getting stuck on a narrow residential street.</p>
+  <h2>Why Californians Choose Ship Guy for Auto Transport Services</h2>
+  <p>Ship Guy is a dedicated partner focused on transparent pricing, reliable scheduling, and responsive customer service throughout every vehicle shipment. No bait-and-switch tactics, no surprise fees, and no disappearing once you&#x27;ve booked.</p>
+  <p>Ship Guy uses a vetted network of licensed, insured carriers specializing in California car shipping on both major and secondary routes. Every carrier&#x27;s FMCSA authority, insurance coverage, and safety record are verified before they&#x27;re dispatched to handle your vehicle.</p>
+  <p>The car shipping experience with Ship Guy is built around stress-free service: dedicated support from quote through delivery, proactive status updates, and hands-on help resolving any issues with carriers or timing. Customer reviews are important to evaluate a transport company&#x27;s reliability, and Ship Guy&#x27;s track record reflects consistent communication and honest timelines.</p>
+  <p>Ship Guy regularly handles moves for:</p>
+  <p>Cross-country relocations to and from the West Coast</p>
+  <p>Vehicle purchases from California dealerships, auctions, and private sellers</p>
+  <p>Military PCS moves</p>
+  <p>Seasonal travel between California and snowbird destinations</p>
+  <p>Dealer inventory transfers and multiple vehicle shipments</p>
+  <p>Ship Guy&#x27;s commitment to realistic pickup windows and honest delivery dates means you&#x27;ll know what to expect - no inflated promises that fall apart once your vehicle is on the road.</p>
+  <p>Get a customized California shipping quote for your route today. Request a quote online or call Ship Guy directly to talk through your vehicle details and timeline.</p>
+  <h2>Car Transportation Areas We Serve Across California</h2>
+  <p>Ship Guy arranges vehicle transport in all California zip codes, covering both major cities and smaller communities from the Oregon border to San Diego.</p>
+  <h2>Key metro areas served:</h2>
+  <p>Los Angeles</p>
+  <p>San Diego</p>
+  <p>San Francisco</p>
+  <p>San Jose</p>
+  <p>Sacramento</p>
+  <p>Fresno</p>
+  <p>Bakersfield</p>
+  <p>Riverside</p>
+  <p>Anaheim</p>
+  <p>Long Beach</p>
+  <p>Oakland</p>
+  <p>Santa Ana</p>
+  <p>Stockton</p>
+  <p>Ship Guy also supports pickup and delivery in coastal cities such as Santa Barbara, Ventura, Monterey, and Santa Cruz, as well as in inland regions including the Central Valley and the Inland Empire. Northern California communities from Redding to Chico to Eureka are also covered, though carrier frequency varies.</p>
+  <h2>Short-Distance California Routes</h2>
+  <p>Routes within 200 miles in California - for example, Los Angeles to Bakersfield or San Diego to Riverside - often move in just a couple of days once a carrier is assigned. These short hops benefit from frequent truck traffic on I-5, CA-99, and I-15.</p>
+  <h2>Long-Haul Routes</h2>
+  <p>Shipping over 2,000 miles to or from California can take up to 9 days in transit, depending on route, weather, and traffic conditions. Popular long-haul destinations include Texas, Florida, New York, Washington, and Arizona.</p>
+  <p>Ship Guy coordinates both origin-in-California and destination-in-California shipments nationwide. Whether you need to ship cars from a San Francisco Bay Area dealership to a buyer in Miami, or move a vehicle directly from Chicago to your new home in San Diego, Ship Guy handles the routing, carrier selection, and communication so your vehicle arrives safely and on schedule.</p>
+  <p>To get started, request your California car shipping quote from Ship Guy today - online or by phone. Tell us your route, your vehicle, and your timeline, and we&#x27;ll handle the rest.</p>
 </div></section>
 
 <!-- ===================== FINAL CTA ===================== -->

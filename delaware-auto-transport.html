@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Enclosed Auto Transport — Protected Vehicle Shipping | Ship Guy</title>
-<meta name="description" content="Enclosed auto transport offers fully covered, premium protection for classic, luxury, and high-value vehicles. Learn how enclosed car shipping works and what it costs.">
+<title>Delaware Auto Transport — Car Shipping to &amp; from Delaware | Ship Guy</title>
+<meta name="description" content="Whether you&#x27;re relocating across the country, heading south for the winter, or buying a vehicle online, shipping a car to or from Delaware doesn&#x27;t have …">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
@@ -273,7 +273,7 @@ select.inp{appearance:none;-webkit-appearance:none;padding-right:38px;cursor:poi
 .reviews-head{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;flex-wrap:wrap;margin-bottom:30px}
 .reviews-head h2{font-size:clamp(1.7rem,2.6vw,2.1rem);font-weight:800;color:var(--brand)}
 .reviews-head p{margin:8px 0 0;color:var(--muted);font-size:15.5px}
-.rating{display:flex;align-items:center;gap:12px}
+.rating{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
 .rating .score{font-family:var(--font-display);font-weight:800;font-size:22px;color:var(--ink)}
 .stars{display:inline-flex;gap:2px;color:var(--star)}
 .stars svg{width:18px;height:18px}
@@ -480,10 +480,15 @@ section[id]{scroll-margin-top:104px}
    Responsive
    ========================================================= */
 @media (max-width:1180px){
-  .hero-grid{grid-template-columns:minmax(0,1fr);gap:36px;padding:54px 24px 60px}
-  .hero-copy{max-width:640px}
+  .hero-grid{grid-template-columns:minmax(0,1fr);gap:28px;padding:54px 24px 60px}
+  .hero-copy{display:contents}
+  .hero-head,.hero-rest{max-width:640px;width:100%}
+  .hero-head{order:1}
+  .quote-card{order:2;max-width:520px;width:100%}
+  .hero-rest{order:3}
+  .hero-head h1{margin-bottom:0}
+  .eyebrow{display:none}
   .lede{max-width:520px}
-  .quote-card{max-width:520px;width:100%}
   .hero-overlay{background:linear-gradient(180deg, rgba(4,9,22,.72) 0%, rgba(4,9,22,.8) 55%, rgba(4,9,22,.88) 100%)}
 }
 @media (max-width:1180px){
@@ -504,6 +509,7 @@ section[id]{scroll-margin-top:104px}
 @media (max-width:980px){
   .wc-bento{grid-template-columns:1fr}
   .loc-bento{grid-template-columns:1fr;gap:32px}
+  .review-grid{grid-template-columns:1fr 1fr}
 }
 @media (max-width:880px){
   .steps-row{flex-direction:column;gap:0;max-width:440px;margin:0 auto}
@@ -544,6 +550,31 @@ section[id]{scroll-margin-top:104px}
   .step .slabel{font-size:11.5px}
 }
 
+/* compact hero on laptop screens only (~25% shorter) */
+@media (min-width:1181px) and (max-width:1600px){
+  .hero-grid{padding-top:34px;padding-bottom:40px;gap:40px}
+  .eyebrow{margin-bottom:12px}
+  .hero-copy h1{font-size:clamp(2rem,3vw,2.5rem);margin-bottom:14px}
+  .lede{font-size:15.5px;margin-bottom:18px}
+  .trust-list{margin-bottom:16px;gap:9px}
+  .trust-list li{font-size:14.5px}
+  .trust-ic{width:30px;height:30px}
+  .trust-ic svg{width:17px;height:17px}
+  .hero-divider{margin-bottom:16px}
+  .stat .num{font-size:26px}
+  .stat .lbl{font-size:12px;margin-top:5px}
+  .quote-card{padding:20px 24px 18px}
+  .quote-card h2{font-size:22px;margin-bottom:13px}
+  .steps{margin-bottom:13px}
+  .step .dot{width:30px;height:30px}
+  .field{margin-bottom:9px}
+  .flabel{margin-bottom:4px}
+  .inp{height:40px}
+  .opt{padding:8px 12px}
+  .btn-primary{height:46px}
+  .assure{margin-top:8px}
+}
+
 /* reduced motion */
 @media (prefers-reduced-motion:reduce){
   *{animation-duration:.001ms!important;transition-duration:.001ms!important}
@@ -555,6 +586,11 @@ section[id]{scroll-margin-top:104px}
 body.ready .reveal{opacity:1;transform:none}
 .reveal.d2{transition-delay:.08s}
 .reveal.d3{transition-delay:.16s}
+
+.menu.menu-mega{display:grid;grid-template-columns:1fr 1fr;column-gap:4px;min-width:452px}
+.menu.menu-mega .menu-all{grid-column:1 / -1;margin-top:6px;padding-top:12px;border-top:1px solid var(--line);color:var(--brand);font-weight:700}
+
+@media (max-width:460px){.footer-top{grid-template-columns:1fr;gap:28px}}/* resp-polish-footer */
 /* ===== Subpage / article / services styles ===== */
 .page-hero{background:linear-gradient(135deg,#0a2a9e 0%, var(--brand) 60%, #1f54e0 100%);color:#fff;padding:62px 0 56px}
 .crumbs{display:flex;flex-wrap:wrap;gap:9px;font-size:13.5px;font-weight:600;color:#bcd2f8;margin-bottom:16px}
@@ -594,19 +630,20 @@ body.ready .reveal{opacity:1;transform:none}
 @media (max-width:900px){.svc-grid{grid-template-columns:1fr 1fr}.related-grid{grid-template-columns:1fr 1fr}}
 @media (max-width:560px){.svc-grid{grid-template-columns:1fr}.related-grid{grid-template-columns:1fr}}
 
+.article table{width:100%;border-collapse:collapse;margin:16px 0 22px;font-size:15px}
+.article table td,.article table th{border:1px solid var(--line);padding:10px 14px;text-align:left;vertical-align:top}
+.article table tr:nth-child(even){background:#f7f9fd}
+.article table td:first-child{font-weight:600;color:#101a3d}
+.table-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:0 0 6px}
+.article h2{margin-top:30px}
+@media (max-width:560px){.article table{font-size:13.5px}.article table td,.article table th{padding:8px 10px}}
 
-.menu.menu-mega{display:grid;grid-template-columns:1fr 1fr;column-gap:4px;min-width:452px}
-.menu.menu-mega .menu-all{grid-column:1 / -1;margin-top:6px;padding-top:12px;border-top:1px solid var(--line);color:var(--brand);font-weight:700}
-
-@media (max-width:460px){.footer-top{grid-template-columns:1fr;gap:28px}}/* resp-polish-footer */
 </style>
 <script type="application/ld+json">
-{
-  "@context":"https://schema.org","@graph":[
-  {"@type":"Service","name":"Enclosed Auto Transport","serviceType":"Auto transport","provider":{"@type":"Organization","name":"Ship Guy","telephone":"+1-866-280-3481"},"areaServed":{"@type":"Country","name":"United States"},"description":"Enclosed auto transport offers fully covered, premium protection for classic, luxury, and high-value vehicles. Learn how enclosed car shipping works and what it costs."},
-  {"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"index.html"},{"@type":"ListItem","position":2,"name":"Services","item":"services.html"},{"@type":"ListItem","position":3,"name":"Enclosed Auto Transport","item":"enclosed-auto-transport.html"}]}
-  ]
-}
+{"@context":"https://schema.org","@graph":[
+{"@type":"Service","serviceType":"Auto Transport","name":"Delaware Auto Transport","areaServed":{"@type":"State","name":"Delaware"},"provider":{"@type":"Organization","name":"Ship Guy","telephone":"+1-866-280-3481"},"description":"Whether you&#x27;re relocating across the country, heading south for the winter, or buying a vehicle online, shipping a car to or from Delaware doesn&#x27;t have …"},
+{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"index.html"},{"@type":"ListItem","position":2,"name":"Delaware Auto Transport","item":"delaware-auto-transport.html"}]}
+]}
 </script>
 </head>
 <body>
@@ -698,65 +735,377 @@ body.ready .reveal{opacity:1;transform:none}
   </nav>
 </header>
 
-<!-- ===================== PAGE HERO ===================== -->
-<section class="page-hero"><div class="container">
-  <nav class="crumbs" aria-label="Breadcrumb"><a href="index.html">Home</a><span>/</span><a href="services.html">Services</a><span>/</span><span aria-current="page">Enclosed Auto Transport</span></nav>
-  <h1>Enclosed Auto Transport</h1>
-  <p class="page-hero-sub">Fully enclosed, premium protection for classic, luxury, and high-value vehicles.</p>
-</div></section>
+<!-- ===================== HERO ===================== -->
+<section class="hero">
+  <div class="hero-media" aria-hidden="true">
+    <img class="hero-img" alt="" src="assets/hero.jpg">
+    <div class="hero-overlay"></div>
+  </div>
 
-<section class="article-section"><div class="container article">
-<p class="article-lead">When your vehicle is rare, valuable, or simply irreplaceable, enclosed auto transport gives it the white-glove protection it deserves. Here's how enclosed car shipping works, what it costs, and when it's the right call.</p>
-
-<h2>What Is Enclosed Auto Transport?</h2>
-<p>Enclosed auto transport ships your vehicle inside a fully covered trailer rather than on an open deck. Sealed walls and a roof shield your car from rain, snow, road salt, dust, and debris for the entire journey. Enclosed trailers typically carry fewer vehicles than open carriers — often two to seven — and many use soft straps and hydraulic liftgates to load low-clearance cars without risk to bumpers or undercarriages.</p>
-<p>This is the same level of care used to move exotic cars to auctions, show vehicles between events, and high-value inventory between dealerships. With Ship Guy, your enclosed shipment is handled by a licensed, insured carrier from our vetted network that specializes in premium transport.</p>
-
-<h2>How Enclosed Car Shipping Works</h2>
-<p>Enclosed transport follows the same simple three steps as any Ship Guy shipment, with extra attention at every stage. You start with a free quote, then we match your vehicle to an enclosed carrier and coordinate a pickup window around your schedule. At pickup, the driver performs a detailed condition inspection, documents it on the Bill of Lading, and loads your vehicle using equipment designed for valuable cars. Throughout transit you can track progress and reach our 24/7 support team, and at delivery you inspect the vehicle against the pickup report before signing off.</p>
-<p>Because enclosed carriers are fewer in number and in higher demand, they can take a little longer to schedule than open trucks. Booking ahead helps secure the best carrier and timing for your vehicle.</p>
-
-<h2>How Much Does Enclosed Transport Cost?</h2>
-<p>Enclosed transport costs more than open transport — typically a meaningful premium — because the trailers carry fewer vehicles, require specialized equipment, and offer a higher level of protection. Your exact price depends on distance, vehicle size and value, the type of enclosed trailer, your timing, and route demand.</p>
-<p>For many owners, the added cost is well worth it: when you're shipping a vehicle worth tens or hundreds of thousands of dollars, full protection from the elements and road hazards is inexpensive peace of mind. As with every Ship Guy shipment, your quote is all-in with no hidden fees and no upfront deposit — you pay only once your vehicle is dispatched.</p>
-
-<h2>When Should You Choose Enclosed Transport?</h2>
-<p>Enclosed auto transport is the right choice when your vehicle is too valuable, rare, or delicate to expose to the open road. Consider it for:</p>
-<ul>
-  <li><strong>Classic and antique cars</strong> with original or irreplaceable finishes</li>
-  <li><strong>Luxury and exotic vehicles</strong> from premium manufacturers</li>
-  <li><strong>Sports cars and low-clearance vehicles</strong> that need liftgate loading</li>
-  <li><strong>Show cars and concours vehicles</strong> that must arrive spotless</li>
-  <li><strong>Custom builds, restorations, and high-value inventory</strong></li>
-</ul>
-<p>If your vehicle is a standard daily driver, <a href="open-car-transport.html">open car transport</a> is usually the more practical and economical choice. When in doubt, our team can help you decide.</p>
-
-<h2>Enclosed vs. Open Transport</h2>
-<p>The core trade-off is protection versus price. Open transport is affordable and widely available, and it's perfectly safe for everyday vehicles — it's how new cars reach dealerships. Enclosed transport adds a sealed, weatherproof trailer and gentler handling at a higher cost. If the thought of road spray, a stray pebble, or a sudden storm touching your vehicle makes you uneasy, enclosed is worth it. If your car is replaceable and you want to keep costs down, open is the smart pick.</p>
-
-<h2>How Your Vehicle Is Protected</h2>
-<p>Beyond the covered trailer itself, enclosed transport includes several layers of care. Many carriers use soft, padded straps that secure the wheels instead of the frame, reducing stress on the suspension. Hydraulic liftgates raise low cars gently rather than using steep ramps. Some carriers offer single-vehicle or "top-load" placement for added separation. And every enclosed carrier in our network carries active cargo insurance covering your vehicle in transit — we're happy to confirm coverage details before you book.</p>
-
-<h2>Preparing Your Vehicle for Enclosed Shipping</h2>
-<p>Preparation is similar to open transport, with a few extra notes for valuable cars. Clean the vehicle and take detailed, dated photos to document its exact condition. Remove personal items and toll tags, and note any aftermarket or fragile components such as spoilers or low splitters so the driver can plan loading. Leave about a quarter tank of fuel, disable alarms, and provide one set of keys. If your car has special starting procedures, a battery cutoff, or transport mode, share those instructions with the driver at pickup.</p>
-
-<h2>Single-Car and Multi-Car Enclosed Options</h2>
-<p>Enclosed transport comes in a few configurations, and the right one depends on your vehicle and budget. Multi-car enclosed trailers carry several vehicles at once and offer the full weather protection of an enclosed haul at a more accessible price — a great balance for most luxury and classic cars. Single-car or two-car enclosed carriers provide the highest level of exclusivity and the most direct routing, which collectors often prefer for irreplaceable vehicles. Some carriers also offer features like liftgate loading and "top-load only" placement for added separation. When you request your quote, tell us about your vehicle's value, ground clearance, and timeline, and we'll recommend the enclosed option that fits best.</p>
-
-<h2>Ship with Confidence Through Ship Guy</h2>
-<p>Ship Guy is a licensed, bonded, FMCSA-registered auto transport broker offering enclosed auto transport to and from all 50 states. With transparent all-in pricing, no upfront deposit, a vetted network of premium carriers, real-time tracking, and 24/7 U.S.-based support, your prized vehicle is in careful hands from quote to delivery.</p>
-<p>Ready to protect your investment? <a href="index.html#top">Get your free quote</a> in about 60 seconds, or call <a href="tel:+18662803481">(866) 280-3481</a> to talk through your options. You can also compare <a href="open-car-transport.html">open car transport</a>, explore <a href="door-to-door-car-shipping.html">door-to-door delivery</a>, or see <a href="how-it-works.html">how shipping works</a>.</p>
-
-</div></section>
-
-<!-- related --><section class="related-section"><div class="container">
-      <h2>Explore Other Services</h2>
-      <div class="related-grid">
-        <a class="related-card" href="open-car-transport.html">Open Car Transport <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-        <a class="related-card" href="door-to-door-car-shipping.html">Door-to-Door Shipping <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-        <a class="related-card" href="state-to-state-car-shipping.html">State-to-State Shipping <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-        <a class="related-card" href="expedited-car-shipping.html">Expedited Car Shipping <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+  <div class="container hero-grid">
+    <div class="hero-copy">
+      <div class="hero-head">
+      <p class="eyebrow reveal">Licensed&nbsp;•&nbsp;Insured&nbsp;•&nbsp;Nationwide</p>
+      <h1 class="reveal d2">Auto Transport Delaware: Fast, Reliable Car Shipping with Ship Guy</h1>
       </div>
+      <div class="hero-rest">
+      <p class="lede reveal d2">Whether you&#x27;re relocating across the country, heading south for the winter, or buying a vehicle online, shipping a car to or from Delaware doesn&#x27;t have to be complicated. Ship Guy specializes in Delaware auto transport, connecting customers with vetted carriers who know the state&#x27;s routes, logistics, and seasonal patterns inside and out.</p>
+
+      <ul class="trust-list reveal d3">
+        <li>
+          <span class="trust-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/><path d="m9 12 2 2 4-4"/></svg></span>
+          Licensed Broker &amp; Fully Insured
+        </li>
+        <li>
+          <span class="trust-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="2" width="8" height="4" rx="1"/><path d="M9 4H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2h-3"/><path d="m9 14 2 2 4-4"/></svg></span>
+          FMCSA Registered
+        </li>
+        <li>
+          <span class="trust-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></span>
+          Vetted Carrier Network
+        </li>
+        <li>
+          <span class="trust-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M4 13a8 8 0 0 1 16 0"/><rect x="2" y="13" width="4.4" height="7" rx="1.6"/><rect x="17.6" y="13" width="4.4" height="7" rx="1.6"/><path d="M20 19.5v.5a3 3 0 0 1-3 3h-3"/></svg></span>
+          Real-Time Tracking &amp; 24/7 Support
+        </li>
+      </ul>
+
+      <div class="hero-divider reveal d3"></div>
+
+      <div class="stats reveal d3">
+        <div class="stat"><span class="num">50+</span><span class="lbl">States Served</span></div>
+        <div class="stat"><span class="num">100%</span><span class="lbl">Insured Transport</span></div>
+        <div class="stat"><span class="num">24/7</span><span class="lbl">Support &amp; Tracking</span></div>
+      </div>
+      </div>
+    </div>
+
+    <!-- QUOTE CARD -->
+    <div class="quote-card reveal d2">
+      <h2>Get Your Instant Quote</h2>
+
+      <div class="steps" id="steps">
+        <div class="step is-active" data-step="1">
+          <span class="dot"><span class="num">1</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>
+          <span class="slabel">Destination</span>
+        </div>
+        <div class="track" data-track="1"></div>
+        <div class="step" data-step="2">
+          <span class="dot"><span class="num">2</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>
+          <span class="slabel">Vehicle</span>
+        </div>
+        <div class="track" data-track="2"></div>
+        <div class="step" data-step="3">
+          <span class="dot"><span class="num">3</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>
+          <span class="slabel">Contact</span>
+        </div>
+      </div>
+
+      <form id="quoteForm" novalidate>
+        <!-- STEP 1 -->
+        <div class="qstep is-current" data-panel="1">
+          <div class="field">
+            <label class="flabel" for="pickup">Pickup Location</label>
+            <div class="input-wrap">
+              <span class="lead"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg></span>
+              <input class="inp" id="pickup" name="pickup" type="text" placeholder="Enter city or zip code" autocomplete="address-level2" required>
+            </div>
+            <span class="err-msg">Please enter a pickup location.</span>
+          </div>
+
+          <div class="field">
+            <label class="flabel" for="delivery">Delivery Location</label>
+            <div class="input-wrap">
+              <span class="lead"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg></span>
+              <input class="inp" id="delivery" name="delivery" type="text" placeholder="Enter city or zip code" autocomplete="address-level2" required>
+            </div>
+            <span class="err-msg">Please enter a delivery location.</span>
+          </div>
+
+          <div class="field">
+            <label class="flabel" for="date">Pickup Date</label>
+            <div class="input-wrap">
+              <span class="lead"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg></span>
+              <input class="inp" id="date" name="date" type="text" placeholder="Select pickup date" onfocus="this.type='date'" onblur="if(!this.value)this.type='text'">
+            </div>
+          </div>
+
+          <div class="field">
+            <label class="flabel">Trailer Type</label>
+            <div class="opt-grid" data-radio-group>
+              <label class="opt is-selected">
+                <span class="opt-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M10 17V6a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1v10"/><path d="M10 8h7l4 4v4h-2"/><path d="M6 17h2M12 17h2"/><circle cx="6" cy="18" r="2"/><circle cx="17" cy="18" r="2"/></svg></span>
+                <span class="opt-text"><strong>Open Trailer</strong><small>Most common</small></span>
+                <input type="radio" name="trailer" value="open" checked>
+                <span class="radio"></span>
+              </label>
+              <label class="opt">
+                <span class="opt-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="6" width="14" height="11" rx="1.5"/><path d="M16 9h3l3 4v4h-2"/><path d="M6 17h2"/><circle cx="6" cy="18" r="2"/><circle cx="18" cy="18" r="2"/></svg></span>
+                <span class="opt-text"><strong>Enclosed Trailer</strong><small>Extra protection</small></span>
+                <input type="radio" name="trailer" value="enclosed">
+                <span class="radio"></span>
+              </label>
+            </div>
+          </div>
+
+          <button type="button" class="btn-primary" data-next>
+            Next: Vehicle Details
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </button>
+        </div>
+
+        <!-- STEP 2 -->
+        <div class="qstep" data-panel="2">
+          <div class="row-2">
+            <div class="field">
+              <label class="flabel" for="year">Year</label>
+              <div class="input-wrap">
+                <span class="lead"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg></span>
+                <span class="chev-r"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></span>
+                <select class="inp" id="year" name="year"><option value="">Year</option></select>
+              </div>
+            </div>
+            <div class="field">
+              <label class="flabel" for="make">Make</label>
+              <div class="input-wrap">
+                <span class="lead"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12l1.6-4.6A2 2 0 0 1 6.5 6h11a2 2 0 0 1 1.9 1.4L21 12"/><path d="M3 12h18v5a1 1 0 0 1-1 1h-1.2a1 1 0 0 1-1-1v-1H6.2v1a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-5Z"/><circle cx="7.5" cy="14.5" r="1"/><circle cx="16.5" cy="14.5" r="1"/></svg></span>
+                <input class="inp" id="make" name="make" type="text" placeholder="e.g. Toyota">
+              </div>
+            </div>
+          </div>
+
+          <div class="field">
+            <label class="flabel" for="model">Model</label>
+            <div class="input-wrap">
+              <span class="lead"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12l1.6-4.6A2 2 0 0 1 6.5 6h11a2 2 0 0 1 1.9 1.4L21 12"/><path d="M3 12h18v5a1 1 0 0 1-1 1h-1.2a1 1 0 0 1-1-1v-1H6.2v1a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-5Z"/><circle cx="7.5" cy="14.5" r="1"/><circle cx="16.5" cy="14.5" r="1"/></svg></span>
+              <input class="inp" id="model" name="model" type="text" placeholder="e.g. Camry">
+            </div>
+          </div>
+
+          <div class="field">
+            <label class="flabel">Is the vehicle running?</label>
+            <div class="opt-grid" data-radio-group>
+              <label class="opt is-selected">
+                <span class="opt-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5 10 8l4 3 5-4.5"/><path d="M9 16h6"/><circle cx="12" cy="12" r="9"/></svg></span>
+                <span class="opt-text"><strong>Runs &amp; drives</strong><small>Operable</small></span>
+                <input type="radio" name="running" value="yes" checked>
+                <span class="radio"></span>
+              </label>
+              <label class="opt">
+                <span class="opt-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 8v5M12 16h.01"/><circle cx="12" cy="12" r="9"/></svg></span>
+                <span class="opt-text"><strong>Not running</strong><small>Inoperable</small></span>
+                <input type="radio" name="running" value="no">
+                <span class="radio"></span>
+              </label>
+            </div>
+          </div>
+
+          <div class="btn-row">
+            <button type="button" class="btn-ghost" data-back>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 18l-6-6 6-6"/></svg>
+              Back
+            </button>
+            <button type="button" class="btn-primary" data-next>
+              Next: Your Details
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- STEP 3 -->
+        <div class="qstep" data-panel="3">
+          <div class="field">
+            <label class="flabel" for="name">Full Name</label>
+            <div class="input-wrap">
+              <span class="lead"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21v-1a6 6 0 0 1 6-6h4a6 6 0 0 1 6 6v1"/></svg></span>
+              <input class="inp" id="name" name="name" type="text" placeholder="Your name" autocomplete="name" required>
+            </div>
+            <span class="err-msg">Please enter your name.</span>
+          </div>
+          <div class="field">
+            <label class="flabel" for="email">Email</label>
+            <div class="input-wrap">
+              <span class="lead"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></span>
+              <input class="inp" id="email" name="email" type="email" placeholder="you@email.com" autocomplete="email" required>
+            </div>
+            <span class="err-msg">Please enter a valid email.</span>
+          </div>
+          <div class="field">
+            <label class="flabel" for="phone">Phone</label>
+            <div class="input-wrap">
+              <span class="lead"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/></svg></span>
+              <input class="inp" id="phone" name="phone" type="tel" placeholder="(555) 555-5555" autocomplete="tel" required>
+            </div>
+            <span class="err-msg">Please enter a phone number.</span>
+          </div>
+
+          <div class="btn-row">
+            <button type="button" class="btn-ghost" data-back>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 18l-6-6 6-6"/></svg>
+              Back
+            </button>
+            <button type="submit" class="btn-primary">Get My Quote</button>
+          </div>
+
+          <p class="assure">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="11" width="16" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg>
+            No spam — just your quote. Takes about 60 seconds.
+          </p>
+        </div>
+      </form>
+
+      <!-- success -->
+      <div class="quote-success" id="quoteSuccess" aria-live="polite">
+        <div class="success-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></div>
+        <h3>Your quote request is in!</h3>
+        <p>Thanks — a Ship Guy specialist will reach out shortly with your transparent, all-in price.</p>
+        <a class="btn-call" href="tel:+18662803481">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/></svg>
+          Or call us now: (866) 280-3481
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ===================== STATE CONTENT ===================== -->
+<section class="article-section"><div class="container article">
+  <nav class="crumbs" aria-label="Breadcrumb"><a href="index.html">Home</a><span>/</span><span aria-current="page">Delaware Auto Transport</span></nav>
+  <h2>Quick Overview: Delaware Auto Transport with Ship Guy</h2>
+  <p>Ship Guy provides auto transport services throughout Delaware, with strong coverage in Wilmington, Dover, Newark, Middletown, and the Eastern Shore communities. As an auto transport company built around transparency and carrier quality, Ship Guy handles car shipping for a wide range of customers, including Delaware residents, University of Delaware students, military families on PCS orders, and businesses that need to transport vehicles for fleet operations or dealer transfers.</p>
+  <p>Every shipment is fully insured, and customers can choose between open transport for standard vehicles or enclosed car shipping for high-value vehicles like classics, exotics, and luxury cars. Ship Guy also arranges moves for inoperable vehicles, oversized trucks, and specialty vehicles that require modified loading equipment.</p>
+  <p>Getting started takes minutes. Customers can request an instant, no-obligation quote online or by phone for any route touching Delaware, with transparent pricing and zero hidden fees.</p>
+  <p>Here&#x27;s what Ship Guy delivers on every Delaware car shipping move:</p>
+  <p>Competitive, locked-in quotes with no surprise fees after booking</p>
+  <p>Nationwide reach covering all 50 states from any Delaware zip code.</p>
+  <p>Carrier insurance verification on every load</p>
+  <p>Flexible scheduling for personal vehicles, dealer stock, and auction purchases</p>
+  <p>Dedicated support from booking through final delivery</p>
+  <h2>Delaware Auto Transport Pricing &amp; Shipping Time Examples</h2>
+  <p>The cost of car shipping in Delaware depends on a handful of measurable factors: distance, vehicle size, transport type, and seasonal demand. Wilmington tends to be the easiest and most affordable Delaware hub for pickup and delivery because of its direct access to I-95 and its position along the Northeast corridor, a major carrier route.</p>
+  <p>Carriers typically average around 400–500 highway miles per day under normal conditions. That baseline is useful for estimating delivery dates on any route. Here are three realistic car examples based on :</p>
+  <p><strong>Wilmington, DE to Orlando, FL</strong> (open carrier, standard sedan): approximately $925–$1,100, with a transit time of 1 to 4 days over roughly 850 miles.</p>
+  <p><strong>Newark, DE to Dallas, TX</strong> (SUV, open carrier): approximately $1,000–$1,300, with a transit time of 2 to 6 days across roughly 1,500 miles.</p>
+  <p><strong>Dover, DE to Los Angeles, CA</strong> (enclosed shipping for a classic car): approximately $2,500–$4,000+, with a transit time of 7 to 11 days covering about 2,700 miles.  confirm these cross-country ranges.</p>
+  <p>Prices can fluctuate based on:</p>
+  <p>Fuel cost swings that affect carrier operating expenses</p>
+  <p>Seasonal demand, especially snowbird traffic in fall and spring, that tightens capacity on DE–FL lanes</p>
+  <p>The availability rating of carriers servicing specific Delaware zip codes, particularly rural or coastal areas</p>
+  <p>Vehicle type, as larger SUVs and trucks occupy more trailer space than compact sedans</p>
+  <p>Understanding these variables helps Delaware customers budget more accurately and avoid overpaying for their vehicle shipment.</p>
+  <h2>Comprehensive Auto Transport Services in Delaware</h2>
+  <p>Ship Guy operates as a full-service auto transport company, coordinating nearly any car shipping needs for moves into or out of Delaware. Whether you&#x27;re a first-time shipper or managing a multi-vehicle fleet transfer, Ship Guy matches the right carrier and equipment to your route and vehicle.</p>
+  <p>Here are the primary Delaware car shipping services available:</p>
+  <p><strong>Open auto transport</strong> for standard vehicles, daily commuters, pickup trucks, and minivans. This is the most popular and cost-effective option for everyday cars.</p>
+  <p><strong>Enclosed auto transport</strong> for classic cars, exotic cars, show vehicles, and any car where maximum protection justifies the higher cost.</p>
+  <p><strong>Door-to-door service</strong> throughout Delaware, including urban centers like Wilmington and Newark, suburban areas like Middletown, and more rural towns in Kent and Sussex counties.</p>
+  <p><strong>Interstate and long-distance moves</strong> for students heading to or from the University of Delaware, military relocations, snowbird migrations to Florida, and corporate transfers to states across the country.</p>
+  <p>Ship Guy coordinates transport both into and out of Delaware, covering nearby states like Pennsylvania, New Jersey, Maryland, and Virginia, as well as long-haul routes to Florida, Texas, California, and beyond. The network also reaches less common corridors, including routes to South Carolina, West Virginia, and South Dakota.</p>
+  <p>For vehicles that aren&#x27;t running, Ship Guy arranges carriers equipped with winches and specialized loading ramps to safely handle inoperable vehicles. Customers simply need to disclose the vehicle&#x27;s condition when requesting a quote so the right equipment is dispatched.</p>
+  <h2>Why Choose Ship Guy for Your Delaware Car Shipping Needs?</h2>
+  <p>Ship Guy isn&#x27;t a generic marketplace that hands off your information to a dozen random brokers. It&#x27;s a focused auto shipping operation that matches Delaware customers with carriers who actually run the routes you need, backed by direct communication and accountability.</p>
+  <p>Here&#x27;s what sets Ship Guy apart for reliable Delaware car shipping:</p>
+  <p>Strong availability rating on popular Delaware corridors, especially along I-95 through Wilmington, Route 1 through Dover, and northeast runs to New York, Boston, and Philadelphia.</p>
+  <p>A carefully vetted carrier network in which every partner holds active  and satisfactory safety ratings.</p>
+  <p>Transparent, locked-in quotes. The price you&#x27;re quoted is the price you pay. No surprise fees, no hidden fuel surcharges, no bait-and-switch tactics.</p>
+  <p>From a service standpoint, Ship Guy provides:</p>
+  <p>A dedicated support team that gives you status updates from the moment your car is dispatched until the vehicle arrives at its destination.</p>
+  <p>Flexible scheduling windows that align with move dates, dealer purchases, or auction timelines specific to Delaware&#x27;s market.</p>
+  <p>Options for standard or expedited pickup on high-demand corridors, such as Northeast runs from Delaware to New England or southbound lanes to the Carolinas and Florida.</p>
+  <p>Ship Guy functions as a reliable car shipping company that earns trust through performance on real routes, not just marketing claims.</p>
+  <h2>Auto Transport Options for Any Vehicle Type in Delaware</h2>
+  <p>Ship Guy adapts its auto shipping approach based on the vehicle&#x27;s value, vehicle size, condition, and the customer&#x27;s budget. There&#x27;s no one-size-fits-all trailer assignment. The right match between your car and the shipping method keeps costs reasonable and ensures the vehicle arrives safely.</p>
+  <p>Here&#x27;s how vehicle types typically break down for Delaware shipments:</p>
+  <p><strong>Standard sedans, crossovers, and compact cars</strong> for students, commuters, and families. These are the bread and butter of open car shipping.</p>
+  <p><strong>Full-size SUVs, pickup trucks, and work vans</strong> are commonly moved for job relocations, fleet rotations, and business transfers. Larger vehicle types take more trailer space and cost slightly more.</p>
+  <p><strong>Classic cars, muscle cars, and show vehicles</strong> based in Delaware or traveling to East Coast events and auctions. These almost always warrant enclosed transport.</p>
+  <p><strong>Inoperable or salvage vehicles</strong> purchased from online auctions and shipped to or from DE. These require winch-loading equipment and sometimes flatbed carriers.</p>
+  <p>Customers can choose between open and enclosed auto shipping and request expedited pickup or a wider delivery window, depending on whether cost or speed is the priority. Ship Guy&#x27;s team walks you through which combination makes the most sense for your specific de-car situation.</p>
+  <h2>Open Auto Transport: Affordable Delaware Car Shipping</h2>
+  <p>Open car shipping is the most common and cost-effective solution for Delaware residents shipping standard vehicles. It accounts for the vast majority of car shipments nationwide and offers reasonable pricing on well-traveled routes.</p>
+  <p>Vehicles are loaded onto multi-car open carriers, typically hauling 8 to 10 cars at a time. These car carriers operate regular lanes along I-95 through Wilmington and across the Mid-Atlantic, ensuring frequent availability and competitive shipping rates for Delaware pickups.</p>
+  <p>Open transport is ideal for:</p>
+  <p>Every day cars, commuter cars, and light trucks that don&#x27;t require specialized protection</p>
+  <p>Short to medium routes such as Wilmington to Boston, Philadelphia, Baltimore, or Raleigh</p>
+  <p>Budget-conscious customers looking for a lower cost to ship without sacrificing core safety measures</p>
+  <p>The trade-off with open shipping is exposure to weather and road debris during transit. However, carriers secure every vehicle with professional tie-downs, and standard cargo insurance covers damage from transport-related incidents. For most standard vehicles and personal vehicles, open transport strikes the right balance between affordability and protection.</p>
+  <h2>Enclosed Auto Transport: Maximum Protection for Delaware Vehicles</h2>
+  <p>Enclosed auto transport exists for vehicles where the stakes are higher. If you&#x27;re shipping a car worth $50,000 or more, or one that&#x27;s irreplaceable, the added cost of an enclosed trailer is a straightforward investment in protection.</p>
+  <p>Here&#x27;s what enclosed shipping provides:</p>
+  <p>Fully enclosed trailers that shield vehicles from rain, snow, salt spray, and road debris throughout the entire journey</p>
+  <p>Protection suited for high-value vehicles such as classic Mustangs in Wilmington, restored Corvettes in Dover, or exotic imports stored in coastal resort towns like Rehoboth Beach.</p>
+  <p>Fewer vehicles per trailer (typically 2–6), allowing more careful loading and unloading with lift-gates and soft straps instead of chains</p>
+  <p>Enclosed transport typically costs 30–50% more than open transport due to limited capacity, specialized equipment, and higher insurance limits. , which is essential for collector-grade or exotic cars.</p>
+  <p>Consider enclosed shipping if you&#x27;re moving a vehicle in winter (when salt and ice exposure increase), shipping cross-country where the vehicle spends more days in transit, or transporting a concours-level car to a show. The goal is for the vehicle to arrive in the same pristine condition it left in.</p>
+  <p>For most specialty vehicles leaving Delaware, enclosed transport is less of a luxury and more of a practical necessity.</p>
+  <h2>How the Delaware Car Shipping Process Works with Ship Guy</h2>
+  <p>Ship Guy streamlines the vehicle shipping process for Delaware customers, so you deal with one team from your first quote through delivery. Here&#x27;s how the shipping process unfolds:</p>
+  <p><strong>Quote:</strong> You submit your pickup and delivery zip codes (e.g., Wilmington 19801 to Tampa 33602), vehicle details (year, make, and model), and your preferred pickup date. Ship Guy returns an accurate estimate within minutes.</p>
+  <p><strong>Booking:</strong> You review your options for open vs enclosed transport, confirm the service type, and sign a straightforward transport agreement. No ambiguity, no buried clauses.</p>
+  <p><strong>Pickup:</strong> A vetted carrier meets you at a suitable spot in Delaware, whether that&#x27;s your home driveway, a business location, or a nearby open parking lot if local streets are too narrow for a full-size trailer.</p>
+  <p><strong>Transit:</strong> Your vehicle is transported along optimized routes. Ship Guy provides updates as the car moves toward its destination, so you&#x27;re never left guessing.</p>
+  <p><strong>Delivery:</strong> At the drop-off, you or your representative inspects the vehicle, confirms its condition on the bill of lading, and completes final payment as agreed. The process smoothly concludes with documented proof of the vehicle&#x27;s condition.</p>
+  <p>Ship Guy handles scheduling, dispatch, and all communication with the carrier. You have one point of contact, which eliminates the chaos of dealing with multiple parties.</p>
+  <h2>Step-by-Step Guide for First-Time Delaware Shippers</h2>
+  <p>If you&#x27;ve never arranged auto shipping before, the process can feel unfamiliar. Here&#x27;s a granular walkthrough designed for first-time shippers in Delaware:</p>
+  <p><strong>Step 1: Gather your key details.</strong> You&#x27;ll need the vehicle year, make, model, and running condition. Have your exact Delaware pickup address and destination address ready, along with your earliest available date.</p>
+  <p><strong>Step 2: Request a quote.</strong> Use Ship Guy&#x27;s website or call directly. Let the team know whether keeping car shipping costs low or getting a faster pickup date is your priority. This helps them match you with the right carrier.</p>
+  <p><strong>Step 3: Compare open and enclosed options.</strong> Your Ship Guy representative will explain how each transport type will affect car shipping costs and transit time for your specific route. For standard vehicles, open transport is almost always the right call. For a classic car or exotic, enclosed is the way to go.</p>
+  <p><strong>Step 4: Confirm your booking.</strong> Sign the digital agreement and start preparing your vehicle. Remove personal items, check for fluid leaks, and make sure the car is accessible on pickup day.</p>
+  <p><strong>Step 5: Meet the driver at the pickup location.</strong> Walk around the vehicle together with the driver. The driver will document the vehicle&#x27;s condition on the bill of lading. Take your own time-stamped photos as backup, and keep a copy of everything you sign.</p>
+  <p><strong>Step 6: Track your shipment.</strong> Ship Guy provides updates during transit. Stay reachable as your delivery window approaches so the carrier can coordinate a smooth drop-off.</p>
+  <p><strong>Step 7: Inspect on arrival.</strong> Upon arrival at the destination, compare the vehicle&#x27;s condition with the bill of lading. Note any discrepancies immediately, sign off, and complete your final confirmation.</p>
+  <p>Ship Guy&#x27;s team can walk you through each step and answer Delaware-specific logistics questions, from where to meet a carrier in downtown Newark to how beach-town access works on the Eastern Shore. The process is designed to be hassle-free for customers who have never done this before.</p>
+  <h2>Factors That Affect Car Shipping Costs in Delaware</h2>
+  <p>Several predictable factors affect car shipping costs to or from Delaware. Understanding them removes guesswork and helps you set a realistic budget before you request a quote.</p>
+  <p>Here are the major cost drivers:</p>
+  <p><strong>Distance:</strong> A move from Wilmington to Richmond (~250 miles) will cost significantly less than a move from Wilmington to Phoenix (~2,400 miles). Per-mile rates tend to decrease on longer hauls, but the total cost still rises with distance.</p>
+  <p><strong>Vehicle size and weight:</strong> Larger SUVs, trucks, and vans take up more space on the trailer and add weight, increasing shipping costs compared to a compact sedan. Vehicle size is one of the most straightforward pricing variables.</p>
+  <p><strong>Transport type:</strong> Open transport is the cost-effective option for most shippers. Enclosed transport adds 30–50% to the base price but provides critical protection for valuable vehicles.</p>
+  <p><strong>Route popularity and carrier availability:</strong> Popular corridors like I-95 through Wilmington and the DE–FL snowbird lane attract more carriers, which generally keeps rates lower. Rural areas off main highways, including parts of the Eastern Shore, may see fewer carriers and slightly higher pricing.</p>
+  <p><strong>Pickup and delivery locations:</strong> If your Delaware pickup spot is on a narrow residential street or a beach road with limited truck access, the carrier may need to meet you at a nearby wide lot or drop-off location in town. Remote locations can add modest surcharges.</p>
+  <p><strong>Timing and season:</strong> Summer moves and winter snowbird departures are peak-demand periods that push rates higher. Shoulder seasons (late winter, early fall) often offer better pricing and faster carrier assignment.</p>
+  <p><strong>Vehicle condition and special requirements:</strong> Inoperable vehicles need winch-loading, which adds $100–$200 or more. Modified cars with lowered suspensions, aftermarket body kits, or oversized tires may require specialized carriers.</p>
+  <p>One practical tip: flexible pickup and delivery windows give Ship Guy more room to match you with carriers already running your lane, which often results in cost-effective solutions and faster assignment. Locking into a single-day pickup demand almost always costs more.</p>
+  <h2>Nationwide Coverage, Delaware Challenges &amp; Ship Guy Service Tips</h2>
+  <p>Although Delaware is the second-smallest state in the U.S., Ship Guy connects it to auto transport routes covering all 50 states. Whether you&#x27;re shipping to major cities like Miami, Houston, or Los Angeles, or to smaller markets in states like South Carolina, West Virginia, or South Dakota, Ship Guy&#x27;s carrier network has the coverage you need.</p>
+  <p>That said, Delaware does present a few logistical realities worth knowing about:</p>
+  <p><strong>Limited interstate coverage beyond I-95 and DE-1.</strong> While Wilmington and Newark sit right on the I-95 corridor with excellent carrier access, rural areas of Kent and Sussex counties and beach towns along the coast are harder for large multi-car carriers to reach. This can affect carrier scheduling and pricing.</p>
+  <p><strong>Seasonal weather.</strong> Coastal storms in summer and ice or snow in winter can cause short delays. Carriers prioritize safety, and Ship Guy will promptly communicate any weather-related schedule adjustments.</p>
+  <p><strong>Narrow streets in older neighborhoods.</strong> Parts of Wilmington, Dover, and smaller Delaware towns have tight residential streets or low-hanging trees that make it impractical for a 75-foot car carrier to navigate. In these cases, meeting at a nearby parking lot or wide intersection keeps things moving.</p>
+  <p>Here are practical tips to keep your shipment on track:</p>
+  <p>Plan at least 1–2 weeks ahead for the best carrier availability and more competitive shipping rates. Last-minute bookings limit your options and often increase costs.</p>
+  <p>Be flexible with pickup spots in rural or coastal Delaware. A carrier that can load safely in a clear lot will get your car on the road faster than one trying to squeeze down a dead-end beach road.</p>
+  <p>Avoid booking during the tightest demand windows (Thanksgiving week, early January snowbird season) unless necessary. Even a few days of flexibility can shift pricing noticeably.</p>
+  <p>When comparing car shipping companies, look beyond price alone. Verify that any shipping company you consider holds active USDOT and MC credentials, carries appropriate cargo insurance, and has a documented safety record. The best car shipping companies, including those in Ship Guy&#x27;s network, meet all of these benchmarks.</p>
+  <p>Ship Guy&#x27;s nationwide network covers the most common Delaware origin and destination routes, including DE–FL, DE–CA, and DE–TX, with tailored advice on timing, budget, and the right transport method for your vehicle. Compared to larger aggregators like Montway Auto Transport, Ship Guy provides a more hands-on, personalized approach for reliable auto transport from Delaware.</p>
+  <p>For reliable vehicle shipping that accounts for Delaware&#x27;s specific geography and seasonal patterns, working with a provider that actually understands the state makes a measurable difference.</p>
+  <h2>How to Prepare Your Vehicle for Delaware Auto Transport</h2>
+  <p>Proper preparation speeds up loading, reduces the chance of disputes, and protects your vehicle throughout transit. Follow this checklist before your car is picked up by the carrier:</p>
+  <p><strong>Wash the exterior</strong> so existing scratches, dents, and chips are easily visible and documented on the bill of lading.</p>
+  <p><strong>Remove all personal items</strong>, toll transponders, dashcams, and any loose accessories, such as bike racks or removable antennas. Carriers are not liable for personal items left inside the vehicle.</p>
+  <p><strong>Leave only about a quarter tank of fuel.</strong> This reduces vehicle weight without leaving the tank so empty that the driver can&#x27;t move it on and off the trailer.</p>
+  <p><strong>Check for fluid leaks.</strong> If your car has a significant oil or coolant leak, let Ship Guy know in advance. Leaking vehicles can damage other cars on the trailer and may be refused at pickup.</p>
+  <p><strong>Fold in mirrors</strong> and secure convertible tops, hardtops, or aftermarket spoilers. Anything that protrudes can catch wind or contact other vehicles during transit.</p>
+  <p><strong>Disable or note any alarms</strong> that could be triggered by trailer movement during transport.</p>
+  <p><strong>Take clear, time-stamped photos</strong> of all four sides, the roof, and any pre-existing damage at your Delaware pickup location. This creates an independent record of the vehicle&#x27;s condition before the carrier takes possession.</p>
+  <p>Good preparation is especially important in Delaware&#x27;s coastal climate, where salt air and humidity can make existing paint imperfections harder to spot if the car isn&#x27;t clean. A few minutes of prep work on your end helps the entire Delaware shipping process go faster and protects you if there&#x27;s ever a question about when damage occurred.</p>
+  <h2>Get Your Delaware Auto Transport Quote from Ship Guy</h2>
+  <p>Ready to ship a car to or from Delaware? Request a free, no-obligation quote from Ship Guy and find out exactly what your move will cost. The process takes just a few minutes.</p>
+  <p>Here&#x27;s what you&#x27;ll need when you reach out:</p>
+  <p>Pickup and delivery cities or zip codes</p>
+  <p>Vehicle year, make, model, and whether it&#x27;s running or inoperable.</p>
+  <p>Preference for open or enclosed transport</p>
+  <p>Your earliest available pickup date and any delivery dates you&#x27;re working around</p>
+  <p>Ship Guy provides an accurate estimate based on current carrier availability, route demand, and your vehicle type, with no hidden charges added after booking.</p>
+  <p>When you work with Ship Guy, you get:</p>
+  <p>Competitive, upfront pricing with a clear explanation of what drives your cost to ship</p>
+  <p>Access to reliable auto transport carriers that have been screened for safety records, insurance, and regulatory compliance</p>
+  <p>Personalized guidance on choosing between open and enclosed options based on your budget, timeline, and car shipping needs</p>
+  <p>Before you decide to drive the car yourself, run the numbers. A road trip from Delaware to Florida means fuel, tolls, at least one hotel night, meals, time off work, and 1,500+ miles of wear on your vehicle. For longer routes to Texas or California, the math tilts even further toward shipping. A reliable Delaware car shipping service often costs less than the total out-of-pocket expense of driving, and your vehicle arrives without the mileage.</p>
+  <p>Ship Guy turns Delaware auto transport into a simple, predictable process with professional support at every stage. Whether you need reasonable pricing on an open carrier for a daily driver or extensive coverage through enclosed transport for a six-figure classic, the team is ready to build the right plan for your move.</p>
+  <p>Get your quote today and see how easy and reliable vehicle shipping from Delaware can be.</p>
 </div></section>
 
 <!-- ===================== FINAL CTA ===================== -->

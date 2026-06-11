@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Enclosed Auto Transport — Protected Vehicle Shipping | Ship Guy</title>
-<meta name="description" content="Enclosed auto transport offers fully covered, premium protection for classic, luxury, and high-value vehicles. Learn how enclosed car shipping works and what it costs.">
+<title>Colorado Auto Transport — Car Shipping to &amp; from Colorado | Ship Guy</title>
+<meta name="description" content="Ship Guy provides Colorado auto transport services designed to get your vehicle where it needs to go - whether that means across state lines or across t…">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
@@ -273,7 +273,7 @@ select.inp{appearance:none;-webkit-appearance:none;padding-right:38px;cursor:poi
 .reviews-head{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;flex-wrap:wrap;margin-bottom:30px}
 .reviews-head h2{font-size:clamp(1.7rem,2.6vw,2.1rem);font-weight:800;color:var(--brand)}
 .reviews-head p{margin:8px 0 0;color:var(--muted);font-size:15.5px}
-.rating{display:flex;align-items:center;gap:12px}
+.rating{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
 .rating .score{font-family:var(--font-display);font-weight:800;font-size:22px;color:var(--ink)}
 .stars{display:inline-flex;gap:2px;color:var(--star)}
 .stars svg{width:18px;height:18px}
@@ -480,10 +480,15 @@ section[id]{scroll-margin-top:104px}
    Responsive
    ========================================================= */
 @media (max-width:1180px){
-  .hero-grid{grid-template-columns:minmax(0,1fr);gap:36px;padding:54px 24px 60px}
-  .hero-copy{max-width:640px}
+  .hero-grid{grid-template-columns:minmax(0,1fr);gap:28px;padding:54px 24px 60px}
+  .hero-copy{display:contents}
+  .hero-head,.hero-rest{max-width:640px;width:100%}
+  .hero-head{order:1}
+  .quote-card{order:2;max-width:520px;width:100%}
+  .hero-rest{order:3}
+  .hero-head h1{margin-bottom:0}
+  .eyebrow{display:none}
   .lede{max-width:520px}
-  .quote-card{max-width:520px;width:100%}
   .hero-overlay{background:linear-gradient(180deg, rgba(4,9,22,.72) 0%, rgba(4,9,22,.8) 55%, rgba(4,9,22,.88) 100%)}
 }
 @media (max-width:1180px){
@@ -504,6 +509,7 @@ section[id]{scroll-margin-top:104px}
 @media (max-width:980px){
   .wc-bento{grid-template-columns:1fr}
   .loc-bento{grid-template-columns:1fr;gap:32px}
+  .review-grid{grid-template-columns:1fr 1fr}
 }
 @media (max-width:880px){
   .steps-row{flex-direction:column;gap:0;max-width:440px;margin:0 auto}
@@ -544,6 +550,31 @@ section[id]{scroll-margin-top:104px}
   .step .slabel{font-size:11.5px}
 }
 
+/* compact hero on laptop screens only (~25% shorter) */
+@media (min-width:1181px) and (max-width:1600px){
+  .hero-grid{padding-top:34px;padding-bottom:40px;gap:40px}
+  .eyebrow{margin-bottom:12px}
+  .hero-copy h1{font-size:clamp(2rem,3vw,2.5rem);margin-bottom:14px}
+  .lede{font-size:15.5px;margin-bottom:18px}
+  .trust-list{margin-bottom:16px;gap:9px}
+  .trust-list li{font-size:14.5px}
+  .trust-ic{width:30px;height:30px}
+  .trust-ic svg{width:17px;height:17px}
+  .hero-divider{margin-bottom:16px}
+  .stat .num{font-size:26px}
+  .stat .lbl{font-size:12px;margin-top:5px}
+  .quote-card{padding:20px 24px 18px}
+  .quote-card h2{font-size:22px;margin-bottom:13px}
+  .steps{margin-bottom:13px}
+  .step .dot{width:30px;height:30px}
+  .field{margin-bottom:9px}
+  .flabel{margin-bottom:4px}
+  .inp{height:40px}
+  .opt{padding:8px 12px}
+  .btn-primary{height:46px}
+  .assure{margin-top:8px}
+}
+
 /* reduced motion */
 @media (prefers-reduced-motion:reduce){
   *{animation-duration:.001ms!important;transition-duration:.001ms!important}
@@ -555,6 +586,11 @@ section[id]{scroll-margin-top:104px}
 body.ready .reveal{opacity:1;transform:none}
 .reveal.d2{transition-delay:.08s}
 .reveal.d3{transition-delay:.16s}
+
+.menu.menu-mega{display:grid;grid-template-columns:1fr 1fr;column-gap:4px;min-width:452px}
+.menu.menu-mega .menu-all{grid-column:1 / -1;margin-top:6px;padding-top:12px;border-top:1px solid var(--line);color:var(--brand);font-weight:700}
+
+@media (max-width:460px){.footer-top{grid-template-columns:1fr;gap:28px}}/* resp-polish-footer */
 /* ===== Subpage / article / services styles ===== */
 .page-hero{background:linear-gradient(135deg,#0a2a9e 0%, var(--brand) 60%, #1f54e0 100%);color:#fff;padding:62px 0 56px}
 .crumbs{display:flex;flex-wrap:wrap;gap:9px;font-size:13.5px;font-weight:600;color:#bcd2f8;margin-bottom:16px}
@@ -594,19 +630,20 @@ body.ready .reveal{opacity:1;transform:none}
 @media (max-width:900px){.svc-grid{grid-template-columns:1fr 1fr}.related-grid{grid-template-columns:1fr 1fr}}
 @media (max-width:560px){.svc-grid{grid-template-columns:1fr}.related-grid{grid-template-columns:1fr}}
 
+.article table{width:100%;border-collapse:collapse;margin:16px 0 22px;font-size:15px}
+.article table td,.article table th{border:1px solid var(--line);padding:10px 14px;text-align:left;vertical-align:top}
+.article table tr:nth-child(even){background:#f7f9fd}
+.article table td:first-child{font-weight:600;color:#101a3d}
+.table-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:0 0 6px}
+.article h2{margin-top:30px}
+@media (max-width:560px){.article table{font-size:13.5px}.article table td,.article table th{padding:8px 10px}}
 
-.menu.menu-mega{display:grid;grid-template-columns:1fr 1fr;column-gap:4px;min-width:452px}
-.menu.menu-mega .menu-all{grid-column:1 / -1;margin-top:6px;padding-top:12px;border-top:1px solid var(--line);color:var(--brand);font-weight:700}
-
-@media (max-width:460px){.footer-top{grid-template-columns:1fr;gap:28px}}/* resp-polish-footer */
 </style>
 <script type="application/ld+json">
-{
-  "@context":"https://schema.org","@graph":[
-  {"@type":"Service","name":"Enclosed Auto Transport","serviceType":"Auto transport","provider":{"@type":"Organization","name":"Ship Guy","telephone":"+1-866-280-3481"},"areaServed":{"@type":"Country","name":"United States"},"description":"Enclosed auto transport offers fully covered, premium protection for classic, luxury, and high-value vehicles. Learn how enclosed car shipping works and what it costs."},
-  {"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"index.html"},{"@type":"ListItem","position":2,"name":"Services","item":"services.html"},{"@type":"ListItem","position":3,"name":"Enclosed Auto Transport","item":"enclosed-auto-transport.html"}]}
-  ]
-}
+{"@context":"https://schema.org","@graph":[
+{"@type":"Service","serviceType":"Auto Transport","name":"Colorado Auto Transport","areaServed":{"@type":"State","name":"Colorado"},"provider":{"@type":"Organization","name":"Ship Guy","telephone":"+1-866-280-3481"},"description":"Ship Guy provides Colorado auto transport services designed to get your vehicle where it needs to go - whether that means across state lines or across t…"},
+{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"index.html"},{"@type":"ListItem","position":2,"name":"Colorado Auto Transport","item":"colorado-auto-transport.html"}]}
+]}
 </script>
 </head>
 <body>
@@ -698,65 +735,352 @@ body.ready .reveal{opacity:1;transform:none}
   </nav>
 </header>
 
-<!-- ===================== PAGE HERO ===================== -->
-<section class="page-hero"><div class="container">
-  <nav class="crumbs" aria-label="Breadcrumb"><a href="index.html">Home</a><span>/</span><a href="services.html">Services</a><span>/</span><span aria-current="page">Enclosed Auto Transport</span></nav>
-  <h1>Enclosed Auto Transport</h1>
-  <p class="page-hero-sub">Fully enclosed, premium protection for classic, luxury, and high-value vehicles.</p>
-</div></section>
+<!-- ===================== HERO ===================== -->
+<section class="hero">
+  <div class="hero-media" aria-hidden="true">
+    <img class="hero-img" alt="" src="assets/hero.jpg">
+    <div class="hero-overlay"></div>
+  </div>
 
-<section class="article-section"><div class="container article">
-<p class="article-lead">When your vehicle is rare, valuable, or simply irreplaceable, enclosed auto transport gives it the white-glove protection it deserves. Here's how enclosed car shipping works, what it costs, and when it's the right call.</p>
-
-<h2>What Is Enclosed Auto Transport?</h2>
-<p>Enclosed auto transport ships your vehicle inside a fully covered trailer rather than on an open deck. Sealed walls and a roof shield your car from rain, snow, road salt, dust, and debris for the entire journey. Enclosed trailers typically carry fewer vehicles than open carriers — often two to seven — and many use soft straps and hydraulic liftgates to load low-clearance cars without risk to bumpers or undercarriages.</p>
-<p>This is the same level of care used to move exotic cars to auctions, show vehicles between events, and high-value inventory between dealerships. With Ship Guy, your enclosed shipment is handled by a licensed, insured carrier from our vetted network that specializes in premium transport.</p>
-
-<h2>How Enclosed Car Shipping Works</h2>
-<p>Enclosed transport follows the same simple three steps as any Ship Guy shipment, with extra attention at every stage. You start with a free quote, then we match your vehicle to an enclosed carrier and coordinate a pickup window around your schedule. At pickup, the driver performs a detailed condition inspection, documents it on the Bill of Lading, and loads your vehicle using equipment designed for valuable cars. Throughout transit you can track progress and reach our 24/7 support team, and at delivery you inspect the vehicle against the pickup report before signing off.</p>
-<p>Because enclosed carriers are fewer in number and in higher demand, they can take a little longer to schedule than open trucks. Booking ahead helps secure the best carrier and timing for your vehicle.</p>
-
-<h2>How Much Does Enclosed Transport Cost?</h2>
-<p>Enclosed transport costs more than open transport — typically a meaningful premium — because the trailers carry fewer vehicles, require specialized equipment, and offer a higher level of protection. Your exact price depends on distance, vehicle size and value, the type of enclosed trailer, your timing, and route demand.</p>
-<p>For many owners, the added cost is well worth it: when you're shipping a vehicle worth tens or hundreds of thousands of dollars, full protection from the elements and road hazards is inexpensive peace of mind. As with every Ship Guy shipment, your quote is all-in with no hidden fees and no upfront deposit — you pay only once your vehicle is dispatched.</p>
-
-<h2>When Should You Choose Enclosed Transport?</h2>
-<p>Enclosed auto transport is the right choice when your vehicle is too valuable, rare, or delicate to expose to the open road. Consider it for:</p>
-<ul>
-  <li><strong>Classic and antique cars</strong> with original or irreplaceable finishes</li>
-  <li><strong>Luxury and exotic vehicles</strong> from premium manufacturers</li>
-  <li><strong>Sports cars and low-clearance vehicles</strong> that need liftgate loading</li>
-  <li><strong>Show cars and concours vehicles</strong> that must arrive spotless</li>
-  <li><strong>Custom builds, restorations, and high-value inventory</strong></li>
-</ul>
-<p>If your vehicle is a standard daily driver, <a href="open-car-transport.html">open car transport</a> is usually the more practical and economical choice. When in doubt, our team can help you decide.</p>
-
-<h2>Enclosed vs. Open Transport</h2>
-<p>The core trade-off is protection versus price. Open transport is affordable and widely available, and it's perfectly safe for everyday vehicles — it's how new cars reach dealerships. Enclosed transport adds a sealed, weatherproof trailer and gentler handling at a higher cost. If the thought of road spray, a stray pebble, or a sudden storm touching your vehicle makes you uneasy, enclosed is worth it. If your car is replaceable and you want to keep costs down, open is the smart pick.</p>
-
-<h2>How Your Vehicle Is Protected</h2>
-<p>Beyond the covered trailer itself, enclosed transport includes several layers of care. Many carriers use soft, padded straps that secure the wheels instead of the frame, reducing stress on the suspension. Hydraulic liftgates raise low cars gently rather than using steep ramps. Some carriers offer single-vehicle or "top-load" placement for added separation. And every enclosed carrier in our network carries active cargo insurance covering your vehicle in transit — we're happy to confirm coverage details before you book.</p>
-
-<h2>Preparing Your Vehicle for Enclosed Shipping</h2>
-<p>Preparation is similar to open transport, with a few extra notes for valuable cars. Clean the vehicle and take detailed, dated photos to document its exact condition. Remove personal items and toll tags, and note any aftermarket or fragile components such as spoilers or low splitters so the driver can plan loading. Leave about a quarter tank of fuel, disable alarms, and provide one set of keys. If your car has special starting procedures, a battery cutoff, or transport mode, share those instructions with the driver at pickup.</p>
-
-<h2>Single-Car and Multi-Car Enclosed Options</h2>
-<p>Enclosed transport comes in a few configurations, and the right one depends on your vehicle and budget. Multi-car enclosed trailers carry several vehicles at once and offer the full weather protection of an enclosed haul at a more accessible price — a great balance for most luxury and classic cars. Single-car or two-car enclosed carriers provide the highest level of exclusivity and the most direct routing, which collectors often prefer for irreplaceable vehicles. Some carriers also offer features like liftgate loading and "top-load only" placement for added separation. When you request your quote, tell us about your vehicle's value, ground clearance, and timeline, and we'll recommend the enclosed option that fits best.</p>
-
-<h2>Ship with Confidence Through Ship Guy</h2>
-<p>Ship Guy is a licensed, bonded, FMCSA-registered auto transport broker offering enclosed auto transport to and from all 50 states. With transparent all-in pricing, no upfront deposit, a vetted network of premium carriers, real-time tracking, and 24/7 U.S.-based support, your prized vehicle is in careful hands from quote to delivery.</p>
-<p>Ready to protect your investment? <a href="index.html#top">Get your free quote</a> in about 60 seconds, or call <a href="tel:+18662803481">(866) 280-3481</a> to talk through your options. You can also compare <a href="open-car-transport.html">open car transport</a>, explore <a href="door-to-door-car-shipping.html">door-to-door delivery</a>, or see <a href="how-it-works.html">how shipping works</a>.</p>
-
-</div></section>
-
-<!-- related --><section class="related-section"><div class="container">
-      <h2>Explore Other Services</h2>
-      <div class="related-grid">
-        <a class="related-card" href="open-car-transport.html">Open Car Transport <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-        <a class="related-card" href="door-to-door-car-shipping.html">Door-to-Door Shipping <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-        <a class="related-card" href="state-to-state-car-shipping.html">State-to-State Shipping <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-        <a class="related-card" href="expedited-car-shipping.html">Expedited Car Shipping <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+  <div class="container hero-grid">
+    <div class="hero-copy">
+      <div class="hero-head">
+      <p class="eyebrow reveal">Licensed&nbsp;•&nbsp;Insured&nbsp;•&nbsp;Nationwide</p>
+      <h1 class="reveal d2">Colorado Auto Transport With Ship Guy</h1>
       </div>
+      <div class="hero-rest">
+      <p class="lede reveal d2">Ship Guy provides Colorado auto transport services designed to get your vehicle where it needs to go - whether that means across state lines or across the country. With fast car shipping quote turnaround and door-to-door delivery, shipping a car to or from Colorado doesn&#x27;t need to be complicated. Vehicle shipping through Ship Guy covers everything from standard sedans to lifted trucks, and car transport options are built around your schedule, budget, and protection preferences.</p>
+
+      <ul class="trust-list reveal d3">
+        <li>
+          <span class="trust-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/><path d="m9 12 2 2 4-4"/></svg></span>
+          Licensed Broker &amp; Fully Insured
+        </li>
+        <li>
+          <span class="trust-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="2" width="8" height="4" rx="1"/><path d="M9 4H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2h-3"/><path d="m9 14 2 2 4-4"/></svg></span>
+          FMCSA Registered
+        </li>
+        <li>
+          <span class="trust-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></span>
+          Vetted Carrier Network
+        </li>
+        <li>
+          <span class="trust-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M4 13a8 8 0 0 1 16 0"/><rect x="2" y="13" width="4.4" height="7" rx="1.6"/><rect x="17.6" y="13" width="4.4" height="7" rx="1.6"/><path d="M20 19.5v.5a3 3 0 0 1-3 3h-3"/></svg></span>
+          Real-Time Tracking &amp; 24/7 Support
+        </li>
+      </ul>
+
+      <div class="hero-divider reveal d3"></div>
+
+      <div class="stats reveal d3">
+        <div class="stat"><span class="num">50+</span><span class="lbl">States Served</span></div>
+        <div class="stat"><span class="num">100%</span><span class="lbl">Insured Transport</span></div>
+        <div class="stat"><span class="num">24/7</span><span class="lbl">Support &amp; Tracking</span></div>
+      </div>
+      </div>
+    </div>
+
+    <!-- QUOTE CARD -->
+    <div class="quote-card reveal d2">
+      <h2>Get Your Instant Quote</h2>
+
+      <div class="steps" id="steps">
+        <div class="step is-active" data-step="1">
+          <span class="dot"><span class="num">1</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>
+          <span class="slabel">Destination</span>
+        </div>
+        <div class="track" data-track="1"></div>
+        <div class="step" data-step="2">
+          <span class="dot"><span class="num">2</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>
+          <span class="slabel">Vehicle</span>
+        </div>
+        <div class="track" data-track="2"></div>
+        <div class="step" data-step="3">
+          <span class="dot"><span class="num">3</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>
+          <span class="slabel">Contact</span>
+        </div>
+      </div>
+
+      <form id="quoteForm" novalidate>
+        <!-- STEP 1 -->
+        <div class="qstep is-current" data-panel="1">
+          <div class="field">
+            <label class="flabel" for="pickup">Pickup Location</label>
+            <div class="input-wrap">
+              <span class="lead"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg></span>
+              <input class="inp" id="pickup" name="pickup" type="text" placeholder="Enter city or zip code" autocomplete="address-level2" required>
+            </div>
+            <span class="err-msg">Please enter a pickup location.</span>
+          </div>
+
+          <div class="field">
+            <label class="flabel" for="delivery">Delivery Location</label>
+            <div class="input-wrap">
+              <span class="lead"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg></span>
+              <input class="inp" id="delivery" name="delivery" type="text" placeholder="Enter city or zip code" autocomplete="address-level2" required>
+            </div>
+            <span class="err-msg">Please enter a delivery location.</span>
+          </div>
+
+          <div class="field">
+            <label class="flabel" for="date">Pickup Date</label>
+            <div class="input-wrap">
+              <span class="lead"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg></span>
+              <input class="inp" id="date" name="date" type="text" placeholder="Select pickup date" onfocus="this.type='date'" onblur="if(!this.value)this.type='text'">
+            </div>
+          </div>
+
+          <div class="field">
+            <label class="flabel">Trailer Type</label>
+            <div class="opt-grid" data-radio-group>
+              <label class="opt is-selected">
+                <span class="opt-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M10 17V6a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1v10"/><path d="M10 8h7l4 4v4h-2"/><path d="M6 17h2M12 17h2"/><circle cx="6" cy="18" r="2"/><circle cx="17" cy="18" r="2"/></svg></span>
+                <span class="opt-text"><strong>Open Trailer</strong><small>Most common</small></span>
+                <input type="radio" name="trailer" value="open" checked>
+                <span class="radio"></span>
+              </label>
+              <label class="opt">
+                <span class="opt-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="6" width="14" height="11" rx="1.5"/><path d="M16 9h3l3 4v4h-2"/><path d="M6 17h2"/><circle cx="6" cy="18" r="2"/><circle cx="18" cy="18" r="2"/></svg></span>
+                <span class="opt-text"><strong>Enclosed Trailer</strong><small>Extra protection</small></span>
+                <input type="radio" name="trailer" value="enclosed">
+                <span class="radio"></span>
+              </label>
+            </div>
+          </div>
+
+          <button type="button" class="btn-primary" data-next>
+            Next: Vehicle Details
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </button>
+        </div>
+
+        <!-- STEP 2 -->
+        <div class="qstep" data-panel="2">
+          <div class="row-2">
+            <div class="field">
+              <label class="flabel" for="year">Year</label>
+              <div class="input-wrap">
+                <span class="lead"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg></span>
+                <span class="chev-r"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></span>
+                <select class="inp" id="year" name="year"><option value="">Year</option></select>
+              </div>
+            </div>
+            <div class="field">
+              <label class="flabel" for="make">Make</label>
+              <div class="input-wrap">
+                <span class="lead"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12l1.6-4.6A2 2 0 0 1 6.5 6h11a2 2 0 0 1 1.9 1.4L21 12"/><path d="M3 12h18v5a1 1 0 0 1-1 1h-1.2a1 1 0 0 1-1-1v-1H6.2v1a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-5Z"/><circle cx="7.5" cy="14.5" r="1"/><circle cx="16.5" cy="14.5" r="1"/></svg></span>
+                <input class="inp" id="make" name="make" type="text" placeholder="e.g. Toyota">
+              </div>
+            </div>
+          </div>
+
+          <div class="field">
+            <label class="flabel" for="model">Model</label>
+            <div class="input-wrap">
+              <span class="lead"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12l1.6-4.6A2 2 0 0 1 6.5 6h11a2 2 0 0 1 1.9 1.4L21 12"/><path d="M3 12h18v5a1 1 0 0 1-1 1h-1.2a1 1 0 0 1-1-1v-1H6.2v1a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-5Z"/><circle cx="7.5" cy="14.5" r="1"/><circle cx="16.5" cy="14.5" r="1"/></svg></span>
+              <input class="inp" id="model" name="model" type="text" placeholder="e.g. Camry">
+            </div>
+          </div>
+
+          <div class="field">
+            <label class="flabel">Is the vehicle running?</label>
+            <div class="opt-grid" data-radio-group>
+              <label class="opt is-selected">
+                <span class="opt-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5 10 8l4 3 5-4.5"/><path d="M9 16h6"/><circle cx="12" cy="12" r="9"/></svg></span>
+                <span class="opt-text"><strong>Runs &amp; drives</strong><small>Operable</small></span>
+                <input type="radio" name="running" value="yes" checked>
+                <span class="radio"></span>
+              </label>
+              <label class="opt">
+                <span class="opt-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 8v5M12 16h.01"/><circle cx="12" cy="12" r="9"/></svg></span>
+                <span class="opt-text"><strong>Not running</strong><small>Inoperable</small></span>
+                <input type="radio" name="running" value="no">
+                <span class="radio"></span>
+              </label>
+            </div>
+          </div>
+
+          <div class="btn-row">
+            <button type="button" class="btn-ghost" data-back>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 18l-6-6 6-6"/></svg>
+              Back
+            </button>
+            <button type="button" class="btn-primary" data-next>
+              Next: Your Details
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- STEP 3 -->
+        <div class="qstep" data-panel="3">
+          <div class="field">
+            <label class="flabel" for="name">Full Name</label>
+            <div class="input-wrap">
+              <span class="lead"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21v-1a6 6 0 0 1 6-6h4a6 6 0 0 1 6 6v1"/></svg></span>
+              <input class="inp" id="name" name="name" type="text" placeholder="Your name" autocomplete="name" required>
+            </div>
+            <span class="err-msg">Please enter your name.</span>
+          </div>
+          <div class="field">
+            <label class="flabel" for="email">Email</label>
+            <div class="input-wrap">
+              <span class="lead"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></span>
+              <input class="inp" id="email" name="email" type="email" placeholder="you@email.com" autocomplete="email" required>
+            </div>
+            <span class="err-msg">Please enter a valid email.</span>
+          </div>
+          <div class="field">
+            <label class="flabel" for="phone">Phone</label>
+            <div class="input-wrap">
+              <span class="lead"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/></svg></span>
+              <input class="inp" id="phone" name="phone" type="tel" placeholder="(555) 555-5555" autocomplete="tel" required>
+            </div>
+            <span class="err-msg">Please enter a phone number.</span>
+          </div>
+
+          <div class="btn-row">
+            <button type="button" class="btn-ghost" data-back>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 18l-6-6 6-6"/></svg>
+              Back
+            </button>
+            <button type="submit" class="btn-primary">Get My Quote</button>
+          </div>
+
+          <p class="assure">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="11" width="16" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg>
+            No spam — just your quote. Takes about 60 seconds.
+          </p>
+        </div>
+      </form>
+
+      <!-- success -->
+      <div class="quote-success" id="quoteSuccess" aria-live="polite">
+        <div class="success-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></div>
+        <h3>Your quote request is in!</h3>
+        <p>Thanks — a Ship Guy specialist will reach out shortly with your transparent, all-in price.</p>
+        <a class="btn-call" href="tel:+18662803481">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/></svg>
+          Or call us now: (866) 280-3481
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ===================== STATE CONTENT ===================== -->
+<section class="article-section"><div class="container article">
+  <nav class="crumbs" aria-label="Breadcrumb"><a href="index.html">Home</a><span>/</span><span aria-current="page">Colorado Auto Transport</span></nav>
+  <p>You can ship cars, trucks, SUVs, and motorcycles to or from Denver, Colorado Springs, Boulder, Fort Collins, and rural areas throughout the state. This guide breaks down exactly how Colorado shipping works, what typical car shipping costs look like on popular routes, and how to prepare your vehicle for pick up and delivery so the entire process runs smoothly.</p>
+  <h2>Quick Start: How Colorado Auto Shipping With Ship Guy Works</h2>
+  <p>The vehicle shipping process with Ship Guy is built to be straightforward. Here&#x27;s what it looks like from start to finish, whether you&#x27;re shipping from a residential or business location in Denver or a ranch outside Pueblo.</p>
+  <p><strong>Request a quote.</strong> Provide your pickup and delivery ZIP codes, vehicle details, preferred dates, and transport type. The auto transport process starts with a free online quote, and you&#x27;ll typically hear back the same business day.</p>
+  <p><strong>Book your order.</strong> Confirm your shipment, agree to the terms, and lock in your approximate pickup window.</p>
+  <p><strong>Vehicle pick up.</strong> A carrier arrives at your location (or a nearby meeting point), inspects the vehicle, completes the Bill of Lading, and loads your car.</p>
+  <p><strong>Transit.</strong> Your vehicle travels via the assigned route. Ship Guy keeps you updated throughout transit with status communications.</p>
+  <p><strong>Delivery and final inspection.</strong> The driver contacts you before arrival, unloads the vehicle, and you inspect it against the original documentation before signing off.</p>
+  <p>Ship Guy offers door-to-door vehicle transport from any accessible address in Colorado to any continental US destination. For common routes like Denver to Dallas or Colorado Springs to Phoenix, typical scheduling requires one to three days to secure a carrier. Throughout the process, Ship Guy confirms pick up windows, keeps customers informed, and coordinates delivery timing - vehicle transportation services built around clear communication.</p>
+  <h2>Colorado Auto Transport Service Areas</h2>
+  <p>Ship Guy&#x27;s Colorado auto transport services cover the full state, from Front Range metros to Western Slope communities, backed by a nationwide carrier network that reaches every corner of the continental US.</p>
+  <h2>Major Colorado cities served include:</h2>
+  <div class="table-wrap"><table><tbody><tr><td>Denver</td><td>Colorado Springs</td><td>Grand Junction</td></tr><tr><td>Aurora</td><td>Pueblo</td><td>Fort Collins</td></tr><tr><td>Lakewood</td><td></td><td>Greeley</td></tr><tr><td>Thornton</td><td></td><td>Boulder</td></tr><tr><td>Arvada</td><td></td><td></td></tr><tr><td>Westminster</td><td></td><td></td></tr></tbody></table></div>
+  <p>Ship Guy also serves mountain and resort areas along Colorado&#x27;s I-70 corridor, including Vail, Breckenridge, Aspen, and Glenwood Springs. These locations may require slightly wider pickup and delivery windows due to weather conditions, elevation changes, and access limitations for large carriers.</p>
+  <p>Pick up can be arranged from homes, offices, military bases, colleges, dealerships, and auctions throughout the state. In rural areas or tight mountain neighborhoods, carriers sometimes use meeting points near major interstates, such as I-25, I-70, or US-50, to ensure safe loading and unloading.</p>
+  <h2>Types of Colorado Vehicle Transport Services</h2>
+  <p>Ship Guy offers multiple Colorado car shipping services tailored to different budgets and protection levels. Choosing the right transport type affects your car shipping costs, the transit timeline, and the level of protection your vehicle receives during the move. Here&#x27;s how each option works.</p>
+  <h2>Open Car Transport in Colorado</h2>
+  <p>Open car transport uses multi-vehicle open carriers - the large trucks you see regularly on I-25 and I-70 hauling eight to ten vehicles at once. Open auto transport is the most affordable option for shipping cars, accounting for roughly 90% of all vehicle shipments nationwide.</p>
+  <p>This service is ideal for daily drivers, leased vehicles, and standard sedans or SUVs shipped to or from Denver, Colorado Springs, and other metro areas. Vehicles are exposed to weather and road debris during transit, but are secured with industry-standard straps. Open transport costs up to two-thirds less than enclosed transport, which is why most dealership and auction moves in Colorado use open car shipping to keep pricing competitive.</p>
+  <p>If you&#x27;re looking for lower cost and broad carrier availability, open transport is the way to go.</p>
+  <h2>Enclosed Auto Transport for High-Value Vehicles</h2>
+  <p>Enclosed car transport is the premium option. Hard-sided or soft-sided enclosed trailer configurations protect vehicles from snow, hail, dust, and road debris - a serious consideration for anyone shipping through Colorado&#x27;s winter months.</p>
+  <p>Enclosed transport is recommended for luxury vehicles, sports cars, restored classics, and collector vehicles. These loads often travel to mountain homes, car shows, or warm-weather destinations like Scottsdale. Think of it this way: if you&#x27;ve spent serious money restoring a 1967 Corvette in Boulder, you don&#x27;t want salt spray from I-70 hitting the paint on its way to an Arizona car show.</p>
+  <p>Enclosed Colorado shipping typically costs 30 to 60 percent more than open transport, but the trade-off includes higher cargo insurance coverage (often $250,000 to $1,000,000 per load), more careful handling, and full weather protection. Enclosed transport protects vehicles from weather and debris, making it the right call for high-value vehicles.</p>
+  <h2>Motorcycle Shipping in Colorado</h2>
+  <p>Ship Guy coordinates motorcycle shipping using palletized or crated methods inside specialized trailers or enclosed carriers. Handlebars and wheels are secured to prevent movement, which matters especially when shipments travel through Colorado&#x27;s mountain passes and rougher terrain.</p>
+  <p>Common use cases include transporting bikes for seasonal riding, buying or selling motorcycles between Colorado Springs and other states, or relocating military personnel&#x27;s bikes during a PCS move. Pricing for motorcycle shipping is generally lower than for cars, but it still depends on distance, route, and whether open shipping or enclosed shipping is selected.</p>
+  <h2>Specialty and Oversized Vehicle Transport</h2>
+  <p>Ship Guy can also coordinate transport for lifted trucks, dually pickups, small RVs, and work vehicles commonly used in Colorado&#x27;s construction and outdoor industries. Oversized dimensions, aftermarket modifications, or inoperable conditions may require special equipment - like a liftgate or winch - and will influence the final quote.</p>
+  <p>Examples include lifted 4x4 trucks moving between Denver and oil and gas regions on the Eastern Plains, or farm equipment headed to auction. Customers should always disclose modifications and exact dimensions when requesting a car shipping quote so Ship Guy can match the right carrier and provide an accurate estimate.</p>
+  <h2>Colorado Car Shipping Costs and Price Factors</h2>
+  <p>Colorado car shipping cost depends on your route, timing, vehicle type, and chosen service level. Shipping costs vary based on distance, vehicle type, and season, so no two quotes are identical. That said, here are realistic ranges for popular Colorado routes:</p>
+  <div class="table-wrap"><table><tbody><tr><td>Denver → Phoenix</td><td>~586 mi</td><td>$650–$850</td><td>$950–$1,200</td><td>2–4 days</td></tr><tr><td>Denver → Los Angeles</td><td>~1,020 mi</td><td>$600–$1,275</td><td>$775–$1,925</td><td>3–5 days</td></tr><tr><td>Colorado Springs → Houston</td><td>~900 mi</td><td>$800–$1,200</td><td>$1,100–$1,700</td><td>3–5 days</td></tr><tr><td>Denver → Chicago</td><td>~1,000 mi</td><td>$900–$1,300</td><td>$1,200–$1,800</td><td>5–7 days</td></tr></tbody></table></div>
+  <p>Average transport costs in Colorado range from $834 to $1,124 for standard open carrier moves, while the average shipping cost in the Western U.S. is $1,390, including longer routes and enclosed services. Shorter routes under 500 miles cost less overall but more per mile due to fixed carrier costs. Cross-country shipments cost more in total but offer better per-mile economics.</p>
+  <p>Enclosed transport adds a noticeable premium. Expedited transport offers faster delivery for urgent shipments but also increases rates. Shipping costs depend on distance and service type, so comparing options before booking is always worthwhile. Open transport costs less than enclosed transport in every scenario.</p>
+  <h2>Key Factors That Impact Car Shipping Costs in Colorado</h2>
+  <p>The main pricing factors for Colorado vehicle shipping include:</p>
+  <p><strong>Distance and route popularity.</strong> High-traffic lanes like Denver to Salt Lake City or Denver to Dallas tend to have more carrier availability and competitive pricing.</p>
+  <p><strong>Vehicle size and weight.</strong> A compact sedan costs less to ship than a full-size SUV or lifted pickup.</p>
+  <p><strong>Operable vs. inoperable.</strong> Non-running vehicles require winching or specialized equipment, which adds to the cost.</p>
+  <p><strong>Open vs. enclosed.</strong> Open car transport is cheaper; enclosed is for those who need maximum protection.</p>
+  <p><strong>Time of year.</strong> Summer (May through September) and the year-end moving season are peak periods. Book your shipment during off-peak seasons for lower rates.</p>
+  <p><strong>Fuel prices.</strong> Gas prices directly affect carrier operating costs and are passed along in quotes.</p>
+  <p><strong>Pickup and delivery location.</strong> Shipping to or from dense areas like Denver and Colorado Springs is often cheaper and faster than remote mountain or rural locations, where access fees may apply.</p>
+  <p>Winter conditions on I-70 and mountain passes can influence both cost and timing. Snow closures, rockslides, and heavy salt use on roads sometimes force route changes or delays. Booking earlier, around peak moving months, helps you save money and secure better availability rating windows.</p>
+  <h2>Step-by-Step Vehicle Shipping Process With Ship Guy</h2>
+  <p>Ship Guy&#x27;s vehicle shipping process is structured, transparent, and designed to minimize surprises. Whether you&#x27;re a Colorado resident relocating for work or shipping a vehicle you purchased online, each step follows the same proven flow. Here&#x27;s how the entire process works, from first contact to final handoff.</p>
+  <h2>Requesting a Colorado Auto Transport Quote</h2>
+  <p>To generate a car shipping quote, Ship Guy needs:</p>
+  <p>Pickup ZIP code and delivery ZIP code</p>
+  <p>Vehicle year, make, and model.</p>
+  <p>Vehicle condition (operable or inoperable)</p>
+  <p>Preferred pickup dates</p>
+  <p>Transport type preference (open or enclosed)</p>
+  <p>You can request an online quote or call during business hours, and quotes are typically provided the same day. Pricing is based on current market rates and carrier availability on Colorado routes. Ship Guy is transparent on pricing - no surprise fees when your vehicle details are accurate. Auto Shipping Group also provides free quotes for vehicle transport, so it&#x27;s smart to get multiple quotes to find the best shipping price across car shipping companies before committing.</p>
+  <h2>Booking and Scheduling Your Shipment</h2>
+  <p>Once you confirm the order and agree to the terms, Ship Guy locks in an approximate pickup window - often a one-to-three-day window for standard routes. A vetted carrier is assigned, and their details are shared with you once scheduling is confirmed.</p>
+  <p>Flexibility on exact pickup dates can help keep rates lower for Colorado car shipping. Any special needs, such as a non-running vehicle, low ground clearance, or limited rural access at the pickup or delivery location, are addressed during scheduling to avoid day-of complications.</p>
+  <h2>Vehicle Pick Up in Colorado</h2>
+  <p>On pickup day, the driver contacts you prior to arrival to confirm the pickup location and time frame. At your residential or business location, the driver performs a thorough vehicle inspection and completes the Bill of Lading, documenting existing cosmetic damage, mileage, and overall condition.</p>
+  <p>Large carriers may need nearby meeting spots in tight neighborhoods or mountainous areas for safe loading. The customer or a trusted representative should be present to sign documents and hand over keys. This documentation protects both parties and is essential if any claim needs to be filed later.</p>
+  <h2>Transit and Updates</h2>
+  <p>Typical transit times depend on distance. Here are some benchmarks from Colorado origins:</p>
+  <p><strong>Denver → Los Angeles:</strong> 3–5 days</p>
+  <p><strong>Denver → Chicago:</strong> 5–7 days</p>
+  <p><strong>Denver → Atlanta:</strong> 6–8 days</p>
+  <p><strong>Colorado Springs → Dallas:</strong> 3–5 days</p>
+  <p>Transporting a vehicle across 2,000 miles can take up to 9 days, while cross-country shipping can take up to 14 days for coast-to-coast moves. Transport times can vary from 1 to 14 days based on distance.</p>
+  <p>Real-time GPS tracking is often provided during transport, so you can monitor progress. Drivers are vetted through rigorous safety screening, and Ship Guy works with trusted carriers experienced with Colorado&#x27;s terrain and interstate highways. Weather or traffic conditions in Colorado and along the route can affect timing, but you&#x27;ll be kept informed of any changes to your delivery dates.</p>
+  <h2>Delivery and Final Inspection</h2>
+  <p>The driver contacts you before arrival at the delivery address to arrange a safe unloading area. At the drop-off locations, you&#x27;ll perform a final inspection, comparing the vehicle&#x27;s condition against the pickup Bill of Lading.</p>
+  <p>Check for new dents, scratches, or mechanical concerns and note any issues on the delivery paperwork before signing. Your vehicle should arrive in the same condition it was in at pickup. Final payment terms, if any balance remains, are settled at delivery in accordance with the original agreement. If everything checks out, sign the paperwork, and you&#x27;re done.</p>
+  <h2>How Long Does Colorado Auto Transport Take?</h2>
+  <p>Timing depends on distance, route, and conditions, but you can estimate transit with reasonable accuracy. The pickup window and transit time are separate - most carriers need one to three days to reach your location after dispatch, and then transit begins.</p>
+  <h2>General mileage-based timing:</h2>
+  <div class="table-wrap"><table><tbody><tr><td>Under 200 miles</td><td>1–2 days</td></tr><tr><td>200–500 miles</td><td>2–3 days</td></tr><tr><td>500–1,000 miles</td><td>3–5 days</td></tr><tr><td>1,000–2,000 miles</td><td>5–9 days</td></tr><tr><td>2,000+ miles (cross-country)</td><td>7–14 days</td></tr></tbody></table></div>
+  <p>Shipping a car under 200 miles takes 1 to 2 days. Shipping a car under 500 miles takes less than three days of transit once picked up. For specific Colorado examples: Denver to Phoenix runs about two to four days, Denver to Seattle around five to seven days, and Colorado Springs to Dallas approximately three to five days. Vehicle pickup can take 1 to 2 days for short distances before transit even begins.</p>
+  <p>Cross-country shipping can take up to 14 days for the longest routes. Factors like weather, road construction, and traffic can cause minor variations. If you need your vehicle faster, expedited shipping is available at a higher rate.</p>
+  <p>Book earlier around college move-in periods, ski season openings, and peak summer moving months to secure preferred delivery dates and better rates.</p>
+  <h2>Preparing Your Vehicle for Colorado Shipping</h2>
+  <p>Proper preparation helps avoid delays and makes inspections easier for both you and the carrier. A few simple steps before pickup day can prevent headaches and protect your interests if anything goes sideways during transit.</p>
+  <p>A clean vehicle helps document existing damage before transport - this is especially important in Colorado, where hail damage and rock chips are common and can be hard to spot on a dirty surface. Document your vehicle&#x27;s condition with photos before transport, including close-ups of any existing dents, scratches, or windshield chips. Date your photos so there&#x27;s no ambiguity if a claim needs to be filed.</p>
+  <p>Colorado-specific prep tips: if you&#x27;re shipping during winter, check antifreeze levels and battery health. Cold temperatures at altitude can drain weak batteries, and you want the vehicle ready to start when it arrives at the other end. Note any existing hail damage common to Front Range vehicles.</p>
+  <h2>Pre-Pick Up Checklist</h2>
+  <p>Before the carrier arrives, make sure you&#x27;ve handled these essentials:</p>
+  <p><strong>Wash the vehicle.</strong> Makes pre-transport inspection faster and more thorough.</p>
+  <p><strong>Remove personal items.</strong> Carriers are not licensed to transport personal belongings in vehicles. Leaving items inside can violate carrier policies and affect insurance coverage.</p>
+  <p><strong>Remove toll tags and disable alarms.</strong> Disable alarms and remove toll tags from your vehicle to prevent unnecessary charges or disruptions during transit.</p>
+  <p><strong>Check tire pressure and fluid levels.</strong> Ensure tires are properly inflated, and basic functions work for easier loading and unloading.</p>
+  <p><strong>Reduce fuel level.</strong> Ensure your gas tank is no more than a quarter full. This reduces weight while leaving enough fuel to move the car on and off the trailer.</p>
+  <p><strong>Fold in mirrors and secure loose parts.</strong> Retract antennas, fold mirrors, and remove or secure any loose accessories or aftermarket parts.</p>
+  <p><strong>Confirm the parking brake works.</strong> The vehicle needs to hold position on the trailer during transport.</p>
+  <p><strong>Keep a spare key.</strong> Hand one set to the driver and keep a backup.</p>
+  <p>Remove personal items from your vehicle before transport - this point is worth repeating because many customers overlook it. Items left inside are not covered by carrier insurance, and excess weight from packed belongings can create liability issues. Check tire pressure and fluid levels before shipping so the vehicle can be loaded and securely transported without mechanical issues.</p>
+  <h2>Why Colorado Drivers Choose Ship Guy</h2>
+  <p>Colorado drivers deal with unique logistics challenges that most national auto shipping providers underestimate. Mountain passes, winter closures on I-70, elevation changes, and the distance between metro areas and rural communities all demand carriers who know the terrain.</p>
+  <p>Ship Guy works with an experienced network of carriers familiar with Colorado weather patterns, seasonal road conditions, and access limitations in resort and mountain communities. Whether you&#x27;re managing a military relocation from Fort Carson, a college move to Boulder, seasonal transport between Denver and Salt Lake City, or dealer-to-dealer auto shipping across state lines, Ship Guy handles the coordination.</p>
+  <p>Many customers choose Ship Guy because the company focuses on clear communication, competitive pricing, and hassle-free scheduling. Military members and military personnel get the same level of attention as dealership accounts. The goal is simple: treat customers with transparency, deliver vehicles on time and in the same condition they were picked up, and make the vehicle shipment process something you don&#x27;t have to worry about.</p>
+  <p>Ship Guy&#x27;s Colorado auto transport services are designed to handle everything from a single sedan to multiple vehicles for a dealership - shipping services that scale to what you actually need.</p>
+  <h2>Tips for Choosing Colorado Car Shipping Companies</h2>
+  <p>While Ship Guy provides its own Colorado car shipping services, it&#x27;s worth understanding what separates the best car shipping companies from the rest. Whether you&#x27;re comparing Ship Guy to Montway Auto Transport (which has over 25,000 carriers nationwide) or evaluating a smaller regional transport company, here&#x27;s what to look for.</p>
+  <p><strong>Verify licensing and insurance.</strong> Companies must be registered with federal entities and have USDOT and MC numbers for legal compliance. You can verify any carrier or broker through the . It is crucial to ensure the company provides cargo and liability insurance before signing a contract. Request proof of coverage and confirm it aligns with your vehicle&#x27;s value.</p>
+  <p><strong>Review customer feedback on Colorado routes.</strong> Look for reviews that specifically mention Colorado routes, winter conditions, or mountain driving. A shipping company with experience on I-70 or in resort areas will handle those challenges differently than one that primarily runs flat interstate highways in the Midwest.</p>
+  <p><strong>Compare quotes carefully.</strong> Always gather multiple quotes to compare rates and understand price inclusions. Road Runner Auto Transport offers real-time GPS tracking, while Montway Auto Transport emphasizes its large carrier network. Auto Shipping Group provides free quotes for vehicle transport. Compare what&#x27;s included: open vs. enclosed transport, estimated pickup and delivery windows, insurance options, GPS tracking availability, and all fees. Don&#x27;t just look at the bottom-line number - understand what&#x27;s behind it.</p>
+  <p><strong>Prioritize communication over low prices.</strong> The best company to work with is one that communicates clearly, provides written contracts, and responds promptly to questions. Low prices mean nothing if you can&#x27;t reach anyone when your vehicle is in transit or if the pickup window keeps shifting. Prioritize transparency and contract clarity over simply chasing the lowest bid.</p>
+  <p>A reliable auto shipping company will give you a clear time frame, confirm license plates and vehicle type details upfront, and keep you informed from booking through final delivery.</p>
+  <p>Whether you&#x27;re transporting vehicles for a corporate relocation, a seasonal move, or a one-time purchase, the right car shipping services provider makes the difference between a smooth experience and a stressful one. Ship Guy aims to be the best company for Colorado drivers who value straightforward pricing, professional handling, and on-time delivery - national auto shipping with local expertise.</p>
+  <p>Ready to get started? Request your free car shipping quote from Ship Guy today and find out why Colorado auto transport doesn&#x27;t have to be complicated.</p>
 </div></section>
 
 <!-- ===================== FINAL CTA ===================== -->

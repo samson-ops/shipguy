@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Enclosed Auto Transport — Protected Vehicle Shipping | Ship Guy</title>
-<meta name="description" content="Enclosed auto transport offers fully covered, premium protection for classic, luxury, and high-value vehicles. Learn how enclosed car shipping works and what it costs.">
+<title>Florida Auto Transport — Car Shipping to &amp; from Florida | Ship Guy</title>
+<meta name="description" content="Florida is one of the busiest auto transport hubs in the country, and the demand isn&#x27;t slowing down. Whether you&#x27;re a snowbird heading south, a family r…">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
@@ -273,7 +273,7 @@ select.inp{appearance:none;-webkit-appearance:none;padding-right:38px;cursor:poi
 .reviews-head{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;flex-wrap:wrap;margin-bottom:30px}
 .reviews-head h2{font-size:clamp(1.7rem,2.6vw,2.1rem);font-weight:800;color:var(--brand)}
 .reviews-head p{margin:8px 0 0;color:var(--muted);font-size:15.5px}
-.rating{display:flex;align-items:center;gap:12px}
+.rating{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
 .rating .score{font-family:var(--font-display);font-weight:800;font-size:22px;color:var(--ink)}
 .stars{display:inline-flex;gap:2px;color:var(--star)}
 .stars svg{width:18px;height:18px}
@@ -480,10 +480,15 @@ section[id]{scroll-margin-top:104px}
    Responsive
    ========================================================= */
 @media (max-width:1180px){
-  .hero-grid{grid-template-columns:minmax(0,1fr);gap:36px;padding:54px 24px 60px}
-  .hero-copy{max-width:640px}
+  .hero-grid{grid-template-columns:minmax(0,1fr);gap:28px;padding:54px 24px 60px}
+  .hero-copy{display:contents}
+  .hero-head,.hero-rest{max-width:640px;width:100%}
+  .hero-head{order:1}
+  .quote-card{order:2;max-width:520px;width:100%}
+  .hero-rest{order:3}
+  .hero-head h1{margin-bottom:0}
+  .eyebrow{display:none}
   .lede{max-width:520px}
-  .quote-card{max-width:520px;width:100%}
   .hero-overlay{background:linear-gradient(180deg, rgba(4,9,22,.72) 0%, rgba(4,9,22,.8) 55%, rgba(4,9,22,.88) 100%)}
 }
 @media (max-width:1180px){
@@ -504,6 +509,7 @@ section[id]{scroll-margin-top:104px}
 @media (max-width:980px){
   .wc-bento{grid-template-columns:1fr}
   .loc-bento{grid-template-columns:1fr;gap:32px}
+  .review-grid{grid-template-columns:1fr 1fr}
 }
 @media (max-width:880px){
   .steps-row{flex-direction:column;gap:0;max-width:440px;margin:0 auto}
@@ -544,6 +550,31 @@ section[id]{scroll-margin-top:104px}
   .step .slabel{font-size:11.5px}
 }
 
+/* compact hero on laptop screens only (~25% shorter) */
+@media (min-width:1181px) and (max-width:1600px){
+  .hero-grid{padding-top:34px;padding-bottom:40px;gap:40px}
+  .eyebrow{margin-bottom:12px}
+  .hero-copy h1{font-size:clamp(2rem,3vw,2.5rem);margin-bottom:14px}
+  .lede{font-size:15.5px;margin-bottom:18px}
+  .trust-list{margin-bottom:16px;gap:9px}
+  .trust-list li{font-size:14.5px}
+  .trust-ic{width:30px;height:30px}
+  .trust-ic svg{width:17px;height:17px}
+  .hero-divider{margin-bottom:16px}
+  .stat .num{font-size:26px}
+  .stat .lbl{font-size:12px;margin-top:5px}
+  .quote-card{padding:20px 24px 18px}
+  .quote-card h2{font-size:22px;margin-bottom:13px}
+  .steps{margin-bottom:13px}
+  .step .dot{width:30px;height:30px}
+  .field{margin-bottom:9px}
+  .flabel{margin-bottom:4px}
+  .inp{height:40px}
+  .opt{padding:8px 12px}
+  .btn-primary{height:46px}
+  .assure{margin-top:8px}
+}
+
 /* reduced motion */
 @media (prefers-reduced-motion:reduce){
   *{animation-duration:.001ms!important;transition-duration:.001ms!important}
@@ -555,6 +586,11 @@ section[id]{scroll-margin-top:104px}
 body.ready .reveal{opacity:1;transform:none}
 .reveal.d2{transition-delay:.08s}
 .reveal.d3{transition-delay:.16s}
+
+.menu.menu-mega{display:grid;grid-template-columns:1fr 1fr;column-gap:4px;min-width:452px}
+.menu.menu-mega .menu-all{grid-column:1 / -1;margin-top:6px;padding-top:12px;border-top:1px solid var(--line);color:var(--brand);font-weight:700}
+
+@media (max-width:460px){.footer-top{grid-template-columns:1fr;gap:28px}}/* resp-polish-footer */
 /* ===== Subpage / article / services styles ===== */
 .page-hero{background:linear-gradient(135deg,#0a2a9e 0%, var(--brand) 60%, #1f54e0 100%);color:#fff;padding:62px 0 56px}
 .crumbs{display:flex;flex-wrap:wrap;gap:9px;font-size:13.5px;font-weight:600;color:#bcd2f8;margin-bottom:16px}
@@ -594,19 +630,20 @@ body.ready .reveal{opacity:1;transform:none}
 @media (max-width:900px){.svc-grid{grid-template-columns:1fr 1fr}.related-grid{grid-template-columns:1fr 1fr}}
 @media (max-width:560px){.svc-grid{grid-template-columns:1fr}.related-grid{grid-template-columns:1fr}}
 
+.article table{width:100%;border-collapse:collapse;margin:16px 0 22px;font-size:15px}
+.article table td,.article table th{border:1px solid var(--line);padding:10px 14px;text-align:left;vertical-align:top}
+.article table tr:nth-child(even){background:#f7f9fd}
+.article table td:first-child{font-weight:600;color:#101a3d}
+.table-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:0 0 6px}
+.article h2{margin-top:30px}
+@media (max-width:560px){.article table{font-size:13.5px}.article table td,.article table th{padding:8px 10px}}
 
-.menu.menu-mega{display:grid;grid-template-columns:1fr 1fr;column-gap:4px;min-width:452px}
-.menu.menu-mega .menu-all{grid-column:1 / -1;margin-top:6px;padding-top:12px;border-top:1px solid var(--line);color:var(--brand);font-weight:700}
-
-@media (max-width:460px){.footer-top{grid-template-columns:1fr;gap:28px}}/* resp-polish-footer */
 </style>
 <script type="application/ld+json">
-{
-  "@context":"https://schema.org","@graph":[
-  {"@type":"Service","name":"Enclosed Auto Transport","serviceType":"Auto transport","provider":{"@type":"Organization","name":"Ship Guy","telephone":"+1-866-280-3481"},"areaServed":{"@type":"Country","name":"United States"},"description":"Enclosed auto transport offers fully covered, premium protection for classic, luxury, and high-value vehicles. Learn how enclosed car shipping works and what it costs."},
-  {"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"index.html"},{"@type":"ListItem","position":2,"name":"Services","item":"services.html"},{"@type":"ListItem","position":3,"name":"Enclosed Auto Transport","item":"enclosed-auto-transport.html"}]}
-  ]
-}
+{"@context":"https://schema.org","@graph":[
+{"@type":"Service","serviceType":"Auto Transport","name":"Florida Auto Transport","areaServed":{"@type":"State","name":"Florida"},"provider":{"@type":"Organization","name":"Ship Guy","telephone":"+1-866-280-3481"},"description":"Florida is one of the busiest auto transport hubs in the country, and the demand isn&#x27;t slowing down. Whether you&#x27;re a snowbird heading south, a family r…"},
+{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"index.html"},{"@type":"ListItem","position":2,"name":"Florida Auto Transport","item":"florida-auto-transport.html"}]}
+]}
 </script>
 </head>
 <body>
@@ -698,65 +735,362 @@ body.ready .reveal{opacity:1;transform:none}
   </nav>
 </header>
 
-<!-- ===================== PAGE HERO ===================== -->
-<section class="page-hero"><div class="container">
-  <nav class="crumbs" aria-label="Breadcrumb"><a href="index.html">Home</a><span>/</span><a href="services.html">Services</a><span>/</span><span aria-current="page">Enclosed Auto Transport</span></nav>
-  <h1>Enclosed Auto Transport</h1>
-  <p class="page-hero-sub">Fully enclosed, premium protection for classic, luxury, and high-value vehicles.</p>
-</div></section>
+<!-- ===================== HERO ===================== -->
+<section class="hero">
+  <div class="hero-media" aria-hidden="true">
+    <img class="hero-img" alt="" src="assets/hero.jpg">
+    <div class="hero-overlay"></div>
+  </div>
 
-<section class="article-section"><div class="container article">
-<p class="article-lead">When your vehicle is rare, valuable, or simply irreplaceable, enclosed auto transport gives it the white-glove protection it deserves. Here's how enclosed car shipping works, what it costs, and when it's the right call.</p>
-
-<h2>What Is Enclosed Auto Transport?</h2>
-<p>Enclosed auto transport ships your vehicle inside a fully covered trailer rather than on an open deck. Sealed walls and a roof shield your car from rain, snow, road salt, dust, and debris for the entire journey. Enclosed trailers typically carry fewer vehicles than open carriers — often two to seven — and many use soft straps and hydraulic liftgates to load low-clearance cars without risk to bumpers or undercarriages.</p>
-<p>This is the same level of care used to move exotic cars to auctions, show vehicles between events, and high-value inventory between dealerships. With Ship Guy, your enclosed shipment is handled by a licensed, insured carrier from our vetted network that specializes in premium transport.</p>
-
-<h2>How Enclosed Car Shipping Works</h2>
-<p>Enclosed transport follows the same simple three steps as any Ship Guy shipment, with extra attention at every stage. You start with a free quote, then we match your vehicle to an enclosed carrier and coordinate a pickup window around your schedule. At pickup, the driver performs a detailed condition inspection, documents it on the Bill of Lading, and loads your vehicle using equipment designed for valuable cars. Throughout transit you can track progress and reach our 24/7 support team, and at delivery you inspect the vehicle against the pickup report before signing off.</p>
-<p>Because enclosed carriers are fewer in number and in higher demand, they can take a little longer to schedule than open trucks. Booking ahead helps secure the best carrier and timing for your vehicle.</p>
-
-<h2>How Much Does Enclosed Transport Cost?</h2>
-<p>Enclosed transport costs more than open transport — typically a meaningful premium — because the trailers carry fewer vehicles, require specialized equipment, and offer a higher level of protection. Your exact price depends on distance, vehicle size and value, the type of enclosed trailer, your timing, and route demand.</p>
-<p>For many owners, the added cost is well worth it: when you're shipping a vehicle worth tens or hundreds of thousands of dollars, full protection from the elements and road hazards is inexpensive peace of mind. As with every Ship Guy shipment, your quote is all-in with no hidden fees and no upfront deposit — you pay only once your vehicle is dispatched.</p>
-
-<h2>When Should You Choose Enclosed Transport?</h2>
-<p>Enclosed auto transport is the right choice when your vehicle is too valuable, rare, or delicate to expose to the open road. Consider it for:</p>
-<ul>
-  <li><strong>Classic and antique cars</strong> with original or irreplaceable finishes</li>
-  <li><strong>Luxury and exotic vehicles</strong> from premium manufacturers</li>
-  <li><strong>Sports cars and low-clearance vehicles</strong> that need liftgate loading</li>
-  <li><strong>Show cars and concours vehicles</strong> that must arrive spotless</li>
-  <li><strong>Custom builds, restorations, and high-value inventory</strong></li>
-</ul>
-<p>If your vehicle is a standard daily driver, <a href="open-car-transport.html">open car transport</a> is usually the more practical and economical choice. When in doubt, our team can help you decide.</p>
-
-<h2>Enclosed vs. Open Transport</h2>
-<p>The core trade-off is protection versus price. Open transport is affordable and widely available, and it's perfectly safe for everyday vehicles — it's how new cars reach dealerships. Enclosed transport adds a sealed, weatherproof trailer and gentler handling at a higher cost. If the thought of road spray, a stray pebble, or a sudden storm touching your vehicle makes you uneasy, enclosed is worth it. If your car is replaceable and you want to keep costs down, open is the smart pick.</p>
-
-<h2>How Your Vehicle Is Protected</h2>
-<p>Beyond the covered trailer itself, enclosed transport includes several layers of care. Many carriers use soft, padded straps that secure the wheels instead of the frame, reducing stress on the suspension. Hydraulic liftgates raise low cars gently rather than using steep ramps. Some carriers offer single-vehicle or "top-load" placement for added separation. And every enclosed carrier in our network carries active cargo insurance covering your vehicle in transit — we're happy to confirm coverage details before you book.</p>
-
-<h2>Preparing Your Vehicle for Enclosed Shipping</h2>
-<p>Preparation is similar to open transport, with a few extra notes for valuable cars. Clean the vehicle and take detailed, dated photos to document its exact condition. Remove personal items and toll tags, and note any aftermarket or fragile components such as spoilers or low splitters so the driver can plan loading. Leave about a quarter tank of fuel, disable alarms, and provide one set of keys. If your car has special starting procedures, a battery cutoff, or transport mode, share those instructions with the driver at pickup.</p>
-
-<h2>Single-Car and Multi-Car Enclosed Options</h2>
-<p>Enclosed transport comes in a few configurations, and the right one depends on your vehicle and budget. Multi-car enclosed trailers carry several vehicles at once and offer the full weather protection of an enclosed haul at a more accessible price — a great balance for most luxury and classic cars. Single-car or two-car enclosed carriers provide the highest level of exclusivity and the most direct routing, which collectors often prefer for irreplaceable vehicles. Some carriers also offer features like liftgate loading and "top-load only" placement for added separation. When you request your quote, tell us about your vehicle's value, ground clearance, and timeline, and we'll recommend the enclosed option that fits best.</p>
-
-<h2>Ship with Confidence Through Ship Guy</h2>
-<p>Ship Guy is a licensed, bonded, FMCSA-registered auto transport broker offering enclosed auto transport to and from all 50 states. With transparent all-in pricing, no upfront deposit, a vetted network of premium carriers, real-time tracking, and 24/7 U.S.-based support, your prized vehicle is in careful hands from quote to delivery.</p>
-<p>Ready to protect your investment? <a href="index.html#top">Get your free quote</a> in about 60 seconds, or call <a href="tel:+18662803481">(866) 280-3481</a> to talk through your options. You can also compare <a href="open-car-transport.html">open car transport</a>, explore <a href="door-to-door-car-shipping.html">door-to-door delivery</a>, or see <a href="how-it-works.html">how shipping works</a>.</p>
-
-</div></section>
-
-<!-- related --><section class="related-section"><div class="container">
-      <h2>Explore Other Services</h2>
-      <div class="related-grid">
-        <a class="related-card" href="open-car-transport.html">Open Car Transport <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-        <a class="related-card" href="door-to-door-car-shipping.html">Door-to-Door Shipping <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-        <a class="related-card" href="state-to-state-car-shipping.html">State-to-State Shipping <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-        <a class="related-card" href="expedited-car-shipping.html">Expedited Car Shipping <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+  <div class="container hero-grid">
+    <div class="hero-copy">
+      <div class="hero-head">
+      <p class="eyebrow reveal">Licensed&nbsp;•&nbsp;Insured&nbsp;•&nbsp;Nationwide</p>
+      <h1 class="reveal d2">Florida Auto Transport: Costs, Timelines, and How Ship Guy Actually Moves Your Car</h1>
       </div>
+      <div class="hero-rest">
+      <p class="lede reveal d2">Florida is one of the busiest auto transport hubs in the country, and the demand isn&#x27;t slowing down. Whether you&#x27;re a snowbird heading south, a family relocating for work, or a student driving across the state for school, getting your car shipped instead of driving it yourself is often the smarter move. This guide breaks down exactly what Florida auto transport costs in 2026, how long it takes, which routes are most popular, and how Ship Guy handles the process differently from the low-ball car shipping companies you&#x27;ll find everywhere online.</p>
+
+      <ul class="trust-list reveal d3">
+        <li>
+          <span class="trust-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/><path d="m9 12 2 2 4-4"/></svg></span>
+          Licensed Broker &amp; Fully Insured
+        </li>
+        <li>
+          <span class="trust-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="2" width="8" height="4" rx="1"/><path d="M9 4H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2h-3"/><path d="m9 14 2 2 4-4"/></svg></span>
+          FMCSA Registered
+        </li>
+        <li>
+          <span class="trust-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></span>
+          Vetted Carrier Network
+        </li>
+        <li>
+          <span class="trust-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M4 13a8 8 0 0 1 16 0"/><rect x="2" y="13" width="4.4" height="7" rx="1.6"/><rect x="17.6" y="13" width="4.4" height="7" rx="1.6"/><path d="M20 19.5v.5a3 3 0 0 1-3 3h-3"/></svg></span>
+          Real-Time Tracking &amp; 24/7 Support
+        </li>
+      </ul>
+
+      <div class="hero-divider reveal d3"></div>
+
+      <div class="stats reveal d3">
+        <div class="stat"><span class="num">50+</span><span class="lbl">States Served</span></div>
+        <div class="stat"><span class="num">100%</span><span class="lbl">Insured Transport</span></div>
+        <div class="stat"><span class="num">24/7</span><span class="lbl">Support &amp; Tracking</span></div>
+      </div>
+      </div>
+    </div>
+
+    <!-- QUOTE CARD -->
+    <div class="quote-card reveal d2">
+      <h2>Get Your Instant Quote</h2>
+
+      <div class="steps" id="steps">
+        <div class="step is-active" data-step="1">
+          <span class="dot"><span class="num">1</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>
+          <span class="slabel">Destination</span>
+        </div>
+        <div class="track" data-track="1"></div>
+        <div class="step" data-step="2">
+          <span class="dot"><span class="num">2</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>
+          <span class="slabel">Vehicle</span>
+        </div>
+        <div class="track" data-track="2"></div>
+        <div class="step" data-step="3">
+          <span class="dot"><span class="num">3</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>
+          <span class="slabel">Contact</span>
+        </div>
+      </div>
+
+      <form id="quoteForm" novalidate>
+        <!-- STEP 1 -->
+        <div class="qstep is-current" data-panel="1">
+          <div class="field">
+            <label class="flabel" for="pickup">Pickup Location</label>
+            <div class="input-wrap">
+              <span class="lead"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg></span>
+              <input class="inp" id="pickup" name="pickup" type="text" placeholder="Enter city or zip code" autocomplete="address-level2" required>
+            </div>
+            <span class="err-msg">Please enter a pickup location.</span>
+          </div>
+
+          <div class="field">
+            <label class="flabel" for="delivery">Delivery Location</label>
+            <div class="input-wrap">
+              <span class="lead"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg></span>
+              <input class="inp" id="delivery" name="delivery" type="text" placeholder="Enter city or zip code" autocomplete="address-level2" required>
+            </div>
+            <span class="err-msg">Please enter a delivery location.</span>
+          </div>
+
+          <div class="field">
+            <label class="flabel" for="date">Pickup Date</label>
+            <div class="input-wrap">
+              <span class="lead"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg></span>
+              <input class="inp" id="date" name="date" type="text" placeholder="Select pickup date" onfocus="this.type='date'" onblur="if(!this.value)this.type='text'">
+            </div>
+          </div>
+
+          <div class="field">
+            <label class="flabel">Trailer Type</label>
+            <div class="opt-grid" data-radio-group>
+              <label class="opt is-selected">
+                <span class="opt-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M10 17V6a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1v10"/><path d="M10 8h7l4 4v4h-2"/><path d="M6 17h2M12 17h2"/><circle cx="6" cy="18" r="2"/><circle cx="17" cy="18" r="2"/></svg></span>
+                <span class="opt-text"><strong>Open Trailer</strong><small>Most common</small></span>
+                <input type="radio" name="trailer" value="open" checked>
+                <span class="radio"></span>
+              </label>
+              <label class="opt">
+                <span class="opt-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="6" width="14" height="11" rx="1.5"/><path d="M16 9h3l3 4v4h-2"/><path d="M6 17h2"/><circle cx="6" cy="18" r="2"/><circle cx="18" cy="18" r="2"/></svg></span>
+                <span class="opt-text"><strong>Enclosed Trailer</strong><small>Extra protection</small></span>
+                <input type="radio" name="trailer" value="enclosed">
+                <span class="radio"></span>
+              </label>
+            </div>
+          </div>
+
+          <button type="button" class="btn-primary" data-next>
+            Next: Vehicle Details
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </button>
+        </div>
+
+        <!-- STEP 2 -->
+        <div class="qstep" data-panel="2">
+          <div class="row-2">
+            <div class="field">
+              <label class="flabel" for="year">Year</label>
+              <div class="input-wrap">
+                <span class="lead"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg></span>
+                <span class="chev-r"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></span>
+                <select class="inp" id="year" name="year"><option value="">Year</option></select>
+              </div>
+            </div>
+            <div class="field">
+              <label class="flabel" for="make">Make</label>
+              <div class="input-wrap">
+                <span class="lead"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12l1.6-4.6A2 2 0 0 1 6.5 6h11a2 2 0 0 1 1.9 1.4L21 12"/><path d="M3 12h18v5a1 1 0 0 1-1 1h-1.2a1 1 0 0 1-1-1v-1H6.2v1a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-5Z"/><circle cx="7.5" cy="14.5" r="1"/><circle cx="16.5" cy="14.5" r="1"/></svg></span>
+                <input class="inp" id="make" name="make" type="text" placeholder="e.g. Toyota">
+              </div>
+            </div>
+          </div>
+
+          <div class="field">
+            <label class="flabel" for="model">Model</label>
+            <div class="input-wrap">
+              <span class="lead"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12l1.6-4.6A2 2 0 0 1 6.5 6h11a2 2 0 0 1 1.9 1.4L21 12"/><path d="M3 12h18v5a1 1 0 0 1-1 1h-1.2a1 1 0 0 1-1-1v-1H6.2v1a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-5Z"/><circle cx="7.5" cy="14.5" r="1"/><circle cx="16.5" cy="14.5" r="1"/></svg></span>
+              <input class="inp" id="model" name="model" type="text" placeholder="e.g. Camry">
+            </div>
+          </div>
+
+          <div class="field">
+            <label class="flabel">Is the vehicle running?</label>
+            <div class="opt-grid" data-radio-group>
+              <label class="opt is-selected">
+                <span class="opt-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5 10 8l4 3 5-4.5"/><path d="M9 16h6"/><circle cx="12" cy="12" r="9"/></svg></span>
+                <span class="opt-text"><strong>Runs &amp; drives</strong><small>Operable</small></span>
+                <input type="radio" name="running" value="yes" checked>
+                <span class="radio"></span>
+              </label>
+              <label class="opt">
+                <span class="opt-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 8v5M12 16h.01"/><circle cx="12" cy="12" r="9"/></svg></span>
+                <span class="opt-text"><strong>Not running</strong><small>Inoperable</small></span>
+                <input type="radio" name="running" value="no">
+                <span class="radio"></span>
+              </label>
+            </div>
+          </div>
+
+          <div class="btn-row">
+            <button type="button" class="btn-ghost" data-back>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 18l-6-6 6-6"/></svg>
+              Back
+            </button>
+            <button type="button" class="btn-primary" data-next>
+              Next: Your Details
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- STEP 3 -->
+        <div class="qstep" data-panel="3">
+          <div class="field">
+            <label class="flabel" for="name">Full Name</label>
+            <div class="input-wrap">
+              <span class="lead"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21v-1a6 6 0 0 1 6-6h4a6 6 0 0 1 6 6v1"/></svg></span>
+              <input class="inp" id="name" name="name" type="text" placeholder="Your name" autocomplete="name" required>
+            </div>
+            <span class="err-msg">Please enter your name.</span>
+          </div>
+          <div class="field">
+            <label class="flabel" for="email">Email</label>
+            <div class="input-wrap">
+              <span class="lead"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></span>
+              <input class="inp" id="email" name="email" type="email" placeholder="you@email.com" autocomplete="email" required>
+            </div>
+            <span class="err-msg">Please enter a valid email.</span>
+          </div>
+          <div class="field">
+            <label class="flabel" for="phone">Phone</label>
+            <div class="input-wrap">
+              <span class="lead"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/></svg></span>
+              <input class="inp" id="phone" name="phone" type="tel" placeholder="(555) 555-5555" autocomplete="tel" required>
+            </div>
+            <span class="err-msg">Please enter a phone number.</span>
+          </div>
+
+          <div class="btn-row">
+            <button type="button" class="btn-ghost" data-back>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 18l-6-6 6-6"/></svg>
+              Back
+            </button>
+            <button type="submit" class="btn-primary">Get My Quote</button>
+          </div>
+
+          <p class="assure">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="11" width="16" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg>
+            No spam — just your quote. Takes about 60 seconds.
+          </p>
+        </div>
+      </form>
+
+      <!-- success -->
+      <div class="quote-success" id="quoteSuccess" aria-live="polite">
+        <div class="success-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></div>
+        <h3>Your quote request is in!</h3>
+        <p>Thanks — a Ship Guy specialist will reach out shortly with your transparent, all-in price.</p>
+        <a class="btn-call" href="tel:+18662803481">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/></svg>
+          Or call us now: (866) 280-3481
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ===================== STATE CONTENT ===================== -->
+<section class="article-section"><div class="container article">
+  <nav class="crumbs" aria-label="Breadcrumb"><a href="index.html">Home</a><span>/</span><span aria-current="page">Florida Auto Transport</span></nav>
+  <h2>Florida Auto Transport In 2026: What You Need To Know First</h2>
+  <p>Florida&#x27;s position as a car shipping powerhouse is driven by a simple combination: millions of seasonal residents, a steady stream of relocations, and a peninsula geography that makes long drives exhausting. Ship Guy provides nationwide door-to-door auto transport service to and from Florida&#x27;s major cities - Miami, Orlando, Tampa, Jacksonville, Fort Lauderdale - as well as smaller coastal and rural communities throughout central Florida and the Panhandle.</p>
+  <p>Here&#x27;s what&#x27;s different about shipping a car in 2026 compared to a couple of years ago.</p>
+  <p>Fuel prices remain elevated. Florida gasoline in early 2026  up operating costs for every carrier on the road. That cost gets passed directly into your quote. Carriers in the Central Dispatch marketplace report cost-per-mile rates climbing to $0.90 or more, closely tracking diesel.</p>
+  <p>Florida experiences high demand for car transport services during peak snowbird seasons, which means the November-through-January and March-through-April windows see the tightest capacity and highest prices. Seasonal demand is the single biggest variable that separates a $900 quote from a $1,200 quote on the same route.</p>
+  <p>Shipping costs increase during peak seasons like fall and spring, so understanding these cycles is essential if you want to save money. This guide will cover real price ranges, transit times, Florida&#x27;s most popular florida routes, how the shipping process works step-by-step, and how Ship Guy stands apart from car shipping companies that lure you in with unrealistically low numbers.</p>
+  <p>One more thing worth noting for Florida residents moving here permanently: you have 10 days to register your vehicle in Florida after shipping, and Florida does not require emissions testing for vehicle registration, which simplifies the process considerably.</p>
+  <h2>How Florida Car Shipping Actually Works With Ship Guy</h2>
+  <p>Car shipping in Florida follows a clear process from quote to delivery, and Ship Guy manages the entire auto transport service as a licensed broker. Companies in this industry typically act as brokers matching customers with independent carriers, and Ship Guy is transparent about that role while adding a layer of quality control that most brokers skip.</p>
+  <p>Ship Guy works with a pre-vetted carrier network rather than posting your car blindly to load boards where any unvetted driver can claim the job. Every licensed carrier in Ship Guy&#x27;s network is checked for USDOT/MC licensing, cargo insurance limits, safety record, and equipment condition before they&#x27;re ever assigned a car shipment.</p>
+  <p>Here&#x27;s the typical timeline you can expect:</p>
+  <p><strong>Quote and booking:</strong> Same day, usually within hours</p>
+  <p><strong>Carrier assignment:</strong> 0–3 days in major metro areas like Miami, Tampa, or Jacksonville; up to 5 days for rural locations in the Keys or Panhandle</p>
+  <p><strong>Pickup window:</strong> 1–2 days after carrier assignment</p>
+  <p><strong>Transit:</strong> 1–7 days depending on route distance and conditions</p>
+  <p>Shipping a car to Florida takes 1 to 7 days, with shorter intrastate moves (Orlando to Tampa, for example) landing at the low end and cross-country hauls to the West Coast at the upper end.</p>
+  <p>Communication is continuous throughout. You&#x27;ll receive confirmation when the car picks up your vehicle, status updates during transit, and a heads-up when your vehicle arrives near the delivery point. Door-to-door shipping allows drivers to pick up and drop off vehicles at designated addresses, so in most cases, you won&#x27;t need to drive to a terminal.</p>
+  <p>Ship Guy offers both open and enclosed transport options, covering everything from a standard sedan to classic vehicles and high-end exotics.</p>
+  <h2>Open vs. Enclosed Florida Auto Transport</h2>
+  <p>The choice between open transport and enclosed transport is the single biggest cost factor after distance. It determines the type of trailer your car rides on, the level of protection it receives, and how long you may wait for a carrier.</p>
+  <h2>Open Car Transport</h2>
+  <p>Open transport is the most common and economical method. An open carrier typically holds 8–10 vehicles on a two-level trailer, which is why open trailers can carry more cars, reducing costs for everyone. This is the workhorse of the industry, and you&#x27;ll see these rigs constantly rolling along I-95 and I-75 through Florida.</p>
+  <p>Open car shipping works well for everyday sedans, SUVs, trucks, and minivans. Most standard vehicles can be shipped safely via open transport without issue. The trade-off is exposure to the elements - road debris, weather, UV, and, along Florida&#x27;s coast, salt air.</p>
+  <p>Open transport is 30–40% cheaper than enclosed transport, making it the default choice for most vehicle shipping customers.</p>
+  <h2>Enclosed Car Transport</h2>
+  <p>Enclosed transport uses hard- or soft-sided trailers that carry only 2–6 vehicles. This option provides added protection from weather, debris, and road grime. Enclosed transport protects vehicles from weather and road debris, which is especially important for vehicles with custom paint, low clearance, or high dollar value.</p>
+  <p>Enclosed transport is preferred for luxury or classic cars, as well as for any vehicle valued at roughly $50,000 or more. For classic cars with irreplaceable finishes, this is the only option worth considering.</p>
+  <h2>Florida Price Difference Example</h2>
+  <p>Transporting a car in Florida can be done via open or enclosed carriers, and the price gap is real. For a 2021 Hyundai Sonata shipped from Miami to Charlotte, NC in 2026, enclosed auto transport typically runs about 40–60% more than open. On longer routes, .</p>
+  <p>Along the coasts - Miami Beach, Clearwater, Daytona, the Keys - enclosed areas are worth considering for collector vehicles due to salt air and storm exposure. For most daily drivers, open carrier shipping is more than sufficient.</p>
+  <h2>What Does Florida Car Shipping Cost In 2026?</h2>
+  <p>Car shipping cost is dynamic. It shifts with route distance, seasonal demand, vehicle size, trailer type, and even the specific pickup and delivery locations. But you deserve real numbers, not vague ranges that mean nothing.</p>
+  <h2>2026 Open Transport Ranges From Florida</h2>
+  <div class="table-wrap"><table><tbody><tr><td>Short-haul (intrastate)</td><td>Under 300 miles</td><td>$300–$650</td></tr><tr><td>Mid-range (interstate)</td><td>300–1,000 miles</td><td>$650–$1,050</td></tr><tr><td>Long-haul (cross-country)</td><td>1,000+ miles</td><td>$1,050–$1,600</td></tr></tbody></table></div>
+  <p>Overall, open transport is cheaper, costing $550 to $1,600 depending on distance and timing. Enclosed transport costs $1,000 to $2,450 on average for comparable routes.</p>
+  <p>Distance is the most significant factor affecting shipping costs, but it&#x27;s far from the only one.</p>
+  <h2>What Else Affects Your Final Cost</h2>
+  <p><strong>Vehicle type and size:</strong> Shipping a compact sedan costs less than shipping a dually truck or an oversized SUV. Larger vehicles take up more trailer space and add weight.</p>
+  <p><strong>Vehicle condition:</strong> Vehicle condition affects transport rates and methods available. Inoperable vehicles require specialized equipment, such as winches or lift gates, which adds to the final cost.</p>
+  <p><strong>Season:</strong> Florida&#x27;s car shipping rates drop during the off-season, typically late summer. During snowbird peaks (November–January northbound, March–April southbound),  over base rates.</p>
+  <p><strong>Pickup and delivery access:</strong> Remote locations, narrow streets, or gated communities may require a meet-at-location arrangement instead of true door-to-door service.</p>
+  <p>Ship Guy provides personalized, locked-in quotes that factor in your exact pickup location, vehicle type, timing, and trailer preference. That means no surprise fees tacked on when the truck shows up.</p>
+  <h2>Popular Florida Car Shipping Routes, Prices, and Transit Times</h2>
+  <p>Florida&#x27;s most active auto transport lanes follow the major interstates: I-95 running the East Coast, I-75 cutting through the peninsula and into Georgia, and I-10 spanning the Panhandle toward Texas and beyond. Carrier density on these corridors keeps pricing competitive, while routes with fewer direct carriers tend to cost more per mile.</p>
+  <p>Most Florida auto transport routes take 1 to 7 days, depending on distance and demand spikes on the lane.</p>
+  <h2>Florida ↔ New York / New Jersey</h2>
+  <p>The route from Florida to New York is 931 miles, making it one of the most heavily trafficked auto transport lanes in the country. Expect 2–4 days of transit on open transport, with New York car shipping costs typically ranging from $900 to $1,300 for a standard sedan. Enclosed transport on this same route pushes into the $1,300–$2,000 range. York car shipping along the I-95 corridor benefits from high carrier volume, which helps keep pricing steady outside of peak windows.</p>
+  <h2>Florida ↔ Texas</h2>
+  <p>The route from Jacksonville to Dallas via I-10 and I-20 covers roughly 1,200–1,400 miles. Transit runs 4–6 days on open transport, with costs in the $1,100–$1,500 range. Fewer direct carriers serve this lane compared to the East Coast, so pricing can run slightly higher, and pickup date windows may be wider.</p>
+  <h2>Florida ↔ Midwest (Chicago)</h2>
+  <p>The route from Florida to Chicago is a popular snowbird route, covering about 1,300–1,400 miles. Transit takes 3–6 days, with open transport costs typically between $1,200 and $1,600. Winter weather from December through February can delay carrier crossings across multiple climate zones and push delivery timing back by a day or two.</p>
+  <h2>Florida ↔ California</h2>
+  <p>The Florida-to-California route is 2,416 miles long, the longest major domestic route from the state. Shipping a car from Florida to California costs $1,200 to $1,500 on open transport, with enclosed options running significantly higher. Transit times range from 5–7 days, depending on carrier routing.</p>
+  <h2>Intrastate Florida Routes</h2>
+  <p>Shorter Florida shipping routes, such as Miami ↔ Jacksonville (~350 miles) or Tampa ↔ Pensacola, typically take 1–2 days. Costs run $375–$700, and while the per-mile rate can be higher on these shorter runs, the total price stays manageable. Most carriers need a full load to justify the route, so availability can vary.</p>
+  <h2>Who Uses Florida Auto Transport, And What Each Shipper Needs From Ship Guy</h2>
+  <p>Florida auto transport serves several distinct customer groups, each with different priorities and timing constraints.</p>
+  <h2>Snowbirds</h2>
+  <p>The classic Florida car shipping customer. Snowbirds shuttle between northern states and Florida twice a year - heading south in October through November and heading north in March through April. Booking car transport services 2 to 4 weeks in advance is generally recommended, especially during snowbird season. Booking early is crucial for Florida car shipping to avoid inflated rates and week-long waits for carrier assignment. Flexible pickup windows help align your car shipment with carrier backhaul schedules, reducing costs.</p>
+  <h2>Relocating Families and Professionals</h2>
+  <p>If you&#x27;re moving to Miami, Tampa Bay, Orlando, or Jacksonville for work, driving 1,000+ miles with your family isn&#x27;t always practical. Ship Guy&#x27;s door-to-door service gets your vehicle delivered directly to your new neighborhood while you fly. The advantage isn&#x27;t just convenience - it also eliminates wear, fuel costs, and the risk of a long-distance breakdown.</p>
+  <h2>College Students</h2>
+  <p>Major campuses like UF in Gainesville, FSU in Tallahassee, UCF in Orlando, and UM in Coral Gables all see demand spikes around move-in and move-out dates. Timing your shipment around official university schedules in August, December, or May helps avoid delays. Students are often budget-conscious, so open transport along a well-traveled route is usually the best value.</p>
+  <h2>Military Personnel</h2>
+  <p>Florida hosts major installations including MacDill AFB in Tampa, NAS Jacksonville, and Eglin AFB in the Panhandle. Military families on PCS orders work under strict report dates. Ship Guy can coordinate around base access requirements and tight timelines. It&#x27;s also worth noting that AmeriFreight offers discounts for military members and first responders, so comparing multiple providers is smart for this group.</p>
+  <h2>Dealerships and Online Car Buyers</h2>
+  <p>Dealers shipping inventory and individual buyers purchasing vehicles online often need reliable car shipping with strict condition documentation, tight lead times, and, for higher-value vehicles, enclosed options.</p>
+  <h2>What To Do Before Your Car Gets Picked Up In Florida</h2>
+  <p>Good preparation prevents delays, insurance disputes, and extra charges when the carrier arrives. Here&#x27;s what to do before your car is picked up.</p>
+  <p><strong>Remove personal items and valuables.</strong> Personal items should not be kept inside vehicles during transport. Most carriers allow a small amount in the trunk (often under 100 lbs, below the window line), but anything in the cabin is generally prohibited. Don&#x27;t ship personal items like electronics, documents, or anything irreplaceable. Beyond the risk of theft, unnecessary weight from personal belongings can push the vehicle over DOT limits.</p>
+  <p><strong>Manage your fuel and fluids.</strong> Transporters typically require the gas tank to be no more than one-fourth full to reduce weight. Leave about a quarter of a tank of gas in your tank. Check tire pressure, battery charge, and look for fluid leaks so the car loads and unloads smoothly. Make sure you have a spare key available for the driver.</p>
+  <p><strong>Wash and photograph your car.</strong> Thoroughly wash the vehicle and take clear, time-stamped photos of all sides, including close-ups of any existing damage - scratches, dents, chips, wheel curb rash. These photos are your evidence if you need to file a claim after delivery.</p>
+  <p><strong>Understand the Bill of Lading.</strong> At pickup, walk around the car with the driver and confirm that all pre-existing damage is documented on the Bill of Lading. Sign only after verifying accuracy. Keep your copy. At delivery, repeat the inspection before signing off. Inspect your vehicle before releasing payment to the carrier to ensure everything matches.</p>
+  <h2>How To Choose A Florida Car Shipping Company (And Why Ship Guy Is Different)</h2>
+  <p>Florida&#x27;s car shipping market is crowded. You&#x27;ll find reputable brokers, solid independent carriers, and a long list of risky low-ball operators who disappear the moment something goes wrong. Knowing what to look for is the difference between a hassle-free experience and a nightmare.</p>
+  <h2>Verify Licensing</h2>
+  <p>Vehicle transport companies must be registered with the FMCSA to be legitimate. Whether you&#x27;re dealing with a broker or a carrier, check their USDOT and MC numbers through the . If a shipping company can&#x27;t provide these numbers or they don&#x27;t check out, walk away. Every legitimate auto transport company will have this information readily available.</p>
+  <h2>Watch for Bait-and-Switch Pricing</h2>
+  <p>Some car shipping companies post loads at unrealistically low rates to win your booking, then pressure you to pay more when the carrier arrives. This is the most common complaint in the industry. If a quote seems too good to be true - especially during peak season - it probably is.</p>
+  <p>Ship Guy&#x27;s approach eliminates this. You get a clear explanation of deposits (if any), written confirmation of all terms before dispatch, and a locked-in price. No bait-and-switch. No pressure at pickup.</p>
+  <h2>Insurance and Liability</h2>
+  <p>Insurance coverage is essential when transporting vehicles. Confirm the carrier&#x27;s cargo insurance limits, whether they cover actual cash value or replacement value, and understand the carrier&#x27;s policy on damage claims. Make sure your car insurance coverage extends through pickup and delivery, and ask about full insurance options for extra peace of mind in case of carrier negligence.</p>
+  <h2>Check the Competition - Then Compare</h2>
+  <p>The Florida market has several well-known players:</p>
+  <p>Sherpa Auto Transport serves 116 cities across Florida and is a common alternative.</p>
+  <p>Montway has a 89% customer satisfaction rate for recommendations.</p>
+  <p>91% of Direct Connect Auto Transport customers reported on-time delivery</p>
+  <p>uShip provides access to multiple feedback-rated carriers for quotes</p>
+  <p>Nexus Auto Transport is another name you&#x27;ll see in Florida markets.</p>
+  <p>Ship Guy differentiates by pre-vetting every carrier in its network, providing continuous tracking updates, and refusing to sacrifice service quality for the lowest possible bid. When reading reviews, look for Florida-specific feedback that mentions on-time pickup, communication during transit, and how damage claims were handled - not just overall star ratings from the business bureau or generic review sites.</p>
+  <h2>Florida Weather, Terrain, And Seasonal Challenges For Auto Transport</h2>
+  <p>Florida&#x27;s climate, geography, and seasonal patterns create challenges that directly affect scheduling, carrier access, and delivery timing.</p>
+  <p><strong>Summer heat and storms.</strong> From June through August, cities like Miami, Orlando, and Tampa experience intense heat and sudden afternoon thunderstorms. These can slow loading operations and occasionally push delivery by a day. Summer also brings higher humidity that, combined with salt air along the coast, can affect exposed vehicles on open carriers.</p>
+  <p><strong>Hurricane season.</strong> June 1 through November 30 is hurricane season. Tropical storms or evacuation orders can close highways, shut down ports, and force carriers to shelter in place. During early fall storms, flexible pickup and delivery windows are essential.</p>
+  <p><strong>Access limitations.</strong> Certain neighborhoods, barrier islands, and the Florida Keys have limited access for 75–80 foot auto transport rigs. Narrow roads, low-clearance bridges, and weight restrictions may prevent a large carrier from reaching your exact address. In these cases, Ship Guy arranges a nearby meeting point where the vehicle can be safely loaded or unloaded - the security service of getting the car to a safe, accessible spot is part of the coordination.</p>
+  <p><strong>Advice for high-value vehicles.</strong> If you&#x27;re shipping classic cars or exotics during peak storm season, enclosed transport with tighter coordination on delivery windows is the right call. The added protection is worth the premium when the weather is unpredictable.</p>
+  <h2>Step-By-Step: Booking Your Florida Auto Transport With Ship Guy</h2>
+  <p>Ship Guy&#x27;s process is designed to be simple and transparent: quote, schedule, pickup, and delivery with support at every stage. Here&#x27;s exactly how it works.</p>
+  <h2>Step 1 - Quote</h2>
+  <p>You provide:</p>
+  <p>Pickup and delivery ZIP codes</p>
+  <p>Vehicle make, model, year, and vehicle type.</p>
+  <p>Whether the vehicle is running or inoperable (inoperable vehicles require special handling)</p>
+  <p>Open vs. enclosed preference</p>
+  <p>Preferred dates or date windows</p>
+  <p>Ship Guy returns a customized price estimate that includes all known fees - access charges, lift gate requirements, and remote pickup premiums - with clear breakdowns. No hidden line items that inflate the final cost later.</p>
+  <p>If you&#x27;re looking for expedited car shipping, mention your timeline upfront so Ship Guy can prioritize carrier assignment.</p>
+  <h2>Step 2 - Booking</h2>
+  <p>Once you approve, Ship Guy confirms the booking in writing with all terms: pickup window, estimated transit days, total cost, deposit structure, vehicle condition notes, and whether you&#x27;ve selected open or enclosed. This written confirmation is your contract, and it locks in your pricing.</p>
+  <h2>Step 3 - Carrier Assignment and Updates</h2>
+  <p>Ship Guy assigns a vetted, licensed carrier and shares their MC/USDOT numbers and cargo insurance details with you. You&#x27;ll receive a pickup window based on current Florida routes&#x27; demand - tighter windows in metro areas, slightly wider in remote zones.</p>
+  <p>Throughout transit, you&#x27;ll get updates on your location and estimated arrival time. Most carriers provide regular check-ins, and Ship Guy monitors progress through completion.</p>
+  <h2>Step 4 - Pickup and Delivery</h2>
+  <p>At pickup, the driver and you perform a walk-around inspection. Every scratch, dent, and blemish is documented on the Bill of Lading. The car is loaded, secured, and dispatched.</p>
+  <p>At delivery, you inspect the car again, compare its condition against your pickup photos and the Bill of Lading, and sign the delivery confirmation. If anything is off, initiate a claim immediately. The car transport service isn&#x27;t complete until you&#x27;re satisfied with your vehicle&#x27;s condition.</p>
+  <p>For most addresses, your vehicle will be delivered directly to your door. If access is restricted, Ship Guy coordinates the nearest safe delivery point in advance to avoid last-minute surprises.</p>
+  <p>Whether you need to ship a car across the state or across the country, the process stays the same. Ship Guy handles the coordination so you can focus on everything else about your move.</p>
+  <p>Florida auto transport doesn&#x27;t have to be complicated. With realistic expectations on pricing, a clear understanding of seasonal demand, and a reliable car shipping partner managing the details, the process is straightforward. Ship Guy&#x27;s pre-vetted carrier network, locked-in pricing, and continuous communication are built to deliver exactly what the best car shipping companies promise, but few actually deliver - a car transport service that works without the stress.</p>
+  <p>Get your personalized quote from Ship Guy today and find out exactly what it costs to move your car to or from Florida. If you&#x27;re shipping during snowbird season or need to coordinate around international destinations, a PCS move, or a campus move-in date, the earlier you book, the better your options will be.</p>
 </div></section>
 
 <!-- ===================== FINAL CTA ===================== -->

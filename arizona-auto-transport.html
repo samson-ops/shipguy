@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Enclosed Auto Transport — Protected Vehicle Shipping | Ship Guy</title>
-<meta name="description" content="Enclosed auto transport offers fully covered, premium protection for classic, luxury, and high-value vehicles. Learn how enclosed car shipping works and what it costs.">
+<title>Arizona Auto Transport — Car Shipping to &amp; from Arizona | Ship Guy</title>
+<meta name="description" content="Ship Guy specializes in Arizona auto transport for anyone moving to or from the Grand Canyon State-whether you are a snowbird heading south for the wint…">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
@@ -273,7 +273,7 @@ select.inp{appearance:none;-webkit-appearance:none;padding-right:38px;cursor:poi
 .reviews-head{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;flex-wrap:wrap;margin-bottom:30px}
 .reviews-head h2{font-size:clamp(1.7rem,2.6vw,2.1rem);font-weight:800;color:var(--brand)}
 .reviews-head p{margin:8px 0 0;color:var(--muted);font-size:15.5px}
-.rating{display:flex;align-items:center;gap:12px}
+.rating{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
 .rating .score{font-family:var(--font-display);font-weight:800;font-size:22px;color:var(--ink)}
 .stars{display:inline-flex;gap:2px;color:var(--star)}
 .stars svg{width:18px;height:18px}
@@ -480,10 +480,15 @@ section[id]{scroll-margin-top:104px}
    Responsive
    ========================================================= */
 @media (max-width:1180px){
-  .hero-grid{grid-template-columns:minmax(0,1fr);gap:36px;padding:54px 24px 60px}
-  .hero-copy{max-width:640px}
+  .hero-grid{grid-template-columns:minmax(0,1fr);gap:28px;padding:54px 24px 60px}
+  .hero-copy{display:contents}
+  .hero-head,.hero-rest{max-width:640px;width:100%}
+  .hero-head{order:1}
+  .quote-card{order:2;max-width:520px;width:100%}
+  .hero-rest{order:3}
+  .hero-head h1{margin-bottom:0}
+  .eyebrow{display:none}
   .lede{max-width:520px}
-  .quote-card{max-width:520px;width:100%}
   .hero-overlay{background:linear-gradient(180deg, rgba(4,9,22,.72) 0%, rgba(4,9,22,.8) 55%, rgba(4,9,22,.88) 100%)}
 }
 @media (max-width:1180px){
@@ -504,6 +509,7 @@ section[id]{scroll-margin-top:104px}
 @media (max-width:980px){
   .wc-bento{grid-template-columns:1fr}
   .loc-bento{grid-template-columns:1fr;gap:32px}
+  .review-grid{grid-template-columns:1fr 1fr}
 }
 @media (max-width:880px){
   .steps-row{flex-direction:column;gap:0;max-width:440px;margin:0 auto}
@@ -544,6 +550,31 @@ section[id]{scroll-margin-top:104px}
   .step .slabel{font-size:11.5px}
 }
 
+/* compact hero on laptop screens only (~25% shorter) */
+@media (min-width:1181px) and (max-width:1600px){
+  .hero-grid{padding-top:34px;padding-bottom:40px;gap:40px}
+  .eyebrow{margin-bottom:12px}
+  .hero-copy h1{font-size:clamp(2rem,3vw,2.5rem);margin-bottom:14px}
+  .lede{font-size:15.5px;margin-bottom:18px}
+  .trust-list{margin-bottom:16px;gap:9px}
+  .trust-list li{font-size:14.5px}
+  .trust-ic{width:30px;height:30px}
+  .trust-ic svg{width:17px;height:17px}
+  .hero-divider{margin-bottom:16px}
+  .stat .num{font-size:26px}
+  .stat .lbl{font-size:12px;margin-top:5px}
+  .quote-card{padding:20px 24px 18px}
+  .quote-card h2{font-size:22px;margin-bottom:13px}
+  .steps{margin-bottom:13px}
+  .step .dot{width:30px;height:30px}
+  .field{margin-bottom:9px}
+  .flabel{margin-bottom:4px}
+  .inp{height:40px}
+  .opt{padding:8px 12px}
+  .btn-primary{height:46px}
+  .assure{margin-top:8px}
+}
+
 /* reduced motion */
 @media (prefers-reduced-motion:reduce){
   *{animation-duration:.001ms!important;transition-duration:.001ms!important}
@@ -555,6 +586,11 @@ section[id]{scroll-margin-top:104px}
 body.ready .reveal{opacity:1;transform:none}
 .reveal.d2{transition-delay:.08s}
 .reveal.d3{transition-delay:.16s}
+
+.menu.menu-mega{display:grid;grid-template-columns:1fr 1fr;column-gap:4px;min-width:452px}
+.menu.menu-mega .menu-all{grid-column:1 / -1;margin-top:6px;padding-top:12px;border-top:1px solid var(--line);color:var(--brand);font-weight:700}
+
+@media (max-width:460px){.footer-top{grid-template-columns:1fr;gap:28px}}/* resp-polish-footer */
 /* ===== Subpage / article / services styles ===== */
 .page-hero{background:linear-gradient(135deg,#0a2a9e 0%, var(--brand) 60%, #1f54e0 100%);color:#fff;padding:62px 0 56px}
 .crumbs{display:flex;flex-wrap:wrap;gap:9px;font-size:13.5px;font-weight:600;color:#bcd2f8;margin-bottom:16px}
@@ -594,19 +630,20 @@ body.ready .reveal{opacity:1;transform:none}
 @media (max-width:900px){.svc-grid{grid-template-columns:1fr 1fr}.related-grid{grid-template-columns:1fr 1fr}}
 @media (max-width:560px){.svc-grid{grid-template-columns:1fr}.related-grid{grid-template-columns:1fr}}
 
+.article table{width:100%;border-collapse:collapse;margin:16px 0 22px;font-size:15px}
+.article table td,.article table th{border:1px solid var(--line);padding:10px 14px;text-align:left;vertical-align:top}
+.article table tr:nth-child(even){background:#f7f9fd}
+.article table td:first-child{font-weight:600;color:#101a3d}
+.table-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:0 0 6px}
+.article h2{margin-top:30px}
+@media (max-width:560px){.article table{font-size:13.5px}.article table td,.article table th{padding:8px 10px}}
 
-.menu.menu-mega{display:grid;grid-template-columns:1fr 1fr;column-gap:4px;min-width:452px}
-.menu.menu-mega .menu-all{grid-column:1 / -1;margin-top:6px;padding-top:12px;border-top:1px solid var(--line);color:var(--brand);font-weight:700}
-
-@media (max-width:460px){.footer-top{grid-template-columns:1fr;gap:28px}}/* resp-polish-footer */
 </style>
 <script type="application/ld+json">
-{
-  "@context":"https://schema.org","@graph":[
-  {"@type":"Service","name":"Enclosed Auto Transport","serviceType":"Auto transport","provider":{"@type":"Organization","name":"Ship Guy","telephone":"+1-866-280-3481"},"areaServed":{"@type":"Country","name":"United States"},"description":"Enclosed auto transport offers fully covered, premium protection for classic, luxury, and high-value vehicles. Learn how enclosed car shipping works and what it costs."},
-  {"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"index.html"},{"@type":"ListItem","position":2,"name":"Services","item":"services.html"},{"@type":"ListItem","position":3,"name":"Enclosed Auto Transport","item":"enclosed-auto-transport.html"}]}
-  ]
-}
+{"@context":"https://schema.org","@graph":[
+{"@type":"Service","serviceType":"Auto Transport","name":"Arizona Auto Transport","areaServed":{"@type":"State","name":"Arizona"},"provider":{"@type":"Organization","name":"Ship Guy","telephone":"+1-866-280-3481"},"description":"Ship Guy specializes in Arizona auto transport for anyone moving to or from the Grand Canyon State-whether you are a snowbird heading south for the wint…"},
+{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"index.html"},{"@type":"ListItem","position":2,"name":"Arizona Auto Transport","item":"arizona-auto-transport.html"}]}
+]}
 </script>
 </head>
 <body>
@@ -698,65 +735,333 @@ body.ready .reveal{opacity:1;transform:none}
   </nav>
 </header>
 
-<!-- ===================== PAGE HERO ===================== -->
-<section class="page-hero"><div class="container">
-  <nav class="crumbs" aria-label="Breadcrumb"><a href="index.html">Home</a><span>/</span><a href="services.html">Services</a><span>/</span><span aria-current="page">Enclosed Auto Transport</span></nav>
-  <h1>Enclosed Auto Transport</h1>
-  <p class="page-hero-sub">Fully enclosed, premium protection for classic, luxury, and high-value vehicles.</p>
-</div></section>
+<!-- ===================== HERO ===================== -->
+<section class="hero">
+  <div class="hero-media" aria-hidden="true">
+    <img class="hero-img" alt="" src="assets/hero.jpg">
+    <div class="hero-overlay"></div>
+  </div>
 
-<section class="article-section"><div class="container article">
-<p class="article-lead">When your vehicle is rare, valuable, or simply irreplaceable, enclosed auto transport gives it the white-glove protection it deserves. Here's how enclosed car shipping works, what it costs, and when it's the right call.</p>
-
-<h2>What Is Enclosed Auto Transport?</h2>
-<p>Enclosed auto transport ships your vehicle inside a fully covered trailer rather than on an open deck. Sealed walls and a roof shield your car from rain, snow, road salt, dust, and debris for the entire journey. Enclosed trailers typically carry fewer vehicles than open carriers — often two to seven — and many use soft straps and hydraulic liftgates to load low-clearance cars without risk to bumpers or undercarriages.</p>
-<p>This is the same level of care used to move exotic cars to auctions, show vehicles between events, and high-value inventory between dealerships. With Ship Guy, your enclosed shipment is handled by a licensed, insured carrier from our vetted network that specializes in premium transport.</p>
-
-<h2>How Enclosed Car Shipping Works</h2>
-<p>Enclosed transport follows the same simple three steps as any Ship Guy shipment, with extra attention at every stage. You start with a free quote, then we match your vehicle to an enclosed carrier and coordinate a pickup window around your schedule. At pickup, the driver performs a detailed condition inspection, documents it on the Bill of Lading, and loads your vehicle using equipment designed for valuable cars. Throughout transit you can track progress and reach our 24/7 support team, and at delivery you inspect the vehicle against the pickup report before signing off.</p>
-<p>Because enclosed carriers are fewer in number and in higher demand, they can take a little longer to schedule than open trucks. Booking ahead helps secure the best carrier and timing for your vehicle.</p>
-
-<h2>How Much Does Enclosed Transport Cost?</h2>
-<p>Enclosed transport costs more than open transport — typically a meaningful premium — because the trailers carry fewer vehicles, require specialized equipment, and offer a higher level of protection. Your exact price depends on distance, vehicle size and value, the type of enclosed trailer, your timing, and route demand.</p>
-<p>For many owners, the added cost is well worth it: when you're shipping a vehicle worth tens or hundreds of thousands of dollars, full protection from the elements and road hazards is inexpensive peace of mind. As with every Ship Guy shipment, your quote is all-in with no hidden fees and no upfront deposit — you pay only once your vehicle is dispatched.</p>
-
-<h2>When Should You Choose Enclosed Transport?</h2>
-<p>Enclosed auto transport is the right choice when your vehicle is too valuable, rare, or delicate to expose to the open road. Consider it for:</p>
-<ul>
-  <li><strong>Classic and antique cars</strong> with original or irreplaceable finishes</li>
-  <li><strong>Luxury and exotic vehicles</strong> from premium manufacturers</li>
-  <li><strong>Sports cars and low-clearance vehicles</strong> that need liftgate loading</li>
-  <li><strong>Show cars and concours vehicles</strong> that must arrive spotless</li>
-  <li><strong>Custom builds, restorations, and high-value inventory</strong></li>
-</ul>
-<p>If your vehicle is a standard daily driver, <a href="open-car-transport.html">open car transport</a> is usually the more practical and economical choice. When in doubt, our team can help you decide.</p>
-
-<h2>Enclosed vs. Open Transport</h2>
-<p>The core trade-off is protection versus price. Open transport is affordable and widely available, and it's perfectly safe for everyday vehicles — it's how new cars reach dealerships. Enclosed transport adds a sealed, weatherproof trailer and gentler handling at a higher cost. If the thought of road spray, a stray pebble, or a sudden storm touching your vehicle makes you uneasy, enclosed is worth it. If your car is replaceable and you want to keep costs down, open is the smart pick.</p>
-
-<h2>How Your Vehicle Is Protected</h2>
-<p>Beyond the covered trailer itself, enclosed transport includes several layers of care. Many carriers use soft, padded straps that secure the wheels instead of the frame, reducing stress on the suspension. Hydraulic liftgates raise low cars gently rather than using steep ramps. Some carriers offer single-vehicle or "top-load" placement for added separation. And every enclosed carrier in our network carries active cargo insurance covering your vehicle in transit — we're happy to confirm coverage details before you book.</p>
-
-<h2>Preparing Your Vehicle for Enclosed Shipping</h2>
-<p>Preparation is similar to open transport, with a few extra notes for valuable cars. Clean the vehicle and take detailed, dated photos to document its exact condition. Remove personal items and toll tags, and note any aftermarket or fragile components such as spoilers or low splitters so the driver can plan loading. Leave about a quarter tank of fuel, disable alarms, and provide one set of keys. If your car has special starting procedures, a battery cutoff, or transport mode, share those instructions with the driver at pickup.</p>
-
-<h2>Single-Car and Multi-Car Enclosed Options</h2>
-<p>Enclosed transport comes in a few configurations, and the right one depends on your vehicle and budget. Multi-car enclosed trailers carry several vehicles at once and offer the full weather protection of an enclosed haul at a more accessible price — a great balance for most luxury and classic cars. Single-car or two-car enclosed carriers provide the highest level of exclusivity and the most direct routing, which collectors often prefer for irreplaceable vehicles. Some carriers also offer features like liftgate loading and "top-load only" placement for added separation. When you request your quote, tell us about your vehicle's value, ground clearance, and timeline, and we'll recommend the enclosed option that fits best.</p>
-
-<h2>Ship with Confidence Through Ship Guy</h2>
-<p>Ship Guy is a licensed, bonded, FMCSA-registered auto transport broker offering enclosed auto transport to and from all 50 states. With transparent all-in pricing, no upfront deposit, a vetted network of premium carriers, real-time tracking, and 24/7 U.S.-based support, your prized vehicle is in careful hands from quote to delivery.</p>
-<p>Ready to protect your investment? <a href="index.html#top">Get your free quote</a> in about 60 seconds, or call <a href="tel:+18662803481">(866) 280-3481</a> to talk through your options. You can also compare <a href="open-car-transport.html">open car transport</a>, explore <a href="door-to-door-car-shipping.html">door-to-door delivery</a>, or see <a href="how-it-works.html">how shipping works</a>.</p>
-
-</div></section>
-
-<!-- related --><section class="related-section"><div class="container">
-      <h2>Explore Other Services</h2>
-      <div class="related-grid">
-        <a class="related-card" href="open-car-transport.html">Open Car Transport <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-        <a class="related-card" href="door-to-door-car-shipping.html">Door-to-Door Shipping <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-        <a class="related-card" href="state-to-state-car-shipping.html">State-to-State Shipping <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-        <a class="related-card" href="expedited-car-shipping.html">Expedited Car Shipping <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+  <div class="container hero-grid">
+    <div class="hero-copy">
+      <div class="hero-head">
+      <p class="eyebrow reveal">Licensed&nbsp;•&nbsp;Insured&nbsp;•&nbsp;Nationwide</p>
+      <h1 class="reveal d2">Arizona Auto Transport With Ship Guy</h1>
       </div>
+      <div class="hero-rest">
+      <p class="lede reveal d2">Ship Guy specializes in Arizona auto transport for anyone moving to or from the Grand Canyon State-whether you are a snowbird heading south for the winter, a student relocating for school, a family starting fresh in the Valley, or a dealer moving inventory across state lines. With same-day quote turnaround and instant estimates available for most routes, Ship Guy provides nationwide coverage, with particular depth in corridors running in and out of Phoenix, AZ, and Tucson.</p>
+
+      <ul class="trust-list reveal d3">
+        <li>
+          <span class="trust-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/><path d="m9 12 2 2 4-4"/></svg></span>
+          Licensed Broker &amp; Fully Insured
+        </li>
+        <li>
+          <span class="trust-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="2" width="8" height="4" rx="1"/><path d="M9 4H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2h-3"/><path d="m9 14 2 2 4-4"/></svg></span>
+          FMCSA Registered
+        </li>
+        <li>
+          <span class="trust-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></span>
+          Vetted Carrier Network
+        </li>
+        <li>
+          <span class="trust-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M4 13a8 8 0 0 1 16 0"/><rect x="2" y="13" width="4.4" height="7" rx="1.6"/><rect x="17.6" y="13" width="4.4" height="7" rx="1.6"/><path d="M20 19.5v.5a3 3 0 0 1-3 3h-3"/></svg></span>
+          Real-Time Tracking &amp; 24/7 Support
+        </li>
+      </ul>
+
+      <div class="hero-divider reveal d3"></div>
+
+      <div class="stats reveal d3">
+        <div class="stat"><span class="num">50+</span><span class="lbl">States Served</span></div>
+        <div class="stat"><span class="num">100%</span><span class="lbl">Insured Transport</span></div>
+        <div class="stat"><span class="num">24/7</span><span class="lbl">Support &amp; Tracking</span></div>
+      </div>
+      </div>
+    </div>
+
+    <!-- QUOTE CARD -->
+    <div class="quote-card reveal d2">
+      <h2>Get Your Instant Quote</h2>
+
+      <div class="steps" id="steps">
+        <div class="step is-active" data-step="1">
+          <span class="dot"><span class="num">1</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>
+          <span class="slabel">Destination</span>
+        </div>
+        <div class="track" data-track="1"></div>
+        <div class="step" data-step="2">
+          <span class="dot"><span class="num">2</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>
+          <span class="slabel">Vehicle</span>
+        </div>
+        <div class="track" data-track="2"></div>
+        <div class="step" data-step="3">
+          <span class="dot"><span class="num">3</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>
+          <span class="slabel">Contact</span>
+        </div>
+      </div>
+
+      <form id="quoteForm" novalidate>
+        <!-- STEP 1 -->
+        <div class="qstep is-current" data-panel="1">
+          <div class="field">
+            <label class="flabel" for="pickup">Pickup Location</label>
+            <div class="input-wrap">
+              <span class="lead"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg></span>
+              <input class="inp" id="pickup" name="pickup" type="text" placeholder="Enter city or zip code" autocomplete="address-level2" required>
+            </div>
+            <span class="err-msg">Please enter a pickup location.</span>
+          </div>
+
+          <div class="field">
+            <label class="flabel" for="delivery">Delivery Location</label>
+            <div class="input-wrap">
+              <span class="lead"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg></span>
+              <input class="inp" id="delivery" name="delivery" type="text" placeholder="Enter city or zip code" autocomplete="address-level2" required>
+            </div>
+            <span class="err-msg">Please enter a delivery location.</span>
+          </div>
+
+          <div class="field">
+            <label class="flabel" for="date">Pickup Date</label>
+            <div class="input-wrap">
+              <span class="lead"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg></span>
+              <input class="inp" id="date" name="date" type="text" placeholder="Select pickup date" onfocus="this.type='date'" onblur="if(!this.value)this.type='text'">
+            </div>
+          </div>
+
+          <div class="field">
+            <label class="flabel">Trailer Type</label>
+            <div class="opt-grid" data-radio-group>
+              <label class="opt is-selected">
+                <span class="opt-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M10 17V6a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1v10"/><path d="M10 8h7l4 4v4h-2"/><path d="M6 17h2M12 17h2"/><circle cx="6" cy="18" r="2"/><circle cx="17" cy="18" r="2"/></svg></span>
+                <span class="opt-text"><strong>Open Trailer</strong><small>Most common</small></span>
+                <input type="radio" name="trailer" value="open" checked>
+                <span class="radio"></span>
+              </label>
+              <label class="opt">
+                <span class="opt-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="6" width="14" height="11" rx="1.5"/><path d="M16 9h3l3 4v4h-2"/><path d="M6 17h2"/><circle cx="6" cy="18" r="2"/><circle cx="18" cy="18" r="2"/></svg></span>
+                <span class="opt-text"><strong>Enclosed Trailer</strong><small>Extra protection</small></span>
+                <input type="radio" name="trailer" value="enclosed">
+                <span class="radio"></span>
+              </label>
+            </div>
+          </div>
+
+          <button type="button" class="btn-primary" data-next>
+            Next: Vehicle Details
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </button>
+        </div>
+
+        <!-- STEP 2 -->
+        <div class="qstep" data-panel="2">
+          <div class="row-2">
+            <div class="field">
+              <label class="flabel" for="year">Year</label>
+              <div class="input-wrap">
+                <span class="lead"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg></span>
+                <span class="chev-r"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></span>
+                <select class="inp" id="year" name="year"><option value="">Year</option></select>
+              </div>
+            </div>
+            <div class="field">
+              <label class="flabel" for="make">Make</label>
+              <div class="input-wrap">
+                <span class="lead"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12l1.6-4.6A2 2 0 0 1 6.5 6h11a2 2 0 0 1 1.9 1.4L21 12"/><path d="M3 12h18v5a1 1 0 0 1-1 1h-1.2a1 1 0 0 1-1-1v-1H6.2v1a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-5Z"/><circle cx="7.5" cy="14.5" r="1"/><circle cx="16.5" cy="14.5" r="1"/></svg></span>
+                <input class="inp" id="make" name="make" type="text" placeholder="e.g. Toyota">
+              </div>
+            </div>
+          </div>
+
+          <div class="field">
+            <label class="flabel" for="model">Model</label>
+            <div class="input-wrap">
+              <span class="lead"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12l1.6-4.6A2 2 0 0 1 6.5 6h11a2 2 0 0 1 1.9 1.4L21 12"/><path d="M3 12h18v5a1 1 0 0 1-1 1h-1.2a1 1 0 0 1-1-1v-1H6.2v1a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-5Z"/><circle cx="7.5" cy="14.5" r="1"/><circle cx="16.5" cy="14.5" r="1"/></svg></span>
+              <input class="inp" id="model" name="model" type="text" placeholder="e.g. Camry">
+            </div>
+          </div>
+
+          <div class="field">
+            <label class="flabel">Is the vehicle running?</label>
+            <div class="opt-grid" data-radio-group>
+              <label class="opt is-selected">
+                <span class="opt-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5 10 8l4 3 5-4.5"/><path d="M9 16h6"/><circle cx="12" cy="12" r="9"/></svg></span>
+                <span class="opt-text"><strong>Runs &amp; drives</strong><small>Operable</small></span>
+                <input type="radio" name="running" value="yes" checked>
+                <span class="radio"></span>
+              </label>
+              <label class="opt">
+                <span class="opt-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 8v5M12 16h.01"/><circle cx="12" cy="12" r="9"/></svg></span>
+                <span class="opt-text"><strong>Not running</strong><small>Inoperable</small></span>
+                <input type="radio" name="running" value="no">
+                <span class="radio"></span>
+              </label>
+            </div>
+          </div>
+
+          <div class="btn-row">
+            <button type="button" class="btn-ghost" data-back>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 18l-6-6 6-6"/></svg>
+              Back
+            </button>
+            <button type="button" class="btn-primary" data-next>
+              Next: Your Details
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- STEP 3 -->
+        <div class="qstep" data-panel="3">
+          <div class="field">
+            <label class="flabel" for="name">Full Name</label>
+            <div class="input-wrap">
+              <span class="lead"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21v-1a6 6 0 0 1 6-6h4a6 6 0 0 1 6 6v1"/></svg></span>
+              <input class="inp" id="name" name="name" type="text" placeholder="Your name" autocomplete="name" required>
+            </div>
+            <span class="err-msg">Please enter your name.</span>
+          </div>
+          <div class="field">
+            <label class="flabel" for="email">Email</label>
+            <div class="input-wrap">
+              <span class="lead"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></span>
+              <input class="inp" id="email" name="email" type="email" placeholder="you@email.com" autocomplete="email" required>
+            </div>
+            <span class="err-msg">Please enter a valid email.</span>
+          </div>
+          <div class="field">
+            <label class="flabel" for="phone">Phone</label>
+            <div class="input-wrap">
+              <span class="lead"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/></svg></span>
+              <input class="inp" id="phone" name="phone" type="tel" placeholder="(555) 555-5555" autocomplete="tel" required>
+            </div>
+            <span class="err-msg">Please enter a phone number.</span>
+          </div>
+
+          <div class="btn-row">
+            <button type="button" class="btn-ghost" data-back>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 18l-6-6 6-6"/></svg>
+              Back
+            </button>
+            <button type="submit" class="btn-primary">Get My Quote</button>
+          </div>
+
+          <p class="assure">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="11" width="16" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg>
+            No spam — just your quote. Takes about 60 seconds.
+          </p>
+        </div>
+      </form>
+
+      <!-- success -->
+      <div class="quote-success" id="quoteSuccess" aria-live="polite">
+        <div class="success-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></div>
+        <h3>Your quote request is in!</h3>
+        <p>Thanks — a Ship Guy specialist will reach out shortly with your transparent, all-in price.</p>
+        <a class="btn-call" href="tel:+18662803481">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/></svg>
+          Or call us now: (866) 280-3481
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ===================== STATE CONTENT ===================== -->
+<section class="article-section"><div class="container article">
+  <nav class="crumbs" aria-label="Breadcrumb"><a href="index.html">Home</a><span>/</span><span aria-current="page">Arizona Auto Transport</span></nav>
+  <p>This guide breaks down how Arizona vehicle shipping works, what it actually costs on real routes, and how Ship Guy supports you through every step, from vehicle pickup to the moment your car arrives at the delivery location. No fluff, no FAQ blocks, just actionable information you can use to make a smart decision about your next vehicle transport.</p>
+  <h2>How Arizona Auto Transport Works With Ship Guy</h2>
+  <p>The auto transport process is more straightforward than most people expect. At its core, it follows five stages: get a quote, confirm your booking, hand off the vehicle at pickup, let the transport team move it in transit, and receive your vehicle delivered at the destination.</p>
+  <p>Ship Guy operates as a professional coordinator, arranging car shipping services through vetted carrier partners rather than owning a fleet of trucks. That means Ship Guy partners with vetted car shipping companies and car carriers to match your specific move with the right driver, trailer, and schedule. This model gives you access to a larger pool of carriers across the auto transport industry, resulting in better pricing and more flexible delivery dates.</p>
+  <p>Here is how the shipping process typically unfolds when you ship a car from Arizona:</p>
+  <p><strong>Request a quote.</strong> Provide your pickup and delivery locations, the vehicle type (make, model, year), whether the car is operable, and your preferred dates so the shipping services can be priced based on route, vehicle, and timing details.</p>
+  <p><strong>Choose your transport type.</strong> Most standard moves, like Phoenix, AZ, to San Diego or Phoenix to Dallas, use open car shipping on a multi-car carrier. Enclosed car shipping is reserved for luxury, exotic, or classic cars that need extra protection.</p>
+  <p><strong>Confirm booking and sign the transport agreement.</strong> You will lock in your pickup window and service details. Drivers will call 12 to 24 hours before pickup to confirm the exact arrival time.</p>
+  <p><strong>Vehicle pickup and inspection.</strong> You must be present for vehicle pickup and delivery. The driver walks around the car with you, notes any existing damage on the bill of lading, and loads the vehicle onto the trailer.</p>
+  <p><strong>Transit and delivery.</strong> The transport team moves your car along the scheduled route with tracking updates along the way. Upon arrival, you inspect the vehicle again, compare it against the original bill of lading, and sign off.</p>
+  <p>The transport process typically takes 1 to 10 days, depending on the distance. In-state or neighboring-state moves often wrap up in 1 to 2 days. Cross-country routes, like Arizona to Florida or Arizona to New York, typically take 7 to 10 days, with seasonal weather and route congestion playing a role.</p>
+  <h2>Best Arizona Cities and Routes for Car Shipping</h2>
+  <p>Not every Arizona car pickup or drop-off is created equal. Some cities sit squarely on major freight corridors, making them cheap and fast for car transport. Others require more flexibility on timing and meeting points.</p>
+  <h2>Major hubs with high carrier availability:</h2>
+  <p><strong>Phoenix metro area.</strong> Phoenix is the largest city in Arizona with 1.6 million people, and it sits at the intersection of I-10 and I-17, two of the most heavily trafficked interstates in the Southwest. Surrounding suburbs like Mesa, Chandler, Gilbert, Tempe, Scottsdale, Glendale, and Peoria all benefit from this access. Major metro areas in Arizona have lower transport costs due to better accessibility, and Phoenix is the clearest example of that advantage.</p>
+  <p><strong>Tucson.</strong> Tucson is Arizona&#x27;s second-largest city, with over 547,000 residents, and offers car shipping access along the I-10 corridor. It is a strong lane for both local Arizona shipping and cross-country traffic heading east toward Texas or west toward Southern California. With over 547,000 residents, Tucson generates consistent demand that keeps carriers running regularly.</p>
+  <p><strong>Flagstaff.</strong> Sitting at the junction of I-17 and I-40, Flagstaff connects Arizona to routes heading toward the Pacific Northwest and eastward across the country. It is a smaller market, but it is still well served along popular corridors.</p>
+  <h2>Secondary and challenging areas:</h2>
+  <p><strong>Yuma, Prescott, and Lake Havasu City.</strong> These are served by Ship Guy, but Lake Havasu City can be a challenging shipping location in Arizona due to its distance from major interstates. Prescott and Yuma have similar access limitations, which may mean meeting the driver at a nearby business location or terminal rather than at your front door.</p>
+  <p><strong>Areas north of I-40.</strong> Shipping locations north of I-40 are challenging due to low population density and fewer carriers running those corridors. If you live in a remote part of northern Arizona, expect to arrange a meeting point closer to a highway exit or town center.</p>
+  <h2>Example routes and approximate performance:</h2>
+  <p>Phoenix to San Diego: roughly 354 miles, open carrier, 1 to 2 days transit</p>
+  <p>Tucson to Los Angeles: approximately 490 miles via I-10, 1 to 2 days transit</p>
+  <p>Scottsdale to Chicago: around 1,750 miles, 4 to 6 days transit depending on season</p>
+  <p>Routes that follow major interstates keep costs lower and schedules faster because more carriers are already running those legs. If your pickup and delivery locations sit near I-10, I-17, or I-40, you are in strong shape.</p>
+  <h2>Arizona Car Shipping Costs and Key Price Factors</h2>
+  <p>Ship Guy builds every car shipping quote around real market data-carrier availability, fuel indexes, seasonal demand, and route density-not guesswork. Prices shift throughout the year, and understanding the main cost drivers helps you budget accurately and potentially save.</p>
+  <h2>Core factors that determine the cost to ship your vehicle:</h2>
+  <p><strong>Distance.</strong> Distance significantly affects car shipping costs. A move from Phoenix to San Diego (354 miles) costs a fraction of a move from Phoenix to Miami (2,350 miles). However, shipping costs are typically lower per mile for long distances because the carrier amortizes fixed costs over a larger distance.</p>
+  <p><strong>Route popularity.</strong> Busy corridors like I-10 between Phoenix and Southern California have more carriers competing for loads, which pushes prices down. Less-traveled routes cost more due to repositioning.</p>
+  <p><strong>Vehicle size and weight.</strong> A compact sedan takes less trailer space than a full-size SUV or truck. Heavier vehicles also eat into weight limits. Shipping costs can vary based on distance, vehicle size, and transport type.</p>
+  <p><strong>Open vs enclosed trailer.</strong> Open trailers are generally cheaper than enclosed trailers. Enclosed adds a  on most routes.</p>
+  <p><strong>Operable vs inoperable.</strong> An inoperable vehicle costs more to ship than an operable one because it requires winching equipment and additional labor at loading and unloading.</p>
+  <p><strong>Date flexibility.</strong> Flexible pickup windows of 1 to 3 days can reduce car shipping costs compared to requesting an exact date, sometimes by 10 to 20 percent.</p>
+  <p><strong>Season and demand.</strong> Arizona experiences increased auto transport demand during the winter season, largely driven by snowbird migration. Seasonal variations can impact car shipping prices-booking transport during the off-season (typically summer months) can reduce costs noticeably.</p>
+  <h2>Sample cost and transit ranges for common Arizona routes (2026, open carrier unless noted):</h2>
+  <div class="table-wrap"><table><tbody><tr><td>Phoenix → San Diego</td><td>~354 mi</td><td>$500–$750</td><td>$800–$1,200</td><td>1–2 days</td></tr><tr><td>Phoenix → Los Angeles</td><td>~370 mi</td><td>$500–$800</td><td>$800–$1,300</td><td>1–2 days</td></tr><tr><td>Phoenix → Denver</td><td>~865 mi</td><td>$650–$1,000</td><td>$1,040–$1,600</td><td>2–4 days</td></tr><tr><td>Tucson → Houston</td><td>~1,060 mi</td><td>$800–$1,300</td><td>$1,300–$1,900</td><td>3–5 days</td></tr><tr><td>Phoenix → New York</td><td>~2,400 mi</td><td>$1,400–$2,000</td><td>$2,240–$3,200</td><td>6–9 days</td></tr></tbody></table></div>
+  <p>Shipping a vehicle within Arizona typically ranges from $834 to $1,124 for standard open transport, depending on exact pickup and delivery points.</p>
+  <p>A few additional notes on pricing:</p>
+  <p>Fuel prices, weather disruptions (monsoon season, winter mountain passes), and seasonal demand spikes all push rates up or down throughout the year.</p>
+  <p>Using terminal-to-terminal service can be a cheaper auto transport option compared to door-to-door, especially in rural parts of the state.</p>
+  <p>Ship Guy accepts major credit cards and can walk you through payment options when you request your instant quote.</p>
+  <h2>Types of Vehicle Transport Services Ship Guy Offers in Arizona</h2>
+  <p>Ship Guy supports a wide range of car transport needs, from shipping a single sedan across town to coordinating dealer loads and handling specialty vehicles that require careful handling. Here is what is available.</p>
+  <h2>Open auto transport</h2>
+  <p>This is the standard, most budget-friendly option, accounting for roughly 90 percent of all vehicle shipping in the United States. Your car rides on an open trailer alongside up to 8 to 10 other vehicles. It is exposed to sun, dust, and road conditions, but for everyday cars, SUVs, and pickups, this is perfectly adequate. If you need to transport car models like a daily-driver Honda, Toyota, or Ford F-150 into or out of Arizona, open transport is the default choice.</p>
+  <h2>Enclosed vehicle shipping</h2>
+  <p>Enclosed transport is used for luxury or classic vehicles that need protection from road debris, UV exposure, and desert dust. The car rides inside a covered trailer, either hard-wall or soft-wall, with only 2 to 6 vehicles per load. This transport service is ideal for collector vehicles heading to Scottsdale auctions, show cars, exotics, or any vehicle valued at roughly $50,000 or more. Enclosed shipping options add cost (typically 30 to 60 percent more), but for high-value cars, the peace of mind is worth every dollar. Classic cars, restored muscle cars, and new-car deliveries for dealerships are common enclosed loads that Ship Guy coordinates.</p>
+  <h2>Door-to-door service</h2>
+  <p>For most metro pickups and deliveries in Phoenix, Tucson, Mesa, Scottsdale, and Chandler, carriers deliver directly to your address. This is the most convenient option and eliminates the need to drive your car to a terminal. In truly remote areas, gated communities, or narrow streets where a large car carrier cannot safely maneuver, Ship Guy will arrange a nearby meeting point-often a parking lot or wide intersection-for the handoff.</p>
+  <h2>Expedited delivery</h2>
+  <p>If your timeline is tight, Ship Guy offers expedited delivery options that prioritize your vehicle for faster pickup and transit. This auto transport service comes at a premium but is valuable for time-sensitive relocations, military PCS moves, or last-minute seasonal demand situations.</p>
+  <h2>Multi-vehicle shipping</h2>
+  <p>Families relocating with two or more vehicles, or dealerships moving inventory, benefit from multi-vehicle shipping. Pricing tends to improve with volume because the carrier fills trailer slots efficiently in a single stop.</p>
+  <h2>Inoperable vehicle transport</h2>
+  <p>Need to ship a car that does not run? An inoperable vehicle requires winching or flatbed equipment for loading and unloading. Ship Guy coordinates with carriers who have the right gear, though expect additional handling fees and potentially slightly longer transit windows.</p>
+  <h2>Terminal-to-terminal service</h2>
+  <p>If you are flexible about pickup and delivery locations, terminal-to-terminal service lets you drop off and pick up your car at designated yards. This can trim costs, especially for routes that pass through secondary Arizona cities where door-to-door access is limited.</p>
+  <h2>Preparing Your Vehicle for Pickup and Delivery in Arizona</h2>
+  <p>Good preparation protects your vehicle and speeds up the entire process on the day the driver arrives. Rushing through this step-or skipping it-creates headaches that are easy to avoid.</p>
+  <p><strong>Clean the vehicle inside and out.</strong> Wash the exterior thoroughly so that every existing scratch, ding, or dent is clearly visible during the walk-around inspection with the driver. A dirty car makes it harder to distinguish pre-existing damage from anything that might happen in transit. Clean the interior as well to avoid misinterpreting loose debris as new damage.</p>
+  <p><strong>Remove personal items and </strong><strong>loose</strong><strong> accessories.</strong> Clean out personal items before pickup day. This includes GPS mounts, phone holders, bike racks, aftermarket antennas, and anything that could shift during transit. Carriers are not liable for personal belongings left inside the vehicle, and loose items can cause interior damage. Keep the car stripped down to essentials.</p>
+  <p><strong>Set the right fuel level.</strong> Leave approximately one-quarter tank of fuel in your vehicle. Too much fuel adds unnecessary weight (and cost). Too little can create problems if the driver needs to reposition the car during loading or at a fuel stop in a remote stretch of Arizona highway.</p>
+  <p><strong>Check tires and mechanical condition.</strong> Make sure tires are properly inflated. If the vehicle is operable, confirm that brakes, battery, and fluids are in working order so the driver can load and unload without difficulty.</p>
+  <p><strong>Be available for the inspection.</strong> Be available for a quick inspection during pickup. You must be present for vehicle pickup and delivery to review the bill of lading, the document that records the car&#x27;s condition at handoff. Walk around the vehicle with the driver, note every mark, and take date-stamped photos on your phone. At delivery, repeat the process: compare the car&#x27;s condition to the original bill before signing off.</p>
+  <p><strong>Arrange an accessible meeting spot.</strong> In dense or gated areas of Phoenix, Tucson, or near college campuses like ASU in Tempe, large car carriers may not be able to reach your exact address. Identify a safe, accessible location nearby-a shopping center lot, wide residential street, or community entrance-where the carrier can safely park and load.</p>
+  <p><strong>Keep documentation handy.</strong> Have your vehicle registration, a copy of your transport agreement, and driver contact information accessible. Confirm with Ship Guy that your vehicle&#x27;s insured coverage is active for the transit leg, and keep the carrier&#x27;s cargo insurance details on file.</p>
+  <h2>Why Arizona Drivers Choose Ship Guy</h2>
+  <p>Ship Guy is not a generic national directory that hands you a list of phone numbers and wishes you luck. It is a dedicated partner for Arizona Auto Transport, managing the coordination so you do not have to chase down carriers, negotiate rates, or wonder where your car is at 2 AM.</p>
+  <p><strong>Vetted carriers and accountability.</strong> Ship Guy works exclusively with licensed, insured car shipping companies. Licensing and insurance must be verified for auto transport companies before they handle a single vehicle. Ship Guy confirms  registration, USDOT numbers, and active cargo insurance for every carrier in the network. You should always request proof of insurance from auto transport carriers, and Ship Guy makes that easy by providing documentation upfront.</p>
+  <p><strong>Excellent communication from start to finish.</strong> From booking to vehicle delivery, the auto transport team maintains contact at every stage. You will know when a driver is assigned, when pickup is confirmed, and when delivery is approaching. This level of excellent communication is a key factor that separates a great company from a forgettable one.</p>
+  <p><strong>Transparent pricing and honest timelines.</strong> Ship Guy does not bait you with an artificially low quote and then tack on surprise fees. Pricing reflects actual market conditions, and delivery dates are given as realistic windows rather than impossible guarantees. If seasonal demand or weather is going to push your timeline, you will hear about it before you book, not after.</p>
+  <p><strong>Support for every type of move.</strong> Whether you are a snowbird shipping from Minneapolis to Scottsdale every November, a student sending a car home for the summer, a military family on PCS orders, or a dealer restocking from auction, Ship Guy has handled it. Repeat and referral business from Arizona customers shipping to Southern California, the Pacific Northwest, Texas, and the East Coast is a large part of the operation-people come back because they received great service the first time.</p>
+  <p><strong>Industry context matters.</strong> The auto transport industry is large and competitive. Companies like Auto Transport Team have over 40,000 drivers and carriers in their network. Nexus Auto Transport has a network of more than 30,000 carriers. Sherpa Auto Transport has an average rating of 4.8 out of 5 and a strong availability rating among reviewers. Key factors in choosing an auto transport service include company reliability and reviews, and Ship Guy encourages you to evaluate any shipping company you consider on those criteria, including Ship Guy itself. The best car shipping companies earn trust through consistent, verifiable performance, not marketing slogans.</p>
+  <p><strong>What about the Arizona Department of Transportation?</strong> If your car is being shipped into Arizona for the first time, you may need to handle title transfer or registration through the Arizona Department of Motor Vehicles upon arrival. Ship Guy can point you in the right direction, though registration is ultimately between you and the state.</p>
+  <p><strong>Ready to get started?</strong> Request your Arizona auto transport quote from Ship Guy today. All you need is all the required information: your pickup and delivery cities, vehicle details (year, make, model, condition), and your preferred dates. You can get an instant quote through the website or call the team directly. Ship Guy is an excellent company to work with, whether you are shipping one new car or an entire fleet. Awesome service, honest pricing, and a transport team that treats your vehicle like it matters.</p>
+  <h2>Open vs Enclosed Arizona Shipping: Choosing the Right Option</h2>
+  <p>Choosing between open and enclosed transport comes down to three things: the value of your vehicle, the route conditions, and your personal risk tolerance. Arizona&#x27;s climate adds a layer of nuance that is worth understanding.</p>
+  <h2>When open transport makes sense:</h2>
+  <p>Most daily drivers-sedans, SUVs, light trucks-are ideal for open car shipping. The car rides on an open trailer exposed to sun, dust, and whatever the road kicks up, but for vehicles that already live in Arizona&#x27;s elements, this is a non-issue.</p>
+  <p>Budget-friendly routes like Phoenix to San Diego, Tucson to Las Vegas, or Phoenix to Los Angeles are best served by open carriers. Carrier availability is high, and scheduling is flexible.</p>
+  <p>Roughly 90 percent of all vehicle shipping in the U.S. moves on open carriers, making this the default for the auto shipping market.</p>
+  <h2>When enclosed transport is the better call:</h2>
+  <p>High-value, collector, or show vehicles benefit from an enclosed trailer that shields them from UV exposure, desert dust, road salt (on winter routes through mountain passes), and flying debris.</p>
+  <p>Vehicles heading to events such as the Scottsdale auctions, Barrett-Jackson shows, or out-of-state concours competitions should travel in an enclosed trailer. The careful handling and climate protection justify the premium.</p>
+  <p>Any vehicle valued at $50,000 or more, or one with a sensitive paint finish or restoration, is a candidate for enclosed transport. A covered trailer keeps the car in the same condition it was loaded in.</p>
+  <h2>How Ship Guy helps you decide:</h2>
+  <p>Ship Guy evaluates your vehicle type, route distance, expected weather conditions, and budget to recommend the right transport type. If you are shipping a daily commuter from Tucson to Denver, open is the clear winner. If you are sending a matching-numbers 1969 Camaro from Scottsdale to a buyer in Connecticut, enclosed is the only responsible choice.</p>
+  <p>Ship Guy can present enclosed shipping options alongside open quotes so you see the exact price difference and make an informed decision. There is no pressure to upgrade-just honest guidance from a great customer service team that wants your vehicle to arrive in the condition you expect.</p>
+  <p>Whether you choose to ship cars on an open or enclosed carrier, Ship Guy coordinates the entire process from the moment you request a quote to the moment your car is sitting in your driveway at the delivery location. This is an exceptional service built for Arizona drivers who want a car transport service they can actually trust. If you want faster delivery, enclosed shipping, or a simple sedan move across the state, Ship Guy is the best car shipping partner to get it done. Contact the team, share your details, and experience the excellent service that makes Ship Guy a great company in the Arizona auto transport space</p>
 </div></section>
 
 <!-- ===================== FINAL CTA ===================== -->
