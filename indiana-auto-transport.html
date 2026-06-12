@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Cross-Country Car Shipping — Coast-to-Coast Auto Transport | Ship Guy</title>
-<meta name="description" content="Cross-country car shipping coast to coast. Learn how long-distance auto transport works, how long it takes, what it costs, popular routes, and how to choose a transporter.">
+<title>Indiana Auto Transport with Ship Guy</title>
+<meta name="description" content="Ship Guy provides fast, reliable auto transport in Indiana and beyond. Whether you&#x27;re relocating to Indianapolis, buying a car online from out of state, or…">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
@@ -273,7 +273,7 @@ select.inp{appearance:none;-webkit-appearance:none;padding-right:38px;cursor:poi
 .reviews-head{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;flex-wrap:wrap;margin-bottom:30px}
 .reviews-head h2{font-size:clamp(1.7rem,2.6vw,2.1rem);font-weight:800;color:var(--brand)}
 .reviews-head p{margin:8px 0 0;color:var(--muted);font-size:15.5px}
-.rating{display:flex;align-items:center;gap:12px}
+.rating{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
 .rating .score{font-family:var(--font-display);font-weight:800;font-size:22px;color:var(--ink)}
 .stars{display:inline-flex;gap:2px;color:var(--star)}
 .stars svg{width:18px;height:18px}
@@ -480,10 +480,15 @@ section[id]{scroll-margin-top:104px}
    Responsive
    ========================================================= */
 @media (max-width:1180px){
-  .hero-grid{grid-template-columns:minmax(0,1fr);gap:36px;padding:54px 24px 60px}
-  .hero-copy{max-width:640px}
+  .hero-grid{grid-template-columns:minmax(0,1fr);gap:28px;padding:54px 24px 60px}
+  .hero-copy{display:contents}
+  .hero-head,.hero-rest{max-width:640px;width:100%}
+  .hero-head{order:1}
+  .quote-card{order:2;max-width:520px;width:100%}
+  .hero-rest{order:3}
+  .hero-head h1{margin-bottom:0}
+  .eyebrow{display:none}
   .lede{max-width:520px}
-  .quote-card{max-width:520px;width:100%}
   .hero-overlay{background:linear-gradient(180deg, rgba(4,9,22,.72) 0%, rgba(4,9,22,.8) 55%, rgba(4,9,22,.88) 100%)}
 }
 @media (max-width:1180px){
@@ -504,6 +509,7 @@ section[id]{scroll-margin-top:104px}
 @media (max-width:980px){
   .wc-bento{grid-template-columns:1fr}
   .loc-bento{grid-template-columns:1fr;gap:32px}
+  .review-grid{grid-template-columns:1fr 1fr}
 }
 @media (max-width:880px){
   .steps-row{flex-direction:column;gap:0;max-width:440px;margin:0 auto}
@@ -544,6 +550,31 @@ section[id]{scroll-margin-top:104px}
   .step .slabel{font-size:11.5px}
 }
 
+/* compact hero on laptop screens only (~25% shorter) */
+@media (min-width:1181px) and (max-width:1600px){
+  .hero-grid{padding-top:34px;padding-bottom:40px;gap:40px}
+  .eyebrow{margin-bottom:12px}
+  .hero-copy h1{font-size:clamp(2rem,3vw,2.5rem);margin-bottom:14px}
+  .lede{font-size:15.5px;margin-bottom:18px}
+  .trust-list{margin-bottom:16px;gap:9px}
+  .trust-list li{font-size:14.5px}
+  .trust-ic{width:30px;height:30px}
+  .trust-ic svg{width:17px;height:17px}
+  .hero-divider{margin-bottom:16px}
+  .stat .num{font-size:26px}
+  .stat .lbl{font-size:12px;margin-top:5px}
+  .quote-card{padding:20px 24px 18px}
+  .quote-card h2{font-size:22px;margin-bottom:13px}
+  .steps{margin-bottom:13px}
+  .step .dot{width:30px;height:30px}
+  .field{margin-bottom:9px}
+  .flabel{margin-bottom:4px}
+  .inp{height:40px}
+  .opt{padding:8px 12px}
+  .btn-primary{height:46px}
+  .assure{margin-top:8px}
+}
+
 /* reduced motion */
 @media (prefers-reduced-motion:reduce){
   *{animation-duration:.001ms!important;transition-duration:.001ms!important}
@@ -558,6 +589,9 @@ body.ready .reveal{opacity:1;transform:none}
 
 .menu.menu-mega{display:grid;grid-template-columns:repeat(3,1fr);column-gap:4px;min-width:528px;max-height:64vh;overflow-y:auto}
 .menu.menu-mega .menu-all{grid-column:1 / -1;margin-top:6px;padding-top:12px;border-top:1px solid var(--line);color:var(--brand);font-weight:700}
+
+@media (max-width:460px){.footer-top{grid-template-columns:1fr;gap:28px}}/* resp-polish-footer */
+.footer-states{display:flex;flex-wrap:wrap;gap:9px 20px;align-items:center;padding:20px 0 2px;margin-top:6px;border-top:1px solid rgba(255,255,255,.10)}.footer-states .fs-label{color:#fff;font-weight:700;font-size:14px}.footer-states a{font-size:14px;color:#9aa6c6;transition:color .15s ease}.footer-states a:hover{color:#fff}/* footer-states */
 /* ===== Subpage / article / services styles ===== */
 .page-hero{background:linear-gradient(135deg,#0a2a9e 0%, var(--brand) 60%, #1f54e0 100%);color:#fff;padding:62px 0 56px}
 .crumbs{display:flex;flex-wrap:wrap;gap:9px;font-size:13.5px;font-weight:600;color:#bcd2f8;margin-bottom:16px}
@@ -597,17 +631,41 @@ body.ready .reveal{opacity:1;transform:none}
 @media (max-width:900px){.svc-grid{grid-template-columns:1fr 1fr}.related-grid{grid-template-columns:1fr 1fr}}
 @media (max-width:560px){.svc-grid{grid-template-columns:1fr}.related-grid{grid-template-columns:1fr}}
 
+.article table{width:100%;border-collapse:collapse;margin:16px 0 22px;font-size:15px}
+.article table td,.article table th{border:1px solid var(--line);padding:10px 14px;text-align:left;vertical-align:top}
+.article table tr:nth-child(even){background:#f7f9fd}
+.article table td:first-child{font-weight:600;color:#101a3d}
+.table-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:0 0 6px}
+.article h2{margin-top:30px}
+.local-section{background:#fff;padding:58px 0;border-top:1px solid var(--line)}
+.local-grid{display:grid;grid-template-columns:1fr 1fr;gap:42px;align-items:stretch}
+.local-eyebrow{font-family:var(--font-display);font-weight:800;letter-spacing:.14em;text-transform:uppercase;font-size:12.5px;color:var(--brand)}
+.local-info h2{font-family:var(--font-display);font-weight:800;font-size:clamp(1.5rem,2.4vw,2rem);color:#101a3d;margin:8px 0 10px}
+.local-lede{color:var(--ink-2);font-size:16px;line-height:1.6;margin:0 0 22px;max-width:480px}
+.local-actions{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:24px}
+.btn-call-lg{display:inline-flex;align-items:center;gap:9px;background:var(--brand);color:#fff;font-weight:700;font-size:16px;padding:13px 22px;border-radius:999px;box-shadow:0 10px 24px -12px rgba(11,52,192,.8);transition:background .15s ease,transform .15s ease}
+.btn-call-lg:hover{background:var(--brand-press);transform:translateY(-1px)}
+.btn-quote-lg{display:inline-flex;align-items:center;gap:8px;background:#fff;color:var(--brand-deep);font-weight:700;font-size:16px;padding:13px 22px;border-radius:999px;border:2px solid var(--brand);transition:background .15s ease}
+.btn-quote-lg:hover{background:var(--brand-tint)}
+.btn-call-lg svg,.btn-quote-lg svg{width:18px;height:18px}
+.local-contact{list-style:none;margin:0 0 20px;padding:0;display:grid;gap:12px}
+.local-contact li{display:flex;align-items:flex-start;gap:11px;color:var(--ink-2);font-size:15.5px;line-height:1.45}
+.local-contact li svg{width:19px;height:19px;color:var(--brand);flex:0 0 auto;margin-top:1px}
+.local-contact a{color:var(--ink-2)}.local-contact a:hover{color:var(--brand)}
+.local-social{display:flex;gap:12px}
+.local-social a{display:inline-flex;align-items:center;justify-content:center;width:42px;height:42px;border-radius:11px;background:var(--brand-tint);color:var(--brand-deep);transition:background .15s ease,color .15s ease}
+.local-social a:hover{background:var(--brand);color:#fff}
+.local-social svg{width:20px;height:20px}
+.local-map{border-radius:16px;overflow:hidden;box-shadow:0 18px 40px -24px rgba(13,26,80,.55);border:1px solid var(--line);min-height:420px;background:#eef2fe}
+.local-map iframe{width:100%;height:100%;min-height:420px;border:0;display:block}
+@media (max-width:860px){.local-grid{grid-template-columns:1fr;gap:26px}.local-map{min-height:300px}.local-map iframe{min-height:300px}}
 
-@media (max-width:460px){.footer-top{grid-template-columns:1fr;gap:28px}}/* resp-polish-footer */
-.footer-states{display:flex;flex-wrap:wrap;gap:9px 20px;align-items:center;padding:20px 0 2px;margin-top:6px;border-top:1px solid rgba(255,255,255,.10)}.footer-states .fs-label{color:#fff;font-weight:700;font-size:14px}.footer-states a{font-size:14px;color:#9aa6c6;transition:color .15s ease}.footer-states a:hover{color:#fff}/* footer-states */
 </style>
 <script type="application/ld+json">
-{
-  "@context":"https://schema.org","@graph":[
-  {"@type":"Article","headline":"Cross-Country Car Shipping","description":"Cross-country car shipping coast to coast. Learn how long-distance auto transport works, how long it takes, what it costs, popular routes, and how to choose a transporter.","author":{"@type":"Organization","name":"Ship Guy"},"publisher":{"@type":"Organization","name":"Ship Guy"}},
-  {"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"index.html"},{"@type":"ListItem","position":2,"name":"How It Works","item":"how-it-works.html"},{"@type":"ListItem","position":3,"name":"Cross Country Car Shipping","item":"cross-country-car-shipping.html"}]}
-  ]
-}
+{"@context":"https://schema.org","@graph":[
+{"@type":"Service","serviceType":"Auto Transport","name":"Indiana Auto Transport","areaServed":{"@type":"State","name":"Indiana"},"provider":{"@type":"Organization","name":"Ship Guy","telephone":"+1-866-280-3481"},"description":"Ship Guy provides fast, reliable auto transport in Indiana and beyond. Whether you&#x27;re relocating to Indianapolis, buying a car online from out of state, or…"},
+{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"index.html"},{"@type":"ListItem","position":2,"name":"Indiana Auto Transport","item":"indiana-auto-transport.html"}]}
+]}
 </script>
 </head>
 <body>
@@ -615,7 +673,7 @@ body.ready .reveal{opacity:1;transform:none}
 <!-- ===================== HEADER ===================== -->
 <header class="site-header" id="top">
   <div class="container header-inner">
-    <a class="brand" href="index.html#top" aria-label="Ship Guy — home"><svg class="sg-logo" role="img" aria-label="Ship Guy" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="209 227 180 145">
+    <a class="brand" href="index.html" aria-label="Ship Guy — home"><svg class="sg-logo" role="img" aria-label="Ship Guy" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="209 227 180 145">
 <path fill-rule="nonzero" fill="currentColor" fill-opacity="1" d="M 257.761719 304.929688 L 257.761719 247.621094 L 272.027344 245.128906 L 272.027344 265.167969 C 272.027344 265.933594 272.246094 266.5 272.679688 266.867188 C 273.109375 267.230469 273.703125 267.347656 274.460938 267.222656 L 279.570312 266.355469 C 281.136719 266.089844 281.921875 265.128906 281.921875 263.484375 L 281.921875 243.398438 L 296.191406 240.90625 L 296.191406 298.710938 L 281.921875 301.019531 L 281.921875 277.640625 L 272.027344 279.292969 L 272.027344 302.621094 Z M 257.761719 304.929688 "/>
 <path fill-rule="nonzero" fill="currentColor" fill-opacity="1" d="M 225.148438 310.390625 C 220.769531 311.101562 217.570312 310.632812 215.539062 308.984375 C 213.515625 307.339844 212.5 304.464844 212.5 300.359375 L 212.5 291.359375 L 226.769531 288.980469 L 226.769531 296.222656 C 226.769531 297.035156 226.984375 297.609375 227.417969 297.945312 C 227.851562 298.28125 228.472656 298.382812 229.28125 298.25 L 234.148438 297.449219 C 234.902344 297.328125 235.472656 297.054688 235.851562 296.640625 C 236.226562 296.222656 236.417969 295.636719 236.417969 294.875 L 236.417969 290.066406 C 236.417969 289.304688 236.324219 288.683594 236.136719 288.199219 C 235.945312 287.714844 235.632812 287.300781 235.203125 286.964844 C 234.769531 286.632812 234.175781 286.367188 233.417969 286.164062 L 221.257812 283.890625 C 219.472656 283.378906 217.957031 282.695312 216.71875 281.851562 C 215.472656 281.007812 214.539062 279.855469 213.917969 278.390625 C 213.296875 276.929688 212.988281 275.089844 212.988281 272.871094 L 212.988281 263.140625 C 212.988281 260.222656 213.636719 257.960938 214.933594 256.355469 C 216.230469 254.753906 218.390625 253.683594 221.417969 253.152344 L 237.957031 250.261719 C 242.28125 249.503906 245.457031 249.929688 247.484375 251.539062 C 249.511719 253.148438 250.523438 256.050781 250.523438 260.25 L 250.523438 265.890625 L 236.257812 268.328125 L 236.257812 264.5 C 236.257812 263.683594 236.039062 263.109375 235.605469 262.777344 C 235.175781 262.441406 234.578125 262.34375 233.824219 262.472656 L 229.527344 263.210938 C 228.714844 263.351562 228.132812 263.628906 227.785156 264.039062 C 227.433594 264.453125 227.257812 265.011719 227.257812 265.71875 L 227.257812 268.078125 C 227.257812 269.109375 227.511719 269.917969 228.027344 270.507812 C 228.539062 271.097656 229.3125 271.550781 230.335938 271.863281 L 241.929688 273.972656 C 243.984375 274.492188 245.660156 275.214844 246.957031 276.140625 C 248.253906 277.070312 249.199219 278.285156 249.796875 279.792969 C 250.390625 281.300781 250.6875 283.144531 250.6875 285.328125 L 250.6875 297.671875 C 250.6875 300.671875 250.023438 302.960938 248.699219 304.539062 C 247.375 306.117188 245.199219 307.148438 242.175781 307.636719 Z M 225.148438 310.390625 "/>
 <path fill-rule="nonzero" fill="currentColor" fill-opacity="1" d="M 305.007812 297.726562 L 305.007812 239.84375 L 319.277344 237.351562 L 319.277344 295.414062 Z M 305.007812 297.726562 "/>
@@ -628,7 +686,7 @@ body.ready .reveal{opacity:1;transform:none}
 </svg></a>
 
     <nav class="main-nav" aria-label="Primary">
-      <a href="index.html#top">Home</a>
+      <a href="index.html">Home</a>
       <a href="index.html#how">How It Works</a>
       <div class="has-menu">
         <button class="nav-toggle-btn" aria-haspopup="true" aria-expanded="false">Services
@@ -685,9 +743,9 @@ body.ready .reveal{opacity:1;transform:none}
           <a href="index.html#locations" role="menuitem" class="menu-all">All locations →</a>
         </div>
       </div>
-      <a href="index.html#reviews">Reviews</a>
-      <a href="index.html#faq">FAQ</a>
-      <a href="index.html#contact">Contact</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contact">Contact</a>
     </nav>
 
     <a class="btn-call" href="tel:+18662803481">
@@ -704,7 +762,7 @@ body.ready .reveal{opacity:1;transform:none}
   <!-- mobile nav -->
   <nav class="mobile-nav" id="mobileNav" aria-label="Mobile">
     <div class="inner">
-      <a href="index.html#top">Home</a>
+      <a href="index.html">Home</a>
       <a href="index.html#how">How It Works</a>
       <span class="m-sub">Services</span>
                   <a href="open-car-transport.html">Open Car Transport</a>
@@ -749,87 +807,576 @@ body.ready .reveal{opacity:1;transform:none}
       <a href="new-hampshire-auto-transport.html">New Hampshire</a>
       <a href="new-jersey-auto-transport.html">New Jersey</a>
       <span class="m-sub">More</span>
-      <a href="index.html#reviews">Reviews</a>
-      <a href="index.html#faq">FAQ</a>
-      <a href="index.html#contact">Contact</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contact">Contact</a>
     </div>
   </nav>
 </header>
 
-<!-- ===================== PAGE HERO ===================== -->
-<section class="page-hero"><div class="container">
-  <nav class="crumbs" aria-label="Breadcrumb"><a href="index.html">Home</a><span>/</span><a href="how-it-works.html">How It Works</a><span>/</span><span aria-current="page">Cross Country Car Shipping</span></nav>
-  <h1>Cross-Country Car Shipping</h1>
-  <p class="page-hero-sub">How coast-to-coast auto transport works — transit times, costs, routes, and what to expect.</p>
-</div></section>
+<!-- ===================== HERO ===================== -->
+<section class="hero">
+  <div class="hero-media" aria-hidden="true">
+    <img class="hero-img" alt="" src="assets/hero.jpg">
+    <div class="hero-overlay"></div>
+  </div>
 
-<section class="article-section"><div class="container article">
-<p class="article-lead">Moving across the country and need your car there too? Cross-country car shipping lets you skip the long drive and have your vehicle delivered coast to coast. This guide covers how it works, how long it takes, what it costs, and how to choose the right transporter.</p>
-
-<h2>What Is Cross-Country Car Shipping?</h2>
-<p>Cross-country car shipping is long-distance auto transport that moves your vehicle from one side of the country to the other — or across any long stretch of states — by professional carrier. Instead of putting thousands of miles on your odometer, you hand your vehicle to a licensed carrier who delivers it directly to your destination. It's the practical solution for cross-country relocations, job transfers, military moves, online car purchases, college students, and snowbirds heading between distant homes. Ship Guy moves vehicles coast to coast across all 50 states with door-to-door service.</p>
-
-<h2>How Cross-Country Auto Transport Works</h2>
-<p>Long-distance shipping follows the same three simple steps as any Ship Guy shipment. First, you get a free quote by entering your pickup location, delivery location, and vehicle details. Next, we match your vehicle with a vetted carrier running your route and schedule a <a href="door-to-door-car-shipping.html">door-to-door</a> pickup window around your dates. The driver inspects your vehicle, records its condition on the Bill of Lading, loads it, and transports it across the country while you track progress. At delivery, you inspect the vehicle against the pickup report, sign, and take your keys. Carriers run regular long-haul lanes between major regions, so coast-to-coast moves are routine for our network.</p>
-
-<h2>How Long Does Cross-Country Shipping Take?</h2>
-<p>Transit time depends mostly on the distance between pickup and delivery. As a general guide for long-distance auto transport in the continental U.S.:</p>
-<ul>
-  <li><strong>1,000–1,500 miles:</strong> roughly 3–5 days in transit</li>
-  <li><strong>1,500–2,000 miles:</strong> roughly 4–6 days</li>
-  <li><strong>2,000–2,500 miles:</strong> roughly 5–7 days</li>
-  <li><strong>Coast to coast (2,500+ miles):</strong> roughly 6–9 days</li>
-</ul>
-<p>Add a day or two on the front end for carrier assignment and pickup, depending on how flexible your dates are and how busy your route is. Major routes — such as California to the East Coast or the Northeast to the West — are typically assigned quickly because carriers run them often. If you're working against a firm deadline, ask about <a href="expedited-car-shipping.html">expedited car shipping</a> for a prioritized, faster pickup.</p>
-
-<h2>How Much Does Cross-Country Car Shipping Cost?</h2>
-<p>Long-distance shipments have a higher total cost than short moves simply because of the mileage — but they're also the most efficient on a per-mile basis. Your exact price depends on distance, your vehicle's size and condition, transport type (open or enclosed), your timing, and demand on the route. High-traffic coast-to-coast lanes are generally more affordable per mile than routes to or from remote areas. As with every Ship Guy shipment, your quote is all-in and transparent, with no hidden fees and no upfront deposit, and you pay only once your vehicle is dispatched. For a full breakdown of pricing factors, see our <a href="car-shipping-cost.html">car shipping costs guide</a>.</p>
-
-<h2>Should You Ship or Drive Across the Country?</h2>
-<p>Driving across the country sounds straightforward until you add up the real costs. A coast-to-coast drive means several days on the road, fuel, hotels, meals, and the risk of breakdowns or accidents far from home — plus thousands of miles of wear that reduce your vehicle's value. For many people, shipping ends up comparable in cost once those expenses are tallied, and far easier on your schedule and your car. You can fly to your new home on your own timeline and have your vehicle waiting when you arrive. For families with more than one vehicle, or anyone who can't spare several days for a drive, shipping is usually the smarter choice.</p>
-
-<h2>Open vs. Enclosed for Long-Distance Moves</h2>
-<p>Every cross-country shipment can travel by open or enclosed carrier. <a href="open-car-transport.html">Open transport</a> is the affordable, widely available standard and is well suited to everyday vehicles making the long trip — it's the same method used to ship new cars nationwide. <a href="enclosed-auto-transport.html">Enclosed transport</a> adds a fully covered trailer that shields your vehicle from weather and road debris over thousands of miles, making it the right choice for classic, luxury, exotic, or high-value vehicles crossing the country. Because long routes mean more time exposed to the elements, some owners who might choose open for a short hop opt for enclosed on a coast-to-coast move.</p>
-
-<h2>Popular Cross-Country Routes</h2>
-<p>We ship on long-distance lanes across the entire country, including some of the most-requested corridors:</p>
-<ul>
-  <li><strong>California to the East Coast</strong> — Los Angeles and San Francisco to New York, Florida, and beyond</li>
-  <li><strong>Northeast to the West Coast</strong> — New York and New England to California and the Pacific Northwest</li>
-  <li><strong>Florida to the West and Midwest</strong> — and the reverse during snowbird season</li>
-  <li><strong>Texas to both coasts</strong> — a central hub with frequent long-haul service</li>
-</ul>
-<p>Even if your specific cities aren't on a major lane, our nationwide network reaches all 50 states, so we can arrange long-distance transport between virtually any two points. Browse <a href="index.html#locations">popular routes and service areas</a> for more.</p>
-
-<h2>How to Prepare for a Cross-Country Shipment</h2>
-<p>Long-distance moves reward a little planning. Book early when possible, especially during peak relocation and snowbird seasons, to secure the best rates and dates. Wash your vehicle and take dated photos to document its condition before pickup. Remove personal belongings and toll transponders, leave about a quarter tank of fuel, disable alarms, and provide one working set of keys. Confirm your pickup and delivery addresses and contact details, and make sure an authorized adult is available at both ends — or arrange a nearby meeting point if either street is hard for a large transporter to reach. For a complete checklist, see our <a href="car-shipping-preparation.html">car prep guide</a>.</p>
-
-<h2>Choosing a Cross-Country Auto Transport Company</h2>
-<p>A long-distance move puts your vehicle in someone else's hands for several days, so the company you choose matters. Look for a licensed, bonded, and FMCSA-registered broker that works only with vetted, insured carriers. Favor transparent, all-in pricing with no upfront deposit over a suspiciously low quote that can stall your shipment. And value clear communication — you want real-time tracking and support you can reach if anything comes up along the route. Ship Guy checks every one of those boxes.</p>
-
-<h2>What Affects Cross-Country Transit Time?</h2>
-<p>Mileage sets the baseline, but several things influence exactly how long a coast-to-coast shipment takes. Weather and road conditions can slow a route, especially crossing mountain passes or during winter storms. The driver's schedule and federally regulated hours-of-service limits mean carriers can only drive so many hours per day, so very long hauls naturally span several days. The number of other vehicles on the load and their drop-off sequence can add or save time depending on where your delivery falls in the route. And the season matters: during peak periods, both pickup scheduling and road traffic are busier. We give you an estimated delivery window based on your specific route and keep you updated if anything shifts along the way.</p>
-
-<h2>Tracking Your Vehicle Across the Country</h2>
-<p>One of the biggest worries with a long-distance move is not knowing where your vehicle is. With Ship Guy, you're never in the dark. You can check the status of your shipment, and our U.S.-based support team is available 24/7 by phone to answer questions at any point in the journey. We stay in contact with the driver throughout the route, so if your plans change or you simply want an update, help is a quick call away. For a multi-day, cross-country shipment, that visibility and access make the whole experience far less stressful.</p>
-
-<h2>Door-to-Door Delivery for Long-Distance Moves</h2>
-<p>Ship Guy ships cross-country <a href="door-to-door-car-shipping.html">door-to-door</a>, meaning the carrier picks up your vehicle at your origin address and delivers it as close as possible to your destination — no driving to a distant terminal on either end. For a long-distance move, that convenience is significant: you've likely got a hundred other things to coordinate, and door-to-door keeps your vehicle off your to-do list. If a full-size transporter can't safely reach a tight street, the driver will arrange a nearby meeting point with room to unload.</p>
-
-<h2>Ship Coast to Coast with Ship Guy</h2>
-<p>Ship Guy is a licensed, bonded, FMCSA-registered auto transport broker that ships vehicles cross-country across all 50 states. With nationwide carrier coverage, transparent all-in pricing, no upfront deposit, real-time tracking, and 24/7 U.S.-based support, your long-distance move is in reliable hands from quote to delivery.</p>
-<p>Ready to ship across the country? <a href="index.html#top">Get your free quote</a> in about 60 seconds, or call <a href="tel:+18662803481">(866) 280-3481</a> to plan your route. You can also review <a href="car-shipping-cost.html">car shipping costs</a>, read our <a href="car-shipping-preparation.html">car prep guide</a>, or learn <a href="how-it-works.html">how the process works</a>.</p>
-
-</div></section>
-
-<section class="related-section"><div class="container">
-      <h2>More Car Shipping Guides</h2>
-      <div class="related-grid">
-        <a class="related-card" href="how-it-works.html">How It Works <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-        <a class="related-card" href="car-shipping-cost.html">Car Shipping Costs <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-        <a class="related-card" href="car-shipping-preparation.html">Car Prep Guide <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+  <div class="container hero-grid">
+    <div class="hero-copy">
+      <div class="hero-head">
+      <p class="eyebrow reveal">Licensed&nbsp;•&nbsp;Insured&nbsp;•&nbsp;Nationwide</p>
+      <h1 class="reveal d2">Indiana Auto Transport</h1>
       </div>
+      <div class="hero-rest">
+      <p class="lede reveal d2">Licensed, insured car shipping to and from Indiana — transparent pricing, vetted carriers, and door-to-door delivery.</p>
+
+      <ul class="trust-list reveal d3">
+        <li>
+          <span class="trust-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/><path d="m9 12 2 2 4-4"/></svg></span>
+          Licensed Broker &amp; Fully Insured
+        </li>
+        <li>
+          <span class="trust-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="2" width="8" height="4" rx="1"/><path d="M9 4H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2h-3"/><path d="m9 14 2 2 4-4"/></svg></span>
+          FMCSA Registered
+        </li>
+        <li>
+          <span class="trust-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></span>
+          Vetted Carrier Network
+        </li>
+        <li>
+          <span class="trust-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M4 13a8 8 0 0 1 16 0"/><rect x="2" y="13" width="4.4" height="7" rx="1.6"/><rect x="17.6" y="13" width="4.4" height="7" rx="1.6"/><path d="M20 19.5v.5a3 3 0 0 1-3 3h-3"/></svg></span>
+          Real-Time Tracking &amp; 24/7 Support
+        </li>
+      </ul>
+
+      <div class="hero-divider reveal d3"></div>
+
+      <div class="stats reveal d3">
+        <div class="stat"><span class="num">50+</span><span class="lbl">States Served</span></div>
+        <div class="stat"><span class="num">100%</span><span class="lbl">Insured Transport</span></div>
+        <div class="stat"><span class="num">24/7</span><span class="lbl">Support &amp; Tracking</span></div>
+      </div>
+      </div>
+    </div>
+
+    <!-- QUOTE CARD -->
+    <div class="quote-card reveal d2">
+      <h2>Get Your Instant Quote</h2>
+
+      <div class="steps" id="steps">
+        <div class="step is-active" data-step="1">
+          <span class="dot"><span class="num">1</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>
+          <span class="slabel">Destination</span>
+        </div>
+        <div class="track" data-track="1"></div>
+        <div class="step" data-step="2">
+          <span class="dot"><span class="num">2</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>
+          <span class="slabel">Vehicle</span>
+        </div>
+        <div class="track" data-track="2"></div>
+        <div class="step" data-step="3">
+          <span class="dot"><span class="num">3</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>
+          <span class="slabel">Contact</span>
+        </div>
+      </div>
+
+      <form id="quoteForm" novalidate>
+        <!-- STEP 1 -->
+        <div class="qstep is-current" data-panel="1">
+          <div class="field">
+            <label class="flabel" for="pickup">Pickup Location</label>
+            <div class="input-wrap">
+              <span class="lead"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg></span>
+              <input class="inp" id="pickup" name="pickup" type="text" placeholder="Enter city or zip code" autocomplete="address-level2" required>
+            </div>
+            <span class="err-msg">Please enter a pickup location.</span>
+          </div>
+
+          <div class="field">
+            <label class="flabel" for="delivery">Delivery Location</label>
+            <div class="input-wrap">
+              <span class="lead"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg></span>
+              <input class="inp" id="delivery" name="delivery" type="text" placeholder="Enter city or zip code" autocomplete="address-level2" required>
+            </div>
+            <span class="err-msg">Please enter a delivery location.</span>
+          </div>
+
+          <div class="field">
+            <label class="flabel" for="date">Pickup Date</label>
+            <div class="input-wrap">
+              <span class="lead"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg></span>
+              <input class="inp" id="date" name="date" type="text" placeholder="Select pickup date" onfocus="this.type='date'" onblur="if(!this.value)this.type='text'">
+            </div>
+          </div>
+
+          <div class="field">
+            <label class="flabel">Trailer Type</label>
+            <div class="opt-grid" data-radio-group>
+              <label class="opt is-selected">
+                <span class="opt-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M10 17V6a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1v10"/><path d="M10 8h7l4 4v4h-2"/><path d="M6 17h2M12 17h2"/><circle cx="6" cy="18" r="2"/><circle cx="17" cy="18" r="2"/></svg></span>
+                <span class="opt-text"><strong>Open Trailer</strong><small>Most common</small></span>
+                <input type="radio" name="trailer" value="open" checked>
+                <span class="radio"></span>
+              </label>
+              <label class="opt">
+                <span class="opt-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="6" width="14" height="11" rx="1.5"/><path d="M16 9h3l3 4v4h-2"/><path d="M6 17h2"/><circle cx="6" cy="18" r="2"/><circle cx="18" cy="18" r="2"/></svg></span>
+                <span class="opt-text"><strong>Enclosed Trailer</strong><small>Extra protection</small></span>
+                <input type="radio" name="trailer" value="enclosed">
+                <span class="radio"></span>
+              </label>
+            </div>
+          </div>
+
+          <button type="button" class="btn-primary" data-next>
+            Next: Vehicle Details
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </button>
+        </div>
+
+        <!-- STEP 2 -->
+        <div class="qstep" data-panel="2">
+          <div class="row-2">
+            <div class="field">
+              <label class="flabel" for="year">Year</label>
+              <div class="input-wrap">
+                <span class="lead"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg></span>
+                <span class="chev-r"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></span>
+                <select class="inp" id="year" name="year"><option value="">Year</option></select>
+              </div>
+            </div>
+            <div class="field">
+              <label class="flabel" for="make">Make</label>
+              <div class="input-wrap">
+                <span class="lead"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12l1.6-4.6A2 2 0 0 1 6.5 6h11a2 2 0 0 1 1.9 1.4L21 12"/><path d="M3 12h18v5a1 1 0 0 1-1 1h-1.2a1 1 0 0 1-1-1v-1H6.2v1a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-5Z"/><circle cx="7.5" cy="14.5" r="1"/><circle cx="16.5" cy="14.5" r="1"/></svg></span>
+                <input class="inp" id="make" name="make" type="text" placeholder="e.g. Toyota">
+              </div>
+            </div>
+          </div>
+
+          <div class="field">
+            <label class="flabel" for="model">Model</label>
+            <div class="input-wrap">
+              <span class="lead"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12l1.6-4.6A2 2 0 0 1 6.5 6h11a2 2 0 0 1 1.9 1.4L21 12"/><path d="M3 12h18v5a1 1 0 0 1-1 1h-1.2a1 1 0 0 1-1-1v-1H6.2v1a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-5Z"/><circle cx="7.5" cy="14.5" r="1"/><circle cx="16.5" cy="14.5" r="1"/></svg></span>
+              <input class="inp" id="model" name="model" type="text" placeholder="e.g. Camry">
+            </div>
+          </div>
+
+          <div class="field">
+            <label class="flabel">Is the vehicle running?</label>
+            <div class="opt-grid" data-radio-group>
+              <label class="opt is-selected">
+                <span class="opt-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5 10 8l4 3 5-4.5"/><path d="M9 16h6"/><circle cx="12" cy="12" r="9"/></svg></span>
+                <span class="opt-text"><strong>Runs &amp; drives</strong><small>Operable</small></span>
+                <input type="radio" name="running" value="yes" checked>
+                <span class="radio"></span>
+              </label>
+              <label class="opt">
+                <span class="opt-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 8v5M12 16h.01"/><circle cx="12" cy="12" r="9"/></svg></span>
+                <span class="opt-text"><strong>Not running</strong><small>Inoperable</small></span>
+                <input type="radio" name="running" value="no">
+                <span class="radio"></span>
+              </label>
+            </div>
+          </div>
+
+          <div class="btn-row">
+            <button type="button" class="btn-ghost" data-back>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 18l-6-6 6-6"/></svg>
+              Back
+            </button>
+            <button type="button" class="btn-primary" data-next>
+              Next: Your Details
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- STEP 3 -->
+        <div class="qstep" data-panel="3">
+          <div class="field">
+            <label class="flabel" for="name">Full Name</label>
+            <div class="input-wrap">
+              <span class="lead"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21v-1a6 6 0 0 1 6-6h4a6 6 0 0 1 6 6v1"/></svg></span>
+              <input class="inp" id="name" name="name" type="text" placeholder="Your name" autocomplete="name" required>
+            </div>
+            <span class="err-msg">Please enter your name.</span>
+          </div>
+          <div class="field">
+            <label class="flabel" for="email">Email</label>
+            <div class="input-wrap">
+              <span class="lead"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></span>
+              <input class="inp" id="email" name="email" type="email" placeholder="you@email.com" autocomplete="email" required>
+            </div>
+            <span class="err-msg">Please enter a valid email.</span>
+          </div>
+          <div class="field">
+            <label class="flabel" for="phone">Phone</label>
+            <div class="input-wrap">
+              <span class="lead"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/></svg></span>
+              <input class="inp" id="phone" name="phone" type="tel" placeholder="(555) 555-5555" autocomplete="tel" required>
+            </div>
+            <span class="err-msg">Please enter a phone number.</span>
+          </div>
+
+          <div class="btn-row">
+            <button type="button" class="btn-ghost" data-back>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 18l-6-6 6-6"/></svg>
+              Back
+            </button>
+            <button type="submit" class="btn-primary">Get My Quote</button>
+          </div>
+
+          <p class="assure">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="11" width="16" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg>
+            No spam — just your quote. Takes about 60 seconds.
+          </p>
+        </div>
+      </form>
+
+      <!-- success -->
+      <div class="quote-success" id="quoteSuccess" aria-live="polite">
+        <div class="success-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></div>
+        <h3>Your quote request is in!</h3>
+        <p>Thanks — a Ship Guy specialist will reach out shortly with your transparent, all-in price.</p>
+        <a class="btn-call" href="tel:+18662803481">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/></svg>
+          Or call us now: (866) 280-3481
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== REVIEWS ===================== -->
+<section class="reviews" id="reviews">
+  <div class="container">
+    <div class="reviews-head">
+      <div>
+        <h2>Verified customer reviews</h2>
+        <p>Trusted by vehicle owners nationwide.</p>
+      </div>
+      <div class="rating">
+        <span class="score">4.9</span>
+        <span class="stars" aria-label="4.9 out of 5 stars">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.06 6.6.79-4.86 4.53 1.27 6.52L12 17.9l-5.9 3.5 1.27-6.52L2.5 9.35l6.6-.79L12 2.5Z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.06 6.6.79-4.86 4.53 1.27 6.52L12 17.9l-5.9 3.5 1.27-6.52L2.5 9.35l6.6-.79L12 2.5Z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.06 6.6.79-4.86 4.53 1.27 6.52L12 17.9l-5.9 3.5 1.27-6.52L2.5 9.35l6.6-.79L12 2.5Z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.06 6.6.79-4.86 4.53 1.27 6.52L12 17.9l-5.9 3.5 1.27-6.52L2.5 9.35l6.6-.79L12 2.5Z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.06 6.6.79-4.86 4.53 1.27 6.52L12 17.9l-5.9 3.5 1.27-6.52L2.5 9.35l6.6-.79L12 2.5Z"/></svg>
+        </span>
+        <span class="count">487+ reviews</span>
+        <span class="divider-v"></span>
+        <span class="gword"><span class="b">G</span><span class="r">o</span><span class="y">o</span><span class="b">g</span><span class="g">l</span><span class="r">e</span></span>
+      </div>
+    </div>
+
+    <div class="review-grid">
+      <article class="review">
+        <div class="review-top">
+          <span class="avatar">JD</span>
+          <div><span class="name">James D.</span><span class="date">May 12, 2024</span></div>
+        </div>
+        <div class="stars" aria-label="5 out of 5">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.06 6.6.79-4.86 4.53 1.27 6.52L12 17.9l-5.9 3.5 1.27-6.52L2.5 9.35l6.6-.79L12 2.5Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.06 6.6.79-4.86 4.53 1.27 6.52L12 17.9l-5.9 3.5 1.27-6.52L2.5 9.35l6.6-.79L12 2.5Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.06 6.6.79-4.86 4.53 1.27 6.52L12 17.9l-5.9 3.5 1.27-6.52L2.5 9.35l6.6-.79L12 2.5Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.06 6.6.79-4.86 4.53 1.27 6.52L12 17.9l-5.9 3.5 1.27-6.52L2.5 9.35l6.6-.79L12 2.5Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.06 6.6.79-4.86 4.53 1.27 6.52L12 17.9l-5.9 3.5 1.27-6.52L2.5 9.35l6.6-.79L12 2.5Z"/></svg>
+        </div>
+        <p>Ship Guy made the whole process easy. Great communication and my car arrived earlier than expected. Highly recommend!</p>
+      </article>
+
+      <article class="review">
+        <div class="review-top">
+          <span class="avatar">SR</span>
+          <div><span class="name">Sarah R.</span><span class="date">April 28, 2024</span></div>
+        </div>
+        <div class="stars" aria-label="5 out of 5">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.06 6.6.79-4.86 4.53 1.27 6.52L12 17.9l-5.9 3.5 1.27-6.52L2.5 9.35l6.6-.79L12 2.5Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.06 6.6.79-4.86 4.53 1.27 6.52L12 17.9l-5.9 3.5 1.27-6.52L2.5 9.35l6.6-.79L12 2.5Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.06 6.6.79-4.86 4.53 1.27 6.52L12 17.9l-5.9 3.5 1.27-6.52L2.5 9.35l6.6-.79L12 2.5Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.06 6.6.79-4.86 4.53 1.27 6.52L12 17.9l-5.9 3.5 1.27-6.52L2.5 9.35l6.6-.79L12 2.5Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.06 6.6.79-4.86 4.53 1.27 6.52L12 17.9l-5.9 3.5 1.27-6.52L2.5 9.35l6.6-.79L12 2.5Z"/></svg>
+        </div>
+        <p>Excellent service from start to finish. The driver was professional and my vehicle arrived in perfect condition.</p>
+      </article>
+
+      <article class="review">
+        <div class="review-top">
+          <span class="avatar">MT</span>
+          <div><span class="name">Michael T.</span><span class="date">April 15, 2024</span></div>
+        </div>
+        <div class="stars" aria-label="5 out of 5">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.06 6.6.79-4.86 4.53 1.27 6.52L12 17.9l-5.9 3.5 1.27-6.52L2.5 9.35l6.6-.79L12 2.5Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.06 6.6.79-4.86 4.53 1.27 6.52L12 17.9l-5.9 3.5 1.27-6.52L2.5 9.35l6.6-.79L12 2.5Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.06 6.6.79-4.86 4.53 1.27 6.52L12 17.9l-5.9 3.5 1.27-6.52L2.5 9.35l6.6-.79L12 2.5Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.06 6.6.79-4.86 4.53 1.27 6.52L12 17.9l-5.9 3.5 1.27-6.52L2.5 9.35l6.6-.79L12 2.5Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.06 6.6.79-4.86 4.53 1.27 6.52L12 17.9l-5.9 3.5 1.27-6.52L2.5 9.35l6.6-.79L12 2.5Z"/></svg>
+        </div>
+        <p>Fast quote, fair price, and they kept me updated throughout the entire delivery. Will definitely use again.</p>
+      </article>
+
+      <article class="review">
+        <div class="review-top">
+          <span class="avatar">KB</span>
+          <div><span class="name">Kelsey B.</span><span class="date">March 30, 2024</span></div>
+        </div>
+        <div class="stars" aria-label="5 out of 5">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.06 6.6.79-4.86 4.53 1.27 6.52L12 17.9l-5.9 3.5 1.27-6.52L2.5 9.35l6.6-.79L12 2.5Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.06 6.6.79-4.86 4.53 1.27 6.52L12 17.9l-5.9 3.5 1.27-6.52L2.5 9.35l6.6-.79L12 2.5Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.06 6.6.79-4.86 4.53 1.27 6.52L12 17.9l-5.9 3.5 1.27-6.52L2.5 9.35l6.6-.79L12 2.5Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.06 6.6.79-4.86 4.53 1.27 6.52L12 17.9l-5.9 3.5 1.27-6.52L2.5 9.35l6.6-.79L12 2.5Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.06 6.6.79-4.86 4.53 1.27 6.52L12 17.9l-5.9 3.5 1.27-6.52L2.5 9.35l6.6-.79L12 2.5Z"/></svg>
+        </div>
+        <p>Shipped my SUV cross-country with no issues. The team was responsive and the experience was smooth.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+
+<!-- ===================== STATE CONTENT ===================== -->
+<section class="article-section"><div class="container article">
+  <nav class="crumbs" aria-label="Breadcrumb"><a href="index.html">Home</a><span>/</span><span aria-current="page">Indiana Auto Transport</span></nav>
+  <p>Ship Guy provides fast, reliable auto transport in Indiana and beyond. Whether you&#x27;re relocating to Indianapolis, buying a car online from out of state, or shipping a classic car to a summer show, this guide covers everything you need to know about costs, timelines, service types, and how to prepare your vehicle for a smooth shipment.</p>
+  <h2>Fast Indiana Auto Transport Overview</h2>
+  <p>Ship Guy offers statewide Indiana auto transport services with door-to-door delivery, competitive pricing, and timely delivery on every route. Ship Guy is a reliable car shipping service built around convenience, so whether you need to ship a car across town or across the country, the process is handled from start to finish by experienced coordinators working with licensed, insured carriers.</p>
+  <p>Ship Guy ships vehicles to and from major cities, including Indianapolis, Fort Wayne, South Bend, Evansville, Bloomington, Lafayette, Muncie, and Gary. Beyond Indiana, nationwide coverage extends to every state, connecting Hoosier customers with destinations from Florida to California and everywhere in between.</p>
+  <p>Vehicle shipping through Ship Guy covers a wide range of customer scenarios. Families relocating for work use the service to avoid putting thousands of highway miles on their cars. College students heading to Indiana University or Purdue ship vehicles ahead of move-in weekend. Military personnel transferring to or from nearby installations rely on car transport to simplify their transitions. Auction buyers, snowbirds heading south for winter, and classic car collectors round out the customer base. Whatever the reason, Ship Guy&#x27;s team handles the logistics, making a professional car shipping service a convenient alternative to driving long distances.</p>
+  <h2>Get a Quick Indiana Car Shipping Quote</h2>
+  <p>Getting a car shipping cost estimate from Ship Guy takes minutes. You can request a quote online or call directly to speak with a transport advisor who can walk you through pricing for your specific route and vehicle.</p>
+  <h2>Call Ship Guy at (866) 280-3481 for a same-day quote for Indiana vehicle shipping.</h2>
+  <p>The online quote form is straightforward. Enter your pickup and delivery ZIP codes, select your vehicle type (sedan, SUV, truck, motorcycle, etc.), choose your preferred dates, and specify whether you prefer open or enclosed transport. You&#x27;ll receive instant or near-instant pricing based on current carrier availability and route conditions.</p>
+  <p>Every quote from Ship Guy is all-inclusive. The price covers fuel surcharges, basic cargo insurance, carrier fees, and coordination from pickup to delivery. There are no hidden fees tacked on after booking. If your route, vehicle, or timing requires special handling, the team explains those costs upfront so you know exactly what you&#x27;re paying before you commit. This transparency in auto transport service pricing is one of the main reasons customers choose Ship Guy over less forthcoming providers.</p>
+  <h2>Indiana Auto Transport &amp; Car Shipping Services by Ship Guy</h2>
+  <p>Indiana&#x27;s central location in the Midwest makes it one of the most efficient states for vehicle transportation. Known as &quot;The Crossroads of America,&quot; the state is laced with major interstates, including I-65, I-69, I-70, I-74, and the Indiana Toll Road (I-80/I-90). These highways create dense freight corridors that keep carrier availability high and transit times short, especially around Indianapolis and other metro hubs.</p>
+  <p>Ship Guy leverages this highway network to handle car transport to and from key markets like Indianapolis, Fort Wayne, South Bend, Lafayette, Muncie, and Gary, standing out among trusted Indiana car shipping companies serving those routes. The state&#x27;s position between Chicago, Detroit, Louisville, Cincinnati, and St. Louis means carriers frequently pass through Indiana on multi-stop routes, which translates to more scheduling options and competitive rates for customers.</p>
+  <p>Common customer profiles include students at Indiana University and Purdue University shipping cars at the start and end of semesters, snowbirds heading to Florida or Arizona for the winter months, corporate employees relocating to or from the Indianapolis metro, military families managing PCS moves, and dealer or auction buyers purchasing vehicles sight-unseen online. Ship Guy coordinates both short in-state moves (like Indianapolis to South Bend, roughly 160 miles) and long-distance routes such as Indiana to Florida, Texas, or California.</p>
+  <h2>Types of Indiana Vehicle Shipping We Offer</h2>
+  <p>Ship Guy offers several Indiana car shipping services to match different needs and budgets.</p>
+  <p><strong>Open carrier transport</strong> is the standard and most cost-effective option. Your vehicle is loaded onto an open multi-car trailer alongside other motor vehicles heading in the same direction. This method works well for everyday sedans, crossovers, SUVs, and pickup trucks. Open car shipping accounts for the vast majority of shipments across the industry.</p>
+  <p><strong>Enclosed auto transport</strong> provides full protection from weather, road debris, and Indiana&#x27;s harsh winter road salt. Vehicles travel inside a fully covered trailer, shielded from rain, snow, hail, and anything kicked up from the road. This option is popular for high-value vehicles, freshly restored project cars, low-clearance sports cars, and luxury models.</p>
+  <p>Ship Guy also handles the transport of running and non-running vehicles. Non-running cars require winching and special equipment, but the team coordinates this regularly for auction purchases and salvage vehicles. Motorcycles, small trucks, vans, and oversized SUVs are all examples of what Ship Guy can move.</p>
+  <p>Indiana auto transport companies offer door-to-door services, and Ship Guy is no exception. When your street is legally and safely accessible for a full-size carrier, the driver picks up and drops off right at your address. If streets are too narrow or restricted (common near campus areas in Bloomington or downtown Indianapolis), Ship Guy arranges a nearby meeting point or drop-off location for pickup and delivery at your preferred locations that work for both parties. Cross-country car shipping offers door-to-door service as a standard feature on most routes.</p>
+  <h2>Indiana Car Shipping Costs &amp; Timeframes</h2>
+  <p>Indiana car shipping cost depends on several interconnected factors: distance, route popularity, vehicle type, transport method (open vs. enclosed), and timing. Most shipments in Indiana range from $764 to $1,196 for mid- and long-distance routes. Shipping a car in Indiana costs around $300 for local moves under 200 miles.</p>
+  <p>Here are sample price and time estimates for realistic routes using 2026 market data:</p>
+  <ul>
+    <li><strong>Indianapolis to Chicago (~185–200 miles):</strong> Approximately $400–$550 for open transport, with transit in 1–2 days.</li>
+    <li><strong>Fort Wayne to Denver (~1,000+ miles):</strong> Around $900–$1,200 for open transport, transit 3–5 days. Open carrier transport from Fort Wayne to Denver takes 1-3 days once the carrier is dispatched and en route. Enclosed options push toward $1,400 or higher.</li>
+    <li><strong>South Bend to Dallas (~1,100 miles):</strong> Roughly $800–$1,000 for open transport, transit 3–4 days with a premium for enclosed or expedited shipping.</li>
+  </ul>
+  <p>Standard carrier turnaround times in Indiana are 1 to 3 days for regional moves. Shipping a car under 200 miles takes up to 2 days from dispatch. Shipping a car over 2,000 miles can take up to 9 days, depending on the route and stops along the way.</p>
+  <p>Seasonality can influence the cost of car shipping services. Summer months (May through August) and college move-in periods push demand and pricing up by roughly 15–20%. Shipping times can increase during winter due to weather conditions, especially on northern and mountain routes. For the most accurate quote, contact Ship Guy directly with your specific route and dates.</p>
+  <h2>Main Factors that Influence Your Car Shipping Cost</h2>
+  <p><strong>Distance and route density</strong> are the biggest pricing drivers. Routes along major interstates like I-65, I-69, and I-70 are typically cheaper and faster than remote rural pickups or deliveries off the main highway grid. Distance significantly affects car shipping costs in Indiana, and longer routes tend to be more cost-efficient per mile. Distance, weather, and road conditions affect shipping time on every route.</p>
+  <p><strong>Vehicle type and condition</strong> matter as well. Car shipping costs vary by vehicle type and size. A standard sedan is the baseline. Crossovers and SUVs add $100–$200, while larger trucks and vans add $150–$300. The vehicle&#x27;s weight and overall size directly affect pricing because carriers must manage total load capacity. Non-running vehicles require winching equipment and typically add $150–$300 to the base rate.</p>
+  <p><strong>Transport type</strong> creates a clear cost split. Open transport is more affordable than enclosed transport, often by 40–70% for the same route. Choosing enclosed car transport makes sense for vehicles where the added protection justifies the premium.</p>
+  <p><strong>Timing and flexibility</strong> can save real money. Flexible pickup and delivery dates let dispatchers match your car shipment with the best-positioned trucks, reducing deadhead miles and your costs. Booking well ahead of peak periods also helps avoid surge pricing.</p>
+  <p><strong>Additional services</strong> like expedited shipping, guaranteed pickup dates, and special handling for oversized or non-running vehicles are add-ons that affect pricing. Urban access fees ($25–$50) may apply in congested downtown areas where large carriers have limited access.</p>
+  <h2>Service Areas for Indiana Auto Transport</h2>
+  <p>Ship Guy serves the entire state of Indiana for both pickup and delivery, as well as all 50 states for long-distance routes.</p>
+  <p>Primary hubs with the strongest carrier availability include Indianapolis, Fort Wayne, South Bend, Evansville, Bloomington, Lafayette, Muncie, Gary, Carmel, and Fishers. Shipments to and from Indiana often involve major cities like Indianapolis and Fort Wayne, where intersecting interstates create dense freight corridors and shorter pickup windows.</p>
+  <p>Areas near interstates such as I-65, I-69, I-70, I-74, and I-80/I-90 are usually easier and cheaper to service than remote rural areas. Northern corridors near South Bend and the Indiana Toll Road connect efficiently to Detroit, Cleveland, and the Northeast. Central Indiana, around Indianapolis, is the state&#x27;s strongest hub, while southern regions near Evansville connect directly to Louisville and Nashville.</p>
+  <p>Ship Guy coordinates nationwide shipping to and from Indiana, including popular relocation routes to Florida, Arizona, North Carolina, California, and North Dakota. Indiana shipping routes benefit from the state&#x27;s central location, which keeps most destinations within a manageable transit window.</p>
+  <h2>Indiana Cities &amp; Routes We Regularly Ship</h2>
+  <p>Ship Guy handles recurring Indiana vehicle shipping routes that connect Indiana&#x27;s cities with markets across the country:</p>
+  <ul>
+    <li><strong>Indianapolis ↔ Chicago:</strong> One of the most frequent short-haul routes, running straight up I-65.</li>
+    <li><strong>Indianapolis ↔ Atlanta:</strong> A popular Southeast corridor via I-65 South.</li>
+    <li><strong>South Bend ↔ Detroit:</strong> A quick northern route connecting via I-80/I-90 and US-31.</li>
+    <li><strong>Fort Wayne ↔ Dallas:</strong> A mid-distance route crossing through Indianapolis and heading southwest.</li>
+    <li><strong>Evansville ↔ Nashville:</strong> A short southern run connecting Indiana&#x27;s river city with Tennessee.</li>
+    <li><strong>Indianapolis ↔ San Diego or Los Angeles:</strong> Cross-country routes heading west via I-70 or I-40, typically 5–8 days transit.</li>
+  </ul>
+  <p>Shipping from large metros like Indianapolis or Fort Wayne offers more carrier availability, faster pickup, and often lower pricing than shipping from remote ZIP codes. Customers in smaller towns like Kokomo, Terre Haute, Columbus, or Elkhart can use flexible scheduling and meet carriers near major highway exits for better pricing and quicker dispatch.</p>
+  <h2>Open vs. Enclosed Indiana Auto Transport</h2>
+  <p>Most Ship Guy customers choose open transport for their Indiana car shipping needs, but enclosed shipping is available for vehicles that require extra protection.</p>
+  <p>Open carriers are the multi-car trailers you see on Indiana interstates every day. They typically hold 7–10 vehicles and are the backbone of the auto shipping industry. Open carrier transport is the most common method in Indiana and nationwide. It&#x27;s cost-effective, widely available, and perfectly safe for the vast majority of everyday vehicles. Open transport is more affordable than enclosed transport, which is why it remains the default for standard sedans, crossovers, and trucks.</p>
+  <p>Enclosed carrier transport protects vehicles from elements, including rain, snow, road salt, hail, and debris. Vehicles ride inside a fully covered trailer, completely shielded from anything the road throws at them. Enclosed carrier transport provides greater protection for vehicles and is the preferred choice for shipping high-value vehicles. The trade-off is price: enclosed car shipping typically costs 40–70% more than open for the same route.</p>
+  <p>When deciding, consider the value and condition of your vehicle. Daily drivers and dealership inventory are ideal for open-car shipping. Classic cars, luxury models, low-clearance exotics, and freshly painted restorations are better suited to enclosed transport.</p>
+  <h2>When to Choose Enclosed Car Shipping in Indiana</h2>
+  <p>Enclosed transport is ideal for luxury or classic cars, and several Indiana-specific factors make the upgrade worth considering.</p>
+  <p>Road salt is a major concern during Indiana winters. Salt spray from passing trucks can corrode paint, undercarriage components, and chrome trim during transit. If you&#x27;re shipping a classic car or a freshly restored vehicle between November and March, enclosed car transport eliminates that risk entirely.</p>
+  <p>Spring storms across Indiana can bring hail and heavy rain, which pose real threats to vehicles on open trailers. Enclosed carriers shield your car from all of it.</p>
+  <p>Customers shipping rare or high-value vehicles from cities such as Indianapolis, Carmel, and South Bend should strongly consider using an enclosed carrier. The cost premium is meaningful, but so is the peace of mind. Enclosed transport often includes more detailed car inspections at pickup and delivery, as well as higher cargo insurance limits.</p>
+  <p>Ship Guy can advise on whether enclosed shipping is worth the extra cost based on your vehicle&#x27;s value, the time of year, and your specific route. Sometimes the answer is yes; sometimes open is perfectly fine. The team gives honest guidance either way.</p>
+  <h2>How Indiana Car Shipping Works with Ship Guy</h2>
+  <p>The process from quote to delivery follows three straightforward steps. Whether you&#x27;re a first-time shipper or you&#x27;ve moved vehicles before, Ship Guy keeps things simple with clear communication at every stage.</p>
+  <p>Ship Guy coordinates licensed, insured carriers and provides regular updates throughout the shipment. The team handles the logistics, carrier vetting, and scheduling so you can focus on the rest of your move or purchase.</p>
+  <h3>Step 1: Request &amp; Review Your Quote</h3>
+  <p>Start by sharing your pickup and delivery cities or ZIP codes, vehicle details (year, make, model), vehicle condition (running or not), and preferred dates. These vehicle details allow Ship Guy to match you with the right carrier and provide accurate pricing.</p>
+  <p>The team reviews route options, checks current carrier availability in Indiana, and provides a firm price estimate. If you&#x27;re weighing open versus enclosed, the team can compare pricing for both and explain delivery dates and delivery windows clearly before you commit.</p>
+  <p>Transparency is central to the booking process. There are no surprise fuel surcharges or last-minute fees. The price you&#x27;re quoted is the price you pay.</p>
+  <p>For busy periods like late May through August (summer moves and college relocations) and November through January (snowbird season and holidays), booking early helps lock in better rates and preferred pickup windows.</p>
+  <h3>Step 2: Vehicle Pickup in Indiana</h3>
+  <p>On pickup day, the carrier arrives at your delivery location (or a pre-arranged meeting point) within a scheduled window, typically 2–4 hours to account for traffic and prior stops.</p>
+  <p>The driver verifies identity and conducts a joint vehicle inspection with you. Both parties document existing dings, scratches, and the car&#x27;s overall condition with photos and notes on a bill of lading. This documentation is critical for any insurance claims, so take it seriously.</p>
+  <p>Documentation like vehicle registration, proof of insurance, and a driver&#x27;s license is required before shipping. A bill of sale or proof of ownership is also necessary for vehicle shipping. Have these ready at pickup to keep things moving smoothly. If the vehicle is newly purchased, any registration fees or plate-related requirements are handled through the state registration process rather than by the carrier.</p>
+  <p>Tight residential streets or areas near campuses in Bloomington or downtown Indianapolis may require meeting at a wider nearby lot or business location. Ship Guy&#x27;s team communicates these details in advance to avoid surprises. If schedules shift due to weather conditions, traffic, or DOT regulations, the team provides updates promptly.</p>
+  <h3>Step 3: Transit, Updates &amp; Delivery</h3>
+  <p>During transit, Ship Guy or the carrier provides updates by phone, text, or email regarding estimated delivery dates. You won&#x27;t be left guessing where your vehicle is or when it will arrive.</p>
+  <p>At delivery, you meet the driver and re-inspect the vehicle against the original bill of lading. Check for any new marks, dings, or issues. Inspect your vehicle in daylight, if possible, and report any discrepancies to the driver and Ship Guy immediately. Also, confirm any transfer issues for license plates separately, since carriers do not handle them.</p>
+  <p>Most shipments arrive without damage and within the promised delivery window. For Indiana-to-major-market routes, expect timely delivery within the ranges outlined earlier (1–2 days for regional, 3–5 days for mid-distance, 5–9 days for cross-country).</p>
+  <p>Once you know your dates, contact Ship Guy right away to schedule your Indiana car transport and lock in pricing.</p>
+  <h2>How to Choose an Indiana Car Shipping Company</h2>
+  <p>Not all car shipping companies deliver the same level of service. Careful selection helps you avoid delays, damage, and hidden costs that can turn a straightforward move into a headache.</p>
+  <p>Prioritize properly licensed, insured service providers with a track record of customer satisfaction and strong reviews. Indiana is home to several top-rated auto transport companies, giving residents options. The key is knowing what to look for.</p>
+  <p>Check FMCSA registration to verify that any carrier or broker has active authority and adequate cargo insurance. This step takes two minutes and can save you from working with an unlicensed operator.</p>
+  <p>When comparing the best car shipping companies or best auto transport companies, look beyond just the lowest price. The cheapest quote often comes with the worst communication, the longest delays, or surprise fees at delivery. Value, reliability, and responsive support matter more than saving $50 on a quote.</p>
+  <h2>Key Things to Review Before You Book</h2>
+  <p><strong>Licensing and insurance:</strong> Verify that the Indiana car transport company or broker has an active USDOT number and MC authority. Confirm cargo insurance coverage limits are adequate for your vehicle&#x27;s value.</p>
+  <p><strong>Customer reviews:</strong> Check independent review sites for comments specifically mentioning Indiana routes, cities like South Bend and Indianapolis, and timely delivery. Reviews from real customers on your exact corridor tell you more than a company&#x27;s overall star rating.</p>
+  <p><strong>Pricing clarity:</strong> Choose a shipping company in Indiana that provides written quotes outlining what is included and any possible surcharges. If a company can&#x27;t give you a clear answer on total cost, move on.</p>
+  <p><strong>Communication:</strong> Reliable car shipping depends on reachable customer support and proactive updates throughout the process. Ask how and when you&#x27;ll receive transit updates before you book.</p>
+  <p><strong>Specialized needs:</strong> If you&#x27;re shipping a classic car, an oversized vehicle, or working against a tight timeline, choose a service provider experienced with those specific situations. Not every company handles enclosed transport or non-running vehicles well.</p>
+  <h2>Tips to Save on Indiana Auto Transport</h2>
+  <p>You don&#x27;t have to overpay for auto transport. A few practical adjustments to your service type, scheduling, and pickup logistics can meaningfully reduce your car shipping cost without sacrificing safety or reliability.</p>
+  <p>Ship Guy&#x27;s team can walk you through cost-saving options tailored to your exact route and dates. Here are the strategies that make the biggest difference.</p>
+  <h3>Smart Ways to Keep Your Indiana Shipping Quote Low</h3>
+  <ul>
+    <li><strong>Choose open carrier transport</strong> for standard sedans, crossovers, and pickup trucks when extra protection isn&#x27;t critical. Open carrier transport is cheaper than enclosed transport, and for most everyday vehicles, it&#x27;s the right call.</li>
+    <li><strong>Be flexible with dates.</strong> Giving the dispatch team a few days&#x27; window (rather than a single rigid date) lets them match your car with the best-positioned trucks on routes through Indianapolis, Fort Wayne, or South Bend. This flexibility alone can save $50–$150.</li>
+    <li><strong>Meet carriers near major interstates</strong> or larger towns, rather than in very remote rural driveways, when feasible. This eliminates rural surcharges and makes it easier for carriers to include your vehicle on an existing route.</li>
+    <li><strong>Avoid peak surges.</strong> Last-minute bookings during college move-in weeks, right before major holidays, or during the Indy 500 period drive prices up. Plan ahead when possible.</li>
+    <li><strong>Ship running vehicles.</strong> Non-operational cars require winching equipment and can noticeably increase cost by $150–$300. If you can get the car running before pickup, it&#x27;s worth the effort.</li>
+  </ul>
+  <h2>Preparing Your Vehicle for Indiana Car Shipping</h2>
+  <p>Proper preparation helps ensure a smooth handoff, accurate inspection, and trouble-free transit. Completing a few simple steps before pickup day speeds up the process for both you and the driver.</p>
+  <p>Indiana-specific considerations include clearing snow or ice from your vehicle in the winter months and ensuring enough fuel to load and unload (but not a full tank). Prep also speeds up the pickup process, which matters when the carrier has a tight schedule.</p>
+  <h3>Vehicle Prep Checklist</h3>
+  <ul>
+    <li><strong>Clean the exterior and interior lightly.</strong> Clean your vehicle before shipping for inspection purposes. A quick wash makes pre-existing dings and scratches easy to document in photos and on the bill of lading.</li>
+    <li><strong>Remove personal items.</strong> Remove all personal items from your car before transport. Carriers aren&#x27;t insured for personal belongings, and loose items can shift during transit, causing interior damage. Take out aftermarket electronics, loose accessories, and anything not permanently attached.</li>
+    <li><strong>Check fluids and battery.</strong> Check all fluids and ensure the battery is charged. The car needs to start and steer safely for loading and unloading.</li>
+    <li><strong>Turn off alarms.</strong> Turn off your car&#x27;s alarm system before transport. A blaring alarm on a moving carrier creates problems for the driver and other vehicles on the trailer.</li>
+    <li><strong>Disable toll tags and parking passes</strong> that could be charged during transit. Secure or remove exterior items like bike racks, roof boxes, or antenna toppers.</li>
+    <li><strong>Leave about a quarter-tank of fuel.</strong> A full tank adds unnecessary weight. A quarter-tank provides enough for the driver to maneuver the vehicle on and off the trailer.</li>
+  </ul>
+  <h2>Why Indiana Drivers Choose Ship Guy</h2>
+  <p>Ship Guy delivers exceptional service for Indiana auto transport through competitive pricing, clear communication, and a commitment to timely delivery on every route. The team&#x27;s familiarity with key Indiana corridors and major cities helps optimize routing and pickup timing, resulting in faster service and lower costs for customers.</p>
+  <p>Whether you need to ship your car across state for a family relocation, move a dealer purchase from an Indianapolis auction to your lot, or send a collector vehicle to a show on the other side of the country, Ship Guy handles it. The team manages everything from single-family cars to multiple vehicles for large moves or dealer purchases, with both open and enclosed options available.</p>
+  <p>Indiana residents benefit from the state&#x27;s position as a national logistics hub. With over 6.2 million vehicles registered in the state and a massive automotive economy, the infrastructure for vehicle transport here is as strong as anywhere in the country. Ship Guy puts that infrastructure to work for you.</p>
+  <p>If you&#x27;re ready to move forward, contact Ship Guy directly to discuss your route, timing, and budget. The team will provide a tailored plan and a hassle-free experience from quote to delivery. Whether you&#x27;re shipping from Indianapolis to Florida, Fort Wayne to the West Coast, or anywhere in between, Ship Guy is ready to handle your car shipment.</p>
+  <h2>Call Ship Guy at (866) 280-3481 or request a quote online to schedule your Indiana car shipping today.</h2>
 </div></section>
+
+<!-- ===================== WHAT WE SHIP ===================== -->
+<section class="ship-section" id="services">
+  <div class="container">
+    <div class="ship-head">
+      <p class="ship-eyebrow">What We Ship</p>
+      <h2>We Ship More Than Cars</h2>
+      <p class="ship-sub">Nationwide transport solutions for vehicles, household goods, equipment, and freight.</p>
+    </div>
+
+    <div class="ship-grid">
+      <article class="ship-card">
+        <div class="ship-img"><img src="assets/ship-vehicles.jpg" alt="Blue auto-transport carrier loaded with cars and a boat on a mountain highway" loading="lazy"></div>
+        <div class="ship-body">
+          <h3>Vehicles &amp; Boats</h3>
+          <p>Cars, trucks, motorcycles, RVs, and boats shipped nationwide.</p>
+          <a class="ship-link" href="#">Learn More <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </div>
+      </article>
+
+      <article class="ship-card">
+        <div class="ship-img"><img src="assets/ship-household.jpg" alt="Living room with a sofa and packed moving boxes ready for transport" loading="lazy"></div>
+        <div class="ship-body">
+          <h3>Household Items</h3>
+          <p>Furniture, boxes, and personal items moved with care.</p>
+          <a class="ship-link" href="#">Learn More <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </div>
+      </article>
+
+      <article class="ship-card">
+        <div class="ship-img"><img src="assets/ship-equipment.jpg" alt="Green tractor secured on a flatbed trailer for heavy equipment transport" loading="lazy"></div>
+        <div class="ship-body">
+          <h3>Heavy Equipment</h3>
+          <p>Tractors, machinery, and oversized equipment transport.</p>
+          <a class="ship-link" href="#">Learn More <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </div>
+      </article>
+
+      <article class="ship-card">
+        <div class="ship-img"><img src="assets/ship-freight.jpg" alt="Palletized and shrink-wrapped cargo in a warehouse for freight shipping" loading="lazy"></div>
+        <div class="ship-body">
+          <h3>Freight</h3>
+          <p>Palletized cargo, crates, and commercial freight shipping.</p>
+          <a class="ship-link" href="#">Learn More <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FAQ ===================== -->
+<section class="faq-section" id="faq">
+  <div class="container">
+    <div class="faq-head">
+      <p class="faq-eyebrow">Questions?</p>
+      <h2>Frequently Asked Questions</h2>
+      <span class="faq-accent" aria-hidden="true"></span>
+      <p class="faq-sub">Everything you need to know before you ship.</p>
+    </div>
+
+    <div class="faq-list">
+      <details class="faq-item" open>
+        <summary class="faq-q">How much does it cost to ship a vehicle?
+          <span class="faq-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></span>
+        </summary>
+        <div class="faq-a">Your price depends on the distance, vehicle size, transport type (open or enclosed), and how quickly you need it. We give you an upfront, all-in quote with no hidden fees — the number you see is the number you pay.</div>
+      </details>
+
+      <details class="faq-item">
+        <summary class="faq-q">How long will my shipment take?
+          <span class="faq-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></span>
+        </summary>
+        <div class="faq-a">Transit time depends on the route and distance. Once your vehicle is dispatched, we share an estimated delivery window and keep you updated from pickup to drop-off. Longer cross-country routes naturally take more time than regional moves.</div>
+      </details>
+
+      <details class="faq-item">
+        <summary class="faq-q">Is my vehicle insured during transport?
+          <span class="faq-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></span>
+        </summary>
+        <div class="faq-a">Yes. We only work with licensed, vetted carriers that carry active cargo insurance, and your vehicle is covered while it's on the truck. We're happy to share coverage details before you book.</div>
+      </details>
+
+      <details class="faq-item">
+        <summary class="faq-q">What's the difference between open and enclosed transport?
+          <span class="faq-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></span>
+        </summary>
+        <div class="faq-a">Open transport is the most common and most affordable option and is safe for everyday vehicles. Enclosed transport adds extra protection from weather and road debris — a great choice for classic, luxury, or high-value vehicles.</div>
+      </details>
+
+      <details class="faq-item">
+        <summary class="faq-q">Do I have to pay a deposit upfront?
+          <span class="faq-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></span>
+        </summary>
+        <div class="faq-a">No. You don't pay until your vehicle is assigned and dispatched to a carrier — so there's no risk in getting a quote and booking your shipment.</div>
+      </details>
+
+      <details class="faq-item">
+        <summary class="faq-q">Can you ship a vehicle that doesn't run?
+          <span class="faq-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></span>
+        </summary>
+        <div class="faq-a">Yes. We transport both operable and inoperable (non-running) vehicles — just let us know when you book so we assign a carrier with the right equipment, such as a winch.</div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== LOCAL / CONTACT ===================== -->
+<section class="local-section" id="contact-local">
+  <div class="container">
+    <div class="local-grid">
+      <div class="local-info">
+        <p class="local-eyebrow">Get Started</p>
+        <h2>Ship Your Car To or From Indiana Today</h2>
+        <p class="local-lede">Call now or request a free quote. Transparent all-in pricing, no upfront deposit, vetted carriers, and 24/7 U.S.-based support.</p>
+        <div class="local-actions">
+          <a class="btn-call-lg" href="tel:+18662803481"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/></svg> Call (866) 280-3481</a>
+          <a class="btn-quote-lg" href="#top">Get a Free Quote <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </div>
+        <ul class="local-contact">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg><span>Serving all of Indiana — door-to-door, statewide</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg><span>Ship Guy — Nationwide Auto Transport &nbsp;<em style="color:#9098b0">(add your business address)</em></span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/></svg><a href="tel:+18662803481">(866) 280-3481</a></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg><a href="mailto:quotes@shipguy.com">quotes@shipguy.com</a></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span>Open 24/7 — quotes &amp; support</span></li>
+        </ul>
+        <div class="local-social" aria-label="Follow Ship Guy"><a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.07C24 5.4 18.63 0 12 0S0 5.4 0 12.07C0 18.1 4.39 23.1 10.13 24v-8.44H7.08v-3.49h3.05V9.41c0-3.02 1.79-4.69 4.53-4.69 1.31 0 2.68.24 2.68.24v2.97h-1.51c-1.49 0-1.96.93-1.96 1.89v2.25h3.33l-.53 3.49h-2.8V24C19.61 23.1 24 18.1 24 12.07z"/></svg></a><a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5.5"/><circle cx="12" cy="12" r="4.2"/><line x1="17.6" y1="6.4" x2="17.61" y2="6.4"/></svg></a><a href="#" aria-label="X"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231 5.45-6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a><a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg></a></div>
+      </div>
+      <div class="local-map">
+        <iframe title="Indiana auto transport service area" src="https://www.google.com/maps?q=Indiana%2C%20USA&z=6&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+</section>
 
 <!-- ===================== FINAL CTA ===================== -->
 <section class="cta-band" id="get-started">
@@ -838,11 +1385,14 @@ body.ready .reveal{opacity:1;transform:none}
     <h2>Ready to Ship Your Vehicle?</h2>
     <p class="cta-sub">Get a free, no-obligation quote in about 60 seconds — or call and talk to a real specialist right now.</p>
     <div class="cta-actions">
-      <a class="cta-primary" href="index.html#top">Get Your Free Quote
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      <a class="cta-primary" href="#top">
+        Get Your Free Quote
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
       <a class="cta-secondary" href="tel:+18662803481">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/></svg>
-        (866) 280-3481</a>
+        (866) 280-3481
+      </a>
     </div>
     <ul class="cta-trust">
       <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Licensed &amp; insured</li>
@@ -873,9 +1423,9 @@ body.ready .reveal{opacity:1;transform:none}
       <h4>Company</h4>
       <ul>
         <li><a href="how-it-works.html">How It Works</a></li>
-        <li><a href="index.html#reviews">Reviews</a></li>
-        <li><a href="index.html#faq">FAQ</a></li>
-        <li><a href="index.html#contact">Contact</a></li>
+        <li><a href="#reviews">Reviews</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#contact">Contact</a></li>
       </ul>
     </div>
     <div class="f-col">

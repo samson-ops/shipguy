@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Cross-Country Car Shipping — Coast-to-Coast Auto Transport | Ship Guy</title>
-<meta name="description" content="Cross-country car shipping coast to coast. Learn how long-distance auto transport works, how long it takes, what it costs, popular routes, and how to choose a transporter.">
+<title>Montana Auto Transport: Ship Guy&#x27;s Guide to Car Shipping in Big Sky Country</title>
+<meta name="description" content="Montana is one of the largest states in the country and one of the most challenging for vehicle shipping. Between mountain passes, long rural stretches, an…">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
@@ -273,7 +273,7 @@ select.inp{appearance:none;-webkit-appearance:none;padding-right:38px;cursor:poi
 .reviews-head{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;flex-wrap:wrap;margin-bottom:30px}
 .reviews-head h2{font-size:clamp(1.7rem,2.6vw,2.1rem);font-weight:800;color:var(--brand)}
 .reviews-head p{margin:8px 0 0;color:var(--muted);font-size:15.5px}
-.rating{display:flex;align-items:center;gap:12px}
+.rating{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
 .rating .score{font-family:var(--font-display);font-weight:800;font-size:22px;color:var(--ink)}
 .stars{display:inline-flex;gap:2px;color:var(--star)}
 .stars svg{width:18px;height:18px}
@@ -480,10 +480,15 @@ section[id]{scroll-margin-top:104px}
    Responsive
    ========================================================= */
 @media (max-width:1180px){
-  .hero-grid{grid-template-columns:minmax(0,1fr);gap:36px;padding:54px 24px 60px}
-  .hero-copy{max-width:640px}
+  .hero-grid{grid-template-columns:minmax(0,1fr);gap:28px;padding:54px 24px 60px}
+  .hero-copy{display:contents}
+  .hero-head,.hero-rest{max-width:640px;width:100%}
+  .hero-head{order:1}
+  .quote-card{order:2;max-width:520px;width:100%}
+  .hero-rest{order:3}
+  .hero-head h1{margin-bottom:0}
+  .eyebrow{display:none}
   .lede{max-width:520px}
-  .quote-card{max-width:520px;width:100%}
   .hero-overlay{background:linear-gradient(180deg, rgba(4,9,22,.72) 0%, rgba(4,9,22,.8) 55%, rgba(4,9,22,.88) 100%)}
 }
 @media (max-width:1180px){
@@ -504,6 +509,7 @@ section[id]{scroll-margin-top:104px}
 @media (max-width:980px){
   .wc-bento{grid-template-columns:1fr}
   .loc-bento{grid-template-columns:1fr;gap:32px}
+  .review-grid{grid-template-columns:1fr 1fr}
 }
 @media (max-width:880px){
   .steps-row{flex-direction:column;gap:0;max-width:440px;margin:0 auto}
@@ -544,6 +550,31 @@ section[id]{scroll-margin-top:104px}
   .step .slabel{font-size:11.5px}
 }
 
+/* compact hero on laptop screens only (~25% shorter) */
+@media (min-width:1181px) and (max-width:1600px){
+  .hero-grid{padding-top:34px;padding-bottom:40px;gap:40px}
+  .eyebrow{margin-bottom:12px}
+  .hero-copy h1{font-size:clamp(2rem,3vw,2.5rem);margin-bottom:14px}
+  .lede{font-size:15.5px;margin-bottom:18px}
+  .trust-list{margin-bottom:16px;gap:9px}
+  .trust-list li{font-size:14.5px}
+  .trust-ic{width:30px;height:30px}
+  .trust-ic svg{width:17px;height:17px}
+  .hero-divider{margin-bottom:16px}
+  .stat .num{font-size:26px}
+  .stat .lbl{font-size:12px;margin-top:5px}
+  .quote-card{padding:20px 24px 18px}
+  .quote-card h2{font-size:22px;margin-bottom:13px}
+  .steps{margin-bottom:13px}
+  .step .dot{width:30px;height:30px}
+  .field{margin-bottom:9px}
+  .flabel{margin-bottom:4px}
+  .inp{height:40px}
+  .opt{padding:8px 12px}
+  .btn-primary{height:46px}
+  .assure{margin-top:8px}
+}
+
 /* reduced motion */
 @media (prefers-reduced-motion:reduce){
   *{animation-duration:.001ms!important;transition-duration:.001ms!important}
@@ -558,6 +589,9 @@ body.ready .reveal{opacity:1;transform:none}
 
 .menu.menu-mega{display:grid;grid-template-columns:repeat(3,1fr);column-gap:4px;min-width:528px;max-height:64vh;overflow-y:auto}
 .menu.menu-mega .menu-all{grid-column:1 / -1;margin-top:6px;padding-top:12px;border-top:1px solid var(--line);color:var(--brand);font-weight:700}
+
+@media (max-width:460px){.footer-top{grid-template-columns:1fr;gap:28px}}/* resp-polish-footer */
+.footer-states{display:flex;flex-wrap:wrap;gap:9px 20px;align-items:center;padding:20px 0 2px;margin-top:6px;border-top:1px solid rgba(255,255,255,.10)}.footer-states .fs-label{color:#fff;font-weight:700;font-size:14px}.footer-states a{font-size:14px;color:#9aa6c6;transition:color .15s ease}.footer-states a:hover{color:#fff}/* footer-states */
 /* ===== Subpage / article / services styles ===== */
 .page-hero{background:linear-gradient(135deg,#0a2a9e 0%, var(--brand) 60%, #1f54e0 100%);color:#fff;padding:62px 0 56px}
 .crumbs{display:flex;flex-wrap:wrap;gap:9px;font-size:13.5px;font-weight:600;color:#bcd2f8;margin-bottom:16px}
@@ -597,17 +631,41 @@ body.ready .reveal{opacity:1;transform:none}
 @media (max-width:900px){.svc-grid{grid-template-columns:1fr 1fr}.related-grid{grid-template-columns:1fr 1fr}}
 @media (max-width:560px){.svc-grid{grid-template-columns:1fr}.related-grid{grid-template-columns:1fr}}
 
+.article table{width:100%;border-collapse:collapse;margin:16px 0 22px;font-size:15px}
+.article table td,.article table th{border:1px solid var(--line);padding:10px 14px;text-align:left;vertical-align:top}
+.article table tr:nth-child(even){background:#f7f9fd}
+.article table td:first-child{font-weight:600;color:#101a3d}
+.table-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:0 0 6px}
+.article h2{margin-top:30px}
+.local-section{background:#fff;padding:58px 0;border-top:1px solid var(--line)}
+.local-grid{display:grid;grid-template-columns:1fr 1fr;gap:42px;align-items:stretch}
+.local-eyebrow{font-family:var(--font-display);font-weight:800;letter-spacing:.14em;text-transform:uppercase;font-size:12.5px;color:var(--brand)}
+.local-info h2{font-family:var(--font-display);font-weight:800;font-size:clamp(1.5rem,2.4vw,2rem);color:#101a3d;margin:8px 0 10px}
+.local-lede{color:var(--ink-2);font-size:16px;line-height:1.6;margin:0 0 22px;max-width:480px}
+.local-actions{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:24px}
+.btn-call-lg{display:inline-flex;align-items:center;gap:9px;background:var(--brand);color:#fff;font-weight:700;font-size:16px;padding:13px 22px;border-radius:999px;box-shadow:0 10px 24px -12px rgba(11,52,192,.8);transition:background .15s ease,transform .15s ease}
+.btn-call-lg:hover{background:var(--brand-press);transform:translateY(-1px)}
+.btn-quote-lg{display:inline-flex;align-items:center;gap:8px;background:#fff;color:var(--brand-deep);font-weight:700;font-size:16px;padding:13px 22px;border-radius:999px;border:2px solid var(--brand);transition:background .15s ease}
+.btn-quote-lg:hover{background:var(--brand-tint)}
+.btn-call-lg svg,.btn-quote-lg svg{width:18px;height:18px}
+.local-contact{list-style:none;margin:0 0 20px;padding:0;display:grid;gap:12px}
+.local-contact li{display:flex;align-items:flex-start;gap:11px;color:var(--ink-2);font-size:15.5px;line-height:1.45}
+.local-contact li svg{width:19px;height:19px;color:var(--brand);flex:0 0 auto;margin-top:1px}
+.local-contact a{color:var(--ink-2)}.local-contact a:hover{color:var(--brand)}
+.local-social{display:flex;gap:12px}
+.local-social a{display:inline-flex;align-items:center;justify-content:center;width:42px;height:42px;border-radius:11px;background:var(--brand-tint);color:var(--brand-deep);transition:background .15s ease,color .15s ease}
+.local-social a:hover{background:var(--brand);color:#fff}
+.local-social svg{width:20px;height:20px}
+.local-map{border-radius:16px;overflow:hidden;box-shadow:0 18px 40px -24px rgba(13,26,80,.55);border:1px solid var(--line);min-height:420px;background:#eef2fe}
+.local-map iframe{width:100%;height:100%;min-height:420px;border:0;display:block}
+@media (max-width:860px){.local-grid{grid-template-columns:1fr;gap:26px}.local-map{min-height:300px}.local-map iframe{min-height:300px}}
 
-@media (max-width:460px){.footer-top{grid-template-columns:1fr;gap:28px}}/* resp-polish-footer */
-.footer-states{display:flex;flex-wrap:wrap;gap:9px 20px;align-items:center;padding:20px 0 2px;margin-top:6px;border-top:1px solid rgba(255,255,255,.10)}.footer-states .fs-label{color:#fff;font-weight:700;font-size:14px}.footer-states a{font-size:14px;color:#9aa6c6;transition:color .15s ease}.footer-states a:hover{color:#fff}/* footer-states */
 </style>
 <script type="application/ld+json">
-{
-  "@context":"https://schema.org","@graph":[
-  {"@type":"Article","headline":"Cross-Country Car Shipping","description":"Cross-country car shipping coast to coast. Learn how long-distance auto transport works, how long it takes, what it costs, popular routes, and how to choose a transporter.","author":{"@type":"Organization","name":"Ship Guy"},"publisher":{"@type":"Organization","name":"Ship Guy"}},
-  {"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"index.html"},{"@type":"ListItem","position":2,"name":"How It Works","item":"how-it-works.html"},{"@type":"ListItem","position":3,"name":"Cross Country Car Shipping","item":"cross-country-car-shipping.html"}]}
-  ]
-}
+{"@context":"https://schema.org","@graph":[
+{"@type":"Service","serviceType":"Auto Transport","name":"Montana Auto Transport","areaServed":{"@type":"State","name":"Montana"},"provider":{"@type":"Organization","name":"Ship Guy","telephone":"+1-866-280-3481"},"description":"Montana is one of the largest states in the country and one of the most challenging for vehicle shipping. Between mountain passes, long rural stretches, an…"},
+{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"index.html"},{"@type":"ListItem","position":2,"name":"Montana Auto Transport","item":"montana-auto-transport.html"}]}
+]}
 </script>
 </head>
 <body>
@@ -615,7 +673,7 @@ body.ready .reveal{opacity:1;transform:none}
 <!-- ===================== HEADER ===================== -->
 <header class="site-header" id="top">
   <div class="container header-inner">
-    <a class="brand" href="index.html#top" aria-label="Ship Guy — home"><svg class="sg-logo" role="img" aria-label="Ship Guy" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="209 227 180 145">
+    <a class="brand" href="index.html" aria-label="Ship Guy — home"><svg class="sg-logo" role="img" aria-label="Ship Guy" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="209 227 180 145">
 <path fill-rule="nonzero" fill="currentColor" fill-opacity="1" d="M 257.761719 304.929688 L 257.761719 247.621094 L 272.027344 245.128906 L 272.027344 265.167969 C 272.027344 265.933594 272.246094 266.5 272.679688 266.867188 C 273.109375 267.230469 273.703125 267.347656 274.460938 267.222656 L 279.570312 266.355469 C 281.136719 266.089844 281.921875 265.128906 281.921875 263.484375 L 281.921875 243.398438 L 296.191406 240.90625 L 296.191406 298.710938 L 281.921875 301.019531 L 281.921875 277.640625 L 272.027344 279.292969 L 272.027344 302.621094 Z M 257.761719 304.929688 "/>
 <path fill-rule="nonzero" fill="currentColor" fill-opacity="1" d="M 225.148438 310.390625 C 220.769531 311.101562 217.570312 310.632812 215.539062 308.984375 C 213.515625 307.339844 212.5 304.464844 212.5 300.359375 L 212.5 291.359375 L 226.769531 288.980469 L 226.769531 296.222656 C 226.769531 297.035156 226.984375 297.609375 227.417969 297.945312 C 227.851562 298.28125 228.472656 298.382812 229.28125 298.25 L 234.148438 297.449219 C 234.902344 297.328125 235.472656 297.054688 235.851562 296.640625 C 236.226562 296.222656 236.417969 295.636719 236.417969 294.875 L 236.417969 290.066406 C 236.417969 289.304688 236.324219 288.683594 236.136719 288.199219 C 235.945312 287.714844 235.632812 287.300781 235.203125 286.964844 C 234.769531 286.632812 234.175781 286.367188 233.417969 286.164062 L 221.257812 283.890625 C 219.472656 283.378906 217.957031 282.695312 216.71875 281.851562 C 215.472656 281.007812 214.539062 279.855469 213.917969 278.390625 C 213.296875 276.929688 212.988281 275.089844 212.988281 272.871094 L 212.988281 263.140625 C 212.988281 260.222656 213.636719 257.960938 214.933594 256.355469 C 216.230469 254.753906 218.390625 253.683594 221.417969 253.152344 L 237.957031 250.261719 C 242.28125 249.503906 245.457031 249.929688 247.484375 251.539062 C 249.511719 253.148438 250.523438 256.050781 250.523438 260.25 L 250.523438 265.890625 L 236.257812 268.328125 L 236.257812 264.5 C 236.257812 263.683594 236.039062 263.109375 235.605469 262.777344 C 235.175781 262.441406 234.578125 262.34375 233.824219 262.472656 L 229.527344 263.210938 C 228.714844 263.351562 228.132812 263.628906 227.785156 264.039062 C 227.433594 264.453125 227.257812 265.011719 227.257812 265.71875 L 227.257812 268.078125 C 227.257812 269.109375 227.511719 269.917969 228.027344 270.507812 C 228.539062 271.097656 229.3125 271.550781 230.335938 271.863281 L 241.929688 273.972656 C 243.984375 274.492188 245.660156 275.214844 246.957031 276.140625 C 248.253906 277.070312 249.199219 278.285156 249.796875 279.792969 C 250.390625 281.300781 250.6875 283.144531 250.6875 285.328125 L 250.6875 297.671875 C 250.6875 300.671875 250.023438 302.960938 248.699219 304.539062 C 247.375 306.117188 245.199219 307.148438 242.175781 307.636719 Z M 225.148438 310.390625 "/>
 <path fill-rule="nonzero" fill="currentColor" fill-opacity="1" d="M 305.007812 297.726562 L 305.007812 239.84375 L 319.277344 237.351562 L 319.277344 295.414062 Z M 305.007812 297.726562 "/>
@@ -628,7 +686,7 @@ body.ready .reveal{opacity:1;transform:none}
 </svg></a>
 
     <nav class="main-nav" aria-label="Primary">
-      <a href="index.html#top">Home</a>
+      <a href="index.html">Home</a>
       <a href="index.html#how">How It Works</a>
       <div class="has-menu">
         <button class="nav-toggle-btn" aria-haspopup="true" aria-expanded="false">Services
@@ -685,9 +743,9 @@ body.ready .reveal{opacity:1;transform:none}
           <a href="index.html#locations" role="menuitem" class="menu-all">All locations →</a>
         </div>
       </div>
-      <a href="index.html#reviews">Reviews</a>
-      <a href="index.html#faq">FAQ</a>
-      <a href="index.html#contact">Contact</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contact">Contact</a>
     </nav>
 
     <a class="btn-call" href="tel:+18662803481">
@@ -704,7 +762,7 @@ body.ready .reveal{opacity:1;transform:none}
   <!-- mobile nav -->
   <nav class="mobile-nav" id="mobileNav" aria-label="Mobile">
     <div class="inner">
-      <a href="index.html#top">Home</a>
+      <a href="index.html">Home</a>
       <a href="index.html#how">How It Works</a>
       <span class="m-sub">Services</span>
                   <a href="open-car-transport.html">Open Car Transport</a>
@@ -749,87 +807,594 @@ body.ready .reveal{opacity:1;transform:none}
       <a href="new-hampshire-auto-transport.html">New Hampshire</a>
       <a href="new-jersey-auto-transport.html">New Jersey</a>
       <span class="m-sub">More</span>
-      <a href="index.html#reviews">Reviews</a>
-      <a href="index.html#faq">FAQ</a>
-      <a href="index.html#contact">Contact</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contact">Contact</a>
     </div>
   </nav>
 </header>
 
-<!-- ===================== PAGE HERO ===================== -->
-<section class="page-hero"><div class="container">
-  <nav class="crumbs" aria-label="Breadcrumb"><a href="index.html">Home</a><span>/</span><a href="how-it-works.html">How It Works</a><span>/</span><span aria-current="page">Cross Country Car Shipping</span></nav>
-  <h1>Cross-Country Car Shipping</h1>
-  <p class="page-hero-sub">How coast-to-coast auto transport works — transit times, costs, routes, and what to expect.</p>
-</div></section>
+<!-- ===================== HERO ===================== -->
+<section class="hero">
+  <div class="hero-media" aria-hidden="true">
+    <img class="hero-img" alt="" src="assets/hero.jpg">
+    <div class="hero-overlay"></div>
+  </div>
 
-<section class="article-section"><div class="container article">
-<p class="article-lead">Moving across the country and need your car there too? Cross-country car shipping lets you skip the long drive and have your vehicle delivered coast to coast. This guide covers how it works, how long it takes, what it costs, and how to choose the right transporter.</p>
-
-<h2>What Is Cross-Country Car Shipping?</h2>
-<p>Cross-country car shipping is long-distance auto transport that moves your vehicle from one side of the country to the other — or across any long stretch of states — by professional carrier. Instead of putting thousands of miles on your odometer, you hand your vehicle to a licensed carrier who delivers it directly to your destination. It's the practical solution for cross-country relocations, job transfers, military moves, online car purchases, college students, and snowbirds heading between distant homes. Ship Guy moves vehicles coast to coast across all 50 states with door-to-door service.</p>
-
-<h2>How Cross-Country Auto Transport Works</h2>
-<p>Long-distance shipping follows the same three simple steps as any Ship Guy shipment. First, you get a free quote by entering your pickup location, delivery location, and vehicle details. Next, we match your vehicle with a vetted carrier running your route and schedule a <a href="door-to-door-car-shipping.html">door-to-door</a> pickup window around your dates. The driver inspects your vehicle, records its condition on the Bill of Lading, loads it, and transports it across the country while you track progress. At delivery, you inspect the vehicle against the pickup report, sign, and take your keys. Carriers run regular long-haul lanes between major regions, so coast-to-coast moves are routine for our network.</p>
-
-<h2>How Long Does Cross-Country Shipping Take?</h2>
-<p>Transit time depends mostly on the distance between pickup and delivery. As a general guide for long-distance auto transport in the continental U.S.:</p>
-<ul>
-  <li><strong>1,000–1,500 miles:</strong> roughly 3–5 days in transit</li>
-  <li><strong>1,500–2,000 miles:</strong> roughly 4–6 days</li>
-  <li><strong>2,000–2,500 miles:</strong> roughly 5–7 days</li>
-  <li><strong>Coast to coast (2,500+ miles):</strong> roughly 6–9 days</li>
-</ul>
-<p>Add a day or two on the front end for carrier assignment and pickup, depending on how flexible your dates are and how busy your route is. Major routes — such as California to the East Coast or the Northeast to the West — are typically assigned quickly because carriers run them often. If you're working against a firm deadline, ask about <a href="expedited-car-shipping.html">expedited car shipping</a> for a prioritized, faster pickup.</p>
-
-<h2>How Much Does Cross-Country Car Shipping Cost?</h2>
-<p>Long-distance shipments have a higher total cost than short moves simply because of the mileage — but they're also the most efficient on a per-mile basis. Your exact price depends on distance, your vehicle's size and condition, transport type (open or enclosed), your timing, and demand on the route. High-traffic coast-to-coast lanes are generally more affordable per mile than routes to or from remote areas. As with every Ship Guy shipment, your quote is all-in and transparent, with no hidden fees and no upfront deposit, and you pay only once your vehicle is dispatched. For a full breakdown of pricing factors, see our <a href="car-shipping-cost.html">car shipping costs guide</a>.</p>
-
-<h2>Should You Ship or Drive Across the Country?</h2>
-<p>Driving across the country sounds straightforward until you add up the real costs. A coast-to-coast drive means several days on the road, fuel, hotels, meals, and the risk of breakdowns or accidents far from home — plus thousands of miles of wear that reduce your vehicle's value. For many people, shipping ends up comparable in cost once those expenses are tallied, and far easier on your schedule and your car. You can fly to your new home on your own timeline and have your vehicle waiting when you arrive. For families with more than one vehicle, or anyone who can't spare several days for a drive, shipping is usually the smarter choice.</p>
-
-<h2>Open vs. Enclosed for Long-Distance Moves</h2>
-<p>Every cross-country shipment can travel by open or enclosed carrier. <a href="open-car-transport.html">Open transport</a> is the affordable, widely available standard and is well suited to everyday vehicles making the long trip — it's the same method used to ship new cars nationwide. <a href="enclosed-auto-transport.html">Enclosed transport</a> adds a fully covered trailer that shields your vehicle from weather and road debris over thousands of miles, making it the right choice for classic, luxury, exotic, or high-value vehicles crossing the country. Because long routes mean more time exposed to the elements, some owners who might choose open for a short hop opt for enclosed on a coast-to-coast move.</p>
-
-<h2>Popular Cross-Country Routes</h2>
-<p>We ship on long-distance lanes across the entire country, including some of the most-requested corridors:</p>
-<ul>
-  <li><strong>California to the East Coast</strong> — Los Angeles and San Francisco to New York, Florida, and beyond</li>
-  <li><strong>Northeast to the West Coast</strong> — New York and New England to California and the Pacific Northwest</li>
-  <li><strong>Florida to the West and Midwest</strong> — and the reverse during snowbird season</li>
-  <li><strong>Texas to both coasts</strong> — a central hub with frequent long-haul service</li>
-</ul>
-<p>Even if your specific cities aren't on a major lane, our nationwide network reaches all 50 states, so we can arrange long-distance transport between virtually any two points. Browse <a href="index.html#locations">popular routes and service areas</a> for more.</p>
-
-<h2>How to Prepare for a Cross-Country Shipment</h2>
-<p>Long-distance moves reward a little planning. Book early when possible, especially during peak relocation and snowbird seasons, to secure the best rates and dates. Wash your vehicle and take dated photos to document its condition before pickup. Remove personal belongings and toll transponders, leave about a quarter tank of fuel, disable alarms, and provide one working set of keys. Confirm your pickup and delivery addresses and contact details, and make sure an authorized adult is available at both ends — or arrange a nearby meeting point if either street is hard for a large transporter to reach. For a complete checklist, see our <a href="car-shipping-preparation.html">car prep guide</a>.</p>
-
-<h2>Choosing a Cross-Country Auto Transport Company</h2>
-<p>A long-distance move puts your vehicle in someone else's hands for several days, so the company you choose matters. Look for a licensed, bonded, and FMCSA-registered broker that works only with vetted, insured carriers. Favor transparent, all-in pricing with no upfront deposit over a suspiciously low quote that can stall your shipment. And value clear communication — you want real-time tracking and support you can reach if anything comes up along the route. Ship Guy checks every one of those boxes.</p>
-
-<h2>What Affects Cross-Country Transit Time?</h2>
-<p>Mileage sets the baseline, but several things influence exactly how long a coast-to-coast shipment takes. Weather and road conditions can slow a route, especially crossing mountain passes or during winter storms. The driver's schedule and federally regulated hours-of-service limits mean carriers can only drive so many hours per day, so very long hauls naturally span several days. The number of other vehicles on the load and their drop-off sequence can add or save time depending on where your delivery falls in the route. And the season matters: during peak periods, both pickup scheduling and road traffic are busier. We give you an estimated delivery window based on your specific route and keep you updated if anything shifts along the way.</p>
-
-<h2>Tracking Your Vehicle Across the Country</h2>
-<p>One of the biggest worries with a long-distance move is not knowing where your vehicle is. With Ship Guy, you're never in the dark. You can check the status of your shipment, and our U.S.-based support team is available 24/7 by phone to answer questions at any point in the journey. We stay in contact with the driver throughout the route, so if your plans change or you simply want an update, help is a quick call away. For a multi-day, cross-country shipment, that visibility and access make the whole experience far less stressful.</p>
-
-<h2>Door-to-Door Delivery for Long-Distance Moves</h2>
-<p>Ship Guy ships cross-country <a href="door-to-door-car-shipping.html">door-to-door</a>, meaning the carrier picks up your vehicle at your origin address and delivers it as close as possible to your destination — no driving to a distant terminal on either end. For a long-distance move, that convenience is significant: you've likely got a hundred other things to coordinate, and door-to-door keeps your vehicle off your to-do list. If a full-size transporter can't safely reach a tight street, the driver will arrange a nearby meeting point with room to unload.</p>
-
-<h2>Ship Coast to Coast with Ship Guy</h2>
-<p>Ship Guy is a licensed, bonded, FMCSA-registered auto transport broker that ships vehicles cross-country across all 50 states. With nationwide carrier coverage, transparent all-in pricing, no upfront deposit, real-time tracking, and 24/7 U.S.-based support, your long-distance move is in reliable hands from quote to delivery.</p>
-<p>Ready to ship across the country? <a href="index.html#top">Get your free quote</a> in about 60 seconds, or call <a href="tel:+18662803481">(866) 280-3481</a> to plan your route. You can also review <a href="car-shipping-cost.html">car shipping costs</a>, read our <a href="car-shipping-preparation.html">car prep guide</a>, or learn <a href="how-it-works.html">how the process works</a>.</p>
-
-</div></section>
-
-<section class="related-section"><div class="container">
-      <h2>More Car Shipping Guides</h2>
-      <div class="related-grid">
-        <a class="related-card" href="how-it-works.html">How It Works <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-        <a class="related-card" href="car-shipping-cost.html">Car Shipping Costs <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-        <a class="related-card" href="car-shipping-preparation.html">Car Prep Guide <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+  <div class="container hero-grid">
+    <div class="hero-copy">
+      <div class="hero-head">
+      <p class="eyebrow reveal">Licensed&nbsp;•&nbsp;Insured&nbsp;•&nbsp;Nationwide</p>
+      <h1 class="reveal d2">Montana Auto Transport</h1>
       </div>
+      <div class="hero-rest">
+      <p class="lede reveal d2">Licensed, insured car shipping to and from Montana — transparent pricing, vetted carriers, and door-to-door delivery.</p>
+
+      <ul class="trust-list reveal d3">
+        <li>
+          <span class="trust-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/><path d="m9 12 2 2 4-4"/></svg></span>
+          Licensed Broker &amp; Fully Insured
+        </li>
+        <li>
+          <span class="trust-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="2" width="8" height="4" rx="1"/><path d="M9 4H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2h-3"/><path d="m9 14 2 2 4-4"/></svg></span>
+          FMCSA Registered
+        </li>
+        <li>
+          <span class="trust-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></span>
+          Vetted Carrier Network
+        </li>
+        <li>
+          <span class="trust-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M4 13a8 8 0 0 1 16 0"/><rect x="2" y="13" width="4.4" height="7" rx="1.6"/><rect x="17.6" y="13" width="4.4" height="7" rx="1.6"/><path d="M20 19.5v.5a3 3 0 0 1-3 3h-3"/></svg></span>
+          Real-Time Tracking &amp; 24/7 Support
+        </li>
+      </ul>
+
+      <div class="hero-divider reveal d3"></div>
+
+      <div class="stats reveal d3">
+        <div class="stat"><span class="num">50+</span><span class="lbl">States Served</span></div>
+        <div class="stat"><span class="num">100%</span><span class="lbl">Insured Transport</span></div>
+        <div class="stat"><span class="num">24/7</span><span class="lbl">Support &amp; Tracking</span></div>
+      </div>
+      </div>
+    </div>
+
+    <!-- QUOTE CARD -->
+    <div class="quote-card reveal d2">
+      <h2>Get Your Instant Quote</h2>
+
+      <div class="steps" id="steps">
+        <div class="step is-active" data-step="1">
+          <span class="dot"><span class="num">1</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>
+          <span class="slabel">Destination</span>
+        </div>
+        <div class="track" data-track="1"></div>
+        <div class="step" data-step="2">
+          <span class="dot"><span class="num">2</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>
+          <span class="slabel">Vehicle</span>
+        </div>
+        <div class="track" data-track="2"></div>
+        <div class="step" data-step="3">
+          <span class="dot"><span class="num">3</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>
+          <span class="slabel">Contact</span>
+        </div>
+      </div>
+
+      <form id="quoteForm" novalidate>
+        <!-- STEP 1 -->
+        <div class="qstep is-current" data-panel="1">
+          <div class="field">
+            <label class="flabel" for="pickup">Pickup Location</label>
+            <div class="input-wrap">
+              <span class="lead"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg></span>
+              <input class="inp" id="pickup" name="pickup" type="text" placeholder="Enter city or zip code" autocomplete="address-level2" required>
+            </div>
+            <span class="err-msg">Please enter a pickup location.</span>
+          </div>
+
+          <div class="field">
+            <label class="flabel" for="delivery">Delivery Location</label>
+            <div class="input-wrap">
+              <span class="lead"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg></span>
+              <input class="inp" id="delivery" name="delivery" type="text" placeholder="Enter city or zip code" autocomplete="address-level2" required>
+            </div>
+            <span class="err-msg">Please enter a delivery location.</span>
+          </div>
+
+          <div class="field">
+            <label class="flabel" for="date">Pickup Date</label>
+            <div class="input-wrap">
+              <span class="lead"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg></span>
+              <input class="inp" id="date" name="date" type="text" placeholder="Select pickup date" onfocus="this.type='date'" onblur="if(!this.value)this.type='text'">
+            </div>
+          </div>
+
+          <div class="field">
+            <label class="flabel">Trailer Type</label>
+            <div class="opt-grid" data-radio-group>
+              <label class="opt is-selected">
+                <span class="opt-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M10 17V6a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1v10"/><path d="M10 8h7l4 4v4h-2"/><path d="M6 17h2M12 17h2"/><circle cx="6" cy="18" r="2"/><circle cx="17" cy="18" r="2"/></svg></span>
+                <span class="opt-text"><strong>Open Trailer</strong><small>Most common</small></span>
+                <input type="radio" name="trailer" value="open" checked>
+                <span class="radio"></span>
+              </label>
+              <label class="opt">
+                <span class="opt-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="6" width="14" height="11" rx="1.5"/><path d="M16 9h3l3 4v4h-2"/><path d="M6 17h2"/><circle cx="6" cy="18" r="2"/><circle cx="18" cy="18" r="2"/></svg></span>
+                <span class="opt-text"><strong>Enclosed Trailer</strong><small>Extra protection</small></span>
+                <input type="radio" name="trailer" value="enclosed">
+                <span class="radio"></span>
+              </label>
+            </div>
+          </div>
+
+          <button type="button" class="btn-primary" data-next>
+            Next: Vehicle Details
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </button>
+        </div>
+
+        <!-- STEP 2 -->
+        <div class="qstep" data-panel="2">
+          <div class="row-2">
+            <div class="field">
+              <label class="flabel" for="year">Year</label>
+              <div class="input-wrap">
+                <span class="lead"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg></span>
+                <span class="chev-r"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></span>
+                <select class="inp" id="year" name="year"><option value="">Year</option></select>
+              </div>
+            </div>
+            <div class="field">
+              <label class="flabel" for="make">Make</label>
+              <div class="input-wrap">
+                <span class="lead"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12l1.6-4.6A2 2 0 0 1 6.5 6h11a2 2 0 0 1 1.9 1.4L21 12"/><path d="M3 12h18v5a1 1 0 0 1-1 1h-1.2a1 1 0 0 1-1-1v-1H6.2v1a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-5Z"/><circle cx="7.5" cy="14.5" r="1"/><circle cx="16.5" cy="14.5" r="1"/></svg></span>
+                <input class="inp" id="make" name="make" type="text" placeholder="e.g. Toyota">
+              </div>
+            </div>
+          </div>
+
+          <div class="field">
+            <label class="flabel" for="model">Model</label>
+            <div class="input-wrap">
+              <span class="lead"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12l1.6-4.6A2 2 0 0 1 6.5 6h11a2 2 0 0 1 1.9 1.4L21 12"/><path d="M3 12h18v5a1 1 0 0 1-1 1h-1.2a1 1 0 0 1-1-1v-1H6.2v1a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-5Z"/><circle cx="7.5" cy="14.5" r="1"/><circle cx="16.5" cy="14.5" r="1"/></svg></span>
+              <input class="inp" id="model" name="model" type="text" placeholder="e.g. Camry">
+            </div>
+          </div>
+
+          <div class="field">
+            <label class="flabel">Is the vehicle running?</label>
+            <div class="opt-grid" data-radio-group>
+              <label class="opt is-selected">
+                <span class="opt-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5 10 8l4 3 5-4.5"/><path d="M9 16h6"/><circle cx="12" cy="12" r="9"/></svg></span>
+                <span class="opt-text"><strong>Runs &amp; drives</strong><small>Operable</small></span>
+                <input type="radio" name="running" value="yes" checked>
+                <span class="radio"></span>
+              </label>
+              <label class="opt">
+                <span class="opt-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 8v5M12 16h.01"/><circle cx="12" cy="12" r="9"/></svg></span>
+                <span class="opt-text"><strong>Not running</strong><small>Inoperable</small></span>
+                <input type="radio" name="running" value="no">
+                <span class="radio"></span>
+              </label>
+            </div>
+          </div>
+
+          <div class="btn-row">
+            <button type="button" class="btn-ghost" data-back>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 18l-6-6 6-6"/></svg>
+              Back
+            </button>
+            <button type="button" class="btn-primary" data-next>
+              Next: Your Details
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- STEP 3 -->
+        <div class="qstep" data-panel="3">
+          <div class="field">
+            <label class="flabel" for="name">Full Name</label>
+            <div class="input-wrap">
+              <span class="lead"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21v-1a6 6 0 0 1 6-6h4a6 6 0 0 1 6 6v1"/></svg></span>
+              <input class="inp" id="name" name="name" type="text" placeholder="Your name" autocomplete="name" required>
+            </div>
+            <span class="err-msg">Please enter your name.</span>
+          </div>
+          <div class="field">
+            <label class="flabel" for="email">Email</label>
+            <div class="input-wrap">
+              <span class="lead"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></span>
+              <input class="inp" id="email" name="email" type="email" placeholder="you@email.com" autocomplete="email" required>
+            </div>
+            <span class="err-msg">Please enter a valid email.</span>
+          </div>
+          <div class="field">
+            <label class="flabel" for="phone">Phone</label>
+            <div class="input-wrap">
+              <span class="lead"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/></svg></span>
+              <input class="inp" id="phone" name="phone" type="tel" placeholder="(555) 555-5555" autocomplete="tel" required>
+            </div>
+            <span class="err-msg">Please enter a phone number.</span>
+          </div>
+
+          <div class="btn-row">
+            <button type="button" class="btn-ghost" data-back>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 18l-6-6 6-6"/></svg>
+              Back
+            </button>
+            <button type="submit" class="btn-primary">Get My Quote</button>
+          </div>
+
+          <p class="assure">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="11" width="16" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg>
+            No spam — just your quote. Takes about 60 seconds.
+          </p>
+        </div>
+      </form>
+
+      <!-- success -->
+      <div class="quote-success" id="quoteSuccess" aria-live="polite">
+        <div class="success-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></div>
+        <h3>Your quote request is in!</h3>
+        <p>Thanks — a Ship Guy specialist will reach out shortly with your transparent, all-in price.</p>
+        <a class="btn-call" href="tel:+18662803481">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/></svg>
+          Or call us now: (866) 280-3481
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== REVIEWS ===================== -->
+<section class="reviews" id="reviews">
+  <div class="container">
+    <div class="reviews-head">
+      <div>
+        <h2>Verified customer reviews</h2>
+        <p>Trusted by vehicle owners nationwide.</p>
+      </div>
+      <div class="rating">
+        <span class="score">4.9</span>
+        <span class="stars" aria-label="4.9 out of 5 stars">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.06 6.6.79-4.86 4.53 1.27 6.52L12 17.9l-5.9 3.5 1.27-6.52L2.5 9.35l6.6-.79L12 2.5Z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.06 6.6.79-4.86 4.53 1.27 6.52L12 17.9l-5.9 3.5 1.27-6.52L2.5 9.35l6.6-.79L12 2.5Z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.06 6.6.79-4.86 4.53 1.27 6.52L12 17.9l-5.9 3.5 1.27-6.52L2.5 9.35l6.6-.79L12 2.5Z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.06 6.6.79-4.86 4.53 1.27 6.52L12 17.9l-5.9 3.5 1.27-6.52L2.5 9.35l6.6-.79L12 2.5Z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.06 6.6.79-4.86 4.53 1.27 6.52L12 17.9l-5.9 3.5 1.27-6.52L2.5 9.35l6.6-.79L12 2.5Z"/></svg>
+        </span>
+        <span class="count">487+ reviews</span>
+        <span class="divider-v"></span>
+        <span class="gword"><span class="b">G</span><span class="r">o</span><span class="y">o</span><span class="b">g</span><span class="g">l</span><span class="r">e</span></span>
+      </div>
+    </div>
+
+    <div class="review-grid">
+      <article class="review">
+        <div class="review-top">
+          <span class="avatar">JD</span>
+          <div><span class="name">James D.</span><span class="date">May 12, 2024</span></div>
+        </div>
+        <div class="stars" aria-label="5 out of 5">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.06 6.6.79-4.86 4.53 1.27 6.52L12 17.9l-5.9 3.5 1.27-6.52L2.5 9.35l6.6-.79L12 2.5Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.06 6.6.79-4.86 4.53 1.27 6.52L12 17.9l-5.9 3.5 1.27-6.52L2.5 9.35l6.6-.79L12 2.5Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.06 6.6.79-4.86 4.53 1.27 6.52L12 17.9l-5.9 3.5 1.27-6.52L2.5 9.35l6.6-.79L12 2.5Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.06 6.6.79-4.86 4.53 1.27 6.52L12 17.9l-5.9 3.5 1.27-6.52L2.5 9.35l6.6-.79L12 2.5Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.06 6.6.79-4.86 4.53 1.27 6.52L12 17.9l-5.9 3.5 1.27-6.52L2.5 9.35l6.6-.79L12 2.5Z"/></svg>
+        </div>
+        <p>Ship Guy made the whole process easy. Great communication and my car arrived earlier than expected. Highly recommend!</p>
+      </article>
+
+      <article class="review">
+        <div class="review-top">
+          <span class="avatar">SR</span>
+          <div><span class="name">Sarah R.</span><span class="date">April 28, 2024</span></div>
+        </div>
+        <div class="stars" aria-label="5 out of 5">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.06 6.6.79-4.86 4.53 1.27 6.52L12 17.9l-5.9 3.5 1.27-6.52L2.5 9.35l6.6-.79L12 2.5Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.06 6.6.79-4.86 4.53 1.27 6.52L12 17.9l-5.9 3.5 1.27-6.52L2.5 9.35l6.6-.79L12 2.5Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.06 6.6.79-4.86 4.53 1.27 6.52L12 17.9l-5.9 3.5 1.27-6.52L2.5 9.35l6.6-.79L12 2.5Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.06 6.6.79-4.86 4.53 1.27 6.52L12 17.9l-5.9 3.5 1.27-6.52L2.5 9.35l6.6-.79L12 2.5Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.06 6.6.79-4.86 4.53 1.27 6.52L12 17.9l-5.9 3.5 1.27-6.52L2.5 9.35l6.6-.79L12 2.5Z"/></svg>
+        </div>
+        <p>Excellent service from start to finish. The driver was professional and my vehicle arrived in perfect condition.</p>
+      </article>
+
+      <article class="review">
+        <div class="review-top">
+          <span class="avatar">MT</span>
+          <div><span class="name">Michael T.</span><span class="date">April 15, 2024</span></div>
+        </div>
+        <div class="stars" aria-label="5 out of 5">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.06 6.6.79-4.86 4.53 1.27 6.52L12 17.9l-5.9 3.5 1.27-6.52L2.5 9.35l6.6-.79L12 2.5Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.06 6.6.79-4.86 4.53 1.27 6.52L12 17.9l-5.9 3.5 1.27-6.52L2.5 9.35l6.6-.79L12 2.5Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.06 6.6.79-4.86 4.53 1.27 6.52L12 17.9l-5.9 3.5 1.27-6.52L2.5 9.35l6.6-.79L12 2.5Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.06 6.6.79-4.86 4.53 1.27 6.52L12 17.9l-5.9 3.5 1.27-6.52L2.5 9.35l6.6-.79L12 2.5Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.06 6.6.79-4.86 4.53 1.27 6.52L12 17.9l-5.9 3.5 1.27-6.52L2.5 9.35l6.6-.79L12 2.5Z"/></svg>
+        </div>
+        <p>Fast quote, fair price, and they kept me updated throughout the entire delivery. Will definitely use again.</p>
+      </article>
+
+      <article class="review">
+        <div class="review-top">
+          <span class="avatar">KB</span>
+          <div><span class="name">Kelsey B.</span><span class="date">March 30, 2024</span></div>
+        </div>
+        <div class="stars" aria-label="5 out of 5">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.06 6.6.79-4.86 4.53 1.27 6.52L12 17.9l-5.9 3.5 1.27-6.52L2.5 9.35l6.6-.79L12 2.5Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.06 6.6.79-4.86 4.53 1.27 6.52L12 17.9l-5.9 3.5 1.27-6.52L2.5 9.35l6.6-.79L12 2.5Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.06 6.6.79-4.86 4.53 1.27 6.52L12 17.9l-5.9 3.5 1.27-6.52L2.5 9.35l6.6-.79L12 2.5Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.06 6.6.79-4.86 4.53 1.27 6.52L12 17.9l-5.9 3.5 1.27-6.52L2.5 9.35l6.6-.79L12 2.5Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.06 6.6.79-4.86 4.53 1.27 6.52L12 17.9l-5.9 3.5 1.27-6.52L2.5 9.35l6.6-.79L12 2.5Z"/></svg>
+        </div>
+        <p>Shipped my SUV cross-country with no issues. The team was responsive and the experience was smooth.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+
+<!-- ===================== STATE CONTENT ===================== -->
+<section class="article-section"><div class="container article">
+  <nav class="crumbs" aria-label="Breadcrumb"><a href="index.html">Home</a><span>/</span><span aria-current="page">Montana Auto Transport</span></nav>
+  <p>Montana is one of the largest states in the country and one of the most challenging for vehicle shipping. Between mountain passes, long rural stretches, and unpredictable weather, getting a car to or from Big Sky Country takes planning. This guide breaks down everything you need to know about working with Ship Guy for Montana auto transport.</p>
+  <h2>Montana Auto Transport Overview</h2>
+  <p>Montana spans over 147,000 square miles but has fewer than one million residents. That combination of vast terrain and sparse population creates real logistical hurdles for anyone trying to ship a car across, into, or out of the state. Winter on I-90 through the Rocky Mountains near Bozeman and Missoula can shut down passes. Remote towns like West Yellowstone or communities on Glacier&#x27;s eastern edge sit far from any major corridor. And transport can take 3 to 4 weeks to schedule due to rural logistics in Montana, particularly for pickups in isolated areas.</p>
+  <p>Ship Guy specializes in Montana auto transport services, coordinating with vetted car shipping companies and licensed carriers who are familiar with the state&#x27;s terrain. The focus is on reliable auto transport that accounts for Montana&#x27;s unique geography, weather patterns, and the reality that not every address sits conveniently along a highway.</p>
+  <p>Here is why people commonly use auto transport services in Montana for relocating vehicles:</p>
+  <ul>
+    <li>Domestic relocations to or from cities like Billings, Bozeman, and Missoula</li>
+    <li>Students heading to university in towns with limited public transit.</li>
+    <li>Military orders, particularly to Malmstrom Air Force Base in Great Falls</li>
+    <li>Snowbirds ship seasonally between Montana and warmer states like Arizona or Florida</li>
+    <li>Second-home owners moving vehicles to properties near Big Sky, Flathead Lake, or Yellowstone.</li>
+    <li>Auto dealerships sourcing or delivering inventory across state lines</li>
+  </ul>
+  <p>Montana residents and out-of-state vehicle owners also benefit from the state&#x27;s lack of sales tax, which simplifies the financial side of purchasing and registering a vehicle here. That said, vehicle registration must be completed within 60 days of establishing residency.</p>
+  <h2>Montana&#x27;s Geography, Seasons, and Carrier Availability</h2>
+  <p>Montana&#x27;s landscape is split between the Great Plains in the east and the Rocky Mountains running through the western half. This geography directly affects the convenience and cost of vehicle transport services. Long distances between towns, winding mountain roads, and harsh Montana winters all shape how carriers plan routes and what customers should expect.</p>
+  <p>Carrier availability is strongest along three major highways:</p>
+  <ul>
+    <li>I-90 runs east-west from Billings through Bozeman and into Missoula before continuing toward the Pacific Northwest. This is Montana&#x27;s most heavily trafficked interstate and a major car shipping route for car carriers moving between the Midwest and the West Coast.</li>
+    <li>I-94 extends from Billings northeast through Miles City and toward the North Dakota border. I-94 is a heavily traveled corridor for car carriers connecting Montana&#x27;s eastern plains to Midwest hubs.</li>
+    <li>I-15 runs north-south, connecting Butte and Helena to Great Falls and onward to the Canadian border. I-15 connects Helena to the I-90 junction, making it a key shipping route into central and northern Montana.</li>
+  </ul>
+  <p>Locations 50 miles from I-90 and I-94 are challenging for shipping. Pickups and deliveries in far-north towns like Havre, Shelby, or Glasgow, and in southern points like Dillon or West Yellowstone, often take longer and cost more due to deadhead mileage and fewer available carriers. Montana&#x27;s rural areas can significantly complicate vehicle pickup and delivery logistics.</p>
+  <p>Montana&#x27;s weather plays a direct role in transit times:</p>
+  <ul>
+    <li>Seasonal weather can delay vehicle transport in Montana, especially from November through March.</li>
+    <li>Winter snow, ice, and avalanche risk on mountain passes can add one to two full days to transit windows.</li>
+    <li>Weather conditions during this period may also push shipping costs up by roughly 15–25% on certain corridors.</li>
+    <li>Exposure to road salt and gravel during Montana winters increases the risk of cosmetic damage, making enclosed options worth considering.</li>
+  </ul>
+  <h2>How Montana Auto Transport Works with Ship Guy</h2>
+  <p>Ship Guy manages the whole process of Montana car shipping work from the initial quote through final delivery, handling coordination with carriers, paperwork, and communication so the customer doesn&#x27;t have to chase details.</p>
+  <p>Here&#x27;s how the typical car transport process plays out:</p>
+  <ul>
+    <li>You submit a quote request with pickup and delivery locations, vehicle details (make, model, size), preferred transport type (open or enclosed), and your target shipping date.</li>
+    <li>Ship Guy books a transport slot and sometimes suggests a nearby staging point if direct driveway access isn&#x27;t feasible for a large trailer.</li>
+    <li>A carrier is dispatched from Ship Guy&#x27;s extensive network of licensed, insured professional drivers. You receive a pickup window and the driver&#x27;s direct contact information.</li>
+    <li>At vehicle pickup, the carrier documents the car&#x27;s condition with a detailed inspection. This protects you and ensures accountability.</li>
+    <li>Transit begins. For most Montana shipments-Billings to Denver, Bozeman to Seattle, Missoula to Chicago-expect about 3 to 7 days once the vehicle is loaded</li>
+    <li>At delivery, a second inspection confirms the vehicle arrived in the same condition. Final paperwork is signed.</li>
+  </ul>
+  <p>Carriers must carry cargo insurance during transport; it protects vehicles during loading, transit, and unloading. Some providers in the industry, such as Montway, offer contingent cargo insurance up to $250,000. Ship Guy helps you understand insurance options and insurance coverage so you know exactly what&#x27;s protected throughout the auto shipment.</p>
+  <p>Transportation options may include door-to-door or terminal-to-terminal delivery, depending on road access and your preference. Ship Guy&#x27;s customer service team walks you through which option makes sense for your specific pickup and delivery locations.</p>
+  <h2>Understanding Montana Car Shipping Cost</h2>
+  <p>Car shipping costs to or from Montana depend on several factors that influence auto transport costs, including distance, route popularity, season, carrier type, vehicle type, and vehicle size. Montana&#x27;s geography affects both convenience and price, especially when shipping to or from locations off the main interstates.</p>
+  <p>Here are concrete cost ranges to set expectations:</p>
+  <ul>
+    <li>Billings, MT to Seattle, WA: approximately $1,000–$1,200 for open transport on a well-traveled route</li>
+    <li>Shipping a car from Montana to Texas (e.g., Great Falls to Dallas): $1,682–$1,793, reflecting the longer distance and moderate carrier density.</li>
+    <li>Bozeman to Los Angeles: roughly $1,100–$1,540 for open carrier, depending on season and exact pickup location</li>
+    <li>Shipping a car over 1,500 miles typically costs $1,500 or more, with cross-country moves to states like South Carolina or Rhode Island pushing into the $1,600–$2,000+ range.</li>
+    <li>The average shipping cost to or from Montana is about $450 for distances under 500 miles, covering regional moves like Billings to a South Dakota border town.</li>
+    <li>Distances between 501 and 800 miles generally run 3 to 4 days in transit and fall into a mid-range pricing tier.</li>
+  </ul>
+  <p>Open carriers are generally cheaper than enclosed carriers and offer lower costs for most vehicle owners. Larger vehicles, such as full-size pickups or SUVs, cost more than smaller sedans because they take up more space on the trailer.</p>
+  <p>Off-corridor pickup or delivery points-places like Big Sky, Whitefish, or Livingston-can add $100–$300 to shipping costs compared with meeting a carrier along I-90 in Bozeman or Missoula. Shipping costs also rise during high-demand months like June to September, when summer moves, tourism traffic, and snowbird transitions drive higher prices across most Montana shipping corridors.</p>
+  <p>For an accurate estimate, provide complete details of your specific shipping needs when requesting a quote. Small details like vehicle modifications, non-running condition, or tight timelines can move the price.</p>
+  <h2>Best Routes and Popular Montana Origin &amp; Destination Pairs</h2>
+  <p>Ship Guy frequently ships vehicles on high-demand auto transport routes connecting Montana to major metro areas across the country. The most popular car shipment pairs reflect where people actually move and where car carriers run most often.</p>
+  <ul>
+    <li>Montana to Florida (e.g., Billings to Orlando): shipping from Montana to Florida takes 3 to 7 days, driven heavily by snowbird migration each fall and spring</li>
+    <li>Montana to California (Bozeman to Los Angeles, Missoula to San Francisco): strong carrier density heading west, competitive rates due to volume</li>
+    <li>Montana to Colorado (Billings to Denver): one of the most popular pairs, with frequent carriers running I-90 south through Wyoming</li>
+    <li>Montana Washington routes (Billings or Missoula to Seattle or Portland): shipping from Montana to Washington typically takes 1 to 2 days, one of the fastest corridors available</li>
+    <li>Montana to Texas (Great Falls to Dallas or Houston): shipping from Montana to Texas takes 6 to 9 days, depending on the exact origin and destination</li>
+    <li>Montana to Midwest hubs (Helena to Minneapolis, Great Falls to Chicago): moderate carrier availability, reasonable pricing</li>
+    <li>Long-haul routes to East Coast states like South Carolina, Rhode Island, or Florida: these cross-country moves often exceed 2,000 miles and take 7–12 days</li>
+  </ul>
+  <p>Routes connecting Billings, Bozeman, and Missoula to hubs like Denver, Seattle, and Portland generally have stronger carrier availability and more competitive rates because carriers already run those corridors regularly.</p>
+  <p>For shipping distances under 100 miles, transit takes about 0.5 to 1 day once loaded. Intra-state moves, such as Billings to Kalispell or Bozeman to Great Falls, are handled by regional carriers and typically take 1 to 2 days. These shorter hauls benefit from reduced deadhead and faster scheduling at different locations across the state.</p>
+  <p>When you need to ship a car to Montana from a distant state, planning around seasonal demand windows and corridor availability makes a measurable difference in both timing and cost.</p>
+  <h2>Open vs. Enclosed Transport for Montana Auto</h2>
+  <p>Most Montana auto shipments travel on open carriers. Open auto transport is the most common method used and works well for the vast majority of vehicles on the road, including daily drivers, trucks, SUVs, and any new vehicle heading to a dealership lot.</p>
+  <ul>
+    <li>Open transport is more cost-effective than enclosed transport and is the standard choice for budget-minded customers. Most vehicles can be shipped via open-air carriers, which run frequently along I-90, I-94, and I-15. If you&#x27;re shipping a standard sedan, crossover, or pickup, open transport is almost always the right call.</li>
+    <li>Open transport does expose vehicles to the elements-road debris, dust, and weather-but for typical cars, the risk of meaningful damage is low.</li>
+  </ul>
+  <p>Enclosed car shipping is the recommended option for classic cars, classic vehicles, luxury vehicles, and restored 4x4s heading to places like Bozeman, Big Sky, or Whitefish. Enclosed transport protects vehicles from weather and road hazards, which are most important during winter, when road salt, gravel spray, and snow debris are constant threats.</p>
+  <ul>
+    <li>Enclosed auto transport uses enclosed trailers that fully shield the vehicle. This is essential for high-value inventory being moved by auto dealerships or for collectors transporting irreplaceable cars.</li>
+    <li>Enclosed transport typically costs 30–40% more than open transport. Some routes and seasons push that premium higher, particularly when special equipment or enclosed trailer availability is limited.</li>
+    <li>Ship Guy helps compare both options at the quote stage, showing you exactly what the cost difference looks like for your route so you can make an informed choice.</li>
+  </ul>
+  <p>Options for vehicle transport include open transport and enclosed transport. If your car trip to Montana involves a vehicle that needs to be protected from every possible road hazard, an enclosed vehicle is worth the higher cost.</p>
+  <h2>City &amp; Region Focus: Billings, Bozeman, Missoula, and Beyond</h2>
+  <p>Ship Guy regularly coordinates vehicle transport into and out of Montana&#x27;s main cities and resort areas. Each business location and residential hub has its own logistics profile depending on highway access and terrain.</p>
+  <ul>
+    <li>Billings is a key hub for car shipments in Montana, sitting at the junction of I-90 and I-94. This strategic position means more carriers pass through Billings than almost anywhere else in the state, translating to faster scheduling and often more favorable rates. Big Sky auto transport routes frequently originate or terminate here.</li>
+    <li>Bozeman serves as the gateway to Big Sky and Yellowstone. Its growing population and resort appeal generate steady demand, including luxury vehicle traffic from second-home owners. Remote or mountainous pickup spots in the Bozeman area may require meeting along I-90 rather than driveway service.</li>
+    <li>Missoula sits along the I-90 corridor with decent carrier density for routes heading toward the Pacific Northwest and east. Mountain passes between Missoula and points east can slow carriers during winter, but the city itself is accessible.</li>
+    <li>Great Falls is the primary hub along I-15 in central Montana. It&#x27;s the closest major city to Malmstrom Air Force Base and offers reasonable carrier access, though northern Montana towns like Shelby, Havre, and Conrad see fewer carriers and potentially longer scheduling windows.</li>
+  </ul>
+  <p>Scenic and resort areas-Big Sky, Whitefish, Kalispell, and the Flathead Valley-present unique challenges. Road access for large trailers can be limited, especially in winter. Ship Guy aims for door-to-door service where safe truck access exists, but will arrange nearby parking-lot or roadside meeting points when a driveway approach isn&#x27;t practical. Montana customers in these areas should expect slightly longer pickup windows compared to those in corridor cities.</p>
+  <h2>College and Military Vehicle Transport in Montana</h2>
+  <p>Ship Guy connects students and service members with car shipping services designed to handle the tight timelines and specific logistics of academic and military moves in Montana.</p>
+  <ul>
+    <li>Students attending Montana State University in Bozeman and the University of Montana in Missoula frequently need vehicles shipped because public transit options in these towns are minimal. Demand spikes around semester start dates-late August and early January-so booking early matters. Having a car on campus isn&#x27;t a luxury in Montana; it&#x27;s often the only practical way to get groceries, reach trailheads, or drive home for breaks.</li>
+    <li>Malmstrom Air Force Base in Great Falls generates consistent demand for auto transport. Service members with Permanent Change of Station (PCS) orders should plan to arrange car transport at least 4 to 6 weeks before their move date, especially for winter relocations when weather delays are likely. Ship Guy can coordinate with base access requirements, including gate hours and inspection protocols, to ensure the vehicle reaches its destination safely.</li>
+    <li>Both student and military moves benefit from flexible scheduling. If your timeline allows for a few days of wiggle room around your target shipping date, Ship Guy can often secure more competitive rates and better carrier matches.</li>
+  </ul>
+  <h2>How to Choose the Best Car Shipping Option in Montana</h2>
+  <p>Choosing the best car shipping option means balancing price, speed, and protection for your specific route and situation. The best car shipping company for your needs isn&#x27;t always the cheapest-it&#x27;s the one that matches your priorities.</p>
+  <p>Key decision factors to weigh:</p>
+  <ul>
+    <li>Open vs. enclosed: open offers a lower cost for standard vehicles, while enclosed adds protection for high-value or classic vehicles at a premium.</li>
+    <li>Flexible vs. fixed pickup dates: flexibility on your shipping date by even 2–3 days can unlock better carrier options and pricing</li>
+    <li>Corridor meeting vs. remote driveway: agreeing to meet a carrier along I-90 or I-15 instead of requiring driveway service at a rural property can meaningfully reduce your quote</li>
+    <li>Season of travel: shipping during summer peak (June through September) or around winter holidays typically means higher demand and higher prices</li>
+    <li>Carrier reputation: Checking a carrier&#x27;s availability rating, customer reviews, and Better Business Bureau standing is more reliable than sorting by price alone. The business bureau listing can reveal complaint history and resolution patterns that raw star ratings miss.</li>
+  </ul>
+  <p>Ship Guy helps customers compare carrier options for their route rather than defaulting to the lowest initial price. Most car shipping companies offer similar base services, but the details-transit time, communication quality, and insurance terms-vary widely.</p>
+  <p>Plan to book at least 1 to 2 weeks ahead for common routes like Billings to Denver. For cross-country moves, peak summer shipping, or winter holiday windows, allow more lead time. An auto transport company that gives you an accurate estimate upfront and explains what drives the price is worth more than one that lowballs and surprises you later.</p>
+  <h2>Preparing Your Vehicle for Montana Auto Transport</h2>
+  <p>Proper prep helps avoid delays and makes the pickup process smoother, especially in Montana&#x27;s varied weather. A few straightforward steps protect your vehicle and keep the whole process on schedule.</p>
+  <ul>
+    <li>Give the car a light wash so you can spot existing scratches, dents, or rock chips. Document everything with dated photos from all four sides, the roof, and each wheel. These photos are your baseline if you need to file a damage claim later.</li>
+    <li>Remove personal items from the interior and trunk. Vehicle preparation involves removing personal items and checking for leaks. Many transport companies prohibit personal items in vehicles to avoid liability for theft, and extra weight can create loading issues.</li>
+    <li>Check tire pressure and battery health. Cold temperatures drain batteries quickly, and low tire pressure complicates loading and unloading on the carrier ramp.</li>
+    <li>Leave about a quarter tank of fuel. This is enough for the carrier to drive the vehicle on and off the trailer while keeping the weight down.</li>
+    <li>Remove or securely fasten external accessories, such as ski racks, snowboard boxes, bike mounts, and any aftermarket additions that could come loose during transit. These are common in Montana and easy to forget.</li>
+    <li>In winter months, clear heavy snow and ice from the vehicle before the carrier arrives. Note any existing rust spots or salt crust so they&#x27;re documented before transport.</li>
+    <li>If you&#x27;re shipping a new vehicle or a recently purchased car, verify that all factory accessories are secured and that any dealer-added items (such as temporary plates or window stickers) won&#x27;t cause issues during transport.</li>
+  </ul>
+  <p>Walk around the vehicle with the driver at both loading and delivery. This inspection step is your best protection and takes only a few minutes. Montana&#x27;s weather can change quickly, so if you&#x27;re scheduling a winter pickup, build in a buffer day in case a storm rolls through, and the carrier needs to adjust the timing.</p>
+  <h2>Why Montana Drivers Use Ship Guy</h2>
+  <p>Ship Guy operates as a Montana-savvy auto transport company that coordinates reliable auto transport rather than acting as a generic national broker. The focus is on understanding the state&#x27;s specific challenges-mountain terrain, limited carrier density in rural zones, and seasonal weather disruptions-and matching each customer with the right carrier for their route.</p>
+  <ul>
+    <li>Ship Guy vets carriers for licensing, insurance, and experience handling Montana&#x27;s demanding geography. This means checking that drivers and equipment can handle mountain passes, winter roads, and remote delivery locations.</li>
+    <li>Clear communication during pickup and transit is a priority. You get driver contact details, realistic timing windows, and proactive updates if weather conditions or routing changes affect your schedule. Customer satisfaction depends on setting honest expectations, not just quoting a low number.</li>
+    <li>Ship Guy compares multiple carrier options to align car shipping costs, timing, and service levels with each customer&#x27;s needs, rather than just offering the first available slot.</li>
+  </ul>
+  <p>Real use cases that Ship Guy handles regularly:</p>
+  <ul>
+    <li>Retirees relocating from Billings to Arizona for the winter and shipping their vehicle back each spring.</li>
+    <li>Families moving from Seattle to Bozeman and needing a stress-free way to get a second vehicle across</li>
+    <li>Seasonal workers or ranch employees drive into Montana in the spring and arrange an auto shipment out when winter arrives.</li>
+    <li>Montana residents purchasing vehicles out of state and needing door-to-door delivery to a rural property.</li>
+  </ul>
+  <p>Whether you&#x27;re moving across town, across the state, or across the country, Ship Guy brings the carrier network, route knowledge, and straightforward communication that makes Montana auto transport work. Get a shipping quote to compare your options and find the right fit for your move.</p>
 </div></section>
+
+<!-- ===================== WHAT WE SHIP ===================== -->
+<section class="ship-section" id="services">
+  <div class="container">
+    <div class="ship-head">
+      <p class="ship-eyebrow">What We Ship</p>
+      <h2>We Ship More Than Cars</h2>
+      <p class="ship-sub">Nationwide transport solutions for vehicles, household goods, equipment, and freight.</p>
+    </div>
+
+    <div class="ship-grid">
+      <article class="ship-card">
+        <div class="ship-img"><img src="assets/ship-vehicles.jpg" alt="Blue auto-transport carrier loaded with cars and a boat on a mountain highway" loading="lazy"></div>
+        <div class="ship-body">
+          <h3>Vehicles &amp; Boats</h3>
+          <p>Cars, trucks, motorcycles, RVs, and boats shipped nationwide.</p>
+          <a class="ship-link" href="#">Learn More <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </div>
+      </article>
+
+      <article class="ship-card">
+        <div class="ship-img"><img src="assets/ship-household.jpg" alt="Living room with a sofa and packed moving boxes ready for transport" loading="lazy"></div>
+        <div class="ship-body">
+          <h3>Household Items</h3>
+          <p>Furniture, boxes, and personal items moved with care.</p>
+          <a class="ship-link" href="#">Learn More <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </div>
+      </article>
+
+      <article class="ship-card">
+        <div class="ship-img"><img src="assets/ship-equipment.jpg" alt="Green tractor secured on a flatbed trailer for heavy equipment transport" loading="lazy"></div>
+        <div class="ship-body">
+          <h3>Heavy Equipment</h3>
+          <p>Tractors, machinery, and oversized equipment transport.</p>
+          <a class="ship-link" href="#">Learn More <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </div>
+      </article>
+
+      <article class="ship-card">
+        <div class="ship-img"><img src="assets/ship-freight.jpg" alt="Palletized and shrink-wrapped cargo in a warehouse for freight shipping" loading="lazy"></div>
+        <div class="ship-body">
+          <h3>Freight</h3>
+          <p>Palletized cargo, crates, and commercial freight shipping.</p>
+          <a class="ship-link" href="#">Learn More <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FAQ ===================== -->
+<section class="faq-section" id="faq">
+  <div class="container">
+    <div class="faq-head">
+      <p class="faq-eyebrow">Questions?</p>
+      <h2>Frequently Asked Questions</h2>
+      <span class="faq-accent" aria-hidden="true"></span>
+      <p class="faq-sub">Everything you need to know before you ship.</p>
+    </div>
+
+    <div class="faq-list">
+      <details class="faq-item" open>
+        <summary class="faq-q">How much does it cost to ship a vehicle?
+          <span class="faq-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></span>
+        </summary>
+        <div class="faq-a">Your price depends on the distance, vehicle size, transport type (open or enclosed), and how quickly you need it. We give you an upfront, all-in quote with no hidden fees — the number you see is the number you pay.</div>
+      </details>
+
+      <details class="faq-item">
+        <summary class="faq-q">How long will my shipment take?
+          <span class="faq-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></span>
+        </summary>
+        <div class="faq-a">Transit time depends on the route and distance. Once your vehicle is dispatched, we share an estimated delivery window and keep you updated from pickup to drop-off. Longer cross-country routes naturally take more time than regional moves.</div>
+      </details>
+
+      <details class="faq-item">
+        <summary class="faq-q">Is my vehicle insured during transport?
+          <span class="faq-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></span>
+        </summary>
+        <div class="faq-a">Yes. We only work with licensed, vetted carriers that carry active cargo insurance, and your vehicle is covered while it's on the truck. We're happy to share coverage details before you book.</div>
+      </details>
+
+      <details class="faq-item">
+        <summary class="faq-q">What's the difference between open and enclosed transport?
+          <span class="faq-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></span>
+        </summary>
+        <div class="faq-a">Open transport is the most common and most affordable option and is safe for everyday vehicles. Enclosed transport adds extra protection from weather and road debris — a great choice for classic, luxury, or high-value vehicles.</div>
+      </details>
+
+      <details class="faq-item">
+        <summary class="faq-q">Do I have to pay a deposit upfront?
+          <span class="faq-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></span>
+        </summary>
+        <div class="faq-a">No. You don't pay until your vehicle is assigned and dispatched to a carrier — so there's no risk in getting a quote and booking your shipment.</div>
+      </details>
+
+      <details class="faq-item">
+        <summary class="faq-q">Can you ship a vehicle that doesn't run?
+          <span class="faq-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></span>
+        </summary>
+        <div class="faq-a">Yes. We transport both operable and inoperable (non-running) vehicles — just let us know when you book so we assign a carrier with the right equipment, such as a winch.</div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== LOCAL / CONTACT ===================== -->
+<section class="local-section" id="contact-local">
+  <div class="container">
+    <div class="local-grid">
+      <div class="local-info">
+        <p class="local-eyebrow">Get Started</p>
+        <h2>Ship Your Car To or From Montana Today</h2>
+        <p class="local-lede">Call now or request a free quote. Transparent all-in pricing, no upfront deposit, vetted carriers, and 24/7 U.S.-based support.</p>
+        <div class="local-actions">
+          <a class="btn-call-lg" href="tel:+18662803481"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/></svg> Call (866) 280-3481</a>
+          <a class="btn-quote-lg" href="#top">Get a Free Quote <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </div>
+        <ul class="local-contact">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg><span>Serving all of Montana — door-to-door, statewide</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg><span>Ship Guy — Nationwide Auto Transport &nbsp;<em style="color:#9098b0">(add your business address)</em></span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/></svg><a href="tel:+18662803481">(866) 280-3481</a></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg><a href="mailto:quotes@shipguy.com">quotes@shipguy.com</a></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span>Open 24/7 — quotes &amp; support</span></li>
+        </ul>
+        <div class="local-social" aria-label="Follow Ship Guy"><a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.07C24 5.4 18.63 0 12 0S0 5.4 0 12.07C0 18.1 4.39 23.1 10.13 24v-8.44H7.08v-3.49h3.05V9.41c0-3.02 1.79-4.69 4.53-4.69 1.31 0 2.68.24 2.68.24v2.97h-1.51c-1.49 0-1.96.93-1.96 1.89v2.25h3.33l-.53 3.49h-2.8V24C19.61 23.1 24 18.1 24 12.07z"/></svg></a><a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5.5"/><circle cx="12" cy="12" r="4.2"/><line x1="17.6" y1="6.4" x2="17.61" y2="6.4"/></svg></a><a href="#" aria-label="X"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231 5.45-6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a><a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg></a></div>
+      </div>
+      <div class="local-map">
+        <iframe title="Montana auto transport service area" src="https://www.google.com/maps?q=Montana%2C%20USA&z=6&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+</section>
 
 <!-- ===================== FINAL CTA ===================== -->
 <section class="cta-band" id="get-started">
@@ -838,11 +1403,14 @@ body.ready .reveal{opacity:1;transform:none}
     <h2>Ready to Ship Your Vehicle?</h2>
     <p class="cta-sub">Get a free, no-obligation quote in about 60 seconds — or call and talk to a real specialist right now.</p>
     <div class="cta-actions">
-      <a class="cta-primary" href="index.html#top">Get Your Free Quote
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      <a class="cta-primary" href="#top">
+        Get Your Free Quote
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
       <a class="cta-secondary" href="tel:+18662803481">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/></svg>
-        (866) 280-3481</a>
+        (866) 280-3481
+      </a>
     </div>
     <ul class="cta-trust">
       <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Licensed &amp; insured</li>
@@ -873,9 +1441,9 @@ body.ready .reveal{opacity:1;transform:none}
       <h4>Company</h4>
       <ul>
         <li><a href="how-it-works.html">How It Works</a></li>
-        <li><a href="index.html#reviews">Reviews</a></li>
-        <li><a href="index.html#faq">FAQ</a></li>
-        <li><a href="index.html#contact">Contact</a></li>
+        <li><a href="#reviews">Reviews</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#contact">Contact</a></li>
       </ul>
     </div>
     <div class="f-col">

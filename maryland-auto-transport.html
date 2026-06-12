@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Cross-Country Car Shipping — Coast-to-Coast Auto Transport | Ship Guy</title>
-<meta name="description" content="Cross-country car shipping coast to coast. Learn how long-distance auto transport works, how long it takes, what it costs, popular routes, and how to choose a transporter.">
+<title>Maryland Auto Transport with Ship Guy</title>
+<meta name="description" content="Ship Guy specializes in Maryland auto transport services for customers who need reliable, insured vehicle shipping in and out of the state. Whether you are…">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
@@ -273,7 +273,7 @@ select.inp{appearance:none;-webkit-appearance:none;padding-right:38px;cursor:poi
 .reviews-head{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;flex-wrap:wrap;margin-bottom:30px}
 .reviews-head h2{font-size:clamp(1.7rem,2.6vw,2.1rem);font-weight:800;color:var(--brand)}
 .reviews-head p{margin:8px 0 0;color:var(--muted);font-size:15.5px}
-.rating{display:flex;align-items:center;gap:12px}
+.rating{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
 .rating .score{font-family:var(--font-display);font-weight:800;font-size:22px;color:var(--ink)}
 .stars{display:inline-flex;gap:2px;color:var(--star)}
 .stars svg{width:18px;height:18px}
@@ -480,10 +480,15 @@ section[id]{scroll-margin-top:104px}
    Responsive
    ========================================================= */
 @media (max-width:1180px){
-  .hero-grid{grid-template-columns:minmax(0,1fr);gap:36px;padding:54px 24px 60px}
-  .hero-copy{max-width:640px}
+  .hero-grid{grid-template-columns:minmax(0,1fr);gap:28px;padding:54px 24px 60px}
+  .hero-copy{display:contents}
+  .hero-head,.hero-rest{max-width:640px;width:100%}
+  .hero-head{order:1}
+  .quote-card{order:2;max-width:520px;width:100%}
+  .hero-rest{order:3}
+  .hero-head h1{margin-bottom:0}
+  .eyebrow{display:none}
   .lede{max-width:520px}
-  .quote-card{max-width:520px;width:100%}
   .hero-overlay{background:linear-gradient(180deg, rgba(4,9,22,.72) 0%, rgba(4,9,22,.8) 55%, rgba(4,9,22,.88) 100%)}
 }
 @media (max-width:1180px){
@@ -504,6 +509,7 @@ section[id]{scroll-margin-top:104px}
 @media (max-width:980px){
   .wc-bento{grid-template-columns:1fr}
   .loc-bento{grid-template-columns:1fr;gap:32px}
+  .review-grid{grid-template-columns:1fr 1fr}
 }
 @media (max-width:880px){
   .steps-row{flex-direction:column;gap:0;max-width:440px;margin:0 auto}
@@ -544,6 +550,31 @@ section[id]{scroll-margin-top:104px}
   .step .slabel{font-size:11.5px}
 }
 
+/* compact hero on laptop screens only (~25% shorter) */
+@media (min-width:1181px) and (max-width:1600px){
+  .hero-grid{padding-top:34px;padding-bottom:40px;gap:40px}
+  .eyebrow{margin-bottom:12px}
+  .hero-copy h1{font-size:clamp(2rem,3vw,2.5rem);margin-bottom:14px}
+  .lede{font-size:15.5px;margin-bottom:18px}
+  .trust-list{margin-bottom:16px;gap:9px}
+  .trust-list li{font-size:14.5px}
+  .trust-ic{width:30px;height:30px}
+  .trust-ic svg{width:17px;height:17px}
+  .hero-divider{margin-bottom:16px}
+  .stat .num{font-size:26px}
+  .stat .lbl{font-size:12px;margin-top:5px}
+  .quote-card{padding:20px 24px 18px}
+  .quote-card h2{font-size:22px;margin-bottom:13px}
+  .steps{margin-bottom:13px}
+  .step .dot{width:30px;height:30px}
+  .field{margin-bottom:9px}
+  .flabel{margin-bottom:4px}
+  .inp{height:40px}
+  .opt{padding:8px 12px}
+  .btn-primary{height:46px}
+  .assure{margin-top:8px}
+}
+
 /* reduced motion */
 @media (prefers-reduced-motion:reduce){
   *{animation-duration:.001ms!important;transition-duration:.001ms!important}
@@ -558,6 +589,9 @@ body.ready .reveal{opacity:1;transform:none}
 
 .menu.menu-mega{display:grid;grid-template-columns:repeat(3,1fr);column-gap:4px;min-width:528px;max-height:64vh;overflow-y:auto}
 .menu.menu-mega .menu-all{grid-column:1 / -1;margin-top:6px;padding-top:12px;border-top:1px solid var(--line);color:var(--brand);font-weight:700}
+
+@media (max-width:460px){.footer-top{grid-template-columns:1fr;gap:28px}}/* resp-polish-footer */
+.footer-states{display:flex;flex-wrap:wrap;gap:9px 20px;align-items:center;padding:20px 0 2px;margin-top:6px;border-top:1px solid rgba(255,255,255,.10)}.footer-states .fs-label{color:#fff;font-weight:700;font-size:14px}.footer-states a{font-size:14px;color:#9aa6c6;transition:color .15s ease}.footer-states a:hover{color:#fff}/* footer-states */
 /* ===== Subpage / article / services styles ===== */
 .page-hero{background:linear-gradient(135deg,#0a2a9e 0%, var(--brand) 60%, #1f54e0 100%);color:#fff;padding:62px 0 56px}
 .crumbs{display:flex;flex-wrap:wrap;gap:9px;font-size:13.5px;font-weight:600;color:#bcd2f8;margin-bottom:16px}
@@ -597,17 +631,41 @@ body.ready .reveal{opacity:1;transform:none}
 @media (max-width:900px){.svc-grid{grid-template-columns:1fr 1fr}.related-grid{grid-template-columns:1fr 1fr}}
 @media (max-width:560px){.svc-grid{grid-template-columns:1fr}.related-grid{grid-template-columns:1fr}}
 
+.article table{width:100%;border-collapse:collapse;margin:16px 0 22px;font-size:15px}
+.article table td,.article table th{border:1px solid var(--line);padding:10px 14px;text-align:left;vertical-align:top}
+.article table tr:nth-child(even){background:#f7f9fd}
+.article table td:first-child{font-weight:600;color:#101a3d}
+.table-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:0 0 6px}
+.article h2{margin-top:30px}
+.local-section{background:#fff;padding:58px 0;border-top:1px solid var(--line)}
+.local-grid{display:grid;grid-template-columns:1fr 1fr;gap:42px;align-items:stretch}
+.local-eyebrow{font-family:var(--font-display);font-weight:800;letter-spacing:.14em;text-transform:uppercase;font-size:12.5px;color:var(--brand)}
+.local-info h2{font-family:var(--font-display);font-weight:800;font-size:clamp(1.5rem,2.4vw,2rem);color:#101a3d;margin:8px 0 10px}
+.local-lede{color:var(--ink-2);font-size:16px;line-height:1.6;margin:0 0 22px;max-width:480px}
+.local-actions{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:24px}
+.btn-call-lg{display:inline-flex;align-items:center;gap:9px;background:var(--brand);color:#fff;font-weight:700;font-size:16px;padding:13px 22px;border-radius:999px;box-shadow:0 10px 24px -12px rgba(11,52,192,.8);transition:background .15s ease,transform .15s ease}
+.btn-call-lg:hover{background:var(--brand-press);transform:translateY(-1px)}
+.btn-quote-lg{display:inline-flex;align-items:center;gap:8px;background:#fff;color:var(--brand-deep);font-weight:700;font-size:16px;padding:13px 22px;border-radius:999px;border:2px solid var(--brand);transition:background .15s ease}
+.btn-quote-lg:hover{background:var(--brand-tint)}
+.btn-call-lg svg,.btn-quote-lg svg{width:18px;height:18px}
+.local-contact{list-style:none;margin:0 0 20px;padding:0;display:grid;gap:12px}
+.local-contact li{display:flex;align-items:flex-start;gap:11px;color:var(--ink-2);font-size:15.5px;line-height:1.45}
+.local-contact li svg{width:19px;height:19px;color:var(--brand);flex:0 0 auto;margin-top:1px}
+.local-contact a{color:var(--ink-2)}.local-contact a:hover{color:var(--brand)}
+.local-social{display:flex;gap:12px}
+.local-social a{display:inline-flex;align-items:center;justify-content:center;width:42px;height:42px;border-radius:11px;background:var(--brand-tint);color:var(--brand-deep);transition:background .15s ease,color .15s ease}
+.local-social a:hover{background:var(--brand);color:#fff}
+.local-social svg{width:20px;height:20px}
+.local-map{border-radius:16px;overflow:hidden;box-shadow:0 18px 40px -24px rgba(13,26,80,.55);border:1px solid var(--line);min-height:420px;background:#eef2fe}
+.local-map iframe{width:100%;height:100%;min-height:420px;border:0;display:block}
+@media (max-width:860px){.local-grid{grid-template-columns:1fr;gap:26px}.local-map{min-height:300px}.local-map iframe{min-height:300px}}
 
-@media (max-width:460px){.footer-top{grid-template-columns:1fr;gap:28px}}/* resp-polish-footer */
-.footer-states{display:flex;flex-wrap:wrap;gap:9px 20px;align-items:center;padding:20px 0 2px;margin-top:6px;border-top:1px solid rgba(255,255,255,.10)}.footer-states .fs-label{color:#fff;font-weight:700;font-size:14px}.footer-states a{font-size:14px;color:#9aa6c6;transition:color .15s ease}.footer-states a:hover{color:#fff}/* footer-states */
 </style>
 <script type="application/ld+json">
-{
-  "@context":"https://schema.org","@graph":[
-  {"@type":"Article","headline":"Cross-Country Car Shipping","description":"Cross-country car shipping coast to coast. Learn how long-distance auto transport works, how long it takes, what it costs, popular routes, and how to choose a transporter.","author":{"@type":"Organization","name":"Ship Guy"},"publisher":{"@type":"Organization","name":"Ship Guy"}},
-  {"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"index.html"},{"@type":"ListItem","position":2,"name":"How It Works","item":"how-it-works.html"},{"@type":"ListItem","position":3,"name":"Cross Country Car Shipping","item":"cross-country-car-shipping.html"}]}
-  ]
-}
+{"@context":"https://schema.org","@graph":[
+{"@type":"Service","serviceType":"Auto Transport","name":"Maryland Auto Transport","areaServed":{"@type":"State","name":"Maryland"},"provider":{"@type":"Organization","name":"Ship Guy","telephone":"+1-866-280-3481"},"description":"Ship Guy specializes in Maryland auto transport services for customers who need reliable, insured vehicle shipping in and out of the state. Whether you are…"},
+{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"index.html"},{"@type":"ListItem","position":2,"name":"Maryland Auto Transport","item":"maryland-auto-transport.html"}]}
+]}
 </script>
 </head>
 <body>
@@ -615,7 +673,7 @@ body.ready .reveal{opacity:1;transform:none}
 <!-- ===================== HEADER ===================== -->
 <header class="site-header" id="top">
   <div class="container header-inner">
-    <a class="brand" href="index.html#top" aria-label="Ship Guy — home"><svg class="sg-logo" role="img" aria-label="Ship Guy" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="209 227 180 145">
+    <a class="brand" href="index.html" aria-label="Ship Guy — home"><svg class="sg-logo" role="img" aria-label="Ship Guy" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="209 227 180 145">
 <path fill-rule="nonzero" fill="currentColor" fill-opacity="1" d="M 257.761719 304.929688 L 257.761719 247.621094 L 272.027344 245.128906 L 272.027344 265.167969 C 272.027344 265.933594 272.246094 266.5 272.679688 266.867188 C 273.109375 267.230469 273.703125 267.347656 274.460938 267.222656 L 279.570312 266.355469 C 281.136719 266.089844 281.921875 265.128906 281.921875 263.484375 L 281.921875 243.398438 L 296.191406 240.90625 L 296.191406 298.710938 L 281.921875 301.019531 L 281.921875 277.640625 L 272.027344 279.292969 L 272.027344 302.621094 Z M 257.761719 304.929688 "/>
 <path fill-rule="nonzero" fill="currentColor" fill-opacity="1" d="M 225.148438 310.390625 C 220.769531 311.101562 217.570312 310.632812 215.539062 308.984375 C 213.515625 307.339844 212.5 304.464844 212.5 300.359375 L 212.5 291.359375 L 226.769531 288.980469 L 226.769531 296.222656 C 226.769531 297.035156 226.984375 297.609375 227.417969 297.945312 C 227.851562 298.28125 228.472656 298.382812 229.28125 298.25 L 234.148438 297.449219 C 234.902344 297.328125 235.472656 297.054688 235.851562 296.640625 C 236.226562 296.222656 236.417969 295.636719 236.417969 294.875 L 236.417969 290.066406 C 236.417969 289.304688 236.324219 288.683594 236.136719 288.199219 C 235.945312 287.714844 235.632812 287.300781 235.203125 286.964844 C 234.769531 286.632812 234.175781 286.367188 233.417969 286.164062 L 221.257812 283.890625 C 219.472656 283.378906 217.957031 282.695312 216.71875 281.851562 C 215.472656 281.007812 214.539062 279.855469 213.917969 278.390625 C 213.296875 276.929688 212.988281 275.089844 212.988281 272.871094 L 212.988281 263.140625 C 212.988281 260.222656 213.636719 257.960938 214.933594 256.355469 C 216.230469 254.753906 218.390625 253.683594 221.417969 253.152344 L 237.957031 250.261719 C 242.28125 249.503906 245.457031 249.929688 247.484375 251.539062 C 249.511719 253.148438 250.523438 256.050781 250.523438 260.25 L 250.523438 265.890625 L 236.257812 268.328125 L 236.257812 264.5 C 236.257812 263.683594 236.039062 263.109375 235.605469 262.777344 C 235.175781 262.441406 234.578125 262.34375 233.824219 262.472656 L 229.527344 263.210938 C 228.714844 263.351562 228.132812 263.628906 227.785156 264.039062 C 227.433594 264.453125 227.257812 265.011719 227.257812 265.71875 L 227.257812 268.078125 C 227.257812 269.109375 227.511719 269.917969 228.027344 270.507812 C 228.539062 271.097656 229.3125 271.550781 230.335938 271.863281 L 241.929688 273.972656 C 243.984375 274.492188 245.660156 275.214844 246.957031 276.140625 C 248.253906 277.070312 249.199219 278.285156 249.796875 279.792969 C 250.390625 281.300781 250.6875 283.144531 250.6875 285.328125 L 250.6875 297.671875 C 250.6875 300.671875 250.023438 302.960938 248.699219 304.539062 C 247.375 306.117188 245.199219 307.148438 242.175781 307.636719 Z M 225.148438 310.390625 "/>
 <path fill-rule="nonzero" fill="currentColor" fill-opacity="1" d="M 305.007812 297.726562 L 305.007812 239.84375 L 319.277344 237.351562 L 319.277344 295.414062 Z M 305.007812 297.726562 "/>
@@ -628,7 +686,7 @@ body.ready .reveal{opacity:1;transform:none}
 </svg></a>
 
     <nav class="main-nav" aria-label="Primary">
-      <a href="index.html#top">Home</a>
+      <a href="index.html">Home</a>
       <a href="index.html#how">How It Works</a>
       <div class="has-menu">
         <button class="nav-toggle-btn" aria-haspopup="true" aria-expanded="false">Services
@@ -685,9 +743,9 @@ body.ready .reveal{opacity:1;transform:none}
           <a href="index.html#locations" role="menuitem" class="menu-all">All locations →</a>
         </div>
       </div>
-      <a href="index.html#reviews">Reviews</a>
-      <a href="index.html#faq">FAQ</a>
-      <a href="index.html#contact">Contact</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contact">Contact</a>
     </nav>
 
     <a class="btn-call" href="tel:+18662803481">
@@ -704,7 +762,7 @@ body.ready .reveal{opacity:1;transform:none}
   <!-- mobile nav -->
   <nav class="mobile-nav" id="mobileNav" aria-label="Mobile">
     <div class="inner">
-      <a href="index.html#top">Home</a>
+      <a href="index.html">Home</a>
       <a href="index.html#how">How It Works</a>
       <span class="m-sub">Services</span>
                   <a href="open-car-transport.html">Open Car Transport</a>
@@ -749,87 +807,544 @@ body.ready .reveal{opacity:1;transform:none}
       <a href="new-hampshire-auto-transport.html">New Hampshire</a>
       <a href="new-jersey-auto-transport.html">New Jersey</a>
       <span class="m-sub">More</span>
-      <a href="index.html#reviews">Reviews</a>
-      <a href="index.html#faq">FAQ</a>
-      <a href="index.html#contact">Contact</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contact">Contact</a>
     </div>
   </nav>
 </header>
 
-<!-- ===================== PAGE HERO ===================== -->
-<section class="page-hero"><div class="container">
-  <nav class="crumbs" aria-label="Breadcrumb"><a href="index.html">Home</a><span>/</span><a href="how-it-works.html">How It Works</a><span>/</span><span aria-current="page">Cross Country Car Shipping</span></nav>
-  <h1>Cross-Country Car Shipping</h1>
-  <p class="page-hero-sub">How coast-to-coast auto transport works — transit times, costs, routes, and what to expect.</p>
-</div></section>
+<!-- ===================== HERO ===================== -->
+<section class="hero">
+  <div class="hero-media" aria-hidden="true">
+    <img class="hero-img" alt="" src="assets/hero.jpg">
+    <div class="hero-overlay"></div>
+  </div>
 
-<section class="article-section"><div class="container article">
-<p class="article-lead">Moving across the country and need your car there too? Cross-country car shipping lets you skip the long drive and have your vehicle delivered coast to coast. This guide covers how it works, how long it takes, what it costs, and how to choose the right transporter.</p>
-
-<h2>What Is Cross-Country Car Shipping?</h2>
-<p>Cross-country car shipping is long-distance auto transport that moves your vehicle from one side of the country to the other — or across any long stretch of states — by professional carrier. Instead of putting thousands of miles on your odometer, you hand your vehicle to a licensed carrier who delivers it directly to your destination. It's the practical solution for cross-country relocations, job transfers, military moves, online car purchases, college students, and snowbirds heading between distant homes. Ship Guy moves vehicles coast to coast across all 50 states with door-to-door service.</p>
-
-<h2>How Cross-Country Auto Transport Works</h2>
-<p>Long-distance shipping follows the same three simple steps as any Ship Guy shipment. First, you get a free quote by entering your pickup location, delivery location, and vehicle details. Next, we match your vehicle with a vetted carrier running your route and schedule a <a href="door-to-door-car-shipping.html">door-to-door</a> pickup window around your dates. The driver inspects your vehicle, records its condition on the Bill of Lading, loads it, and transports it across the country while you track progress. At delivery, you inspect the vehicle against the pickup report, sign, and take your keys. Carriers run regular long-haul lanes between major regions, so coast-to-coast moves are routine for our network.</p>
-
-<h2>How Long Does Cross-Country Shipping Take?</h2>
-<p>Transit time depends mostly on the distance between pickup and delivery. As a general guide for long-distance auto transport in the continental U.S.:</p>
-<ul>
-  <li><strong>1,000–1,500 miles:</strong> roughly 3–5 days in transit</li>
-  <li><strong>1,500–2,000 miles:</strong> roughly 4–6 days</li>
-  <li><strong>2,000–2,500 miles:</strong> roughly 5–7 days</li>
-  <li><strong>Coast to coast (2,500+ miles):</strong> roughly 6–9 days</li>
-</ul>
-<p>Add a day or two on the front end for carrier assignment and pickup, depending on how flexible your dates are and how busy your route is. Major routes — such as California to the East Coast or the Northeast to the West — are typically assigned quickly because carriers run them often. If you're working against a firm deadline, ask about <a href="expedited-car-shipping.html">expedited car shipping</a> for a prioritized, faster pickup.</p>
-
-<h2>How Much Does Cross-Country Car Shipping Cost?</h2>
-<p>Long-distance shipments have a higher total cost than short moves simply because of the mileage — but they're also the most efficient on a per-mile basis. Your exact price depends on distance, your vehicle's size and condition, transport type (open or enclosed), your timing, and demand on the route. High-traffic coast-to-coast lanes are generally more affordable per mile than routes to or from remote areas. As with every Ship Guy shipment, your quote is all-in and transparent, with no hidden fees and no upfront deposit, and you pay only once your vehicle is dispatched. For a full breakdown of pricing factors, see our <a href="car-shipping-cost.html">car shipping costs guide</a>.</p>
-
-<h2>Should You Ship or Drive Across the Country?</h2>
-<p>Driving across the country sounds straightforward until you add up the real costs. A coast-to-coast drive means several days on the road, fuel, hotels, meals, and the risk of breakdowns or accidents far from home — plus thousands of miles of wear that reduce your vehicle's value. For many people, shipping ends up comparable in cost once those expenses are tallied, and far easier on your schedule and your car. You can fly to your new home on your own timeline and have your vehicle waiting when you arrive. For families with more than one vehicle, or anyone who can't spare several days for a drive, shipping is usually the smarter choice.</p>
-
-<h2>Open vs. Enclosed for Long-Distance Moves</h2>
-<p>Every cross-country shipment can travel by open or enclosed carrier. <a href="open-car-transport.html">Open transport</a> is the affordable, widely available standard and is well suited to everyday vehicles making the long trip — it's the same method used to ship new cars nationwide. <a href="enclosed-auto-transport.html">Enclosed transport</a> adds a fully covered trailer that shields your vehicle from weather and road debris over thousands of miles, making it the right choice for classic, luxury, exotic, or high-value vehicles crossing the country. Because long routes mean more time exposed to the elements, some owners who might choose open for a short hop opt for enclosed on a coast-to-coast move.</p>
-
-<h2>Popular Cross-Country Routes</h2>
-<p>We ship on long-distance lanes across the entire country, including some of the most-requested corridors:</p>
-<ul>
-  <li><strong>California to the East Coast</strong> — Los Angeles and San Francisco to New York, Florida, and beyond</li>
-  <li><strong>Northeast to the West Coast</strong> — New York and New England to California and the Pacific Northwest</li>
-  <li><strong>Florida to the West and Midwest</strong> — and the reverse during snowbird season</li>
-  <li><strong>Texas to both coasts</strong> — a central hub with frequent long-haul service</li>
-</ul>
-<p>Even if your specific cities aren't on a major lane, our nationwide network reaches all 50 states, so we can arrange long-distance transport between virtually any two points. Browse <a href="index.html#locations">popular routes and service areas</a> for more.</p>
-
-<h2>How to Prepare for a Cross-Country Shipment</h2>
-<p>Long-distance moves reward a little planning. Book early when possible, especially during peak relocation and snowbird seasons, to secure the best rates and dates. Wash your vehicle and take dated photos to document its condition before pickup. Remove personal belongings and toll transponders, leave about a quarter tank of fuel, disable alarms, and provide one working set of keys. Confirm your pickup and delivery addresses and contact details, and make sure an authorized adult is available at both ends — or arrange a nearby meeting point if either street is hard for a large transporter to reach. For a complete checklist, see our <a href="car-shipping-preparation.html">car prep guide</a>.</p>
-
-<h2>Choosing a Cross-Country Auto Transport Company</h2>
-<p>A long-distance move puts your vehicle in someone else's hands for several days, so the company you choose matters. Look for a licensed, bonded, and FMCSA-registered broker that works only with vetted, insured carriers. Favor transparent, all-in pricing with no upfront deposit over a suspiciously low quote that can stall your shipment. And value clear communication — you want real-time tracking and support you can reach if anything comes up along the route. Ship Guy checks every one of those boxes.</p>
-
-<h2>What Affects Cross-Country Transit Time?</h2>
-<p>Mileage sets the baseline, but several things influence exactly how long a coast-to-coast shipment takes. Weather and road conditions can slow a route, especially crossing mountain passes or during winter storms. The driver's schedule and federally regulated hours-of-service limits mean carriers can only drive so many hours per day, so very long hauls naturally span several days. The number of other vehicles on the load and their drop-off sequence can add or save time depending on where your delivery falls in the route. And the season matters: during peak periods, both pickup scheduling and road traffic are busier. We give you an estimated delivery window based on your specific route and keep you updated if anything shifts along the way.</p>
-
-<h2>Tracking Your Vehicle Across the Country</h2>
-<p>One of the biggest worries with a long-distance move is not knowing where your vehicle is. With Ship Guy, you're never in the dark. You can check the status of your shipment, and our U.S.-based support team is available 24/7 by phone to answer questions at any point in the journey. We stay in contact with the driver throughout the route, so if your plans change or you simply want an update, help is a quick call away. For a multi-day, cross-country shipment, that visibility and access make the whole experience far less stressful.</p>
-
-<h2>Door-to-Door Delivery for Long-Distance Moves</h2>
-<p>Ship Guy ships cross-country <a href="door-to-door-car-shipping.html">door-to-door</a>, meaning the carrier picks up your vehicle at your origin address and delivers it as close as possible to your destination — no driving to a distant terminal on either end. For a long-distance move, that convenience is significant: you've likely got a hundred other things to coordinate, and door-to-door keeps your vehicle off your to-do list. If a full-size transporter can't safely reach a tight street, the driver will arrange a nearby meeting point with room to unload.</p>
-
-<h2>Ship Coast to Coast with Ship Guy</h2>
-<p>Ship Guy is a licensed, bonded, FMCSA-registered auto transport broker that ships vehicles cross-country across all 50 states. With nationwide carrier coverage, transparent all-in pricing, no upfront deposit, real-time tracking, and 24/7 U.S.-based support, your long-distance move is in reliable hands from quote to delivery.</p>
-<p>Ready to ship across the country? <a href="index.html#top">Get your free quote</a> in about 60 seconds, or call <a href="tel:+18662803481">(866) 280-3481</a> to plan your route. You can also review <a href="car-shipping-cost.html">car shipping costs</a>, read our <a href="car-shipping-preparation.html">car prep guide</a>, or learn <a href="how-it-works.html">how the process works</a>.</p>
-
-</div></section>
-
-<section class="related-section"><div class="container">
-      <h2>More Car Shipping Guides</h2>
-      <div class="related-grid">
-        <a class="related-card" href="how-it-works.html">How It Works <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-        <a class="related-card" href="car-shipping-cost.html">Car Shipping Costs <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-        <a class="related-card" href="car-shipping-preparation.html">Car Prep Guide <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+  <div class="container hero-grid">
+    <div class="hero-copy">
+      <div class="hero-head">
+      <p class="eyebrow reveal">Licensed&nbsp;•&nbsp;Insured&nbsp;•&nbsp;Nationwide</p>
+      <h1 class="reveal d2">Maryland Auto Transport</h1>
       </div>
+      <div class="hero-rest">
+      <p class="lede reveal d2">Licensed, insured car shipping to and from Maryland — transparent pricing, vetted carriers, and door-to-door delivery.</p>
+
+      <ul class="trust-list reveal d3">
+        <li>
+          <span class="trust-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/><path d="m9 12 2 2 4-4"/></svg></span>
+          Licensed Broker &amp; Fully Insured
+        </li>
+        <li>
+          <span class="trust-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="2" width="8" height="4" rx="1"/><path d="M9 4H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2h-3"/><path d="m9 14 2 2 4-4"/></svg></span>
+          FMCSA Registered
+        </li>
+        <li>
+          <span class="trust-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></span>
+          Vetted Carrier Network
+        </li>
+        <li>
+          <span class="trust-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M4 13a8 8 0 0 1 16 0"/><rect x="2" y="13" width="4.4" height="7" rx="1.6"/><rect x="17.6" y="13" width="4.4" height="7" rx="1.6"/><path d="M20 19.5v.5a3 3 0 0 1-3 3h-3"/></svg></span>
+          Real-Time Tracking &amp; 24/7 Support
+        </li>
+      </ul>
+
+      <div class="hero-divider reveal d3"></div>
+
+      <div class="stats reveal d3">
+        <div class="stat"><span class="num">50+</span><span class="lbl">States Served</span></div>
+        <div class="stat"><span class="num">100%</span><span class="lbl">Insured Transport</span></div>
+        <div class="stat"><span class="num">24/7</span><span class="lbl">Support &amp; Tracking</span></div>
+      </div>
+      </div>
+    </div>
+
+    <!-- QUOTE CARD -->
+    <div class="quote-card reveal d2">
+      <h2>Get Your Instant Quote</h2>
+
+      <div class="steps" id="steps">
+        <div class="step is-active" data-step="1">
+          <span class="dot"><span class="num">1</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>
+          <span class="slabel">Destination</span>
+        </div>
+        <div class="track" data-track="1"></div>
+        <div class="step" data-step="2">
+          <span class="dot"><span class="num">2</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>
+          <span class="slabel">Vehicle</span>
+        </div>
+        <div class="track" data-track="2"></div>
+        <div class="step" data-step="3">
+          <span class="dot"><span class="num">3</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>
+          <span class="slabel">Contact</span>
+        </div>
+      </div>
+
+      <form id="quoteForm" novalidate>
+        <!-- STEP 1 -->
+        <div class="qstep is-current" data-panel="1">
+          <div class="field">
+            <label class="flabel" for="pickup">Pickup Location</label>
+            <div class="input-wrap">
+              <span class="lead"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg></span>
+              <input class="inp" id="pickup" name="pickup" type="text" placeholder="Enter city or zip code" autocomplete="address-level2" required>
+            </div>
+            <span class="err-msg">Please enter a pickup location.</span>
+          </div>
+
+          <div class="field">
+            <label class="flabel" for="delivery">Delivery Location</label>
+            <div class="input-wrap">
+              <span class="lead"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg></span>
+              <input class="inp" id="delivery" name="delivery" type="text" placeholder="Enter city or zip code" autocomplete="address-level2" required>
+            </div>
+            <span class="err-msg">Please enter a delivery location.</span>
+          </div>
+
+          <div class="field">
+            <label class="flabel" for="date">Pickup Date</label>
+            <div class="input-wrap">
+              <span class="lead"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg></span>
+              <input class="inp" id="date" name="date" type="text" placeholder="Select pickup date" onfocus="this.type='date'" onblur="if(!this.value)this.type='text'">
+            </div>
+          </div>
+
+          <div class="field">
+            <label class="flabel">Trailer Type</label>
+            <div class="opt-grid" data-radio-group>
+              <label class="opt is-selected">
+                <span class="opt-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M10 17V6a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1v10"/><path d="M10 8h7l4 4v4h-2"/><path d="M6 17h2M12 17h2"/><circle cx="6" cy="18" r="2"/><circle cx="17" cy="18" r="2"/></svg></span>
+                <span class="opt-text"><strong>Open Trailer</strong><small>Most common</small></span>
+                <input type="radio" name="trailer" value="open" checked>
+                <span class="radio"></span>
+              </label>
+              <label class="opt">
+                <span class="opt-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="6" width="14" height="11" rx="1.5"/><path d="M16 9h3l3 4v4h-2"/><path d="M6 17h2"/><circle cx="6" cy="18" r="2"/><circle cx="18" cy="18" r="2"/></svg></span>
+                <span class="opt-text"><strong>Enclosed Trailer</strong><small>Extra protection</small></span>
+                <input type="radio" name="trailer" value="enclosed">
+                <span class="radio"></span>
+              </label>
+            </div>
+          </div>
+
+          <button type="button" class="btn-primary" data-next>
+            Next: Vehicle Details
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </button>
+        </div>
+
+        <!-- STEP 2 -->
+        <div class="qstep" data-panel="2">
+          <div class="row-2">
+            <div class="field">
+              <label class="flabel" for="year">Year</label>
+              <div class="input-wrap">
+                <span class="lead"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg></span>
+                <span class="chev-r"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></span>
+                <select class="inp" id="year" name="year"><option value="">Year</option></select>
+              </div>
+            </div>
+            <div class="field">
+              <label class="flabel" for="make">Make</label>
+              <div class="input-wrap">
+                <span class="lead"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12l1.6-4.6A2 2 0 0 1 6.5 6h11a2 2 0 0 1 1.9 1.4L21 12"/><path d="M3 12h18v5a1 1 0 0 1-1 1h-1.2a1 1 0 0 1-1-1v-1H6.2v1a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-5Z"/><circle cx="7.5" cy="14.5" r="1"/><circle cx="16.5" cy="14.5" r="1"/></svg></span>
+                <input class="inp" id="make" name="make" type="text" placeholder="e.g. Toyota">
+              </div>
+            </div>
+          </div>
+
+          <div class="field">
+            <label class="flabel" for="model">Model</label>
+            <div class="input-wrap">
+              <span class="lead"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12l1.6-4.6A2 2 0 0 1 6.5 6h11a2 2 0 0 1 1.9 1.4L21 12"/><path d="M3 12h18v5a1 1 0 0 1-1 1h-1.2a1 1 0 0 1-1-1v-1H6.2v1a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-5Z"/><circle cx="7.5" cy="14.5" r="1"/><circle cx="16.5" cy="14.5" r="1"/></svg></span>
+              <input class="inp" id="model" name="model" type="text" placeholder="e.g. Camry">
+            </div>
+          </div>
+
+          <div class="field">
+            <label class="flabel">Is the vehicle running?</label>
+            <div class="opt-grid" data-radio-group>
+              <label class="opt is-selected">
+                <span class="opt-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5 10 8l4 3 5-4.5"/><path d="M9 16h6"/><circle cx="12" cy="12" r="9"/></svg></span>
+                <span class="opt-text"><strong>Runs &amp; drives</strong><small>Operable</small></span>
+                <input type="radio" name="running" value="yes" checked>
+                <span class="radio"></span>
+              </label>
+              <label class="opt">
+                <span class="opt-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 8v5M12 16h.01"/><circle cx="12" cy="12" r="9"/></svg></span>
+                <span class="opt-text"><strong>Not running</strong><small>Inoperable</small></span>
+                <input type="radio" name="running" value="no">
+                <span class="radio"></span>
+              </label>
+            </div>
+          </div>
+
+          <div class="btn-row">
+            <button type="button" class="btn-ghost" data-back>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 18l-6-6 6-6"/></svg>
+              Back
+            </button>
+            <button type="button" class="btn-primary" data-next>
+              Next: Your Details
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- STEP 3 -->
+        <div class="qstep" data-panel="3">
+          <div class="field">
+            <label class="flabel" for="name">Full Name</label>
+            <div class="input-wrap">
+              <span class="lead"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21v-1a6 6 0 0 1 6-6h4a6 6 0 0 1 6 6v1"/></svg></span>
+              <input class="inp" id="name" name="name" type="text" placeholder="Your name" autocomplete="name" required>
+            </div>
+            <span class="err-msg">Please enter your name.</span>
+          </div>
+          <div class="field">
+            <label class="flabel" for="email">Email</label>
+            <div class="input-wrap">
+              <span class="lead"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></span>
+              <input class="inp" id="email" name="email" type="email" placeholder="you@email.com" autocomplete="email" required>
+            </div>
+            <span class="err-msg">Please enter a valid email.</span>
+          </div>
+          <div class="field">
+            <label class="flabel" for="phone">Phone</label>
+            <div class="input-wrap">
+              <span class="lead"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/></svg></span>
+              <input class="inp" id="phone" name="phone" type="tel" placeholder="(555) 555-5555" autocomplete="tel" required>
+            </div>
+            <span class="err-msg">Please enter a phone number.</span>
+          </div>
+
+          <div class="btn-row">
+            <button type="button" class="btn-ghost" data-back>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 18l-6-6 6-6"/></svg>
+              Back
+            </button>
+            <button type="submit" class="btn-primary">Get My Quote</button>
+          </div>
+
+          <p class="assure">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="11" width="16" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg>
+            No spam — just your quote. Takes about 60 seconds.
+          </p>
+        </div>
+      </form>
+
+      <!-- success -->
+      <div class="quote-success" id="quoteSuccess" aria-live="polite">
+        <div class="success-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></div>
+        <h3>Your quote request is in!</h3>
+        <p>Thanks — a Ship Guy specialist will reach out shortly with your transparent, all-in price.</p>
+        <a class="btn-call" href="tel:+18662803481">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/></svg>
+          Or call us now: (866) 280-3481
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== REVIEWS ===================== -->
+<section class="reviews" id="reviews">
+  <div class="container">
+    <div class="reviews-head">
+      <div>
+        <h2>Verified customer reviews</h2>
+        <p>Trusted by vehicle owners nationwide.</p>
+      </div>
+      <div class="rating">
+        <span class="score">4.9</span>
+        <span class="stars" aria-label="4.9 out of 5 stars">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.06 6.6.79-4.86 4.53 1.27 6.52L12 17.9l-5.9 3.5 1.27-6.52L2.5 9.35l6.6-.79L12 2.5Z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.06 6.6.79-4.86 4.53 1.27 6.52L12 17.9l-5.9 3.5 1.27-6.52L2.5 9.35l6.6-.79L12 2.5Z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.06 6.6.79-4.86 4.53 1.27 6.52L12 17.9l-5.9 3.5 1.27-6.52L2.5 9.35l6.6-.79L12 2.5Z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.06 6.6.79-4.86 4.53 1.27 6.52L12 17.9l-5.9 3.5 1.27-6.52L2.5 9.35l6.6-.79L12 2.5Z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.06 6.6.79-4.86 4.53 1.27 6.52L12 17.9l-5.9 3.5 1.27-6.52L2.5 9.35l6.6-.79L12 2.5Z"/></svg>
+        </span>
+        <span class="count">487+ reviews</span>
+        <span class="divider-v"></span>
+        <span class="gword"><span class="b">G</span><span class="r">o</span><span class="y">o</span><span class="b">g</span><span class="g">l</span><span class="r">e</span></span>
+      </div>
+    </div>
+
+    <div class="review-grid">
+      <article class="review">
+        <div class="review-top">
+          <span class="avatar">JD</span>
+          <div><span class="name">James D.</span><span class="date">May 12, 2024</span></div>
+        </div>
+        <div class="stars" aria-label="5 out of 5">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.06 6.6.79-4.86 4.53 1.27 6.52L12 17.9l-5.9 3.5 1.27-6.52L2.5 9.35l6.6-.79L12 2.5Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.06 6.6.79-4.86 4.53 1.27 6.52L12 17.9l-5.9 3.5 1.27-6.52L2.5 9.35l6.6-.79L12 2.5Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.06 6.6.79-4.86 4.53 1.27 6.52L12 17.9l-5.9 3.5 1.27-6.52L2.5 9.35l6.6-.79L12 2.5Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.06 6.6.79-4.86 4.53 1.27 6.52L12 17.9l-5.9 3.5 1.27-6.52L2.5 9.35l6.6-.79L12 2.5Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.06 6.6.79-4.86 4.53 1.27 6.52L12 17.9l-5.9 3.5 1.27-6.52L2.5 9.35l6.6-.79L12 2.5Z"/></svg>
+        </div>
+        <p>Ship Guy made the whole process easy. Great communication and my car arrived earlier than expected. Highly recommend!</p>
+      </article>
+
+      <article class="review">
+        <div class="review-top">
+          <span class="avatar">SR</span>
+          <div><span class="name">Sarah R.</span><span class="date">April 28, 2024</span></div>
+        </div>
+        <div class="stars" aria-label="5 out of 5">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.06 6.6.79-4.86 4.53 1.27 6.52L12 17.9l-5.9 3.5 1.27-6.52L2.5 9.35l6.6-.79L12 2.5Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.06 6.6.79-4.86 4.53 1.27 6.52L12 17.9l-5.9 3.5 1.27-6.52L2.5 9.35l6.6-.79L12 2.5Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.06 6.6.79-4.86 4.53 1.27 6.52L12 17.9l-5.9 3.5 1.27-6.52L2.5 9.35l6.6-.79L12 2.5Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.06 6.6.79-4.86 4.53 1.27 6.52L12 17.9l-5.9 3.5 1.27-6.52L2.5 9.35l6.6-.79L12 2.5Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.06 6.6.79-4.86 4.53 1.27 6.52L12 17.9l-5.9 3.5 1.27-6.52L2.5 9.35l6.6-.79L12 2.5Z"/></svg>
+        </div>
+        <p>Excellent service from start to finish. The driver was professional and my vehicle arrived in perfect condition.</p>
+      </article>
+
+      <article class="review">
+        <div class="review-top">
+          <span class="avatar">MT</span>
+          <div><span class="name">Michael T.</span><span class="date">April 15, 2024</span></div>
+        </div>
+        <div class="stars" aria-label="5 out of 5">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.06 6.6.79-4.86 4.53 1.27 6.52L12 17.9l-5.9 3.5 1.27-6.52L2.5 9.35l6.6-.79L12 2.5Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.06 6.6.79-4.86 4.53 1.27 6.52L12 17.9l-5.9 3.5 1.27-6.52L2.5 9.35l6.6-.79L12 2.5Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.06 6.6.79-4.86 4.53 1.27 6.52L12 17.9l-5.9 3.5 1.27-6.52L2.5 9.35l6.6-.79L12 2.5Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.06 6.6.79-4.86 4.53 1.27 6.52L12 17.9l-5.9 3.5 1.27-6.52L2.5 9.35l6.6-.79L12 2.5Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.06 6.6.79-4.86 4.53 1.27 6.52L12 17.9l-5.9 3.5 1.27-6.52L2.5 9.35l6.6-.79L12 2.5Z"/></svg>
+        </div>
+        <p>Fast quote, fair price, and they kept me updated throughout the entire delivery. Will definitely use again.</p>
+      </article>
+
+      <article class="review">
+        <div class="review-top">
+          <span class="avatar">KB</span>
+          <div><span class="name">Kelsey B.</span><span class="date">March 30, 2024</span></div>
+        </div>
+        <div class="stars" aria-label="5 out of 5">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.06 6.6.79-4.86 4.53 1.27 6.52L12 17.9l-5.9 3.5 1.27-6.52L2.5 9.35l6.6-.79L12 2.5Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.06 6.6.79-4.86 4.53 1.27 6.52L12 17.9l-5.9 3.5 1.27-6.52L2.5 9.35l6.6-.79L12 2.5Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.06 6.6.79-4.86 4.53 1.27 6.52L12 17.9l-5.9 3.5 1.27-6.52L2.5 9.35l6.6-.79L12 2.5Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.06 6.6.79-4.86 4.53 1.27 6.52L12 17.9l-5.9 3.5 1.27-6.52L2.5 9.35l6.6-.79L12 2.5Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.06 6.6.79-4.86 4.53 1.27 6.52L12 17.9l-5.9 3.5 1.27-6.52L2.5 9.35l6.6-.79L12 2.5Z"/></svg>
+        </div>
+        <p>Shipped my SUV cross-country with no issues. The team was responsive and the experience was smooth.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+
+<!-- ===================== STATE CONTENT ===================== -->
+<section class="article-section"><div class="container article">
+  <nav class="crumbs" aria-label="Breadcrumb"><a href="index.html">Home</a><span>/</span><span aria-current="page">Maryland Auto Transport</span></nav>
+  <h2>Maryland Auto Transport Services by Ship Guy</h2>
+  <p>Ship Guy specializes in Maryland auto transport services for customers who need reliable, insured vehicle shipping in and out of the state. Whether you are buying a car online, relocating for work, or heading south for the winter, Ship Guy handles the logistics so you can focus on everything else.</p>
+  <p>We provide Maryland car shipping services for standard sedans, SUVs, trucks, classic cars, and small dealer fleets. Every shipment is covered by carrier liability insurance, and our team coordinates directly with vetted drivers to keep the process straightforward from start to finish.</p>
+  <p>Ship Guy offers two primary shipping methods: open-car shipping, the most common and affordable option, and enclosed-car transport for high-value or specialty vehicles. Customers can also choose between standard service, which provides flexible pickup windows, and expedited shipping for time-sensitive moves that require faster turnaround.</p>
+  <p>Our team regularly handles popular Maryland routes, including Baltimore-to-New York, Maryland-to-Florida car shipping for seasonal snowbirds, cross-country moves to California and Texas, and shorter runs along the East Coast corridor. We also serve military families stationed at Fort Meade, Aberdeen, and Patuxent River who need vehicles moved during permanent change-of-station orders.</p>
+  <h2>Auto Transport To and From Maryland Made Simple</h2>
+  <p>Ship Guy makes auto transport to or from Maryland straightforward, whether your car is being picked up in Baltimore, Annapolis, Frederick, or a smaller community off the main highways. We handle the coordination so you get a hassle-free experience from the first quote to final delivery.</p>
+  <p>The auto transport process has three main steps: quote, pickup, and delivery. You start by requesting a quote with your vehicle details and preferred dates. Once you confirm the booking, Ship Guy assigns a carrier, and your car is picked up within the agreed window. The carrier then transports the vehicle to your delivery destination, where you inspect it and sign off.</p>
+  <p>Transit times typically run 1 to 3 days for surrounding East Coast states such as New York, Virginia, and Pennsylvania. For longer routes, transit time for Maryland car shipping can take 1 to 10 days, depending on distance and the specific route.</p>
+  <p>Ship Guy coordinates logistics, scheduling, and communication with the carrier so you never have to chase down a driver for updates. We offer door-to-door service wherever it is safely accessible, meaning the carrier picks up and delivers the vehicle to your specified location. Door-to-door shipping eliminates extra mileage on your vehicle, which matters if you are shipping a classic car or a recent purchase you want to keep in pristine condition. In tight urban areas like downtown Baltimore or Silver Spring, the carrier may arrange a nearby meet-up point if large trailers cannot safely navigate narrow streets.</p>
+  <p>Customers receive status updates throughout the trip and can contact our support team if plans change, delivery locations shift, or any questions arise.</p>
+  <h2>TopRated Maryland Auto Transport Experts at Ship Guy</h2>
+  <p>Ship Guy is a trusted auto transport company for Maryland residents, dealerships, and anyone who needs a vehicle moved reliably. We bring over a decade of nationwide auto transport expertise, including deep familiarity with Maryland corridors and the seasonal demand patterns that shape pricing and availability in the region.</p>
+  <p>Our network of vetted, insured carriers regularly serves Maryland&#x27;s major highways, including I-95, I-70, and I-83. Companies must be licensed and registered with the U.S. Department of Transportation to operate as auto carriers, and every driver in our network meets those federal requirements along with our own screening standards.</p>
+  <p>What makes Ship Guy stand out among car shipping companies is a combination of responsive customer service, clear pricing with no hidden fees, and careful vehicle handling from pickup to drop-off locations. We serve major Maryland cities like Baltimore, Rockville, Gaithersburg, and Hagerstown, as well as smaller communities across the state. Whether you are shipping from a suburban driveway in Columbia or a dealership lot in Ocean City, Ship Guy has a proven track record of getting it done.</p>
+  <h2>How Maryland Auto Shipping with Ship Guy Works</h2>
+  <p>Ship Guy keeps the Maryland auto shipping process simple and transparent. Here is how it works from start to finish.</p>
+  <p>The process begins when you request an instant quote by providing your vehicle details, the pickup ZIP code (for example, 21201 for Baltimore), the delivery ZIP code, and your preferred pickup date. Ship Guy&#x27;s team reviews the information and returns a firm estimate that reflects your specific route, vehicle type, and service level.</p>
+  <p>Once you are ready to move forward, you confirm the booking and sign the transport agreement. At that point, you receive an estimated pickup window and delivery timeframe based on your route&#x27;s distance and the carrier&#x27;s availability. Ship Guy then assigns a carrier from our vetted network.</p>
+  <p>On pickup day, the driver completes a vehicle inspection report documenting the car&#x27;s current condition, including any existing dings, scratches, or cosmetic wear. The car is loaded onto the carrier, and transport begins. Throughout the trip, Ship Guy remains your main point of contact, providing updates and handling any adjustments.</p>
+  <p>At the delivery destination, whether that is in Maryland or another state, you inspect the vehicle against the original condition report, sign the bill of lading, and complete payment per the agreed terms. Ship Guy oversees each step so you have a single, reliable team managing the entire shipment.</p>
+  <h2>Maryland Car Transport Options and Services</h2>
+  <p>Ship Guy offers multiple car shipping options tailored to different vehicle types, budgets, and timelines. No two moves are exactly alike, so we provide flexibility in how your car is shipped and how quickly it arrives.</p>
+  <p>Our main service categories include open car transport, enclosed auto shipping, standard scheduling, and expedited service for time-sensitive moves. Both door-to-door and terminal-style meet-up options are available, depending on the route and carrier. Terminal-to-terminal shipping is often cheaper than door-to-door, making it a solid choice for budget-conscious customers who can arrange their own drop-off or pickup at a staging location.</p>
+  <p>We accommodate personal moves, college relocations, dealer trades, military moves, and seasonal Maryland car transport for snowbirds heading to Florida or returning north in the spring. Car shipping services in Maryland cover everything from a single sedan to multi-vehicle dealer shipments.</p>
+  <h2>Open Car Transport in Maryland</h2>
+  <p>Open car transport is the most common and affordable way to ship a vehicle in Maryland.</p>
+  <p>With open car shipping, vehicles travel on open multi-car carriers, the same type of trucks used to deliver new cars from factories to dealerships across the country. These carriers typically hold 7 to 10 vehicles and run consistent routes along high-traffic corridors.</p>
+  <p>This option is ideal for everyday vehicles-sedans, SUVs, crossovers, and pickups-and works well for most long-distance routes such as Maryland to Texas, Maryland to Georgia, or Maryland to Illinois. Open car shipping is the most affordable option, making it the go-to choice for most customers.</p>
+  <p>Vehicles on open carriers are exposed to weather conditions and road dust during transit, but drivers secure each car with professional tie-downs and wheel straps. Millions of vehicles are shipped this way every year, and it remains the industry standard for good reason.</p>
+  <h2>Enclosed Auto Shipping for HighValue Vehicles</h2>
+  <p>Enclosed car transport is the premium option for luxury, classic, or specialty vehicles that need extra protection during shipping.</p>
+  <p>With enclosed transport, vehicles ride inside hard-sided or soft-sided trailers, fully shielded from rain, snow, road debris, and salt spray. This shipping method is particularly valuable during Maryland winters, when road salt on I-95 can cause corrosion on exposed finishes.</p>
+  <p>For example, if you are shipping a restored 1969 Mustang from Bethesda to Miami, enclosed auto shipping keeps the paint, chrome, and undercarriage protected throughout the trip. Carriers offering enclosed service often provide higher insurance coverage, sometimes up to $1,000,000, compared to standard open transport policies.</p>
+  <p>Enclosed transport protects vehicles from weather and road debris, but it typically costs 30 to 60 percent more than open car shipping. The trade-off is worth it for high-value cars, where even minor cosmetic damage could result in a significant loss. Enclosed transport is recommended for high-value or luxury vehicles that justify the added investment.</p>
+  <h2>Expedited and TimeSensitive Maryland Auto Transport</h2>
+  <p>Ship Guy can arrange expedited shipping for urgent moves to or from Maryland when standard timelines do not fit your schedule.</p>
+  <p>Expedited car shipping is useful in several scenarios: job relocations with a firm start date, military reassignments with short notice deadlines, or online auction purchases that require the car to be picked up within a narrow window. It is also helpful for dealerships that need a vehicle delivered on a specific day to close a sale.</p>
+  <p>Expedited service focuses on faster pickup windows, often within 24 to 48 hours, and more direct routing to minimize transit time. Availability depends on carrier schedules and the specific route, so Ship Guy provides realistic delivery times based on distance. A Maryland-to-Ohio shipment on expedited service will move faster than a Maryland-to-California route simply because of the shorter distance.</p>
+  <p>Expedited shipping offers faster delivery than standard shipping, but it comes with a premium, typically 20 to 40 percent above standard rates. For customers who can be flexible on dates, standard service remains the cheapest way to ship. For those who cannot wait, expedited gets the job done.</p>
+  <h2>Maryland Car Shipping Costs and Instant Quote Guide</h2>
+  <p>Ship Guy provides transparent pricing and a straightforward process for Maryland customers who want to know exactly what they are paying before they commit.</p>
+  <p>Several other factors influence Maryland car shipping costs. Distance is the biggest driver: a shipment from Baltimore to Orlando covers roughly 850 miles and costs significantly less than a Baltimore-to-Los Angeles run at nearly 2,700 miles. Vehicle size and weight matter as well, since SUVs and trucks take up more trailer space and use more fuel than a compact sedan. Whether the car is operable or needs a winch for loading, the choice between open and enclosed transport, and the time of year all play a role.</p>
+  <p>Here is how per-mile pricing typically breaks down:</p>
+  <div class="table-wrap"><table><tbody><tr><td>Under 200 miles</td><td>$2.92 per mile</td></tr><tr><td>200–1,000 miles</td><td>$1.00–$1.50 per mile</td></tr><tr><td>Over 1,000 miles</td><td>$0.78 per mile</td></tr></tbody></table></div>
+  <p>This means longer routes have a higher total cost but a lower per-mile rate, which is why cross-country moves are more economical per mile than short-haul moves.</p>
+  <p>Seasonal demand also affects car shipping costs. Fall and spring snowbird traffic between Maryland and Florida creates capacity pressure along I-95, pushing prices higher during October, November, March, and April. Booking early, ideally several weeks before your preferred pickup date, helps lock in better rates.</p>
+  <p>Ship Guy&#x27;s team can provide a firm estimate before booking. Request an instant quote with your pickup location, delivery destination, and vehicle type to get started.</p>
+  <h2>Typical Routes and Example Maryland Car Shipping Prices</h2>
+  <p>To give you a concrete sense of what Maryland shipping typically costs, here are several common routes with approximate distances and price ranges for standard open transport.</p>
+  <p><strong>The route from Baltimore, MD, to Orlando, FL</strong> covers about 850-900 miles. This is one of the most popular Florida car shipping routes for snowbirds and retirees, and standard open transport typically runs $700 to $900 for a sedan. During peak snowbird season in the fall, expect prices to climb toward the higher end of that range.</p>
+  <p><strong>Baltimore, MD, to Chicago, IL</strong> is roughly 700-750 miles. Pricing for this mid-distance route generally ranges from $900 to $1,100, depending on vehicle type and season. The route benefits from strong carrier traffic through Pennsylvania and Ohio, which helps maintain steady availability.</p>
+  <p><strong>Rockville, MD, to Dallas, TX</strong> spans about 1,300 to 1,400 miles. Shipping a vehicle 1,400 miles costs roughly $1,108 on average for open transport, though final pricing depends on the specific vehicle and pickup timing. For reference, shipping a car from Texas to Maryland costs $1,600 to $1,900, reflecting the directional imbalance in demand on that corridor.</p>
+  <p>For shorter runs, shipping a car from Maryland to New York costs $550 to $590, making it one of the more affordable routes due to the short distance and heavy carrier traffic along I-95.</p>
+  <p>Urban pickups in downtown Baltimore or Silver Spring may carry a modest access adjustment if the carrier needs to navigate tight streets or low-clearance areas. Suburban and highway-adjacent pickups in places like Columbia or Frederick are typically the easiest for carriers to reach.</p>
+  <p>The final price is confirmed at booking, and Ship Guy avoids surprise add-on fees for standard service. The earlier customers book, the easier it is to secure favorable rates and preferred dates, especially during peak seasons.</p>
+  <h2>How to Ship a Car in Maryland with Ship Guy</h2>
+  <p>If you have never used a car transport service before, the idea of handing your vehicle to a carrier can feel unfamiliar. Ship Guy makes the process straightforward for first-time shippers in Maryland and experienced customers alike.</p>
+  <p>The process follows a clear path: research your car shipping options, request a quote, schedule your shipment, prepare your vehicle, hand it off at pickup, and receive it at delivery. Ship Guy helps customers compare open vs. enclosed and standard vs. expedited options based on their budget, timeline, and the value of the vehicle being shipped.</p>
+  <p>The same process applies whether you are relocating a car within Maryland, such as from Hagerstown to Annapolis near the Naval Academy, or shipping across the country to Colorado or California. Before requesting a quote, gather accurate vehicle info, including year, make, model, running condition, and any modifications, so Ship Guy can provide precise Maryland car shipping quotes.</p>
+  <h2>StepbyStep Process for Maryland Auto Transport</h2>
+  <p>Getting started with Ship Guy is simple. You can contact us through our online form, by phone, or by email. Have the following information ready: pickup and delivery addresses, your earliest available pickup date, vehicle year, make, and model, whether the car is operable, and any special instructions such as enclosed transport or expedited timing.</p>
+  <p>After booking, you receive confirmation emails with your approximate pickup window. For standard service, the window is typically 1 to 7 days, depending on the route and carrier availability. The assigned driver contacts you directly as the pickup date approaches to confirm timing and logistics.</p>
+  <p>On vehicle handoff day in Maryland, the driver conducts a thorough inspection, noting the car&#x27;s condition on the bill of lading. This includes documenting any existing scratches, dents, or chips. The driver records the odometer reading and takes notes on the overall condition. You sign the inspection report, and the car is loaded for transport.</p>
+  <p>During transit, Ship Guy provides tracking updates so you know where your vehicle is. On delivery day, whether in Maryland or at a distant delivery destination, you perform a walk-around inspection, compare the vehicle to the original condition report, and sign the final paperwork. If everything checks out, you complete payment per the agreed terms and drive away.</p>
+  <h2>Preparing Your Vehicle for Maryland Car Shipping</h2>
+  <p>Proper preparation protects your vehicle and speeds up both pickup and delivery. Taking 30 minutes before your car is picked up can prevent headaches down the road.</p>
+  <p>Start by washing the car. A clean vehicle makes it easier to spot and document existing damage before the driver arrives. Clean your vehicle to reveal existing damage so nothing is missed during the pre-shipping inspection.</p>
+  <p>Remove personal items weighing over 100 lbs from the vehicle. Most carriers prohibit heavy personal belongings because they add weight, shift during transit, and are not covered by the carrier&#x27;s cargo insurance. Remove personal items, such as gym equipment, boxes, or tools, from the trunk and interior. Ship Guy recommends keeping the cabin and trunk clear of anything that is not permanently attached.</p>
+  <p>Secure or remove any loose parts, including aftermarket spoilers, bike racks, and retractable antennas. These can catch wind or snag during loading and unloading. Check fluids and battery charge to ensure the vehicle is drivable. Confirm proper tire pressure and keep the fuel tank at about a quarter tank for loading and unloading. A quarter tank provides enough fuel for the driver to maneuver the car on and off the trailer without adding unnecessary weight.t.</p>
+  <p>Disable any security systems that may interfere during transport, such as aftermarket alarms that could be triggered by trailer vibrations. Remove parking permits or toll passes you do not want misplaced, and provide the driver with a spare key.</p>
+  <p>Maryland&#x27;s weather is another reason to document exterior conditions carefully. Winter road salt and summer storms can leave marks that might be mistaken for transport damage if not photographed beforehand. Take photos of your vehicle&#x27;s condition before shipping, covering all four sides, the roof, and the undercarriage if possible.</p>
+  <h2>Inspection, Documentation, and Delivery in Maryland</h2>
+  <p>The pre-shipping and post-delivery inspections are the most important steps for protecting both you and the carrier.</p>
+  <p>At pickup, you and the driver complete a detailed condition report together. This document captures every existing ding, chip, scratch, and area of wear on the vehicle. Both parties sign it, and it becomes the baseline for the shipment. Take date-stamped photos at this stage as a backup to the written report.</p>
+  <p>Upon delivery in Maryland or at your destination, repeat a careful walk-around inspection. Compare the car to the original report, checking every panel, the windshield, mirrors, wheels, and undercarriage. If you notice any new damage that was clearly not present at pickup, document it immediately and note it on the bill of lading before the driver leaves.</p>
+  <p>Report concerns to Ship Guy right away. Car shipping companies provide liability insurance for transported vehicles, but filing a successful claim requires clear documentation of new damage, including photos, timestamps, and a signed condition report. Adequate insurance coverage for vehicles should be confirmed before shipping, so ask about the carrier&#x27;s policy limits during the booking process.</p>
+  <p>Sign the final delivery paperwork and retain copies of all documents, including the bill of lading and the condition report. These records are essential for any potential insurance claim and serve as your proof of the vehicle&#x27;s condition at both ends of the trip.</p>
+  <h2>Why Choose Ship Guy for Maryland Auto Transport</h2>
+  <p>Maryland drivers, dealerships, and relocating families choose Ship Guy over generic brokers because we combine carrier quality with genuine customer support. Choosing an auto transport company requires checking for industry accreditation and verified reviews, and Ship Guy welcomes that scrutiny.</p>
+  <p>Here is what sets us apart:</p>
+  <ul>
+    <li><strong>Vetted carrier network</strong> - Every driver meets FMCSA licensing requirements and carries proper cargo insurance.</li>
+    <li><strong>Door-to-door convenience</strong> - Door-to-door service picks up and delivers vehicles at your location, eliminating the need to drive to a terminal.</li>
+    <li><strong>Transparent pricing</strong> - No bait-and-switch quotes. The price you confirm at booking is the price you pay.</li>
+    <li><strong>Responsive support</strong> - Real people answer your calls and emails from quote to delivery, keeping the experience stress-free.Ship Guy has deep experience on popular Maryland routes, including regular Maryland auto-to-Florida flows for snowbirds, northeast corridor moves to Washington, New York, and beyond, and cross-country shipments to California, Colorado, and Georgia. We also handle inbound shipping for customers relocating to Maryland or purchasing vehicles from out-of-state sellers.</li>
+  </ul>
+  <p>We focus on safety, communication, and on-time performance rather than simply offering the lowest possible rate. A rock-bottom price means nothing if your car arrives late, damaged, or with a carrier who does not answer the phone.</p>
+  <p>If you are ready to ship a car in Maryland, request an instant quote from Ship Guy or call our team to discuss your specific needs. We will walk you through your car shipping options, confirm your shipping rates, and get your vehicle delivered on schedule.</p>
 </div></section>
+
+<!-- ===================== WHAT WE SHIP ===================== -->
+<section class="ship-section" id="services">
+  <div class="container">
+    <div class="ship-head">
+      <p class="ship-eyebrow">What We Ship</p>
+      <h2>We Ship More Than Cars</h2>
+      <p class="ship-sub">Nationwide transport solutions for vehicles, household goods, equipment, and freight.</p>
+    </div>
+
+    <div class="ship-grid">
+      <article class="ship-card">
+        <div class="ship-img"><img src="assets/ship-vehicles.jpg" alt="Blue auto-transport carrier loaded with cars and a boat on a mountain highway" loading="lazy"></div>
+        <div class="ship-body">
+          <h3>Vehicles &amp; Boats</h3>
+          <p>Cars, trucks, motorcycles, RVs, and boats shipped nationwide.</p>
+          <a class="ship-link" href="#">Learn More <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </div>
+      </article>
+
+      <article class="ship-card">
+        <div class="ship-img"><img src="assets/ship-household.jpg" alt="Living room with a sofa and packed moving boxes ready for transport" loading="lazy"></div>
+        <div class="ship-body">
+          <h3>Household Items</h3>
+          <p>Furniture, boxes, and personal items moved with care.</p>
+          <a class="ship-link" href="#">Learn More <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </div>
+      </article>
+
+      <article class="ship-card">
+        <div class="ship-img"><img src="assets/ship-equipment.jpg" alt="Green tractor secured on a flatbed trailer for heavy equipment transport" loading="lazy"></div>
+        <div class="ship-body">
+          <h3>Heavy Equipment</h3>
+          <p>Tractors, machinery, and oversized equipment transport.</p>
+          <a class="ship-link" href="#">Learn More <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </div>
+      </article>
+
+      <article class="ship-card">
+        <div class="ship-img"><img src="assets/ship-freight.jpg" alt="Palletized and shrink-wrapped cargo in a warehouse for freight shipping" loading="lazy"></div>
+        <div class="ship-body">
+          <h3>Freight</h3>
+          <p>Palletized cargo, crates, and commercial freight shipping.</p>
+          <a class="ship-link" href="#">Learn More <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FAQ ===================== -->
+<section class="faq-section" id="faq">
+  <div class="container">
+    <div class="faq-head">
+      <p class="faq-eyebrow">Questions?</p>
+      <h2>Frequently Asked Questions</h2>
+      <span class="faq-accent" aria-hidden="true"></span>
+      <p class="faq-sub">Everything you need to know before you ship.</p>
+    </div>
+
+    <div class="faq-list">
+      <details class="faq-item" open>
+        <summary class="faq-q">How much does it cost to ship a vehicle?
+          <span class="faq-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></span>
+        </summary>
+        <div class="faq-a">Your price depends on the distance, vehicle size, transport type (open or enclosed), and how quickly you need it. We give you an upfront, all-in quote with no hidden fees — the number you see is the number you pay.</div>
+      </details>
+
+      <details class="faq-item">
+        <summary class="faq-q">How long will my shipment take?
+          <span class="faq-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></span>
+        </summary>
+        <div class="faq-a">Transit time depends on the route and distance. Once your vehicle is dispatched, we share an estimated delivery window and keep you updated from pickup to drop-off. Longer cross-country routes naturally take more time than regional moves.</div>
+      </details>
+
+      <details class="faq-item">
+        <summary class="faq-q">Is my vehicle insured during transport?
+          <span class="faq-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></span>
+        </summary>
+        <div class="faq-a">Yes. We only work with licensed, vetted carriers that carry active cargo insurance, and your vehicle is covered while it's on the truck. We're happy to share coverage details before you book.</div>
+      </details>
+
+      <details class="faq-item">
+        <summary class="faq-q">What's the difference between open and enclosed transport?
+          <span class="faq-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></span>
+        </summary>
+        <div class="faq-a">Open transport is the most common and most affordable option and is safe for everyday vehicles. Enclosed transport adds extra protection from weather and road debris — a great choice for classic, luxury, or high-value vehicles.</div>
+      </details>
+
+      <details class="faq-item">
+        <summary class="faq-q">Do I have to pay a deposit upfront?
+          <span class="faq-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></span>
+        </summary>
+        <div class="faq-a">No. You don't pay until your vehicle is assigned and dispatched to a carrier — so there's no risk in getting a quote and booking your shipment.</div>
+      </details>
+
+      <details class="faq-item">
+        <summary class="faq-q">Can you ship a vehicle that doesn't run?
+          <span class="faq-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></span>
+        </summary>
+        <div class="faq-a">Yes. We transport both operable and inoperable (non-running) vehicles — just let us know when you book so we assign a carrier with the right equipment, such as a winch.</div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== LOCAL / CONTACT ===================== -->
+<section class="local-section" id="contact-local">
+  <div class="container">
+    <div class="local-grid">
+      <div class="local-info">
+        <p class="local-eyebrow">Get Started</p>
+        <h2>Ship Your Car To or From Maryland Today</h2>
+        <p class="local-lede">Call now or request a free quote. Transparent all-in pricing, no upfront deposit, vetted carriers, and 24/7 U.S.-based support.</p>
+        <div class="local-actions">
+          <a class="btn-call-lg" href="tel:+18662803481"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/></svg> Call (866) 280-3481</a>
+          <a class="btn-quote-lg" href="#top">Get a Free Quote <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </div>
+        <ul class="local-contact">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg><span>Serving all of Maryland — door-to-door, statewide</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg><span>Ship Guy — Nationwide Auto Transport &nbsp;<em style="color:#9098b0">(add your business address)</em></span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/></svg><a href="tel:+18662803481">(866) 280-3481</a></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg><a href="mailto:quotes@shipguy.com">quotes@shipguy.com</a></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span>Open 24/7 — quotes &amp; support</span></li>
+        </ul>
+        <div class="local-social" aria-label="Follow Ship Guy"><a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.07C24 5.4 18.63 0 12 0S0 5.4 0 12.07C0 18.1 4.39 23.1 10.13 24v-8.44H7.08v-3.49h3.05V9.41c0-3.02 1.79-4.69 4.53-4.69 1.31 0 2.68.24 2.68.24v2.97h-1.51c-1.49 0-1.96.93-1.96 1.89v2.25h3.33l-.53 3.49h-2.8V24C19.61 23.1 24 18.1 24 12.07z"/></svg></a><a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5.5"/><circle cx="12" cy="12" r="4.2"/><line x1="17.6" y1="6.4" x2="17.61" y2="6.4"/></svg></a><a href="#" aria-label="X"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231 5.45-6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a><a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg></a></div>
+      </div>
+      <div class="local-map">
+        <iframe title="Maryland auto transport service area" src="https://www.google.com/maps?q=Maryland%2C%20USA&z=6&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+</section>
 
 <!-- ===================== FINAL CTA ===================== -->
 <section class="cta-band" id="get-started">
@@ -838,11 +1353,14 @@ body.ready .reveal{opacity:1;transform:none}
     <h2>Ready to Ship Your Vehicle?</h2>
     <p class="cta-sub">Get a free, no-obligation quote in about 60 seconds — or call and talk to a real specialist right now.</p>
     <div class="cta-actions">
-      <a class="cta-primary" href="index.html#top">Get Your Free Quote
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      <a class="cta-primary" href="#top">
+        Get Your Free Quote
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
       <a class="cta-secondary" href="tel:+18662803481">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/></svg>
-        (866) 280-3481</a>
+        (866) 280-3481
+      </a>
     </div>
     <ul class="cta-trust">
       <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Licensed &amp; insured</li>
@@ -873,9 +1391,9 @@ body.ready .reveal{opacity:1;transform:none}
       <h4>Company</h4>
       <ul>
         <li><a href="how-it-works.html">How It Works</a></li>
-        <li><a href="index.html#reviews">Reviews</a></li>
-        <li><a href="index.html#faq">FAQ</a></li>
-        <li><a href="index.html#contact">Contact</a></li>
+        <li><a href="#reviews">Reviews</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#contact">Contact</a></li>
       </ul>
     </div>
     <div class="f-col">

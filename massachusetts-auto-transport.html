@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Cross-Country Car Shipping — Coast-to-Coast Auto Transport | Ship Guy</title>
-<meta name="description" content="Cross-country car shipping coast to coast. Learn how long-distance auto transport works, how long it takes, what it costs, popular routes, and how to choose a transporter.">
+<title>Massachusetts Auto Transport with Ship Guy</title>
+<meta name="description" content="Shipping a car to or from Massachusetts doesn&#x27;t have to be complicated. Whether you&#x27;re relocating for a new job, buying a vehicle out of state, or heading…">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
@@ -273,7 +273,7 @@ select.inp{appearance:none;-webkit-appearance:none;padding-right:38px;cursor:poi
 .reviews-head{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;flex-wrap:wrap;margin-bottom:30px}
 .reviews-head h2{font-size:clamp(1.7rem,2.6vw,2.1rem);font-weight:800;color:var(--brand)}
 .reviews-head p{margin:8px 0 0;color:var(--muted);font-size:15.5px}
-.rating{display:flex;align-items:center;gap:12px}
+.rating{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
 .rating .score{font-family:var(--font-display);font-weight:800;font-size:22px;color:var(--ink)}
 .stars{display:inline-flex;gap:2px;color:var(--star)}
 .stars svg{width:18px;height:18px}
@@ -480,10 +480,15 @@ section[id]{scroll-margin-top:104px}
    Responsive
    ========================================================= */
 @media (max-width:1180px){
-  .hero-grid{grid-template-columns:minmax(0,1fr);gap:36px;padding:54px 24px 60px}
-  .hero-copy{max-width:640px}
+  .hero-grid{grid-template-columns:minmax(0,1fr);gap:28px;padding:54px 24px 60px}
+  .hero-copy{display:contents}
+  .hero-head,.hero-rest{max-width:640px;width:100%}
+  .hero-head{order:1}
+  .quote-card{order:2;max-width:520px;width:100%}
+  .hero-rest{order:3}
+  .hero-head h1{margin-bottom:0}
+  .eyebrow{display:none}
   .lede{max-width:520px}
-  .quote-card{max-width:520px;width:100%}
   .hero-overlay{background:linear-gradient(180deg, rgba(4,9,22,.72) 0%, rgba(4,9,22,.8) 55%, rgba(4,9,22,.88) 100%)}
 }
 @media (max-width:1180px){
@@ -504,6 +509,7 @@ section[id]{scroll-margin-top:104px}
 @media (max-width:980px){
   .wc-bento{grid-template-columns:1fr}
   .loc-bento{grid-template-columns:1fr;gap:32px}
+  .review-grid{grid-template-columns:1fr 1fr}
 }
 @media (max-width:880px){
   .steps-row{flex-direction:column;gap:0;max-width:440px;margin:0 auto}
@@ -544,6 +550,31 @@ section[id]{scroll-margin-top:104px}
   .step .slabel{font-size:11.5px}
 }
 
+/* compact hero on laptop screens only (~25% shorter) */
+@media (min-width:1181px) and (max-width:1600px){
+  .hero-grid{padding-top:34px;padding-bottom:40px;gap:40px}
+  .eyebrow{margin-bottom:12px}
+  .hero-copy h1{font-size:clamp(2rem,3vw,2.5rem);margin-bottom:14px}
+  .lede{font-size:15.5px;margin-bottom:18px}
+  .trust-list{margin-bottom:16px;gap:9px}
+  .trust-list li{font-size:14.5px}
+  .trust-ic{width:30px;height:30px}
+  .trust-ic svg{width:17px;height:17px}
+  .hero-divider{margin-bottom:16px}
+  .stat .num{font-size:26px}
+  .stat .lbl{font-size:12px;margin-top:5px}
+  .quote-card{padding:20px 24px 18px}
+  .quote-card h2{font-size:22px;margin-bottom:13px}
+  .steps{margin-bottom:13px}
+  .step .dot{width:30px;height:30px}
+  .field{margin-bottom:9px}
+  .flabel{margin-bottom:4px}
+  .inp{height:40px}
+  .opt{padding:8px 12px}
+  .btn-primary{height:46px}
+  .assure{margin-top:8px}
+}
+
 /* reduced motion */
 @media (prefers-reduced-motion:reduce){
   *{animation-duration:.001ms!important;transition-duration:.001ms!important}
@@ -558,6 +589,9 @@ body.ready .reveal{opacity:1;transform:none}
 
 .menu.menu-mega{display:grid;grid-template-columns:repeat(3,1fr);column-gap:4px;min-width:528px;max-height:64vh;overflow-y:auto}
 .menu.menu-mega .menu-all{grid-column:1 / -1;margin-top:6px;padding-top:12px;border-top:1px solid var(--line);color:var(--brand);font-weight:700}
+
+@media (max-width:460px){.footer-top{grid-template-columns:1fr;gap:28px}}/* resp-polish-footer */
+.footer-states{display:flex;flex-wrap:wrap;gap:9px 20px;align-items:center;padding:20px 0 2px;margin-top:6px;border-top:1px solid rgba(255,255,255,.10)}.footer-states .fs-label{color:#fff;font-weight:700;font-size:14px}.footer-states a{font-size:14px;color:#9aa6c6;transition:color .15s ease}.footer-states a:hover{color:#fff}/* footer-states */
 /* ===== Subpage / article / services styles ===== */
 .page-hero{background:linear-gradient(135deg,#0a2a9e 0%, var(--brand) 60%, #1f54e0 100%);color:#fff;padding:62px 0 56px}
 .crumbs{display:flex;flex-wrap:wrap;gap:9px;font-size:13.5px;font-weight:600;color:#bcd2f8;margin-bottom:16px}
@@ -597,17 +631,41 @@ body.ready .reveal{opacity:1;transform:none}
 @media (max-width:900px){.svc-grid{grid-template-columns:1fr 1fr}.related-grid{grid-template-columns:1fr 1fr}}
 @media (max-width:560px){.svc-grid{grid-template-columns:1fr}.related-grid{grid-template-columns:1fr}}
 
+.article table{width:100%;border-collapse:collapse;margin:16px 0 22px;font-size:15px}
+.article table td,.article table th{border:1px solid var(--line);padding:10px 14px;text-align:left;vertical-align:top}
+.article table tr:nth-child(even){background:#f7f9fd}
+.article table td:first-child{font-weight:600;color:#101a3d}
+.table-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:0 0 6px}
+.article h2{margin-top:30px}
+.local-section{background:#fff;padding:58px 0;border-top:1px solid var(--line)}
+.local-grid{display:grid;grid-template-columns:1fr 1fr;gap:42px;align-items:stretch}
+.local-eyebrow{font-family:var(--font-display);font-weight:800;letter-spacing:.14em;text-transform:uppercase;font-size:12.5px;color:var(--brand)}
+.local-info h2{font-family:var(--font-display);font-weight:800;font-size:clamp(1.5rem,2.4vw,2rem);color:#101a3d;margin:8px 0 10px}
+.local-lede{color:var(--ink-2);font-size:16px;line-height:1.6;margin:0 0 22px;max-width:480px}
+.local-actions{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:24px}
+.btn-call-lg{display:inline-flex;align-items:center;gap:9px;background:var(--brand);color:#fff;font-weight:700;font-size:16px;padding:13px 22px;border-radius:999px;box-shadow:0 10px 24px -12px rgba(11,52,192,.8);transition:background .15s ease,transform .15s ease}
+.btn-call-lg:hover{background:var(--brand-press);transform:translateY(-1px)}
+.btn-quote-lg{display:inline-flex;align-items:center;gap:8px;background:#fff;color:var(--brand-deep);font-weight:700;font-size:16px;padding:13px 22px;border-radius:999px;border:2px solid var(--brand);transition:background .15s ease}
+.btn-quote-lg:hover{background:var(--brand-tint)}
+.btn-call-lg svg,.btn-quote-lg svg{width:18px;height:18px}
+.local-contact{list-style:none;margin:0 0 20px;padding:0;display:grid;gap:12px}
+.local-contact li{display:flex;align-items:flex-start;gap:11px;color:var(--ink-2);font-size:15.5px;line-height:1.45}
+.local-contact li svg{width:19px;height:19px;color:var(--brand);flex:0 0 auto;margin-top:1px}
+.local-contact a{color:var(--ink-2)}.local-contact a:hover{color:var(--brand)}
+.local-social{display:flex;gap:12px}
+.local-social a{display:inline-flex;align-items:center;justify-content:center;width:42px;height:42px;border-radius:11px;background:var(--brand-tint);color:var(--brand-deep);transition:background .15s ease,color .15s ease}
+.local-social a:hover{background:var(--brand);color:#fff}
+.local-social svg{width:20px;height:20px}
+.local-map{border-radius:16px;overflow:hidden;box-shadow:0 18px 40px -24px rgba(13,26,80,.55);border:1px solid var(--line);min-height:420px;background:#eef2fe}
+.local-map iframe{width:100%;height:100%;min-height:420px;border:0;display:block}
+@media (max-width:860px){.local-grid{grid-template-columns:1fr;gap:26px}.local-map{min-height:300px}.local-map iframe{min-height:300px}}
 
-@media (max-width:460px){.footer-top{grid-template-columns:1fr;gap:28px}}/* resp-polish-footer */
-.footer-states{display:flex;flex-wrap:wrap;gap:9px 20px;align-items:center;padding:20px 0 2px;margin-top:6px;border-top:1px solid rgba(255,255,255,.10)}.footer-states .fs-label{color:#fff;font-weight:700;font-size:14px}.footer-states a{font-size:14px;color:#9aa6c6;transition:color .15s ease}.footer-states a:hover{color:#fff}/* footer-states */
 </style>
 <script type="application/ld+json">
-{
-  "@context":"https://schema.org","@graph":[
-  {"@type":"Article","headline":"Cross-Country Car Shipping","description":"Cross-country car shipping coast to coast. Learn how long-distance auto transport works, how long it takes, what it costs, popular routes, and how to choose a transporter.","author":{"@type":"Organization","name":"Ship Guy"},"publisher":{"@type":"Organization","name":"Ship Guy"}},
-  {"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"index.html"},{"@type":"ListItem","position":2,"name":"How It Works","item":"how-it-works.html"},{"@type":"ListItem","position":3,"name":"Cross Country Car Shipping","item":"cross-country-car-shipping.html"}]}
-  ]
-}
+{"@context":"https://schema.org","@graph":[
+{"@type":"Service","serviceType":"Auto Transport","name":"Massachusetts Auto Transport","areaServed":{"@type":"State","name":"Massachusetts"},"provider":{"@type":"Organization","name":"Ship Guy","telephone":"+1-866-280-3481"},"description":"Shipping a car to or from Massachusetts doesn&#x27;t have to be complicated. Whether you&#x27;re relocating for a new job, buying a vehicle out of state, or heading…"},
+{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"index.html"},{"@type":"ListItem","position":2,"name":"Massachusetts Auto Transport","item":"massachusetts-auto-transport.html"}]}
+]}
 </script>
 </head>
 <body>
@@ -615,7 +673,7 @@ body.ready .reveal{opacity:1;transform:none}
 <!-- ===================== HEADER ===================== -->
 <header class="site-header" id="top">
   <div class="container header-inner">
-    <a class="brand" href="index.html#top" aria-label="Ship Guy — home"><svg class="sg-logo" role="img" aria-label="Ship Guy" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="209 227 180 145">
+    <a class="brand" href="index.html" aria-label="Ship Guy — home"><svg class="sg-logo" role="img" aria-label="Ship Guy" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="209 227 180 145">
 <path fill-rule="nonzero" fill="currentColor" fill-opacity="1" d="M 257.761719 304.929688 L 257.761719 247.621094 L 272.027344 245.128906 L 272.027344 265.167969 C 272.027344 265.933594 272.246094 266.5 272.679688 266.867188 C 273.109375 267.230469 273.703125 267.347656 274.460938 267.222656 L 279.570312 266.355469 C 281.136719 266.089844 281.921875 265.128906 281.921875 263.484375 L 281.921875 243.398438 L 296.191406 240.90625 L 296.191406 298.710938 L 281.921875 301.019531 L 281.921875 277.640625 L 272.027344 279.292969 L 272.027344 302.621094 Z M 257.761719 304.929688 "/>
 <path fill-rule="nonzero" fill="currentColor" fill-opacity="1" d="M 225.148438 310.390625 C 220.769531 311.101562 217.570312 310.632812 215.539062 308.984375 C 213.515625 307.339844 212.5 304.464844 212.5 300.359375 L 212.5 291.359375 L 226.769531 288.980469 L 226.769531 296.222656 C 226.769531 297.035156 226.984375 297.609375 227.417969 297.945312 C 227.851562 298.28125 228.472656 298.382812 229.28125 298.25 L 234.148438 297.449219 C 234.902344 297.328125 235.472656 297.054688 235.851562 296.640625 C 236.226562 296.222656 236.417969 295.636719 236.417969 294.875 L 236.417969 290.066406 C 236.417969 289.304688 236.324219 288.683594 236.136719 288.199219 C 235.945312 287.714844 235.632812 287.300781 235.203125 286.964844 C 234.769531 286.632812 234.175781 286.367188 233.417969 286.164062 L 221.257812 283.890625 C 219.472656 283.378906 217.957031 282.695312 216.71875 281.851562 C 215.472656 281.007812 214.539062 279.855469 213.917969 278.390625 C 213.296875 276.929688 212.988281 275.089844 212.988281 272.871094 L 212.988281 263.140625 C 212.988281 260.222656 213.636719 257.960938 214.933594 256.355469 C 216.230469 254.753906 218.390625 253.683594 221.417969 253.152344 L 237.957031 250.261719 C 242.28125 249.503906 245.457031 249.929688 247.484375 251.539062 C 249.511719 253.148438 250.523438 256.050781 250.523438 260.25 L 250.523438 265.890625 L 236.257812 268.328125 L 236.257812 264.5 C 236.257812 263.683594 236.039062 263.109375 235.605469 262.777344 C 235.175781 262.441406 234.578125 262.34375 233.824219 262.472656 L 229.527344 263.210938 C 228.714844 263.351562 228.132812 263.628906 227.785156 264.039062 C 227.433594 264.453125 227.257812 265.011719 227.257812 265.71875 L 227.257812 268.078125 C 227.257812 269.109375 227.511719 269.917969 228.027344 270.507812 C 228.539062 271.097656 229.3125 271.550781 230.335938 271.863281 L 241.929688 273.972656 C 243.984375 274.492188 245.660156 275.214844 246.957031 276.140625 C 248.253906 277.070312 249.199219 278.285156 249.796875 279.792969 C 250.390625 281.300781 250.6875 283.144531 250.6875 285.328125 L 250.6875 297.671875 C 250.6875 300.671875 250.023438 302.960938 248.699219 304.539062 C 247.375 306.117188 245.199219 307.148438 242.175781 307.636719 Z M 225.148438 310.390625 "/>
 <path fill-rule="nonzero" fill="currentColor" fill-opacity="1" d="M 305.007812 297.726562 L 305.007812 239.84375 L 319.277344 237.351562 L 319.277344 295.414062 Z M 305.007812 297.726562 "/>
@@ -628,7 +686,7 @@ body.ready .reveal{opacity:1;transform:none}
 </svg></a>
 
     <nav class="main-nav" aria-label="Primary">
-      <a href="index.html#top">Home</a>
+      <a href="index.html">Home</a>
       <a href="index.html#how">How It Works</a>
       <div class="has-menu">
         <button class="nav-toggle-btn" aria-haspopup="true" aria-expanded="false">Services
@@ -685,9 +743,9 @@ body.ready .reveal{opacity:1;transform:none}
           <a href="index.html#locations" role="menuitem" class="menu-all">All locations →</a>
         </div>
       </div>
-      <a href="index.html#reviews">Reviews</a>
-      <a href="index.html#faq">FAQ</a>
-      <a href="index.html#contact">Contact</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contact">Contact</a>
     </nav>
 
     <a class="btn-call" href="tel:+18662803481">
@@ -704,7 +762,7 @@ body.ready .reveal{opacity:1;transform:none}
   <!-- mobile nav -->
   <nav class="mobile-nav" id="mobileNav" aria-label="Mobile">
     <div class="inner">
-      <a href="index.html#top">Home</a>
+      <a href="index.html">Home</a>
       <a href="index.html#how">How It Works</a>
       <span class="m-sub">Services</span>
                   <a href="open-car-transport.html">Open Car Transport</a>
@@ -749,87 +807,663 @@ body.ready .reveal{opacity:1;transform:none}
       <a href="new-hampshire-auto-transport.html">New Hampshire</a>
       <a href="new-jersey-auto-transport.html">New Jersey</a>
       <span class="m-sub">More</span>
-      <a href="index.html#reviews">Reviews</a>
-      <a href="index.html#faq">FAQ</a>
-      <a href="index.html#contact">Contact</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contact">Contact</a>
     </div>
   </nav>
 </header>
 
-<!-- ===================== PAGE HERO ===================== -->
-<section class="page-hero"><div class="container">
-  <nav class="crumbs" aria-label="Breadcrumb"><a href="index.html">Home</a><span>/</span><a href="how-it-works.html">How It Works</a><span>/</span><span aria-current="page">Cross Country Car Shipping</span></nav>
-  <h1>Cross-Country Car Shipping</h1>
-  <p class="page-hero-sub">How coast-to-coast auto transport works — transit times, costs, routes, and what to expect.</p>
-</div></section>
+<!-- ===================== HERO ===================== -->
+<section class="hero">
+  <div class="hero-media" aria-hidden="true">
+    <img class="hero-img" alt="" src="assets/hero.jpg">
+    <div class="hero-overlay"></div>
+  </div>
 
-<section class="article-section"><div class="container article">
-<p class="article-lead">Moving across the country and need your car there too? Cross-country car shipping lets you skip the long drive and have your vehicle delivered coast to coast. This guide covers how it works, how long it takes, what it costs, and how to choose the right transporter.</p>
-
-<h2>What Is Cross-Country Car Shipping?</h2>
-<p>Cross-country car shipping is long-distance auto transport that moves your vehicle from one side of the country to the other — or across any long stretch of states — by professional carrier. Instead of putting thousands of miles on your odometer, you hand your vehicle to a licensed carrier who delivers it directly to your destination. It's the practical solution for cross-country relocations, job transfers, military moves, online car purchases, college students, and snowbirds heading between distant homes. Ship Guy moves vehicles coast to coast across all 50 states with door-to-door service.</p>
-
-<h2>How Cross-Country Auto Transport Works</h2>
-<p>Long-distance shipping follows the same three simple steps as any Ship Guy shipment. First, you get a free quote by entering your pickup location, delivery location, and vehicle details. Next, we match your vehicle with a vetted carrier running your route and schedule a <a href="door-to-door-car-shipping.html">door-to-door</a> pickup window around your dates. The driver inspects your vehicle, records its condition on the Bill of Lading, loads it, and transports it across the country while you track progress. At delivery, you inspect the vehicle against the pickup report, sign, and take your keys. Carriers run regular long-haul lanes between major regions, so coast-to-coast moves are routine for our network.</p>
-
-<h2>How Long Does Cross-Country Shipping Take?</h2>
-<p>Transit time depends mostly on the distance between pickup and delivery. As a general guide for long-distance auto transport in the continental U.S.:</p>
-<ul>
-  <li><strong>1,000–1,500 miles:</strong> roughly 3–5 days in transit</li>
-  <li><strong>1,500–2,000 miles:</strong> roughly 4–6 days</li>
-  <li><strong>2,000–2,500 miles:</strong> roughly 5–7 days</li>
-  <li><strong>Coast to coast (2,500+ miles):</strong> roughly 6–9 days</li>
-</ul>
-<p>Add a day or two on the front end for carrier assignment and pickup, depending on how flexible your dates are and how busy your route is. Major routes — such as California to the East Coast or the Northeast to the West — are typically assigned quickly because carriers run them often. If you're working against a firm deadline, ask about <a href="expedited-car-shipping.html">expedited car shipping</a> for a prioritized, faster pickup.</p>
-
-<h2>How Much Does Cross-Country Car Shipping Cost?</h2>
-<p>Long-distance shipments have a higher total cost than short moves simply because of the mileage — but they're also the most efficient on a per-mile basis. Your exact price depends on distance, your vehicle's size and condition, transport type (open or enclosed), your timing, and demand on the route. High-traffic coast-to-coast lanes are generally more affordable per mile than routes to or from remote areas. As with every Ship Guy shipment, your quote is all-in and transparent, with no hidden fees and no upfront deposit, and you pay only once your vehicle is dispatched. For a full breakdown of pricing factors, see our <a href="car-shipping-cost.html">car shipping costs guide</a>.</p>
-
-<h2>Should You Ship or Drive Across the Country?</h2>
-<p>Driving across the country sounds straightforward until you add up the real costs. A coast-to-coast drive means several days on the road, fuel, hotels, meals, and the risk of breakdowns or accidents far from home — plus thousands of miles of wear that reduce your vehicle's value. For many people, shipping ends up comparable in cost once those expenses are tallied, and far easier on your schedule and your car. You can fly to your new home on your own timeline and have your vehicle waiting when you arrive. For families with more than one vehicle, or anyone who can't spare several days for a drive, shipping is usually the smarter choice.</p>
-
-<h2>Open vs. Enclosed for Long-Distance Moves</h2>
-<p>Every cross-country shipment can travel by open or enclosed carrier. <a href="open-car-transport.html">Open transport</a> is the affordable, widely available standard and is well suited to everyday vehicles making the long trip — it's the same method used to ship new cars nationwide. <a href="enclosed-auto-transport.html">Enclosed transport</a> adds a fully covered trailer that shields your vehicle from weather and road debris over thousands of miles, making it the right choice for classic, luxury, exotic, or high-value vehicles crossing the country. Because long routes mean more time exposed to the elements, some owners who might choose open for a short hop opt for enclosed on a coast-to-coast move.</p>
-
-<h2>Popular Cross-Country Routes</h2>
-<p>We ship on long-distance lanes across the entire country, including some of the most-requested corridors:</p>
-<ul>
-  <li><strong>California to the East Coast</strong> — Los Angeles and San Francisco to New York, Florida, and beyond</li>
-  <li><strong>Northeast to the West Coast</strong> — New York and New England to California and the Pacific Northwest</li>
-  <li><strong>Florida to the West and Midwest</strong> — and the reverse during snowbird season</li>
-  <li><strong>Texas to both coasts</strong> — a central hub with frequent long-haul service</li>
-</ul>
-<p>Even if your specific cities aren't on a major lane, our nationwide network reaches all 50 states, so we can arrange long-distance transport between virtually any two points. Browse <a href="index.html#locations">popular routes and service areas</a> for more.</p>
-
-<h2>How to Prepare for a Cross-Country Shipment</h2>
-<p>Long-distance moves reward a little planning. Book early when possible, especially during peak relocation and snowbird seasons, to secure the best rates and dates. Wash your vehicle and take dated photos to document its condition before pickup. Remove personal belongings and toll transponders, leave about a quarter tank of fuel, disable alarms, and provide one working set of keys. Confirm your pickup and delivery addresses and contact details, and make sure an authorized adult is available at both ends — or arrange a nearby meeting point if either street is hard for a large transporter to reach. For a complete checklist, see our <a href="car-shipping-preparation.html">car prep guide</a>.</p>
-
-<h2>Choosing a Cross-Country Auto Transport Company</h2>
-<p>A long-distance move puts your vehicle in someone else's hands for several days, so the company you choose matters. Look for a licensed, bonded, and FMCSA-registered broker that works only with vetted, insured carriers. Favor transparent, all-in pricing with no upfront deposit over a suspiciously low quote that can stall your shipment. And value clear communication — you want real-time tracking and support you can reach if anything comes up along the route. Ship Guy checks every one of those boxes.</p>
-
-<h2>What Affects Cross-Country Transit Time?</h2>
-<p>Mileage sets the baseline, but several things influence exactly how long a coast-to-coast shipment takes. Weather and road conditions can slow a route, especially crossing mountain passes or during winter storms. The driver's schedule and federally regulated hours-of-service limits mean carriers can only drive so many hours per day, so very long hauls naturally span several days. The number of other vehicles on the load and their drop-off sequence can add or save time depending on where your delivery falls in the route. And the season matters: during peak periods, both pickup scheduling and road traffic are busier. We give you an estimated delivery window based on your specific route and keep you updated if anything shifts along the way.</p>
-
-<h2>Tracking Your Vehicle Across the Country</h2>
-<p>One of the biggest worries with a long-distance move is not knowing where your vehicle is. With Ship Guy, you're never in the dark. You can check the status of your shipment, and our U.S.-based support team is available 24/7 by phone to answer questions at any point in the journey. We stay in contact with the driver throughout the route, so if your plans change or you simply want an update, help is a quick call away. For a multi-day, cross-country shipment, that visibility and access make the whole experience far less stressful.</p>
-
-<h2>Door-to-Door Delivery for Long-Distance Moves</h2>
-<p>Ship Guy ships cross-country <a href="door-to-door-car-shipping.html">door-to-door</a>, meaning the carrier picks up your vehicle at your origin address and delivers it as close as possible to your destination — no driving to a distant terminal on either end. For a long-distance move, that convenience is significant: you've likely got a hundred other things to coordinate, and door-to-door keeps your vehicle off your to-do list. If a full-size transporter can't safely reach a tight street, the driver will arrange a nearby meeting point with room to unload.</p>
-
-<h2>Ship Coast to Coast with Ship Guy</h2>
-<p>Ship Guy is a licensed, bonded, FMCSA-registered auto transport broker that ships vehicles cross-country across all 50 states. With nationwide carrier coverage, transparent all-in pricing, no upfront deposit, real-time tracking, and 24/7 U.S.-based support, your long-distance move is in reliable hands from quote to delivery.</p>
-<p>Ready to ship across the country? <a href="index.html#top">Get your free quote</a> in about 60 seconds, or call <a href="tel:+18662803481">(866) 280-3481</a> to plan your route. You can also review <a href="car-shipping-cost.html">car shipping costs</a>, read our <a href="car-shipping-preparation.html">car prep guide</a>, or learn <a href="how-it-works.html">how the process works</a>.</p>
-
-</div></section>
-
-<section class="related-section"><div class="container">
-      <h2>More Car Shipping Guides</h2>
-      <div class="related-grid">
-        <a class="related-card" href="how-it-works.html">How It Works <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-        <a class="related-card" href="car-shipping-cost.html">Car Shipping Costs <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-        <a class="related-card" href="car-shipping-preparation.html">Car Prep Guide <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+  <div class="container hero-grid">
+    <div class="hero-copy">
+      <div class="hero-head">
+      <p class="eyebrow reveal">Licensed&nbsp;•&nbsp;Insured&nbsp;•&nbsp;Nationwide</p>
+      <h1 class="reveal d2">Massachusetts Auto Transport</h1>
       </div>
+      <div class="hero-rest">
+      <p class="lede reveal d2">Licensed, insured car shipping to and from Massachusetts — transparent pricing, vetted carriers, and door-to-door delivery.</p>
+
+      <ul class="trust-list reveal d3">
+        <li>
+          <span class="trust-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/><path d="m9 12 2 2 4-4"/></svg></span>
+          Licensed Broker &amp; Fully Insured
+        </li>
+        <li>
+          <span class="trust-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="2" width="8" height="4" rx="1"/><path d="M9 4H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2h-3"/><path d="m9 14 2 2 4-4"/></svg></span>
+          FMCSA Registered
+        </li>
+        <li>
+          <span class="trust-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></span>
+          Vetted Carrier Network
+        </li>
+        <li>
+          <span class="trust-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M4 13a8 8 0 0 1 16 0"/><rect x="2" y="13" width="4.4" height="7" rx="1.6"/><rect x="17.6" y="13" width="4.4" height="7" rx="1.6"/><path d="M20 19.5v.5a3 3 0 0 1-3 3h-3"/></svg></span>
+          Real-Time Tracking &amp; 24/7 Support
+        </li>
+      </ul>
+
+      <div class="hero-divider reveal d3"></div>
+
+      <div class="stats reveal d3">
+        <div class="stat"><span class="num">50+</span><span class="lbl">States Served</span></div>
+        <div class="stat"><span class="num">100%</span><span class="lbl">Insured Transport</span></div>
+        <div class="stat"><span class="num">24/7</span><span class="lbl">Support &amp; Tracking</span></div>
+      </div>
+      </div>
+    </div>
+
+    <!-- QUOTE CARD -->
+    <div class="quote-card reveal d2">
+      <h2>Get Your Instant Quote</h2>
+
+      <div class="steps" id="steps">
+        <div class="step is-active" data-step="1">
+          <span class="dot"><span class="num">1</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>
+          <span class="slabel">Destination</span>
+        </div>
+        <div class="track" data-track="1"></div>
+        <div class="step" data-step="2">
+          <span class="dot"><span class="num">2</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>
+          <span class="slabel">Vehicle</span>
+        </div>
+        <div class="track" data-track="2"></div>
+        <div class="step" data-step="3">
+          <span class="dot"><span class="num">3</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>
+          <span class="slabel">Contact</span>
+        </div>
+      </div>
+
+      <form id="quoteForm" novalidate>
+        <!-- STEP 1 -->
+        <div class="qstep is-current" data-panel="1">
+          <div class="field">
+            <label class="flabel" for="pickup">Pickup Location</label>
+            <div class="input-wrap">
+              <span class="lead"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg></span>
+              <input class="inp" id="pickup" name="pickup" type="text" placeholder="Enter city or zip code" autocomplete="address-level2" required>
+            </div>
+            <span class="err-msg">Please enter a pickup location.</span>
+          </div>
+
+          <div class="field">
+            <label class="flabel" for="delivery">Delivery Location</label>
+            <div class="input-wrap">
+              <span class="lead"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg></span>
+              <input class="inp" id="delivery" name="delivery" type="text" placeholder="Enter city or zip code" autocomplete="address-level2" required>
+            </div>
+            <span class="err-msg">Please enter a delivery location.</span>
+          </div>
+
+          <div class="field">
+            <label class="flabel" for="date">Pickup Date</label>
+            <div class="input-wrap">
+              <span class="lead"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg></span>
+              <input class="inp" id="date" name="date" type="text" placeholder="Select pickup date" onfocus="this.type='date'" onblur="if(!this.value)this.type='text'">
+            </div>
+          </div>
+
+          <div class="field">
+            <label class="flabel">Trailer Type</label>
+            <div class="opt-grid" data-radio-group>
+              <label class="opt is-selected">
+                <span class="opt-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M10 17V6a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1v10"/><path d="M10 8h7l4 4v4h-2"/><path d="M6 17h2M12 17h2"/><circle cx="6" cy="18" r="2"/><circle cx="17" cy="18" r="2"/></svg></span>
+                <span class="opt-text"><strong>Open Trailer</strong><small>Most common</small></span>
+                <input type="radio" name="trailer" value="open" checked>
+                <span class="radio"></span>
+              </label>
+              <label class="opt">
+                <span class="opt-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="6" width="14" height="11" rx="1.5"/><path d="M16 9h3l3 4v4h-2"/><path d="M6 17h2"/><circle cx="6" cy="18" r="2"/><circle cx="18" cy="18" r="2"/></svg></span>
+                <span class="opt-text"><strong>Enclosed Trailer</strong><small>Extra protection</small></span>
+                <input type="radio" name="trailer" value="enclosed">
+                <span class="radio"></span>
+              </label>
+            </div>
+          </div>
+
+          <button type="button" class="btn-primary" data-next>
+            Next: Vehicle Details
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </button>
+        </div>
+
+        <!-- STEP 2 -->
+        <div class="qstep" data-panel="2">
+          <div class="row-2">
+            <div class="field">
+              <label class="flabel" for="year">Year</label>
+              <div class="input-wrap">
+                <span class="lead"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg></span>
+                <span class="chev-r"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></span>
+                <select class="inp" id="year" name="year"><option value="">Year</option></select>
+              </div>
+            </div>
+            <div class="field">
+              <label class="flabel" for="make">Make</label>
+              <div class="input-wrap">
+                <span class="lead"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12l1.6-4.6A2 2 0 0 1 6.5 6h11a2 2 0 0 1 1.9 1.4L21 12"/><path d="M3 12h18v5a1 1 0 0 1-1 1h-1.2a1 1 0 0 1-1-1v-1H6.2v1a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-5Z"/><circle cx="7.5" cy="14.5" r="1"/><circle cx="16.5" cy="14.5" r="1"/></svg></span>
+                <input class="inp" id="make" name="make" type="text" placeholder="e.g. Toyota">
+              </div>
+            </div>
+          </div>
+
+          <div class="field">
+            <label class="flabel" for="model">Model</label>
+            <div class="input-wrap">
+              <span class="lead"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12l1.6-4.6A2 2 0 0 1 6.5 6h11a2 2 0 0 1 1.9 1.4L21 12"/><path d="M3 12h18v5a1 1 0 0 1-1 1h-1.2a1 1 0 0 1-1-1v-1H6.2v1a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-5Z"/><circle cx="7.5" cy="14.5" r="1"/><circle cx="16.5" cy="14.5" r="1"/></svg></span>
+              <input class="inp" id="model" name="model" type="text" placeholder="e.g. Camry">
+            </div>
+          </div>
+
+          <div class="field">
+            <label class="flabel">Is the vehicle running?</label>
+            <div class="opt-grid" data-radio-group>
+              <label class="opt is-selected">
+                <span class="opt-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5 10 8l4 3 5-4.5"/><path d="M9 16h6"/><circle cx="12" cy="12" r="9"/></svg></span>
+                <span class="opt-text"><strong>Runs &amp; drives</strong><small>Operable</small></span>
+                <input type="radio" name="running" value="yes" checked>
+                <span class="radio"></span>
+              </label>
+              <label class="opt">
+                <span class="opt-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 8v5M12 16h.01"/><circle cx="12" cy="12" r="9"/></svg></span>
+                <span class="opt-text"><strong>Not running</strong><small>Inoperable</small></span>
+                <input type="radio" name="running" value="no">
+                <span class="radio"></span>
+              </label>
+            </div>
+          </div>
+
+          <div class="btn-row">
+            <button type="button" class="btn-ghost" data-back>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 18l-6-6 6-6"/></svg>
+              Back
+            </button>
+            <button type="button" class="btn-primary" data-next>
+              Next: Your Details
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- STEP 3 -->
+        <div class="qstep" data-panel="3">
+          <div class="field">
+            <label class="flabel" for="name">Full Name</label>
+            <div class="input-wrap">
+              <span class="lead"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21v-1a6 6 0 0 1 6-6h4a6 6 0 0 1 6 6v1"/></svg></span>
+              <input class="inp" id="name" name="name" type="text" placeholder="Your name" autocomplete="name" required>
+            </div>
+            <span class="err-msg">Please enter your name.</span>
+          </div>
+          <div class="field">
+            <label class="flabel" for="email">Email</label>
+            <div class="input-wrap">
+              <span class="lead"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></span>
+              <input class="inp" id="email" name="email" type="email" placeholder="you@email.com" autocomplete="email" required>
+            </div>
+            <span class="err-msg">Please enter a valid email.</span>
+          </div>
+          <div class="field">
+            <label class="flabel" for="phone">Phone</label>
+            <div class="input-wrap">
+              <span class="lead"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/></svg></span>
+              <input class="inp" id="phone" name="phone" type="tel" placeholder="(555) 555-5555" autocomplete="tel" required>
+            </div>
+            <span class="err-msg">Please enter a phone number.</span>
+          </div>
+
+          <div class="btn-row">
+            <button type="button" class="btn-ghost" data-back>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 18l-6-6 6-6"/></svg>
+              Back
+            </button>
+            <button type="submit" class="btn-primary">Get My Quote</button>
+          </div>
+
+          <p class="assure">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="11" width="16" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg>
+            No spam — just your quote. Takes about 60 seconds.
+          </p>
+        </div>
+      </form>
+
+      <!-- success -->
+      <div class="quote-success" id="quoteSuccess" aria-live="polite">
+        <div class="success-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></div>
+        <h3>Your quote request is in!</h3>
+        <p>Thanks — a Ship Guy specialist will reach out shortly with your transparent, all-in price.</p>
+        <a class="btn-call" href="tel:+18662803481">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/></svg>
+          Or call us now: (866) 280-3481
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== REVIEWS ===================== -->
+<section class="reviews" id="reviews">
+  <div class="container">
+    <div class="reviews-head">
+      <div>
+        <h2>Verified customer reviews</h2>
+        <p>Trusted by vehicle owners nationwide.</p>
+      </div>
+      <div class="rating">
+        <span class="score">4.9</span>
+        <span class="stars" aria-label="4.9 out of 5 stars">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.06 6.6.79-4.86 4.53 1.27 6.52L12 17.9l-5.9 3.5 1.27-6.52L2.5 9.35l6.6-.79L12 2.5Z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.06 6.6.79-4.86 4.53 1.27 6.52L12 17.9l-5.9 3.5 1.27-6.52L2.5 9.35l6.6-.79L12 2.5Z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.06 6.6.79-4.86 4.53 1.27 6.52L12 17.9l-5.9 3.5 1.27-6.52L2.5 9.35l6.6-.79L12 2.5Z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.06 6.6.79-4.86 4.53 1.27 6.52L12 17.9l-5.9 3.5 1.27-6.52L2.5 9.35l6.6-.79L12 2.5Z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.06 6.6.79-4.86 4.53 1.27 6.52L12 17.9l-5.9 3.5 1.27-6.52L2.5 9.35l6.6-.79L12 2.5Z"/></svg>
+        </span>
+        <span class="count">487+ reviews</span>
+        <span class="divider-v"></span>
+        <span class="gword"><span class="b">G</span><span class="r">o</span><span class="y">o</span><span class="b">g</span><span class="g">l</span><span class="r">e</span></span>
+      </div>
+    </div>
+
+    <div class="review-grid">
+      <article class="review">
+        <div class="review-top">
+          <span class="avatar">JD</span>
+          <div><span class="name">James D.</span><span class="date">May 12, 2024</span></div>
+        </div>
+        <div class="stars" aria-label="5 out of 5">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.06 6.6.79-4.86 4.53 1.27 6.52L12 17.9l-5.9 3.5 1.27-6.52L2.5 9.35l6.6-.79L12 2.5Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.06 6.6.79-4.86 4.53 1.27 6.52L12 17.9l-5.9 3.5 1.27-6.52L2.5 9.35l6.6-.79L12 2.5Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.06 6.6.79-4.86 4.53 1.27 6.52L12 17.9l-5.9 3.5 1.27-6.52L2.5 9.35l6.6-.79L12 2.5Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.06 6.6.79-4.86 4.53 1.27 6.52L12 17.9l-5.9 3.5 1.27-6.52L2.5 9.35l6.6-.79L12 2.5Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.06 6.6.79-4.86 4.53 1.27 6.52L12 17.9l-5.9 3.5 1.27-6.52L2.5 9.35l6.6-.79L12 2.5Z"/></svg>
+        </div>
+        <p>Ship Guy made the whole process easy. Great communication and my car arrived earlier than expected. Highly recommend!</p>
+      </article>
+
+      <article class="review">
+        <div class="review-top">
+          <span class="avatar">SR</span>
+          <div><span class="name">Sarah R.</span><span class="date">April 28, 2024</span></div>
+        </div>
+        <div class="stars" aria-label="5 out of 5">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.06 6.6.79-4.86 4.53 1.27 6.52L12 17.9l-5.9 3.5 1.27-6.52L2.5 9.35l6.6-.79L12 2.5Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.06 6.6.79-4.86 4.53 1.27 6.52L12 17.9l-5.9 3.5 1.27-6.52L2.5 9.35l6.6-.79L12 2.5Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.06 6.6.79-4.86 4.53 1.27 6.52L12 17.9l-5.9 3.5 1.27-6.52L2.5 9.35l6.6-.79L12 2.5Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.06 6.6.79-4.86 4.53 1.27 6.52L12 17.9l-5.9 3.5 1.27-6.52L2.5 9.35l6.6-.79L12 2.5Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.06 6.6.79-4.86 4.53 1.27 6.52L12 17.9l-5.9 3.5 1.27-6.52L2.5 9.35l6.6-.79L12 2.5Z"/></svg>
+        </div>
+        <p>Excellent service from start to finish. The driver was professional and my vehicle arrived in perfect condition.</p>
+      </article>
+
+      <article class="review">
+        <div class="review-top">
+          <span class="avatar">MT</span>
+          <div><span class="name">Michael T.</span><span class="date">April 15, 2024</span></div>
+        </div>
+        <div class="stars" aria-label="5 out of 5">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.06 6.6.79-4.86 4.53 1.27 6.52L12 17.9l-5.9 3.5 1.27-6.52L2.5 9.35l6.6-.79L12 2.5Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.06 6.6.79-4.86 4.53 1.27 6.52L12 17.9l-5.9 3.5 1.27-6.52L2.5 9.35l6.6-.79L12 2.5Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.06 6.6.79-4.86 4.53 1.27 6.52L12 17.9l-5.9 3.5 1.27-6.52L2.5 9.35l6.6-.79L12 2.5Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.06 6.6.79-4.86 4.53 1.27 6.52L12 17.9l-5.9 3.5 1.27-6.52L2.5 9.35l6.6-.79L12 2.5Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.06 6.6.79-4.86 4.53 1.27 6.52L12 17.9l-5.9 3.5 1.27-6.52L2.5 9.35l6.6-.79L12 2.5Z"/></svg>
+        </div>
+        <p>Fast quote, fair price, and they kept me updated throughout the entire delivery. Will definitely use again.</p>
+      </article>
+
+      <article class="review">
+        <div class="review-top">
+          <span class="avatar">KB</span>
+          <div><span class="name">Kelsey B.</span><span class="date">March 30, 2024</span></div>
+        </div>
+        <div class="stars" aria-label="5 out of 5">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.06 6.6.79-4.86 4.53 1.27 6.52L12 17.9l-5.9 3.5 1.27-6.52L2.5 9.35l6.6-.79L12 2.5Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.06 6.6.79-4.86 4.53 1.27 6.52L12 17.9l-5.9 3.5 1.27-6.52L2.5 9.35l6.6-.79L12 2.5Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.06 6.6.79-4.86 4.53 1.27 6.52L12 17.9l-5.9 3.5 1.27-6.52L2.5 9.35l6.6-.79L12 2.5Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.06 6.6.79-4.86 4.53 1.27 6.52L12 17.9l-5.9 3.5 1.27-6.52L2.5 9.35l6.6-.79L12 2.5Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.06 6.6.79-4.86 4.53 1.27 6.52L12 17.9l-5.9 3.5 1.27-6.52L2.5 9.35l6.6-.79L12 2.5Z"/></svg>
+        </div>
+        <p>Shipped my SUV cross-country with no issues. The team was responsive and the experience was smooth.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+
+<!-- ===================== STATE CONTENT ===================== -->
+<section class="article-section"><div class="container article">
+  <nav class="crumbs" aria-label="Breadcrumb"><a href="index.html">Home</a><span>/</span><span aria-current="page">Massachusetts Auto Transport</span></nav>
+  <p>Shipping a car to or from Massachusetts doesn&#x27;t have to be complicated. Whether you&#x27;re relocating for a new job, buying a vehicle out of state, or heading south for the winter, understanding your auto transport options is the first step toward a smooth move. Ship Guy connects customers with vetted carriers to handle Massachusetts auto transport quickly and reliably, offering car shipping services built around transparency and real communication. As an auto transport company with nationwide reach, Ship Guy takes the guesswork out of moving your vehicle across state lines or across the country.</p>
+  <h2>Massachusetts Auto Transport Overview</h2>
+  <p>Auto transport is the process of moving a vehicle from one location to another using a specialized carrier, typically an open or enclosed trailer. Ship Guy operates as a broker-style car shipping company, matching customers with licensed, insured carriers who handle the physical transport. In 2025 and 2026, demand for Massachusetts car shipping continues to grow as people relocate to major hubs, purchase vehicles online, and move seasonally throughout New England.</p>
+  <p>Auto transport services in Massachusetts are supported by major cities and highways, including the I-90 (Mass Pike), I-95, and I-93 corridors that connect Boston, Worcester, Springfield, and the broader Northeast. Common reasons people ship cars to or from the state include:</p>
+  <ul>
+    <li>Relocations to metro Boston, Worcester, or the Pioneer Valley</li>
+    <li>Seasonal moves to Cape Cod, Martha&#x27;s Vineyard, and Nantucket</li>
+    <li>Military PCS orders involving Hanscom AFB or Coast Guard stations</li>
+    <li>Out-of-state car purchases delivered to a Massachusetts address</li>
+  </ul>
+  <p>This article covers how Massachusetts car shipping works with Ship Guy, what it costs, popular routes and transit times, and how Ship Guy&#x27;s focus on carrier availability and customer satisfaction sets the service apart from other Massachusetts car shipping companies.</p>
+  <h2>How Massachusetts Auto Transport Works with Ship Guy</h2>
+  <p>Ship Guy is a broker-style car shipping company that connects customers with a nationwide network of vetted carriers. Rather than owning trucks directly, Ship Guy maintains relationships with professional transporters who meet strict standards for licensing, insurance, equipment, and performance. This model gives customers access to a wider pool of carriers and routes than any single transport company could offer on its own.</p>
+  <p>The entire process from quote to delivery follows a clear sequence: request a quote, confirm details, get matched with a carrier, hand off the vehicle at pickup, track it during transit, and receive it at your destination. Most interstate car transport to or from Massachusetts takes about 2 to 9 days, depending on distance, route demand, and weather conditions. Shipping a car to Massachusetts typically takes 1 to 14 days, including both booking lead time and transit.</p>
+  <p>Throughout the process, Ship Guy provides real-time updates and human support from booking to delivery. You won&#x27;t get lost in an automated phone tree or left wondering where your vehicle is.</p>
+  <h3>Step 1: Get a Massachusetts Car Shipping Quote</h3>
+  <p>Getting a quote from Ship Guy is straightforward. You&#x27;ll provide a few key details so the team can build an accurate estimate:</p>
+  <ul>
+    <li><strong>Pickup and delivery ZIP codes</strong> (e.g., 02101 Boston to 28202 Charlotte, NC)</li>
+    <li><strong>Vehicle year, make, and model</strong> (e.g., 2021 Toyota RAV4)</li>
+    <li><strong>Running condition</strong> - non-running vehicles require special equipment and cost more</li>
+    <li><strong>Preferred pickup dates</strong> and any flexibility you have</li>
+    <li><strong>Transport type</strong> - open transport or enclosed transport</li>
+  </ul>
+  <p>Quotes factor in current fuel prices, seasonal demand across New England, and carrier availability on the requested lane. Obtaining multiple quotes is recommended to compare auto transport prices, but keep in mind that the cheapest option isn&#x27;t always the most reliable. A custom quote from Ship Guy reflects real-time market conditions rather than a static price chart.</p>
+  <h3>Step 2: Booking and Carrier Assignment</h3>
+  <p>Once you approve the quoted price and sign a straightforward transport agreement, Ship Guy books the order and begins the carrier assignment process. The team secures a licensed, insured carrier with the right equipment for your vehicle type and route. Shipping an SUV to rural Western Massachusetts, for example, requires different planning than moving a sedan into metro Boston.</p>
+  <p>Approximate lead times for carrier assignment:</p>
+  <ul>
+    <li><strong>High-demand routes</strong> (Boston–New York, Boston–DC): typically 1–3 days</li>
+    <li><strong>Standard interstate lanes</strong>: 2–5 days</li>
+    <li><strong>Rural or less-trafficked pickups</strong>: up to 5–7 days</li>
+  </ul>
+  <p>Ship Guy communicates expected timelines clearly before you commit, so there are no surprises.</p>
+  <h3>Step 3: Pickup, Transit, and Delivery</h3>
+  <p>Ship Guy arranges door-to-door delivery, meaning the carrier will get as close as possible to your home or office for pickup and drop-off. In dense Boston neighborhoods with narrow streets or low-hanging tree branches, the driver may arrange to meet at a nearby wide street or parking lot for safe loading and unloading.</p>
+  <p>At pickup, you&#x27;ll meet the driver, walk around the vehicle together, and sign the Bill of Lading, which documents the car&#x27;s condition. The same process happens at delivery. You&#x27;ll inspect the vehicle and note any changes on the paperwork before signing.</p>
+  <p>During transit, Ship Guy monitors the shipment, communicates ETAs, and stays in touch if anything changes. The priority is on-time, safe delivery and clear communication throughout.</p>
+  <h2>Popular Massachusetts Auto Transport Routes and Transit Times</h2>
+  <p>Ship Guy regularly arranges car transport on key lanes into and out of Massachusetts. Average transit time for Massachusetts car shipping is 3 to 7 days on the most common interstate routes, though coast-to-coast shipments from Massachusetts take longer than regional moves. Delivery times for auto transport in Massachusetts generally range from 7 to 10 days on longer routes.</p>
+  <p>Here are realistic examples for common routes (open transport, standard sedan):</p>
+  <div class="table-wrap"><table><tbody><tr><td>Boston → Miami</td><td>~1,500 mi</td><td>$900–$1,200</td><td>3–7 days</td></tr><tr><td>Boston → Los Angeles</td><td>~3,000 mi</td><td>$1,450–$1,900</td><td>6–10 days</td></tr><tr><td>Boston → Chicago</td><td>~1,000 mi</td><td>$950–$1,200</td><td>3–5 days</td></tr><tr><td>Boston → Atlanta</td><td>~1,100 mi</td><td>$850–$1,100</td><td>3–5 days</td></tr><tr><td>Boston → Dallas</td><td>~1,800 mi</td><td>$1,100–$1,350</td><td>4–7 days</td></tr><tr><td>Boston → Providence</td><td>~50 mi</td><td>$150–$350</td><td>1–2 days</td></tr><tr><td>Boston → Springfield, MA</td><td>~90 mi</td><td>$200–$450</td><td>1–2 days</td></tr></tbody></table></div>
+  <p>Prices vary based on vehicle size, condition, season, and carrier availability. These ranges reflect typical 2025–2026 market conditions and will shift over time.</p>
+  <h2>In-State Massachusetts Car Transport</h2>
+  <p>In-state moves like Boston to Springfield, Worcester to Cape Cod, or North Shore to South Shore often deliver in 1 to 2 days. In-state vehicle transport usually takes 1 to 2 days because the distances are short and carriers can handle them efficiently.</p>
+  <p>That said, short-distance auto transport may cost relatively more per mile than longer routes. Fixed costs like loading, dispatch, and driver time don&#x27;t scale down proportionally on a 50-mile move the way they do on a 1,500-mile haul. Massachusetts car transport within the state is still cost-effective when you factor in the time, fuel, and wear you save by not driving the vehicle yourself.</p>
+  <p>Ship Guy is especially useful for:</p>
+  <ul>
+    <li><strong>Dealership transfers</strong> between lots in different parts of the state</li>
+    <li><strong>Students moving between campuses</strong> (e.g., BU to UMass Amherst)</li>
+    <li><strong>Families relocating</strong> within Massachusetts who are already juggling a household move</li>
+  </ul>
+  <h2>Long-Distance and Cross-Country Routes</h2>
+  <p>Common long-distance routes from Massachusetts include Florida (the classic snowbird corridor), Texas, California, and the Carolinas. These cross-country shipments involve more variables: weather conditions along the route, mountain passes, and high-traffic corridors like I-95 through the mid-Atlantic can all influence transit times.</p>
+  <p>Cross-state shipments can take 2 to 9 days, depending on the destination, while coast-to-coast runs typically fall in the 7–10-day range. For longer routes, setting a flexible pickup and delivery window of 1–3 days reduces stress and can help lower costs, since carriers have more space to optimize their schedules.</p>
+  <p>Weather plays a bigger role in cross-country routes, too. Winter storms in the Midwest or mountain passes in the Rockies may add a day or two. Ship Guy keeps you informed if conditions change.</p>
+  <h2>Massachusetts Car Shipping Costs</h2>
+  <p>Shipping a car from Massachusetts costs between $550 and $2,450, depending on distance, vehicle type, transport method, and timing. On common interstate routes, the average cost for a standard sedan typically falls between $900 and $1,400. Distance is the most significant factor affecting shipping costs, but it&#x27;s far from the only one.</p>
+  <p>Here&#x27;s a sample cost comparison for a <strong>2021 Hyundai Sonata shipped from Boston to Charlotte, NC</strong> (~650 miles):</p>
+  <div class="table-wrap"><table><tbody><tr><td>Open transport</td><td>$900–$1,100</td></tr><tr><td>Enclosed transport</td><td>$1,200–$1,600</td></tr></tbody></table></div>
+  <p>Quotes from Ship Guy are customized and reflect real-time carrier rates, not outdated price charts you might find elsewhere. You can request a shipment online with your specific details for an accurate estimate. The best car shipping company isn&#x27;t always the cheapest - it&#x27;s the one offering transparent pricing, reliable service, and a quoted price that actually holds up.</p>
+  <h2>Key Factors That Affect Massachusetts Auto Transport Pricing</h2>
+  <p>Many factors influence what you&#x27;ll pay for Massachusetts auto transport. Here are the primary pricing drivers:</p>
+  <ul>
+    <li><strong>Distance</strong>: Longer routes cost more total but less per mile. Short trips carry higher per-mile rates.</li>
+    <li><strong>Vehicle size and weight</strong>: Shipping costs increase with both. Larger vehicles like trucks and SUVs take up more space on the trailer and cost more than compacts.</li>
+    <li><strong>Running vs. inoperable</strong>: A non-running vehicle requires winching or specialized equipment, which adds to the price.</li>
+    <li><strong>Open vs. enclosed</strong>: Enclosed trailers cost 30–40% more than open transport.</li>
+    <li><strong>Pickup and delivery location</strong>: Metro addresses with easy highway access are cheaper than rural or island destinations.</li>
+    <li><strong>Seasonal demand</strong>: Car shipping rates in Massachusetts drop during the off-season. November through January can be peak outbound season as snowbirds head south, pushing rates higher and reducing carrier availability.</li>
+    <li><strong>Vehicle type</strong>: Exotic, classic, and high-value cars often require enclosed shipping, which adds a premium.</li>
+  </ul>
+  <p>Flexibility helps. If you can adjust your dates by a few days or meet the carrier in a more accessible location, such as Boston or Worcester, rather than a remote town, you may save on the final cost. Other factors, such as fuel surcharges and current market demand, also play a role.</p>
+  <h2>Open vs Enclosed Car Shipping Costs</h2>
+  <p>Open transport is the most common and affordable shipping method. It&#x27;s the standard option for daily drivers - sedans, SUVs, crossovers - and accounts for the vast majority of shipments. Open transport is typically 30–40% cheaper than enclosed transport, making it the go-to for most customers.</p>
+  <p>Enclosed transport is the premium choice, offering extra protection from weather, road salt, and debris. It&#x27;s ideal for high-value, classic, and exotic vehicles, where the cost of potential cosmetic damage far outweighs the shipping premium. Enclosed transport costs 30–40% more than open transport, but for a vintage Mustang heading to a show in Boston or a new EV being delivered from a New York dealer to a Cambridge garage, the extra peace of mind is worth it.</p>
+  <p>Ship Guy helps you choose the right transport method based on your vehicle&#x27;s value, your budget, and the route. Both auto transport options are available on most lanes to and from Massachusetts.</p>
+  <h2>Types of Car Shipping Services in Massachusetts</h2>
+  <p>Ship Guy offers different car shipping services so you can match protection, speed, and price to your specific needs. All services are door-to-door, where safely possible, and Ship Guy works exclusively with vetted carriers and top auto transport companies that meet strict licensing and insurance requirements.</p>
+  <p>The main transport service categories are open transport, enclosed transport, door-to-door delivery, and expedited shipping. Each transport type serves different needs, and Ship Guy can help you decide which fits your situation.</p>
+  <h2>Open Car Transport in Massachusetts</h2>
+  <p>Open carriers are the multi-car trailers you commonly see on I-90 and I-95 hauling six to ten vehicles at a time. Open transport is the most widely used transport method for a reason: it&#x27;s affordable, has the highest carrier availability, and dispatches faster on popular routes like Boston–New York and Boston–DC.</p>
+  <p>Key advantages of open car transport:</p>
+  <ul>
+    <li>Lower cost compared to enclosed</li>
+    <li>More carrier options and faster pickup on high-demand lanes</li>
+    <li>Suitable for virtually all standard passenger vehicles</li>
+  </ul>
+  <p>Open transport exposes vehicles to weather and road debris, but damage is rare when using professional carriers. For most daily drivers, open transport is the practical and cost-effective choice.</p>
+  <h2>Enclosed Auto Transport</h2>
+  <p>Enclosed trailers seal the vehicle inside a fully protected compartment, shielding it from New England weather, winter road salt, and road debris. This direct service is the standard for shipping cars that need extra protection.</p>
+  <p>Common use cases for enclosed transport in Massachusetts:</p>
+  <ul>
+    <li>Luxury vehicles garaged in Back Bay or Brookline.</li>
+    <li>Restored classics on the North Shore heading to shows or auctions</li>
+    <li>Collectibles and high-value vehicles moving across state lines.</li>
+  </ul>
+  <p>Ship Guy arranges enclosed transport nationwide, connecting Massachusetts customers with carriers who specialize in handling vehicles that require careful attention. Nationwide car shipping companies within Ship Guy&#x27;s network carry the proper equipment and insurance for these shipments.</p>
+  <h2>Door-to-Door and Expedited Services</h2>
+  <p>Standard door-to-door service means the carrier picks up and delivers the vehicle directly at your location, or as close as safely possible. In parts of Boston, Cambridge, and older Massachusetts towns, narrow streets and low bridges may prevent a large carrier from reaching your exact address. In those cases, Ship Guy coordinates a nearby meeting point, such as a shopping center or a wide intersection.</p>
+  <p>Expedited shipping is a premium option for last-minute relocations, tight job start dates, or time-sensitive purchases. If you need your car moved on short notice, Ship Guy can prioritize finding a carrier, though premium charges typically apply, and carrier selection becomes more limited.</p>
+  <p>Before confirming an expedited booking, Ship Guy will discuss realistic pickup windows and transit times so you know exactly what to expect.</p>
+  <h2>Who Uses Massachusetts Auto Transport?</h2>
+  <p>Ship Guy serves a wide range of customers across Massachusetts, including individuals and families, students, military personnel, snowbirds, and dealerships. Each group has different priorities, and Ship Guy tailors the experience accordingly.</p>
+  <h2>College and University Car Shipping</h2>
+  <p>Massachusetts is home to some of the country&#x27;s most prominent universities, and that drives significant seasonal car shipping demand. Schools like Harvard, MIT, Boston University, Northeastern, Boston College, and UMass Amherst attract students from every corner of the U.S.</p>
+  <ul>
+    <li>Heavy inbound traffic arrives in <strong>August–September</strong> for fall move-in and again in <strong>January</strong> for the spring semester.</li>
+    <li>Outbound shipments spike in <strong>May–June</strong> as students head home for the summer</li>
+    <li>Ship Guy helps students ship cars from states like New Jersey, California, and Florida to campuses in Massachusetts.</li>
+  </ul>
+  <p>Booking early - ideally 2 to 4 weeks ahead of move-in or move-out dates - helps secure better rates and improved carrier availability during these peak windows. Waiting until the last week often means higher prices and fewer options.</p>
+  <h2>Military and Government Moves</h2>
+  <p>Key military locations relevant to Massachusetts include Hanscom Air Force Base and Coast Guard facilities along the coast. Military personnel relocating to or from Massachusetts often face tight PCS schedules that don&#x27;t leave time to drive a car across the country.</p>
+  <p>Ship Guy coordinates with service members to align carrier schedules with reporting dates, even when timelines are compressed. If you&#x27;re on PCS orders, confirm your entitlements and reimbursement rules with your transportation office before booking, as required documentation and coverage vary by branch.</p>
+  <h2>Snowbirds, Second-Home Owners, and Vacationers</h2>
+  <p>The classic Massachusetts snowbird move runs from November through January, with vehicles heading south to Florida, the Carolinas, or Arizona. This is one of the busiest outbound seasons for Massachusetts auto transport, and rates reflect the demand.</p>
+  <p>Other seasonal patterns include:</p>
+  <ul>
+    <li>Shipping cars to Cape Cod, Martha&#x27;s Vineyard, and Nantucket ahead of summer, sometimes coordinating with ferry schedules</li>
+    <li>Moving vehicles back to the mainland in early fall</li>
+    <li>Vacationers sending cars ahead to avoid long drives on congested I-95</li>
+  </ul>
+  <p>Using Ship Guy for these seasonal moves avoids wear and tear on the vehicle and saves Massachusetts residents from spending multiple days on the road.</p>
+  <h2>Choosing the Right Massachusetts Car Shipping Company</h2>
+  <p>Not all top car shipping companies deliver the same experience. Reputation, communication, and follow-through matter as much as price. Ship Guy aims to earn repeat customers through transparent service and consistent results, but regardless of which shipping company you choose, there are concrete things to evaluate.</p>
+  <h2>What to Look For in a Car Shipping Company</h2>
+  <p>When evaluating any transport company, use this checklist:</p>
+  <ul>
+    <li><strong>Active USDOT and MC numbers</strong>: Companies must be properly licensed and insured in accordance with FMCSA regulations. Verify these before booking.</li>
+    <li><strong>Proper cargo insurance</strong>: Confirm what coverage applies during transit and what deductibles or limits exist.</li>
+    <li><strong>Clear contracts</strong>: No vague promises, no hidden fees. The transport agreement should spell out the price, timeline, and cancellation terms.</li>
+    <li><strong>Recent reviews on Massachusetts routes</strong>: Look for feedback that specifically mentions communication quality, on-time performance, and how issues were resolved.</li>
+    <li><strong>Company reputation should be verified</strong> - check the FMCSA database and independent review sites, not just testimonials on the company&#x27;s own website.</li>
+  </ul>
+  <p>Selecting an experienced shipper is important due to the high traffic density in Massachusetts. Navigating auto transport in Massachusetts requires specialized vetting due to dense traffic and urban logistics challenges. Compare value - reliability, carrier quality, and responsiveness - instead of just price.</p>
+  <p>Industry benchmarks give useful context: 91% of Direct Connect customers reported on-time delivery, and 85% said their vehicle arrived damage-free. Sherpa Auto Transport serves 25 cities across Massachusetts. These numbers show what experienced top auto transport companies can achieve, and Ship Guy strives to meet or exceed similar standards.</p>
+  <h2>Ship Guy&#x27;s Approach to Service and Customer Satisfaction</h2>
+  <p>Ship Guy&#x27;s model centers on honest estimates, straightforward terms, and proactive communication from the moment you book until your car arrives at its destination. No bait-and-switch pricing, no radio silence during transit.</p>
+  <p>Key elements of Ship Guy&#x27;s approach:</p>
+  <ul>
+    <li>Working with a network of trusted American auto transporters and carriers that meet strict standards for safety and performance</li>
+    <li>Competitive pricing that reflects current market conditions, not inflated list prices</li>
+    <li>Human customer support that provides real updates, not just automated emails</li>
+    <li>A focus on repeat customers and referral business, which only happens when customers are genuinely satisfied</li>
+  </ul>
+  <p>Customer satisfaction isn&#x27;t a slogan - it&#x27;s the metric that determines whether the business grows. Ship Guy treats every shipment as an opportunity to earn long-term trust.</p>
+  <h2>Understanding Insurance, Contracts, and Policies</h2>
+  <p>Carrier cargo insurance typically protects the vehicle during transport, covering damage that occurs while the vehicle is on the trailer. However, coverage varies by carrier, and there may be deductibles or limits on certain types of damage. Ask about this before signing anything.</p>
+  <p>Practical recommendations:</p>
+  <ul>
+    <li><strong>Review the Bill of Lading carefully</strong> at both pickup and delivery. This is the legal record of your vehicle&#x27;s condition.</li>
+    <li><strong>Understand cancellation terms</strong> before booking, including any fees for changes or cancellations.</li>
+    <li><strong>Keep all documentation</strong> - quotes, emails, signed agreements, and photos - until the vehicle arrives and any issues are fully resolved.</li>
+    <li>Note any pre-existing damage on the Bill of Lading at pickup to avoid confusion later.</li>
+  </ul>
+  <p>If something goes wrong, having thorough documentation makes the resolution process far simpler.</p>
+  <h2>Massachusetts-Specific Tips and Requirements for Car Shipping</h2>
+  <p>Shipping your car is only part of the equation. Massachusetts has its own deadlines and rules that apply once the vehicle is in the state. Whether you&#x27;re a new resident or buying a car from out of state, handling the paperwork promptly avoids headaches.</p>
+  <h3>Registration, Inspection, and Local Rules</h3>
+  <ul>
+    <li>Register your vehicle within 30 days of residency with the Massachusetts Registry of Motor Vehicles. The Massachusetts department that handles this is the RMV, not the DMV, as in many other states.</li>
+    <li>Complete a vehicle inspection within 7 days of registration at an authorized inspection station. This includes both safety and emissions checks. The typical inspection fee is around $35.</li>
+    <li>You must have proof of Massachusetts auto insurance <strong>before</strong> heading to the RMV. No insurance, no registration.</li>
+    <li>Sales and use tax of 6.25% applies to vehicle purchases.</li>
+  </ul>
+  <p>The Massachusetts Registry of Motor Vehicles provides essential information on vehicle registration, including forms, fees, and office locations.</p>
+  <h2>Weather, Terrain, and Timing Considerations</h2>
+  <p>New England winters are a real factor in Massachusetts-based car shipping work. Snow, ice, and road salt from December through early March can affect routes and may slow pickup or delivery. Weather conditions during this period require carriers to adjust schedules and, at times, reroute.</p>
+  <ul>
+    <li>Coastal storms and nor&#x27;easters may temporarily disrupt schedules for Cape Cod, the Islands, and the North Shore.</li>
+    <li>Winter enclosed transport is especially valuable for protecting vehicles from salt and harsh conditions.</li>
+    <li>Plan extra time around major holidays and peak travel weekends for smoother service.</li>
+  </ul>
+  <p>Booking during shoulder seasons (spring and early fall) typically yields better rates and fewer weather-related delays.</p>
+  <h2>Urban, Suburban, and Rural Pickup Challenges</h2>
+  <p>Historic neighborhoods in Boston, Cambridge, and Somerville often feature narrow streets, low-hanging trees, and limited truck access. A carrier hauling ten vehicles on a 75-foot trailer simply can&#x27;t navigate every residential block in Beacon Hill or the North End.</p>
+  <ul>
+    <li>Ship Guy may coordinate meeting points, such as shopping centers or large parking lots nearby, for safe loading and unloading.</li>
+    <li>Rural Western Massachusetts pickups may need a little more lead time due to fewer carriers traveling those lanes, but Ship Guy works to minimize delays.</li>
+    <li>Vehicle storage options may be available if the timing between pickup and delivery doesn&#x27;t align perfectly.</li>
+  </ul>
+  <p>Being flexible about exact pickup location - even by a few blocks - can make the difference between a smooth handoff and a logistical headache.</p>
+  <h2>Preparing Your Vehicle for Massachusetts Auto Transport</h2>
+  <p>A few simple steps before pickup protect you and make the entire process smoother. Ship Guy sends preparation instructions after booking, tailored to your shipment. Here&#x27;s what every customer should know.</p>
+  <h3>Pre-Pickup Checklist</h3>
+  <ul>
+    <li><strong>Wash your vehicle</strong> so that pre-existing damage, such as scratches and dents, is easy to spot. Document existing damages with photos before transport - take time-stamped images of all four sides, the roof, and the interior.</li>
+    <li><strong>Remove personal belongings</strong> from the vehicle before shipping. Most carriers prohibit personal items in the cabin for liability and weight reasons. Remove personal belongings, toll transponders, parking passes, and any loose accessories to avoid unnecessary weight and potential issues.</li>
+    <li><strong>Fuel level</strong>: Leave only about a quarter tank of gas. A full tank adds unnecessary weight and cost.</li>
+    <li><strong>Secure or disable</strong>: Retract antennas, fold mirrors, and disable aftermarket alarms that might trigger during transit.</li>
+    <li><strong>Confirm vehicle condition</strong>: Let Ship Guy know if the car is non-running so the carrier brings the right equipment. Running condition affects pricing and carrier selection.</li>
+    <li>Ensure your vehicle has a sufficient fuel level for transport - just enough to drive on and off the trailer.</li>
+  </ul>
+  <p>Don&#x27;t leave valuables or important documents in the car. Carrier insurance covers the vehicle itself, not personal items stored inside.</p>
+  <h2>What to Do on Delivery Day</h2>
+  <p>When your vehicle arrives, take the time to do a thorough inspection:</p>
+  <ul>
+    <li>Inspect the car in good light and compare its condition to your pre-pickup photos.</li>
+    <li>Walk around the vehicle with the driver and check for any new scratches, dents, or damage.</li>
+    <li>Note any changes directly on the Bill of Lading before signing - once you sign without noting damage, filing a claim becomes much harder.</li>
+    <li>Keep a copy of the signed Bill of Lading for your records.</li>
+  </ul>
+  <p>If anything seems off, contact Ship Guy promptly. The team can help coordinate next steps with the carrier to address any concerns. A stress-free delivery starts with careful attention at this final step.</p>
+  <h2>Getting Started with Ship Guy for Massachusetts Car Shipping</h2>
+  <p>You now have a clear picture of how Massachusetts car shipping works: the process, costs, routes, and preparation. Ship Guy connects customers with reliable carriers for auto transport to and from Massachusetts, focusing on service, transparency, and on-time delivery of your vehicle.</p>
+  <p>Instead of relying on generic estimates, request a custom quote with your specific route, vehicle details, and dates. Ship Guy will provide accurate pricing based on current carrier rates and real availability, not a number pulled from a months-old database. Whether you&#x27;re choosing the right company for a local move or a coast-to-coast shipment, the goal is the same: safe delivery, clear communication, and peace of mind from start to finish.</p>
+  <p>Massachusetts car shipping doesn&#x27;t need to be stressful. Whether you&#x27;re a student heading to campus, a snowbird escaping winter, or a family starting fresh in a new city, Ship Guy is built to make the process simple. Get a quote, pick your transport type, and let a professional handle the drive.</p>
 </div></section>
+
+<!-- ===================== WHAT WE SHIP ===================== -->
+<section class="ship-section" id="services">
+  <div class="container">
+    <div class="ship-head">
+      <p class="ship-eyebrow">What We Ship</p>
+      <h2>We Ship More Than Cars</h2>
+      <p class="ship-sub">Nationwide transport solutions for vehicles, household goods, equipment, and freight.</p>
+    </div>
+
+    <div class="ship-grid">
+      <article class="ship-card">
+        <div class="ship-img"><img src="assets/ship-vehicles.jpg" alt="Blue auto-transport carrier loaded with cars and a boat on a mountain highway" loading="lazy"></div>
+        <div class="ship-body">
+          <h3>Vehicles &amp; Boats</h3>
+          <p>Cars, trucks, motorcycles, RVs, and boats shipped nationwide.</p>
+          <a class="ship-link" href="#">Learn More <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </div>
+      </article>
+
+      <article class="ship-card">
+        <div class="ship-img"><img src="assets/ship-household.jpg" alt="Living room with a sofa and packed moving boxes ready for transport" loading="lazy"></div>
+        <div class="ship-body">
+          <h3>Household Items</h3>
+          <p>Furniture, boxes, and personal items moved with care.</p>
+          <a class="ship-link" href="#">Learn More <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </div>
+      </article>
+
+      <article class="ship-card">
+        <div class="ship-img"><img src="assets/ship-equipment.jpg" alt="Green tractor secured on a flatbed trailer for heavy equipment transport" loading="lazy"></div>
+        <div class="ship-body">
+          <h3>Heavy Equipment</h3>
+          <p>Tractors, machinery, and oversized equipment transport.</p>
+          <a class="ship-link" href="#">Learn More <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </div>
+      </article>
+
+      <article class="ship-card">
+        <div class="ship-img"><img src="assets/ship-freight.jpg" alt="Palletized and shrink-wrapped cargo in a warehouse for freight shipping" loading="lazy"></div>
+        <div class="ship-body">
+          <h3>Freight</h3>
+          <p>Palletized cargo, crates, and commercial freight shipping.</p>
+          <a class="ship-link" href="#">Learn More <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FAQ ===================== -->
+<section class="faq-section" id="faq">
+  <div class="container">
+    <div class="faq-head">
+      <p class="faq-eyebrow">Questions?</p>
+      <h2>Frequently Asked Questions</h2>
+      <span class="faq-accent" aria-hidden="true"></span>
+      <p class="faq-sub">Everything you need to know before you ship.</p>
+    </div>
+
+    <div class="faq-list">
+      <details class="faq-item" open>
+        <summary class="faq-q">How much does it cost to ship a vehicle?
+          <span class="faq-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></span>
+        </summary>
+        <div class="faq-a">Your price depends on the distance, vehicle size, transport type (open or enclosed), and how quickly you need it. We give you an upfront, all-in quote with no hidden fees — the number you see is the number you pay.</div>
+      </details>
+
+      <details class="faq-item">
+        <summary class="faq-q">How long will my shipment take?
+          <span class="faq-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></span>
+        </summary>
+        <div class="faq-a">Transit time depends on the route and distance. Once your vehicle is dispatched, we share an estimated delivery window and keep you updated from pickup to drop-off. Longer cross-country routes naturally take more time than regional moves.</div>
+      </details>
+
+      <details class="faq-item">
+        <summary class="faq-q">Is my vehicle insured during transport?
+          <span class="faq-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></span>
+        </summary>
+        <div class="faq-a">Yes. We only work with licensed, vetted carriers that carry active cargo insurance, and your vehicle is covered while it's on the truck. We're happy to share coverage details before you book.</div>
+      </details>
+
+      <details class="faq-item">
+        <summary class="faq-q">What's the difference between open and enclosed transport?
+          <span class="faq-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></span>
+        </summary>
+        <div class="faq-a">Open transport is the most common and most affordable option and is safe for everyday vehicles. Enclosed transport adds extra protection from weather and road debris — a great choice for classic, luxury, or high-value vehicles.</div>
+      </details>
+
+      <details class="faq-item">
+        <summary class="faq-q">Do I have to pay a deposit upfront?
+          <span class="faq-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></span>
+        </summary>
+        <div class="faq-a">No. You don't pay until your vehicle is assigned and dispatched to a carrier — so there's no risk in getting a quote and booking your shipment.</div>
+      </details>
+
+      <details class="faq-item">
+        <summary class="faq-q">Can you ship a vehicle that doesn't run?
+          <span class="faq-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></span>
+        </summary>
+        <div class="faq-a">Yes. We transport both operable and inoperable (non-running) vehicles — just let us know when you book so we assign a carrier with the right equipment, such as a winch.</div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== LOCAL / CONTACT ===================== -->
+<section class="local-section" id="contact-local">
+  <div class="container">
+    <div class="local-grid">
+      <div class="local-info">
+        <p class="local-eyebrow">Get Started</p>
+        <h2>Ship Your Car To or From Massachusetts Today</h2>
+        <p class="local-lede">Call now or request a free quote. Transparent all-in pricing, no upfront deposit, vetted carriers, and 24/7 U.S.-based support.</p>
+        <div class="local-actions">
+          <a class="btn-call-lg" href="tel:+18662803481"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/></svg> Call (866) 280-3481</a>
+          <a class="btn-quote-lg" href="#top">Get a Free Quote <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </div>
+        <ul class="local-contact">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg><span>Serving all of Massachusetts — door-to-door, statewide</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg><span>Ship Guy — Nationwide Auto Transport &nbsp;<em style="color:#9098b0">(add your business address)</em></span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/></svg><a href="tel:+18662803481">(866) 280-3481</a></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg><a href="mailto:quotes@shipguy.com">quotes@shipguy.com</a></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span>Open 24/7 — quotes &amp; support</span></li>
+        </ul>
+        <div class="local-social" aria-label="Follow Ship Guy"><a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.07C24 5.4 18.63 0 12 0S0 5.4 0 12.07C0 18.1 4.39 23.1 10.13 24v-8.44H7.08v-3.49h3.05V9.41c0-3.02 1.79-4.69 4.53-4.69 1.31 0 2.68.24 2.68.24v2.97h-1.51c-1.49 0-1.96.93-1.96 1.89v2.25h3.33l-.53 3.49h-2.8V24C19.61 23.1 24 18.1 24 12.07z"/></svg></a><a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5.5"/><circle cx="12" cy="12" r="4.2"/><line x1="17.6" y1="6.4" x2="17.61" y2="6.4"/></svg></a><a href="#" aria-label="X"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231 5.45-6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a><a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg></a></div>
+      </div>
+      <div class="local-map">
+        <iframe title="Massachusetts auto transport service area" src="https://www.google.com/maps?q=Massachusetts%2C%20USA&z=6&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+</section>
 
 <!-- ===================== FINAL CTA ===================== -->
 <section class="cta-band" id="get-started">
@@ -838,11 +1472,14 @@ body.ready .reveal{opacity:1;transform:none}
     <h2>Ready to Ship Your Vehicle?</h2>
     <p class="cta-sub">Get a free, no-obligation quote in about 60 seconds — or call and talk to a real specialist right now.</p>
     <div class="cta-actions">
-      <a class="cta-primary" href="index.html#top">Get Your Free Quote
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      <a class="cta-primary" href="#top">
+        Get Your Free Quote
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
       <a class="cta-secondary" href="tel:+18662803481">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/></svg>
-        (866) 280-3481</a>
+        (866) 280-3481
+      </a>
     </div>
     <ul class="cta-trust">
       <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Licensed &amp; insured</li>
@@ -873,9 +1510,9 @@ body.ready .reveal{opacity:1;transform:none}
       <h4>Company</h4>
       <ul>
         <li><a href="how-it-works.html">How It Works</a></li>
-        <li><a href="index.html#reviews">Reviews</a></li>
-        <li><a href="index.html#faq">FAQ</a></li>
-        <li><a href="index.html#contact">Contact</a></li>
+        <li><a href="#reviews">Reviews</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#contact">Contact</a></li>
       </ul>
     </div>
     <div class="f-col">
