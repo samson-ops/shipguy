@@ -3,13 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Auto Transport Mobile, AL | Car Shipping to &amp; from Mobile, Alabama | Ship Guy</title>
+<title>Auto Transport in Mobile, AL | Ship Guy</title>
 <meta name="description" content="Licensed, insured auto transport in Mobile, Alabama. Door-to-door car shipping, open &amp; enclosed transport, and state-to-state moves along the Gulf Coast. Free instant quote — (251) 299-9724.">
 <meta name="keywords" content="auto transport Mobile AL, car shipping Mobile Alabama, vehicle transport Mobile, door to door car shipping Mobile, enclosed auto transport Alabama">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Auto Transport Mobile, AL | Ship Guy Auto Transport">
 <meta property="og:description" content="Licensed, insured car shipping to and from Mobile, Alabama. Open &amp; enclosed transport, door-to-door pickup, and state-to-state moves across the U.S.">
 <meta property="og:image" content="assets/Car_Shipping_Mobile_Alabama.jpg">
+<link rel="preload" as="image" href="assets/Car_Shipping_Mobile_Alabama.webp" type="image/webp" fetchpriority="high">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
@@ -656,6 +657,13 @@ body.ready .reveal{opacity:1;transform:none}
 .split.rev .split-media{order:2}
 .split-media{position:relative;border-radius:20px;overflow:hidden;box-shadow:var(--shadow-card);aspect-ratio:1160/645}
 .split-media img{width:100%;height:100%;object-fit:cover;display:block}
+.hero-media picture,.split-media picture{display:contents}
+.crumb{background:var(--bg-soft);border-bottom:1px solid var(--line)}
+.crumb ol{list-style:none;display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin:0;padding:13px 0;font-size:13.5px;color:var(--ink-2)}
+.crumb a{color:var(--ink-2);text-decoration:none}
+.crumb a:hover{color:var(--brand)}
+.crumb .sep{color:#9aa3b8;font-size:14px;line-height:1}
+.crumb [aria-current="page"]{color:var(--ink);font-weight:600}
 .split-media .pin{position:absolute;left:15px;bottom:15px;display:inline-flex;align-items:center;gap:7px;background:rgba(11,18,48,.84);color:#fff;font-size:12.5px;font-weight:600;padding:8px 13px;border-radius:999px}
 .split-media .pin svg{width:14px;height:14px;color:#9fc0f6}
 .split-body .eyebrow-sm{font-family:var(--font-display);font-weight:700;font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--brand);margin:0 0 12px}
@@ -925,7 +933,10 @@ body.ready .reveal{opacity:1;transform:none}
 <!-- ===================== HERO ===================== -->
 <section class="hero">
   <div class="hero-media" aria-hidden="true">
-    <img class="hero-img" alt="" src="assets/Car_Shipping_Mobile_Alabama.jpg">
+    <picture>
+      <source srcset="assets/Car_Shipping_Mobile_Alabama.webp" type="image/webp">
+      <img class="hero-img" alt="" src="assets/Car_Shipping_Mobile_Alabama.jpg" width="1156" height="643" fetchpriority="high" decoding="async">
+    </picture>
     <div class="hero-overlay"></div>
   </div>
 
@@ -1155,12 +1166,28 @@ body.ready .reveal{opacity:1;transform:none}
   </div>
 </section>
 
+<!-- ===================== BREADCRUMB ===================== -->
+<nav class="crumb" aria-label="Breadcrumb">
+  <div class="container">
+    <ol>
+      <li><a href="index.html">Home</a></li>
+      <li class="sep" aria-hidden="true">&rsaquo;</li>
+      <li><a href="index.html#locations">Locations</a></li>
+      <li class="sep" aria-hidden="true">&rsaquo;</li>
+      <li aria-current="page">Mobile, AL</li>
+    </ol>
+  </div>
+</nav>
+
 <!-- ===================== OVERVIEW ===================== -->
 <section class="csec" id="overview">
   <div class="container">
     <div class="split">
       <div class="split-media">
-        <img src="assets/Nationwide_Auto_Transport_Mobile_Alabama.jpg" alt="Auto transport carrier on a downtown street in Mobile, Alabama">
+        <picture>
+          <source srcset="assets/Nationwide_Auto_Transport_Mobile_Alabama.webp" type="image/webp">
+          <img src="assets/Nationwide_Auto_Transport_Mobile_Alabama.jpg" alt="Auto transport carrier on a downtown street in Mobile, Alabama" width="1162" height="643" loading="lazy" decoding="async">
+        </picture>
         <span class="pin"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg> Downtown Mobile, AL</span>
       </div>
       <div class="split-body">
@@ -1213,7 +1240,10 @@ body.ready .reveal{opacity:1;transform:none}
   <div class="container">
     <div class="split rev">
       <div class="split-media">
-        <img src="assets/Door_to_Door_Car_Shipping_Mobile_Alabama.jpg" alt="Driver handing car keys to a customer at door-to-door delivery in Mobile, Alabama">
+        <picture>
+          <source srcset="assets/Door_to_Door_Car_Shipping_Mobile_Alabama.webp" type="image/webp">
+          <img src="assets/Door_to_Door_Car_Shipping_Mobile_Alabama.jpg" alt="Driver handing car keys to a customer at door-to-door delivery in Mobile, Alabama" width="1161" height="646" loading="lazy" decoding="async">
+        </picture>
         <span class="pin"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg> Door-to-door in Mobile</span>
       </div>
       <div class="split-body">
@@ -1239,7 +1269,10 @@ body.ready .reveal{opacity:1;transform:none}
     </div>
     <div class="split">
       <div class="split-media">
-        <img src="assets/Enclosed_Car_Shipping_Mobile_Alabama.jpg" alt="Enclosed auto transport trailer with the Mobile, Alabama skyline behind it">
+        <picture>
+          <source srcset="assets/Enclosed_Car_Shipping_Mobile_Alabama.webp" type="image/webp">
+          <img src="assets/Enclosed_Car_Shipping_Mobile_Alabama.jpg" alt="Enclosed auto transport trailer with the Mobile, Alabama skyline behind it" width="1161" height="637" loading="lazy" decoding="async">
+        </picture>
         <span class="pin"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg> Enclosed transport</span>
       </div>
       <div class="split-body">
@@ -1288,7 +1321,10 @@ body.ready .reveal{opacity:1;transform:none}
   <div class="container">
     <div class="split rev">
       <div class="split-media">
-        <img src="assets/Auto_Transport_Mobile_Alabama.jpg" alt="Auto transport carrier passing a Welcome to Alabama sign on the interstate">
+        <picture>
+          <source srcset="assets/Auto_Transport_Mobile_Alabama.webp" type="image/webp">
+          <img src="assets/Auto_Transport_Mobile_Alabama.jpg" alt="Auto transport carrier passing a Welcome to Alabama sign on the interstate" width="1154" height="646" loading="lazy" decoding="async">
+        </picture>
         <span class="pin"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg> I-10 &amp; I-65 corridors</span>
       </div>
       <div class="split-body">
