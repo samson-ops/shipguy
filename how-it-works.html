@@ -590,6 +590,19 @@ body.ready .reveal{opacity:1;transform:none}
 @media (max-width:760px){.related-grid{grid-template-columns:1fr}}
 
 @media (max-width:460px){.footer-top{grid-template-columns:1fr;gap:28px}}/* resp-polish-footer */
+  .article-lead{font-size:18px;line-height:1.7;color:var(--ink-2);margin:0 0 26px;padding-bottom:24px;border-bottom:1px solid var(--line)}
+  .hiw-why{background:#f6f8fc;border-top:1px solid var(--line);padding:60px 0}
+  .hiw-head{text-align:center;max-width:680px;margin:0 auto 36px}
+  .hiw-head .eyebrow2{font-family:var(--font-display);font-weight:800;letter-spacing:.14em;text-transform:uppercase;font-size:12.5px;color:var(--brand)}
+  .hiw-head h2{font-family:var(--font-display);font-weight:800;font-size:clamp(1.5rem,2.6vw,2rem);color:#101a3d;margin:8px 0 10px}
+  .hiw-head p{color:var(--ink-2);font-size:16px;margin:0}
+  .hiw-trust{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+  .hiw-trust .ht{display:flex;gap:13px;align-items:flex-start;background:#fff;border:1px solid var(--line);border-radius:14px;padding:22px 20px}
+  .hiw-trust .ht svg{width:24px;height:24px;color:var(--brand);flex:0 0 auto;margin-top:2px}
+  .hiw-trust .ht h4{font-family:var(--font-display);font-weight:700;font-size:16px;color:#101a3d;margin:0 0 4px}
+  .hiw-trust .ht p{color:var(--ink-2);font-size:14px;line-height:1.55;margin:0}
+  @media (max-width:900px){.hiw-trust{grid-template-columns:1fr 1fr}}
+  @media (max-width:560px){.hiw-trust{grid-template-columns:1fr}}
 </style>
 <script type="application/ld+json">
 {
@@ -625,7 +638,7 @@ body.ready .reveal{opacity:1;transform:none}
 
     <nav class="main-nav" aria-label="Primary">
       <a href="index.html#top">Home</a>
-      <a href="index.html#how">How It Works</a>
+      <a href="how-it-works.html">How It Works</a>
       <div class="has-menu">
         <button class="nav-toggle-btn" aria-haspopup="true" aria-expanded="false">Services
           <span class="chev" aria-hidden="true"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></span>
@@ -675,7 +688,7 @@ body.ready .reveal{opacity:1;transform:none}
   <nav class="mobile-nav" id="mobileNav" aria-label="Mobile">
     <div class="inner">
       <a href="index.html#top">Home</a>
-      <a href="index.html#how">How It Works</a>
+      <a href="how-it-works.html">How It Works</a>
       <span class="m-sub">Services</span>
                   <a href="open-car-transport.html">Open Car Transport</a>
       <a href="enclosed-auto-transport.html">Enclosed Auto Transport</a>
@@ -733,6 +746,8 @@ body.ready .reveal{opacity:1;transform:none}
 <section class="article-section">
   <div class="container article">
 
+    <p class="article-lead">Shipping a car with Ship Guy is refreshingly simple. As a licensed, bonded, and FMCSA-registered auto transport broker, we manage the entire journey for you — matching your vehicle with a vetted, insured carrier, coordinating pickup and delivery, and keeping you updated at every step. Whether you're moving across the state or across the country, it comes down to the same three steps below.</p>
+
     <h2>Step 1: Get Your Free Car Shipping Quote</h2>
     <p>Every shipment starts with a quote. Enter your pickup location, delivery location, and vehicle details — year, make, model, and whether it runs — into our quote form, or call <a href="tel:+18662803481">(866) 280-3481</a> to talk to a shipping specialist. Within minutes you'll have an upfront, all-in price for your route.</p>
     <p>Unlike many auto transport companies, Ship Guy quotes are transparent. The number you see covers door-to-door transport, carrier insurance, taxes, and tolls. There are no hidden fees, no fuel surcharges added later, and no upfront deposit. You don't pay anything until your vehicle is assigned to a carrier and dispatched.</p>
@@ -786,6 +801,25 @@ body.ready .reveal{opacity:1;transform:none}
         <a class="related-card" href="car-shipping-preparation.html">Car Prep Guide <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
       </div>
 </div></section>
+
+<!-- ===================== WHY SHIP GUY ===================== -->
+<section class="hiw-why">
+  <div class="container">
+    <div class="hiw-head">
+      <p class="eyebrow2">Why Ship Guy</p>
+      <h2>A Process Built on Trust</h2>
+      <p>Every shipment is backed by the credentials, carriers, and support that make auto transport worry-free.</p>
+    </div>
+    <div class="hiw-trust">
+      <div class="ht"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v5c0 5-3.5 8.5-7 10-3.5-1.5-7-5-7-10V6l7-3Z"/><path d="m9 12 2 2 4-4"/></svg><div><h4>Licensed &amp; Insured</h4><p>FMCSA-registered, bonded broker with every shipment fully insured.</p></div></div>
+      <div class="ht"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg><div><h4>Vetted Carriers</h4><p>We screen every carrier for active authority, insurance, and safety record.</p></div></div>
+      <div class="ht"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 1v22"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg><div><h4>Transparent Pricing</h4><p>Upfront, all-in quotes — no hidden fees or surprises at delivery.</p></div></div>
+      <div class="ht"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M19 7V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-2"/><path d="M21 12h-4a2 2 0 0 0 0 4h4v-4Z"/></svg><div><h4>No Upfront Deposit</h4><p>You pay nothing until your vehicle is assigned to a carrier and dispatched.</p></div></div>
+      <div class="ht"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="19" r="3"/><path d="M9 19h8.5a3.5 3.5 0 0 0 0-7h-11a3.5 3.5 0 0 1 0-7H15"/><circle cx="18" cy="5" r="3"/></svg><div><h4>Real-Time Tracking</h4><p>Follow your shipment from pickup all the way through final delivery.</p></div></div>
+      <div class="ht"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 14v-2a9 9 0 0 1 18 0v2"/><path d="M18 15h1a2 2 0 0 1 2 2v0a2 2 0 0 1-2 2h-1a1 1 0 0 1-1-1v-4a1 1 0 0 1 1-1Z"/><path d="M6 15H5a2 2 0 0 0-2 2v0a2 2 0 0 0 2 2h1a1 1 0 0 0 1-1v-4a1 1 0 0 0-1-1Z"/></svg><div><h4>24/7 U.S. Support</h4><p>Real, U.S.-based specialists by phone whenever you need them.</p></div></div>
+    </div>
+  </div>
+</section>
 
 <!-- ===================== FINAL CTA ===================== -->
 <section class="cta-band" id="get-started">
