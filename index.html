@@ -638,6 +638,15 @@ body.ready .reveal{opacity:1;transform:none}
 @media(max-width:1024px){.hx-wrap{grid-template-columns:1fr;gap:40px;padding-top:48px}.hx-lede{max-width:none}}
 @media(max-width:760px){.hx-grid{grid-template-columns:repeat(2,1fr)}.hx-strip-wrap{grid-template-columns:repeat(2,1fr);row-gap:30px}.hx-stat:nth-child(3)::before{display:none}}
 @media(max-width:440px){.hx-grid{grid-template-columns:1fr}.hx-strip-wrap{grid-template-columns:1fr;row-gap:26px}.hx-stat::before{display:none}.hx-trust li{padding:6px 0}.hx-trust li+li::before{display:none}}
+
+/* inline quote starter (hero) — visual only */
+.hx-quotebox{max-width:470px}
+.hx-field{margin:0 0 12px}
+.hx-select{width:100%;appearance:none;-webkit-appearance:none;-moz-appearance:none;background-color:#fff;background-image:url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='24'%20height='24'%20viewBox='0%200%2024%2024'%20fill='none'%20stroke='%236b7488'%20stroke-width='2'%20stroke-linecap='round'%20stroke-linejoin='round'%3E%3Cpath%20d='m6%209%206%206%206-6'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 15px center;background-size:20px;border:1.6px solid var(--field);border-radius:11px;padding:15px 46px 15px 16px;font-family:var(--font-body);font-size:16px;color:var(--ink);line-height:1.2;cursor:pointer;transition:border-color .15s ease,box-shadow .15s ease}
+.hx-select:hover{border-color:#c2cadd}
+.hx-select:focus{outline:none;border-color:var(--brand);box-shadow:0 0 0 3px var(--ring)}
+.hx-qbtns{display:flex;gap:12px;flex-wrap:wrap;margin-top:4px}
+.hx-qbtns > *{flex:1 1 150px;justify-content:center;text-align:center}
 </style>
 </head>
 <body>
@@ -724,8 +733,34 @@ body.ready .reveal{opacity:1;transform:none}
       <p class="hx-eyebrow">Licensed &bull; Insured &bull; Nationwide</p>
       <h1 class="hx-title">Ship Anything.<br>Anywhere. Anytime...</h1>
       <p class="hx-lede">Get quotes for vehicles, freight, furniture, equipment, boats, motorcycles, and more. Transparent pricing. Trusted carriers. Reliable delivery.</p>
-      <div class="hx-cta">
-        <a class="hx-btn" href="contact.html">Get Free Shipping Quotes</a>
+      <div class="hx-quotebox">
+        <div class="hx-field">
+          <select class="hx-select" aria-label="What are you shipping?">
+            <option selected>What are you shipping?</option>
+            <option>Vehicle (car, truck, SUV)</option>
+            <option>Motorcycle</option>
+            <option>Boat</option>
+            <option>Freight / pallets</option>
+            <option>Furniture</option>
+            <option>Heavy equipment</option>
+            <option>Household goods</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div class="hx-field">
+          <select class="hx-select" aria-label="When do you need it shipped?">
+            <option selected>When do you need it?</option>
+            <option>As soon as possible</option>
+            <option>Within 1 week</option>
+            <option>Within 2 weeks</option>
+            <option>Within a month</option>
+            <option>My dates are flexible</option>
+          </select>
+        </div>
+        <div class="hx-qbtns">
+          <button type="button" class="hx-btn">Get Shipping Quotes</button>
+          <a class="hx-ghost" href="contact.html">Become A Carrier</a>
+        </div>
       </div>
     </div>
     <div class="hx-right">
