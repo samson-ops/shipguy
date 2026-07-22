@@ -647,6 +647,11 @@ body.ready .reveal{opacity:1;transform:none}
 .hx-select:focus{outline:none;border-color:var(--brand);box-shadow:0 0 0 3px var(--ring)}
 .hx-qbtns{display:flex;gap:12px;flex-wrap:wrap;margin-top:4px}
 .hx-qbtns > *{flex:1 1 150px;justify-content:center;text-align:center}
+
+/* header "Become A Carrier" outline pill */
+.btn-carrier{flex:0 0 auto;display:inline-flex;align-items:center;gap:8px;background:#fff;color:var(--brand);font-weight:700;font-size:15px;padding:11px 19px;border:1.6px solid var(--field);border-radius:999px;transition:transform .15s ease,background .15s ease,border-color .15s ease}
+.btn-carrier:hover{border-color:var(--brand);background:var(--brand-tint);transform:translateY(-1px)}
+@media (max-width:760px){.btn-carrier{display:none}}
 </style>
 </head>
 <body>
@@ -691,6 +696,7 @@ body.ready .reveal{opacity:1;transform:none}
       <a href="contact.html">Contact</a>
     </nav>
 
+    <a class="btn-carrier" href="contact.html">Become A Carrier</a>
     <a class="btn-call" href="tel:+18662803481">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/></svg>
       <span class="num-full">Call (866) 280-3481</span>
@@ -759,7 +765,6 @@ body.ready .reveal{opacity:1;transform:none}
         </div>
         <div class="hx-qbtns">
           <button type="button" class="hx-btn">Get Shipping Quotes</button>
-          <a class="hx-ghost" href="contact.html">Become A Carrier</a>
         </div>
       </div>
     </div>
