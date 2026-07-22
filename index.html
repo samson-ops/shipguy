@@ -70,7 +70,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,
    ========================================================= */
 .site-header{
   position:sticky;top:0;z-index:60;background:#fff;
-  border-bottom:1px solid transparent;
+  border-bottom:1px solid var(--line);
   transition:box-shadow .25s ease, border-color .25s ease;
 }
 .site-header.is-scrolled{box-shadow:0 6px 24px -16px rgba(13,26,80,.5);border-bottom-color:var(--line)}
@@ -599,9 +599,9 @@ body.ready .reveal{opacity:1;transform:none}
 
 /* ===================== HERO v2 "Ship Anything" ===================== */
 .hx-hero{background:#fff}
-.hx-wrap{padding:60px 24px 44px;display:grid;grid-template-columns:.82fr 1.18fr;gap:56px;align-items:center}
+.hx-wrap{padding:72px 24px 44px;display:grid;grid-template-columns:.82fr 1.18fr;gap:56px;align-items:center}
 .hx-eyebrow{font-family:var(--font-display);font-weight:700;font-size:13px;letter-spacing:.16em;text-transform:uppercase;color:var(--brand);margin:0 0 22px}
-.hx-title{font-family:var(--font-display);font-weight:800;font-size:clamp(2.4rem,4.6vw,3.7rem);line-height:1.02;letter-spacing:-.025em;color:#101a3d;margin:0 0 24px}
+.hx-title{font-family:var(--font-display);font-weight:800;font-size:clamp(1.65rem,2.75vw,2.2rem);line-height:1.08;letter-spacing:-.02em;color:#101a3d;margin:0 0 18px}
 .hx-lede{font-size:clamp(1rem,1.25vw,1.16rem);line-height:1.62;color:var(--ink-2);margin:0 0 32px;max-width:33ch}
 .hx-cta{display:flex;gap:14px;flex-wrap:wrap;margin:0 0 30px}
 .hx-btn,.hx-ghost{display:inline-flex;align-items:center;gap:9px;font-family:var(--font-display);font-weight:700;font-size:16px;padding:15px 26px;border-radius:12px;border:2px solid transparent;transition:transform .15s ease,background .15s ease,border-color .15s ease}
@@ -722,7 +722,7 @@ body.ready .reveal{opacity:1;transform:none}
   <div class="container hx-wrap">
     <div class="hx-left">
       <p class="hx-eyebrow">Licensed &bull; Insured &bull; Nationwide</p>
-      <h1 class="hx-title">Ship Anything.<br>Anywhere in the U.S.</h1>
+      <h1 class="hx-title">Ship Anything.<br>Anywhere. Anytime...</h1>
       <p class="hx-lede">Get quotes for vehicles, freight, furniture, equipment, boats, motorcycles, and more. Transparent pricing. Trusted carriers. Reliable delivery.</p>
       <div class="hx-cta">
         <a class="hx-btn" href="contact.html">Get Free Shipping Quotes</a>
