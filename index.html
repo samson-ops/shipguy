@@ -725,10 +725,8 @@ body.ready .reveal{opacity:1;transform:none}
       <h1 class="hx-title">Ship Anything.<br>Anywhere in the U.S.</h1>
       <p class="hx-lede">Get quotes for vehicles, freight, furniture, equipment, boats, motorcycles, and more. Transparent pricing. Trusted carriers. Reliable delivery.</p>
       <div class="hx-cta">
-        <a class="hx-btn" href="#quote">Get Free Shipping Quotes</a>
-        <a class="hx-ghost" href="contact.html">Become a Carrier</a>
+        <a class="hx-btn" href="contact.html">Get Free Shipping Quotes</a>
       </div>
-      <ul class="hx-trust"><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v5c0 5-3.5 8.5-7 10-3.5-1.5-7-5-7-10V6l7-3Z"/></svg>Licensed Broker</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>Vetted Carriers</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>Secure Information</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 14v-2a8 8 0 0 1 16 0v2"/><path d="M18 14h1a2 2 0 0 1 2 2v1a2 2 0 0 1-2 2h-1a1 1 0 0 1-1-1v-3a1 1 0 0 1 1-1Z"/><path d="M6 14H5a2 2 0 0 0-2 2v1a2 2 0 0 0 2 2h1a1 1 0 0 0 1-1v-3a1 1 0 0 0-1-1Z"/><path d="M20 17v1a4 4 0 0 1-4 4h-3"/></svg>U.S. Based Support</li></ul>
     </div>
     <div class="hx-right">
       <div class="hx-grid">
@@ -747,19 +745,6 @@ body.ready .reveal{opacity:1;transform:none}
         <div class="hx-stat"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v5c0 5-3.5 8.5-7 10-3.5-1.5-7-5-7-10V6l7-3Z"/><path d="m9 12 2 2 4-4"/></svg><h3>Insured Carrier Network</h3><p>Your shipment is protected.</p></div>
         <div class="hx-stat"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><h3>24/7 Support</h3><p>Real people. Real help.</p></div>
         <div class="hx-stat"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20.6 13.4 12 22l-9-9V3h10l7.6 7.6a2 2 0 0 1 0 2.8Z"/><circle cx="7.5" cy="7.5" r="1.2" fill="currentColor" stroke="none"/></svg><h3>Transparent Pricing</h3><p>No hidden fees. Ever.</p></div>
-    </div>
-  </div>
-</section>
-
-<!-- ===================== GET A QUOTE ===================== -->
-<section class="hx-quote" id="quote">
-  <div class="container hx-quote-wrap">
-    <div class="hx-quote-head">
-      <h2>Get Your Free Shipping Quote</h2>
-      <p>Tell us what you're shipping and where &mdash; get an upfront price in minutes.</p>
-    </div>
-    <div class="quote-card is-embed" id="quoteForm">
-      <iframe src="https://widget.berocker.com?theme=pro&api_base=https%3A%2F%2Fapp.shipguy.com&api_key=6a5508b7cb2f4" title="Ship Guy Logistics booking form" loading="lazy"></iframe>
     </div>
   </div>
 </section>
@@ -1238,19 +1223,6 @@ body.ready .reveal{opacity:1;transform:none}
       var o = document.createElement('option'); o.value = y; o.textContent = y; year.appendChild(o);
     }
   }
-
-  /* ---- auto-resize booking widget iframe ---- */
-  window.addEventListener('message', function(e){
-    if(String(e.origin).indexOf('berocker') === -1) return;
-    var d = e.data, h = null;
-    if(typeof d === 'number') h = d;
-    else if(d && typeof d === 'object') h = d.height || d.frameHeight || d.iframeHeight || (d.data && d.data.height);
-    h = parseInt(h, 10);
-    if(h && h > 200 && h < 4000){
-      var f = document.querySelector('.quote-card.is-embed iframe');
-      if(f) f.style.height = h + 'px';
-    }
-  }, false);
 })();
 </script>
 </body>
