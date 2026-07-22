@@ -660,7 +660,7 @@ body.ready .reveal{opacity:1;transform:none}
       </div>
       <a href="index.html#reviews">Reviews</a>
       <a href="index.html#faq">FAQ</a>
-      <a href="index.html#contact">Contact</a>
+      <a href="contact.html">Contact</a>
     </nav>
 
     <a class="btn-call" href="tel:+18662803481">
@@ -693,7 +693,7 @@ body.ready .reveal{opacity:1;transform:none}
       <span class="m-sub">More</span>
       <a href="index.html#reviews">Reviews</a>
       <a href="index.html#faq">FAQ</a>
-      <a href="index.html#contact">Contact</a>
+      <a href="contact.html">Contact</a>
     </div>
   </nav>
 </header>
@@ -800,7 +800,7 @@ body.ready .reveal{opacity:1;transform:none}
         <li><a href="how-it-works.html">How It Works</a></li>
         <li><a href="index.html#reviews">Reviews</a></li>
         <li><a href="index.html#faq">FAQ</a></li>
-        <li><a href="index.html#contact">Contact</a></li>
+        <li><a href="contact.html">Contact</a></li>
       </ul>
     </div>
     <div class="f-col">
@@ -889,6 +889,7 @@ body.ready .reveal{opacity:1;transform:none}
 
   /* ---- multi-step form ---- */
   var form = document.getElementById('quoteForm');
+  if(!form) return;
   var success = document.getElementById('quoteSuccess');
   var panels = form.querySelectorAll('.qstep');
   var stepEls = document.querySelectorAll('#steps .step');
