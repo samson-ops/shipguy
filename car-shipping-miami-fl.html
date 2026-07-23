@@ -663,6 +663,9 @@ body.ready .reveal{opacity:1;transform:none}
   .city-callout{flex-direction:column;gap:12px}
   .city-hero-btns .city-btn,.city-hero-btns .city-btn-ghost{flex:1 1 100%;justify-content:center}
 }
+
+.quote-card.is-embed{padding:0;overflow:hidden}
+.quote-card.is-embed iframe{width:100%;height:630px;border:0;display:block}
 </style>
 <script type="application/ld+json">
 {
@@ -752,22 +755,41 @@ body.ready .reveal{opacity:1;transform:none}
 </header>
 
 <!-- ===================== PAGE HERO ===================== -->
-<section class="page-hero"><div class="container">
-  <nav class="crumbs" aria-label="Breadcrumb"><a href="index.html">Home</a><span>/</span><span aria-current="page">Miami, FL</span></nav>
-  <h1>Car Shipping in Miami, FL</h1>
-  <p class="page-hero-sub">Door-to-door auto transport to and from Miami &mdash; open and enclosed carriers, upfront pricing, and no deposit to book.</p>
-  <div class="city-hero-btns">
-    <a class="city-btn" href="index.html">Get Your Free Quote</a>
-    <a class="city-btn-ghost" href="tel:+18662803481">Call (866) 280-3481</a>
+<section class="hero">
+  <div class="hero-media" aria-hidden="true">
+    <img class="hero-img" alt="" src="assets/hero.jpg">
+    <div class="hero-overlay"></div>
   </div>
-</div></section>
 
-<section class="city-stats"><div class="container city-stats-wrap">
-        <div class="city-stat"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-5.5 7-11a7 7 0 1 0-14 0c0 5.5 7 11 7 11Z"/><circle cx="12" cy="10" r="2.6"/></svg><h3>Door-to-door</h3><p>Pickup at your Miami address</p></div>
-        <div class="city-stat"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><h3>1&ndash;5 day pickup</h3><p>Typical scheduling window</p></div>
-        <div class="city-stat"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v5c0 5-3.5 8.5-7 10-3.5-1.5-7-5-7-10V6l7-3Z"/><path d="m9 12 2 2 4-4"/></svg><h3>Licensed &amp; insured</h3><p>FMCSA-registered broker</p></div>
-        <div class="city-stat"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 14v-2a8 8 0 0 1 16 0v2"/><path d="M18 14h1a2 2 0 0 1 2 2v1a2 2 0 0 1-2 2h-1a1 1 0 0 1-1-1v-3a1 1 0 0 1 1-1Z"/><path d="M6 14H5a2 2 0 0 0-2 2v1a2 2 0 0 0 2 2h1a1 1 0 0 0 1-1v-3a1 1 0 0 0-1-1Z"/></svg><h3>24/7 support</h3><p>U.S.-based specialists</p></div>
-</div></section>
+  <div class="container hero-grid">
+    <div class="hero-copy">
+      <nav class="crumbs" aria-label="Breadcrumb"><a href="index.html">Home</a><span>/</span><span aria-current="page">Miami, FL</span></nav>
+      <p class="eyebrow reveal">Miami,&nbsp;FL&nbsp;&bull;&nbsp;Licensed&nbsp;&bull;&nbsp;Insured</p>
+      <h1 class="reveal d2">Car Shipping in<br>Miami, FL</h1>
+      <p class="lede reveal d2">Door-to-door auto transport to and from Miami with vetted, insured carriers, upfront pricing, and no deposit to book.</p>
+
+      <ul class="trust-list reveal d3">
+        <li><span class="trust-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/><path d="m9 12 2 2 4-4"/></svg></span>Licensed Broker &amp; Fully Insured</li>
+        <li><span class="trust-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="2" width="8" height="4" rx="1"/><path d="M9 4H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2h-3"/><path d="m9 14 2 2 4-4"/></svg></span>FMCSA Registered</li>
+        <li><span class="trust-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></span>Vetted Carrier Network</li>
+        <li><span class="trust-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M4 13a8 8 0 0 1 16 0"/><rect x="2" y="13" width="4.4" height="7" rx="1.6"/><rect x="17.6" y="13" width="4.4" height="7" rx="1.6"/><path d="M20 19.5v.5a3 3 0 0 1-3 3h-3"/></svg></span>Real-Time Tracking &amp; 24/7 Support</li>
+      </ul>
+
+      <div class="hero-divider reveal d3"></div>
+
+      <div class="stats reveal d3">
+        <div class="stat"><span class="num">50+</span><span class="lbl">States Served</span></div>
+        <div class="stat"><span class="num">100%</span><span class="lbl">Insured Transport</span></div>
+        <div class="stat"><span class="num">24/7</span><span class="lbl">Support &amp; Tracking</span></div>
+      </div>
+    </div>
+
+    <!-- QUOTE CARD (booking widget) -->
+    <div class="quote-card is-embed reveal d2" id="quoteForm">
+      <iframe src="https://widget.berocker.com?theme=pro&amp;api_base=https%3A%2F%2Fapp.shipguy.com&amp;api_key=6a5508b7cb2f4" title="Ship Guy Logistics booking form" loading="lazy"></iframe>
+    </div>
+  </div>
+</section>
 
 <section class="article-section"><div class="container article">
   <p class="article-lead">Miami is one of the busiest auto transport markets in the country. Vehicles move in and out of South Florida year-round for relocations, seasonal residents, dealership and auction purchases, and college and military moves.</p>
@@ -783,14 +805,14 @@ body.ready .reveal{opacity:1;transform:none}
     </div>
     <div class="route-table">
       <div class="route-row route-head"><span>Route</span><span>Approx. distance</span><span>Est. transit</span><span></span></div>
-        <div class="route-row"><span class="route-name">Miami, FL &rarr; New York, NY</span><span class="route-val">~1,280 mi</span><span class="route-val">3&ndash;5 days</span><a class="route-cta" href="index.html">Get price <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
-        <div class="route-row"><span class="route-name">Miami, FL &rarr; Chicago, IL</span><span class="route-val">~1,380 mi</span><span class="route-val">4&ndash;6 days</span><a class="route-cta" href="index.html">Get price <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
-        <div class="route-row"><span class="route-name">Miami, FL &rarr; Los Angeles, CA</span><span class="route-val">~2,730 mi</span><span class="route-val">7&ndash;9 days</span><a class="route-cta" href="index.html">Get price <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
-        <div class="route-row"><span class="route-name">Miami, FL &rarr; Dallas, TX</span><span class="route-val">~1,310 mi</span><span class="route-val">4&ndash;6 days</span><a class="route-cta" href="index.html">Get price <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
-        <div class="route-row"><span class="route-name">Miami, FL &rarr; Atlanta, GA</span><span class="route-val">~660 mi</span><span class="route-val">2&ndash;3 days</span><a class="route-cta" href="index.html">Get price <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
-        <div class="route-row"><span class="route-name">Miami, FL &rarr; Boston, MA</span><span class="route-val">~1,500 mi</span><span class="route-val">4&ndash;6 days</span><a class="route-cta" href="index.html">Get price <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
-        <div class="route-row"><span class="route-name">Miami, FL &rarr; Detroit, MI</span><span class="route-val">~1,400 mi</span><span class="route-val">4&ndash;6 days</span><a class="route-cta" href="index.html">Get price <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
-        <div class="route-row"><span class="route-name">Miami, FL &rarr; Seattle, WA</span><span class="route-val">~3,300 mi</span><span class="route-val">8&ndash;10 days</span><a class="route-cta" href="index.html">Get price <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+        <div class="route-row"><span class="route-name">Miami, FL &rarr; New York, NY</span><span class="route-val">~1,280 mi</span><span class="route-val">3&ndash;5 days</span><a class="route-cta" href="#quoteForm">Get price <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+        <div class="route-row"><span class="route-name">Miami, FL &rarr; Chicago, IL</span><span class="route-val">~1,380 mi</span><span class="route-val">4&ndash;6 days</span><a class="route-cta" href="#quoteForm">Get price <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+        <div class="route-row"><span class="route-name">Miami, FL &rarr; Los Angeles, CA</span><span class="route-val">~2,730 mi</span><span class="route-val">7&ndash;9 days</span><a class="route-cta" href="#quoteForm">Get price <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+        <div class="route-row"><span class="route-name">Miami, FL &rarr; Dallas, TX</span><span class="route-val">~1,310 mi</span><span class="route-val">4&ndash;6 days</span><a class="route-cta" href="#quoteForm">Get price <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+        <div class="route-row"><span class="route-name">Miami, FL &rarr; Atlanta, GA</span><span class="route-val">~660 mi</span><span class="route-val">2&ndash;3 days</span><a class="route-cta" href="#quoteForm">Get price <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+        <div class="route-row"><span class="route-name">Miami, FL &rarr; Boston, MA</span><span class="route-val">~1,500 mi</span><span class="route-val">4&ndash;6 days</span><a class="route-cta" href="#quoteForm">Get price <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+        <div class="route-row"><span class="route-name">Miami, FL &rarr; Detroit, MI</span><span class="route-val">~1,400 mi</span><span class="route-val">4&ndash;6 days</span><a class="route-cta" href="#quoteForm">Get price <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+        <div class="route-row"><span class="route-name">Miami, FL &rarr; Seattle, WA</span><span class="route-val">~3,300 mi</span><span class="route-val">8&ndash;10 days</span><a class="route-cta" href="#quoteForm">Get price <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
     </div>
   </div>
 </section>
@@ -911,7 +933,7 @@ body.ready .reveal{opacity:1;transform:none}
       <span class="faq-accent"></span>
     </div>
     <div class="faq-list">
-        <details class="faq-item"><summary class="faq-q">How much does it cost to ship a car to or from Miami?<span class="faq-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></span></summary><div class="faq-a">Your Miami car shipping price depends on the distance, the size and weight of your vehicle, whether you choose open or enclosed transport, how accessible the pickup and delivery addresses are, and the time of year. South Florida is a seasonal market, so rates move with demand. The fastest way to get an accurate number is to <a href="index.html">request a free quote</a>.</div></details>
+        <details class="faq-item"><summary class="faq-q">How much does it cost to ship a car to or from Miami?<span class="faq-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></span></summary><div class="faq-a">Your Miami car shipping price depends on the distance, the size and weight of your vehicle, whether you choose open or enclosed transport, how accessible the pickup and delivery addresses are, and the time of year. South Florida is a seasonal market, so rates move with demand. The fastest way to get an accurate number is to <a href="#quoteForm">request a free quote</a>.</div></details>
         <details class="faq-item"><summary class="faq-q">How long does it take to ship a car to Miami?<span class="faq-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></span></summary><div class="faq-a">Transit time depends mainly on distance. A move from Atlanta typically runs a couple of days, the Northeast is usually in the three-to-six day range, and a cross-country trip from the West Coast generally takes about a week or more. Weather, traffic, and route availability can shift these estimates.</div></details>
         <details class="faq-item"><summary class="faq-q">Do you offer door-to-door pickup in Miami?<span class="faq-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></span></summary><div class="faq-a">Yes. Whenever possible we arrange door-to-door pickup and delivery at your Miami address. Some areas &mdash; narrow streets in Coconut Grove or Little Havana, gated communities, and low-clearance parking garages downtown or in Brickell &mdash; can't safely fit a full-size carrier, so the driver will arrange a nearby meeting point such as a large lot.</div></details>
         <details class="faq-item"><summary class="faq-q">When is the busiest season for car shipping in South Florida?<span class="faq-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></span></summary><div class="faq-a">Demand peaks around the snowbird season. Vehicles move south into Florida heading into the fall and winter, and back north in the spring. Booking earlier during those windows generally means better pricing and more scheduling flexibility. See our <a href="snowbird-car-shipping.html">snowbird car shipping</a> page for details.</div></details>
@@ -1124,6 +1146,21 @@ body.ready .reveal{opacity:1;transform:none}
     document.getElementById('steps').style.display = 'none';
     success.classList.add('show');
   });
+})();
+</script>
+<script>
+(function(){
+  window.addEventListener('message', function(e){
+    if(String(e.origin).indexOf('berocker') === -1) return;
+    var d = e.data, h = null;
+    if(typeof d === 'number') h = d;
+    else if(d && typeof d === 'object') h = d.height || d.frameHeight || d.iframeHeight || (d.data && d.data.height);
+    h = parseInt(h, 10);
+    if(h && h > 200 && h < 4000){
+      var f = document.querySelector('.quote-card.is-embed iframe');
+      if(f) f.style.height = h + 'px';
+    }
+  }, false);
 })();
 </script>
 </body>
