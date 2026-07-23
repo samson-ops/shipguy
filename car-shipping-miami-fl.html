@@ -70,7 +70,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,
    ========================================================= */
 .site-header{
   position:sticky;top:0;z-index:60;background:#fff;
-  border-bottom:1px solid transparent;
+  border-bottom:1px solid var(--line);
   transition:box-shadow .25s ease, border-color .25s ease;
 }
 .site-header.is-scrolled{box-shadow:0 6px 24px -16px rgba(13,26,80,.5);border-bottom-color:var(--line)}
@@ -681,7 +681,7 @@ body.ready .reveal{opacity:1;transform:none}
     linear-gradient(180deg, rgba(255,255,255,.85) 0%, rgba(255,255,255,0) 22%, rgba(255,255,255,0) 68%, rgba(255,255,255,.55) 100%);
 }
 .hero{border-bottom:1px solid var(--line)}
-.hero-grid{padding:56px 24px 62px}
+.hero-grid{padding:66px 24px 64px}
 .hero-copy{color:var(--ink)}
 .hero-copy .crumbs{color:var(--muted)}
 .hero-copy .crumbs a{color:var(--brand)}
@@ -699,6 +699,9 @@ body.ready .reveal{opacity:1;transform:none}
   /* stacked: text sits over the photo, so keep the scrim strong and even */
   .hero-overlay{background:linear-gradient(180deg, rgba(255,255,255,.95) 0%, rgba(255,255,255,.90) 50%, rgba(255,255,255,.93) 100%)}
 }
+
+.hero{background:#fff}
+.hero-media{inset:10px 0 0 0}
 </style>
 <script type="application/ld+json">
 {
