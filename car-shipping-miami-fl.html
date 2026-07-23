@@ -667,22 +667,37 @@ body.ready .reveal{opacity:1;transform:none}
 .quote-card.is-embed{padding:0;overflow:hidden}
 .quote-card.is-embed iframe{width:100%;height:630px;border:0;display:block}
 
-/* city hero: lighter overlay so the Miami photo reads through */
+
+/* ============ CITY HERO — light / corporate ============ */
 .hero-overlay{
   background:
     linear-gradient(90deg,
-      rgba(4,9,22,.80) 0%,
-      rgba(4,9,22,.66) 24%,
-      rgba(4,9,22,.42) 42%,
-      rgba(4,9,22,.16) 58%,
-      rgba(4,9,22,.03) 74%,
-      rgba(4,9,22,0) 100%),
-    linear-gradient(180deg, rgba(4,9,22,.16) 0%, rgba(4,9,22,0) 22%, rgba(4,9,22,0) 68%, rgba(4,9,22,.24) 100%);
+      rgba(255,255,255,.97) 0%,
+      rgba(255,255,255,.94) 26%,
+      rgba(255,255,255,.82) 43%,
+      rgba(255,255,255,.48) 60%,
+      rgba(255,255,255,.14) 80%,
+      rgba(255,255,255,0) 100%),
+    linear-gradient(180deg, rgba(255,255,255,.85) 0%, rgba(255,255,255,0) 22%, rgba(255,255,255,0) 68%, rgba(255,255,255,.55) 100%);
 }
-.hero-img{object-position:46% 52%}
+.hero{border-bottom:1px solid var(--line)}
+.hero-grid{padding:56px 24px 62px}
+.hero-copy{color:var(--ink)}
+.hero-copy .crumbs{color:var(--muted)}
+.hero-copy .crumbs a{color:var(--brand)}
+.hero-copy .eyebrow{color:var(--brand)}
+.hero-copy h1{color:#101a3d;text-shadow:none;font-size:clamp(2.1rem,3.4vw,2.85rem)}
+.hero-copy .lede{color:var(--ink-2);text-shadow:none;max-width:430px}
+.trust-list li{color:var(--ink);text-shadow:none;font-weight:600}
+.trust-ic{background:var(--brand-tint);border:1px solid #dce4fb;color:var(--brand)}
+.hero-divider{background:var(--line)}
+.stats .stat{border-right-color:var(--line)}
+.stat .num{color:#101a3d;text-shadow:none}
+.stat .lbl{color:var(--muted)}
+.quote-card{border:1px solid var(--line)}
 @media (max-width:900px){
-  /* stacked layout: text sits over the photo, so keep it darker */
-  .hero-overlay{background:linear-gradient(180deg, rgba(4,9,22,.80) 0%, rgba(4,9,22,.72) 45%, rgba(4,9,22,.68) 100%)}
+  /* stacked: text sits over the photo, so keep the scrim strong and even */
+  .hero-overlay{background:linear-gradient(180deg, rgba(255,255,255,.95) 0%, rgba(255,255,255,.90) 50%, rgba(255,255,255,.93) 100%)}
 }
 </style>
 <script type="application/ld+json">
