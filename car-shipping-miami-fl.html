@@ -666,6 +666,24 @@ body.ready .reveal{opacity:1;transform:none}
 
 .quote-card.is-embed{padding:0;overflow:hidden}
 .quote-card.is-embed iframe{width:100%;height:630px;border:0;display:block}
+
+/* city hero: lighter overlay so the Miami photo reads through */
+.hero-overlay{
+  background:
+    linear-gradient(90deg,
+      rgba(4,9,22,.80) 0%,
+      rgba(4,9,22,.66) 24%,
+      rgba(4,9,22,.42) 42%,
+      rgba(4,9,22,.16) 58%,
+      rgba(4,9,22,.03) 74%,
+      rgba(4,9,22,0) 100%),
+    linear-gradient(180deg, rgba(4,9,22,.16) 0%, rgba(4,9,22,0) 22%, rgba(4,9,22,0) 68%, rgba(4,9,22,.24) 100%);
+}
+.hero-img{object-position:46% 52%}
+@media (max-width:900px){
+  /* stacked layout: text sits over the photo, so keep it darker */
+  .hero-overlay{background:linear-gradient(180deg, rgba(4,9,22,.80) 0%, rgba(4,9,22,.72) 45%, rgba(4,9,22,.68) 100%)}
+}
 </style>
 <script type="application/ld+json">
 {
@@ -757,7 +775,7 @@ body.ready .reveal{opacity:1;transform:none}
 <!-- ===================== PAGE HERO ===================== -->
 <section class="hero">
   <div class="hero-media" aria-hidden="true">
-    <img class="hero-img" alt="" src="assets/hero.jpg">
+    <img class="hero-img" alt="" src="assets/hero-miami.jpg" fetchpriority="high">
     <div class="hero-overlay"></div>
   </div>
 
