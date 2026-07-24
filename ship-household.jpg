@@ -1,0 +1,8 @@
+PREVIEW ONLY — DO NOT DEPLOY THIS FILE.
+
+miami-page-preview.html is a single-file copy of the Miami page with all
+images embedded as base64 so it opens anywhere without the assets folder.
+It is ~635KB and would hurt page speed / Core Web Vitals if published.
+
+To view: double-click miami-page-preview.html.
+To deploy: use /car-shipping-miami-fl.html in the parent folder instead.
