@@ -6,8 +6,8 @@
   <meta http-equiv="Pragma" content="no-cache">
   <meta http-equiv="Expires" content="0">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Car Shipping Cost — How Much Does It Cost to Ship a Car? | Ship Guy</title>
-<meta name="description" content="How much does it cost to ship a car? Learn what affects auto transport pricing, average costs by distance, open vs. enclosed, and how to save on car shipping.">
+<title>Auto Transport Phoenix, AZ — Car Shipping Rates &amp; Times | Ship Guy</title>
+<meta name="description" content="Auto transport in Phoenix, AZ from $300. Pickup usually within 1–4 days, door-to-door with vetted insured carriers, open &amp; enclosed options, no deposit to book. Free quote in minutes.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
@@ -70,7 +70,8 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,
    ========================================================= */
 .site-header{
   position:sticky;top:0;z-index:60;background:#fff;
-  border-bottom:1px solid transparent;
+  border-bottom:1px solid var(--field);
+  box-shadow:0 3px 12px -9px rgba(13,26,80,.45);
   transition:box-shadow .25s ease, border-color .25s ease;
 }
 .site-header.is-scrolled{box-shadow:0 6px 24px -16px rgba(13,26,80,.5);border-bottom-color:var(--line)}
@@ -558,9 +559,6 @@ section[id]{scroll-margin-top:104px}
 body.ready .reveal{opacity:1;transform:none}
 .reveal.d2{transition-delay:.08s}
 .reveal.d3{transition-delay:.16s}
-
-.menu.menu-mega{display:grid;grid-template-columns:1fr 1fr;column-gap:4px;min-width:452px}
-.menu.menu-mega .menu-all{grid-column:1 / -1;margin-top:6px;padding-top:12px;border-top:1px solid var(--line);color:var(--brand);font-weight:700}
 /* ===== Subpage / article / services styles ===== */
 .page-hero{background:linear-gradient(135deg,#0a2a9e 0%, var(--brand) 60%, #1f54e0 100%);color:#fff;padding:62px 0 56px}
 .crumbs{display:flex;flex-wrap:wrap;gap:9px;font-size:13.5px;font-weight:600;color:#bcd2f8;margin-bottom:16px}
@@ -601,20 +599,327 @@ body.ready .reveal{opacity:1;transform:none}
 @media (max-width:560px){.svc-grid{grid-template-columns:1fr}.related-grid{grid-template-columns:1fr}}
 
 
+.menu.menu-mega{display:grid;grid-template-columns:1fr 1fr;column-gap:4px;min-width:452px}
+.menu.menu-mega .menu-all{grid-column:1 / -1;margin-top:6px;padding-top:12px;border-top:1px solid var(--line);color:var(--brand);font-weight:700}
+
 @media (max-width:460px){.footer-top{grid-template-columns:1fr;gap:28px}}/* resp-polish-footer */
+
+/* ===================== CITY PAGE ===================== */
+.city-hero-btns{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}
+.city-btn,.city-btn-ghost{display:inline-flex;align-items:center;gap:9px;font-family:var(--font-display);font-weight:700;font-size:15.5px;padding:14px 24px;border-radius:12px;border:2px solid transparent;transition:transform .15s ease,background .15s ease,border-color .15s ease}
+.city-btn{background:#fff;color:var(--brand)}
+.city-btn:hover{transform:translateY(-1px);background:#f2f5ff}
+.city-btn-ghost{background:transparent;color:#fff;border-color:rgba(255,255,255,.55)}
+.city-btn-ghost:hover{border-color:#fff;background:rgba(255,255,255,.12)}
+.city-stats{background:#fff;border-bottom:1px solid var(--line)}
+.city-stats-wrap{display:grid;grid-template-columns:repeat(4,1fr);padding:30px 24px}
+.city-stat{text-align:center;padding:0 18px;position:relative}
+.city-stat+.city-stat::before{content:"";position:absolute;left:0;top:2px;bottom:2px;width:1px;background:var(--line)}
+.city-stat svg{width:26px;height:26px;color:var(--brand);margin:0 auto 10px}
+.city-stat h3{font-family:var(--font-display);font-weight:700;font-size:15.5px;color:#101a3d;margin:0 0 4px}
+.city-stat p{margin:0;font-size:13px;color:var(--muted)}
+.city-section{padding:58px 0;border-top:1px solid var(--line)}
+.city-section.alt{background:var(--bg-soft)}
+.city-head{text-align:center;max-width:680px;margin:0 auto 30px}
+.city-head h2{font-family:var(--font-display);font-weight:800;font-size:clamp(1.6rem,3vw,2.15rem);letter-spacing:-.015em;color:#101a3d;margin:0 0 10px}
+.city-head p{margin:0;font-size:15.5px;line-height:1.6;color:#586079}
+.route-table{background:#fff;border:1px solid var(--line);border-radius:16px;overflow:hidden;box-shadow:0 1px 2px rgba(16,24,40,.05)}
+.route-row{display:grid;grid-template-columns:2fr 1fr 1fr auto;gap:18px;align-items:center;padding:15px 20px;border-top:1px solid var(--line)}
+.route-row:first-child{border-top:0}
+.route-head{background:var(--bg-soft);font-family:var(--font-display);font-weight:700;font-size:12px;letter-spacing:.07em;text-transform:uppercase;color:var(--muted)}
+.route-name{font-family:var(--font-display);font-weight:700;font-size:15px;color:#101a3d}
+.route-val{font-size:14.5px;color:#586079}
+.route-cta{display:inline-flex;align-items:center;gap:6px;font-family:var(--font-display);font-weight:700;font-size:14px;color:var(--brand);white-space:nowrap}
+.route-cta svg{width:15px;height:15px;transition:transform .15s ease}
+.route-cta:hover svg{transform:translateX(3px)}
+.chips{display:flex;flex-wrap:wrap;gap:10px;justify-content:center}
+.chip{background:#fff;border:1px solid var(--line);border-radius:999px;padding:9px 17px;font-family:var(--font-display);font-weight:600;font-size:14px;color:var(--ink)}
+.chip-soft{background:var(--brand-tint);border-color:#d9e2fb;color:var(--brand)}
+.city-callout{display:flex;gap:18px;align-items:flex-start;background:var(--brand-tint);border:1px solid #d9e2fb;border-radius:16px;padding:22px 24px;max-width:900px;margin:34px auto 0}
+.city-callout svg{width:26px;height:26px;color:var(--brand);flex:0 0 auto;margin-top:2px}
+.city-callout h3{font-family:var(--font-display);font-weight:700;font-size:17px;color:#101a3d;margin:0 0 6px}
+.city-callout p{margin:0;font-size:15px;line-height:1.6;color:#41507a}
+.city-callout a{color:var(--brand);font-weight:700}
+.why-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.why-card{background:#fff;border:1px solid var(--line);border-radius:16px;padding:22px 20px;box-shadow:0 1px 2px rgba(16,24,40,.05)}
+.why-ic{display:grid;place-items:center;width:42px;height:42px;border-radius:12px;background:var(--brand-tint);color:var(--brand);margin-bottom:14px}
+.why-ic svg{width:22px;height:22px}
+.why-card h3{font-family:var(--font-display);font-weight:700;font-size:16.5px;color:#101a3d;margin:0 0 7px}
+.why-card p{margin:0;font-size:14.5px;line-height:1.6;color:#586079}
+.nearby-wrap{margin-top:38px;text-align:center}
+.nearby-label{font-family:var(--font-display);font-weight:700;font-size:14px;letter-spacing:.05em;text-transform:uppercase;color:var(--muted);margin:0 0 16px}
+@media (max-width:900px){
+  .city-stats-wrap{grid-template-columns:repeat(2,1fr);row-gap:26px}
+  .city-stat:nth-child(3)::before{display:none}
+  .why-grid{grid-template-columns:repeat(2,1fr)}
+  .route-row{grid-template-columns:1fr 1fr;row-gap:6px}
+  .route-head{display:none}
+  .route-name{grid-column:1 / -1}
+  .route-cta{grid-column:1 / -1;margin-top:4px}
+}
+@media (max-width:560px){
+  .city-stats-wrap{grid-template-columns:1fr;row-gap:24px}
+  .city-stat::before{display:none}
+  .why-grid{grid-template-columns:1fr}
+  .city-callout{flex-direction:column;gap:12px}
+  .city-hero-btns .city-btn,.city-hero-btns .city-btn-ghost{flex:1 1 100%;justify-content:center}
+}
+
+.quote-card.is-embed{padding:0;overflow:hidden}
+.quote-card.is-embed iframe{width:100%;height:630px;border:0;display:block}
+
+
+/* ============ CITY HERO — light / corporate ============ */
+.hero-overlay{
+  background:
+    linear-gradient(90deg,
+      rgba(255,255,255,.97) 0%,
+      rgba(255,255,255,.94) 26%,
+      rgba(255,255,255,.82) 43%,
+      rgba(255,255,255,.48) 60%,
+      rgba(255,255,255,.14) 80%,
+      rgba(255,255,255,0) 100%),
+    linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0) 70%, rgba(255,255,255,.5) 100%);
+}
+.hero{border-bottom:1px solid var(--line)}
+.hero-grid{padding:66px 24px 64px}
+.hero-copy{color:var(--ink)}
+.hero-copy .crumbs{color:var(--muted)}
+.hero-copy .crumbs a{color:var(--brand)}
+.hero-copy .eyebrow{color:var(--brand)}
+.hero-copy h1{color:#101a3d;text-shadow:none;font-size:clamp(2.1rem,3.4vw,2.85rem)}
+.hero-copy .lede{color:var(--ink-2);text-shadow:none;max-width:430px}
+.trust-list li{color:var(--ink);text-shadow:none;font-weight:600}
+.trust-ic{background:var(--brand-tint);border:1px solid #dce4fb;color:var(--brand)}
+.hero-divider{background:var(--line)}
+.stats .stat{border-right-color:var(--line)}
+.stat .num{color:#101a3d;text-shadow:none}
+.stat .lbl{color:var(--muted)}
+.quote-card{border:1px solid var(--line)}
+@media (max-width:900px){
+  /* stacked: text sits over the photo, so keep the scrim strong and even */
+  .hero-overlay{background:linear-gradient(180deg, rgba(255,255,255,.95) 0%, rgba(255,255,255,.90) 50%, rgba(255,255,255,.93) 100%)}
+}
+
+.hero{background:#fff}
+.hero-media{inset:12px 0 0 0}
+
+/* ===== Miami page additions (uses existing tokens) ===== */
+.qa-box{display:flex;gap:16px;align-items:flex-start;background:var(--brand-tint);border:1px solid #d9e2fb;border-left:4px solid var(--brand);border-radius:14px;padding:20px 22px;margin:26px 0 0}
+.qa-box svg{width:24px;height:24px;color:var(--brand);flex:0 0 auto;margin-top:2px}
+.qa-box p{margin:0;font-size:15.5px;line-height:1.65;color:#33406b}
+.qa-box strong{color:#101a3d}
+.qa-kicker{font-family:var(--font-display);font-weight:800;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--brand);display:block;margin-bottom:6px}
+.route-table.has-price .route-row{grid-template-columns:1.9fr 1fr 1fr 1.1fr auto}
+.route-note{max-width:900px;margin:14px auto 0;font-size:13.5px;color:var(--muted);text-align:center}
+.season-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;max-width:900px;margin:8px auto 22px}
+.season-card{background:#fff;border:1px solid var(--line);border-radius:16px;padding:22px 24px;box-shadow:var(--shadow-soft)}
+.season-dir{display:inline-flex;align-items:center;gap:8px;font-family:var(--font-display);font-weight:800;font-size:13px;letter-spacing:.06em;text-transform:uppercase;margin-bottom:10px}
+.season-card.south .season-dir{color:var(--brand)}
+.season-card.north .season-dir{color:#0b7d3e}
+.season-card p{margin:0;font-size:15px;line-height:1.6;color:#41507a}
+.season-tip{max-width:900px;margin:0 auto;font-size:15.5px;line-height:1.65;color:#41507a;text-align:center}
+.season-tip strong{color:#101a3d}
+.eeat-byline{background:var(--bg-soft);border-top:1px solid var(--line)}
+.eeat-inner{max-width:var(--maxw);margin:0 auto;padding:26px 24px;font-size:13.5px;line-height:1.7;color:var(--muted)}
+.eeat-inner a{color:var(--brand);font-weight:600}
+.eeat-inner strong{color:var(--ink)}
+@media(max-width:900px){.season-grid{grid-template-columns:1fr}}
+@media(max-width:760px){.route-table.has-price .route-row{grid-template-columns:1fr 1fr}}
+
+/* ===== v2 additions: comparison, location/map, checklists ===== */
+.cmp-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;max-width:980px;margin:6px auto 20px}
+.cmp-card{background:#fff;border:1px solid var(--line);border-radius:16px;padding:24px 26px;box-shadow:var(--shadow-soft)}
+.cmp-card h3{font-family:var(--font-display);font-weight:800;font-size:1.15rem;color:#101a3d;margin:0 0 4px}
+.cmp-tag{display:inline-block;font-family:var(--font-display);font-weight:700;font-size:12px;letter-spacing:.07em;text-transform:uppercase;color:var(--brand);background:var(--brand-tint);border-radius:999px;padding:4px 12px;margin-bottom:12px}
+.cmp-card p{margin:0 0 12px;font-size:15px;line-height:1.65;color:#41507a}
+.cmp-card ul{margin:0;padding-left:19px}
+.cmp-card li{font-size:14.5px;line-height:1.6;color:#41507a;margin-bottom:6px}
+.cmp-verdict{max-width:980px;margin:0 auto;background:var(--brand-tint);border:1px solid #d9e2fb;border-radius:14px;padding:18px 22px;font-size:15.5px;line-height:1.65;color:#33406b}
+.cmp-verdict strong{color:#101a3d}
+.txt-block{max-width:860px;margin:0 auto}
+.txt-block p{font-size:16.5px;line-height:1.75;color:#414a6b;margin:0 0 16px}
+.txt-block h3{font-family:var(--font-display);font-weight:700;font-size:1.15rem;color:#101a3d;margin:26px 0 9px}
+.txt-block ul{margin:0 0 18px;padding-left:22px}
+.txt-block li{font-size:16px;line-height:1.7;color:#414a6b;margin-bottom:9px}
+.txt-block a{color:var(--brand);font-weight:600;text-decoration:underline;text-decoration-color:#c7d3f5;text-underline-offset:3px}
+.loc-grid{display:grid;grid-template-columns:1fr 1.15fr;gap:26px;align-items:stretch;max-width:1040px;margin:0 auto}
+.loc-info{background:#fff;border:1px solid var(--line);border-radius:16px;padding:28px 30px;box-shadow:var(--shadow-soft);display:flex;flex-direction:column;gap:4px}
+.loc-info h3{font-family:var(--font-display);font-weight:800;font-size:1.2rem;color:#101a3d;margin:0 0 14px}
+.loc-row{display:flex;gap:13px;align-items:flex-start;padding:11px 0;border-top:1px solid var(--line)}
+.loc-row:first-of-type{border-top:0}
+.loc-row svg{width:21px;height:21px;color:var(--brand);flex:0 0 auto;margin-top:2px}
+.loc-row div{font-size:15.5px;line-height:1.55;color:#41507a}
+.loc-row strong{display:block;font-family:var(--font-display);font-weight:700;font-size:13px;letter-spacing:.05em;text-transform:uppercase;color:var(--muted);margin-bottom:2px}
+.loc-row a{color:var(--brand);font-weight:700}
+.loc-map{border-radius:16px;overflow:hidden;border:1px solid var(--line);box-shadow:var(--shadow-soft);min-height:340px}
+.loc-map iframe{width:100%;height:100%;min-height:340px;border:0;display:block}
+@media(max-width:900px){.cmp-grid,.loc-grid{grid-template-columns:1fr}.loc-map{min-height:300px}}
 </style>
 <script type="application/ld+json">
 {
-  "@context":"https://schema.org","@graph":[
-  {"@type":"Article","headline":"How Much Does It Cost to Ship a Car?","description":"How much does it cost to ship a car? Learn what affects auto transport pricing, average costs by distance, open vs. enclosed, and how to save on car shipping.","author":{"@type":"Organization","name":"Ship Guy"},"publisher":{"@type":"Organization","name":"Ship Guy"}},
-  {"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"index.html"},{"@type":"ListItem","position":2,"name":"How It Works","item":"how-it-works.html"},{"@type":"ListItem","position":3,"name":"Car Shipping Costs","item":"car-shipping-cost.html"}]}
-  ]
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "Service",
+   "name": "Auto Transport in Phoenix, AZ",
+   "serviceType": "Auto transport",
+   "provider": {
+    "@type": "LocalBusiness",
+    "name": "Ship Guy Auto Transport",
+    "url": "https://shipguy.com",
+    "telephone": "+1-623-294-7745",
+    "email": "quotes@shipguy.com",
+    "address": {
+     "@type": "PostalAddress",
+     "streetAddress": "198 E Camelback Rd #1450",
+     "addressLocality": "Phoenix",
+     "addressRegion": "AZ",
+     "postalCode": "85016",
+     "addressCountry": "US"
+    },
+    "geo": {
+     "@type": "GeoCoordinates",
+     "latitude": 33.5094,
+     "longitude": -112.0705
+    },
+    "openingHoursSpecification": [
+     {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+       "Monday",
+       "Tuesday",
+       "Wednesday",
+       "Thursday",
+       "Friday",
+       "Saturday",
+       "Sunday"
+      ],
+      "opens": "06:00",
+      "closes": "23:00"
+     }
+    ],
+    "identifier": [
+     {
+      "@type": "PropertyValue",
+      "name": "MC Number",
+      "value": "MC-XXXXXX"
+     },
+     {
+      "@type": "PropertyValue",
+      "name": "USDOT Number",
+      "value": "USDOT-XXXXXX"
+     }
+    ]
+   },
+   "areaServed": {
+    "@type": "City",
+    "name": "Phoenix",
+    "containedInPlace": {
+     "@type": "State",
+     "name": "Arizona"
+    }
+   },
+   "description": "Door-to-door auto transport to and from Phoenix, Arizona. Open and enclosed car shipping, vetted insured carriers, upfront pricing, and no deposit to book.",
+   "offers": {
+    "@type": "Offer",
+    "priceCurrency": "USD",
+    "price": "300",
+    "description": "Open auto transport from Phoenix starting price, standard sedan, regional lanes"
+   }
+  },
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "Home",
+     "item": "index.html"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "Phoenix, AZ",
+     "item": "car-shipping-phoenix-az.html"
+    }
+   ]
+  },
+  {
+   "@type": "FAQPage",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "How much does it cost to ship a car to or from Phoenix?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Phoenix is one of the cheapest major markets in the country to ship from. Typical open-transport ranges for a sedan: $300–$500 to Southern California, $600–$900 to Denver or Dallas, $900–$1,300 to the Midwest, and $1,150–$1,650 to the East Coast. Enclosed runs about 40–60% more. Get a free quote for an exact price on your dates."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "How long does car shipping from Phoenix take?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Pickup usually happens within 1–4 days of booking. Transit runs about 1–2 days to Los Angeles or Las Vegas, 2–3 days to Texas or Colorado, 4–6 days to the Midwest, and 6–9 days to the East Coast."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Will the Arizona heat damage my car during transport?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "No — vehicles ride with engines off, and transport itself is no harder on a car than a parking lot. The heat does affect logistics: in summer, drivers often schedule loading for early morning or evening, weak batteries that survive mild climates fail in 115°F heat, and anything left inside the cabin (electronics, aerosols, plastics) can be damaged. Empty the car and have the battery checked before summer shipping."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Do monsoon storms delay auto transport in Phoenix?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Occasionally, and briefly. From mid-June through September, afternoon dust storms and downpours can pause loading or slow I-10 for a few hours. Delays are typically measured in hours, not days, and drivers plan around the afternoon storm window."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Can the carrier pick up inside my gated or 55+ community?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Often no — many Valley communities restrict commercial trucks, and carrier rigs can't clear some gates or tight internal streets. The standard solution takes minutes: meet the driver just outside the gate, at the community clubhouse lot with permission, or at a nearby park-and-ride. Any adult you authorize can hand off or receive the vehicle."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "I'm a winter visitor from Canada — can you ship my car across the border?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "U.S. carriers don't cross the border, but there's a standard two-step: a Canadian carrier brings the vehicle to a border-area hub (or you drive it across), and we run the U.S. leg to Phoenix. Plenty of our winter-visitor customers do this every year — ask us and we'll walk you through the handoff."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Can you ship golf carts, motorcycles, or a second vehicle?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Yes. Golf carts and motorcycles are everyday freight in the Valley, and shipping two vehicles on the same order usually earns a multi-car discount since carriers love filling adjacent spots with one stop."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Where is Ship Guy located in Phoenix?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Our Phoenix office is at 198 E Camelback Rd #1450, Phoenix, AZ 85016, in the Camelback Corridor. We're open seven days a week, 6:00 AM to 11:00 PM, at (623) 294-7745."
+     }
+    }
+   ]
+  }
+ ]
 }
 </script>
 </head>
 <body>
 
-<!-- ===================== HEADER ===================== -->
 <header class="site-header" id="top">
   <div class="container header-inner">
     <a class="brand" href="index.html#top" aria-label="Ship Guy — home"><svg class="sg-logo" role="img" aria-label="Ship Guy" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="209 227 180 145">
@@ -690,91 +995,347 @@ body.ready .reveal{opacity:1;transform:none}
 </header>
 
 <!-- ===================== PAGE HERO ===================== -->
-<section class="page-hero"><div class="container">
-  <nav class="crumbs" aria-label="Breadcrumb"><a href="index.html">Home</a><span>/</span><a href="how-it-works.html">How It Works</a><span>/</span><span aria-current="page">Car Shipping Costs</span></nav>
-  <h1>How Much Does It Cost to Ship a Car?</h1>
-  <p class="page-hero-sub">A complete breakdown of car shipping costs — what affects your price and how to get the best rate.</p>
-</div></section>
+<section class="hero">
+  <div class="hero-media" aria-hidden="true">
+    <img class="hero-img" alt="" src="assets/hero.jpg" fetchpriority="high">
+    <div class="hero-overlay"></div>
+  </div>
+
+  <div class="container hero-grid">
+    <div class="hero-copy">
+      <nav class="crumbs" aria-label="Breadcrumb"><a href="index.html">Home</a><span>/</span><span aria-current="page">Phoenix, AZ</span></nav>
+      <p class="eyebrow reveal">Phoenix,&nbsp;AZ&nbsp;&bull;&nbsp;Licensed&nbsp;&bull;&nbsp;Insured</p>
+      <h1 class="reveal d2">Auto Transport in<br>Phoenix, AZ</h1>
+      <p class="lede reveal d2">Door-to-door car shipping to and from the Valley of the Sun &mdash; vetted, insured carriers, upfront pricing, and no deposit to book.</p>
+
+      <ul class="trust-list reveal d3">
+        <li><span class="trust-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/><path d="m9 12 2 2 4-4"/></svg></span>Licensed Broker &amp; Fully Insured</li>
+        <li><span class="trust-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="2" width="8" height="4" rx="1"/><path d="M9 4H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2h-3"/><path d="m9 14 2 2 4-4"/></svg></span>FMCSA Registered</li>
+        <li><span class="trust-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></span>Vetted Carrier Network</li>
+        <li><span class="trust-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M4 13a8 8 0 0 1 16 0"/><rect x="2" y="13" width="4.4" height="7" rx="1.6"/><rect x="17.6" y="13" width="4.4" height="7" rx="1.6"/><path d="M20 19.5v.5a3 3 0 0 1-3 3h-3"/></svg></span>Real-Time Tracking &amp; 24/7 Support</li>
+      </ul>
+
+      <div class="hero-divider reveal d3"></div>
+
+      <div class="stats reveal d3">
+        <div class="stat"><span class="num">50+</span><span class="lbl">States Served</span></div>
+        <div class="stat"><span class="num">100%</span><span class="lbl">Insured Transport</span></div>
+        <div class="stat"><span class="num">24/7</span><span class="lbl">Support &amp; Tracking</span></div>
+      </div>
+    </div>
+
+    <!-- QUOTE CARD (booking widget) -->
+    <div class="quote-card is-embed reveal d2" id="quoteForm">
+      <iframe src="https://widget.berocker.com?theme=pro&amp;api_base=https%3A%2F%2Fapp.shipguy.com&amp;api_key=6a5508b7cb2f4" title="Ship Guy Logistics booking form" loading="lazy"></iframe>
+    </div>
+  </div>
+</section>
+
 
 <section class="article-section"><div class="container article">
-<p class="article-lead">How much does it cost to ship a car? It's the first question almost everyone asks — and the honest answer is that it depends on several factors. This guide breaks down exactly what goes into a car shipping quote, what affects the price, and how to get the best rate on your shipment.</p>
+  <p class="article-lead">Phoenix sits at the crossroads of the American Southwest &mdash; where I-10 meets I-17, six hours from the ports of Los Angeles, and square in the middle of one of the largest seasonal migrations in the country. That geography makes the Valley one of the busiest, and cheapest, auto transport markets anywhere in the United States.</p>
 
-<h2>What Determines the Cost of Shipping a Car?</h2>
-<p>There's no single flat rate for auto transport. Instead, your price is built from a handful of factors that reflect the real cost of moving your specific vehicle on your specific route. Understanding these factors helps you see what you're paying for — and where you can save.</p>
+  <div class="qa-box">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>
+    <p><span class="qa-kicker">Quick answer</span>Shipping a standard sedan to or from Phoenix runs <strong>$300&ndash;$500</strong> to Southern California, <strong>$600&ndash;$950</strong> to Texas or Colorado, and <strong>$900&ndash;$1,650</strong> to the Midwest or East Coast on open transport. Pickup typically happens within <strong>1&ndash;4 days</strong>. Winter visitor season (Oct&ndash;Jan inbound, Mar&ndash;May outbound) moves prices 15&ndash;35% in the peak direction &mdash; <a href="#quoteForm">price your exact route</a> in about two minutes.</p>
+  </div>
 
-<h3>Distance and Route</h3>
-<p>Distance is the single biggest driver of cost. Longer moves cost more in total, but less per mile — a cross-country shipment might work out to well under a dollar a mile, while a short local move costs more per mile because the carrier still has fixed costs to cover. Route popularity matters too. Busy lanes between major metro areas have plenty of carriers competing for loads, which keeps prices competitive. Remote pickups or deliveries, rural areas, and routes carriers don't run often can cost more because fewer trucks are available.</p>
-
-<h3>Vehicle Size and Weight</h3>
-<p>Bigger, heavier vehicles take up more room on the trailer and add more weight to the load, so they cost more to ship. A compact sedan is the most affordable vehicle to move, while a full-size SUV, a pickup truck, or a van costs more. Modifications that change a vehicle's dimensions — a lift kit, oversized tires, or roof accessories — can also affect the price because they require specific carrier placement.</p>
-
-<h3>Open vs. Enclosed Transport</h3>
-<p><a href="open-car-transport.html">Open transport</a> — the kind of multi-car trailer that delivers new cars to dealerships — is the most affordable and most common option. <a href="enclosed-auto-transport.html">Enclosed transport</a> ships your vehicle inside a fully covered trailer for maximum protection, and it costs more because those trailers carry fewer vehicles and offer premium handling. For most everyday cars, open is the practical choice; enclosed is worth the premium for classic, luxury, and high-value vehicles.</p>
-
-<h3>Time of Year and Demand</h3>
-<p>Auto transport prices rise and fall with demand, much like airline tickets. Peak seasons — summer, when families and military members relocate, and the winter snowbird migration to the Sun Belt — see higher prices and tighter carrier availability. Shipping during slower periods, or staying flexible with your dates, can lower your cost.</p>
-
-<h3>Operable vs. Inoperable</h3>
-<p>A vehicle that runs, steers, and brakes is easy to load and unload. An inoperable vehicle requires a carrier with special equipment, such as a winch, which adds to the price. If your car doesn't run, be upfront about it when you request a quote so you get an accurate price and the right carrier.</p>
-
-<h3>Fuel Prices and Market Conditions</h3>
-<p>Carrier costs shift week to week with diesel prices and the balance of available trucks and loads on a given route. This is why a quote from last month may not match today's market, and why getting a fresh quote gives you the most accurate price.</p>
-
-<h2>Average Car Shipping Costs by Distance</h2>
-<p>While every shipment is priced individually, distance gives a useful general picture. The following ranges are broad estimates for shipping a standard, operable car on an open carrier — your actual quote may be higher or lower depending on the factors above:</p>
-<ul>
-  <li><strong>Short distance (under 500 miles):</strong> typically the highest cost per mile, since the carrier's fixed costs are spread over fewer miles</li>
-  <li><strong>Mid distance (500–1,500 miles):</strong> a moderate total cost with a lower per-mile rate</li>
-  <li><strong>Long distance (1,500–2,500 miles):</strong> a higher total but the best per-mile value</li>
-  <li><strong>Cross-country (2,500+ miles):</strong> the highest total cost, though still efficient per mile</li>
-</ul>
-<p>Larger vehicles, enclosed transport, peak-season timing, and remote locations all push the price up from these baselines. The only way to know your true cost is to request a quote for your exact route and vehicle.</p>
-
-<h2>How Much More Does Enclosed Transport Cost?</h2>
-<p>Enclosed transport generally carries a meaningful premium over open transport because the trailers hold fewer vehicles, require specialized equipment, and provide a higher level of protection and handling. For an everyday vehicle, that premium usually isn't necessary. But when you're shipping a vehicle worth tens or hundreds of thousands of dollars, full protection from weather and road debris is inexpensive peace of mind. Think of it as insurance for the journey: most people choose open, while collectors and luxury owners choose enclosed.</p>
-
-<h2>How to Save Money on Car Shipping</h2>
-<p>You can influence your final price in several ways:</p>
-<ul>
-  <li><strong>Be flexible with your dates.</strong> A flexible pickup window gives carriers room to fit your vehicle into an efficient route, which earns better rates than demanding an exact day.</li>
-  <li><strong>Choose open transport.</strong> Unless your vehicle truly needs enclosed protection, open transport saves money and is perfectly safe.</li>
-  <li><strong>Book early.</strong> Reserving ahead — especially during peak season — helps you lock in a better rate before carrier space tightens.</li>
-  <li><strong>Ship on popular routes.</strong> Major metro-to-metro lanes are cheaper than remote ones. If you can pick up or drop off near a large city, you may save.</li>
-  <li><strong>Provide accurate information.</strong> An exact vehicle description and honest condition details prevent price changes and delays at pickup.</li>
-  <li><strong>Compare quotes carefully.</strong> Look at what's included, not just the headline number — an all-in quote with no hidden fees is often a better deal than a low quote that grows later.</li>
-</ul>
-
-<h2>Why the Cheapest Quote Isn't Always the Best</h2>
-<p>It's tempting to choose the lowest price, but in auto transport the cheapest quote can come with a catch. Some companies advertise a low rate to win your booking, then struggle to assign a carrier because the price they posted is below what drivers will accept. The result is a vehicle that sits waiting for days, repeated "we need a little more to get it moving" calls, or last-minute price hikes. A realistic, transparent quote that reflects the actual carrier market gets your vehicle picked up on schedule — which is what most people actually want. The lowest number on paper isn't a bargain if your car never moves.</p>
-
-<h2>How Ship Guy Pricing Works</h2>
-<p>Ship Guy keeps pricing simple and honest. Your quote is all-in: it includes <a href="door-to-door-car-shipping.html">door-to-door</a> transport and carrier insurance, with no hidden fees, no fuel surcharges added later, and no upfront deposit. You don't pay anything until your vehicle is assigned to a carrier and dispatched, so there's no risk in getting a quote and booking. Because we quote to the real carrier market, your shipment is priced to actually move on schedule — not parked on a board at an unrealistic rate. And if you ever have a question about your price, our U.S.-based team is available 24/7 to walk you through it.</p>
-
-<h2>When Is the Cheapest Time to Ship a Car?</h2>
-<p>Because auto transport pricing follows supply and demand, timing can make a real difference. The most expensive periods tend to be summer — when families, students, and military members relocate in large numbers — and the start and end of snowbird season, when traffic between the north and the Sun Belt surges. The slower, more affordable windows are generally late fall and mid-winter, outside the snowbird rush. Beyond the season, flexibility is your biggest lever: giving carriers a multi-day pickup window, rather than insisting on a single date, lets them slot your vehicle into an efficient route and often earns a better rate. Mid-route metro areas also tend to price lower than remote pickups or deliveries. If your schedule allows, shipping during an off-peak window with flexible dates is the surest way to pay less.</p>
-
-<h2>Does a Bigger Vehicle Always Cost More?</h2>
-<p>Generally, yes — size and weight are core pricing factors, so a full-size truck or SUV costs more to ship than a compact car on the same route. But it isn't only about the vehicle class. A heavily modified or lifted vehicle can cost more than a larger but stock one because it needs special placement, and an inoperable vehicle of any size carries an added fee for winch loading. Ground clearance matters too: very low vehicles may require liftgate equipment or enclosed transport. The takeaway is that your quote reflects how your specific vehicle loads and travels, not just its category — which is exactly why an accurate description gets you an accurate price.</p>
-
-<h2>Get an Accurate Car Shipping Quote</h2>
-<p>The best way to know what your shipment will cost is to get a real quote for your route and vehicle. It takes about 60 seconds and there's no obligation. <a href="index.html#top">Get your free quote</a> now, or call <a href="tel:+18662803481">(866) 280-3481</a> to speak with a specialist who can explain your price in detail. You can also read about <a href="cross-country-car-shipping.html">cross-country car shipping</a>, review our <a href="car-shipping-preparation.html">car prep guide</a>, or learn <a href="how-it-works.html">how the whole process works</a> before you book.</p>
-
+  <p style="margin-top:26px">Ship Guy arranges car shipping across Phoenix, Scottsdale, Mesa, and the entire Valley from our office on Camelback Road. Because so many carriers stage in the Phoenix metro between coastal runs, this is a market where the right broker can usually find you a truck fast &mdash; often faster than the national average &mdash; and at rates most other big cities can't touch.</p>
+  <p>What makes Phoenix genuinely different from shipping anywhere else? Three things: a desert summer that changes how and when vehicles get loaded, a winter migration that swings prices by direction, and one week every January when the collector car world descends on Scottsdale and enclosed trailers become the hottest commodity in Arizona. This page covers all three, plus current lane rates and the local logistics nobody explains until the truck is outside.</p>
 </div></section>
 
-<section class="related-section"><div class="container">
-      <h2>More Car Shipping Guides</h2>
+<section class="city-section alt">
+  <div class="container">
+    <div class="city-head">
+      <h2>Popular Phoenix Auto Transport Routes &amp; Current Rates</h2>
+      <p>The lanes we run most from the Valley. Estimates below are for a standard sedan, running condition, open transport &mdash; your quote pins the exact number for your dates.</p>
+    </div>
+    <div class="route-table has-price">
+      <div class="route-row route-head"><span>Route</span><span>Approx. distance</span><span>Est. transit</span><span>Est. open rate*</span><span></span></div>
+      <div class="route-row"><span class="route-name">Phoenix, AZ &rarr; Los Angeles, CA</span><span class="route-val">~370 mi</span><span class="route-val">1&ndash;2 days</span><span class="route-val" style="font-weight:600;color:#101a3d">$300&ndash;$500</span><a class="route-cta" href="#quoteForm">Get price <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+      <div class="route-row"><span class="route-name">Phoenix, AZ &rarr; Las Vegas, NV</span><span class="route-val">~300 mi</span><span class="route-val">1&ndash;2 days</span><span class="route-val" style="font-weight:600;color:#101a3d">$300&ndash;$450</span><a class="route-cta" href="#quoteForm">Get price <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+      <div class="route-row"><span class="route-name">Phoenix, AZ &rarr; Denver, CO</span><span class="route-val">~820 mi</span><span class="route-val">2&ndash;3 days</span><span class="route-val" style="font-weight:600;color:#101a3d">$600&ndash;$850</span><a class="route-cta" href="#quoteForm">Get price <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+      <div class="route-row"><span class="route-name">Phoenix, AZ &rarr; Dallas, TX</span><span class="route-val">~1,065 mi</span><span class="route-val">2&ndash;4 days</span><span class="route-val" style="font-weight:600;color:#101a3d">$700&ndash;$950</span><a class="route-cta" href="#quoteForm">Get price <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+      <div class="route-row"><span class="route-name">Phoenix, AZ &rarr; Seattle, WA</span><span class="route-val">~1,420 mi</span><span class="route-val">3&ndash;5 days</span><span class="route-val" style="font-weight:600;color:#101a3d">$900&ndash;$1,300</span><a class="route-cta" href="#quoteForm">Get price <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+      <div class="route-row"><span class="route-name">Phoenix, AZ &rarr; Minneapolis, MN</span><span class="route-val">~1,650 mi</span><span class="route-val">4&ndash;6 days</span><span class="route-val" style="font-weight:600;color:#101a3d">$900&ndash;$1,300</span><a class="route-cta" href="#quoteForm">Get price <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+      <div class="route-row"><span class="route-name">Phoenix, AZ &rarr; Chicago, IL</span><span class="route-val">~1,750 mi</span><span class="route-val">4&ndash;6 days</span><span class="route-val" style="font-weight:600;color:#101a3d">$950&ndash;$1,350</span><a class="route-cta" href="#quoteForm">Get price <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+      <div class="route-row"><span class="route-name">Phoenix, AZ &rarr; New York, NY</span><span class="route-val">~2,400 mi</span><span class="route-val">6&ndash;9 days</span><span class="route-val" style="font-weight:600;color:#101a3d">$1,150&ndash;$1,650</span><a class="route-cta" href="#quoteForm">Get price <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+    </div>
+    <p class="route-note">*Ranges shown are for a sedan that runs and drives, current as of July 2026. SUVs and full-size trucks add roughly 10&ndash;25%; lifted or oversized vehicles are quoted individually. Inoperable vehicles add $100&ndash;$200 for winch loading.</p>
+  </div>
+</section>
+
+<section class="city-section">
+  <div class="container">
+    <div class="city-head">
+      <h2>Why Phoenix Is One of the Cheapest Places in America to Ship a Car</h2>
+    </div>
+    <div class="txt-block">
+      <p>It isn't luck &mdash; it's a map. Phoenix sits on I-10, the busiest coast-to-coast trucking corridor in the southern United States, roughly a day's drive from the ports and auction houses of Los Angeles. Nearly every car carrier working the Southwest passes through or near the Valley on its way somewhere else, and a passing truck with an empty spot is the cheapest capacity in the industry. Where a shipment out of a spur market means paying a carrier to detour, a shipment out of Phoenix usually means filling a space that was driving by anyway.</p>
+      <p>The Los Angeles connection compounds the advantage. The Phoenix&ndash;LA lane is so short and so heavily trafficked that it operates almost like a shuttle &mdash; which is why you'll see it priced closer to a long tow than to typical state-to-state transport. And for cross-country moves, that same density means quick handoffs: carriers running the I-10 or I-40 corridors east pick up Valley freight constantly, so a Phoenix-to-East-Coast shipment rarely waits long for a truck.</p>
+      <p>The practical takeaway: if you're comparing quotes and a company tells you Phoenix is a hard market that justifies a premium price, that's a negotiating story, not a logistics fact. This is a carrier-rich metro on the country's main southern artery. Price accordingly.</p>
+    </div>
+  </div>
+</section>
+
+<section class="city-section alt">
+  <div class="container">
+    <div class="city-head">
+      <h2>Winter Visitor Season: How the Valley's Great Migration Moves Prices</h2>
+      <p>Every fall, hundreds of thousands of seasonal residents from the Midwest, the Mountain states, and Canada head for Phoenix, Scottsdale, Mesa, and the Sun Cities &mdash; and a lot of their vehicles ride down on transport trucks.</p>
+    </div>
+    <div class="season-grid">
+      <article class="season-card south">
+        <span class="season-dir"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M6 13l6 6 6-6"/></svg>Inbound peak &bull; Oct&ndash;Jan</span>
+        <p>Demand <em>into</em> the Valley surges as winter visitors arrive. Rates from the Midwest, Pacific Northwest, and Mountain states climb 15&ndash;35%, and pickup windows tighten as trucks fill.</p>
+      </article>
+      <article class="season-card north">
+        <span class="season-dir"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M6 11l6-6 6 6"/></svg>Outbound peak &bull; Mar&ndash;May</span>
+        <p>The flow reverses in spring as visitors head home before the heat. Northbound and eastbound rates firm up while <em>inbound</em> becomes the bargain direction.</p>
+      </article>
+    </div>
+    <p class="season-tip"><strong>Play the calendar:</strong> ship into Phoenix in spring or out of Phoenix in fall and the market works in your favor &mdash; carriers hate deadheading empty against the migration and will price aggressively to avoid it. Traveling <em>with</em> the flow? Book two to three weeks out; the last-minute premium in late October and late April is real. Our <a href="snowbird-car-shipping.html">seasonal shipping guide</a> covers the full playbook.</p>
+  </div>
+</section>
+
+<section class="city-section">
+  <div class="container">
+    <div class="city-head">
+      <h2>Shipping a Car Through Desert Heat: What 115&deg;F Actually Changes</h2>
+    </div>
+    <div class="txt-block">
+      <p>First, the reassurance: transport itself doesn't cook your car. It rides with the engine off, and a summer afternoon on a trailer is no harsher than a summer afternoon in your driveway. The heat changes the <em>logistics</em>, not the risk to the vehicle &mdash; and knowing how keeps your shipment smooth from June through September.</p>
+      <h3>Loading moves to the edges of the day</h3>
+      <p>Strapping down vehicles is physical work on black steel decks that can hit 160&deg;F in afternoon sun. Valley drivers sensibly schedule summer pickups for early morning or evening, so don't be surprised by a 6:30 AM call &mdash; it's the sign of a driver who knows the market. If you're offered a dawn window, take it; you'll beat both the heat and the I-10 traffic.</p>
+      <h3>Weak batteries fail here first</h3>
+      <p>Extreme heat is harder on batteries than extreme cold, and a battery that limps along in Michigan will often refuse to start after a few days in an Arizona summer. A dead vehicle can't drive off the trailer, which turns a routine delivery into a winch job. If your battery is more than three or four years old, have it tested before shipping into Phoenix in summer &mdash; a $20 check that prevents a $150 problem.</p>
+      <h3>Empty the cabin completely</h3>
+      <p>Cabin temperatures in a parked or transported car can pass 150&deg;F here. Aerosol cans can burst, electronics and medications are ruined, candles and crayons become upholstery damage, and even sealed drinks can pop. In summer especially, ship the car empty &mdash; whatever the item is, it travels better in your luggage.</p>
+      <h3>Tires and sun exposure on multi-day waits</h3>
+      <p>If your delivery timing means the car will sit at our end for a stretch before you arrive &mdash; common for winter visitors flying in after the vehicle &mdash; tell us. Prolonged desert sun is the one thing worth planning around for soft-top convertibles and older paint, and a covered or shaded holding arrangement is an easy fix when we know in advance.</p>
+    </div>
+  </div>
+</section>
+
+<section class="city-section alt">
+  <div class="container">
+    <div class="city-head">
+      <h2>Monsoon Season and Haboobs: The Weather Window Nobody Warns Newcomers About</h2>
+    </div>
+    <div class="txt-block">
+      <p>From roughly June 15 through September 30, the Sonoran Desert runs on a daily rhythm: clear scorching mornings, building afternoon clouds, and &mdash; some days &mdash; a wall of dust rolling across the Valley followed by a violent hour of rain and wind. Phoenicians call the dust walls haboobs, and if you've never seen one, the videos are worth a search.</p>
+      <p>For auto transport, monsoon season means occasional, short delays rather than disruption. When a dust storm drops visibility on I-10 to near zero, smart drivers do exactly what ADOT tells everyone to do: pull off, lights off, and wait it out &mdash; usually twenty minutes to an hour. Afternoon loading may push to evening on storm days. What it does <em>not</em> mean is days-long delays or damage risk; a monsoon downpour on an open trailer is a rinse, and the dust washes off. If your shipment is in transit during a big storm cell, expect delivery to slide by hours, occasionally to the next morning, and expect your driver to communicate. We'd far rather a truck sit out a haboob than push through one.</p>
+    </div>
+  </div>
+</section>
+
+<section class="city-section">
+  <div class="container">
+    <div class="city-head">
+      <h2>Open or Enclosed in Phoenix? The Desert Version of the Question</h2>
+      <p>The open-vs-enclosed decision reads differently in Arizona than anywhere else &mdash; here it's less about weather protection and more about what's on the trailer.</p>
+    </div>
+    <div class="cmp-grid">
+      <article class="cmp-card">
+        <span class="cmp-tag">The Valley default</span>
+        <h3>Open Transport</h3>
+        <p>Arizona is arguably the best climate in America for open transport: no road salt, no ice, and outside monsoon season, barely any rain. The dust film your car may pick up crossing the desert is the full extent of the exposure &mdash; a $15 wash at delivery.</p>
+        <ul>
+          <li>Right choice for virtually every daily driver in this market</li>
+          <li>Deepest carrier supply and lowest rates, especially on the LA and Texas lanes</li>
+          <li>Ships everything from commuter sedans to lifted trucks headed to the high country</li>
+        </ul>
+      </article>
+      <article class="cmp-card">
+        <span class="cmp-tag">Auction week royalty</span>
+        <h3>Enclosed Transport</h3>
+        <p>Scottsdale is one of the collector-car capitals of the world, and the Valley's enclosed fleet exists to serve it: museum-grade classics, auction consignments, and low-slung exotics that need a liftgate, soft straps, and zero road grit.</p>
+        <ul>
+          <li>Standard for six-figure vehicles, fresh restorations, and anything bought or sold at auction</li>
+          <li>Roughly 40&ndash;60% above open rates, with cargo insurance typically $250K&ndash;$1M</li>
+          <li>Book early for January &mdash; see the auction week section below for why</li>
+        </ul>
+      </article>
+    </div>
+    <p class="cmp-verdict"><strong>The Phoenix rule of thumb:</strong> in a market with no salt and 300 sunny days, enclosed is about the <em>vehicle</em>, not the weather. If yours is a daily driver, open transport and the money you save is the right call. If it's the kind of car that gets a trickle charger and a fitted cover, it should travel the way it lives &mdash; covered. Details on both: <a href="open-car-transport.html">open transport</a> and <a href="enclosed-auto-transport.html">enclosed transport</a>.</p>
+  </div>
+</section>
+
+<section class="city-section alt">
+  <div class="container">
+    <div class="city-head">
+      <h2>Arizona Auction Week: Shipping for Barrett-Jackson, Mecum &amp; the January Frenzy</h2>
+    </div>
+    <div class="txt-block">
+      <p>For one stretch every January, metro Phoenix becomes the center of the collector car universe. Barrett-Jackson's Scottsdale sale alone runs nine days and moves close to two thousand vehicles; add the other Arizona Auction Week sales running the same window and thousands of cars need to arrive in the Valley beforehand and leave for their new homes after &mdash; many of them on enclosed trailers, many on tight deadlines, all at once.</p>
+      <h3>If you're consigning a vehicle to auction</h3>
+      <p>Work backward from your check-in date, not the auction date &mdash; consignments have delivery windows, and arriving late can cost you your lot position. We recommend booking transport four to six weeks out for January arrival, enclosed for anything with real value, and building in a buffer day. Tell us it's an auction consignment at booking: delivery goes to a staging address with receiving procedures, not a house.</p>
+      <h3>If you're buying at auction</h3>
+      <p>The post-auction scramble is real: thousands of new owners all need trucks out of Scottsdale the same week, and outbound enclosed capacity sells out. Line up your transport <em>before</em> the hammer falls if you can &mdash; we can hold a tentative slot against your bidding plans &mdash; or call us the moment you win. We coordinate directly with auction logistics offices on release paperwork and gate passes, so your only job is enjoying the purchase.</p>
+      <p>Outside January, the same enclosed network serves the Valley's year-round collector scene &mdash; the Scottsdale dealerships, the restoration shops in Tempe and Chandler, and the private collections from Paradise Valley to Carefree. If it's special, we ship it like it's special. See our <a href="auction-car-transport.html">auction transport</a> and <a href="dealer-auto-transport.html">dealer transport</a> services.</p>
+    </div>
+  </div>
+</section>
+
+<section class="city-section">
+  <div class="container">
+    <div class="city-head">
+      <h2>Valley Communities We Serve</h2>
+      <p>Pickup and delivery across Maricopa County and beyond &mdash; from central Phoenix to the far East and West Valley.</p>
+    </div>
+    <div class="chips">
+      <span class="chip">Scottsdale</span>
+      <span class="chip">Tempe</span>
+      <span class="chip">Mesa</span>
+      <span class="chip">Chandler</span>
+      <span class="chip">Gilbert</span>
+      <span class="chip">Glendale</span>
+      <span class="chip">Peoria</span>
+      <span class="chip">Paradise Valley</span>
+      <span class="chip">Sun City</span>
+      <span class="chip">Sun City West</span>
+      <span class="chip">Surprise</span>
+      <span class="chip">Goodyear</span>
+      <span class="chip">Avondale</span>
+      <span class="chip">Buckeye</span>
+      <span class="chip">Queen Creek</span>
+      <span class="chip">Cave Creek</span>
+      <span class="chip">Fountain Hills</span>
+      <span class="chip">Ahwatukee</span>
+    </div>
+    <div class="city-callout">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="10" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+      <div>
+        <h3>Gated and 55+ communities: plan the handoff</h3>
+        <p>The Valley may have more gated and age-restricted communities than any metro in the country, and most of them restrict commercial trucks &mdash; even when the gate would physically fit a 75-foot rig, the HOA usually says no. The fix is routine: meet the driver just outside the gate, at the clubhouse lot with a quick okay from the office, or at the nearest park-and-ride. Arriving after your car does? Any adult you authorize &mdash; a neighbor, a family member, the community office &mdash; can sign for it.</p>
+      </div>
+    </div>
+    <div class="city-callout">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M5 21V8l7-5 7 5v13"/><path d="M9 21v-6h6v6"/></svg>
+      <div>
+        <h3>Edge-of-the-Valley addresses</h3>
+        <p>North Scottsdale hillsides, Cave Creek dirt roads, new construction in Queen Creek and Buckeye where the pavement hasn't caught up to the houses &mdash; full-size carriers can't always reach them, and a good driver won't risk a ten-car trailer on washboard gravel. We'll flag it at booking and set a paved meeting point a few minutes away, usually a school, church, or grocery lot with room to load safely.</p>
+      </div>
+    </div>
+    <div class="city-callout">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v8M12 22v-4M4.9 4.9l2.9 2.9M19.1 4.9l-2.9 2.9M2 12h4M18 12h4"/><circle cx="12" cy="14" r="4"/></svg>
+      <div>
+        <h3>ASU students and Luke AFB moves</h3>
+        <p>Tempe fills with student vehicles every August and empties every May &mdash; if you're shipping a car for a semester, those same weeks are when everyone else is too, so book a couple of weeks ahead. For military families PCSing to or from Luke Air Force Base, we handle POV shipments with the paperwork and timing flexibility a PCS actually requires; see our <a href="military-car-shipping.html">military shipping page</a> for how we handle date changes when orders shift.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="city-section alt">
+  <div class="container">
+    <div class="city-head">
+      <h2>Booking to Delivery: How It Works From Our Side</h2>
+      <p>Rather than the generic three steps, here's the honest version of what happens after you book with us in Phoenix.</p>
+    </div>
+    <div class="txt-block">
+      <p><strong>Hours one through forty-eight:</strong> your order goes out to the carrier network running your lane. In a market this dense, most Phoenix shipments match with a truck inside two days &mdash; the LA lane often matches same-day. You pay nothing until this happens; when it does, you get the carrier's name, direct phone, and insurance certificate, and only then does any deposit apply.</p>
+      <p><strong>The pickup:</strong> the driver calls ahead with a window, walks the vehicle with you (or whoever you've authorized), and records its condition with photos on the inspection report before loading. Keep a key, keep your own photos, and keep the gas at about a quarter tank &mdash; full tanks are just weight, and empty tanks can't drive off the trailer at the other end. One Arizona-specific note: if the vehicle has been baking on a summer driveway, give the driver a minute to let the cab air out before they climb in. They'll thank you.</p>
+      <p><strong>In transit:</strong> you have the driver's cell, and we're on the other line seven days a week from 6 AM if you'd rather check in with us. Federal hours-of-service rules cap driving at eleven hours a day, which is why Phoenix to Chicago genuinely takes four-plus days &mdash; anyone promising it in two is promising something illegal or imaginary.</p>
+      <p><strong>The delivery:</strong> same walk-around, in reverse, against the pickup report. Ninety-nine times out of a hundred it's a handshake and keys. On the hundredth, the protection is simple: note anything new on the report <em>before</em> signing, photograph it, and the carrier's cargo policy takes it from there. A clean signature followed by a phone call the next day is the one sequence that weakens a legitimate claim &mdash; so take the extra five minutes at the truck.</p>
+    </div>
+  </div>
+</section>
+
+<section class="city-section">
+  <div class="container">
+    <div class="city-head">
+      <h2>Why Ship with Ship Guy in Phoenix</h2>
+    </div>
+    <div class="why-grid">
+      <article class="why-card"><span class="why-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v5c0 5-3.5 8.5-7 10-3.5-1.5-7-5-7-10V6l7-3Z"/><path d="m9 12 2 2 4-4"/></svg></span><h3>Licensed &amp; bonded</h3><p>FMCSA-registered broker with the federally required $75,000 surety bond &mdash; and we encourage you to verify us in the SAFER database before booking.</p></article>
+      <article class="why-card"><span class="why-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg></span><h3>A real Valley office</h3><p>On Camelback Road in the Biltmore corridor, staffed seven days a week &mdash; not a call center three time zones away guessing what a haboob is.</p></article>
+      <article class="why-card"><span class="why-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="6" r="3"/><circle cx="18" cy="18" r="3"/><path d="M9 6h6a3 3 0 0 1 3 3v6"/></svg></span><h3>Carriers we know</h3><p>Every carrier's authority, insurance, and safety record is verified before dispatch &mdash; and on Valley lanes, we're often placing your car with a truck we've worked with dozens of times.</p></article>
+      <article class="why-card"><span class="why-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20.6 13.4 12 22l-9-9V3h10l7.6 7.6a2 2 0 0 1 0 2.8Z"/><circle cx="7.5" cy="7.5" r="1.2" fill="currentColor" stroke="none"/></svg></span><h3>The quote is the price</h3><p>No deposit until a carrier is assigned, and no we-found-a-truck-but-it-costs-more phone call. If a number sounds too good on this lane, ask us why &mdash; we'll show you the market.</p></article>
+    </div>
+    <div class="nearby-wrap">
+      <p class="nearby-label">We also serve the rest of Arizona</p>
+      <div class="chips">
+        <span class="chip chip-soft">Tucson</span>
+        <span class="chip chip-soft">Flagstaff</span>
+        <span class="chip chip-soft">Prescott</span>
+        <span class="chip chip-soft">Sedona</span>
+        <span class="chip chip-soft">Yuma</span>
+        <span class="chip chip-soft">Casa Grande</span>
+        <span class="chip chip-soft">Lake Havasu City</span>
+        <span class="chip chip-soft">Payson</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="city-section alt" id="location">
+  <div class="container">
+    <div class="city-head">
+      <h2>Find Us on Camelback Road</h2>
+      <p>Our Phoenix office sits in the Camelback Corridor at 24th Street &mdash; the Biltmore side of town. Call the local line or stop by; we're here seven days a week.</p>
+    </div>
+    <div class="loc-grid">
+      <div class="loc-info">
+        <h3>Ship Guy Auto Transport &mdash; Phoenix</h3>
+        <div class="loc-row">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+          <div><strong>Address</strong>198 E Camelback Rd #1450<br>Phoenix, AZ 85016</div>
+        </div>
+        <div class="loc-row">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/></svg>
+          <div><strong>Local phone</strong><a href="tel:+16232947745">(623) 294-7745</a></div>
+        </div>
+        <div class="loc-row">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+          <div><strong>Hours</strong>Monday&ndash;Sunday<br>6:00 AM &ndash; 11:00 PM MST</div>
+        </div>
+        <div class="loc-row">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16v16H4z"/><path d="m4 9 8 5 8-5"/></svg>
+          <div><strong>Email</strong><a href="mailto:quotes@shipguy.com">quotes@shipguy.com</a></div>
+        </div>
+      </div>
+      <div class="loc-map">
+        <iframe src="https://www.google.com/maps?q=198+E+Camelback+Rd+%231450,+Phoenix,+AZ+85016&output=embed" title="Map to Ship Guy Auto Transport, 198 E Camelback Rd #1450, Phoenix, AZ 85016" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+        <!-- Once your Phoenix Google Business Profile is live, replace this src with the GBP embed code (Share > Embed a map) so the map shows your business pin like the Miami page. -->
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="faq-section">
+  <div class="container">
+    <div class="faq-head">
+      <span class="faq-eyebrow">Phoenix Auto Transport FAQ</span>
+      <h2>Common Questions</h2>
+      <span class="faq-accent"></span>
+    </div>
+    <div class="faq-list">
+      <details class="faq-item"><summary class="faq-q">How much does it cost to ship a car to or from Phoenix?<span class="faq-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></span></summary><div class="faq-a">Phoenix is one of the cheapest major markets in the country to ship from. Typical open-transport ranges for a sedan: $300&ndash;$500 to Southern California, $600&ndash;$900 to Denver or Dallas, $900&ndash;$1,300 to the Midwest, and $1,150&ndash;$1,650 to the East Coast. Enclosed runs about 40&ndash;60% more. <a href="#quoteForm">Get a free quote</a> for an exact price on your dates.</div></details>
+      <details class="faq-item"><summary class="faq-q">How long does car shipping from Phoenix take?<span class="faq-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></span></summary><div class="faq-a">Pickup usually happens within 1&ndash;4 days of booking &mdash; the LA lane often matches same-day. Transit runs about 1&ndash;2 days to Los Angeles or Las Vegas, 2&ndash;3 days to Texas or Colorado, 4&ndash;6 days to the Midwest, and 6&ndash;9 days to the East Coast.</div></details>
+      <details class="faq-item"><summary class="faq-q">Will the Arizona heat damage my car during transport?<span class="faq-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></span></summary><div class="faq-a">No &mdash; vehicles ride with engines off, and transport is no harder on a car than a parking lot. The heat affects logistics instead: summer loading happens early morning or evening, weak batteries that survive mild climates fail at 115&deg;F, and anything left in the cabin (aerosols, electronics, medications) can be ruined. Empty the car and have an older battery tested before summer shipping.</div></details>
+      <details class="faq-item"><summary class="faq-q">Do monsoon storms delay auto transport in Phoenix?<span class="faq-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></span></summary><div class="faq-a">Occasionally, and briefly. From mid-June through September, afternoon dust storms and downpours can pause loading or slow I-10 for a few hours &mdash; drivers pull off and wait out haboobs, exactly as they should. Delays are measured in hours, not days.</div></details>
+      <details class="faq-item"><summary class="faq-q">Can the carrier pick up inside my gated or 55+ community?<span class="faq-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></span></summary><div class="faq-a">Often no &mdash; most Valley HOAs restrict commercial trucks even where the streets would fit one. The standard fix takes minutes: meet the driver outside the gate, at the clubhouse lot with permission, or at a nearby park-and-ride. Any adult you authorize can hand off or receive the vehicle.</div></details>
+      <details class="faq-item"><summary class="faq-q">I'm a winter visitor from Canada &mdash; can you ship my car across the border?<span class="faq-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></span></summary><div class="faq-a">U.S. carriers don't cross the border, but there's a standard two-step: a Canadian carrier brings the vehicle to a border-area hub (or you drive it across yourself), and we run the U.S. leg to Phoenix. Plenty of our winter-visitor customers do this every season &mdash; call us and we'll walk you through the handoff.</div></details>
+      <details class="faq-item"><summary class="faq-q">Can you ship golf carts, motorcycles, or a second vehicle?<span class="faq-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></span></summary><div class="faq-a">Yes &mdash; golf carts and motorcycles are everyday freight in the Valley, and shipping two vehicles on one order usually earns a multi-car discount, since carriers love filling adjacent spots with a single stop.</div></details>
+      <details class="faq-item"><summary class="faq-q">Where is Ship Guy located in Phoenix?<span class="faq-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></span></summary><div class="faq-a">Our Phoenix office is at 198 E Camelback Rd #1450, Phoenix, AZ 85016, in the Camelback Corridor. We're open seven days a week, 6:00 AM to 11:00 PM &mdash; reach us locally at <a href="tel:+16232947745">(623) 294-7745</a>.</div></details>
+    </div>
+  </div>
+</section>
+
+<!-- related --><section class="related-section"><div class="container">
+      <h2>Related Guides &amp; Locations</h2>
       <div class="related-grid">
-        <a class="related-card" href="how-it-works.html">How It Works <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-        <a class="related-card" href="cross-country-car-shipping.html">Cross Country Car Shipping <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-        <a class="related-card" href="car-shipping-preparation.html">Car Prep Guide <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <a class="related-card" href="car-shipping-miami-fl.html">Auto Transport Miami, FL <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <a class="related-card" href="auction-car-transport.html">Auction Car Transport <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <a class="related-card" href="enclosed-auto-transport.html">Enclosed Auto Transport <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <a class="related-card" href="car-shipping-cost.html">Car Shipping Cost <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
       </div>
 </div></section>
-
-<!-- ===================== FINAL CTA ===================== -->
 <section class="cta-band" id="get-started">
   <div class="container cta-inner">
     <p class="cta-eyebrow">Ready When You Are</p>
-    <h2>Ready to Ship Your Vehicle?</h2>
+    <h2>Ready to Ship? Phoenix Rates Are on Your Side.</h2>
     <p class="cta-sub">Get a free, no-obligation quote in about 60 seconds — or call and talk to a real specialist right now.</p>
     <div class="cta-actions">
       <a class="cta-primary" href="index.html#top">Get Your Free Quote
@@ -792,6 +1353,13 @@ body.ready .reveal{opacity:1;transform:none}
 </section>
 
 <!-- ===================== FOOTER ===================== -->
+<section class="eeat-byline">
+  <div class="eeat-inner">
+    <p>Ship Guy is a licensed, bonded auto transport broker (<strong>MC #[XXXXXX]</strong> &bull; <strong>USDOT #[XXXXXX]</strong>) with a Phoenix office at 198 E Camelback Rd #1450, Phoenix, AZ 85016 &bull; <a href="tel:+16232947745">(623) 294-7745</a> &bull; open 7 days, 6 AM&ndash;11 PM, serving the entire Valley and all of Arizona. Verify our operating authority anytime in the <a href="https://safer.fmcsa.dot.gov/" rel="noopener" target="_blank">FMCSA SAFER database</a>. Rate estimates on this page reflect current Phoenix lane conditions and are refreshed quarterly.</p>
+    <p><strong>Written &amp; reviewed by [Full Name]</strong>, [Title], [X] years in vehicle logistics &bull; Last updated: <time datetime="2026-07">July 2026</time></p>
+  </div>
+</section>
+
 <footer class="site-footer" id="contact">
   <div class="container footer-top">
     <div class="f-brand">
@@ -965,6 +1533,21 @@ body.ready .reveal{opacity:1;transform:none}
     document.getElementById('steps').style.display = 'none';
     success.classList.add('show');
   });
+})();
+</script>
+<script>
+(function(){
+  window.addEventListener('message', function(e){
+    if(String(e.origin).indexOf('berocker') === -1) return;
+    var d = e.data, h = null;
+    if(typeof d === 'number') h = d;
+    else if(d && typeof d === 'object') h = d.height || d.frameHeight || d.iframeHeight || (d.data && d.data.height);
+    h = parseInt(h, 10);
+    if(h && h > 200 && h < 4000){
+      var f = document.querySelector('.quote-card.is-embed iframe');
+      if(f) f.style.height = h + 'px';
+    }
+  }, false);
 })();
 </script>
 </body>
