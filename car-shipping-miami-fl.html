@@ -6,8 +6,8 @@
   <meta http-equiv="Pragma" content="no-cache">
   <meta http-equiv="Expires" content="0">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Auction Car Transport — Copart, IAA & Manheim Shipping | Ship Guy</title>
-<meta name="description" content="Auction car transport from Copart, IAA, Manheim, and dealer auctions. We pick up your won vehicle and deliver it to your address. Learn how auction shipping works.">
+<title>Auto Transport Miami, FL — Car Shipping Rates &amp; Times | Ship Guy</title>
+<meta name="description" content="Auto transport in Miami, FL from $450. Typical pickup in 1–5 days, door-to-door with vetted insured carriers, open &amp; enclosed options, and no deposit to book. Get a free quote.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
@@ -70,7 +70,8 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,
    ========================================================= */
 .site-header{
   position:sticky;top:0;z-index:60;background:#fff;
-  border-bottom:1px solid transparent;
+  border-bottom:1px solid var(--field);
+  box-shadow:0 3px 12px -9px rgba(13,26,80,.45);
   transition:box-shadow .25s ease, border-color .25s ease;
 }
 .site-header.is-scrolled{box-shadow:0 6px 24px -16px rgba(13,26,80,.5);border-bottom-color:var(--line)}
@@ -558,9 +559,6 @@ section[id]{scroll-margin-top:104px}
 body.ready .reveal{opacity:1;transform:none}
 .reveal.d2{transition-delay:.08s}
 .reveal.d3{transition-delay:.16s}
-
-.menu.menu-mega{display:grid;grid-template-columns:1fr 1fr;column-gap:4px;min-width:452px}
-.menu.menu-mega .menu-all{grid-column:1 / -1;margin-top:6px;padding-top:12px;border-top:1px solid var(--line);color:var(--brand);font-weight:700}
 /* ===== Subpage / article / services styles ===== */
 .page-hero{background:linear-gradient(135deg,#0a2a9e 0%, var(--brand) 60%, #1f54e0 100%);color:#fff;padding:62px 0 56px}
 .crumbs{display:flex;flex-wrap:wrap;gap:9px;font-size:13.5px;font-weight:600;color:#bcd2f8;margin-bottom:16px}
@@ -601,14 +599,338 @@ body.ready .reveal{opacity:1;transform:none}
 @media (max-width:560px){.svc-grid{grid-template-columns:1fr}.related-grid{grid-template-columns:1fr}}
 
 
+.menu.menu-mega{display:grid;grid-template-columns:1fr 1fr;column-gap:4px;min-width:452px}
+.menu.menu-mega .menu-all{grid-column:1 / -1;margin-top:6px;padding-top:12px;border-top:1px solid var(--line);color:var(--brand);font-weight:700}
+
 @media (max-width:460px){.footer-top{grid-template-columns:1fr;gap:28px}}/* resp-polish-footer */
+
+/* ===================== CITY PAGE ===================== */
+.city-hero-btns{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}
+.city-btn,.city-btn-ghost{display:inline-flex;align-items:center;gap:9px;font-family:var(--font-display);font-weight:700;font-size:15.5px;padding:14px 24px;border-radius:12px;border:2px solid transparent;transition:transform .15s ease,background .15s ease,border-color .15s ease}
+.city-btn{background:#fff;color:var(--brand)}
+.city-btn:hover{transform:translateY(-1px);background:#f2f5ff}
+.city-btn-ghost{background:transparent;color:#fff;border-color:rgba(255,255,255,.55)}
+.city-btn-ghost:hover{border-color:#fff;background:rgba(255,255,255,.12)}
+.city-stats{background:#fff;border-bottom:1px solid var(--line)}
+.city-stats-wrap{display:grid;grid-template-columns:repeat(4,1fr);padding:30px 24px}
+.city-stat{text-align:center;padding:0 18px;position:relative}
+.city-stat+.city-stat::before{content:"";position:absolute;left:0;top:2px;bottom:2px;width:1px;background:var(--line)}
+.city-stat svg{width:26px;height:26px;color:var(--brand);margin:0 auto 10px}
+.city-stat h3{font-family:var(--font-display);font-weight:700;font-size:15.5px;color:#101a3d;margin:0 0 4px}
+.city-stat p{margin:0;font-size:13px;color:var(--muted)}
+.city-section{padding:58px 0;border-top:1px solid var(--line)}
+.city-section.alt{background:var(--bg-soft)}
+.city-head{text-align:center;max-width:680px;margin:0 auto 30px}
+.city-head h2{font-family:var(--font-display);font-weight:800;font-size:clamp(1.6rem,3vw,2.15rem);letter-spacing:-.015em;color:#101a3d;margin:0 0 10px}
+.city-head p{margin:0;font-size:15.5px;line-height:1.6;color:#586079}
+.route-table{background:#fff;border:1px solid var(--line);border-radius:16px;overflow:hidden;box-shadow:0 1px 2px rgba(16,24,40,.05)}
+.route-row{display:grid;grid-template-columns:2fr 1fr 1fr auto;gap:18px;align-items:center;padding:15px 20px;border-top:1px solid var(--line)}
+.route-row:first-child{border-top:0}
+.route-head{background:var(--bg-soft);font-family:var(--font-display);font-weight:700;font-size:12px;letter-spacing:.07em;text-transform:uppercase;color:var(--muted)}
+.route-name{font-family:var(--font-display);font-weight:700;font-size:15px;color:#101a3d}
+.route-val{font-size:14.5px;color:#586079}
+.route-cta{display:inline-flex;align-items:center;gap:6px;font-family:var(--font-display);font-weight:700;font-size:14px;color:var(--brand);white-space:nowrap}
+.route-cta svg{width:15px;height:15px;transition:transform .15s ease}
+.route-cta:hover svg{transform:translateX(3px)}
+.chips{display:flex;flex-wrap:wrap;gap:10px;justify-content:center}
+.chip{background:#fff;border:1px solid var(--line);border-radius:999px;padding:9px 17px;font-family:var(--font-display);font-weight:600;font-size:14px;color:var(--ink)}
+.chip-soft{background:var(--brand-tint);border-color:#d9e2fb;color:var(--brand)}
+.city-callout{display:flex;gap:18px;align-items:flex-start;background:var(--brand-tint);border:1px solid #d9e2fb;border-radius:16px;padding:22px 24px;max-width:900px;margin:34px auto 0}
+.city-callout svg{width:26px;height:26px;color:var(--brand);flex:0 0 auto;margin-top:2px}
+.city-callout h3{font-family:var(--font-display);font-weight:700;font-size:17px;color:#101a3d;margin:0 0 6px}
+.city-callout p{margin:0;font-size:15px;line-height:1.6;color:#41507a}
+.city-callout a{color:var(--brand);font-weight:700}
+.why-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.why-card{background:#fff;border:1px solid var(--line);border-radius:16px;padding:22px 20px;box-shadow:0 1px 2px rgba(16,24,40,.05)}
+.why-ic{display:grid;place-items:center;width:42px;height:42px;border-radius:12px;background:var(--brand-tint);color:var(--brand);margin-bottom:14px}
+.why-ic svg{width:22px;height:22px}
+.why-card h3{font-family:var(--font-display);font-weight:700;font-size:16.5px;color:#101a3d;margin:0 0 7px}
+.why-card p{margin:0;font-size:14.5px;line-height:1.6;color:#586079}
+.nearby-wrap{margin-top:38px;text-align:center}
+.nearby-label{font-family:var(--font-display);font-weight:700;font-size:14px;letter-spacing:.05em;text-transform:uppercase;color:var(--muted);margin:0 0 16px}
+@media (max-width:900px){
+  .city-stats-wrap{grid-template-columns:repeat(2,1fr);row-gap:26px}
+  .city-stat:nth-child(3)::before{display:none}
+  .why-grid{grid-template-columns:repeat(2,1fr)}
+  .route-row{grid-template-columns:1fr 1fr;row-gap:6px}
+  .route-head{display:none}
+  .route-name{grid-column:1 / -1}
+  .route-cta{grid-column:1 / -1;margin-top:4px}
+}
+@media (max-width:560px){
+  .city-stats-wrap{grid-template-columns:1fr;row-gap:24px}
+  .city-stat::before{display:none}
+  .why-grid{grid-template-columns:1fr}
+  .city-callout{flex-direction:column;gap:12px}
+  .city-hero-btns .city-btn,.city-hero-btns .city-btn-ghost{flex:1 1 100%;justify-content:center}
+}
+
+.quote-card.is-embed{padding:0;overflow:hidden}
+.quote-card.is-embed iframe{width:100%;height:630px;border:0;display:block}
+
+
+/* ============ CITY HERO — light / corporate ============ */
+.hero-overlay{
+  background:
+    linear-gradient(90deg,
+      rgba(255,255,255,.97) 0%,
+      rgba(255,255,255,.94) 26%,
+      rgba(255,255,255,.82) 43%,
+      rgba(255,255,255,.48) 60%,
+      rgba(255,255,255,.14) 80%,
+      rgba(255,255,255,0) 100%),
+    linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0) 70%, rgba(255,255,255,.5) 100%);
+}
+.hero{border-bottom:1px solid var(--line)}
+.hero-grid{padding:66px 24px 64px}
+.hero-copy{color:var(--ink)}
+.hero-copy .crumbs{color:var(--muted)}
+.hero-copy .crumbs a{color:var(--brand)}
+.hero-copy .eyebrow{color:var(--brand)}
+.hero-copy h1{color:#101a3d;text-shadow:none;font-size:clamp(2.1rem,3.4vw,2.85rem)}
+.hero-copy .lede{color:var(--ink-2);text-shadow:none;max-width:430px}
+.trust-list li{color:var(--ink);text-shadow:none;font-weight:600}
+.trust-ic{background:var(--brand-tint);border:1px solid #dce4fb;color:var(--brand)}
+.hero-divider{background:var(--line)}
+.stats .stat{border-right-color:var(--line)}
+.stat .num{color:#101a3d;text-shadow:none}
+.stat .lbl{color:var(--muted)}
+.quote-card{border:1px solid var(--line)}
+@media (max-width:900px){
+  /* stacked: text sits over the photo, so keep the scrim strong and even */
+  .hero-overlay{background:linear-gradient(180deg, rgba(255,255,255,.95) 0%, rgba(255,255,255,.90) 50%, rgba(255,255,255,.93) 100%)}
+}
+
+.hero{background:#fff}
+.hero-media{inset:12px 0 0 0}
+
+/* ===== Miami page additions (uses existing tokens) ===== */
+.qa-box{display:flex;gap:16px;align-items:flex-start;background:var(--brand-tint);border:1px solid #d9e2fb;border-left:4px solid var(--brand);border-radius:14px;padding:20px 22px;margin:26px 0 0}
+.qa-box svg{width:24px;height:24px;color:var(--brand);flex:0 0 auto;margin-top:2px}
+.qa-box p{margin:0;font-size:15.5px;line-height:1.65;color:#33406b}
+.qa-box strong{color:#101a3d}
+.qa-kicker{font-family:var(--font-display);font-weight:800;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--brand);display:block;margin-bottom:6px}
+.route-table.has-price .route-row{grid-template-columns:1.9fr 1fr 1fr 1.1fr auto}
+.route-note{max-width:900px;margin:14px auto 0;font-size:13.5px;color:var(--muted);text-align:center}
+.season-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;max-width:900px;margin:8px auto 22px}
+.season-card{background:#fff;border:1px solid var(--line);border-radius:16px;padding:22px 24px;box-shadow:var(--shadow-soft)}
+.season-dir{display:inline-flex;align-items:center;gap:8px;font-family:var(--font-display);font-weight:800;font-size:13px;letter-spacing:.06em;text-transform:uppercase;margin-bottom:10px}
+.season-card.south .season-dir{color:var(--brand)}
+.season-card.north .season-dir{color:#0b7d3e}
+.season-card p{margin:0;font-size:15px;line-height:1.6;color:#41507a}
+.season-tip{max-width:900px;margin:0 auto;font-size:15.5px;line-height:1.65;color:#41507a;text-align:center}
+.season-tip strong{color:#101a3d}
+.eeat-byline{background:var(--bg-soft);border-top:1px solid var(--line)}
+.eeat-inner{max-width:var(--maxw);margin:0 auto;padding:26px 24px;font-size:13.5px;line-height:1.7;color:var(--muted)}
+.eeat-inner a{color:var(--brand);font-weight:600}
+.eeat-inner strong{color:var(--ink)}
+@media(max-width:900px){.season-grid{grid-template-columns:1fr}}
+@media(max-width:760px){.route-table.has-price .route-row{grid-template-columns:1fr 1fr}}
+
+/* ===== v2 additions: comparison, location/map, checklists ===== */
+.cmp-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;max-width:980px;margin:6px auto 20px}
+.cmp-card{background:#fff;border:1px solid var(--line);border-radius:16px;padding:24px 26px;box-shadow:var(--shadow-soft)}
+.cmp-card h3{font-family:var(--font-display);font-weight:800;font-size:1.15rem;color:#101a3d;margin:0 0 4px}
+.cmp-tag{display:inline-block;font-family:var(--font-display);font-weight:700;font-size:12px;letter-spacing:.07em;text-transform:uppercase;color:var(--brand);background:var(--brand-tint);border-radius:999px;padding:4px 12px;margin-bottom:12px}
+.cmp-card p{margin:0 0 12px;font-size:15px;line-height:1.65;color:#41507a}
+.cmp-card ul{margin:0;padding-left:19px}
+.cmp-card li{font-size:14.5px;line-height:1.6;color:#41507a;margin-bottom:6px}
+.cmp-verdict{max-width:980px;margin:0 auto;background:var(--brand-tint);border:1px solid #d9e2fb;border-radius:14px;padding:18px 22px;font-size:15.5px;line-height:1.65;color:#33406b}
+.cmp-verdict strong{color:#101a3d}
+.txt-block{max-width:860px;margin:0 auto}
+.txt-block p{font-size:16.5px;line-height:1.75;color:#414a6b;margin:0 0 16px}
+.txt-block h3{font-family:var(--font-display);font-weight:700;font-size:1.15rem;color:#101a3d;margin:26px 0 9px}
+.txt-block ul{margin:0 0 18px;padding-left:22px}
+.txt-block li{font-size:16px;line-height:1.7;color:#414a6b;margin-bottom:9px}
+.txt-block a{color:var(--brand);font-weight:600;text-decoration:underline;text-decoration-color:#c7d3f5;text-underline-offset:3px}
+.loc-grid{display:grid;grid-template-columns:1fr 1.15fr;gap:26px;align-items:stretch;max-width:1040px;margin:0 auto}
+.loc-info{background:#fff;border:1px solid var(--line);border-radius:16px;padding:28px 30px;box-shadow:var(--shadow-soft);display:flex;flex-direction:column;gap:4px}
+.loc-info h3{font-family:var(--font-display);font-weight:800;font-size:1.2rem;color:#101a3d;margin:0 0 14px}
+.loc-row{display:flex;gap:13px;align-items:flex-start;padding:11px 0;border-top:1px solid var(--line)}
+.loc-row:first-of-type{border-top:0}
+.loc-row svg{width:21px;height:21px;color:var(--brand);flex:0 0 auto;margin-top:2px}
+.loc-row div{font-size:15.5px;line-height:1.55;color:#41507a}
+.loc-row strong{display:block;font-family:var(--font-display);font-weight:700;font-size:13px;letter-spacing:.05em;text-transform:uppercase;color:var(--muted);margin-bottom:2px}
+.loc-row a{color:var(--brand);font-weight:700}
+.loc-map{border-radius:16px;overflow:hidden;border:1px solid var(--line);box-shadow:var(--shadow-soft);min-height:340px}
+.loc-map iframe{width:100%;height:100%;min-height:340px;border:0;display:block}
+@media(max-width:900px){.cmp-grid,.loc-grid{grid-template-columns:1fr}.loc-map{min-height:300px}}
 </style>
 <script type="application/ld+json">
 {
-  "@context":"https://schema.org","@graph":[
-  {"@type":"Service","name":"Auction Car Transport","serviceType":"Auto transport","provider":{"@type":"Organization","name":"Ship Guy","telephone":"+1-866-280-3481"},"areaServed":{"@type":"Country","name":"United States"},"description":"Auction car transport from Copart, IAA, Manheim, and dealer auctions. We pick up your won vehicle and deliver it to your address. Learn how auction shipping works."},
-  {"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"index.html"},{"@type":"ListItem","position":2,"name":"Services","item":"services.html"},{"@type":"ListItem","position":3,"name":"Auction Car Transport","item":"auction-car-transport.html"}]}
-  ]
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "Service",
+   "name": "Car Shipping in Miami, FL",
+   "serviceType": "Auto transport",
+   "provider": {
+    "@type": "LocalBusiness",
+    "name": "Ship Guy Auto Transport",
+    "url": "https://shipguy.com",
+    "telephone": "+1-786-284-6972",
+    "email": "quotes@shipguy.com",
+    "address": {
+     "@type": "PostalAddress",
+     "streetAddress": "3162 Commodore Plaza #407",
+     "addressLocality": "Miami",
+     "addressRegion": "FL",
+     "postalCode": "33133",
+     "addressCountry": "US"
+    },
+    "geo": {
+     "@type": "GeoCoordinates",
+     "latitude": 25.7272109,
+     "longitude": -80.2448365
+    },
+    "openingHoursSpecification": [
+     {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+       "Monday",
+       "Tuesday",
+       "Wednesday",
+       "Thursday",
+       "Friday",
+       "Saturday",
+       "Sunday"
+      ],
+      "opens": "06:00",
+      "closes": "23:00"
+     }
+    ],
+    "identifier": [
+     {
+      "@type": "PropertyValue",
+      "name": "MC Number",
+      "value": "MC-XXXXXX"
+     },
+     {
+      "@type": "PropertyValue",
+      "name": "USDOT Number",
+      "value": "USDOT-XXXXXX"
+     }
+    ]
+   },
+   "areaServed": {
+    "@type": "City",
+    "name": "Miami",
+    "containedInPlace": {
+     "@type": "State",
+     "name": "Florida"
+    }
+   },
+   "description": "Door-to-door car shipping to and from Miami, Florida. Open and enclosed auto transport, vetted insured carriers, upfront pricing, and no deposit to book.",
+   "offers": {
+    "@type": "Offer",
+    "priceCurrency": "USD",
+    "price": "450",
+    "description": "Open auto transport from Miami starting price, standard sedan, regional lanes"
+   }
+  },
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "Home",
+     "item": "index.html"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "Miami, FL",
+     "item": "car-shipping-miami-fl.html"
+    }
+   ]
+  },
+  {
+   "@type": "FAQPage",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "How much does it cost to ship a car to or from Miami?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "For a standard sedan on open transport, typical ranges are $450–$700 to the Southeast, $700–$1,100 to the Northeast or Midwest, and $1,100–$1,600 cross-country. Enclosed transport runs roughly 40–60% more. Exact pricing depends on vehicle size, address accessibility, and season, since South Florida rates move with snowbird demand. Request a free quote for an accurate number for your route and dates."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "How long does it take to ship a car to Miami?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Transit time depends mainly on distance. A move from Atlanta typically runs a couple of days, the Northeast is usually in the three-to-six day range, and a cross-country trip from the West Coast generally takes about a week or more. Weather, traffic, and route availability can shift these estimates."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Do you offer door-to-door pickup in Miami?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Yes. Whenever possible we arrange door-to-door pickup and delivery at your Miami address. Some areas — narrow streets in Coconut Grove or Little Havana, gated communities, and low-clearance parking garages downtown or in Brickell — can't safely fit a full-size carrier, so the driver will arrange a nearby meeting point such as a large lot."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "When is the busiest season for car shipping in South Florida?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Demand peaks around the snowbird season. Vehicles move south into Florida heading into the fall and winter, and back north in the spring. Booking earlier during those windows generally means better pricing and more scheduling flexibility. See our snowbird car shipping page for details."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Can you ship a car that doesn't run?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Yes, but the carrier needs to know in advance. A non-running vehicle requires equipment such as a winch and a driver prepared to load it, so mention it when you request your quote and we'll match you with a carrier set up for inoperable vehicles."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Do you ship anything besides cars in Miami?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Yes. Along with vehicles, Ship Guy arranges transport for motorcycles, boats, freight and pallets, furniture, household goods, heavy equipment, and oversized items to and from the Miami area."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Can I put personal items in the car?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Most carriers allow up to about 100 lbs of items packed in the trunk or below window level. Personal items aren't covered by the carrier's cargo insurance, so never ship valuables, documents, or anything irreplaceable inside the vehicle."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Do I need to be present for pickup or delivery?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "No. Any adult you authorize — a family member, friend, or building manager — can release or accept the vehicle and sign the inspection paperwork, which is why many snowbird customers ship their car a week before or after they fly."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Is my vehicle insured during transport?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Yes. The assigned carrier's cargo insurance covers your vehicle in transit, and the driver documents its condition with photos on the Bill of Lading at pickup and delivery. You can request the carrier's insurance certificate before pickup, and your own auto policy typically remains secondary coverage."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Where is Ship Guy located in Miami?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Our office is at 3162 Commodore Plaza #407 in Coconut Grove, Miami, FL 33133. We're open seven days a week from 6:00 AM to 11:00 PM ET — reach us locally at (786) 284-6972 or toll-free at (866) 280-3481."
+     }
+    }
+   ]
+  }
+ ]
 }
 </script>
 </head>
@@ -690,62 +1012,412 @@ body.ready .reveal{opacity:1;transform:none}
 </header>
 
 <!-- ===================== PAGE HERO ===================== -->
-<section class="page-hero"><div class="container">
-  <nav class="crumbs" aria-label="Breadcrumb"><a href="index.html">Home</a><span>/</span><a href="services.html">Services</a><span>/</span><span aria-current="page">Auction Car Transport</span></nav>
-  <h1>Auction Car Transport</h1>
-  <p class="page-hero-sub">Shipping from Copart, IAA, Manheim, and other auctions straight to your driveway, lot, or dealership.</p>
-</div></section>
+<section class="hero">
+  <div class="hero-media" aria-hidden="true">
+    <img class="hero-img" alt="" src="assets/hero-miami.jpg" fetchpriority="high">
+    <div class="hero-overlay"></div>
+  </div>
+
+  <div class="container hero-grid">
+    <div class="hero-copy">
+      <nav class="crumbs" aria-label="Breadcrumb"><a href="index.html">Home</a><span>/</span><span aria-current="page">Miami, FL</span></nav>
+      <p class="eyebrow reveal">Miami,&nbsp;FL&nbsp;&bull;&nbsp;Licensed&nbsp;&bull;&nbsp;Insured</p>
+      <h1 class="reveal d2">Car Shipping in<br>Miami, FL</h1>
+      <p class="lede reveal d2">Door-to-door auto transport to and from Miami with vetted, insured carriers, upfront pricing, and no deposit to book.</p>
+
+      <ul class="trust-list reveal d3">
+        <li><span class="trust-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/><path d="m9 12 2 2 4-4"/></svg></span>Licensed Broker &amp; Fully Insured</li>
+        <li><span class="trust-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="2" width="8" height="4" rx="1"/><path d="M9 4H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2h-3"/><path d="m9 14 2 2 4-4"/></svg></span>FMCSA Registered</li>
+        <li><span class="trust-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></span>Vetted Carrier Network</li>
+        <li><span class="trust-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M4 13a8 8 0 0 1 16 0"/><rect x="2" y="13" width="4.4" height="7" rx="1.6"/><rect x="17.6" y="13" width="4.4" height="7" rx="1.6"/><path d="M20 19.5v.5a3 3 0 0 1-3 3h-3"/></svg></span>Real-Time Tracking &amp; 24/7 Support</li>
+      </ul>
+
+      <div class="hero-divider reveal d3"></div>
+
+      <div class="stats reveal d3">
+        <div class="stat"><span class="num">50+</span><span class="lbl">States Served</span></div>
+        <div class="stat"><span class="num">100%</span><span class="lbl">Insured Transport</span></div>
+        <div class="stat"><span class="num">24/7</span><span class="lbl">Support &amp; Tracking</span></div>
+      </div>
+    </div>
+
+    <!-- QUOTE CARD (booking widget) -->
+    <div class="quote-card is-embed reveal d2" id="quoteForm">
+      <iframe src="https://widget.berocker.com?theme=pro&amp;api_base=https%3A%2F%2Fapp.shipguy.com&amp;api_key=6a5508b7cb2f4" title="Ship Guy Logistics booking form" loading="lazy"></iframe>
+    </div>
+  </div>
+</section>
 
 <section class="article-section"><div class="container article">
-<p class="article-lead">Won a vehicle at auction? Getting it home is the next step. Auction car transport picks up your purchase from the auction yard and delivers it to your driveway, lot, or dealership. Here's how it works with Ship Guy.</p>
+  <p class="article-lead">Miami is one of the busiest auto transport markets in the country. Vehicles move in and out of South Florida year-round for relocations, seasonal residents, dealership and auction purchases, and college and military moves.</p>
 
-<h2>What Is Auction Car Transport?</h2>
-<p>Auction car transport is vehicle shipping that moves cars purchased at auto auctions to their new owners. Whether you bought from a public salvage auction, an online marketplace, or a dealer-only sale, we coordinate pickup directly from the auction location and deliver the vehicle wherever you need it. It's a popular service for dealers, wholesalers, exporters, and individual buyers who shop auctions across the country and need a reliable way to get their wins delivered.</p>
+  <div class="qa-box">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>
+    <p><span class="qa-kicker">Quick answer</span>Shipping a standard sedan to or from Miami typically costs <strong>$450&ndash;$1,600</strong> on open transport depending on distance, with pickup usually within <strong>1&ndash;5 days</strong> of booking and delivery in 1&ndash;10 days by route. Enclosed transport runs roughly 40&ndash;60% more. During snowbird season (Oct&ndash;Dec southbound, Apr&ndash;May northbound), rates in the peak direction rise 20&ndash;40% &mdash; <a href="#quoteForm">get an exact price for your route</a> in about two minutes.</p>
+  </div>
 
-<h2>Auctions We Ship From</h2>
-<p>We arrange transport from major auto auctions nationwide, including large salvage and insurance auctions as well as dealer and wholesale sales such as Copart, IAA, Manheim, ADESA, and many regional and online auctions. Because these yards have their own pickup procedures, gate-pass requirements, and storage policies, working with an experienced broker helps the handoff go smoothly. Just give us the auction name, location, and your buyer or lot details when you request your quote.</p>
-
-<h2>How Auction Transport Works</h2>
-<p>The process is straightforward. After your win, you provide the auction location, the vehicle details, and the buyer information the yard requires for release. We match the shipment with a carrier experienced in auction pickups and coordinate the gate pass and pickup. The driver inspects and loads the vehicle, then transports it while you track progress. At delivery, you inspect the vehicle and sign off. We deliver <a href="door-to-door-car-shipping.html">door-to-door</a> to your home, dealership, or repair facility.</p>
-
-<h2>Move Quickly to Avoid Storage Fees</h2>
-<p>Timing is critical with auction purchases. Most auctions begin charging daily storage fees shortly after the sale, and those fees add up fast. The sooner your vehicle is paid for, released, and picked up, the more you save. To keep things moving, complete your payment and any required paperwork with the auction promptly, confirm the vehicle is marked ready for release, and book transport as early as possible. If you're racing the storage clock, ask about <a href="expedited-car-shipping.html">expedited shipping</a> for a prioritized, faster pickup.</p>
-
-<h2>Shipping Non-Running and Damaged Vehicles</h2>
-<p>Many auction vehicles — especially from salvage and insurance auctions — don't run or have damage. That's no problem: we regularly transport inoperable vehicles. Just let us know the vehicle's condition when you request your quote, including whether it rolls, steers, and brakes, so we can assign a carrier with the right equipment, such as a winch. Accurate condition details up front help avoid delays and surprises at pickup. Be aware that inoperable transport typically costs a bit more than shipping a running vehicle.</p>
-
-<h2>How Much Does Auction Car Transport Cost?</h2>
-<p>The price depends on distance, the vehicle's size and condition (running or not), transport type (open or enclosed), timing, and demand on the route. Salvage and non-running vehicles may require special handling that affects the cost. As with every Ship Guy shipment, your quote is all-in and transparent — no hidden fees and no upfront deposit, and you pay only once your vehicle is dispatched. Factoring transport into your maximum bid helps you know your true landed cost before you buy.</p>
-
-<h2>Open or Enclosed for Auction Vehicles?</h2>
-<p>Most auction vehicles ship on <a href="open-car-transport.html">open carriers</a>, the affordable and widely available standard — a practical choice for salvage units, project cars, and everyday vehicles. If you've won a classic, exotic, or high-value vehicle that you want shielded from the elements, <a href="enclosed-auto-transport.html">enclosed transport</a> provides full protection in transit. We'll help you choose based on the vehicle and your budget.</p>
-
-<h2>For Dealers and Volume Buyers</h2>
-<p>If you buy at auction regularly, we can support your operation with consistent <a href="dealer-auto-transport.html">dealer auto transport</a> across your common lanes, including consolidating multiple wins onto a single load to lower your per-vehicle cost. One point of contact, a vetted carrier network, and real-time tracking help you keep inventory moving from the auction block to your lot.</p>
-
-<h2>What You'll Need to Book an Auction Shipment</h2>
-<p>To get your vehicle released and on a truck quickly, have a few details ready when you request your quote. You'll typically need the auction name and location, the lot or stock number, the vehicle's year, make, and model, and the buyer information the yard uses to authorize release — often a buyer ID, gate pass, or pickup authorization. Confirming that the vehicle is paid in full and marked ready for pickup before the carrier arrives prevents wasted trips and additional storage charges. The more complete your information, the faster we can dispatch a carrier and get your vehicle moving.</p>
-
-<h2>Exporters and International Buyers</h2>
-<p>Many auction buyers are exporters who need vehicles delivered to a port or forwarding facility. We can transport your auction purchase to the location you specify so it's ready for the next leg of its journey. Just provide the destination and any handling instructions when you book, and we'll coordinate dependable domestic transport from the auction yard to your delivery point.</p>
-
-<h2>Ship Your Auction Win with Ship Guy</h2>
-<p>Ship Guy is a licensed, bonded, FMCSA-registered auto transport broker that delivers auction purchases across all 50 states. With a vetted carrier network, transparent all-in pricing, no upfront deposit, real-time tracking, and 24/7 U.S.-based support — plus experience handling non-running and salvage vehicles — we make auction transport simple from gate to driveway.</p>
-<p>Just won a vehicle? <a href="index.html#top">Get your free quote</a> in about 60 seconds, or call <a href="tel:+18662803481">(866) 280-3481</a> to arrange pickup. You can also learn about <a href="dealer-auto-transport.html">dealer auto transport</a> or read <a href="how-it-works.html">how the process works</a>.</p>
-
+  <p style="margin-top:26px">Ship Guy arranges car shipping to and from Miami and the surrounding Florida metro area. We match your vehicle with a vetted, insured carrier running your route, coordinate a pickup window that works for your schedule, and stay with the shipment through final delivery.</p>
+  <p>Because South Florida is a seasonal market, timing affects both price and availability. Rates and carrier supply shift with snowbird demand, so the earlier you book around those peak windows, the more flexibility you generally have.</p>
 </div></section>
 
-<section class="related-section"><div class="container">
-      <h2>Explore Other Services</h2>
+<section class="city-section alt">
+  <div class="container">
+    <div class="city-head">
+      <h2>Popular Miami Car Shipping Routes</h2>
+      <p>Common lanes to and from Miami. Distances and transit times are estimates &mdash; your quote confirms the details for your route and dates.</p>
+    </div>
+    <div class="route-table has-price">
+      <div class="route-row route-head"><span>Route</span><span>Approx. distance</span><span>Est. transit</span><span>Est. open rate*</span><span></span></div>
+        <div class="route-row"><span class="route-name">Miami, FL &rarr; New York, NY</span><span class="route-val">~1,280 mi</span><span class="route-val">3&ndash;5 days</span><span class="route-val" style="font-weight:600;color:#101a3d">$700&ndash;$1,050</span><a class="route-cta" href="#quoteForm">Get price <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+        <div class="route-row"><span class="route-name">Miami, FL &rarr; Chicago, IL</span><span class="route-val">~1,380 mi</span><span class="route-val">4&ndash;6 days</span><span class="route-val" style="font-weight:600;color:#101a3d">$750&ndash;$1,100</span><a class="route-cta" href="#quoteForm">Get price <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+        <div class="route-row"><span class="route-name">Miami, FL &rarr; Los Angeles, CA</span><span class="route-val">~2,730 mi</span><span class="route-val">7&ndash;9 days</span><span class="route-val" style="font-weight:600;color:#101a3d">$1,100&ndash;$1,600</span><a class="route-cta" href="#quoteForm">Get price <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+        <div class="route-row"><span class="route-name">Miami, FL &rarr; Dallas, TX</span><span class="route-val">~1,310 mi</span><span class="route-val">4&ndash;6 days</span><span class="route-val" style="font-weight:600;color:#101a3d">$800&ndash;$1,150</span><a class="route-cta" href="#quoteForm">Get price <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+        <div class="route-row"><span class="route-name">Miami, FL &rarr; Atlanta, GA</span><span class="route-val">~660 mi</span><span class="route-val">2&ndash;3 days</span><span class="route-val" style="font-weight:600;color:#101a3d">$450&ndash;$700</span><a class="route-cta" href="#quoteForm">Get price <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+        <div class="route-row"><span class="route-name">Miami, FL &rarr; Boston, MA</span><span class="route-val">~1,500 mi</span><span class="route-val">4&ndash;6 days</span><span class="route-val" style="font-weight:600;color:#101a3d">$800&ndash;$1,200</span><a class="route-cta" href="#quoteForm">Get price <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+        <div class="route-row"><span class="route-name">Miami, FL &rarr; Detroit, MI</span><span class="route-val">~1,400 mi</span><span class="route-val">4&ndash;6 days</span><span class="route-val" style="font-weight:600;color:#101a3d">$800&ndash;$1,150</span><a class="route-cta" href="#quoteForm">Get price <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+        <div class="route-row"><span class="route-name">Miami, FL &rarr; Seattle, WA</span><span class="route-val">~3,300 mi</span><span class="route-val">8&ndash;10 days</span><span class="route-val" style="font-weight:600;color:#101a3d">$1,250&ndash;$1,750</span><a class="route-cta" href="#quoteForm">Get price <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+    </div>
+    <p class="route-note">*Estimated ranges for a standard sedan in running condition, updated July 2026. SUVs and trucks typically add 10&ndash;25%; inoperable vehicles add $100&ndash;$200 for winch loading. Your quote confirms the exact price for your vehicle and dates.</p>
+  </div>
+</section>
+
+<section class="city-section">
+  <div class="container">
+    <div class="city-head">
+      <h2>What Shapes Your Miami Auto Transport Price</h2>
+      <p>Five factors set most of your quote: distance and route popularity, vehicle size and weight, open vs. enclosed transport, season, and date flexibility. The I-95 corridor is Florida's cheapest lane per mile because carriers run it constantly &mdash; and if your pickup window can flex by two or three days, we can usually place your vehicle at a lower rate than a guaranteed-date booking.</p>
+    </div>
+    <div class="season-grid">
+      <article class="season-card south">
+        <span class="season-dir"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M6 13l6 6 6-6"/></svg>Southbound peak &bull; Oct&ndash;Dec</span>
+        <p>Seasonal residents ship cars <em>into</em> South Florida ahead of winter. Southbound rates rise 20&ndash;40%, while northbound trucks leave half-empty at a discount.</p>
+      </article>
+      <article class="season-card north">
+        <span class="season-dir"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M6 11l6-6 6 6"/></svg>Northbound peak &bull; Apr&ndash;May</span>
+        <p>The migration reverses in spring. Northbound prices spike as vehicles head home, and southbound becomes the bargain direction.</p>
+      </article>
+    </div>
+    <p class="season-tip"><strong>What it means for you:</strong> shipping <em>against</em> the seasonal flow often costs well under the averages above. Shipping <em>with</em> it? Book 2&ndash;3 weeks ahead &mdash; waiting until the week you fly out is the most expensive mistake snowbirds make. <a href="snowbird-car-shipping.html" style="color:var(--brand);font-weight:700">See our snowbird shipping guide &rarr;</a></p>
+  </div>
+</section>
+
+
+<section class="city-section alt">
+  <div class="container">
+    <div class="city-head">
+      <h2>Open vs. Enclosed Auto Transport: Which Is Right for Your Miami Shipment?</h2>
+      <p>It's the first real decision you'll make, and in Miami the answer isn't always obvious &mdash; this market ships more high-value vehicles than almost any other city in the country.</p>
+    </div>
+    <div class="cmp-grid">
+      <article class="cmp-card">
+        <span class="cmp-tag">Most popular &bull; ~90% of shipments</span>
+        <h3>Open Transport</h3>
+        <p>The two-level carriers you see delivering to dealerships. Your vehicle rides exposed to weather and road dust but fully secured &mdash; the same method manufacturers use to move brand-new cars from the factory. A brief South Florida rain shower in transit is a car wash issue, not a damage issue.</p>
+        <ul>
+          <li>Best for daily drivers, SUVs, trucks, and most family vehicles</li>
+          <li>Lowest price on every lane, and fastest pickup &mdash; far more open trucks run I-95 than enclosed</li>
+          <li>Typical carrier cargo insurance: $100K&ndash;$250K per load</li>
+        </ul>
+      </article>
+      <article class="cmp-card">
+        <span class="cmp-tag">Premium protection</span>
+        <h3>Enclosed Transport</h3>
+        <p>A fully covered trailer, usually with a hydraulic liftgate for low-clearance vehicles. Enclosed demand in Miami is unusually high &mdash; between the exotics in Brickell, the collector garages in Coral Gables, and auction buys headed to restoration shops, we place enclosed loads on South Florida lanes every week.</p>
+        <ul>
+          <li>Best for exotics, classics, restored vehicles, and anything low to the ground</li>
+          <li>Runs roughly 40&ndash;60% above open rates</li>
+          <li>Higher cargo insurance limits, typically $250K&ndash;$1M</li>
+        </ul>
+      </article>
+    </div>
+    <p class="cmp-verdict"><strong>Our honest rule of thumb:</strong> if you'd drive it in a rainstorm without thinking twice, ship it open and keep the difference. If the vehicle is worth well into six figures, sits low enough to scrape a driveway apron, or just left a restoration shop, the enclosed premium is cheap insurance. Compare details on our <a href="open-car-transport.html">open transport</a> and <a href="enclosed-auto-transport.html">enclosed transport</a> pages, or ask us &mdash; we'll tell you straight if enclosed is overkill for your vehicle.</p>
+  </div>
+</section>
+
+<section class="city-section">
+  <div class="container">
+    <div class="city-head">
+      <h2>Car Shipping Services in Miami</h2>
+      <p>Every Ship Guy service is available for pickup and delivery across the Miami area.</p>
+    </div>
+    <div class="svc-grid">
+        <article class="svc-card"><span class="svc-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 8h11v8H2z"/><path d="M13 11h4l3 3v2h-7z"/><circle cx="6.5" cy="17.5" r="1.6"/><circle cx="17" cy="17.5" r="1.6"/></svg></span><h2><a href="open-car-transport.html" style="color:inherit;text-decoration:none">Open Car Transport</a></h2><p>The most affordable and widely used way to ship a vehicle to or from Miami.</p><a class="svc-more" href="open-car-transport.html">Learn more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></article>
+        <article class="svc-card"><span class="svc-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"/><path d="m3.3 7 8.7 5 8.7-5"/><path d="M12 22V12"/></svg></span><h2><a href="enclosed-auto-transport.html" style="color:inherit;text-decoration:none">Enclosed Auto Transport</a></h2><p>Fully covered protection for classic, luxury, exotic, and high-value vehicles.</p><a class="svc-more" href="enclosed-auto-transport.html">Learn more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></article>
+        <article class="svc-card"><span class="svc-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="3" width="12" height="18" rx="1.5"/><circle cx="12.5" cy="12" r="1" fill="currentColor" stroke="none"/><path d="M16 21h4"/></svg></span><h2><a href="door-to-door-car-shipping.html" style="color:inherit;text-decoration:none">Door-to-Door Shipping</a></h2><p>Pickup and delivery at your Miami address wherever the truck can safely access.</p><a class="svc-more" href="door-to-door-car-shipping.html">Learn more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></article>
+        <article class="svc-card"><span class="svc-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 4 14h6l-1 8 9-12h-6l1-8Z"/></svg></span><h2><a href="expedited-car-shipping.html" style="color:inherit;text-decoration:none">Expedited Shipping</a></h2><p>Priority scheduling when you need your vehicle picked up on a tighter timeline.</p><a class="svc-more" href="expedited-car-shipping.html">Learn more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></article>
+        <article class="svc-card"><span class="svc-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg></span><h2><a href="snowbird-car-shipping.html" style="color:inherit;text-decoration:none">Snowbird Car Shipping</a></h2><p>Seasonal transport for snowbirds heading to and from South Florida.</p><a class="svc-more" href="snowbird-car-shipping.html">Learn more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></article>
+        <article class="svc-card"><span class="svc-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-.6 0-1.1.4-1.4.9l-1.4 2.9A3.7 3.7 0 0 0 2 12v4c0 .6.4 1 1 1h2"/><circle cx="7" cy="17" r="2"/><circle cx="17" cy="17" r="2"/></svg></span><h2><a href="dealer-auto-transport.html" style="color:inherit;text-decoration:none">Dealer &amp; Auction Transport</a></h2><p>Vehicle moves for Miami dealerships, auctions, and wholesale buyers.</p><a class="svc-more" href="dealer-auto-transport.html">Learn more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></article>
+    </div>
+  </div>
+</section>
+
+<section class="city-section alt">
+  <div class="container">
+    <div class="city-head">
+      <h2>How Miami Car Shipping Works</h2>
+      <p>Three simple steps from quote to delivery.</p>
+    </div>
+    <div class="steps-row">
+      <article class="step-card">
+        <div class="step-illus"><img src="assets/step-01.jpg" alt="Step 1: start a shipping quote on the Ship Guy website" loading="lazy"></div>
+        <h3>Get Your Quote</h3>
+        <p>Tell us your pickup and delivery locations and what you're shipping for an upfront price.</p>
+      </article>
+      <div class="step-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
+      <article class="step-card">
+        <div class="step-illus"><img src="assets/step-02.jpg" alt="Step 2: a vetted carrier loads a vehicle for scheduled pickup" loading="lazy"></div>
+        <h3>Schedule Pickup</h3>
+        <p>We match your vehicle with a vetted, insured carrier and confirm your Miami pickup window.</p>
+      </article>
+      <div class="step-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
+      <article class="step-card">
+        <div class="step-illus"><img src="assets/step-03.jpg" alt="Step 3: track your vehicle through final delivery" loading="lazy"></div>
+        <h3>Track Delivery</h3>
+        <p>Follow your vehicle in transit with support all the way through final delivery.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="city-section">
+  <div class="container">
+    <div class="city-head">
+      <h2>What Actually Happens at Pickup and Delivery</h2>
+      <p>The three steps above are the short version. Here's the part most companies don't explain until the truck is outside.</p>
+    </div>
+    <div class="txt-block">
+      <h3>The day before pickup</h3>
+      <p>Your assigned driver calls to confirm a window &mdash; usually two to four hours, not a precise minute, because they're working a multi-stop route through South Florida traffic. If your street can't fit a 75-foot rig, this is when you'll agree on a nearby meeting spot: a shopping plaza on US-1, a wide side street, wherever is safe and legal to load.</p>
+      <h3>At pickup: the Bill of Lading</h3>
+      <p>Before your car goes on the truck, the driver walks around it and records its condition &mdash; every existing scratch, ding, and scuff &mdash; with photos, on a document called the Bill of Lading. Walk the car with them. This document is your protection: it's the before picture that any damage claim gets measured against. Take your own photos too, in good light, all four corners plus the roof. Then hand over one key (keep your spare), and the driver loads and secures the vehicle.</p>
+      <h3>During transit</h3>
+      <p>You'll have the driver's direct cell number. Long-haul drivers legally drive up to 11 hours a day, so a Miami-to-New-York run genuinely takes about three days &mdash; radio silence for a few hours usually means they're driving, not that something's wrong. Ship Guy stays reachable the whole way if you'd rather check in with us.</p>
+      <h3>At delivery: inspect before you sign</h3>
+      <p>Walk the car again against the pickup Bill of Lading, in daylight if at all possible. If everything matches &mdash; and the overwhelming majority of the time it does &mdash; you sign, settle any balance due with the driver by the method confirmed at booking, and you're done. If something doesn't match, note it on the Bill of Lading <em>before signing</em> and photograph it. That notation is what activates the carrier's cargo insurance; signing clean first and calling about damage later makes a claim far harder to win.</p>
+    </div>
+  </div>
+</section>
+
+<section class="city-section alt">
+  <div class="container">
+    <div class="city-head">
+      <h2>Preparing Your Car for Transport: The Miami Checklist</h2>
+      <p>Ten minutes of prep prevents ninety percent of shipping headaches. A few of these are Florida-specific.</p>
+    </div>
+    <div class="txt-block">
+      <ul>
+        <li><strong>Pull your SunPass or toll transponder.</strong> The single most common Florida shipping mistake. If it stays on the windshield, it can get read at every toll gantry the carrier passes on the Turnpike and beyond &mdash; and those charges land on <em>your</em> account. Take it out, or at minimum seal it in the foil bag it came with.</li>
+        <li><strong>Wash the car before pickup.</strong> Not for vanity &mdash; a clean car makes the Bill of Lading inspection accurate. Existing scratches get documented properly, and new damage (rare) can't hide under a layer of dirt.</li>
+        <li><strong>Leave about a quarter tank of gas.</strong> Enough to load, unload, and drive off at delivery. A full tank adds weight the carrier doesn't want and you don't need to pay to move.</li>
+        <li><strong>Remove or secure everything loose.</strong> Garage remotes, parking placards, dash cams, and anything in door pockets. Fold in your mirrors if they don't do it automatically, and retract the antenna if yours is the old-school kind.</li>
+        <li><strong>Disable the alarm, or show the driver how to kill it.</strong> An alarm that triggers on trailer vibration somewhere in Georgia is nobody's favorite phone call.</li>
+        <li><strong>Flag any quirks in writing.</strong> Weak battery, tricky ignition, leak, aftermarket kill switch, air suspension that needs to be in transport mode &mdash; tell us at booking and remind the driver at pickup so they can load it safely.</li>
+        <li><strong>Photograph everything, including the odometer.</strong> Your photos plus the driver's Bill of Lading photos means there's never an argument about condition or mileage.</li>
+      </ul>
+      <p>Shipping something unusual, inoperable, or heavily modified? See our full <a href="car-shipping-preparation.html">vehicle preparation guide</a> or call us and we'll walk you through it.</p>
+    </div>
+  </div>
+</section>
+
+
+
+<section class="city-section">
+  <div class="container">
+    <div class="city-head">
+      <h2>Miami Areas We Cover</h2>
+      <p>We arrange pickup and delivery throughout Miami-Dade and the surrounding communities.</p>
+    </div>
+    <div class="chips">
+        <span class="chip">Miami Beach</span>
+        <span class="chip">Downtown Miami</span>
+        <span class="chip">Brickell</span>
+        <span class="chip">Coral Gables</span>
+        <span class="chip">Coconut Grove</span>
+        <span class="chip">Wynwood</span>
+        <span class="chip">Little Havana</span>
+        <span class="chip">Doral</span>
+        <span class="chip">Hialeah</span>
+        <span class="chip">Kendall</span>
+        <span class="chip">Aventura</span>
+        <span class="chip">North Miami</span>
+        <span class="chip">Key Biscayne</span>
+        <span class="chip">Pinecrest</span>
+        <span class="chip">Miami Lakes</span>
+        <span class="chip">Homestead</span>
+        <span class="chip">Cutler Bay</span>
+        <span class="chip">Sunny Isles Beach</span>
+    </div>
+    <div class="city-callout">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+      <div>
+        <h3>Shipping for snowbird season?</h3>
+        <p>South Florida demand climbs as seasonal residents head south in the fall and back north in the spring. Booking ahead of those peaks usually means better rates and more pickup flexibility. <a href="snowbird-car-shipping.html">See snowbird car shipping &rarr;</a></p>
+      </div>
+    </div>
+    <div class="city-callout">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z"/><path d="M2 22h20"/><path d="M9 6h1M14 6h1M9 10h1M14 10h1M9 14h1M14 14h1"/></svg>
+      <div>
+        <h3>Condo or high-rise delivery?</h3>
+        <p>Many Miami buildings prohibit commercial trucks in garages and porte-coch&egrave;res, and a 75-foot carrier can't fit down every street in Brickell or Miami Beach. Drivers simply arrange a nearby wide street or large lot &mdash; it takes minutes to set up. Not in town yet? Any adult you authorize (a building manager, family member, or friend) can release or accept the vehicle for you.</p>
+      </div>
+    </div>
+    <div class="city-callout">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a10 10 0 0 1 10 10c0 3-2 5-5 5s-5-2-5-5 2-5 5-5"/><path d="M12 22a10 10 0 0 1-10-10c0-3 2-5 5-5s5 2 5 5-2 5-5 5"/></svg>
+      <div>
+        <h3>Hurricane season (June&ndash;November)</h3>
+        <p>Atlantic storms occasionally delay pickups a day or two as carriers reroute, and we never dispatch into an evacuation zone. When a named storm approaches South Florida we communicate proactively about timing &mdash; and if you're shipping a vehicle <em>out</em> ahead of a storm, book immediately, because outbound capacity disappears fast. Shipping overseas via PortMiami or Port Everglades? Tell us up front and we'll deliver directly to your freight forwarder or port warehouse.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="city-section alt">
+  <div class="container">
+    <div class="city-head">
+      <h2>Shipping Through PortMiami and Port Everglades</h2>
+    </div>
+    <div class="txt-block">
+      <p>Miami isn't just a domestic shipping hub &mdash; it's the departure point for a huge share of vehicles headed to the Caribbean, Central and South America, and Europe. If your car's final destination is overseas, the domestic leg still has to happen first: the vehicle needs to reach your freight forwarder's warehouse or the port terminal, on time, with the right paperwork ready.</p>
+      <p>Ship Guy handles that domestic leg. We arrange pickup anywhere in the U.S. and deliver directly to your forwarder at PortMiami or Port Everglades &mdash; just tell us at booking that the vehicle is exporting, because port and warehouse deliveries have receiving hours and check-in procedures a residential delivery doesn't. Your freight forwarder handles the ocean booking, the title and customs documentation, and the overseas leg; we make sure the car is standing at their dock when they need it. Buying at a Florida auction from abroad? The same flow works in reverse order &mdash; we collect from the auction lot and deliver to your exporter, often within a couple of days.</p>
+    </div>
+  </div>
+</section>
+
+
+<section class="city-section">
+  <div class="container">
+    <div class="city-head">
+      <h2>Why Ship with Ship Guy in Miami</h2>
+    </div>
+    <div class="why-grid">
+        <article class="why-card"><span class="why-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v5c0 5-3.5 8.5-7 10-3.5-1.5-7-5-7-10V6l7-3Z"/><path d="m9 12 2 2 4-4"/></svg></span><h3>Licensed &amp; insured</h3><p>Ship Guy is an FMCSA-registered, bonded auto transport broker, and every carrier we assign is verified and insured.</p></article>
+        <article class="why-card"><span class="why-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20.6 13.4 12 22l-9-9V3h10l7.6 7.6a2 2 0 0 1 0 2.8Z"/><circle cx="7.5" cy="7.5" r="1.2" fill="currentColor" stroke="none"/></svg></span><h3>Upfront pricing</h3><p>Your quote is all-in, with no hidden fees added later and no deposit required to book.</p></article>
+        <article class="why-card"><span class="why-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="6" r="3"/><circle cx="18" cy="18" r="3"/><path d="M9 6h6a3 3 0 0 1 3 3v6"/></svg></span><h3>Vetted Miami carriers</h3><p>We check operating authority, insurance, and safety history before a carrier is assigned to your vehicle.</p></article>
+        <article class="why-card"><span class="why-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 14v-2a8 8 0 0 1 16 0v2"/><path d="M18 14h1a2 2 0 0 1 2 2v1a2 2 0 0 1-2 2h-1a1 1 0 0 1-1-1v-3a1 1 0 0 1 1-1Z"/><path d="M6 14H5a2 2 0 0 0-2 2v1a2 2 0 0 0 2 2h1a1 1 0 0 0 1-1v-3a1 1 0 0 0-1-1Z"/></svg></span><h3>24/7 U.S. support</h3><p>Real people you can reach from first quote through final delivery.</p></article>
+    </div>
+    <div class="nearby-wrap">
+      <p class="nearby-label">We also serve nearby South Florida areas</p>
+      <div class="chips">
+        <span class="chip chip-soft">Fort Lauderdale</span>
+        <span class="chip chip-soft">Hollywood</span>
+        <span class="chip chip-soft">Pembroke Pines</span>
+        <span class="chip chip-soft">Boca Raton</span>
+        <span class="chip chip-soft">West Palm Beach</span>
+        <span class="chip chip-soft">Naples</span>
+        <span class="chip chip-soft">Fort Myers</span>
+        <span class="chip chip-soft">Port St. Lucie</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="city-section alt">
+  <div class="container">
+    <div class="city-head">
+      <h2>How to Vet Any Auto Transport Company (Including Us)</h2>
+      <p>Miami's shipping volume attracts good operators and bad ones. Whether you book with Ship Guy or anyone else, run these checks &mdash; they take five minutes and they're free.</p>
+    </div>
+    <div class="txt-block">
+      <h3>Verify the license, don't take the website's word for it</h3>
+      <p>Every legitimate broker and carrier has an MC number registered with the Federal Motor Carrier Safety Administration. Look it up yourself in the <a href="https://safer.fmcsa.dot.gov/" rel="noopener" target="_blank">FMCSA SAFER database</a>: confirm the authority is <em>active</em>, the company name matches who you're actually talking to, and &mdash; for brokers &mdash; the required $75,000 surety bond is on file. That bond exists specifically to protect you if a broker takes your money and fails to perform. A company that gets cagey when you ask for its MC number has answered your question.</p>
+      <h3>Be suspicious of the lowest quote, not the highest</h3>
+      <p>The classic bait works like this: quote $300 under everyone else, collect the booking, then let the order sit because no real carrier will run the lane at that price. A week later comes the call &mdash; "we found a truck, but it's going to be a bit more." You've lost your pickup window and your leverage. If one quote is dramatically below the pack, it isn't a deal; it's a number designed to win your booking, not to ship your car. Real Miami lane rates cluster in a fairly tight band at any given moment, which is exactly why we publish estimated ranges on this page.</p>
+      <h3>Three more red flags worth walking away from</h3>
+      <ul>
+        <li><strong>A large deposit demanded before a carrier is assigned.</strong> The industry-standard structure charges you nothing, or next to nothing, until there's an actual truck with your vehicle's name on it.</li>
+        <li><strong>No written insurance certificate on request.</strong> You're entitled to see the assigned carrier's cargo insurance certificate before pickup. "Don't worry, everything's covered" is not a certificate.</li>
+        <li><strong>Reviews that only exist on the company's own website.</strong> Check Google, BBB, and Transport Reviews, and read the one-star reviews specifically &mdash; how a company behaves when something goes wrong tells you more than a hundred five-star summaries.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="city-section">
+  <div class="container">
+    <div class="city-head">
+      <h2>Six Ways to Pay Less for Auto Transport in Miami</h2>
+    </div>
+    <div class="txt-block">
+      <ul>
+        <li><strong>Flex your dates by two or three days.</strong> The single biggest lever you control. A flexible pickup window lets us place your car on a truck that's already running your lane instead of paying a premium to pull one in.</li>
+        <li><strong>Ship against the snowbird current.</strong> Northbound out of Miami is discounted October through December; southbound is the bargain in April and May. If your move can happen off-cycle, the calendar does the negotiating for you.</li>
+        <li><strong>Book 2&ndash;3 weeks ahead of peak windows &mdash; but not months ahead.</strong> Carriers price loads close to the run date, so booking half a year early doesn't lock in a better rate. Two to three weeks out hits the sweet spot of choice and price during busy season.</li>
+        <li><strong>Meet the truck somewhere easy.</strong> If you're in a high-rise or on a tight street, offering to meet at a big lot near a highway exit makes your load more attractive to carriers &mdash; and cheaper to serve.</li>
+        <li><strong>Skip guaranteed-date pricing unless you truly need it.</strong> A guaranteed pickup date is a real product with a real premium. If "sometime Tuesday to Thursday" works for your life, don't pay for "Tuesday at 10 a.m."</li>
+        <li><strong>Compare all-in numbers, not teaser numbers.</strong> When you shop quotes, ask each company one question: "Is this the total I'll pay, including the driver's portion at delivery?" It's remarkable how many low quotes grow when that question gets asked.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+
+
+
+<section class="city-section alt" id="location">
+  <div class="container">
+    <div class="city-head">
+      <h2>Visit Ship Guy in Coconut Grove</h2>
+      <p>We're a real Miami company with a real Miami address &mdash; on Commodore Plaza in the heart of the Grove. Prefer to talk through a shipment in person or on a local line? We're here seven days a week.</p>
+    </div>
+    <div class="loc-grid">
+      <div class="loc-info">
+        <h3>Ship Guy Auto Transport</h3>
+        <div class="loc-row">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+          <div><strong>Address</strong>3162 Commodore Plaza #407<br>Miami, FL 33133</div>
+        </div>
+        <div class="loc-row">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/></svg>
+          <div><strong>Local phone</strong><a href="tel:+17862846972">(786) 284-6972</a></div>
+        </div>
+        <div class="loc-row">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+          <div><strong>Hours</strong>Open 7 days a week<br>6:00 AM &ndash; 11:00 PM ET</div>
+        </div>
+        <div class="loc-row">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16v16H4z"/><path d="m4 9 8 5 8-5"/></svg>
+          <div><strong>Email</strong><a href="mailto:quotes@shipguy.com">quotes@shipguy.com</a></div>
+        </div>
+      </div>
+      <div class="loc-map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6084.1210051424!2d-80.24483649999999!3d25.7272109!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88d9b72ebd8be1d3%3A0xed89bd6cd7990bf7!2sShip%20Guy%20Auto%20Transport!5e1!3m2!1sen!2sus!4v1784851951527!5m2!1sen!2sus" title="Map to Ship Guy Auto Transport, 3162 Commodore Plaza #407, Miami, FL 33133" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="faq-section">
+  <div class="container">
+    <div class="faq-head">
+      <span class="faq-eyebrow">Miami Car Shipping FAQ</span>
+      <h2>Common Questions</h2>
+      <span class="faq-accent"></span>
+    </div>
+    <div class="faq-list">
+        <details class="faq-item"><summary class="faq-q">How much does it cost to ship a car to or from Miami?<span class="faq-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></span></summary><div class="faq-a">For a standard sedan on open transport, typical ranges are $450&ndash;$700 to the Southeast, $700&ndash;$1,100 to the Northeast or Midwest, and $1,100&ndash;$1,600 cross-country. Enclosed transport runs roughly 40&ndash;60% more. Your exact price depends on vehicle size, address accessibility, and season &mdash; South Florida rates move with snowbird demand. The fastest way to get an accurate number is to <a href="#quoteForm">request a free quote</a>.</div></details>
+        <details class="faq-item"><summary class="faq-q">How long does it take to ship a car to Miami?<span class="faq-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></span></summary><div class="faq-a">Transit time depends mainly on distance. A move from Atlanta typically runs a couple of days, the Northeast is usually in the three-to-six day range, and a cross-country trip from the West Coast generally takes about a week or more. Weather, traffic, and route availability can shift these estimates.</div></details>
+        <details class="faq-item"><summary class="faq-q">Do you offer door-to-door pickup in Miami?<span class="faq-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></span></summary><div class="faq-a">Yes. Whenever possible we arrange door-to-door pickup and delivery at your Miami address. Some areas &mdash; narrow streets in Coconut Grove or Little Havana, gated communities, and low-clearance parking garages downtown or in Brickell &mdash; can't safely fit a full-size carrier, so the driver will arrange a nearby meeting point such as a large lot.</div></details>
+        <details class="faq-item"><summary class="faq-q">When is the busiest season for car shipping in South Florida?<span class="faq-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></span></summary><div class="faq-a">Demand peaks around the snowbird season. Vehicles move south into Florida heading into the fall and winter, and back north in the spring. Booking earlier during those windows generally means better pricing and more scheduling flexibility. See our <a href="snowbird-car-shipping.html">snowbird car shipping</a> page for details.</div></details>
+        <details class="faq-item"><summary class="faq-q">Can you ship a car that doesn't run?<span class="faq-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></span></summary><div class="faq-a">Yes, but the carrier needs to know in advance. A non-running vehicle requires equipment such as a winch and a driver prepared to load it, so mention it when you request your quote and we'll match you with a carrier set up for inoperable vehicles.</div></details>
+        <details class="faq-item"><summary class="faq-q">Do you ship anything besides cars in Miami?<span class="faq-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></span></summary><div class="faq-a">Yes. Along with vehicles, Ship Guy arranges transport for motorcycles, boats, freight and pallets, furniture, household goods, heavy equipment, and oversized items to and from the Miami area.</div></details>
+        <details class="faq-item"><summary class="faq-q">Can I put personal items in the car?<span class="faq-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></span></summary><div class="faq-a">Most carriers allow up to about 100 lbs of items packed in the trunk or below window level. Personal items aren't covered by the carrier's cargo insurance, so never ship valuables, documents, or anything irreplaceable inside the vehicle.</div></details>
+        <details class="faq-item"><summary class="faq-q">Do I need to be present for pickup or delivery?<span class="faq-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></span></summary><div class="faq-a">No. Any adult you authorize &mdash; a family member, friend, or building manager &mdash; can release or accept the vehicle and sign the inspection paperwork, which is why many snowbird customers ship their car a week before or after they fly.</div></details>
+        <details class="faq-item"><summary class="faq-q">Is my vehicle insured during transport?<span class="faq-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></span></summary><div class="faq-a">Yes. The assigned carrier's cargo insurance covers your vehicle in transit, and the driver documents its condition with photos on the Bill of Lading at pickup and delivery. You can request the carrier's insurance certificate before pickup, and your own auto policy typically remains secondary coverage.</div></details>
+        <details class="faq-item"><summary class="faq-q">Where is Ship Guy located in Miami?<span class="faq-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></span></summary><div class="faq-a">Our office is at 3162 Commodore Plaza #407 in Coconut Grove, Miami, FL 33133. We're open seven days a week from 6:00 AM to 11:00 PM ET &mdash; reach us locally at <a href="tel:+17862846972">(786) 284-6972</a> or toll-free at (866) 280-3481.</div></details>
+    </div>
+  </div>
+</section>
+
+<!-- related --><section class="related-section"><div class="container">
+      <h2>Related Guides</h2>
       <div class="related-grid">
+        <a class="related-card" href="car-shipping-cost.html">Car Shipping Cost <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <a class="related-card" href="snowbird-car-shipping.html">Snowbird Car Shipping <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
         <a class="related-card" href="open-car-transport.html">Open Car Transport <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-        <a class="related-card" href="enclosed-auto-transport.html">Enclosed Auto Transport <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-        <a class="related-card" href="door-to-door-car-shipping.html">Door-to-Door Shipping <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-        <a class="related-card" href="state-to-state-car-shipping.html">State-to-State Shipping <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <a class="related-card" href="how-it-works.html">How It Works <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
       </div>
 </div></section>
 
-<!-- ===================== FINAL CTA ===================== -->
 <section class="cta-band" id="get-started">
   <div class="container cta-inner">
     <p class="cta-eyebrow">Ready When You Are</p>
@@ -767,6 +1439,13 @@ body.ready .reveal{opacity:1;transform:none}
 </section>
 
 <!-- ===================== FOOTER ===================== -->
+<section class="eeat-byline">
+  <div class="eeat-inner">
+    <p>Ship Guy is a licensed, bonded auto transport broker (<strong>MC #[XXXXXX]</strong> &bull; <strong>USDOT #[XXXXXX]</strong>) located at 3162 Commodore Plaza #407, Coconut Grove, Miami, FL 33133 &bull; <a href="tel:+17862846972">(786) 284-6972</a> &bull; open 7 days, 6 AM&ndash;11 PM ET, serving Miami and all of South Florida. Verify our operating authority anytime in the <a href="https://safer.fmcsa.dot.gov/" rel="noopener" target="_blank">FMCSA SAFER database</a>. Rate estimates on this page reflect current Miami lane conditions and are refreshed quarterly.</p>
+    <p><strong>Written &amp; reviewed by [Full Name]</strong>, [Title], [X] years in vehicle logistics &bull; Last updated: <time datetime="2026-07">July 2026</time></p>
+  </div>
+</section>
+
 <footer class="site-footer" id="contact">
   <div class="container footer-top">
     <div class="f-brand">
@@ -939,6 +1618,21 @@ body.ready .reveal{opacity:1;transform:none}
     document.getElementById('steps').style.display = 'none';
     success.classList.add('show');
   });
+})();
+</script>
+<script>
+(function(){
+  window.addEventListener('message', function(e){
+    if(String(e.origin).indexOf('berocker') === -1) return;
+    var d = e.data, h = null;
+    if(typeof d === 'number') h = d;
+    else if(d && typeof d === 'object') h = d.height || d.frameHeight || d.iframeHeight || (d.data && d.data.height);
+    h = parseInt(h, 10);
+    if(h && h > 200 && h < 4000){
+      var f = document.querySelector('.quote-card.is-embed iframe');
+      if(f) f.style.height = h + 'px';
+    }
+  }, false);
 })();
 </script>
 </body>
