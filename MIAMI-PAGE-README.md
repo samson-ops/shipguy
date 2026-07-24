@@ -1,1004 +1,142 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
-  <meta http-equiv="Pragma" content="no-cache">
-  <meta http-equiv="Expires" content="0">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>How Shipping Works — 3 Simple Steps | Ship Guy Auto Transport</title>
-<meta name="description" content="Learn how shipping works with Ship Guy in 3 simple steps: get a free quote, schedule pickup with a vetted carrier, and track your shipment through delivery — for cars, freight, equipment, machinery, household goods, and more.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
-<style>
-/* =========================================================
-   Ship Guy — design tokens
-   Brand blue derived from the supplied logo (#0429A3).
-   ========================================================= */
-:root{
-  --brand:#0b34c0;        /* interactive royal blue: buttons, links, accents */
-  --brand-deep:#0429a3;   /* the logo blue */
-  --brand-press:#082a9c;  /* pressed / hover */
-  --brand-tint:#eef2fe;   /* light wash behind selected options */
-  --ink:#1d2350;          /* primary heading / nav text */
-  --ink-2:#414a6b;        /* secondary text */
-  --muted:#6b7488;        /* labels, meta */
-  --line:#e7eaf2;         /* hairlines */
-  --field:#d6dbe8;        /* input borders */
-  --field-soft:#f4f6fb;   /* input fill on idle (we keep white, use for hovers) */
-  --bg:#ffffff;
-  --bg-soft:#f6f8fc;      /* reviews band */
-  --star:#f5a623;         /* rating gold */
-  --ring:rgba(11,52,192,.26);
-  --ph:#9aa3b6;           /* placeholder + lead icons */
-  --shadow-card:0 30px 70px -28px rgba(13,26,80,.5), 0 8px 22px -16px rgba(13,26,80,.4);
-  --shadow-soft:0 1px 2px rgba(16,24,40,.06), 0 1px 1px rgba(16,24,40,.04);
-  --shadow-pop:0 16px 40px -12px rgba(13,26,80,.22);
-  --r-card:20px;
-  --r-field:11px;
-  --maxw:1200px;
-  --font-display:"Plus Jakarta Sans", system-ui, sans-serif;
-  --font-body:"Inter", system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
-}
+# Ship Guy — Miami Page Update v2 (July 2026)
 
-*,*::before,*::after{box-sizing:border-box}
-html{-webkit-text-size-adjust:100%}
-body{
-  margin:0;
-  font-family:var(--font-body);
-  color:var(--ink);
-  background:var(--bg);
-  line-height:1.5;
-  -webkit-font-smoothing:antialiased;
-  text-rendering:optimizeLegibility;
-}
-img{display:block;max-width:100%}
-a{color:inherit;text-decoration:none}
-button{font:inherit;cursor:pointer}
-h1,h2,h3{font-family:var(--font-display);margin:0;letter-spacing:-.01em}
-.container{max-width:var(--maxw);margin:0 auto;padding:0 24px;width:100%}
+## v2 additions
+- **Open vs. Enclosed comparison** — two decision cards + honest rule of thumb
+- **"What Actually Happens at Pickup and Delivery"** — Bill of Lading walkthrough
+- **Miami prep checklist** — incl. the SunPass/toll-transponder warning
+- **PortMiami & Port Everglades export section**
+- **"How to Vet Any Auto Transport Company"** — FMCSA SAFER check, bait-quote warning, red flags
+- **"Six Ways to Pay Less"** money-saving section
+- **Location section with live Google Map**, address (3162 Commodore Plaza #407, Miami, FL 33133), local phone (786) 284-6972, hours 6 AM–11 PM ET, 7 days
+- **LocalBusiness schema upgraded**: full NAP, geo coordinates, openingHoursSpecification
+- **New FAQ**: "Where is Ship Guy located in Miami?" (on-page + schema)
+- Main content now **~3,350 words** (was ~1,550)
 
-/* focus visibility — quality floor */
-a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,
-.opt:focus-within,[tabindex]:focus-visible{
-  outline:3px solid var(--ring);outline-offset:2px;border-radius:6px;
-}
-
-/* =========================================================
-   Header
-   ========================================================= */
-.site-header{
-  position:sticky;top:0;z-index:60;background:#fff;
-  border-bottom:1px solid transparent;
-  transition:box-shadow .25s ease, border-color .25s ease;
-}
-.site-header.is-scrolled{box-shadow:0 6px 24px -16px rgba(13,26,80,.5);border-bottom-color:var(--line)}
-.header-inner{display:flex;align-items:center;gap:24px;height:92px}
-.brand{display:inline-flex;align-items:center;color:var(--brand-deep);flex:0 0 auto}
-.sg-logo{height:62px;width:auto;display:block}
-.main-nav{display:flex;align-items:center;gap:6px;margin-left:8px;flex:1 1 auto}
-.main-nav > a,.nav-toggle-btn{
-  display:inline-flex;align-items:center;gap:6px;
-  padding:10px 13px;border-radius:9px;border:0;background:none;
-  color:var(--ink);font-weight:600;font-size:17px;line-height:1;white-space:nowrap;
-  transition:background .15s ease,color .15s ease;
-}
-.main-nav > a:hover,.nav-toggle-btn:hover{background:var(--brand-tint);color:var(--brand-deep)}
-.nav-toggle-btn .chev{transition:transform .2s ease}
-.has-menu{position:relative}
-.has-menu.open .nav-toggle-btn,.has-menu.open .nav-toggle-btn .chev{color:var(--brand-deep)}
-.has-menu.open .nav-toggle-btn .chev{transform:rotate(180deg)}
-.menu{
-  position:absolute;top:calc(100% + 8px);left:0;min-width:226px;
-  background:#fff;border:1px solid var(--line);border-radius:14px;
-  box-shadow:var(--shadow-pop);padding:8px;
-  opacity:0;visibility:hidden;transform:translateY(6px);
-  transition:opacity .16s ease,transform .16s ease,visibility .16s;
-}
-.has-menu:hover .menu,.has-menu:focus-within .menu,.has-menu.open .menu{
-  opacity:1;visibility:visible;transform:translateY(0);
-}
-.menu a{display:block;padding:9px 11px;border-radius:9px;font-size:14.5px;font-weight:500;color:var(--ink-2)}
-.menu a:hover{background:var(--brand-tint);color:var(--brand-deep)}
-.btn-call{
-  flex:0 0 auto;display:inline-flex;align-items:center;gap:9px;
-  background:var(--brand);color:#fff;font-weight:700;font-size:15px;
-  padding:12px 20px;border-radius:999px;
-  box-shadow:0 8px 20px -10px rgba(11,52,192,.8);
-  transition:transform .15s ease,background .15s ease,box-shadow .15s ease;
-}
-.btn-call:hover{background:var(--brand-press);transform:translateY(-1px)}
-.btn-call svg{width:18px;height:18px}
-.btn-call .num-short{display:none}
-.icon-burger{display:none;width:46px;height:46px;border:1px solid var(--line);border-radius:11px;background:#fff;color:var(--ink);align-items:center;justify-content:center}
-.icon-burger svg{width:22px;height:22px}
-
-/* mobile nav panel */
-.mobile-nav{display:none}
-
-/* =========================================================
-   Hero
-   ========================================================= */
-.hero{position:relative;isolation:isolate;overflow:hidden}
-.hero-media{position:absolute;inset:0;z-index:-2}
-.hero-img{width:100%;height:100%;object-fit:cover;object-position:52% 42%}
-.hero-overlay{
-  position:absolute;inset:0;z-index:1;
-  background:
-    linear-gradient(90deg,
-      rgba(4,9,22,.84) 0%,
-      rgba(4,9,22,.74) 28%,
-      rgba(4,9,22,.54) 48%,
-      rgba(4,9,22,.28) 66%,
-      rgba(4,9,22,.06) 86%,
-      rgba(4,9,22,0) 100%),
-    linear-gradient(180deg, rgba(4,9,22,.2) 0%, rgba(4,9,22,0) 24%, rgba(4,9,22,0) 64%, rgba(4,9,22,.3) 100%);
-}
-.hero-grid{
-  display:grid;grid-template-columns:minmax(0,1fr) 442px;gap:52px;
-  align-items:center;padding:64px 24px 74px;
-}
-.hero-copy{max-width:624px;color:#fff}
-.eyebrow{
-  font-family:var(--font-display);font-weight:700;font-size:13px;
-  letter-spacing:.16em;text-transform:uppercase;color:#9fc0f6;margin:0 0 18px;
-}
-.hero-copy h1{
-  font-weight:800;font-size:clamp(2.4rem,4vw,3.2rem);line-height:1.05;letter-spacing:-.018em;
-  color:#fff;margin:0 0 18px;text-shadow:0 2px 24px rgba(0,0,0,.32);
-}
-.lede{font-size:17px;line-height:1.6;color:rgba(245,248,253,.96);max-width:392px;margin:0 0 28px;text-shadow:0 1px 3px rgba(0,0,0,.6),0 2px 20px rgba(0,0,0,.55)}
-.trust-list{list-style:none;margin:0 0 26px;padding:0;display:grid;gap:13px}
-.trust-list li{display:flex;align-items:center;gap:13px;font-size:15.5px;font-weight:500;color:#f1f4fb;text-shadow:0 1px 8px rgba(0,0,0,.5)}
-.trust-ic{
-  flex:0 0 auto;width:34px;height:34px;border-radius:10px;
-  background:rgba(122,159,236,.18);border:1px solid rgba(159,192,246,.32);
-  display:grid;place-items:center;color:#bcd2f8;
-}
-.trust-ic svg{width:19px;height:19px}
-.hero-divider{height:1px;background:rgba(255,255,255,.2);margin:0 0 22px;max-width:520px}
-.stats{display:flex;gap:0}
-.stats .stat{padding-right:30px;margin-right:30px;border-right:1px solid rgba(255,255,255,.2)}
-.stats .stat:last-child{border-right:0;margin-right:0;padding-right:0}
-.stat .num{display:block;font-family:var(--font-display);font-weight:800;font-size:31px;color:#fff;line-height:1;text-shadow:0 1px 10px rgba(0,0,0,.5)}
-.stat .lbl{display:block;font-size:13px;color:rgba(226,232,245,.78);margin-top:7px}
-
-/* =========================================================
-   Quote card (multi-step form)
-   ========================================================= */
-.quote-card{
-  background:#fff;border-radius:var(--r-card);box-shadow:var(--shadow-card);
-  padding:30px 30px 28px;align-self:start;
-}
-.quote-card h2{font-size:25px;font-weight:800;color:var(--brand);margin:0 0 22px;text-align:center}
-
-/* stepper */
-.steps{display:flex;align-items:flex-start;margin:0 4px 22px}
-.step{display:flex;flex-direction:column;align-items:center;gap:8px;flex:0 0 auto;width:78px}
-.step .dot{
-  width:34px;height:34px;border-radius:50%;display:grid;place-items:center;
-  font-family:var(--font-display);font-weight:700;font-size:14px;
-  background:#fff;border:2px solid var(--field);color:var(--muted);
-  transition:background .2s ease,border-color .2s ease,color .2s ease;
-}
-.step .dot svg{width:17px;height:17px;display:none}
-.step .slabel{font-size:12.5px;font-weight:600;color:var(--muted);transition:color .2s ease}
-.step.is-active .dot{background:var(--brand);border-color:var(--brand);color:#fff}
-.step.is-active .slabel{color:var(--brand);font-weight:700}
-.step.is-done .dot{background:var(--brand);border-color:var(--brand);color:#fff}
-.step.is-done .dot .num{display:none}
-.step.is-done .dot svg{display:block}
-.step.is-clickable{cursor:pointer}
-.steps .track{flex:1 1 auto;height:2px;background:var(--field);margin-top:16px;border-radius:2px;transition:background .25s ease}
-.steps .track.is-filled{background:var(--brand)}
-
-/* fields */
-.qstep{display:none}
-.qstep.is-current{display:block;animation:fadeStep .28s ease both}
-@keyframes fadeStep{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
-.field{margin-bottom:15px}
-.row-2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-.flabel{display:block;font-size:13px;font-weight:600;color:var(--ink);margin-bottom:6px}
-.input-wrap{position:relative}
-.input-wrap .lead{position:absolute;left:12px;top:50%;transform:translateY(-50%);color:var(--ph);pointer-events:none}
-.input-wrap .lead svg{width:18px;height:18px;display:block}
-.input-wrap .chev-r{position:absolute;right:12px;top:50%;transform:translateY(-50%);color:var(--ph);pointer-events:none}
-.input-wrap .chev-r svg{width:18px;height:18px;display:block}
-.inp{
-  width:100%;height:46px;border:1px solid var(--field);border-radius:var(--r-field);
-  padding:0 14px 0 40px;font-family:var(--font-body);font-size:15px;color:var(--ink);
-  background:#fff;transition:border-color .15s ease,box-shadow .15s ease;
-}
-select.inp{appearance:none;-webkit-appearance:none;padding-right:38px;cursor:pointer}
-.inp::placeholder{color:var(--ph)}
-.inp:hover{border-color:#c2c9da}
-.inp:focus{outline:none;border-color:var(--brand);box-shadow:0 0 0 4px var(--ring)}
-.field.has-error .inp{border-color:#dc2b3d;box-shadow:0 0 0 4px rgba(220,43,61,.16)}
-.err-msg{display:none;color:#dc2b3d;font-size:12.5px;margin-top:6px;font-weight:500}
-.field.has-error .err-msg{display:block}
-
-/* option cards (trailer type / running) */
-.opt-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
-.opt{
-  position:relative;display:flex;align-items:center;gap:10px;
-  border:1.5px solid var(--field);border-radius:13px;padding:11px 12px;cursor:pointer;
-  transition:border-color .15s ease,background .15s ease,box-shadow .15s ease;
-}
-.opt:hover{border-color:#bcc4d8}
-.opt input{position:absolute;opacity:0;width:1px;height:1px}
-.opt .opt-ic{flex:0 0 auto;color:var(--ink-2)}
-.opt .opt-ic svg{width:22px;height:22px}
-.opt .opt-text{display:flex;flex-direction:column;line-height:1.2;min-width:0}
-.opt .opt-text strong{font-size:13px;font-weight:700;color:var(--ink);white-space:nowrap}
-.opt .opt-text small{font-size:11.5px;color:var(--muted);margin-top:2px;white-space:nowrap}
-.opt .radio{margin-left:auto;flex:0 0 auto;width:16px;height:16px;border-radius:50%;border:2px solid var(--field);transition:border-color .15s ease}
-.opt .radio::after{content:"";position:absolute}
-.opt.is-selected{border-color:var(--brand);background:var(--brand-tint);box-shadow:0 0 0 3px var(--ring)}
-.opt.is-selected .opt-ic{color:var(--brand)}
-.opt.is-selected .radio{border-color:var(--brand);background:radial-gradient(circle at center, var(--brand) 0 5px, transparent 6px)}
-
-/* buttons */
-.btn-primary{
-  width:100%;height:50px;border:0;border-radius:12px;background:var(--brand);color:#fff;
-  font-family:var(--font-display);font-weight:700;font-size:15.5px;
-  display:inline-flex;align-items:center;justify-content:center;gap:9px;
-  box-shadow:0 12px 26px -12px rgba(11,52,192,.85);
-  transition:background .15s ease,transform .12s ease,box-shadow .15s ease;
-}
-.btn-primary:hover{background:var(--brand-press);transform:translateY(-1px)}
-.btn-primary:active{transform:translateY(0)}
-.btn-primary svg{width:18px;height:18px}
-.btn-row{display:flex;gap:12px;align-items:center}
-.btn-row .btn-primary{flex:1 1 auto}
-.btn-ghost{
-  height:50px;padding:0 20px;border-radius:12px;background:#fff;border:1.5px solid var(--field);
-  color:var(--ink-2);font-family:var(--font-display);font-weight:700;font-size:15px;
-  display:inline-flex;align-items:center;gap:7px;transition:border-color .15s ease,color .15s ease}
-.btn-ghost:hover{border-color:#bcc4d8;color:var(--ink)}
-.btn-ghost svg{width:17px;height:17px}
-.assure{margin:14px 0 0;text-align:center;font-size:12.5px;color:var(--muted)}
-.assure svg{width:13px;height:13px;vertical-align:-2px;margin-right:3px;color:var(--ph)}
-
-/* success */
-.quote-success{display:none;text-align:center;padding:14px 4px 8px}
-.quote-success.show{display:block;animation:fadeStep .3s ease both}
-.success-check{width:64px;height:64px;border-radius:50%;background:var(--brand-tint);color:var(--brand);display:grid;place-items:center;margin:6px auto 16px}
-.success-check svg{width:32px;height:32px}
-.quote-success h3{font-family:var(--font-display);font-size:21px;font-weight:800;color:var(--ink);margin:0 0 8px}
-.quote-success p{font-size:14.5px;color:var(--ink-2);margin:0 auto 18px;max-width:300px}
-.quote-success .btn-call{width:100%;justify-content:center}
-
-/* =========================================================
-   Reviews
-   ========================================================= */
-.reviews{background:var(--bg-soft);border-top:1px solid var(--line);padding:64px 0 72px}
-.reviews-head{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;flex-wrap:wrap;margin-bottom:30px}
-.reviews-head h2{font-size:clamp(1.7rem,2.6vw,2.1rem);font-weight:800;color:var(--brand)}
-.reviews-head p{margin:8px 0 0;color:var(--muted);font-size:15.5px}
-.rating{display:flex;align-items:center;gap:12px}
-.rating .score{font-family:var(--font-display);font-weight:800;font-size:22px;color:var(--ink)}
-.stars{display:inline-flex;gap:2px;color:var(--star)}
-.stars svg{width:18px;height:18px}
-.rating .count{color:var(--ink-2);font-size:15px;font-weight:500}
-.rating .divider-v{width:1px;height:22px;background:var(--line)}
-.gword{font-family:var(--font-display);font-weight:700;font-size:18px;letter-spacing:-.02em}
-.gword .b{color:#4285F4}.gword .r{color:#EA4335}.gword .y{color:#FBBC05}.gword .g{color:#34A853}
-
-.review-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
-.review{
-  background:#fff;border:1px solid var(--line);border-radius:16px;padding:22px 20px;
-  box-shadow:var(--shadow-soft);transition:transform .18s ease,box-shadow .18s ease;
-}
-.review:hover{transform:translateY(-3px);box-shadow:var(--shadow-pop)}
-.review-top{display:flex;align-items:center;gap:12px;margin-bottom:13px}
-.avatar{
-  flex:0 0 auto;width:42px;height:42px;border-radius:50%;background:var(--brand-deep);
-  color:#fff;display:grid;place-items:center;font-family:var(--font-display);font-weight:700;font-size:14px;letter-spacing:.02em;
-}
-.review .name{display:block;font-weight:700;font-size:15px;color:var(--ink)}
-.review .date{display:block;font-size:13px;color:var(--muted);margin-top:1px}
-.review .stars{margin-bottom:11px}
-.review .stars svg{width:16px;height:16px}
-.review p{margin:0;font-size:14.5px;line-height:1.6;color:var(--ink-2)}
-
-/* =========================================================
-   Footer
-   ========================================================= */
-.site-footer{background:#0b1230;color:#c7cfe6}
-.footer-top{display:grid;grid-template-columns:1.4fr 1fr 1fr 1.1fr;gap:40px;padding:56px 0 44px}
-.f-brand .sg-logo{height:42px;color:#fff;margin-bottom:16px}
-.f-brand p{font-size:14.5px;line-height:1.6;color:#9aa6c6;max-width:300px;margin:0}
-.f-col h4{font-family:var(--font-display);font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:#fff;margin:0 0 16px;font-weight:700}
-.f-col ul{list-style:none;margin:0;padding:0;display:grid;gap:11px}
-.f-col a{font-size:14.5px;color:#9aa6c6;transition:color .15s ease}
-.f-col a:hover{color:#fff}
-.f-contact .line{display:flex;align-items:center;gap:10px;font-size:14.5px;color:#9aa6c6;margin-bottom:11px}
-.f-contact .line svg{width:17px;height:17px;color:#7e8cb5;flex:0 0 auto}
-.f-contact a:hover{color:#fff}
-.footer-bottom{border-top:1px solid rgba(255,255,255,.1);padding:20px 0 28px;display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
-.footer-bottom small{font-size:13px;color:#7e8cb5}
-.footer-bottom .legal{display:flex;gap:18px;flex-wrap:wrap}
-.footer-bottom .legal a{font-size:13px;color:#7e8cb5}
-.footer-bottom .legal a:hover{color:#fff}
-
-/* =========================================================
-   How It Works — Three Steps
-   ========================================================= */
-.steps-section{background:linear-gradient(180deg,#ffffff 0%, #f3f6fd 100%);padding:78px 0 86px;border-top:1px solid var(--line)}
-.steps-head{text-align:center;max-width:760px;margin:0 auto 46px}
-.steps-head h2{font-family:var(--font-display);font-weight:800;font-size:clamp(2rem,3.6vw,2.9rem);letter-spacing:-.01em;text-transform:uppercase;color:#101a3d;margin:0}
-.steps-accent{display:block;width:64px;height:5px;border-radius:3px;background:var(--brand);margin:16px auto 20px}
-.steps-head p{font-size:17px;line-height:1.6;color:#586079;margin:0}
-.steps-row{display:flex;align-items:center;justify-content:center;gap:8px}
-.step-card{
-  flex:1 1 0;min-width:0;background:#fff;border:1px solid var(--line);border-radius:18px;
-  padding:22px 22px 30px;box-shadow:0 18px 40px -28px rgba(13,26,80,.4),0 2px 6px -3px rgba(13,26,80,.12);
-  text-align:center;transition:transform .18s ease,box-shadow .18s ease;
-}
-.step-card:hover{transform:translateY(-4px);box-shadow:0 28px 56px -28px rgba(13,26,80,.5)}
-.step-illus{border-radius:12px;overflow:hidden;margin-bottom:18px}
-.step-illus img{width:100%;height:auto;display:block}
-.step-card h3{font-family:var(--font-display);font-weight:800;font-size:23px;color:#101a3d;margin:0 0 10px}
-.step-card p{font-size:15.5px;line-height:1.6;color:#586079;margin:0 auto;max-width:300px}
-.step-arrow{flex:0 0 auto;width:46px;height:46px;border-radius:50%;border:2px solid var(--brand);color:var(--brand);display:grid;place-items:center}
-.step-arrow svg{width:20px;height:20px}
-
-/* =========================================================
-   What We Ship — category grid
-   ========================================================= */
-.ship-section{background:#fff;padding:78px 0 88px;border-top:1px solid var(--line)}
-.ship-head{max-width:760px;margin:0 0 36px}
-.ship-eyebrow{font-family:var(--font-display);font-weight:700;font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--brand);margin:0 0 12px}
-.ship-head h2{font-family:var(--font-display);font-weight:800;font-size:clamp(2rem,3.6vw,2.9rem);letter-spacing:-.01em;color:#101a3d;margin:0 0 14px}
-.ship-sub{font-size:18px;line-height:1.55;color:#586079;margin:0}
-.ship-grid{display:grid;grid-template-columns:1fr 1fr;gap:26px}
-.ship-card{
-  background:#fff;border:1px solid var(--line);border-radius:16px;overflow:hidden;
-  box-shadow:0 14px 34px -26px rgba(13,26,80,.4);
-  display:flex;flex-direction:column;transition:transform .18s ease,box-shadow .18s ease;
-}
-.ship-card:hover{transform:translateY(-4px);box-shadow:0 26px 54px -28px rgba(13,26,80,.5)}
-.ship-img{aspect-ratio:612/229;overflow:hidden;background:#eef2f8}
-.ship-img img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .4s ease}
-.ship-card:hover .ship-img img{transform:scale(1.04)}
-.ship-body{padding:22px 24px 24px}
-.ship-body h3{font-family:var(--font-display);font-weight:800;font-size:21px;color:#101a3d;margin:0 0 9px}
-.ship-body p{font-size:15.5px;line-height:1.55;color:#586079;margin:0 0 16px}
-.ship-link{display:inline-flex;align-items:center;gap:7px;color:var(--brand);font-weight:700;font-size:15px;font-family:var(--font-display)}
-.ship-link svg{width:17px;height:17px;transition:transform .15s ease}
-.ship-link:hover{color:var(--brand-press)}
-.ship-link:hover svg{transform:translateX(3px)}
-
-/* =========================================================
-   Why Choose Ship Guy (bento)
-   ========================================================= */
-.wc-section{background:#f5f8fc;padding:74px 0 84px;border-top:1px solid var(--line)}
-.wc-bento{display:grid;grid-template-columns:1fr 1.12fr;gap:26px;align-items:start}
-.wc-head{align-self:start;padding-top:6px}
-.wc-eyebrow{font-family:var(--font-display);font-weight:700;font-size:13px;letter-spacing:.16em;text-transform:uppercase;color:var(--brand);margin:0 0 10px}
-.wc-eyebrow-line{display:block;width:54px;height:3px;border-radius:2px;background:var(--brand);margin-bottom:20px}
-.wc-head h2{font-family:var(--font-display);font-weight:800;font-size:clamp(2rem,3.1vw,2.65rem);letter-spacing:-.018em;color:#101a3d;margin:0 0 16px}
-.wc-sub{font-size:17px;line-height:1.6;color:#586079;margin:0;max-width:440px}
-.wc-creds{align-self:start;background:#fff;border:1px solid var(--line);border-radius:18px;padding:22px 6px;display:grid;grid-template-columns:repeat(4,1fr);box-shadow:0 14px 34px -28px rgba(13,26,80,.35)}
-.wc-cred{display:flex;flex-direction:column;align-items:center;text-align:center;gap:10px;padding:2px 12px;color:#1d2350}
-.wc-cred + .wc-cred{border-left:1px solid var(--line)}
-.wc-cred svg{width:26px;height:26px;color:var(--ink)}
-.wc-cred span{font-size:13px;font-weight:600;line-height:1.32}
-.wc-bigs{align-self:stretch;display:grid;grid-template-columns:1fr 1fr;gap:22px}
-.wc-big{position:relative;overflow:hidden;display:flex;flex-direction:column;height:100%;background:#fff;border:1px solid var(--line);border-bottom:3px solid var(--brand);border-radius:18px;padding:26px 24px;box-shadow:0 16px 38px -28px rgba(13,26,80,.4)}
-.wc-big-ic{width:62px;height:62px;border-radius:16px;margin-bottom:20px}
-.wc-num{display:flex;align-items:center;gap:10px;font-family:var(--font-display);font-weight:700;font-size:14px;color:var(--brand);margin-bottom:8px}
-.wc-num .ln{display:block;width:26px;height:2px;border-radius:2px;background:var(--brand);opacity:.45}
-.wc-big h3{font-family:var(--font-display);font-weight:800;font-size:22px;color:#101a3d;margin:0 0 10px}
-.wc-big p{font-size:15px;line-height:1.6;color:#586079;margin:0;max-width:30ch;position:relative;z-index:1}
-.wc-wm{position:absolute;right:-16px;bottom:-22px;width:160px;height:160px;color:var(--brand);opacity:.05;pointer-events:none}
-.wc-feats{align-self:stretch;background:#fff;border:1px solid var(--line);border-radius:18px;overflow:hidden;display:grid;grid-template-columns:1fr 1fr;box-shadow:0 16px 38px -28px rgba(13,26,80,.4)}
-.wc-feat{padding:26px 26px}
-.wc-feat:nth-child(odd){border-right:1px solid var(--line)}
-.wc-feat:nth-child(-n+2){border-bottom:1px solid var(--line)}
-.wc-feat img{width:50px;height:50px;border-radius:14px;margin-bottom:15px}
-.wc-feat h4{font-family:var(--font-display);font-weight:800;font-size:18px;color:#101a3d;margin:0 0 8px}
-.wc-feat p{font-size:14.5px;line-height:1.55;color:#586079;margin:0}
-.wc-mc{margin:30px 0 0;padding-top:22px;border-top:1px solid var(--line);text-align:center;font-size:13px;letter-spacing:.06em;color:var(--muted);font-weight:500}
-
-/* =========================================================
-   Final CTA band
-   ========================================================= */
-.cta-band{position:relative;overflow:hidden;background:linear-gradient(135deg,var(--brand-deep) 0%, var(--brand) 52%, #1f54e0 100%);color:#fff}
-.cta-band::before{content:"";position:absolute;inset:0;background:radial-gradient(1100px 380px at 80% -12%, rgba(255,255,255,.16), transparent 60%);pointer-events:none}
-.cta-inner{position:relative;text-align:center;max-width:760px;margin:0 auto;padding:74px 24px 78px}
-.cta-eyebrow{font-family:var(--font-display);font-weight:700;font-size:13px;letter-spacing:.18em;text-transform:uppercase;color:#bcd2f8;margin:0 0 14px}
-.cta-band h2{font-family:var(--font-display);font-weight:800;font-size:clamp(2rem,4vw,2.9rem);letter-spacing:-.015em;color:#fff;margin:0 0 16px}
-.cta-sub{font-size:18px;line-height:1.6;color:rgba(233,239,251,.9);margin:0 auto 30px;max-width:560px}
-.cta-actions{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-bottom:26px}
-.cta-primary{display:inline-flex;align-items:center;gap:9px;background:#fff;color:var(--brand);font-family:var(--font-display);font-weight:700;font-size:16px;padding:15px 26px;border-radius:999px;box-shadow:0 16px 34px -14px rgba(0,0,0,.45);transition:transform .15s ease,box-shadow .15s ease}
-.cta-primary:hover{transform:translateY(-2px);box-shadow:0 22px 46px -16px rgba(0,0,0,.5)}
-.cta-primary svg{width:18px;height:18px;transition:transform .15s ease}
-.cta-primary:hover svg{transform:translateX(3px)}
-.cta-secondary{display:inline-flex;align-items:center;gap:9px;background:rgba(255,255,255,.08);color:#fff;font-family:var(--font-display);font-weight:700;font-size:16px;padding:15px 24px;border-radius:999px;border:1.5px solid rgba(255,255,255,.55);transition:background .15s ease,border-color .15s ease}
-.cta-secondary:hover{background:rgba(255,255,255,.16);border-color:#fff}
-.cta-secondary svg{width:18px;height:18px}
-.cta-trust{list-style:none;display:flex;gap:24px;justify-content:center;flex-wrap:wrap;margin:0;padding:0}
-.cta-trust li{display:flex;align-items:center;gap:7px;font-size:14.5px;font-weight:500;color:rgba(233,239,251,.92)}
-.cta-trust svg{width:16px;height:16px;color:#a9e6c0}
-
-/* =========================================================
-   FAQ
-   ========================================================= */
-.faq-section{background:#fff;padding:78px 0 86px;border-top:1px solid var(--line)}
-.faq-head{text-align:center;max-width:720px;margin:0 auto 40px}
-.faq-eyebrow{font-family:var(--font-display);font-weight:700;font-size:13px;letter-spacing:.16em;text-transform:uppercase;color:var(--brand);margin:0 0 12px}
-.faq-head h2{font-family:var(--font-display);font-weight:800;font-size:clamp(2rem,3.4vw,2.8rem);letter-spacing:-.01em;color:#101a3d;margin:0}
-.faq-accent{display:block;width:64px;height:5px;border-radius:3px;background:var(--brand);margin:16px auto 18px}
-.faq-sub{font-size:17px;line-height:1.55;color:#586079;margin:0}
-.faq-list{max-width:820px;margin:0 auto;display:flex;flex-direction:column;gap:14px}
-.faq-item{border:1px solid var(--line);border-radius:14px;background:#fff;box-shadow:0 1px 2px rgba(16,24,40,.04);transition:border-color .18s ease,box-shadow .18s ease}
-.faq-item[open]{border-color:#c7d3f5;box-shadow:0 16px 36px -28px rgba(13,26,80,.45)}
-.faq-q{list-style:none;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:20px 22px;font-family:var(--font-display);font-weight:700;font-size:17px;color:#101a3d}
-.faq-q::-webkit-details-marker{display:none}
-.faq-q:hover{color:var(--brand)}
-.faq-ic{flex:0 0 auto;width:30px;height:30px;border-radius:9px;background:var(--brand-tint);color:var(--brand);display:grid;place-items:center;transition:transform .22s ease}
-.faq-ic svg{width:18px;height:18px}
-.faq-item[open] .faq-ic{transform:rotate(180deg)}
-.faq-a{padding:0 22px 20px;color:#586079;font-size:15.5px;line-height:1.65}
-.faq-item[open] .faq-a{animation:faqOpen .25s ease}
-@keyframes faqOpen{from{opacity:0;transform:translateY(-4px)}to{opacity:1;transform:none}}
-
-/* =========================================================
-   Service Areas / Locations
-   ========================================================= */
-.loc-section{background:linear-gradient(180deg,#ffffff 0%, #f4f7fc 100%);padding:78px 0 84px;border-top:1px solid var(--line)}
-.loc-bento{display:grid;grid-template-columns:1fr 1.18fr;gap:30px;align-items:center}
-.loc-eyebrow{font-family:var(--font-display);font-weight:700;font-size:13px;letter-spacing:.16em;text-transform:uppercase;color:var(--brand);margin:0 0 12px}
-.loc-accent{display:block;width:54px;height:4px;border-radius:2px;background:var(--brand);margin:0 0 18px}
-.loc-intro h2{font-family:var(--font-display);font-weight:800;font-size:clamp(2rem,3.2vw,2.65rem);letter-spacing:-.015em;color:#101a3d;margin:0 0 14px}
-.loc-sub{font-size:17px;line-height:1.6;color:#586079;margin:0 0 22px;max-width:430px}
-.loc-points{list-style:none;margin:0 0 26px;padding:0;display:grid;gap:13px}
-.loc-points li{display:flex;align-items:center;gap:12px;font-size:15.5px;font-weight:500;color:#1d2350}
-.loc-chk{flex:0 0 auto;width:26px;height:26px;border-radius:8px;background:var(--brand-tint);color:var(--brand);display:grid;place-items:center}
-.loc-chk svg{width:15px;height:15px}
-.loc-btn{display:inline-flex;align-items:center;gap:9px;background:var(--brand);color:#fff;font-family:var(--font-display);font-weight:700;font-size:15.5px;padding:14px 24px;border-radius:999px;box-shadow:0 12px 26px -12px rgba(11,52,192,.8);transition:background .15s ease,transform .15s ease}
-.loc-btn:hover{background:var(--brand-press);transform:translateY(-1px)}
-.loc-btn svg{width:18px;height:18px;transition:transform .15s ease}
-.loc-btn:hover svg{transform:translateX(3px)}
-.loc-routes{background:#fff;border:1px solid var(--line);border-radius:18px;padding:24px 24px;box-shadow:0 18px 40px -28px rgba(13,26,80,.4)}
-.loc-routes-head{display:flex;align-items:center;gap:10px;margin-bottom:16px;color:var(--brand)}
-.loc-routes-head svg{width:21px;height:21px}
-.loc-routes-head h3{font-family:var(--font-display);font-weight:800;font-size:18px;color:#101a3d;margin:0}
-.loc-route-list{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:12px}
-.loc-route-list a{display:flex;align-items:center;justify-content:space-between;gap:8px;padding:14px 16px;border:1px solid var(--line);border-radius:12px;font-weight:600;font-size:14px;color:var(--ink);transition:border-color .15s ease,background .15s ease,color .15s ease}
-.loc-route-list a:hover{border-color:var(--brand);background:var(--brand-tint);color:var(--brand-deep)}
-.loc-route-list .ar{width:16px;height:16px;flex:0 0 auto;color:var(--brand)}
-.loc-states{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:10px;margin-top:30px}
-.loc-states-label{font-weight:600;color:var(--muted);font-size:14px;margin-right:2px}
-.loc-states a{padding:8px 16px;border:1px solid var(--line);border-radius:999px;font-size:14px;font-weight:600;color:var(--ink-2);background:#fff;transition:border-color .15s ease,color .15s ease,background .15s ease}
-.loc-states a:hover{border-color:var(--brand);color:var(--brand);background:var(--brand-tint)}
-
-/* smooth in-page nav + offset for the sticky header */
-html{scroll-behavior:smooth}
-section[id]{scroll-margin-top:104px}
-
-/* =========================================================
-   Responsive
-   ========================================================= */
-@media (max-width:1180px){
-  .hero-grid{grid-template-columns:minmax(0,1fr);gap:36px;padding:54px 24px 60px}
-  .hero-copy{max-width:640px}
-  .lede{max-width:520px}
-  .quote-card{max-width:520px;width:100%}
-  .hero-overlay{background:linear-gradient(180deg, rgba(4,9,22,.72) 0%, rgba(4,9,22,.8) 55%, rgba(4,9,22,.88) 100%)}
-}
-@media (max-width:1180px){
-  .main-nav{display:none}
-  .icon-burger{display:inline-flex}
-  .header-inner{gap:14px;justify-content:space-between}
-  .btn-call .num-full{display:inline}
-  .mobile-nav{
-    display:block;overflow:hidden;max-height:0;background:#fff;border-top:1px solid transparent;
-    transition:max-height .3s ease,border-color .3s ease;
-  }
-  .site-header.nav-open .mobile-nav{max-height:85vh;max-height:calc(100dvh - 64px);overflow-y:auto;-webkit-overflow-scrolling:touch;border-top-color:var(--line)}
-  .mobile-nav .inner{padding:10px 24px 22px;display:grid;gap:4px}
-  .mobile-nav a{padding:13px 12px;border-radius:10px;font-weight:600;color:var(--ink);font-size:16px}
-  .mobile-nav a:hover{background:var(--brand-tint)}
-  .mobile-nav .m-sub{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);padding:14px 12px 4px;font-weight:700}
-}
-@media (max-width:980px){
-  .wc-bento{grid-template-columns:1fr}
-  .loc-bento{grid-template-columns:1fr;gap:32px}
-}
-@media (max-width:880px){
-  .steps-row{flex-direction:column;gap:0;max-width:440px;margin:0 auto}
-  .step-card{width:100%}
-  .step-arrow{transform:rotate(90deg);margin:14px 0}
-}
-@media (max-width:760px){
-  .review-grid{grid-template-columns:1fr 1fr}
-  .reviews-head{align-items:flex-start}
-  .ship-grid{grid-template-columns:1fr}
-}
-@media (max-width:600px){
-  .btn-call{padding:11px 15px}
-  .btn-call .num-full{display:none}
-  .btn-call .num-short{display:inline}
-  .quote-card{padding:24px 20px 22px}
-  .hero-copy h1{font-size:clamp(1.9rem,7vw,2.45rem)}
-  .opt-grid{grid-template-columns:1fr}
-  .row-2{grid-template-columns:1fr}
-  .stats{flex-wrap:wrap;gap:14px 0}
-  .stats .stat{padding-right:14px;margin-right:14px}
-  .stat .num{font-size:23px}
-  .stat .lbl{font-size:11.5px}
-  .review-grid{grid-template-columns:1fr}
-  .footer-top{grid-template-columns:1fr 1fr;gap:32px}
-  .f-brand{grid-column:1 / -1}
-  .wc-bigs{grid-template-columns:1fr}
-  .wc-feats{grid-template-columns:1fr}
-  .wc-feat:nth-child(odd){border-right:0}
-  .wc-feat{border-bottom:1px solid var(--line)}
-  .wc-feat:last-child{border-bottom:0}
-  .wc-creds{grid-template-columns:1fr 1fr;gap:20px 0;padding:20px 8px}
-  .wc-cred + .wc-cred{border-left:0}
-  .cta-actions{flex-direction:column}
-  .cta-primary,.cta-secondary{width:100%;justify-content:center}
-  .loc-route-list{grid-template-columns:1fr}
-  .step{width:64px}
-  .step .slabel{font-size:11.5px}
-}
-
-/* reduced motion */
-@media (prefers-reduced-motion:reduce){
-  *{animation-duration:.001ms!important;transition-duration:.001ms!important}
-  html{scroll-behavior:auto}
-}
-
-/* on-load reveal (subtle) */
-.reveal{opacity:0;transform:translateY(14px);transition:opacity .6s ease,transform .6s ease}
-body.ready .reveal{opacity:1;transform:none}
-.reveal.d2{transition-delay:.08s}
-.reveal.d3{transition-delay:.16s}
-
-/* =========================================================
-   How It Works page
-   ========================================================= */
-.page-hero{background:linear-gradient(135deg,#0a2a9e 0%, var(--brand) 60%, #1f54e0 100%);color:#fff;padding:64px 0 58px}
-.crumbs{display:flex;gap:10px;font-size:13.5px;font-weight:600;color:#bcd2f8;margin-bottom:18px}
-.crumbs a{color:#dbe6fb}
-.crumbs a:hover{color:#fff}
-.page-hero h1{font-family:var(--font-display);font-weight:800;font-size:clamp(1.9rem,3.6vw,2.8rem);letter-spacing:-.015em;color:#fff;margin:0 0 14px;max-width:840px}
-.page-hero-sub{font-size:17.5px;line-height:1.6;color:rgba(233,239,251,.92);margin:0;max-width:680px}
-.steps-compact{padding:56px 0 60px}
-.article-section{background:#fff;padding:64px 0 72px;border-top:1px solid var(--line)}
-.article{max-width:780px}
-.article h2{font-family:var(--font-display);font-weight:800;font-size:clamp(1.45rem,2.4vw,1.85rem);letter-spacing:-.01em;color:#101a3d;margin:38px 0 14px}
-.article h2:first-child{margin-top:0}
-.article h3{font-family:var(--font-display);font-weight:700;font-size:1.15rem;color:#101a3d;margin:26px 0 10px}
-.article p{font-size:16.5px;line-height:1.75;color:#414a6b;margin:0 0 16px}
-.article ul{margin:0 0 18px;padding-left:22px}
-.article li{font-size:16.5px;line-height:1.7;color:#414a6b;margin-bottom:9px}
-.article a{color:var(--brand);font-weight:600;text-decoration:underline;text-decoration-color:#c7d3f5;text-underline-offset:3px}
-.article a:hover{color:var(--brand-press)}
+### New action item
+Make sure the address, local phone, and hours on this page EXACTLY match your
+Google Business Profile — NAP consistency is a core local ranking factor.
+Character-for-character: "#407" here should be "#407" there, not "Suite 407".
 
 
-.menu.menu-mega{display:grid;grid-template-columns:1fr 1fr;column-gap:4px;min-width:452px}
-.menu.menu-mega .menu-all{grid-column:1 / -1;margin-top:6px;padding-top:12px;border-top:1px solid var(--line);color:var(--brand);font-weight:700}
+## What's in this zip
 
-.related-section{background:#f5f8fc;padding:52px 0 60px;border-top:1px solid var(--line)}
-.related-section h2{text-align:center;font-family:var(--font-display);font-weight:800;font-size:1.4rem;color:#101a3d;margin:0 0 26px}
-.related-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-.related-card{display:flex;align-items:center;justify-content:space-between;gap:10px;background:#fff;border:1px solid var(--line);border-radius:12px;padding:16px 18px;font-family:var(--font-display);font-weight:700;font-size:14.5px;color:#101a3d;transition:border-color .15s ease,color .15s ease}
-.related-card:hover{border-color:var(--brand);color:var(--brand)}
-.related-card svg{width:16px;height:16px;color:var(--brand);flex:0 0 auto}
-@media (max-width:760px){.related-grid{grid-template-columns:1fr}}
+| Path | What it is |
+|------|------------|
+| `car-shipping-miami-fl.html` | **The updated page — this is what you deploy** |
+| everything else in root | Your original site, untouched |
+| `assets/` | Your original images, untouched |
+| `_preview/` | A single-file preview for viewing only — **do not deploy** |
 
-@media (max-width:460px){.footer-top{grid-template-columns:1fr;gap:28px}}/* resp-polish-footer */
-  .article-lead{font-size:18px;line-height:1.7;color:var(--ink-2);margin:0 0 26px;padding-bottom:24px;border-bottom:1px solid var(--line)}
-  .hiw-why{background:#f6f8fc;border-top:1px solid var(--line);padding:60px 0}
-  .hiw-head{text-align:center;max-width:680px;margin:0 auto 36px}
-  .hiw-head .eyebrow2{font-family:var(--font-display);font-weight:800;letter-spacing:.14em;text-transform:uppercase;font-size:12.5px;color:var(--brand)}
-  .hiw-head h2{font-family:var(--font-display);font-weight:800;font-size:clamp(1.5rem,2.6vw,2rem);color:#101a3d;margin:8px 0 10px}
-  .hiw-head p{color:var(--ink-2);font-size:16px;margin:0}
-  .hiw-trust{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-  .hiw-trust .ht{display:flex;gap:13px;align-items:flex-start;background:#fff;border:1px solid var(--line);border-radius:14px;padding:22px 20px}
-  .hiw-trust .ht svg{width:24px;height:24px;color:var(--brand);flex:0 0 auto;margin-top:2px}
-  .hiw-trust .ht h4{font-family:var(--font-display);font-weight:700;font-size:16px;color:#101a3d;margin:0 0 4px}
-  .hiw-trust .ht p{color:var(--ink-2);font-size:14px;line-height:1.55;margin:0}
-  @media (max-width:900px){.hiw-trust{grid-template-columns:1fr 1fr}}
-  @media (max-width:560px){.hiw-trust{grid-template-columns:1fr}}
-</style>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "HowTo",
-  "name": "How Shipping Works with Ship Guy",
-  "description": "Ship vehicles, freight, equipment, machinery, household goods, and specialty items in three steps: get a free quote, schedule pickup with a vetted carrier, and track your shipment through delivery.",
-  "totalTime": "P7D",
-  "step": [
-    {"@type":"HowToStep","position":1,"name":"Get Your Free Shipping Quote","text":"Enter the pickup location, delivery destination, and shipment details into our online quote form, or call (866) 280-3481 to speak with a Ship Guy shipping specialist and receive a clear, upfront price."},
-    {"@type":"HowToStep","position":2,"name":"Schedule Pickup With a Vetted Carrier","text":"Ship Guy matches your shipment with a qualified, insured carrier that has the right equipment and coordinates a pickup window around your preferred dates. Whenever possible we arrange door-to-door shipping."},
-    {"@type":"HowToStep","position":3,"name":"Track Your Shipment Through Delivery","text":"Stay informed while your shipment is in transit with support from the Ship Guy team. At delivery, inspect the shipment against the shipping documents, sign, and complete any remaining payment."}
-  ]
-}
-</script>
-</head>
-<body>
+Only one file changed: **`car-shipping-miami-fl.html`**
+Everything else in this zip is your original site, untouched. Deploy the whole
+folder, or replace just that one page.
 
-<!-- ===================== HEADER ===================== -->
-<header class="site-header" id="top">
-  <div class="container header-inner">
-    <a class="brand" href="index.html#top" aria-label="Ship Guy — home"><svg class="sg-logo" role="img" aria-label="Ship Guy" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="209 227 180 145">
-<path fill-rule="nonzero" fill="currentColor" fill-opacity="1" d="M 257.761719 304.929688 L 257.761719 247.621094 L 272.027344 245.128906 L 272.027344 265.167969 C 272.027344 265.933594 272.246094 266.5 272.679688 266.867188 C 273.109375 267.230469 273.703125 267.347656 274.460938 267.222656 L 279.570312 266.355469 C 281.136719 266.089844 281.921875 265.128906 281.921875 263.484375 L 281.921875 243.398438 L 296.191406 240.90625 L 296.191406 298.710938 L 281.921875 301.019531 L 281.921875 277.640625 L 272.027344 279.292969 L 272.027344 302.621094 Z M 257.761719 304.929688 "/>
-<path fill-rule="nonzero" fill="currentColor" fill-opacity="1" d="M 225.148438 310.390625 C 220.769531 311.101562 217.570312 310.632812 215.539062 308.984375 C 213.515625 307.339844 212.5 304.464844 212.5 300.359375 L 212.5 291.359375 L 226.769531 288.980469 L 226.769531 296.222656 C 226.769531 297.035156 226.984375 297.609375 227.417969 297.945312 C 227.851562 298.28125 228.472656 298.382812 229.28125 298.25 L 234.148438 297.449219 C 234.902344 297.328125 235.472656 297.054688 235.851562 296.640625 C 236.226562 296.222656 236.417969 295.636719 236.417969 294.875 L 236.417969 290.066406 C 236.417969 289.304688 236.324219 288.683594 236.136719 288.199219 C 235.945312 287.714844 235.632812 287.300781 235.203125 286.964844 C 234.769531 286.632812 234.175781 286.367188 233.417969 286.164062 L 221.257812 283.890625 C 219.472656 283.378906 217.957031 282.695312 216.71875 281.851562 C 215.472656 281.007812 214.539062 279.855469 213.917969 278.390625 C 213.296875 276.929688 212.988281 275.089844 212.988281 272.871094 L 212.988281 263.140625 C 212.988281 260.222656 213.636719 257.960938 214.933594 256.355469 C 216.230469 254.753906 218.390625 253.683594 221.417969 253.152344 L 237.957031 250.261719 C 242.28125 249.503906 245.457031 249.929688 247.484375 251.539062 C 249.511719 253.148438 250.523438 256.050781 250.523438 260.25 L 250.523438 265.890625 L 236.257812 268.328125 L 236.257812 264.5 C 236.257812 263.683594 236.039062 263.109375 235.605469 262.777344 C 235.175781 262.441406 234.578125 262.34375 233.824219 262.472656 L 229.527344 263.210938 C 228.714844 263.351562 228.132812 263.628906 227.785156 264.039062 C 227.433594 264.453125 227.257812 265.011719 227.257812 265.71875 L 227.257812 268.078125 C 227.257812 269.109375 227.511719 269.917969 228.027344 270.507812 C 228.539062 271.097656 229.3125 271.550781 230.335938 271.863281 L 241.929688 273.972656 C 243.984375 274.492188 245.660156 275.214844 246.957031 276.140625 C 248.253906 277.070312 249.199219 278.285156 249.796875 279.792969 C 250.390625 281.300781 250.6875 283.144531 250.6875 285.328125 L 250.6875 297.671875 C 250.6875 300.671875 250.023438 302.960938 248.699219 304.539062 C 247.375 306.117188 245.199219 307.148438 242.175781 307.636719 Z M 225.148438 310.390625 "/>
-<path fill-rule="nonzero" fill="currentColor" fill-opacity="1" d="M 305.007812 297.726562 L 305.007812 239.84375 L 319.277344 237.351562 L 319.277344 295.414062 Z M 305.007812 297.726562 "/>
-<path fill-rule="nonzero" fill="currentColor" fill-opacity="1" d="M 342.515625 259.40625 L 349.730469 258.1875 C 350.542969 258.050781 351.152344 257.753906 351.558594 257.292969 C 351.960938 256.839844 352.164062 256.191406 352.164062 255.355469 L 352.164062 245.585938 C 352.164062 244.75 351.960938 244.15625 351.558594 243.8125 C 351.152344 243.464844 350.542969 243.359375 349.730469 243.5 L 342.515625 244.742188 Z M 328.246094 293.628906 L 328.246094 235.484375 L 353.703125 231.039062 C 356.570312 230.539062 358.933594 230.625 360.796875 231.304688 C 362.664062 231.984375 364.066406 233.191406 365.015625 234.921875 C 365.960938 236.660156 366.433594 238.949219 366.433594 241.796875 L 366.433594 257.542969 C 366.433594 260.613281 365.632812 263.125 364.039062 265.0625 C 362.445312 267.003906 360.136719 268.222656 357.109375 268.726562 L 344.949219 270.75 C 343.328125 271.019531 342.515625 271.933594 342.515625 273.484375 L 342.515625 291.316406 Z M 328.246094 293.628906 "/>
-<path fill-rule="nonzero" fill="currentColor" fill-opacity="1" d="M 297.101562 327.300781 L 297.101562 319.667969 C 297.101562 315.449219 295.980469 312.425781 293.738281 310.609375 C 291.496094 308.792969 288.214844 308.269531 283.890625 309.042969 L 268.082031 311.878906 C 265.050781 312.421875 262.726562 313.65625 261.105469 315.566406 C 259.484375 317.476562 258.675781 319.972656 258.675781 323.054688 L 258.675781 358.242188 C 258.675781 362.402344 259.808594 365.417969 262.082031 367.285156 C 264.347656 369.152344 267.621094 369.710938 271.890625 368.953125 L 287.699219 366.15625 C 290.726562 365.621094 293.050781 364.398438 294.671875 362.488281 C 296.292969 360.578125 297.101562 358.078125 297.101562 354.992188 L 297.101562 332.742188 L 277.242188 336.28125 L 277.242188 347.640625 L 282.835938 346.644531 L 282.835938 353.140625 C 282.835938 353.953125 282.617188 354.585938 282.1875 355.039062 C 281.753906 355.496094 281.132812 355.792969 280.320312 355.9375 L 275.375 356.816406 C 274.621094 356.949219 274.023438 356.867188 273.59375 356.566406 C 273.160156 356.265625 272.945312 355.707031 272.945312 354.894531 L 272.945312 324.882812 C 272.945312 324.066406 273.160156 323.4375 273.59375 322.976562 C 274.023438 322.527344 274.621094 322.226562 275.375 322.09375 L 280.320312 321.207031 C 281.132812 321.0625 281.753906 321.144531 282.1875 321.441406 C 282.617188 321.746094 282.835938 322.300781 282.835938 323.113281 L 282.835938 329.847656 Z M 297.101562 327.300781 "/>
-<path fill-rule="nonzero" fill="currentColor" fill-opacity="1" d="M 346.675781 285.5625 L 350.957031 284.878906 L 350.957031 285.871094 L 349.390625 286.121094 L 349.390625 290.523438 L 348.230469 290.710938 L 348.230469 286.308594 L 346.675781 286.558594 Z M 346.675781 285.5625 "/>
-<path fill-rule="nonzero" fill="currentColor" fill-opacity="1" d="M 351.558594 284.785156 L 353.078125 284.542969 L 354.574219 288.246094 L 356.019531 284.070312 L 357.511719 283.832031 L 357.511719 289.199219 L 356.410156 289.378906 L 356.410156 285.78125 L 355.007812 289.609375 L 354.066406 289.761719 L 352.664062 286.382812 L 352.664062 289.988281 L 351.558594 290.167969 Z M 351.558594 284.785156 "/>
-<path fill-rule="nonzero" fill="currentColor" fill-opacity="1" d="M 328.964844 301.867188 L 328.964844 344.914062 C 328.964844 345.726562 328.75 346.363281 328.316406 346.820312 C 327.882812 347.273438 327.289062 347.570312 326.53125 347.703125 L 321.75 348.550781 C 320.9375 348.691406 320.316406 348.613281 319.882812 348.3125 C 319.453125 348.007812 319.234375 347.449219 319.234375 346.636719 L 319.234375 303.542969 L 304.96875 305.996094 L 304.96875 350.058594 C 304.96875 354.226562 306.089844 357.25 308.332031 359.128906 C 310.574219 361.003906 313.804688 361.574219 318.019531 360.828125 L 333.425781 358.109375 C 336.394531 357.585938 338.707031 356.367188 340.355469 354.445312 C 342.003906 352.53125 342.828125 350.027344 342.828125 346.933594 L 342.828125 299.480469 Z M 328.964844 301.867188 "/>
-<path fill-rule="nonzero" fill="currentColor" fill-opacity="1" d="M 373.042969 294.429688 L 370.351562 319.472656 C 370.242188 320.523438 369.785156 321.296875 368.972656 321.792969 C 368.160156 322.289062 367.363281 322.433594 366.582031 322.21875 C 365.796875 322 365.324219 321.394531 365.160156 320.394531 L 362.542969 296.238281 L 347.644531 298.800781 L 354.703125 337.789062 L 360.539062 336.757812 L 360.539062 353.035156 L 374.808594 350.523438 L 374.808594 334.234375 L 380.484375 333.234375 L 387.5 291.941406 Z M 373.042969 294.429688 "/>
-</svg></a>
+Target keyword: **Auto Transport Miami Florida**
 
-    <nav class="main-nav" aria-label="Primary">
-      <a href="index.html#top">Home</a>
-      <a href="how-it-works.html">How It Works</a>
-      <div class="has-menu">
-        <button class="nav-toggle-btn" aria-haspopup="true" aria-expanded="false">Services
-          <span class="chev" aria-hidden="true"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></span>
-        </button>
-        <div class="menu" role="menu">
-          <a href="open-car-transport.html" role="menuitem">Open Car Transport</a>
-          <a href="enclosed-auto-transport.html" role="menuitem">Enclosed Auto Transport</a>
-          <a href="door-to-door-car-shipping.html" role="menuitem">Door-to-Door Shipping</a>
-          <a href="state-to-state-car-shipping.html" role="menuitem">State-to-State Shipping</a>
-          <a href="expedited-car-shipping.html" role="menuitem">Expedited Shipping</a>
-          <a href="snowbird-car-shipping.html" role="menuitem">Snowbird Car Shipping</a>
-          <a href="military-car-shipping.html" role="menuitem">Military Car Shipping</a>
-          <a href="dealer-auto-transport.html" role="menuitem">Dealer Auto Transport</a>
-          <a href="auction-car-transport.html" role="menuitem">Auction Car Transport</a>
-          <a href="services.html" role="menuitem" class="menu-all">All Services →</a>
-        </div>
-      </div>
-      
-      <a href="faq.html">FAQ</a>
-      <a href="contact.html">Contact</a>
-    </nav>
+---
 
-    <a class="btn-call" href="tel:+18662803481">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/></svg>
-      <span class="num-full">Call (866) 280-3481</span>
-      <span class="num-short">Call</span>
-    </a>
+## What changed
 
-    <button class="icon-burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="mobileNav">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
-    </button>
-  </div>
+| # | Change | Why |
+|---|--------|-----|
+| 1 | **Title & meta description** rewritten to lead with "Auto Transport Miami, FL" and include price + pickup speed | Keyword match in title; CTR lift from concrete numbers in the SERP snippet |
+| 2 | **Quick-answer box** added under the intro (cost range, pickup timing, snowbird swing) | Targets the featured snippet and Google AI Overviews, which extract short direct answers |
+| 3 | **Est. open rate column** added to all 8 rows of the route table + dated footnote | Turns the page from an article into a tool; unique data Google's scaled-content policy rewards |
+| 4 | **New section: "What Shapes Your Miami Auto Transport Price"** with two seasonal-direction cards | Original local expertise (E-E-A-T); captures "cheapest time to ship car to Florida" queries |
+| 5 | **Two new local callouts**: condo/high-rise delivery, hurricane season + PortMiami export | First-hand operational knowledge no competitor template has |
+| 6 | **FAQ expanded 6 → 9** (personal items, presence at pickup, insurance) and the cost answer given real ranges | Matches high-volume People Also Ask queries |
+| 7 | **JSON-LD schema updated**: FAQPage mirrors on-page text word-for-word, 3 new questions, Offer pricing, MC/USDOT identifiers on the provider | Rich results eligibility; mismatched schema vs. on-page text is a violation |
+| 8 | **E-E-A-T byline** above the footer: license numbers, FMCSA SAFER verify link, reviewer credit, last-updated date | The strongest trust signal available for a YMYL-adjacent money transaction |
 
-  <!-- mobile nav -->
-  <nav class="mobile-nav" id="mobileNav" aria-label="Mobile">
-    <div class="inner">
-      <a href="index.html#top">Home</a>
-      <a href="how-it-works.html">How It Works</a>
-      <span class="m-sub">Services</span>
-                  <a href="open-car-transport.html">Open Car Transport</a>
-      <a href="enclosed-auto-transport.html">Enclosed Auto Transport</a>
-      <a href="door-to-door-car-shipping.html">Door-to-Door Shipping</a>
-      <a href="state-to-state-car-shipping.html">State-to-State Shipping</a>
-      <a href="expedited-car-shipping.html">Expedited Shipping</a>
-      <a href="snowbird-car-shipping.html">Snowbird Car Shipping</a>
-      <a href="military-car-shipping.html">Military Car Shipping</a>
-      <a href="dealer-auto-transport.html">Dealer Auto Transport</a>
-      <a href="auction-car-transport.html">Auction Car Transport</a>
-      <a href="services.html">All Services</a>
-      <span class="m-sub">More</span>
-      
-      <a href="faq.html">FAQ</a>
-      <a href="contact.html">Contact</a>
-    </div>
-  </nav>
-</header>
+Preserved exactly as-is: header, nav, mobile menu, footer, brand tokens
+(`--brand:#0b34c0`), Plus Jakarta Sans / Inter, hero image, reveal animations,
+and the **berocker quote widget iframe** in the hero (`#quoteForm`).
 
-<!-- ===================== PAGE HERO ===================== -->
-<section class="page-hero">
-  <div class="container">
-    <nav class="crumbs" aria-label="Breadcrumb"><a href="index.html">Home</a><span>/</span><span aria-current="page">How It Works</span></nav>
-    <h1>How Shipping Works</h1>
-    <p class="page-hero-sub">Shipping anything, anywhere in the world should not be complicated. Ship Guy makes the process simple by coordinating reliable transportation for vehicles, freight, equipment, machinery, household goods, oversized items, and more.</p>
-  </div>
-</section>
+---
 
-<!-- ===================== STEPS RECAP ===================== -->
-<section class="steps-section steps-compact">
-  <div class="container">
-    <div class="steps-row">
-      <article class="step-card">
-        <div class="step-illus"><img src="assets/step-01.jpg" alt="Step 1: start a free shipping quote on the Ship Guy website" loading="lazy"></div>
-        <h3>1. Get Your Quote</h3>
-        <p>Enter your pickup, delivery, and shipment details for a free, upfront quote.</p>
-      </article>
-      <div class="step-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
-      <article class="step-card">
-        <div class="step-illus"><img src="assets/step-02.jpg" alt="Step 2: a vetted carrier loads a shipment for scheduled pickup" loading="lazy"></div>
-        <h3>2. Schedule Pickup</h3>
-        <p>We match your shipment with a vetted carrier on your preferred dates.</p>
-      </article>
-      <div class="step-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
-      <article class="step-card">
-        <div class="step-illus"><img src="assets/step-03.jpg" alt="Step 3: track your shipment from pickup to final delivery" loading="lazy"></div>
-        <h3>3. Track Delivery</h3>
-        <p>Follow your shipment in transit with support through final delivery.</p>
-      </article>
-    </div>
-  </div>
-</section>
+## Before you publish — required
 
-<!-- ===================== ARTICLE ===================== -->
-<section class="article-section">
-  <div class="container article">
+1. **Replace `[XXXXXX]` license placeholders.** They appear in two places:
+   - the E-E-A-T byline near the bottom of the page
+   - the JSON-LD `identifier` block in `<head>`
 
-    <p class="article-lead">From local deliveries and cross-country shipping to international freight transportation, our team manages the entire shipment from pickup to delivery. We match every load with a qualified provider, coordinate the logistics, and keep you informed throughout the process.</p>
-    <p>Whether you are shipping a car, commercial freight, heavy equipment, or a unique item that requires specialized handling, Ship Guy provides a simple and dependable solution. Tell us what you need shipped, where it needs to go, and when it needs to arrive. We handle the rest through three simple steps.</p>
+   The byline links to the FMCSA SAFER database and invites visitors to verify
+   you. Publishing fake or blank numbers there is worse than omitting the
+   section entirely.
 
-    <h2>Step 1: Get Your Free Shipping Quote</h2>
-    <p>Every shipment starts with a free shipping quote. Enter the pickup location, delivery destination, and shipment details into our online quote form. You can also call <a href="tel:+18662803481">(866) 280-3481</a> to speak with a Ship Guy shipping specialist.</p>
-    <p>Ship Guy can transport almost anything. We arrange shipping for cars, trucks, boats, freight, heavy equipment, machinery, household goods, oversized loads, and specialty items. We provide local, nationwide, and international shipping services.</p>
-    <p>To prepare an accurate quote, we may need the shipment’s size, weight, dimensions, and condition. We will also ask about your preferred pickup date, delivery location, and required shipping method.</p>
-    <p>Our shipping quotes are clear and transparent. You will receive an upfront price based on the services your shipment requires. Therefore, you can review the cost before you book.</p>
-    <p>Several factors can affect your shipping price. These include distance, shipment size, weight, route availability, equipment needs, and scheduling flexibility. International shipping may also include port fees, customs requirements, and documentation costs.</p>
-    <p>Ship Guy uses current transportation market conditions to price each shipment. As a result, we can connect your shipment with the right qualified carrier and help prevent unnecessary pickup delays.</p>
-    <p>Tell us what you need shipped, where it needs to go, and when you need it delivered. Ship Guy will handle the logistics from pickup to delivery.</p>
+2. **Replace `[Full Name]`, `[Title]`, `[X] years`** in the byline with a real
+   person on your team. Ideally link it to a bio page.
 
-    <h2>Step 2: Schedule Pickup With a Vetted Carrier</h2>
-    <p>Once you book your shipment, the Ship Guy dispatch team gets to work. We match your shipment with a qualified carrier that has the right equipment, experience, and availability.</p>
-    <p>Ship Guy arranges transportation for vehicles, freight, machinery, heavy equipment, household goods, oversized loads, and specialty items. Therefore, the pickup process may vary based on what you are shipping.</p>
-    <p>For domestic ground transportation, we verify the carrier’s operating authority, insurance coverage, and safety history. International shipments may involve additional freight providers, ports, customs agents, or overseas transportation partners.</p>
-    <p>Next, we coordinate a pickup window around your preferred dates. The driver or transportation provider will contact you before arrival to confirm the time and pickup instructions.</p>
-    <p>Whenever possible, we arrange door-to-door shipping. However, large trucks may not be able to access narrow streets, gated communities, low-clearance areas, or restricted locations. In that case, the driver will arrange a safe nearby meeting point.</p>
+3. **Swap the rate estimates for your own data.** The figures are realistic
+   market ranges, but your quote history is better — and it's the thing
+   competitors can't copy. The footnote promises a quarterly refresh; keep that
+   promise or remove the date.
 
-    <h2>Step 3: Track Your Shipment Through Delivery</h2>
-    <p>Once your shipment is in transit, Ship Guy keeps you informed. You can contact our support team for updates at any time. We also stay in touch with the carrier throughout the route.</p>
-    <p>Delivery times can change because of traffic, weather, road conditions, port schedules, or customs delays. However, we will continue to provide the latest estimated delivery window.</p>
-    <p>The final delivery process depends on what you are shipping. Vehicles, freight, equipment, machinery, household goods, and specialty items may require different inspection and unloading steps.</p>
-    <h3>What Happens at Delivery</h3>
-    <p>At delivery, you or an authorized adult should meet the carrier. The recipient should inspect the shipment before signing the delivery documents.</p>
-    <p>For vehicle shipping, compare the vehicle’s condition with the Bill of Lading from pickup. Check the exterior carefully and note any changes before signing. You should also take clear photos at delivery.</p>
-    <p>For freight, equipment, or other cargo, review the shipment count, packaging, and condition. Compare the delivery with the packing list, inventory sheet, or shipping documents. If you notice damage or missing items, record the issue on the delivery receipt before the carrier leaves. Photos and written notes are important for any insurance claim.</p>
-    <p>Once the shipment has been inspected and the documents are signed, complete any remaining payment. Your shipment is then officially delivered. From pickup to final delivery, Ship Guy helps make shipping anything, anywhere simple.</p>
+## After you publish
 
-    <h2>Why Ship with Ship Guy?</h2>
-    <p>Ship Guy is a licensed, bonded, FMCSA-registered auto transport broker. We combine nationwide carrier coverage — all 50 states, coast to coast — with transparent pricing, no upfront deposits, real-time tracking, and 24/7 U.S.-based support. From a single sedan to a full household move with <a href="index.html#services">vehicles, boats, and heavy equipment</a>, we manage the entire process so you don't have to.</p>
-    <p>Ready to see your price? <a href="index.html#top">Get your free quote</a> — it takes about 60 seconds — or call <a href="tel:+18662803481">(866) 280-3481</a> and we'll walk you through it. You can also check our <a href="index.html#faq">car shipping FAQ</a> or browse <a href="index.html#locations">popular routes and service areas</a>.</p>
+- Submit the URL in Google Search Console → URL Inspection → Request Indexing.
+- Validate the schema at `search.google.com/test/rich-results`.
+- Watch Search Console for 4–8 weeks. Track **long-tail** impressions
+  ("cheapest time to ship car to Florida", "enclosed transport Brickell",
+  "Miami to New York car shipping cost") — not just the head term, which is a
+  12–18 month climb against Montway and Sherpa and depends on backlinks and
+  reviews more than on-page content.
+- Add real customer reviews to the page when you have Miami-specific ones, then
+  (and only then) add `AggregateRating` schema. Never mark up reviews you
+  haven't collected.
 
-  </div>
-</section>
+---
 
-<!-- guides --><section class="related-section"><div class="container">
-      <h2>Car Shipping Guides</h2>
-      <div class="related-grid">
-        <a class="related-card" href="car-shipping-cost.html">Car Shipping Costs <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-        <a class="related-card" href="cross-country-car-shipping.html">Cross Country Car Shipping <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-        <a class="related-card" href="car-shipping-preparation.html">Car Prep Guide <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-      </div>
-</div></section>
+## Using this as the template for more city pages
 
-<!-- ===================== WHY SHIP GUY ===================== -->
-<section class="hiw-why">
-  <div class="container">
-    <div class="hiw-head">
-      <p class="eyebrow2">Why Ship Guy</p>
-      <h2>A Process Built on Trust</h2>
-      <p>Every shipment is backed by the credentials, carriers, and support that make auto transport worry-free.</p>
-    </div>
-    <div class="hiw-trust">
-      <div class="ht"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v5c0 5-3.5 8.5-7 10-3.5-1.5-7-5-7-10V6l7-3Z"/><path d="m9 12 2 2 4-4"/></svg><div><h4>Licensed &amp; Insured</h4><p>FMCSA-registered, bonded broker with every shipment fully insured.</p></div></div>
-      <div class="ht"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg><div><h4>Vetted Carriers</h4><p>We screen every carrier for active authority, insurance, and safety record.</p></div></div>
-      <div class="ht"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 1v22"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg><div><h4>Transparent Pricing</h4><p>Upfront, all-in quotes — no hidden fees or surprises at delivery.</p></div></div>
-      <div class="ht"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M19 7V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-2"/><path d="M21 12h-4a2 2 0 0 0 0 4h4v-4Z"/></svg><div><h4>No Upfront Deposit</h4><p>You pay nothing until your vehicle is assigned to a carrier and dispatched.</p></div></div>
-      <div class="ht"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="19" r="3"/><path d="M9 19h8.5a3.5 3.5 0 0 0 0-7h-11a3.5 3.5 0 0 1 0-7H15"/><circle cx="18" cy="5" r="3"/></svg><div><h4>Real-Time Tracking</h4><p>Follow your shipment from pickup all the way through final delivery.</p></div></div>
-      <div class="ht"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 14v-2a9 9 0 0 1 18 0v2"/><path d="M18 15h1a2 2 0 0 1 2 2v0a2 2 0 0 1-2 2h-1a1 1 0 0 1-1-1v-4a1 1 0 0 1 1-1Z"/><path d="M6 15H5a2 2 0 0 0-2 2v0a2 2 0 0 0 2 2h1a1 1 0 0 0 1-1v-4a1 1 0 0 0-1-1Z"/></svg><div><h4>24/7 U.S. Support</h4><p>Real, U.S.-based specialists by phone whenever you need them.</p></div></div>
-    </div>
-  </div>
-</section>
+The four blocks below are what make this page rank rather than read as
+boilerplate. Each must carry **genuinely city-specific** data, or the page set
+trips Google's scaled-content-abuse policy:
 
-<!-- ===================== FINAL CTA ===================== -->
-<section class="cta-band" id="get-started">
-  <div class="container cta-inner">
-    <p class="cta-eyebrow">Ready When You Are</p>
-    <h2>Ready to Ship Your Vehicle?</h2>
-    <p class="cta-sub">Get a free, no-obligation quote in about 60 seconds — or call and talk to a real specialist right now.</p>
-    <div class="cta-actions">
-      <a class="cta-primary" href="index.html#top">
-        Get Your Free Quote
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-      </a>
-      <a class="cta-secondary" href="tel:+18662803481">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/></svg>
-        (866) 280-3481
-      </a>
-    </div>
-    <ul class="cta-trust">
-      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Licensed &amp; insured</li>
-      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> No upfront deposit</li>
-      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> 24/7 support</li>
-    </ul>
-  </div>
-</section>
+1. **Quick-answer box** — city-specific price floor, pickup window, seasonal note
+2. **Priced lane table** — real rates for that city's actual top routes
+3. **Seasonal cards** — the direction and months that matter *there*
+   (Miami's snowbird flow is not Phoenix's, is not Chicago's)
+4. **Local callouts** — the operational quirks of that market (ports, HOA/gated
+   access, weather windows, dealer districts)
 
-<!-- ===================== FOOTER ===================== -->
-<footer class="site-footer" id="contact">
-  <div class="container footer-top">
-    <div class="f-brand">
-      <svg class="sg-logo" role="img" aria-label="Ship Guy" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="209 227 180 145">
-<path fill-rule="nonzero" fill="currentColor" fill-opacity="1" d="M 257.761719 304.929688 L 257.761719 247.621094 L 272.027344 245.128906 L 272.027344 265.167969 C 272.027344 265.933594 272.246094 266.5 272.679688 266.867188 C 273.109375 267.230469 273.703125 267.347656 274.460938 267.222656 L 279.570312 266.355469 C 281.136719 266.089844 281.921875 265.128906 281.921875 263.484375 L 281.921875 243.398438 L 296.191406 240.90625 L 296.191406 298.710938 L 281.921875 301.019531 L 281.921875 277.640625 L 272.027344 279.292969 L 272.027344 302.621094 Z M 257.761719 304.929688 "/>
-<path fill-rule="nonzero" fill="currentColor" fill-opacity="1" d="M 225.148438 310.390625 C 220.769531 311.101562 217.570312 310.632812 215.539062 308.984375 C 213.515625 307.339844 212.5 304.464844 212.5 300.359375 L 212.5 291.359375 L 226.769531 288.980469 L 226.769531 296.222656 C 226.769531 297.035156 226.984375 297.609375 227.417969 297.945312 C 227.851562 298.28125 228.472656 298.382812 229.28125 298.25 L 234.148438 297.449219 C 234.902344 297.328125 235.472656 297.054688 235.851562 296.640625 C 236.226562 296.222656 236.417969 295.636719 236.417969 294.875 L 236.417969 290.066406 C 236.417969 289.304688 236.324219 288.683594 236.136719 288.199219 C 235.945312 287.714844 235.632812 287.300781 235.203125 286.964844 C 234.769531 286.632812 234.175781 286.367188 233.417969 286.164062 L 221.257812 283.890625 C 219.472656 283.378906 217.957031 282.695312 216.71875 281.851562 C 215.472656 281.007812 214.539062 279.855469 213.917969 278.390625 C 213.296875 276.929688 212.988281 275.089844 212.988281 272.871094 L 212.988281 263.140625 C 212.988281 260.222656 213.636719 257.960938 214.933594 256.355469 C 216.230469 254.753906 218.390625 253.683594 221.417969 253.152344 L 237.957031 250.261719 C 242.28125 249.503906 245.457031 249.929688 247.484375 251.539062 C 249.511719 253.148438 250.523438 256.050781 250.523438 260.25 L 250.523438 265.890625 L 236.257812 268.328125 L 236.257812 264.5 C 236.257812 263.683594 236.039062 263.109375 235.605469 262.777344 C 235.175781 262.441406 234.578125 262.34375 233.824219 262.472656 L 229.527344 263.210938 C 228.714844 263.351562 228.132812 263.628906 227.785156 264.039062 C 227.433594 264.453125 227.257812 265.011719 227.257812 265.71875 L 227.257812 268.078125 C 227.257812 269.109375 227.511719 269.917969 228.027344 270.507812 C 228.539062 271.097656 229.3125 271.550781 230.335938 271.863281 L 241.929688 273.972656 C 243.984375 274.492188 245.660156 275.214844 246.957031 276.140625 C 248.253906 277.070312 249.199219 278.285156 249.796875 279.792969 C 250.390625 281.300781 250.6875 283.144531 250.6875 285.328125 L 250.6875 297.671875 C 250.6875 300.671875 250.023438 302.960938 248.699219 304.539062 C 247.375 306.117188 245.199219 307.148438 242.175781 307.636719 Z M 225.148438 310.390625 "/>
-<path fill-rule="nonzero" fill="currentColor" fill-opacity="1" d="M 305.007812 297.726562 L 305.007812 239.84375 L 319.277344 237.351562 L 319.277344 295.414062 Z M 305.007812 297.726562 "/>
-<path fill-rule="nonzero" fill="currentColor" fill-opacity="1" d="M 342.515625 259.40625 L 349.730469 258.1875 C 350.542969 258.050781 351.152344 257.753906 351.558594 257.292969 C 351.960938 256.839844 352.164062 256.191406 352.164062 255.355469 L 352.164062 245.585938 C 352.164062 244.75 351.960938 244.15625 351.558594 243.8125 C 351.152344 243.464844 350.542969 243.359375 349.730469 243.5 L 342.515625 244.742188 Z M 328.246094 293.628906 L 328.246094 235.484375 L 353.703125 231.039062 C 356.570312 230.539062 358.933594 230.625 360.796875 231.304688 C 362.664062 231.984375 364.066406 233.191406 365.015625 234.921875 C 365.960938 236.660156 366.433594 238.949219 366.433594 241.796875 L 366.433594 257.542969 C 366.433594 260.613281 365.632812 263.125 364.039062 265.0625 C 362.445312 267.003906 360.136719 268.222656 357.109375 268.726562 L 344.949219 270.75 C 343.328125 271.019531 342.515625 271.933594 342.515625 273.484375 L 342.515625 291.316406 Z M 328.246094 293.628906 "/>
-<path fill-rule="nonzero" fill="currentColor" fill-opacity="1" d="M 297.101562 327.300781 L 297.101562 319.667969 C 297.101562 315.449219 295.980469 312.425781 293.738281 310.609375 C 291.496094 308.792969 288.214844 308.269531 283.890625 309.042969 L 268.082031 311.878906 C 265.050781 312.421875 262.726562 313.65625 261.105469 315.566406 C 259.484375 317.476562 258.675781 319.972656 258.675781 323.054688 L 258.675781 358.242188 C 258.675781 362.402344 259.808594 365.417969 262.082031 367.285156 C 264.347656 369.152344 267.621094 369.710938 271.890625 368.953125 L 287.699219 366.15625 C 290.726562 365.621094 293.050781 364.398438 294.671875 362.488281 C 296.292969 360.578125 297.101562 358.078125 297.101562 354.992188 L 297.101562 332.742188 L 277.242188 336.28125 L 277.242188 347.640625 L 282.835938 346.644531 L 282.835938 353.140625 C 282.835938 353.953125 282.617188 354.585938 282.1875 355.039062 C 281.753906 355.496094 281.132812 355.792969 280.320312 355.9375 L 275.375 356.816406 C 274.621094 356.949219 274.023438 356.867188 273.59375 356.566406 C 273.160156 356.265625 272.945312 355.707031 272.945312 354.894531 L 272.945312 324.882812 C 272.945312 324.066406 273.160156 323.4375 273.59375 322.976562 C 274.023438 322.527344 274.621094 322.226562 275.375 322.09375 L 280.320312 321.207031 C 281.132812 321.0625 281.753906 321.144531 282.1875 321.441406 C 282.617188 321.746094 282.835938 322.300781 282.835938 323.113281 L 282.835938 329.847656 Z M 297.101562 327.300781 "/>
-<path fill-rule="nonzero" fill="currentColor" fill-opacity="1" d="M 346.675781 285.5625 L 350.957031 284.878906 L 350.957031 285.871094 L 349.390625 286.121094 L 349.390625 290.523438 L 348.230469 290.710938 L 348.230469 286.308594 L 346.675781 286.558594 Z M 346.675781 285.5625 "/>
-<path fill-rule="nonzero" fill="currentColor" fill-opacity="1" d="M 351.558594 284.785156 L 353.078125 284.542969 L 354.574219 288.246094 L 356.019531 284.070312 L 357.511719 283.832031 L 357.511719 289.199219 L 356.410156 289.378906 L 356.410156 285.78125 L 355.007812 289.609375 L 354.066406 289.761719 L 352.664062 286.382812 L 352.664062 289.988281 L 351.558594 290.167969 Z M 351.558594 284.785156 "/>
-<path fill-rule="nonzero" fill="currentColor" fill-opacity="1" d="M 328.964844 301.867188 L 328.964844 344.914062 C 328.964844 345.726562 328.75 346.363281 328.316406 346.820312 C 327.882812 347.273438 327.289062 347.570312 326.53125 347.703125 L 321.75 348.550781 C 320.9375 348.691406 320.316406 348.613281 319.882812 348.3125 C 319.453125 348.007812 319.234375 347.449219 319.234375 346.636719 L 319.234375 303.542969 L 304.96875 305.996094 L 304.96875 350.058594 C 304.96875 354.226562 306.089844 357.25 308.332031 359.128906 C 310.574219 361.003906 313.804688 361.574219 318.019531 360.828125 L 333.425781 358.109375 C 336.394531 357.585938 338.707031 356.367188 340.355469 354.445312 C 342.003906 352.53125 342.828125 350.027344 342.828125 346.933594 L 342.828125 299.480469 Z M 328.964844 301.867188 "/>
-<path fill-rule="nonzero" fill="currentColor" fill-opacity="1" d="M 373.042969 294.429688 L 370.351562 319.472656 C 370.242188 320.523438 369.785156 321.296875 368.972656 321.792969 C 368.160156 322.289062 367.363281 322.433594 366.582031 322.21875 C 365.796875 322 365.324219 321.394531 365.160156 320.394531 L 362.542969 296.238281 L 347.644531 298.800781 L 354.703125 337.789062 L 360.539062 336.757812 L 360.539062 353.035156 L 374.808594 350.523438 L 374.808594 334.234375 L 380.484375 333.234375 L 387.5 291.941406 Z M 373.042969 294.429688 "/>
-</svg>
-      <p>Licensed, insured nationwide auto transport. Transparent pricing, vetted carriers, and real people from quote to delivery.</p>
-    </div>
-    <div class="f-col">
-      <h4>Company</h4>
-      <ul>
-        <li><a href="how-it-works.html">How It Works</a></li>
-        <li><a href="index.html#reviews">Reviews</a></li>
-        <li><a href="index.html#locations">Locations</a></li>
-        <li><a href="faq.html">FAQ</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </div>
-    <div class="f-col">
-      <h4>Services</h4>
-      <ul>
-                        <li><a href="open-car-transport.html">Open Car Transport</a></li>
-        <li><a href="enclosed-auto-transport.html">Enclosed Auto Transport</a></li>
-        <li><a href="door-to-door-car-shipping.html">Door-to-Door Shipping</a></li>
-        <li><a href="state-to-state-car-shipping.html">State-to-State Shipping</a></li>
-        <li><a href="expedited-car-shipping.html">Expedited Shipping</a></li>
-        <li><a href="snowbird-car-shipping.html">Snowbird Car Shipping</a></li>
-        <li><a href="military-car-shipping.html">Military Car Shipping</a></li>
-        <li><a href="dealer-auto-transport.html">Dealer Auto Transport</a></li>
-        <li><a href="auction-car-transport.html">Auction Car Transport</a></li>
-      </ul>
-    </div>
-    <div class="f-col f-contact">
-      <h4>Get in touch</h4>
-      <div class="line"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/></svg><a href="tel:+18662803481">(866) 280-3481</a></div>
-      <div class="line"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg><a href="mailto:quotes@shipguy.com">quotes@shipguy.com</a></div>
-      <div class="line"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span>Support available 24/7</span></div>
-    </div>
-  </div>
-  <div class="container footer-bottom">
-    <small>© 2026 Ship Guy. Licensed &amp; FMCSA-registered auto transport broker. All rights reserved.</small>
-    <div class="legal">
-      <a href="#">Privacy</a>
-      <a href="#">Terms</a>
-      <a href="#">Licensing &amp; Insurance</a>
-    </div>
-  </div>
-</footer>
+Test for any new city page: swap the city name out and ask how much of the page
+would still be true. If the answer is "most of it," the page isn't ready.
 
-<script>
-(function(){
-  /* ---- header: scroll shadow ---- */
-  var header = document.getElementById('top');
-  var onScroll = function(){ header.classList.toggle('is-scrolled', window.scrollY > 8); };
-  onScroll(); window.addEventListener('scroll', onScroll, {passive:true});
+---
 
-  /* ---- on-load reveal ---- */
-  window.addEventListener('load', function(){ document.body.classList.add('ready'); });
-  setTimeout(function(){ document.body.classList.add('ready'); }, 400);
+## ⚠️ Folder structure — read before deploying
 
-  /* ---- mobile nav ---- */
-  var burger = document.getElementById('burger');
-  burger.addEventListener('click', function(){
-    var open = header.classList.toggle('nav-open');
-    burger.setAttribute('aria-expanded', open ? 'true':'false');
-  });
-  document.querySelectorAll('#mobileNav a').forEach(function(a){
-    a.addEventListener('click', function(){ header.classList.remove('nav-open'); burger.setAttribute('aria-expanded','false'); });
-  });
+This zip mirrors your ORIGINAL upload exactly:
 
-  /* ---- desktop dropdowns (click + outside-close, hover handled in CSS) ---- */
-  var menus = document.querySelectorAll('.has-menu');
-  menus.forEach(function(m){
-    var btn = m.querySelector('.nav-toggle-btn');
-    btn.addEventListener('click', function(e){
-      e.stopPropagation();
-      var isOpen = m.classList.contains('open');
-      menus.forEach(function(o){ o.classList.remove('open'); o.querySelector('.nav-toggle-btn').setAttribute('aria-expanded','false'); });
-      if(!isOpen){ m.classList.add('open'); btn.setAttribute('aria-expanded','true'); }
-    });
-  });
-  document.addEventListener('click', function(){ menus.forEach(function(o){ o.classList.remove('open'); o.querySelector('.nav-toggle-btn').setAttribute('aria-expanded','false'); }); });
+```
+shipguy/                      <- your site, same structure you sent
+  index.html                  <- untouched
+  faq.html                    <- untouched
+  car-shipping-miami-fl.html  <- THE ONLY CHANGED FILE
+  ...all other pages untouched
+  assets/                     <- untouched
+_preview-do-not-deploy/       <- preview copy, keep out of your web root
+MIAMI-PAGE-README.md          <- this file
+```
 
-  /* ---- option (radio) cards ---- */
-  document.querySelectorAll('[data-radio-group]').forEach(function(group){
-    group.addEventListener('change', function(){
-      group.querySelectorAll('.opt').forEach(function(opt){
-        var input = opt.querySelector('input');
-        opt.classList.toggle('is-selected', input.checked);
-      });
-    });
-  });
+Deploy the **`shipguy/`** folder, exactly as you did originally.
 
-  /* ---- year select ---- */
-  var year = document.getElementById('year');
-  if(year){
-    var now = new Date().getFullYear() + 1;
-    for(var y = now; y >= 1985; y--){
-      var o = document.createElement('option'); o.value = y; o.textContent = y; year.appendChild(o);
-    }
-  }
+### If your home page showed the FAQ page
+That happens when the publish/web root doesn't contain `index.html` at its top
+level — the host falls back to serving another file. Two ways it happens:
 
-  /* ---- multi-step form ---- */
-  var form = document.getElementById('quoteForm');
-  if(!form) return;
-  var success = document.getElementById('quoteSuccess');
-  var panels = form.querySelectorAll('.qstep');
-  var stepEls = document.querySelectorAll('#steps .step');
-  var trackEls = document.querySelectorAll('#steps .track');
-  var current = 1;
-  var maxStep = 3;
+1. Files got uploaded flat (no `shipguy/` wrapper) while the host is configured
+   with `shipguy` as the publish directory, or vice versa.
+2. The zip was extracted one level deeper than the web root, so the server sees
+   a folder instead of `index.html`.
 
-  function setStep(n){
-    current = n;
-    panels.forEach(function(p){ p.classList.toggle('is-current', +p.dataset.panel === n); });
-    stepEls.forEach(function(s){
-      var step = +s.dataset.step;
-      s.classList.toggle('is-active', step === n);
-      s.classList.toggle('is-done', step < n);
-      s.classList.toggle('is-clickable', step < n);
-    });
-    trackEls.forEach(function(t){ t.classList.toggle('is-filled', +t.dataset.track < n); });
-  }
+**Fix:** make sure the directory your host serves contains `index.html`
+directly — not a subfolder that contains it. On Netlify, check
+Site settings → Build & deploy → Publish directory. Then hard-refresh
+(Cmd/Ctrl+Shift+R); the `_headers` file already disables caching.
 
-  function validate(n){
-    var panel = form.querySelector('.qstep[data-panel="'+n+'"]');
-    var ok = true, firstBad = null;
-    panel.querySelectorAll('input[required]').forEach(function(inp){
-      var field = inp.closest('.field');
-      var bad = !inp.value.trim() || (inp.type==='email' && !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(inp.value));
-      field.classList.toggle('has-error', bad);
-      if(bad){ ok = false; if(!firstBad) firstBad = inp; }
-    });
-    if(firstBad) firstBad.focus();
-    return ok;
-  }
-
-  // clear error as the user types
-  form.querySelectorAll('input[required]').forEach(function(inp){
-    inp.addEventListener('input', function(){ inp.closest('.field').classList.remove('has-error'); });
-  });
-
-  form.querySelectorAll('[data-next]').forEach(function(btn){
-    btn.addEventListener('click', function(){ if(validate(current)) setStep(Math.min(current+1, maxStep)); });
-  });
-  form.querySelectorAll('[data-back]').forEach(function(btn){
-    btn.addEventListener('click', function(){ setStep(Math.max(current-1, 1)); });
-  });
-
-  // clicking a completed step jumps back to it
-  stepEls.forEach(function(s){
-    s.addEventListener('click', function(){
-      var step = +s.dataset.step;
-      if(step < current) setStep(step);
-    });
-  });
-
-  form.addEventListener('submit', function(e){
-    e.preventDefault();
-    if(!validate(3)) return;
-    form.style.display = 'none';
-    document.getElementById('steps').style.display = 'none';
-    success.classList.add('show');
-  });
-})();
-</script>
-</body>
-</html>
+### Safest option
+Don't redeploy the whole site at all. Upload the single file
+`shipguy/car-shipping-miami-fl.html`, overwriting the existing one. Nothing
+else changed, so nothing else needs to move.
