@@ -518,3 +518,31 @@ MC/USDOT + byline placeholders (294 tokens — the #1 quality blocker) · GBPs l
 ### Remaining placeholders: 150 byline-name tokens ([Full Name]/[Title]/[X] years) on the 49 city pages + TX hub — **the last fill-in**. Supply real dispatcher/manager names per page (or one company author) and the E-E-A-T layer completes.
 ### Validation: 55 schemas parse · zero broken links · zero credential placeholders · min city word count 3,085 · sitemap 72.
 ### Next per the Google-perspective review: GBP photos per office · TransportReviews/Google review seeding · per-city real photos · attorney sign-off on privacy/terms · staged Search Console submission.
+
+
+---
+
+## Mobile, AL — Plain-Language Rewrite (July 28, 2026)
+
+Full content rewrite of car-shipping-mobile-al.html to 8th-grade readability per Yoast guidelines, requested as the template for future page rewrites.
+
+**Measured results:** 3,030 words · avg 10.0 words/sentence · 4%% sentences over 20 words (Yoast max 25%%) · 32%% transition-word sentences (Yoast min 30%%) · zero 15-gram collisions vs the other 48 pages · FAQ visible text == JSON-LD verbatim · all TOC anchors resolve.
+
+**Also fixed during rewrite:** the snowbird section had been mis-inserted BEFORE the rates section (an earlier anchor matched TOC text instead of the H2); order is now correct. A stale pre-harmonization price range in FAQ #1 ((–( NOLA) is corrected to the current board.
+
+**New sections:** How It Works (5 steps, sec10) and Get Ready for Pickup (checklist, sec11), both in TOC.
+
+If this reads right, the same treatment can be applied page-by-page to the other 48.
+
+
+---
+
+## URL Migration + Mobile Hero (July 28, 2026)
+
+**All 49 city pages moved** from /car-shipping-{city}-{st}.html to **/city/auto-transport-{city}-{full-state-name}/** (directory URLs, trailing slash). Every internal link, canonical, og:url, JSON-LD URL, breadcrumb, footer link, related card, TX-hub link, and sitemap entry updated sitewide (72 pages). City pages now use ROOT-RELATIVE paths (/assets/..., /about.html) since they live two directories deep.
+
+**redirect-map-301.txt** (zip root) lists all 49 old->new mappings — apply these as 301s in your host/CDN config if the old URLs were ever live or shared.
+
+**IMPORTANT — local viewing:** because city pages use root-relative paths, double-clicking a city index.html from the extracted zip will show broken styles/images. That is expected. To view locally, either use the files in _preview-do-not-deploy/ (self-contained) or run a local server from the site root (e.g. python3 -m http.server). On the real host everything resolves normally.
+
+**Mobile, AL custom hero:** new photo at /assets/hero-mobile-alabama.jpg (1672x941, img width/height set, og:image + twitter:image updated). Miami retains its existing hero-miami.jpg; the other 47 use the shared default until per-city photos arrive.
