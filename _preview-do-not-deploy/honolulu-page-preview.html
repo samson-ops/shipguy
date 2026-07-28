@@ -792,6 +792,7 @@ body.ready .reveal{opacity:1;transform:none}
 
 .hero-grid-solo{grid-template-areas:"top quote" "bottom quote";row-gap:0;column-gap:52px;align-items:start}
 .hero-top{grid-area:top}
+.mobile-tagline{display:none}
 .hero-bottom{grid-area:bottom}
 .hero-grid-solo .quote-card{grid-area:quote;max-width:480px;box-shadow:0 10px 24px -14px rgba(13,26,80,.3)}
 @media(min-width:1181px){
@@ -802,11 +803,13 @@ body.ready .reveal{opacity:1;transform:none}
  .hero-grid-solo .quote-card{max-width:520px}
 }
 @media(max-width:760px){
- .hero-grid-solo{grid-template-areas:"top" "quote" "bottom"!important;row-gap:0!important}
+ .hero-grid-solo{grid-template-areas:"crumbs" "tagline" "quote" "h1mobile" "bottom"!important;row-gap:0!important}
+ .hero-top{display:contents}
  .hero-grid-solo{padding:18px 20px 22px!important}
- .hero-top .crumbs{margin-bottom:8px;font-size:12px}
+ .hero-top .crumbs{grid-area:crumbs;margin-bottom:6px;font-size:12px}
  .hero-top .eyebrow{display:none}
- .hero-top h1{margin-bottom:0!important}
+ .hero-top h1{grid-area:h1mobile;margin:10px 0 6px!important}
+ .mobile-tagline{display:block;grid-area:tagline;margin:2px 0 8px;font-family:var(--font-display);font-weight:800;font-size:clamp(1.05rem,5.2vw,1.35rem);letter-spacing:-.01em;color:#101a3d;text-shadow:0 1px 2px rgba(255,255,255,.85),0 2px 14px rgba(255,255,255,.75);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
  .hero-grid-solo .quote-card{margin:8px 0 12px!important;max-width:100%}
  .hero-bottom .lede{margin-top:0}
  .hero-grid-solo .quote-card.is-embed iframe{height:600px}
@@ -1081,6 +1084,7 @@ body.ready .reveal{opacity:1;transform:none}
       <p class="eyebrow reveal">Honolulu,&nbsp;HI&nbsp;&bull;&nbsp;Licensed&nbsp;&bull;&nbsp;Insured</p>
       <h1 class="reveal d2">Car Shipping to <br>Honolulu, HI</h1>
     </div>
+    <h2 class="mobile-tagline">Nationwide Auto Transport</h2>
     <!-- QUOTE CARD (booking widget) -->
     <div class="quote-card is-embed reveal d2" id="quoteForm">
       <iframe src="https://widget.berocker.com?theme=pro&amp;api_base=https%3A%2F%2Fapp.shipguy.com&amp;api_key=6a5508b7cb2f4" title="Ship Guy Logistics booking form" loading="lazy"></iframe>
@@ -1584,22 +1588,23 @@ body.ready .reveal{opacity:1;transform:none}
 </script>
 <script>
 (function(){
+  function fitOneLine(el, min){
+    if(!el) return;
+    el.style.fontSize='';
+    var size=parseFloat(getComputedStyle(el).fontSize);
+    var guard=0;
+    var boxWidth=el.getBoundingClientRect().width;
+    while(el.scrollWidth>boxWidth && size>min && guard<40){
+      size-=1;
+      el.style.fontSize=size+'px';
+      guard++;
+      boxWidth=el.getBoundingClientRect().width;
+    }
+  }
   function fitH1(){
     if(window.innerWidth>760) return;
-    var h1=document.querySelector('.hero-top h1');
-    if(!h1) return;
-    h1.style.fontSize='';
-    var cs=getComputedStyle(h1);
-    var size=parseFloat(cs.fontSize);
-    var min=15;
-    var container=h1.parentElement;
-    var cw=container.clientWidth;
-    var guard=0;
-    while(h1.scrollWidth>cw && size>min && guard<40){
-      size-=1;
-      h1.style.fontSize=size+'px';
-      guard++;
-    }
+    fitOneLine(document.querySelector('.hero-top h1'), 15);
+    fitOneLine(document.querySelector('.mobile-tagline'), 14);
   }
   document.addEventListener('DOMContentLoaded', fitH1);
   window.addEventListener('load', fitH1);
