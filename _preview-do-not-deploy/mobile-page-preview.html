@@ -820,8 +820,13 @@ body.ready .reveal{opacity:1;transform:none}
  .hero-top h1{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;display:block}
 }
 
-/* Mobile AL: no white overlay on custom hero */
-.hero-overlay{background:none!important}
+/* Mobile AL: light white veil + all-black hero text for readability */
+.hero-overlay{background:rgba(255,255,255,.34)!important}
+@media(max-width:760px){.hero-overlay{background:rgba(255,255,255,.42)!important}}
+.hero-top .crumbs, .hero-top .crumbs a, .hero-top .eyebrow,
+.hero-top h1, .mobile-tagline,
+.hero-bottom .lede, .hero-bottom .trust-list li,
+.hero-bottom .stat .num, .hero-bottom .stat .lbl{color:#000!important}
 </style>
 <script type="application/ld+json">
 {
