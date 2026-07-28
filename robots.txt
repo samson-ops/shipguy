@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /_preview-do-not-deploy/
+
+Sitemap: https://shipguy.com/sitemap.xml
