@@ -794,6 +794,9 @@ body.ready .reveal{opacity:1;transform:none}
  .sticky-call .sc-quote{background:var(--brand);color:#fff}
  body{padding-bottom:52px}
 }
+
+.hero-copy .est-box{margin:18px 0 0;max-width:460px;box-shadow:0 6px 24px rgba(16,24,40,.10)}
+.hero-copy .est-box label{font-size:13.5px}
 </style>
 <script type="application/ld+json">
 {
@@ -1075,6 +1078,13 @@ body.ready .reveal{opacity:1;transform:none}
       <p class="eyebrow reveal">Los&nbsp;Angeles,&nbsp;CA&nbsp;&bull;&nbsp;Licensed&nbsp;&bull;&nbsp;Insured</p>
       <h1 class="reveal d2">Auto Transport in<br>Los Angeles, CA</h1>
       <p class="lede reveal d2">The busiest car shipping market in America, handled by people who know its streets &mdash; vetted carriers, daily departures, no deposit to book.</p>
+      <div class="est-box">
+      <label for="estSel">Instant estimate &mdash; pick a destination:</label>
+      <select id="estSel"><option value="">Choose a lane&hellip;</option><option value="$300&ndash;$475|1 day|~270 mi">Las Vegas, NV</option><option value="$300&ndash;$500|1&ndash;2 days|~370 mi">Phoenix, AZ</option><option value="$350&ndash;$550|1&ndash;2 days|~380 mi">San Francisco Bay Area</option><option value="$700&ndash;$950|2&ndash;4 days|~960 mi">Portland, OR</option><option value="$800&ndash;$1,100|3&ndash;4 days|~1,015 mi">Denver, CO</option><option value="$750&ndash;$1,050|3&ndash;5 days|~1,135 mi">Seattle, WA</option><option value="$850&ndash;$1,150|3&ndash;5 days|~1,435 mi">Dallas, TX</option><option value="$900&ndash;$1,200|3&ndash;5 days|~1,550 mi">Houston, TX</option><option value="$1,050&ndash;$1,400|4&ndash;6 days|~2,015 mi">Chicago, IL</option><option value="$1,150&ndash;$1,500|5&ndash;7 days|~2,730 mi">Miami, FL</option><option value="$1,150&ndash;$1,550|5&ndash;8 days|~2,790 mi">New York, NY</option></select>
+      <div class="est-out" id="estOut"></div>
+    </div>
+<script>document.getElementById('estSel').addEventListener('change',function(){var v=this.value;var o=document.getElementById('estOut');if(!v){o.innerHTML='';return}var p=v.split('|');o.innerHTML='Estimated open-carrier rate: <strong>'+p[0]+'</strong> &middot; transit '+p[1]+' &middot; '+p[2]+' &mdash; <a href="#quoteForm">lock a real quote</a>.';});</script>
+
 
       <ul class="trust-list reveal d3">
         <li><span class="trust-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/><path d="m9 12 2 2 4-4"/></svg></span>Licensed Broker &amp; Fully Insured</li>
@@ -1137,13 +1147,8 @@ body.ready .reveal{opacity:1;transform:none}
     <p class="route-note">*Rates reflect July 2026 lane conditions for a standard sedan; count on roughly 10&ndash;25% more for SUVs and trucks, oversized and lifted vehicles quoted by dimensions, non-runners add $100&ndash;$200 for winch loading. Directional demand moves these numbers week to week &mdash; a firm quote locks yours.</p>
   </div>
 
-    <div class="est-box">
-      <label for="estSel">Instant estimate &mdash; pick a destination:</label>
-      <select id="estSel"><option value="">Choose a lane&hellip;</option><option value="$300&ndash;$475|1 day|~270 mi">Las Vegas, NV</option><option value="$300&ndash;$500|1&ndash;2 days|~370 mi">Phoenix, AZ</option><option value="$350&ndash;$550|1&ndash;2 days|~380 mi">San Francisco Bay Area</option><option value="$700&ndash;$950|2&ndash;4 days|~960 mi">Portland, OR</option><option value="$800&ndash;$1,100|3&ndash;4 days|~1,015 mi">Denver, CO</option><option value="$750&ndash;$1,050|3&ndash;5 days|~1,135 mi">Seattle, WA</option><option value="$850&ndash;$1,150|3&ndash;5 days|~1,435 mi">Dallas, TX</option><option value="$900&ndash;$1,200|3&ndash;5 days|~1,550 mi">Houston, TX</option><option value="$1,050&ndash;$1,400|4&ndash;6 days|~2,015 mi">Chicago, IL</option><option value="$1,150&ndash;$1,500|5&ndash;7 days|~2,730 mi">Miami, FL</option><option value="$1,150&ndash;$1,550|5&ndash;8 days|~2,790 mi">New York, NY</option></select>
-      <div class="est-out" id="estOut"></div>
-    </div>
+    
     <div class="bt-wrap"><h3>Best time to book from here</h3><p>Volume never really rests; production cycles and port rhythms keep every month liquid. Marginally softer pricing midwinter; coastal lanes run deepest in summer.</p></div>
-<script>document.getElementById('estSel').addEventListener('change',function(){var v=this.value;var o=document.getElementById('estOut');if(!v){o.innerHTML='';return}var p=v.split('|');o.innerHTML='Estimated open-carrier rate: <strong>'+p[0]+'</strong> &middot; transit '+p[1]+' &middot; '+p[2]+' &mdash; <a href="#quoteForm">lock a real quote</a>.';});</script>
 </section>
 <section class="city-section" id="sec1">
   <div class="container">

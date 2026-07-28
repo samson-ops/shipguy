@@ -794,6 +794,9 @@ body.ready .reveal{opacity:1;transform:none}
  .sticky-call .sc-quote{background:var(--brand);color:#fff}
  body{padding-bottom:52px}
 }
+
+.hero-copy .est-box{margin:18px 0 0;max-width:460px;box-shadow:0 6px 24px rgba(16,24,40,.10)}
+.hero-copy .est-box label{font-size:13.5px}
 </style>
 <script type="application/ld+json">
 {
@@ -1059,6 +1062,13 @@ body.ready .reveal{opacity:1;transform:none}
       <p class="eyebrow reveal">Santa&nbsp;Ana,&nbsp;CA&nbsp;&bull;&nbsp;Licensed&nbsp;&bull;&nbsp;Insured</p>
       <h1 class="reveal d2">Car Shipping in<br>Santa Ana, CA</h1>
       <p class="lede reveal d2">The county seat&rsquo;s auto transport &mdash; estate fluent, bilingüe de verdad, and block-literate from Fourth Street out.</p>
+      <div class="est-box">
+      <label for="estSel">Instant estimate &mdash; pick a destination:</label>
+      <select id="estSel"><option value="">Choose a lane&hellip;</option><option value="$295&ndash;$470|1 day|~270 mi">Las Vegas, NV</option><option value="$310&ndash;$485|1&ndash;2 days|~345 mi">Phoenix, AZ</option><option value="$360&ndash;$575|1&ndash;2 days|~415 mi">San Francisco Bay Area</option><option value="$680&ndash;$940|2&ndash;3 days|~790 mi">Albuquerque, NM</option><option value="$785&ndash;$1,095|3&ndash;4 days|~1,020 mi">Denver, CO</option><option value="$770&ndash;$1,070|3&ndash;5 days|~1,155 mi">Seattle, WA</option><option value="$830&ndash;$1,150|3&ndash;5 days|~1,340 mi">San Antonio, TX</option><option value="$1,045&ndash;$1,395|4&ndash;6 days|~2,000 mi">Nashville, TN</option><option value="$1,065&ndash;$1,415|4&ndash;6 days|~2,010 mi">Chicago, IL</option><option value="$1,165&ndash;$1,565|5&ndash;8 days|~2,785 mi">New York, NY</option></select>
+      <div class="est-out" id="estOut"></div>
+    </div>
+<script>document.getElementById('estSel').addEventListener('change',function(){var v=this.value;var o=document.getElementById('estOut');if(!v){o.innerHTML='';return}var p=v.split('|');o.innerHTML='Estimated open-carrier rate: <strong>'+p[0]+'</strong> &middot; transit '+p[1]+' &middot; '+p[2]+' &mdash; <a href="#quoteForm">lock a real quote</a>.';});</script>
+
 
       <ul class="trust-list reveal d3">
         <li><span class="trust-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/><path d="m9 12 2 2 4-4"/></svg></span>Licensed Broker &amp; Fully Insured</li>
@@ -1120,13 +1130,8 @@ body.ready .reveal{opacity:1;transform:none}
     <p class="route-note">*July 2026 lane conditions for a standard sedan; figure 10&ndash;25% above for SUVs and pickups, dimensional quotes for oversized, and $100&ndash;$200 winch service where a vehicle can&rsquo;t load itself &mdash; a detail estate shipments should verify before booking, since long-parked cars forget how to start.</p>
   </div>
 
-    <div class="est-box">
-      <label for="estSel">Instant estimate &mdash; pick a destination:</label>
-      <select id="estSel"><option value="">Choose a lane&hellip;</option><option value="$295&ndash;$470|1 day|~270 mi">Las Vegas, NV</option><option value="$310&ndash;$485|1&ndash;2 days|~345 mi">Phoenix, AZ</option><option value="$360&ndash;$575|1&ndash;2 days|~415 mi">San Francisco Bay Area</option><option value="$680&ndash;$940|2&ndash;3 days|~790 mi">Albuquerque, NM</option><option value="$785&ndash;$1,095|3&ndash;4 days|~1,020 mi">Denver, CO</option><option value="$770&ndash;$1,070|3&ndash;5 days|~1,155 mi">Seattle, WA</option><option value="$830&ndash;$1,150|3&ndash;5 days|~1,340 mi">San Antonio, TX</option><option value="$1,045&ndash;$1,395|4&ndash;6 days|~2,000 mi">Nashville, TN</option><option value="$1,065&ndash;$1,415|4&ndash;6 days|~2,010 mi">Chicago, IL</option><option value="$1,165&ndash;$1,565|5&ndash;8 days|~2,785 mi">New York, NY</option></select>
-      <div class="est-out" id="estOut"></div>
-    </div>
+    
     <div class="bt-wrap"><h3>Best time to book from here</h3><p>County volume peaks with the summer family season; year-end runs quietest. Flexible winter dates ride the deepest local discounts.</p></div>
-<script>document.getElementById('estSel').addEventListener('change',function(){var v=this.value;var o=document.getElementById('estOut');if(!v){o.innerHTML='';return}var p=v.split('|');o.innerHTML='Estimated open-carrier rate: <strong>'+p[0]+'</strong> &middot; transit '+p[1]+' &middot; '+p[2]+' &mdash; <a href="#quoteForm">lock a real quote</a>.';});</script>
 </section>
 <section class="city-section" id="sec1">
   <div class="container">

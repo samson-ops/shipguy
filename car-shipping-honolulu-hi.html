@@ -794,6 +794,9 @@ body.ready .reveal{opacity:1;transform:none}
  .sticky-call .sc-quote{background:var(--brand);color:#fff}
  body{padding-bottom:52px}
 }
+
+.hero-copy .est-box{margin:18px 0 0;max-width:460px;box-shadow:0 6px 24px rgba(16,24,40,.10)}
+.hero-copy .est-box label{font-size:13.5px}
 </style>
 <script type="application/ld+json">
 {
@@ -1059,6 +1062,13 @@ body.ready .reveal{opacity:1;transform:none}
       <p class="eyebrow reveal">Honolulu,&nbsp;HI&nbsp;&bull;&nbsp;Licensed&nbsp;&bull;&nbsp;Insured</p>
       <h1 class="reveal d2">Car Shipping to<br>Honolulu, HI</h1>
       <p class="lede reveal d2">The Hawaii lane, run from the receiving end &mdash; sailing calendars, maritime prep, and island arithmetic, all in one honest chain.</p>
+      <div class="est-box">
+      <label for="estSel">Instant estimate &mdash; pick a destination:</label>
+      <select id="estSel"><option value="">Choose a lane&hellip;</option><option value="$1,450&ndash;$2,000|2&ndash;3 weeks|land + ocean">Honolulu</option><option value="$1,475&ndash;$2,050|2&ndash;3 weeks|land + ocean">Honolulu</option><option value="$1,500&ndash;$2,100|2&ndash;3 weeks|land + ocean">Honolulu</option><option value="$1,550&ndash;$2,150|2&ndash;3 weeks|land + ocean">Honolulu</option><option value="$1,750&ndash;$2,450|2.5&ndash;3.5 weeks|land + ocean">Honolulu</option><option value="$1,950&ndash;$2,700|3&ndash;3.5 weeks|land + ocean">Honolulu</option><option value="$2,000&ndash;$2,750|3&ndash;3.5 weeks|land + ocean">Honolulu</option><option value="$2,200&ndash;$3,000|3&ndash;4 weeks|land + ocean">Honolulu</option><option value="$2,300&ndash;$3,100|3&ndash;4 weeks|land + ocean">Honolulu</option><option value="$2,500&ndash;$3,500|3&ndash;4 weeks|land + ocean">Honolulu</option></select>
+      <div class="est-out" id="estOut"></div>
+    </div>
+<script>document.getElementById('estSel').addEventListener('change',function(){var v=this.value;var o=document.getElementById('estOut');if(!v){o.innerHTML='';return}var p=v.split('|');o.innerHTML='Estimated open-carrier rate: <strong>'+p[0]+'</strong> &middot; transit '+p[1]+' &middot; '+p[2]+' &mdash; <a href="#quoteForm">lock a real quote</a>.';});</script>
+
 
       <ul class="trust-list reveal d3">
         <li><span class="trust-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/><path d="m9 12 2 2 4-4"/></svg></span>Licensed Broker &amp; Fully Insured</li>
@@ -1120,13 +1130,8 @@ body.ready .reveal{opacity:1;transform:none}
     <p class="route-note">*July 2026 combined estimates, standard running sedan; SUVs and trucks price up with vessel space, oversized by dimensions, non-runners need advance arrangement (ocean carriers restrict them &mdash; ask early). Neighbor-island destinations add the barge leg by island. Vessel schedules, not booking dates, set every timeline.</p>
   </div>
 
-    <div class="est-box">
-      <label for="estSel">Instant estimate &mdash; pick a destination:</label>
-      <select id="estSel"><option value="">Choose a lane&hellip;</option><option value="$1,450&ndash;$2,000|2&ndash;3 weeks|land + ocean">Honolulu</option><option value="$1,475&ndash;$2,050|2&ndash;3 weeks|land + ocean">Honolulu</option><option value="$1,500&ndash;$2,100|2&ndash;3 weeks|land + ocean">Honolulu</option><option value="$1,550&ndash;$2,150|2&ndash;3 weeks|land + ocean">Honolulu</option><option value="$1,750&ndash;$2,450|2.5&ndash;3.5 weeks|land + ocean">Honolulu</option><option value="$1,950&ndash;$2,700|3&ndash;3.5 weeks|land + ocean">Honolulu</option><option value="$2,000&ndash;$2,750|3&ndash;3.5 weeks|land + ocean">Honolulu</option><option value="$2,200&ndash;$3,000|3&ndash;4 weeks|land + ocean">Honolulu</option><option value="$2,300&ndash;$3,100|3&ndash;4 weeks|land + ocean">Honolulu</option><option value="$2,500&ndash;$3,500|3&ndash;4 weeks|land + ocean">Honolulu</option></select>
-      <div class="est-out" id="estOut"></div>
-    </div>
+    
     <div class="bt-wrap"><h3>Best time to book from here</h3><p>Sailing schedules set this calendar more than seasons do; PCS summer adds volume. Book to vessel cutoffs, not months &mdash; two to three weeks ahead year-round.</p></div>
-<script>document.getElementById('estSel').addEventListener('change',function(){var v=this.value;var o=document.getElementById('estOut');if(!v){o.innerHTML='';return}var p=v.split('|');o.innerHTML='Estimated open-carrier rate: <strong>'+p[0]+'</strong> &middot; transit '+p[1]+' &middot; '+p[2]+' &mdash; <a href="#quoteForm">lock a real quote</a>.';});</script>
 </section>
 <section class="city-section" id="sec1">
   <div class="container">

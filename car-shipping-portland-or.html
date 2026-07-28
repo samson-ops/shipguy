@@ -794,6 +794,9 @@ body.ready .reveal{opacity:1;transform:none}
  .sticky-call .sc-quote{background:var(--brand);color:#fff}
  body{padding-bottom:52px}
 }
+
+.hero-copy .est-box{margin:18px 0 0;max-width:460px;box-shadow:0 6px 24px rgba(16,24,40,.10)}
+.hero-copy .est-box label{font-size:13.5px}
 </style>
 <script type="application/ld+json">
 {
@@ -1059,6 +1062,13 @@ body.ready .reveal{opacity:1;transform:none}
       <p class="eyebrow reveal">Portland,&nbsp;OR&nbsp;&bull;&nbsp;Licensed&nbsp;&bull;&nbsp;Insured</p>
       <h1 class="reveal d2">Car Shipping in<br>Portland, OR</h1>
       <p class="lede reveal d2">The Rose City&rsquo;s book &mdash; Gorge-literate, EV-fluent, and honest enough to survive the follow-up questions.</p>
+      <div class="est-box">
+      <label for="estSel">Instant estimate &mdash; pick a destination:</label>
+      <select id="estSel"><option value="">Choose a lane&hellip;</option><option value="$215&ndash;$350|1 day|~175 mi">Seattle, WA</option><option value="$205&ndash;$330|1 day|~110 mi">Eugene, OR</option><option value="$310&ndash;$490|1&ndash;2 days|~430 mi">Boise, ID</option><option value="$360&ndash;$560|2 days|~580 mi">Sacramento, CA</option><option value="$380&ndash;$590|2 days|~635 mi">Bay Area, CA</option><option value="$450&ndash;$680|2&ndash;3 days|~765 mi">Salt Lake City, UT</option><option value="$520&ndash;$780|2&ndash;3 days|~965 mi">Los Angeles, CA</option><option value="$560&ndash;$840|3 days|~985 mi">Las Vegas, NV</option><option value="$600&ndash;$880|3&ndash;4 days|~1,330 mi">Phoenix, AZ</option><option value="$720&ndash;$1,040|3&ndash;4 days|~1,250 mi">Denver, CO</option></select>
+      <div class="est-out" id="estOut"></div>
+    </div>
+<script>document.getElementById('estSel').addEventListener('change',function(){var v=this.value;var o=document.getElementById('estOut');if(!v){o.innerHTML='';return}var p=v.split('|');o.innerHTML='Estimated open-carrier rate: <strong>'+p[0]+'</strong> &middot; transit '+p[1]+' &middot; '+p[2]+' &mdash; <a href="#quoteForm">lock a real quote</a>.';});</script>
+
 
       <ul class="trust-list reveal d3">
         <li><span class="trust-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/><path d="m9 12 2 2 4-4"/></svg></span>Licensed Broker &amp; Fully Insured</li>
@@ -1120,13 +1130,8 @@ body.ready .reveal{opacity:1;transform:none}
     <p class="route-note">*Rose City board, July 2026, sedan basis; SUVs and pickups run 10&ndash;25% over, EV quotes account for battery weight, oversized goes by dimensions, and winch loading adds $100&ndash;$200. Gorge closures reroute eastbound loads a handful of winter days; ice-storm days pause the metro by civic consensus and resume by the next afternoon.</p>
   </div>
 
-    <div class="est-box">
-      <label for="estSel">Instant estimate &mdash; pick a destination:</label>
-      <select id="estSel"><option value="">Choose a lane&hellip;</option><option value="$215&ndash;$350|1 day|~175 mi">Seattle, WA</option><option value="$205&ndash;$330|1 day|~110 mi">Eugene, OR</option><option value="$310&ndash;$490|1&ndash;2 days|~430 mi">Boise, ID</option><option value="$360&ndash;$560|2 days|~580 mi">Sacramento, CA</option><option value="$380&ndash;$590|2 days|~635 mi">Bay Area, CA</option><option value="$450&ndash;$680|2&ndash;3 days|~765 mi">Salt Lake City, UT</option><option value="$520&ndash;$780|2&ndash;3 days|~965 mi">Los Angeles, CA</option><option value="$560&ndash;$840|3 days|~985 mi">Las Vegas, NV</option><option value="$600&ndash;$880|3&ndash;4 days|~1,330 mi">Phoenix, AZ</option><option value="$720&ndash;$1,040|3&ndash;4 days|~1,250 mi">Denver, CO</option></select>
-      <div class="est-out" id="estOut"></div>
-    </div>
+    
     <div class="bt-wrap"><h3>Best time to book from here</h3><p>Dry-season months carry the peak; the Gorge&rsquo;s winter ice adds eastbound flexibility. Book June&ndash;September early; price-hunt November&ndash;February.</p></div>
-<script>document.getElementById('estSel').addEventListener('change',function(){var v=this.value;var o=document.getElementById('estOut');if(!v){o.innerHTML='';return}var p=v.split('|');o.innerHTML='Estimated open-carrier rate: <strong>'+p[0]+'</strong> &middot; transit '+p[1]+' &middot; '+p[2]+' &mdash; <a href="#quoteForm">lock a real quote</a>.';});</script>
 </section>
 <section class="city-section" id="sec1">
   <div class="container">

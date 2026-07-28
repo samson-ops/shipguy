@@ -794,6 +794,9 @@ body.ready .reveal{opacity:1;transform:none}
  .sticky-call .sc-quote{background:var(--brand);color:#fff}
  body{padding-bottom:52px}
 }
+
+.hero-copy .est-box{margin:18px 0 0;max-width:460px;box-shadow:0 6px 24px rgba(16,24,40,.10)}
+.hero-copy .est-box label{font-size:13.5px}
 </style>
 <script type="application/ld+json">
 {
@@ -1059,6 +1062,13 @@ body.ready .reveal{opacity:1;transform:none}
       <p class="eyebrow reveal">El&nbsp;Paso,&nbsp;TX&nbsp;&bull;&nbsp;Licensed&nbsp;&bull;&nbsp;Insured</p>
       <h1 class="reveal d2">Auto Transport in<br>El Paso, TX</h1>
       <p class="lede reveal d2">The pass the interstate runs through &mdash; corridor-blessed, Bliss-fluent, and honest on its own clock.</p>
+      <div class="est-box">
+      <label for="estSel">Instant estimate &mdash; pick a destination:</label>
+      <select id="estSel"><option value="">Choose a lane&hellip;</option><option value="$195&ndash;$315|1 day|~45 mi">Las Cruces, NM</option><option value="$245&ndash;$395|1 day|~265 mi">Albuquerque, NM</option><option value="$260&ndash;$420|1 day|~315 mi">Tucson, AZ</option><option value="$360&ndash;$560|1&ndash;2 days|~430 mi">Phoenix, AZ</option><option value="$400&ndash;$610|2 days|~550 mi">San Antonio, TX</option><option value="$425&ndash;$645|2 days|~635 mi">Dallas / Fort Worth, TX</option><option value="$470&ndash;$700|2&ndash;3 days|~745 mi">Houston, TX</option><option value="$560&ndash;$830|2&ndash;3 days|~725 mi">San Diego, CA</option><option value="$620&ndash;$910|2&ndash;3 days|~800 mi">Los Angeles, CA</option><option value="$560&ndash;$830|2 days|~640 mi">Denver, CO</option></select>
+      <div class="est-out" id="estOut"></div>
+    </div>
+<script>document.getElementById('estSel').addEventListener('change',function(){var v=this.value;var o=document.getElementById('estOut');if(!v){o.innerHTML='';return}var p=v.split('|');o.innerHTML='Estimated open-carrier rate: <strong>'+p[0]+'</strong> &middot; transit '+p[1]+' &middot; '+p[2]+' &mdash; <a href="#quoteForm">lock a real quote</a>.';});</script>
+
 
       <ul class="trust-list reveal d3">
         <li><span class="trust-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/><path d="m9 12 2 2 4-4"/></svg></span>Licensed Broker &amp; Fully Insured</li>
@@ -1120,13 +1130,8 @@ body.ready .reveal{opacity:1;transform:none}
     <p class="route-note">*Borderplex board, July 2026, sedan basis, Mountain-time windows; SUVs and pickups carry 10&ndash;25% premiums, oversized units quote by dimensions, winch loading adds $100&ndash;$200. PCS season runs heavy June&ndash;August &mdash; book to the report date; spring wind advisories occasionally ask high-profile loads an hour&rsquo;s patience.</p>
   </div>
 
-    <div class="est-box">
-      <label for="estSel">Instant estimate &mdash; pick a destination:</label>
-      <select id="estSel"><option value="">Choose a lane&hellip;</option><option value="$195&ndash;$315|1 day|~45 mi">Las Cruces, NM</option><option value="$245&ndash;$395|1 day|~265 mi">Albuquerque, NM</option><option value="$260&ndash;$420|1 day|~315 mi">Tucson, AZ</option><option value="$360&ndash;$560|1&ndash;2 days|~430 mi">Phoenix, AZ</option><option value="$400&ndash;$610|2 days|~550 mi">San Antonio, TX</option><option value="$425&ndash;$645|2 days|~635 mi">Dallas / Fort Worth, TX</option><option value="$470&ndash;$700|2&ndash;3 days|~745 mi">Houston, TX</option><option value="$560&ndash;$830|2&ndash;3 days|~725 mi">San Diego, CA</option><option value="$620&ndash;$910|2&ndash;3 days|~800 mi">Los Angeles, CA</option><option value="$560&ndash;$830|2 days|~640 mi">Denver, CO</option></select>
-      <div class="est-out" id="estOut"></div>
-    </div>
+    
     <div class="bt-wrap"><h3>Best time to book from here</h3><p>Report dates thicken June&ndash;August at Army scale; spring wind season asks occasional patience. Winter runs the pass&rsquo;s softest, sunniest board.</p></div>
-<script>document.getElementById('estSel').addEventListener('change',function(){var v=this.value;var o=document.getElementById('estOut');if(!v){o.innerHTML='';return}var p=v.split('|');o.innerHTML='Estimated open-carrier rate: <strong>'+p[0]+'</strong> &middot; transit '+p[1]+' &middot; '+p[2]+' &mdash; <a href="#quoteForm">lock a real quote</a>.';});</script>
 </section>
 <section class="city-section" id="sec1">
   <div class="container">

@@ -794,6 +794,9 @@ body.ready .reveal{opacity:1;transform:none}
  .sticky-call .sc-quote{background:var(--brand);color:#fff}
  body{padding-bottom:52px}
 }
+
+.hero-copy .est-box{margin:18px 0 0;max-width:460px;box-shadow:0 6px 24px rgba(16,24,40,.10)}
+.hero-copy .est-box label{font-size:13.5px}
 </style>
 <script type="application/ld+json">
 {
@@ -1059,6 +1062,13 @@ body.ready .reveal{opacity:1;transform:none}
       <p class="eyebrow reveal">Riverside,&nbsp;CA&nbsp;&bull;&nbsp;Licensed&nbsp;&bull;&nbsp;Insured</p>
       <h1 class="reveal d2">Auto Transport in<br>Riverside, CA</h1>
       <p class="lede reveal d2">Inland Empire car shipping from where the long-haul begins &mdash; heartland depth, eastbound geometry, no deposit to book.</p>
+      <div class="est-box">
+      <label for="estSel">Instant estimate &mdash; pick a destination:</label>
+      <select id="estSel"><option value="">Choose a lane&hellip;</option><option value="$280&ndash;$450|1 day|~235 mi">Las Vegas, NV</option><option value="$285&ndash;$460|1 day|~310 mi">Phoenix, AZ</option><option value="$380&ndash;$580|1&ndash;2 days|~420 mi">Tucson, AZ</option><option value="$380&ndash;$600|1&ndash;2 days|~430 mi">San Francisco Bay Area</option><option value="$630&ndash;$880|2&ndash;3 days|~695 mi">Albuquerque, NM</option><option value="$760&ndash;$1,060|3&ndash;4 days|~985 mi">Denver, CO</option><option value="$700&ndash;$960|2&ndash;4 days|~1,000 mi">Portland, OR</option><option value="$810&ndash;$1,120|3&ndash;5 days|~1,375 mi">Dallas, TX</option><option value="$1,040&ndash;$1,390|4&ndash;6 days|~1,975 mi">Chicago, IL</option><option value="$1,140&ndash;$1,540|5&ndash;8 days|~2,750 mi">New York, NY</option></select>
+      <div class="est-out" id="estOut"></div>
+    </div>
+<script>document.getElementById('estSel').addEventListener('change',function(){var v=this.value;var o=document.getElementById('estOut');if(!v){o.innerHTML='';return}var p=v.split('|');o.innerHTML='Estimated open-carrier rate: <strong>'+p[0]+'</strong> &middot; transit '+p[1]+' &middot; '+p[2]+' &mdash; <a href="#quoteForm">lock a real quote</a>.';});</script>
+
 
       <ul class="trust-list reveal d3">
         <li><span class="trust-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/><path d="m9 12 2 2 4-4"/></svg></span>Licensed Broker &amp; Fully Insured</li>
@@ -1120,13 +1130,8 @@ body.ready .reveal{opacity:1;transform:none}
     <p class="route-note">*July 2026 conditions, standard sedan baseline; count 10&ndash;25% extra for SUVs and pickups, dimensions-based quotes for oversized rigs, and a $100&ndash;$200 winch charge when the vehicle can&rsquo;t load under its own power. Summer quotes assume early-day loading windows &mdash; the inland heat sets the workday, not the price.</p>
   </div>
 
-    <div class="est-box">
-      <label for="estSel">Instant estimate &mdash; pick a destination:</label>
-      <select id="estSel"><option value="">Choose a lane&hellip;</option><option value="$280&ndash;$450|1 day|~235 mi">Las Vegas, NV</option><option value="$285&ndash;$460|1 day|~310 mi">Phoenix, AZ</option><option value="$380&ndash;$580|1&ndash;2 days|~420 mi">Tucson, AZ</option><option value="$380&ndash;$600|1&ndash;2 days|~430 mi">San Francisco Bay Area</option><option value="$630&ndash;$880|2&ndash;3 days|~695 mi">Albuquerque, NM</option><option value="$760&ndash;$1,060|3&ndash;4 days|~985 mi">Denver, CO</option><option value="$700&ndash;$960|2&ndash;4 days|~1,000 mi">Portland, OR</option><option value="$810&ndash;$1,120|3&ndash;5 days|~1,375 mi">Dallas, TX</option><option value="$1,040&ndash;$1,390|4&ndash;6 days|~1,975 mi">Chicago, IL</option><option value="$1,140&ndash;$1,540|5&ndash;8 days|~2,750 mi">New York, NY</option></select>
-      <div class="est-out" id="estOut"></div>
-    </div>
+    
     <div class="bt-wrap"><h3>Best time to book from here</h3><p>Inland Empire logistics keep equipment dense year-round; summer heat argues early handoffs. The soft window: late fall through midwinter, school-year moves landed.</p></div>
-<script>document.getElementById('estSel').addEventListener('change',function(){var v=this.value;var o=document.getElementById('estOut');if(!v){o.innerHTML='';return}var p=v.split('|');o.innerHTML='Estimated open-carrier rate: <strong>'+p[0]+'</strong> &middot; transit '+p[1]+' &middot; '+p[2]+' &mdash; <a href="#quoteForm">lock a real quote</a>.';});</script>
 </section>
 <section class="city-section" id="sec1">
   <div class="container">

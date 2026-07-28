@@ -794,6 +794,9 @@ body.ready .reveal{opacity:1;transform:none}
  .sticky-call .sc-quote{background:var(--brand);color:#fff}
  body{padding-bottom:52px}
 }
+
+.hero-copy .est-box{margin:18px 0 0;max-width:460px;box-shadow:0 6px 24px rgba(16,24,40,.10)}
+.hero-copy .est-box label{font-size:13.5px}
 </style>
 <script type="application/ld+json">
 {
@@ -1059,6 +1062,13 @@ body.ready .reveal{opacity:1;transform:none}
       <p class="eyebrow reveal">San&nbsp;Jose,&nbsp;CA&nbsp;&bull;&nbsp;Licensed&nbsp;&bull;&nbsp;Insured</p>
       <h1 class="reveal d2">Car Shipping in<br>San Jose, CA</h1>
       <p class="lede reveal d2">Silicon Valley auto transport on tech&rsquo;s calendar &mdash; relo-ready, EV-fluent, and priced by the easiest streets in the Bay.</p>
+      <div class="est-box">
+      <label for="estSel">Instant estimate &mdash; pick a destination:</label>
+      <select id="estSel"><option value="">Choose a lane&hellip;</option><option value="$250&ndash;$400|1 day|~120 mi">Sacramento, CA</option><option value="$350&ndash;$550|1&ndash;2 days|~340 mi">Los Angeles, CA</option><option value="$425&ndash;$650|1&ndash;2 days|~460 mi">San Diego, CA</option><option value="$650&ndash;$900|2&ndash;3 days|~640 mi">Portland, OR</option><option value="$750&ndash;$1,050|2&ndash;4 days|~840 mi">Seattle, WA</option><option value="$900&ndash;$1,250|3&ndash;5 days|~1,250 mi">Denver, CO</option><option value="$1,100&ndash;$1,500|4&ndash;6 days|~1,720 mi">Austin, TX</option><option value="$1,150&ndash;$1,550|4&ndash;7 days|~2,130 mi">Chicago, IL</option><option value="$1,250&ndash;$1,700|6&ndash;8 days|~2,900 mi">New York, NY</option></select>
+      <div class="est-out" id="estOut"></div>
+    </div>
+<script>document.getElementById('estSel').addEventListener('change',function(){var v=this.value;var o=document.getElementById('estOut');if(!v){o.innerHTML='';return}var p=v.split('|');o.innerHTML='Estimated open-carrier rate: <strong>'+p[0]+'</strong> &middot; transit '+p[1]+' &middot; '+p[2]+' &mdash; <a href="#quoteForm">lock a real quote</a>.';});</script>
+
 
       <ul class="trust-list reveal d3">
         <li><span class="trust-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/><path d="m9 12 2 2 4-4"/></svg></span>Licensed Broker &amp; Fully Insured</li>
@@ -1119,13 +1129,8 @@ body.ready .reveal{opacity:1;transform:none}
     <p class="route-note">*July 2026 lane conditions, standard sedan. Figure 10&ndash;25% more for SUVs and trucks; EVs price near their gas equivalents when the model is disclosed up front (battery weight belongs in the load plan, not in a surprise). Non-runners add $100&ndash;$200 for winch loading.</p>
   </div>
 
-    <div class="est-box">
-      <label for="estSel">Instant estimate &mdash; pick a destination:</label>
-      <select id="estSel"><option value="">Choose a lane&hellip;</option><option value="$250&ndash;$400|1 day|~120 mi">Sacramento, CA</option><option value="$350&ndash;$550|1&ndash;2 days|~340 mi">Los Angeles, CA</option><option value="$425&ndash;$650|1&ndash;2 days|~460 mi">San Diego, CA</option><option value="$650&ndash;$900|2&ndash;3 days|~640 mi">Portland, OR</option><option value="$750&ndash;$1,050|2&ndash;4 days|~840 mi">Seattle, WA</option><option value="$900&ndash;$1,250|3&ndash;5 days|~1,250 mi">Denver, CO</option><option value="$1,100&ndash;$1,500|4&ndash;6 days|~1,720 mi">Austin, TX</option><option value="$1,150&ndash;$1,550|4&ndash;7 days|~2,130 mi">Chicago, IL</option><option value="$1,250&ndash;$1,700|6&ndash;8 days|~2,900 mi">New York, NY</option></select>
-      <div class="est-out" id="estOut"></div>
-    </div>
+    
     <div class="bt-wrap"><h3>Best time to book from here</h3><p>Tech relocation waves follow hiring cycles more than seasons; August still stacks student and family moves. Counter-flow legs price kindly year-round for flexible dates.</p></div>
-<script>document.getElementById('estSel').addEventListener('change',function(){var v=this.value;var o=document.getElementById('estOut');if(!v){o.innerHTML='';return}var p=v.split('|');o.innerHTML='Estimated open-carrier rate: <strong>'+p[0]+'</strong> &middot; transit '+p[1]+' &middot; '+p[2]+' &mdash; <a href="#quoteForm">lock a real quote</a>.';});</script>
 </section>
 <section class="city-section" id="sec1">
   <div class="container">

@@ -794,6 +794,9 @@ body.ready .reveal{opacity:1;transform:none}
  .sticky-call .sc-quote{background:var(--brand);color:#fff}
  body{padding-bottom:52px}
 }
+
+.hero-copy .est-box{margin:18px 0 0;max-width:460px;box-shadow:0 6px 24px rgba(16,24,40,.10)}
+.hero-copy .est-box label{font-size:13.5px}
 </style>
 <script type="application/ld+json">
 {
@@ -1059,6 +1062,13 @@ body.ready .reveal{opacity:1;transform:none}
       <p class="eyebrow reveal">Raleigh,&nbsp;NC&nbsp;&bull;&nbsp;Licensed&nbsp;&bull;&nbsp;Insured</p>
       <h1 class="reveal d2">Auto Transport in<br>Raleigh, NC</h1>
       <p class="lede reveal d2">The capital corner of the Triangle &mdash; process-fluent, arc-ready, and statute-grade dependable.</p>
+      <div class="est-box">
+      <label for="estSel">Instant estimate &mdash; pick a destination:</label>
+      <select id="estSel"><option value="">Choose a lane&hellip;</option><option value="$195&ndash;$310|same day|~25 mi">Durham / Chapel Hill, NC</option><option value="$215&ndash;$350|1 day|~165 mi">Charlotte, NC</option><option value="$215&ndash;$345|1 day|~130 mi">Wilmington, NC</option><option value="$225&ndash;$365|1 day|~170 mi">Richmond, VA</option><option value="$255&ndash;$410|1 day|~275 mi">Washington, DC</option><option value="$270&ndash;$430|1 day|~280 mi">Charleston, SC</option><option value="$295&ndash;$465|1&ndash;2 days|~405 mi">Atlanta, GA</option><option value="$425&ndash;$635|2 days|~500 mi">New York / New Jersey</option><option value="$495&ndash;$745|2&ndash;3 days|~600 mi">Orlando, FL</option><option value="$565&ndash;$845|2&ndash;3 days|~790 mi">Chicago, IL</option></select>
+      <div class="est-out" id="estOut"></div>
+    </div>
+<script>document.getElementById('estSel').addEventListener('change',function(){var v=this.value;var o=document.getElementById('estOut');if(!v){o.innerHTML='';return}var p=v.split('|');o.innerHTML='Estimated open-carrier rate: <strong>'+p[0]+'</strong> &middot; transit '+p[1]+' &middot; '+p[2]+' &mdash; <a href="#quoteForm">lock a real quote</a>.';});</script>
+
 
       <ul class="trust-list reveal d3">
         <li><span class="trust-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/><path d="m9 12 2 2 4-4"/></svg></span>Licensed Broker &amp; Fully Insured</li>
@@ -1120,13 +1130,8 @@ body.ready .reveal{opacity:1;transform:none}
     <p class="route-note">*Wake County board, July 2026, sedan basis; count on 10&ndash;25% more for SUVs and pickups, measured quotes on oversized units, and $100&ndash;$200 winch work for non-runners. August stacks the collegiate and onboarding tides &mdash; two weeks&rsquo; notice recommended; fiscal-year turns cluster the government trade each summer.</p>
   </div>
 
-    <div class="est-box">
-      <label for="estSel">Instant estimate &mdash; pick a destination:</label>
-      <select id="estSel"><option value="">Choose a lane&hellip;</option><option value="$195&ndash;$310|same day|~25 mi">Durham / Chapel Hill, NC</option><option value="$215&ndash;$350|1 day|~165 mi">Charlotte, NC</option><option value="$215&ndash;$345|1 day|~130 mi">Wilmington, NC</option><option value="$225&ndash;$365|1 day|~170 mi">Richmond, VA</option><option value="$255&ndash;$410|1 day|~275 mi">Washington, DC</option><option value="$270&ndash;$430|1 day|~280 mi">Charleston, SC</option><option value="$295&ndash;$465|1&ndash;2 days|~405 mi">Atlanta, GA</option><option value="$425&ndash;$635|2 days|~500 mi">New York / New Jersey</option><option value="$495&ndash;$745|2&ndash;3 days|~600 mi">Orlando, FL</option><option value="$565&ndash;$845|2&ndash;3 days|~790 mi">Chicago, IL</option></select>
-      <div class="est-out" id="estOut"></div>
-    </div>
+    
     <div class="bt-wrap"><h3>Best time to book from here</h3><p>Session springs and August&rsquo;s triple-campus tide mark the peaks. The soft window: early winter, assemblies adjourned and campuses quiet.</p></div>
-<script>document.getElementById('estSel').addEventListener('change',function(){var v=this.value;var o=document.getElementById('estOut');if(!v){o.innerHTML='';return}var p=v.split('|');o.innerHTML='Estimated open-carrier rate: <strong>'+p[0]+'</strong> &middot; transit '+p[1]+' &middot; '+p[2]+' &mdash; <a href="#quoteForm">lock a real quote</a>.';});</script>
 </section>
 <section class="city-section" id="sec1">
   <div class="container">

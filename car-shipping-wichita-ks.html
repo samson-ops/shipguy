@@ -794,6 +794,9 @@ body.ready .reveal{opacity:1;transform:none}
  .sticky-call .sc-quote{background:var(--brand);color:#fff}
  body{padding-bottom:52px}
 }
+
+.hero-copy .est-box{margin:18px 0 0;max-width:460px;box-shadow:0 6px 24px rgba(16,24,40,.10)}
+.hero-copy .est-box label{font-size:13.5px}
 </style>
 <script type="application/ld+json">
 {
@@ -1059,6 +1062,13 @@ body.ready .reveal{opacity:1;transform:none}
       <p class="eyebrow reveal">Wichita,&nbsp;KS&nbsp;&bull;&nbsp;Licensed&nbsp;&bull;&nbsp;Insured</p>
       <h1 class="reveal d2">Car Shipping in<br>Wichita, KS</h1>
       <p class="lede reveal d2">The Air Capital&rsquo;s regional anchor &mdash; sky-literate, relay-honest, and plains-plain about every window.</p>
+      <div class="est-box">
+      <label for="estSel">Instant estimate &mdash; pick a destination:</label>
+      <select id="estSel"><option value="">Choose a lane&hellip;</option><option value="$230&ndash;$375|1 day|~160 mi">Oklahoma City, OK</option><option value="$235&ndash;$380|1 day|~200 mi">Kansas City, MO</option><option value="$230&ndash;$370|1 day|~180 mi">Tulsa, OK</option><option value="$290&ndash;$460|1&ndash;2 days|~340 mi">Dallas, TX</option><option value="$420&ndash;$630|2&ndash;3 days|~520 mi">Denver, CO</option><option value="$460&ndash;$690|2&ndash;3 days|~580 mi">Houston, TX</option><option value="$480&ndash;$720|2&ndash;3 days|~730 mi">Chicago, IL</option><option value="$560&ndash;$820|3&ndash;4 days|~1,000 mi">Phoenix, AZ</option><option value="$740&ndash;$1,040|3&ndash;4 days|~950 mi">Atlanta, GA</option><option value="$980&ndash;$1,420|4&ndash;6 days|~1,380 mi">Los Angeles, CA</option></select>
+      <div class="est-out" id="estOut"></div>
+    </div>
+<script>document.getElementById('estSel').addEventListener('change',function(){var v=this.value;var o=document.getElementById('estOut');if(!v){o.innerHTML='';return}var p=v.split('|');o.innerHTML='Estimated open-carrier rate: <strong>'+p[0]+'</strong> &middot; transit '+p[1]+' &middot; '+p[2]+' &mdash; <a href="#quoteForm">lock a real quote</a>.';});</script>
+
 
       <ul class="trust-list reveal d3">
         <li><span class="trust-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/><path d="m9 12 2 2 4-4"/></svg></span>Licensed Broker &amp; Fully Insured</li>
@@ -1120,13 +1130,8 @@ body.ready .reveal{opacity:1;transform:none}
     <p class="route-note">*Market snapshot July 2026, running sedan; SUVs and pickups typically 10&ndash;25% higher, oversized quotes by dimensions, winch service $100&ndash;$200 where needed. Severe-season bookings (April&ndash;June) carry weather-timing flexibility at no charge &mdash; the plains write the schedule some afternoons, and we write it around them.</p>
   </div>
 
-    <div class="est-box">
-      <label for="estSel">Instant estimate &mdash; pick a destination:</label>
-      <select id="estSel"><option value="">Choose a lane&hellip;</option><option value="$230&ndash;$375|1 day|~160 mi">Oklahoma City, OK</option><option value="$235&ndash;$380|1 day|~200 mi">Kansas City, MO</option><option value="$230&ndash;$370|1 day|~180 mi">Tulsa, OK</option><option value="$290&ndash;$460|1&ndash;2 days|~340 mi">Dallas, TX</option><option value="$420&ndash;$630|2&ndash;3 days|~520 mi">Denver, CO</option><option value="$460&ndash;$690|2&ndash;3 days|~580 mi">Houston, TX</option><option value="$480&ndash;$720|2&ndash;3 days|~730 mi">Chicago, IL</option><option value="$560&ndash;$820|3&ndash;4 days|~1,000 mi">Phoenix, AZ</option><option value="$740&ndash;$1,040|3&ndash;4 days|~950 mi">Atlanta, GA</option><option value="$980&ndash;$1,420|4&ndash;6 days|~1,380 mi">Los Angeles, CA</option></select>
-      <div class="est-out" id="estOut"></div>
-    </div>
+    
     <div class="bt-wrap"><h3>Best time to book from here</h3><p>Aviation program cycles and school calendars set the peaks; spring storm season asks hail awareness. Softest pricing rides midwinter&rsquo;s quiet plains.</p></div>
-<script>document.getElementById('estSel').addEventListener('change',function(){var v=this.value;var o=document.getElementById('estOut');if(!v){o.innerHTML='';return}var p=v.split('|');o.innerHTML='Estimated open-carrier rate: <strong>'+p[0]+'</strong> &middot; transit '+p[1]+' &middot; '+p[2]+' &mdash; <a href="#quoteForm">lock a real quote</a>.';});</script>
 </section>
 <section class="city-section" id="sec1">
   <div class="container">
