@@ -1142,14 +1142,6 @@ body.ready .reveal{opacity:1;transform:none}
     </div>
     <p class="route-note">*Reflecting July 2026 conditions for a standard sedan; add 10&ndash;25% for SUVs and trucks, more for oversized, $100&ndash;$200 for non-runners. What SF never adds: an access surcharge &mdash; the staging-corridor system is standard method here, not an upsell.</p>
   </div>
-
-    
-    <div class="est-box">
-      <label for="estSel">Instant estimate &mdash; pick a destination:</label>
-      <select id="estSel"><option value="">Choose a lane&hellip;</option><option value="$375&ndash;$575|1&ndash;2 days|~380 mi">Los Angeles, CA</option><option value="$450&ndash;$675|1&ndash;2 days|~500 mi">San Diego, CA</option><option value="$550&ndash;$800|2&ndash;3 days|~570 mi">Las Vegas, NV</option><option value="$600&ndash;$850|2&ndash;3 days|~635 mi">Portland, OR</option><option value="$700&ndash;$1,000|2&ndash;4 days|~810 mi">Seattle, WA</option><option value="$900&ndash;$1,275|3&ndash;5 days|~1,250 mi">Denver, CO</option><option value="$1,150&ndash;$1,550|4&ndash;6 days|~1,750 mi">Austin, TX</option><option value="$1,175&ndash;$1,575|4&ndash;7 days|~2,130 mi">Chicago, IL</option><option value="$1,275&ndash;$1,750|6&ndash;8 days|~2,900 mi">New York, NY</option></select>
-      <div class="est-out" id="estOut"></div>
-    </div>
-<script>document.getElementById('estSel').addEventListener('change',function(){var v=this.value;var o=document.getElementById('estOut');if(!v){o.innerHTML='';return}var p=v.split('|');o.innerHTML='Estimated open-carrier rate: <strong>'+p[0]+'</strong> &middot; transit '+p[1]+' &middot; '+p[2]+' &mdash; <a href="#quoteForm">lock a real quote</a>.';});</script>
     <div class="bt-wrap"><h3>Best time to book from here</h3><p>Corporate and academic calendars drive late-summer peaks; winter runs the year&rsquo;s calmest board. Flexible dates catch the softest coast-lane pricing January&ndash;February.</p></div>
 </section>
 <section class="city-section" id="sec1">

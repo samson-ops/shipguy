@@ -1154,14 +1154,6 @@ body.ready .reveal{opacity:1;transform:none}
     </div>
     <p class="route-note">*Combined-leg sedan estimates as of July 2026, standard roll-on service. Oversized vehicles, lifted trucks, and inoperables price by dimensions and condition on the ocean leg &mdash; height matters on a ship in a way it never does on a highway. Containerized (enclosed-equivalent) service quoted on request.</p>
   </div>
-
-    
-    <div class="est-box">
-      <label for="estSel">Instant estimate &mdash; pick a destination:</label>
-      <select id="estSel"><option value="">Choose a lane&hellip;</option><option value="$1,600&ndash;$2,300|7&ndash;12 days|land + ocean">Seattle/Tacoma, WA</option><option value="$1,700&ndash;$2,400|8&ndash;13 days|land + ocean">Portland, OR</option><option value="$2,000&ndash;$2,800|10&ndash;16 days|land + ocean">Los Angeles, CA</option><option value="$2,100&ndash;$2,900|10&ndash;16 days|land + ocean">Phoenix, AZ</option><option value="$2,200&ndash;$3,000|12&ndash;18 days|land + ocean">Dallas, TX</option><option value="$2,200&ndash;$3,100|12&ndash;18 days|land + ocean">Chicago, IL</option><option value="$2,400&ndash;$3,300|14&ndash;24 days|land + ocean">New York, NY</option><option value="$400&ndash;$700|1&ndash;3 days|~360 mi overland">Fairbanks, AK</option></select>
-      <div class="est-out" id="estOut"></div>
-    </div>
-<script>document.getElementById('estSel').addEventListener('change',function(){var v=this.value;var o=document.getElementById('estOut');if(!v){o.innerHTML='';return}var p=v.split('|');o.innerHTML='Estimated open-carrier rate: <strong>'+p[0]+'</strong> &middot; transit '+p[1]+' &middot; '+p[2]+' &mdash; <a href="#quoteForm">lock a real quote</a>.';});</script>
     <div class="bt-wrap"><h3>Best time to book from here</h3><p>The season is the schedule here: May&ndash;September carries the volume, October&rsquo;s last sailings book early, midwinter runs limited. Plan summer moves a month ahead.</p></div>
 </section>
 <section class="city-section alt" id="sec2">

@@ -1148,14 +1148,6 @@ body.ready .reveal{opacity:1;transform:none}
     </div>
     <p class="route-note">*Ranges shown are for a sedan that runs and drives, current as of July 2026. SUVs and full-size trucks add roughly 10&ndash;25%; lifted or oversized vehicles are quoted individually. Inoperable vehicles add $100&ndash;$200 for winch loading.</p>
   </div>
-
-    
-    <div class="est-box">
-      <label for="estSel">Instant estimate &mdash; pick a destination:</label>
-      <select id="estSel"><option value="">Choose a lane&hellip;</option><option value="$300&ndash;$500|1&ndash;2 days|~370 mi">Los Angeles, CA</option><option value="$300&ndash;$450|1&ndash;2 days|~300 mi">Las Vegas, NV</option><option value="$600&ndash;$850|2&ndash;3 days|~820 mi">Denver, CO</option><option value="$700&ndash;$950|2&ndash;4 days|~1,065 mi">Dallas, TX</option><option value="$900&ndash;$1,300|3&ndash;5 days|~1,420 mi">Seattle, WA</option><option value="$900&ndash;$1,300|4&ndash;6 days|~1,650 mi">Minneapolis, MN</option><option value="$950&ndash;$1,350|4&ndash;6 days|~1,750 mi">Chicago, IL</option><option value="$1,150&ndash;$1,650|6&ndash;9 days|~2,400 mi">New York, NY</option></select>
-      <div class="est-out" id="estOut"></div>
-    </div>
-<script>document.getElementById('estSel').addEventListener('change',function(){var v=this.value;var o=document.getElementById('estOut');if(!v){o.innerHTML='';return}var p=v.split('|');o.innerHTML='Estimated open-carrier rate: <strong>'+p[0]+'</strong> &middot; transit '+p[1]+' &middot; '+p[2]+' &mdash; <a href="#quoteForm">lock a real quote</a>.';});</script>
     <div class="bt-wrap"><h3>Best time to book from here</h3><p>Winter-visitor season peaks October&ndash;December inbound and March&ndash;April outbound; deep-summer heat shifts loading to first light. Best rates ride the shoulders, May and September.</p></div>
 </section>
 

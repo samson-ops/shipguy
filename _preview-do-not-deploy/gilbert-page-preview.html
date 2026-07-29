@@ -1142,14 +1142,6 @@ body.ready .reveal{opacity:1;transform:none}
     </div>
     <p class="route-note">*July 2026 market estimates, standard sedan baseline; SUVs, minivans, and trucks &mdash; the honest majority of Gilbert driveways &mdash; run roughly 10&ndash;25% more. Inoperable vehicles add $100&ndash;$200 for winch loading. Quotes lock the rate for your dates.</p>
   </div>
-
-    
-    <div class="est-box">
-      <label for="estSel">Instant estimate &mdash; pick a destination:</label>
-      <select id="estSel"><option value="">Choose a lane&hellip;</option><option value="$400&ndash;$600|1&ndash;2 days|~390 mi">Los Angeles, CA</option><option value="$400&ndash;$600|1&ndash;2 days|~370 mi">San Diego, CA</option><option value="$650&ndash;$900|2&ndash;3 days|~750 mi">San Francisco Bay Area</option><option value="$600&ndash;$850|2&ndash;3 days|~660 mi">Salt Lake City, UT</option><option value="$700&ndash;$1,000|2&ndash;4 days|~820 mi">Denver, CO</option><option value="$800&ndash;$1,100|3&ndash;4 days|~1,000 mi">Austin, TX</option><option value="$900&ndash;$1,250|3&ndash;5 days|~1,330 mi">Portland, OR</option><option value="$1,025&ndash;$1,375|4&ndash;6 days|~1,730 mi">Chicago, IL</option><option value="$1,225&ndash;$1,625|5&ndash;7 days|~2,380 mi">New York, NY</option></select>
-      <div class="est-out" id="estOut"></div>
-    </div>
-<script>document.getElementById('estSel').addEventListener('change',function(){var v=this.value;var o=document.getElementById('estOut');if(!v){o.innerHTML='';return}var p=v.split('|');o.innerHTML='Estimated open-carrier rate: <strong>'+p[0]+'</strong> &middot; transit '+p[1]+' &middot; '+p[2]+' &mdash; <a href="#quoteForm">lock a real quote</a>.';});</script>
     <div class="bt-wrap"><h3>Best time to book from here</h3><p>School-calendar family moves crest June&ndash;July; winter-visitor overflow warms January&ndash;March. The east-valley sweet spot for price: late summer into early fall.</p></div>
 </section>
 <section class="city-section" id="sec1">

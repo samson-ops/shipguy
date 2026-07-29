@@ -1143,14 +1143,6 @@ body.ready .reveal{opacity:1;transform:none}
     </div>
     <p class="route-note">*July 2026 conditions, standard sedan; 10&ndash;25% above for SUVs and pickups, dimensional pricing for oversized, winch service $100&ndash;$200 where a vehicle can&rsquo;t load itself. The San Juan figure bundles the land leg, port handling, and the crossing &mdash; ocean rules (empty vehicle, quarter tank) apply and are detailed below.</p>
   </div>
-
-    
-    <div class="est-box">
-      <label for="estSel">Instant estimate &mdash; pick a destination:</label>
-      <select id="estSel"><option value="">Choose a lane&hellip;</option><option value="$225&ndash;$375|1 day|~85 mi">Tampa, FL</option><option value="$235&ndash;$385|1 day|~235 mi">Miami, FL</option><option value="$230&ndash;$380|1 day|~140 mi">Jacksonville, FL</option><option value="$290&ndash;$465|1&ndash;2 days|~440 mi">Atlanta, GA</option><option value="$410&ndash;$610|2&ndash;3 days|~530 mi">Charlotte, NC</option><option value="$560&ndash;$810|2&ndash;3 days|~850 mi">Washington, DC</option><option value="$640&ndash;$915|3&ndash;4 days|~1,075 mi">New York / New Jersey</option><option value="$610&ndash;$885|3&ndash;4 days|~1,150 mi">Chicago, IL</option><option value="$690&ndash;$965|3&ndash;4 days|~965 mi">Houston, TX</option><option value="$950&ndash;$1,500|10&ndash;18 days|land + ocean">San Juan, PR</option></select>
-      <div class="est-out" id="estOut"></div>
-    </div>
-<script>document.getElementById('estSel').addEventListener('change',function(){var v=this.value;var o=document.getElementById('estOut');if(!v){o.innerHTML='';return}var p=v.split('|');o.innerHTML='Estimated open-carrier rate: <strong>'+p[0]+'</strong> &middot; transit '+p[1]+' &middot; '+p[2]+' &mdash; <a href="#quoteForm">lock a real quote</a>.';});</script>
     <div class="bt-wrap"><h3>Best time to book from here</h3><p>Park rhythms and snowbird tides overlap; summer arrivals peak with school calendars, winter with the season. Late spring&rsquo;s northbound counter-flow prices kindest.</p></div>
 </section>
 <section class="city-section" id="sec1">

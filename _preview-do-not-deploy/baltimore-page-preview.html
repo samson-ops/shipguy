@@ -1143,14 +1143,6 @@ body.ready .reveal{opacity:1;transform:none}
     </div>
     <p class="route-note">*Figures reflect July 2026 for a running sedan; larger vehicles add 10&ndash;25%, oversized quotes go by dimensions, winch loading $100&ndash;$200 where needed. Corridor lanes run year-round at depth; Florida legs firm southbound October&ndash;December with the seaboard&rsquo;s great winter tide.</p>
   </div>
-
-    
-    <div class="est-box">
-      <label for="estSel">Instant estimate &mdash; pick a destination:</label>
-      <select id="estSel"><option value="">Choose a lane&hellip;</option><option value="$200&ndash;$325|1 day|~40 mi">Washington, DC</option><option value="$205&ndash;$335|1 day|~100 mi">Philadelphia, PA</option><option value="$235&ndash;$380|1 day|~155 mi">Richmond, VA</option><option value="$250&ndash;$400|1 day|~190 mi">New York / New Jersey</option><option value="$280&ndash;$450|1 day|~250 mi">Pittsburgh, PA</option><option value="$330&ndash;$520|1&ndash;2 days|~400 mi">Boston, MA</option><option value="$420&ndash;$630|1&ndash;2 days|~430 mi">Charlotte, NC</option><option value="$460&ndash;$690|2&ndash;3 days|~680 mi">Atlanta, GA</option><option value="$620&ndash;$900|2&ndash;3 days|~875 mi">Orlando, FL</option><option value="$560&ndash;$840|2&ndash;3 days|~700 mi">Chicago, IL</option></select>
-      <div class="est-out" id="estOut"></div>
-    </div>
-<script>document.getElementById('estSel').addEventListener('change',function(){var v=this.value;var o=document.getElementById('estOut');if(!v){o.innerHTML='';return}var p=v.split('|');o.innerHTML='Estimated open-carrier rate: <strong>'+p[0]+'</strong> &middot; transit '+p[1]+' &middot; '+p[2]+' &mdash; <a href="#quoteForm">lock a real quote</a>.';});</script>
     <div class="bt-wrap"><h3>Best time to book from here</h3><p>Corridor volume peaks late summer; academic and federal calendars stack August. Winter&rsquo;s quieter board prices the I-95 legs kindest.</p></div>
 </section>
 <section class="city-section" id="sec1">
