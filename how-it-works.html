@@ -617,6 +617,17 @@ body.ready .reveal{opacity:1;transform:none}
   .hiw-trust .ht p{color:var(--ink-2);font-size:14px;line-height:1.55;margin:0}
   @media (max-width:900px){.hiw-trust{grid-template-columns:1fr 1fr}}
   @media (max-width:560px){.hiw-trust{grid-template-columns:1fr}}
+
+/* === mobile horizontal-overflow fix === */
+html,body{overflow-x:clip}
+@media(max-width:760px){
+ .cmp-grid{grid-template-columns:1fr}
+ .season-grid{grid-template-columns:1fr}
+ .route-row > *,.glance-cell,.cmp-card,.why-card,.step-card,.toc-nav a,.faq-item{min-width:0}
+ .glance-cell span,.route-name,.faq-q,.txt-block p,.city-callout p,.cmp-card li{overflow-wrap:break-word}
+ img,iframe,video,table,figure{max-width:100%}
+ .container,.hero-grid,.hero-grid-solo{max-width:100%}
+}
 </style>
 <script type="application/ld+json">
 {

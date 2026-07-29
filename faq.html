@@ -641,6 +641,17 @@ body.ready .reveal{opacity:1;transform:none}
   .fh-call:hover{background:var(--brand-press)}
   .fh-contact{display:inline-flex;align-items:center;gap:8px;background:#fff;color:var(--brand-deep);font-weight:700;font-size:15px;padding:12px 22px;border-radius:999px;border:2px solid var(--brand)}
   .fh-contact:hover{background:#fff}
+
+/* === mobile horizontal-overflow fix === */
+html,body{overflow-x:clip}
+@media(max-width:760px){
+ .cmp-grid{grid-template-columns:1fr}
+ .season-grid{grid-template-columns:1fr}
+ .route-row > *,.glance-cell,.cmp-card,.why-card,.step-card,.toc-nav a,.faq-item{min-width:0}
+ .glance-cell span,.route-name,.faq-q,.txt-block p,.city-callout p,.cmp-card li{overflow-wrap:break-word}
+ img,iframe,video,table,figure{max-width:100%}
+ .container,.hero-grid,.hero-grid-solo{max-width:100%}
+}
 </style>
 <script type="application/ld+json">
 {
