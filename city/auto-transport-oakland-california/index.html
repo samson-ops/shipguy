@@ -1143,14 +1143,6 @@ body.ready .reveal{opacity:1;transform:none}
     </div>
     <p class="route-note">*Rates reflect July 2026 for a standard sedan; SUVs and pickups run roughly 10&ndash;25% higher, oversized quotes by dimensions, non-runners +$100&ndash;$200 for winch loading. Terminal collections price with the destination leg once your release window posts.</p>
   </div>
-
-    
-    <div class="est-box">
-      <label for="estSel">Instant estimate &mdash; pick a destination:</label>
-      <select id="estSel"><option value="">Choose a lane&hellip;</option><option value="$250&ndash;$400|1 day|~80 mi">Sacramento, CA</option><option value="$360&ndash;$580|1&ndash;2 days|~370 mi">Los Angeles, CA</option><option value="$440&ndash;$660|1&ndash;2 days|~490 mi">San Diego, CA</option><option value="$540&ndash;$790|2&ndash;3 days|~560 mi">Las Vegas, NV</option><option value="$590&ndash;$840|2&ndash;3 days|~625 mi">Portland, OR</option><option value="$690&ndash;$990|2&ndash;4 days|~800 mi">Seattle, WA</option><option value="$875&ndash;$1,250|3&ndash;5 days|~1,240 mi">Denver, CO</option><option value="$1,125&ndash;$1,525|4&ndash;6 days|~1,925 mi">Houston, TX</option><option value="$1,200&ndash;$1,650|5&ndash;7 days|~2,460 mi">Atlanta, GA</option><option value="$1,250&ndash;$1,725|6&ndash;8 days|~2,905 mi">New York, NY</option></select>
-      <div class="est-out" id="estOut"></div>
-    </div>
-<script>document.getElementById('estSel').addEventListener('change',function(){var v=this.value;var o=document.getElementById('estOut');if(!v){o.innerHTML='';return}var p=v.split('|');o.innerHTML='Estimated open-carrier rate: <strong>'+p[0]+'</strong> &middot; transit '+p[1]+' &middot; '+p[2]+' &mdash; <a href="#quoteForm">lock a real quote</a>.';});</script>
     <div class="bt-wrap"><h3>Best time to book from here</h3><p>East Bay volume tracks the region&rsquo;s late-summer peak; winter runs quiet and kind on rates. Port-adjacent scheduling stays steady in every season.</p></div>
 </section>
 <section class="city-section" id="sec1">
