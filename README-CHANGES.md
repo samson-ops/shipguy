@@ -546,3 +546,9 @@ If this reads right, the same treatment can be applied page-by-page to the other
 **IMPORTANT — local viewing:** because city pages use root-relative paths, double-clicking a city index.html from the extracted zip will show broken styles/images. That is expected. To view locally, either use the files in _preview-do-not-deploy/ (self-contained) or run a local server from the site root (e.g. python3 -m http.server). On the real host everything resolves normally.
 
 **Mobile, AL custom hero:** new photo at /assets/hero-mobile-alabama.jpg (1672x941, img width/height set, og:image + twitter:image updated). Miami retains its existing hero-miami.jpg; the other 47 use the shared default until per-city photos arrive.
+
+
+---
+
+## Byline Complete (July 28, 2026)
+All 150 byline placeholders filled on 49 city pages + TX hub: **Written & reviewed by Brittany Newles, Blog Writer, 12+ years in vehicle logistics.** Author Person node added to each page's WebPage schema. **Zero placeholder tokens remain anywhere on the site.** (Note: title rendered as "Blog Writer"; consider a logistics-weighted title like "Content Lead, Vehicle Logistics" for stronger E-E-A-T if accurate.) Instant-estimate widget also removed from all 49 city pages this session per request.
