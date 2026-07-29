@@ -812,7 +812,7 @@ body.ready .reveal{opacity:1;transform:none}
  .mobile-tagline{display:block;grid-area:tagline;margin:2px 0 8px;font-family:var(--font-display);font-weight:800;font-size:clamp(1.05rem,5.2vw,1.35rem);letter-spacing:-.01em;color:#101a3d;text-shadow:0 1px 2px rgba(255,255,255,.85),0 2px 14px rgba(255,255,255,.75);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;text-align:center}
  .hero-grid-solo .quote-card{margin:8px 0 12px!important;max-width:100%}
  .hero-bottom .lede{margin-top:0}
- .hero-grid-solo .quote-card.is-embed iframe{height:500px}
+ .hero-grid-solo .quote-card.is-embed iframe{height:625px}
 }
 .hero-top h1 br{}
 @media(max-width:760px){
@@ -1589,7 +1589,7 @@ html,body{overflow-x:clip}
 <script>
 (function(){
   // Heights used on MOBILE only, per widget step. Desktop keeps its CSS height.
-  var STEP_H = {1:500, 2:600, 3:500};
+  var STEP_H = {1:625, 2:625, 3:625};
   var DIAG = /[?&]widgetdebug=1/.test(location.search); // add ?widgetdebug=1 to the URL to log what Berocker sends
 
   function frame(){ return document.querySelector('.quote-card.is-embed iframe'); }
