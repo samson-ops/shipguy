@@ -820,23 +820,19 @@ body.ready .reveal{opacity:1;transform:none}
  .hero-top h1{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;display:block}
 }
 
-/* Mobile AL: frosted text panels — solid readability, photo stays visible */
-.hero-overlay{background:rgba(255,255,255,.15)!important}
+/* Mobile AL: clean left gradient scrim, no boxes, black text */
+.hero-overlay{background:linear-gradient(90deg,
+  rgba(255,255,255,.9) 0%,
+  rgba(255,255,255,.85) 32%,
+  rgba(255,255,255,.6) 50%,
+  rgba(255,255,255,.25) 66%,
+  rgba(255,255,255,0) 82%)!important}
 .hero-top .crumbs, .hero-top .crumbs a, .hero-top .eyebrow,
 .hero-top h1, .mobile-tagline,
 .hero-bottom .lede, .hero-bottom .trust-list li,
 .hero-bottom .stat .num, .hero-bottom .stat .lbl{color:#000!important;text-shadow:none!important}
-@media(min-width:761px){
- .hero-top, .hero-bottom{background:rgba(255,255,255,.82);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);border-radius:16px;padding:20px 24px}
- .hero-top{margin-bottom:14px}
-}
 @media(max-width:760px){
- .hero-overlay{background:rgba(255,255,255,.22)!important}
- .hero-top .crumbs, .mobile-tagline, .hero-top h1{background:rgba(255,255,255,.86);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);border-radius:12px;padding:8px 14px}
- .hero-top .crumbs{display:inline-flex;width:max-content}
- .mobile-tagline{margin-top:6px}
- .hero-top h1{margin-top:6px!important}
- .hero-bottom{background:rgba(255,255,255,.86);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);border-radius:14px;padding:16px 16px}
+ .hero-overlay{background:rgba(255,255,255,.68)!important}
 }
 </style>
 <script type="application/ld+json">
