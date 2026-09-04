@@ -809,7 +809,7 @@ body.ready .reveal{opacity:1;transform:none}
  .hero-top .crumbs{grid-area:crumbs;margin-bottom:6px;font-size:12px}
  .hero-top .eyebrow{display:none}
  .hero-top h1{grid-area:h1mobile;margin:10px 0 6px!important}
- .mobile-tagline{display:block;grid-area:tagline;margin:2px 0 8px;font-family:var(--font-display);font-weight:800;font-size:clamp(1.05rem,5.2vw,1.35rem);letter-spacing:-.01em;color:#101a3d;text-shadow:0 1px 2px rgba(255,255,255,.85),0 2px 14px rgba(255,255,255,.75);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;text-align:center}
+ .mobile-tagline{display:block;grid-area:tagline;margin:2px 0 8px;font-family:var(--font-display);font-weight:800;font-size:clamp(1.05rem,5.2vw,1.35rem);letter-spacing:-.01em;color:#fff;text-shadow:0 1px 3px rgba(3,8,32,.6),0 3px 16px rgba(3,8,32,.5);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;text-align:center}
  .hero-grid-solo .quote-card{margin:8px 0 12px!important;max-width:100%}
  .hero-bottom .lede{margin-top:0}
  .hero-grid-solo .quote-card.is-embed iframe{height:625px}
@@ -853,6 +853,9 @@ html,body{overflow-x:clip}
 /* === quote widget: no tap-zoom, no shift === */
 .quote-card.is-embed{touch-action:manipulation;overscroll-behavior:contain}
 .quote-card.is-embed iframe{touch-action:manipulation;overscroll-behavior:contain}
+
+/* hero headline: always solid white over blue overlay */
+.hero-copy h1,.hero-top h1,.mobile-tagline{color:#fff !important}
 </style>
 <script type="application/ld+json">
 {
