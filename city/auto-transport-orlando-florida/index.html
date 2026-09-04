@@ -677,42 +677,42 @@ body.ready .reveal{opacity:1;transform:none}
 }
 
 .quote-card.is-embed{padding:0;overflow:hidden}
-.quote-card.is-embed iframe{width:100%;height:540px;border:0;display:block}
+.quote-card.is-embed iframe{width:100%;height:630px;border:0;display:block}
 
 
-/* ============ CITY HERO — brand blue ============ */
+/* ============ CITY HERO — light / corporate ============ */
 .hero-overlay{
   background:
     linear-gradient(90deg,
-      rgba(6,18,70,.92) 0%,
-      rgba(6,18,70,.84) 30%,
-      rgba(6,18,70,.62) 52%,
-      rgba(6,18,70,.38) 72%,
-      rgba(6,18,70,.22) 100%),
-    linear-gradient(180deg, rgba(6,18,70,0) 0%, rgba(6,18,70,0) 65%, rgba(6,18,70,.35) 100%);
+      rgba(255,255,255,.80) 0%,
+      rgba(255,255,255,.68) 26%,
+      rgba(255,255,255,.50) 43%,
+      rgba(255,255,255,.26) 60%,
+      rgba(255,255,255,.08) 80%,
+      rgba(255,255,255,0) 100%),
+    linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0) 70%, rgba(255,255,255,.32) 100%);
 }
-.hero{background:#0a1a5c;border-bottom:1px solid var(--line)}
+.hero{border-bottom:1px solid var(--line)}
 .hero-grid{padding:66px 24px 64px}
-.hero-copy{color:#fff}
-.hero-copy .crumbs{color:#bcd2f8}
-.hero-copy .crumbs a{color:#dbe6fb}
-.hero-copy .eyebrow{color:#9fc0f6}
-.hero-copy h1{color:#fff;text-shadow:0 2px 18px rgba(4,9,22,.5);font-size:clamp(2.1rem,3.4vw,2.85rem)}
-.hero-top h1{color:#fff;text-shadow:0 2px 18px rgba(4,9,22,.5);font-size:clamp(2.1rem,3.4vw,2.85rem);font-weight:800;line-height:1.08}
-.mobile-tagline{color:#dbe6fb}
-.hero-copy .lede{color:rgba(245,248,253,.95);text-shadow:0 1px 3px rgba(4,9,22,.5);max-width:430px}
-.trust-list li{color:#f1f4fb;text-shadow:0 1px 8px rgba(4,9,22,.45);font-weight:600}
-.trust-ic{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.22);color:#cfe0ff}
-.hero-divider{background:rgba(255,255,255,.16)}
-.stats .stat{border-right-color:rgba(255,255,255,.16)}
-.stat .num{color:#fff;text-shadow:0 2px 14px rgba(4,9,22,.5)}
-.stat .lbl{color:#bcd2f8}
+.hero-copy{color:var(--ink)}
+.hero-copy .crumbs{color:var(--muted);text-shadow:0 1px 6px rgba(255,255,255,.85)}
+.hero-copy .crumbs a{color:var(--brand);text-shadow:0 1px 6px rgba(255,255,255,.85)}
+.hero-copy .eyebrow{color:var(--brand);text-shadow:0 1px 6px rgba(255,255,255,.85)}
+.hero-copy h1{color:#101a3d;text-shadow:0 1px 2px rgba(255,255,255,.85), 0 2px 14px rgba(255,255,255,.75), 0 0 2px rgba(255,255,255,.9);font-size:clamp(2.1rem,3.4vw,2.85rem)}
+.hero-copy .lede{color:var(--ink-2);text-shadow:0 1px 6px rgba(255,255,255,.85);max-width:430px}
+.trust-list li{color:var(--ink);text-shadow:0 1px 6px rgba(255,255,255,.85);font-weight:600}
+.trust-ic{background:var(--brand-tint);border:1px solid #dce4fb;color:var(--brand)}
+.hero-divider{background:var(--line)}
+.stats .stat{border-right-color:var(--line)}
+.stat .num{color:#101a3d;text-shadow:0 1px 2px rgba(255,255,255,.85), 0 2px 14px rgba(255,255,255,.75), 0 0 2px rgba(255,255,255,.9)}
+.stat .lbl{color:var(--muted);text-shadow:0 1px 6px rgba(255,255,255,.85)}
 .quote-card{border:1px solid var(--line)}
 @media (max-width:900px){
   /* stacked: text sits over the photo, so keep the scrim strong and even */
-  .hero-overlay{background:linear-gradient(180deg, rgba(6,18,70,.82) 0%, rgba(6,18,70,.74) 50%, rgba(6,18,70,.86) 100%)}
+  .hero-overlay{background:linear-gradient(180deg, rgba(255,255,255,.66) 0%, rgba(255,255,255,.56) 50%, rgba(255,255,255,.66) 100%)}
 }
 
+.hero{background:#fff}
 .hero-media{inset:0}
 
 /* ===== Miami page additions (uses existing tokens) ===== */
@@ -796,7 +796,7 @@ body.ready .reveal{opacity:1;transform:none}
 .hero-bottom{grid-area:bottom}
 .hero-grid-solo .quote-card{grid-area:quote;max-width:480px;box-shadow:0 10px 24px -14px rgba(13,26,80,.3)}
 @media(min-width:1181px){
- .hero-grid-solo .quote-card.is-embed iframe{height:540px}
+ .hero-grid-solo .quote-card.is-embed iframe{height:590px}
 }
 @media(max-width:1180px){
  .hero-grid-solo{grid-template-areas:"top" "bottom" "quote";row-gap:36px;column-gap:0;align-items:stretch}
@@ -809,10 +809,10 @@ body.ready .reveal{opacity:1;transform:none}
  .hero-top .crumbs{grid-area:crumbs;margin-bottom:6px;font-size:12px}
  .hero-top .eyebrow{display:none}
  .hero-top h1{grid-area:h1mobile;margin:10px 0 6px!important}
- .mobile-tagline{display:block;grid-area:tagline;margin:2px 0 8px;font-family:var(--font-display);font-weight:800;font-size:clamp(1.05rem,5.2vw,1.35rem);letter-spacing:-.01em;color:#fff;text-shadow:0 2px 14px rgba(4,9,22,.55);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;text-align:center}
+ .mobile-tagline{display:block;grid-area:tagline;margin:2px 0 8px;font-family:var(--font-display);font-weight:800;font-size:clamp(1.05rem,5.2vw,1.35rem);letter-spacing:-.01em;color:#101a3d;text-shadow:0 1px 2px rgba(255,255,255,.85),0 2px 14px rgba(255,255,255,.75);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;text-align:center}
  .hero-grid-solo .quote-card{margin:8px 0 12px!important;max-width:100%}
  .hero-bottom .lede{margin-top:0}
- .hero-grid-solo .quote-card.is-embed iframe{height:540px}
+ .hero-grid-solo .quote-card.is-embed iframe{height:625px}
 }
 .hero-top h1 br{}
 @media(max-width:760px){
@@ -1108,6 +1108,7 @@ html,body{overflow-x:clip}
     <!-- QUOTE CARD (booking widget) -->
     <div class="quote-card is-embed reveal d2" id="quoteForm">
       <iframe src="https://widget.berocker.com?theme=pro&amp;api_base=https%3A%2F%2Fapp.shipguy.com&amp;api_key=6a5508b7cb2f4" title="Ship Guy Logistics booking form" loading="lazy"></iframe>
+      <p class="quote-consent-note" style="margin:0;padding:10px 14px 12px;background:#fff;font-size:11.5px;line-height:1.5;color:#586079;border-top:1px solid #eceef4">By submitting the form above, you consent to be contacted by Ship Guy Auto Transport by phone, email, and SMS text message about your quote and shipment. Message frequency varies. Msg &amp; data rates may apply. Reply STOP to opt out, HELP for help. SMS consent is not shared with third parties. <a href="/privacy.html" style="color:#0f4fd6;text-decoration:underline">Privacy Policy</a> &bull; <a href="/terms.html#sms-terms" style="color:#0f4fd6;text-decoration:underline">SMS Terms &amp; Conditions</a></p>
     </div>
     <div class="hero-bottom">
       <p class="lede reveal d2">Central Florida&rsquo;s crossroads, shipped by calendar-readers &mdash; junction deep, San Juan fluent, no deposit to book.</p>
@@ -1424,6 +1425,7 @@ html,body{overflow-x:clip}
         <li><a href="/car-shipping-insurance.html">Insurance &amp; Claims</a></li>
         <li><a href="/privacy.html">Privacy</a></li>
         <li><a href="/terms.html">Terms</a></li>
+        <li><a href="/terms.html#sms-terms">SMS Terms</a></li>
       </ul>
     </div>
     <div class="f-col">
