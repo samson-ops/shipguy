@@ -677,42 +677,42 @@ body.ready .reveal{opacity:1;transform:none}
 }
 
 .quote-card.is-embed{padding:0;overflow:hidden}
-.quote-card.is-embed iframe{width:100%;height:630px;border:0;display:block}
+.quote-card.is-embed iframe{width:100%;height:540px;border:0;display:block}
 
 
-/* ============ CITY HERO — blue overlay ============ */
+/* ============ CITY HERO — brand blue ============ */
 .hero-overlay{
   background:
     linear-gradient(90deg,
-      rgba(5,14,58,.90) 0%,
-      rgba(6,20,80,.80) 28%,
-      rgba(8,28,108,.60) 48%,
-      rgba(9,33,128,.34) 66%,
-      rgba(10,38,148,.14) 86%,
-      rgba(10,38,148,.05) 100%),
-    linear-gradient(180deg, rgba(3,8,34,.28) 0%, rgba(3,8,34,0) 28%, rgba(3,8,34,0) 62%, rgba(3,8,34,.42) 100%);
+      rgba(6,18,70,.92) 0%,
+      rgba(6,18,70,.84) 30%,
+      rgba(6,18,70,.62) 52%,
+      rgba(6,18,70,.38) 72%,
+      rgba(6,18,70,.22) 100%),
+    linear-gradient(180deg, rgba(6,18,70,0) 0%, rgba(6,18,70,0) 65%, rgba(6,18,70,.35) 100%);
 }
-.hero{border-bottom:1px solid var(--line)}
+.hero{background:#0a1a5c;border-bottom:1px solid var(--line)}
 .hero-grid{padding:66px 24px 64px}
 .hero-copy{color:#fff}
-.hero-copy .crumbs{color:rgba(255,255,255,.78)}
-.hero-copy .crumbs a{color:#bcd2ff}
-.hero-copy .eyebrow{color:#9fc0f6;text-shadow:0 1px 8px rgba(3,8,32,.6)}
-.hero-copy h1{color:#fff;text-shadow:0 2px 4px rgba(3,8,32,.55), 0 8px 28px rgba(3,8,32,.45);font-size:clamp(2.2rem,3.6vw,3rem)}
-.hero-copy .lede{color:rgba(233,240,255,.95);text-shadow:0 1px 8px rgba(3,8,32,.5);max-width:460px}
-.trust-list li{color:#f3f7ff;text-shadow:0 1px 8px rgba(3,8,32,.55);font-weight:600}
-.trust-ic{background:rgba(255,255,255,.14);border:1px solid rgba(159,192,246,.45);color:#d3e2ff}
-.hero-divider{background:rgba(255,255,255,.22)}
-.stats .stat{border-right-color:rgba(255,255,255,.22)}
-.stat .num{color:#fff;text-shadow:0 2px 4px rgba(3,8,32,.55), 0 8px 28px rgba(3,8,32,.45)}
-.stat .lbl{color:#bccbf2;text-shadow:0 1px 8px rgba(3,8,32,.5)}
+.hero-copy .crumbs{color:#bcd2f8}
+.hero-copy .crumbs a{color:#dbe6fb}
+.hero-copy .eyebrow{color:#9fc0f6}
+.hero-copy h1{color:#fff;text-shadow:0 2px 18px rgba(4,9,22,.5);font-size:clamp(2.1rem,3.4vw,2.85rem)}
+.hero-top h1{color:#fff;text-shadow:0 2px 18px rgba(4,9,22,.5);font-size:clamp(2.1rem,3.4vw,2.85rem);font-weight:800;line-height:1.08}
+.mobile-tagline{color:#dbe6fb}
+.hero-copy .lede{color:rgba(245,248,253,.95);text-shadow:0 1px 3px rgba(4,9,22,.5);max-width:430px}
+.trust-list li{color:#f1f4fb;text-shadow:0 1px 8px rgba(4,9,22,.45);font-weight:600}
+.trust-ic{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.22);color:#cfe0ff}
+.hero-divider{background:rgba(255,255,255,.16)}
+.stats .stat{border-right-color:rgba(255,255,255,.16)}
+.stat .num{color:#fff;text-shadow:0 2px 14px rgba(4,9,22,.5)}
+.stat .lbl{color:#bcd2f8}
 .quote-card{border:1px solid var(--line)}
 @media (max-width:900px){
-  /* stacked: text sits over the photo, so keep the blue scrim strong and even */
-  .hero-overlay{background:linear-gradient(180deg, rgba(5,13,52,.84) 0%, rgba(5,13,52,.76) 50%, rgba(5,13,52,.88) 100%)}
+  /* stacked: text sits over the photo, so keep the scrim strong and even */
+  .hero-overlay{background:linear-gradient(180deg, rgba(6,18,70,.82) 0%, rgba(6,18,70,.74) 50%, rgba(6,18,70,.86) 100%)}
 }
 
-.hero{background:#050e38}
 .hero-media{inset:0}
 
 /* ===== Miami page additions (uses existing tokens) ===== */
@@ -796,7 +796,7 @@ body.ready .reveal{opacity:1;transform:none}
 .hero-bottom{grid-area:bottom}
 .hero-grid-solo .quote-card{grid-area:quote;max-width:480px;box-shadow:0 10px 24px -14px rgba(13,26,80,.3)}
 @media(min-width:1181px){
- .hero-grid-solo .quote-card.is-embed iframe{height:590px}
+ .hero-grid-solo .quote-card.is-embed iframe{height:540px}
 }
 @media(max-width:1180px){
  .hero-grid-solo{grid-template-areas:"top" "bottom" "quote";row-gap:36px;column-gap:0;align-items:stretch}
@@ -809,10 +809,10 @@ body.ready .reveal{opacity:1;transform:none}
  .hero-top .crumbs{grid-area:crumbs;margin-bottom:6px;font-size:12px}
  .hero-top .eyebrow{display:none}
  .hero-top h1{grid-area:h1mobile;margin:10px 0 6px!important}
- .mobile-tagline{display:block;grid-area:tagline;margin:2px 0 8px;font-family:var(--font-display);font-weight:800;font-size:clamp(1.05rem,5.2vw,1.35rem);letter-spacing:-.01em;color:#fff;text-shadow:0 1px 3px rgba(3,8,32,.6),0 3px 16px rgba(3,8,32,.5);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;text-align:center}
+ .mobile-tagline{display:block;grid-area:tagline;margin:2px 0 8px;font-family:var(--font-display);font-weight:800;font-size:clamp(1.05rem,5.2vw,1.35rem);letter-spacing:-.01em;color:#fff;text-shadow:0 2px 14px rgba(4,9,22,.55);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;text-align:center}
  .hero-grid-solo .quote-card{margin:8px 0 12px!important;max-width:100%}
  .hero-bottom .lede{margin-top:0}
- .hero-grid-solo .quote-card.is-embed iframe{height:625px}
+ .hero-grid-solo .quote-card.is-embed iframe{height:540px}
 }
 .hero-top h1 br{}
 @media(max-width:760px){
@@ -834,9 +834,6 @@ html,body{overflow-x:clip}
 /* === quote widget: no tap-zoom, no shift === */
 .quote-card.is-embed{touch-action:manipulation;overscroll-behavior:contain}
 .quote-card.is-embed iframe{touch-action:manipulation;overscroll-behavior:contain}
-
-/* hero headline: always solid white over blue overlay */
-.hero-copy h1,.hero-top h1,.mobile-tagline{color:#fff !important}
 </style>
 <script type="application/ld+json">
 {
@@ -1394,55 +1391,6 @@ html,body{overflow-x:clip}
       <ul>
         <li><a href="/how-it-works.html">How It Works</a></li>
         <li><a href="#reviews">Reviews</a></li>
-        <li><a href="/city/auto-transport-miami-florida/">Miami Auto Transport</a></li>
-        <li><a href="/city/auto-transport-phoenix-arizona/">Phoenix Auto Transport</a></li>
-        <li><a href="/city/auto-transport-mobile-alabama/">Mobile Auto Transport</a></li>
-        <li><a href="/city/auto-transport-tuscaloosa-alabama/">Tuscaloosa Auto Transport</a></li>
-        <li><a href="/city/auto-transport-anchorage-alaska/">Anchorage Auto Transport</a></li>
-        <li><a href="/city/auto-transport-tucson-arizona/">Tucson Auto Transport</a></li>
-        <li><a href="/city/auto-transport-gilbert-arizona/">Gilbert Auto Transport</a></li>
-        <li><a href="/city/auto-transport-los-angeles-california/">Los Angeles Auto Transport</a></li>
-        <li><a href="/city/auto-transport-san-diego-california/">San Diego Auto Transport</a></li>
-        <li><a href="/city/auto-transport-san-jose-california/">San Jose Auto Transport</a></li>
-        <li><a href="/city/auto-transport-san-francisco-california/">San Francisco Auto Transport</a></li>
-        <li><a href="/city/auto-transport-sacramento-california/">Sacramento Auto Transport</a></li>
-        <li><a href="/city/auto-transport-long-beach-california/">Long Beach Auto Transport</a></li>
-        <li><a href="/city/auto-transport-oakland-california/">Oakland Auto Transport</a></li>
-        <li><a href="/city/auto-transport-anaheim-california/">Anaheim Auto Transport</a></li>
-        <li><a href="/city/auto-transport-riverside-california/">Riverside Auto Transport</a></li>
-        <li><a href="/city/auto-transport-santa-ana-california/">Santa Ana Auto Transport</a></li>
-        <li><a href="/city/auto-transport-tampa-florida/">Tampa Auto Transport</a></li>
-        <li><a href="/city/auto-transport-orlando-florida/">Orlando Auto Transport</a></li>
-        <li><a href="/city/auto-transport-atlanta-georgia/">Atlanta Auto Transport</a></li>
-        <li><a href="/city/auto-transport-honolulu-hawaii/">Honolulu Auto Transport</a></li>
-        <li><a href="/city/auto-transport-indianapolis-indiana/">Indianapolis Auto Transport</a></li>
-        <li><a href="/city/auto-transport-chicago-illinois/">Chicago Auto Transport</a></li>
-        <li><a href="/city/auto-transport-wichita-kansas/">Wichita Auto Transport</a></li>
-        <li><a href="/city/auto-transport-louisville-kentucky/">Louisville Auto Transport</a></li>
-        <li><a href="/city/auto-transport-lexington-kentucky/">Lexington Auto Transport</a></li>
-        <li><a href="/city/auto-transport-new-orleans-louisiana/">New Orleans Auto Transport</a></li>
-        <li><a href="/city/auto-transport-augusta-maine/">Augusta Auto Transport</a></li>
-        <li><a href="/city/auto-transport-baltimore-maryland/">Baltimore Auto Transport</a></li>
-        <li><a href="/city/auto-transport-boston-massachusetts/">Boston Auto Transport</a></li>
-        <li><a href="/city/auto-transport-detroit-michigan/">Detroit Auto Transport</a></li>
-        <li><a href="/city/auto-transport-las-vegas-nevada/">Las Vegas Auto Transport</a></li>
-        <li><a href="/city/auto-transport-henderson-nevada/">Henderson Auto Transport</a></li>
-        <li><a href="/city/auto-transport-charlotte-north-carolina/">Charlotte Auto Transport</a></li>
-        <li><a href="/city/auto-transport-durham-north-carolina/">Durham Auto Transport</a></li>
-        <li><a href="/city/auto-transport-raleigh-north-carolina/">Raleigh Auto Transport</a></li>
-        <li><a href="/city/auto-transport-albuquerque-new-mexico/">Albuquerque Auto Transport</a></li>
-        <li><a href="/city/auto-transport-cleveland-ohio/">Cleveland Auto Transport</a></li>
-        <li><a href="/city/auto-transport-portland-oregon/">Portland Auto Transport</a></li>
-        <li><a href="/city/auto-transport-philadelphia-pennsylvania/">Philadelphia Auto Transport</a></li>
-        <li><a href="/city/auto-transport-corpus-christi-texas/">Corpus Christi Auto Transport</a></li>
-        <li><a href="/city/auto-transport-houston-texas/">Houston Auto Transport</a></li>
-        <li><a href="/city/auto-transport-dallas-texas/">Dallas Auto Transport</a></li>
-        <li><a href="/city/auto-transport-austin-texas/">Austin Auto Transport</a></li>
-        <li><a href="/city/auto-transport-fort-worth-texas/">Fort Worth Auto Transport</a></li>
-        <li><a href="/city/auto-transport-san-antonio-texas/">San Antonio Auto Transport</a></li>
-        <li><a href="/city/auto-transport-arlington-texas/">Arlington Auto Transport</a></li>
-        <li><a href="/city/auto-transport-el-paso-texas/">El Paso Auto Transport</a></li>
-        <li><a href="/city/auto-transport-boca-raton-florida/">Boca Raton Auto Transport</a></li>
         <li><a href="/faq.html">FAQ</a></li>
         <li><a href="/contact.html">Contact</a></li>
         <li style="margin-top:10px;padding-top:10px;border-top:1px solid rgba(255,255,255,.15)"><a href="/locations.html"><strong>All 49 Locations</strong></a></li>
@@ -1450,7 +1398,6 @@ html,body{overflow-x:clip}
         <li><a href="/car-shipping-insurance.html">Insurance &amp; Claims</a></li>
         <li><a href="/privacy.html">Privacy</a></li>
         <li><a href="/terms.html">Terms</a></li>
-        <li><a href="/terms.html#sms-terms">SMS Terms</a></li>
       </ul>
     </div>
     <div class="f-col">
