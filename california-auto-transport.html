@@ -6,8 +6,8 @@
   <meta http-equiv="Pragma" content="no-cache">
   <meta http-equiv="Expires" content="0">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Expedited Car Shipping — Fast, Priority Auto Transport | Ship Guy</title>
-<meta name="description" content="Expedited car shipping gets your vehicle picked up fast and delivered on a priority timeline. Learn how expedited auto transport works and when it is worth it.">
+<title>California Auto Transport — Car Shipping to &amp; from California | Ship Guy</title>
+<meta name="description" content="Moving a vehicle to, from, or within California doesn&#x27;t have to be a headache. This guide covers everything you need to know about pricing, timelines, s…">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
@@ -276,7 +276,7 @@ select.inp{appearance:none;-webkit-appearance:none;padding-right:38px;cursor:poi
 .reviews-head{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;flex-wrap:wrap;margin-bottom:30px}
 .reviews-head h2{font-size:clamp(1.7rem,2.6vw,2.1rem);font-weight:800;color:var(--brand)}
 .reviews-head p{margin:8px 0 0;color:var(--muted);font-size:15.5px}
-.rating{display:flex;align-items:center;gap:12px}
+.rating{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
 .rating .score{font-family:var(--font-display);font-weight:800;font-size:22px;color:var(--ink)}
 .stars{display:inline-flex;gap:2px;color:var(--star)}
 .stars svg{width:18px;height:18px}
@@ -483,10 +483,15 @@ section[id]{scroll-margin-top:104px}
    Responsive
    ========================================================= */
 @media (max-width:1180px){
-  .hero-grid{grid-template-columns:minmax(0,1fr);gap:36px;padding:54px 24px 60px}
-  .hero-copy{max-width:640px}
+  .hero-grid{grid-template-columns:minmax(0,1fr);gap:28px;padding:54px 24px 60px}
+  .hero-copy{display:contents}
+  .hero-head,.hero-rest{max-width:640px;width:100%}
+  .hero-head{order:1}
+  .quote-card{order:2;max-width:520px;width:100%}
+  .hero-rest{order:3}
+  .hero-head h1{margin-bottom:0}
+  .eyebrow{display:none}
   .lede{max-width:520px}
-  .quote-card{max-width:520px;width:100%}
   .hero-overlay{background:linear-gradient(180deg, rgba(4,9,22,.72) 0%, rgba(4,9,22,.8) 55%, rgba(4,9,22,.88) 100%)}
 }
 @media (max-width:1180px){
@@ -507,6 +512,7 @@ section[id]{scroll-margin-top:104px}
 @media (max-width:980px){
   .wc-bento{grid-template-columns:1fr}
   .loc-bento{grid-template-columns:1fr;gap:32px}
+  .review-grid{grid-template-columns:1fr 1fr}
 }
 @media (max-width:880px){
   .steps-row{flex-direction:column;gap:0;max-width:440px;margin:0 auto}
@@ -547,6 +553,31 @@ section[id]{scroll-margin-top:104px}
   .step .slabel{font-size:11.5px}
 }
 
+/* compact hero on laptop screens only (~25% shorter) */
+@media (min-width:1181px) and (max-width:1600px){
+  .hero-grid{padding-top:34px;padding-bottom:40px;gap:40px}
+  .eyebrow{margin-bottom:12px}
+  .hero-copy h1{font-size:clamp(2rem,3vw,2.5rem);margin-bottom:14px}
+  .lede{font-size:15.5px;margin-bottom:18px}
+  .trust-list{margin-bottom:16px;gap:9px}
+  .trust-list li{font-size:14.5px}
+  .trust-ic{width:30px;height:30px}
+  .trust-ic svg{width:17px;height:17px}
+  .hero-divider{margin-bottom:16px}
+  .stat .num{font-size:26px}
+  .stat .lbl{font-size:12px;margin-top:5px}
+  .quote-card{padding:20px 24px 18px}
+  .quote-card h2{font-size:22px;margin-bottom:13px}
+  .steps{margin-bottom:13px}
+  .step .dot{width:30px;height:30px}
+  .field{margin-bottom:9px}
+  .flabel{margin-bottom:4px}
+  .inp{height:40px}
+  .opt{padding:8px 12px}
+  .btn-primary{height:46px}
+  .assure{margin-top:8px}
+}
+
 /* reduced motion */
 @media (prefers-reduced-motion:reduce){
   *{animation-duration:.001ms!important;transition-duration:.001ms!important}
@@ -558,59 +589,58 @@ section[id]{scroll-margin-top:104px}
 body.ready .reveal{opacity:1;transform:none}
 .reveal.d2{transition-delay:.08s}
 .reveal.d3{transition-delay:.16s}
-/* ===== Subpage / article / services styles ===== */
-.page-hero{background:linear-gradient(135deg,#0a2a9e 0%, var(--brand) 60%, #1f54e0 100%);color:#fff;padding:62px 0 56px}
-.crumbs{display:flex;flex-wrap:wrap;gap:9px;font-size:13.5px;font-weight:600;color:#bcd2f8;margin-bottom:16px}
-.crumbs a{color:#dbe6fb}
-.crumbs a:hover{color:#fff}
-.page-hero h1{font-family:var(--font-display);font-weight:800;font-size:clamp(1.9rem,3.6vw,2.8rem);letter-spacing:-.015em;color:#fff;margin:0 0 13px;max-width:840px}
-.page-hero-sub{font-size:17.5px;line-height:1.6;color:rgba(233,239,251,.92);margin:0;max-width:680px}
-.article-section{background:#fff;padding:60px 0 70px;border-top:1px solid var(--line)}
-.article{max-width:780px}
-.article-lead{font-size:18.5px;line-height:1.7;color:#1d2350;font-weight:500;margin:0 0 28px}
-.article h2{font-family:var(--font-display);font-weight:800;font-size:clamp(1.45rem,2.4vw,1.85rem);letter-spacing:-.01em;color:#101a3d;margin:36px 0 13px}
-.article h2:first-of-type{margin-top:0}
-.article h3{font-family:var(--font-display);font-weight:700;font-size:1.15rem;color:#101a3d;margin:24px 0 9px}
-.article p{font-size:16.5px;line-height:1.75;color:#414a6b;margin:0 0 16px}
-.article ul{margin:0 0 18px;padding-left:22px}
-.article li{font-size:16.5px;line-height:1.7;color:#414a6b;margin-bottom:9px}
-.article a{color:var(--brand);font-weight:600;text-decoration:underline;text-decoration-color:#c7d3f5;text-underline-offset:3px}
-.article a:hover{color:var(--brand-press)}
-.svc-section{background:#fff;padding:58px 0 72px}
-.svc-intro{max-width:760px;margin:0 0 34px;font-size:17px;line-height:1.7;color:#586079}
-.svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
-.svc-card{display:flex;flex-direction:column;background:#fff;border:1px solid var(--line);border-radius:16px;padding:28px 26px;box-shadow:0 14px 34px -28px rgba(13,26,80,.4);transition:transform .18s ease,box-shadow .18s ease}
-.svc-card:hover{transform:translateY(-4px);box-shadow:0 26px 54px -28px rgba(13,26,80,.5)}
-.svc-ic{width:52px;height:52px;border-radius:14px;background:var(--brand-tint);color:var(--brand);display:grid;place-items:center;margin-bottom:16px}
-.svc-ic svg{width:26px;height:26px}
-.svc-card h2,.svc-card h3{font-family:var(--font-display);font-weight:800;font-size:19px;color:#101a3d;margin:0 0 9px}
-.svc-card p{font-size:15px;line-height:1.6;color:#586079;margin:0 0 16px;flex:1}
-.svc-more{display:inline-flex;align-items:center;gap:7px;color:var(--brand);font-family:var(--font-display);font-weight:700;font-size:15px}
-.svc-more svg{width:17px;height:17px;transition:transform .15s ease}
-.svc-card:hover .svc-more svg{transform:translateX(3px)}
-.related-section{background:#f5f8fc;padding:52px 0 60px;border-top:1px solid var(--line)}
-.related-section h2{text-align:center;font-family:var(--font-display);font-weight:800;font-size:1.4rem;color:#101a3d;margin:0 0 26px}
-.related-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
-.related-card{display:flex;align-items:center;justify-content:space-between;gap:10px;background:#fff;border:1px solid var(--line);border-radius:12px;padding:16px 18px;font-family:var(--font-display);font-weight:700;font-size:14.5px;color:#101a3d;transition:border-color .15s ease,color .15s ease}
-.related-card:hover{border-color:var(--brand);color:var(--brand)}
-.related-card svg{width:16px;height:16px;color:var(--brand);flex:0 0 auto}
-@media (max-width:900px){.svc-grid{grid-template-columns:1fr 1fr}.related-grid{grid-template-columns:1fr 1fr}}
-@media (max-width:560px){.svc-grid{grid-template-columns:1fr}.related-grid{grid-template-columns:1fr}}
-
 
 .menu.menu-mega{display:grid;grid-template-columns:1fr 1fr;column-gap:4px;min-width:452px}
 .menu.menu-mega .menu-all{grid-column:1 / -1;margin-top:6px;padding-top:12px;border-top:1px solid var(--line);color:var(--brand);font-weight:700}
 
 @media (max-width:460px){.footer-top{grid-template-columns:1fr;gap:28px}}/* resp-polish-footer */
+  .quote-card.is-embed{padding:0;overflow:hidden}
+  .quote-card.is-embed iframe{width:100%;height:630px;border:0;display:block}
+
+  .article-section{padding:52px 0 58px}
+  .article{max-width:820px;margin:0 auto}
+  .crumbs{display:flex;flex-wrap:wrap;gap:8px;align-items:center;font-size:13.5px;color:var(--muted);margin-bottom:22px}
+  .crumbs a{color:var(--brand)}.crumbs a:hover{text-decoration:underline}
+  .crumbs span[aria-current]{color:var(--ink-2)}
+  .article-lead{font-size:18px;line-height:1.7;color:var(--ink-2);margin:0 0 24px;padding-bottom:22px;border-bottom:1px solid var(--line)}
+  .article h2{font-family:var(--font-display);font-weight:800;font-size:clamp(1.35rem,2.4vw,1.7rem);color:#101a3d;margin:30px 0 12px}
+  .article p{color:var(--ink-2);font-size:16px;line-height:1.75;margin:0 0 16px}
+  .article a{color:var(--brand);font-weight:600}
+  .article table{width:100%;border-collapse:collapse;margin:16px 0 22px;font-size:15px}
+  .article table td,.article table th{border:1px solid var(--line);padding:10px 14px;text-align:left;vertical-align:top}
+  .article table tr:nth-child(even){background:#f7f9fd}
+  .article table td:first-child{font-weight:600;color:#101a3d}
+  .table-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:0 0 6px}
+  .local-section{background:#fff;padding:58px 0;border-top:1px solid var(--line)}
+  .local-grid{display:grid;grid-template-columns:1fr 1fr;gap:42px;align-items:stretch}
+  .local-eyebrow{font-family:var(--font-display);font-weight:800;letter-spacing:.14em;text-transform:uppercase;font-size:12.5px;color:var(--brand)}
+  .local-info h2{font-family:var(--font-display);font-weight:800;font-size:clamp(1.5rem,2.4vw,2rem);color:#101a3d;margin:8px 0 10px}
+  .local-lede{color:var(--ink-2);font-size:16px;line-height:1.6;margin:0 0 22px;max-width:480px}
+  .local-actions{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:24px}
+  .btn-call-lg{display:inline-flex;align-items:center;gap:9px;background:var(--brand);color:#fff;font-weight:700;font-size:16px;padding:13px 22px;border-radius:999px;box-shadow:0 10px 24px -12px rgba(11,52,192,.8);transition:background .15s ease}
+  .btn-call-lg:hover{background:var(--brand-press)}
+  .btn-quote-lg{display:inline-flex;align-items:center;gap:8px;background:#fff;color:var(--brand-deep);font-weight:700;font-size:16px;padding:13px 22px;border-radius:999px;border:2px solid var(--brand)}
+  .btn-quote-lg:hover{background:var(--brand-tint)}
+  .btn-call-lg svg,.btn-quote-lg svg{width:18px;height:18px}
+  .local-contact{list-style:none;margin:0 0 20px;padding:0;display:grid;gap:12px}
+  .local-contact li{display:flex;align-items:flex-start;gap:11px;color:var(--ink-2);font-size:15.5px;line-height:1.45}
+  .local-contact li svg{width:19px;height:19px;color:var(--brand);flex:0 0 auto;margin-top:1px}
+  .local-contact a{color:var(--ink-2)}.local-contact a:hover{color:var(--brand)}
+  .local-social{display:flex;gap:12px}
+  .local-social a{display:inline-flex;align-items:center;justify-content:center;width:42px;height:42px;border-radius:11px;background:var(--brand-tint);color:var(--brand-deep);transition:background .15s ease,color .15s ease}
+  .local-social a:hover{background:var(--brand);color:#fff}
+  .local-social svg{width:20px;height:20px}
+  .local-map{border-radius:16px;overflow:hidden;box-shadow:0 18px 40px -24px rgba(13,26,80,.55);border:1px solid var(--line);min-height:420px;background:#eef2fe}
+  .local-map iframe{width:100%;height:100%;min-height:420px;border:0;display:block}
+  @media (max-width:860px){.local-grid{grid-template-columns:1fr;gap:26px}.local-map{min-height:300px}.local-map iframe{min-height:300px}}
+  @media (max-width:560px){.article table{font-size:13.5px}.article table td,.article table th{padding:8px 10px}}
 .footer-states{display:flex;flex-wrap:wrap;gap:9px 20px;align-items:center;padding:20px 0 2px;margin-top:6px;border-top:1px solid rgba(255,255,255,.10)}.footer-states .fs-label{color:#fff;font-weight:700;font-size:14px}.footer-states a{font-size:14px;color:#9aa6c6;transition:color .15s ease}.footer-states a:hover{color:#fff}/* footer-states */
 </style>
 <script type="application/ld+json">
-{
-  "@context":"https://schema.org","@graph":[
-  {"@type":"Service","name":"Expedited Car Shipping","serviceType":"Auto transport","provider":{"@type":"Organization","name":"Ship Guy","telephone":"+1-866-499-2815"},"areaServed":{"@type":"Country","name":"United States"},"description":"Expedited car shipping gets your vehicle picked up fast and delivered on a priority timeline. Learn how expedited auto transport works and when it is worth it."},
-  {"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"index.html"},{"@type":"ListItem","position":2,"name":"Services","item":"services.html"},{"@type":"ListItem","position":3,"name":"Expedited Car Shipping","item":"expedited-car-shipping.html"}]}
-  ]
-}
+{"@context":"https://schema.org","@graph":[
+{"@type":"Service","serviceType":"Auto Transport","name":"California Auto Transport","areaServed":{"@type":"State","name":"California"},"provider":{"@type":"Organization","name":"Ship Guy","telephone":"+1-866-499-2815"},"description":"Moving a vehicle to, from, or within California doesn&#x27;t have to be a headache. This guide covers everything you need to know about pricing, timelines, s…"},
+{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"index.html"},{"@type":"ListItem","position":2,"name":"California Auto Transport","item":"california-auto-transport.html"}]}
+]}
 </script>
 </head>
 <body>
@@ -618,7 +648,7 @@ body.ready .reveal{opacity:1;transform:none}
 <!-- ===================== HEADER ===================== -->
 <header class="site-header" id="top">
   <div class="container header-inner">
-    <a class="brand" href="index.html#top" aria-label="Ship Guy — home"><svg class="sg-logo" role="img" aria-label="Ship Guy" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="209 227 180 145">
+    <a class="brand" href="index.html" aria-label="Ship Guy — home"><svg class="sg-logo" role="img" aria-label="Ship Guy" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="209 227 180 145">
 <path fill-rule="nonzero" fill="currentColor" fill-opacity="1" d="M 257.761719 304.929688 L 257.761719 247.621094 L 272.027344 245.128906 L 272.027344 265.167969 C 272.027344 265.933594 272.246094 266.5 272.679688 266.867188 C 273.109375 267.230469 273.703125 267.347656 274.460938 267.222656 L 279.570312 266.355469 C 281.136719 266.089844 281.921875 265.128906 281.921875 263.484375 L 281.921875 243.398438 L 296.191406 240.90625 L 296.191406 298.710938 L 281.921875 301.019531 L 281.921875 277.640625 L 272.027344 279.292969 L 272.027344 302.621094 Z M 257.761719 304.929688 "/>
 <path fill-rule="nonzero" fill="currentColor" fill-opacity="1" d="M 225.148438 310.390625 C 220.769531 311.101562 217.570312 310.632812 215.539062 308.984375 C 213.515625 307.339844 212.5 304.464844 212.5 300.359375 L 212.5 291.359375 L 226.769531 288.980469 L 226.769531 296.222656 C 226.769531 297.035156 226.984375 297.609375 227.417969 297.945312 C 227.851562 298.28125 228.472656 298.382812 229.28125 298.25 L 234.148438 297.449219 C 234.902344 297.328125 235.472656 297.054688 235.851562 296.640625 C 236.226562 296.222656 236.417969 295.636719 236.417969 294.875 L 236.417969 290.066406 C 236.417969 289.304688 236.324219 288.683594 236.136719 288.199219 C 235.945312 287.714844 235.632812 287.300781 235.203125 286.964844 C 234.769531 286.632812 234.175781 286.367188 233.417969 286.164062 L 221.257812 283.890625 C 219.472656 283.378906 217.957031 282.695312 216.71875 281.851562 C 215.472656 281.007812 214.539062 279.855469 213.917969 278.390625 C 213.296875 276.929688 212.988281 275.089844 212.988281 272.871094 L 212.988281 263.140625 C 212.988281 260.222656 213.636719 257.960938 214.933594 256.355469 C 216.230469 254.753906 218.390625 253.683594 221.417969 253.152344 L 237.957031 250.261719 C 242.28125 249.503906 245.457031 249.929688 247.484375 251.539062 C 249.511719 253.148438 250.523438 256.050781 250.523438 260.25 L 250.523438 265.890625 L 236.257812 268.328125 L 236.257812 264.5 C 236.257812 263.683594 236.039062 263.109375 235.605469 262.777344 C 235.175781 262.441406 234.578125 262.34375 233.824219 262.472656 L 229.527344 263.210938 C 228.714844 263.351562 228.132812 263.628906 227.785156 264.039062 C 227.433594 264.453125 227.257812 265.011719 227.257812 265.71875 L 227.257812 268.078125 C 227.257812 269.109375 227.511719 269.917969 228.027344 270.507812 C 228.539062 271.097656 229.3125 271.550781 230.335938 271.863281 L 241.929688 273.972656 C 243.984375 274.492188 245.660156 275.214844 246.957031 276.140625 C 248.253906 277.070312 249.199219 278.285156 249.796875 279.792969 C 250.390625 281.300781 250.6875 283.144531 250.6875 285.328125 L 250.6875 297.671875 C 250.6875 300.671875 250.023438 302.960938 248.699219 304.539062 C 247.375 306.117188 245.199219 307.148438 242.175781 307.636719 Z M 225.148438 310.390625 "/>
 <path fill-rule="nonzero" fill="currentColor" fill-opacity="1" d="M 305.007812 297.726562 L 305.007812 239.84375 L 319.277344 237.351562 L 319.277344 295.414062 Z M 305.007812 297.726562 "/>
@@ -631,7 +661,7 @@ body.ready .reveal{opacity:1;transform:none}
 </svg></a>
 
     <nav class="main-nav" aria-label="Primary">
-      <a href="index.html#top">Home</a>
+      <a href="index.html">Home</a>
       <a href="how-it-works.html">How It Works</a>
       <div class="has-menu">
         <button class="nav-toggle-btn" aria-haspopup="true" aria-expanded="false">Services
@@ -669,7 +699,7 @@ body.ready .reveal{opacity:1;transform:none}
   <!-- mobile nav -->
   <nav class="mobile-nav" id="mobileNav" aria-label="Mobile">
     <div class="inner">
-      <a href="index.html#top">Home</a>
+      <a href="index.html">Home</a>
       <a href="how-it-works.html">How It Works</a>
       <span class="m-sub">Services</span>
                   <a href="open-car-transport.html">Open Car Transport</a>
@@ -690,66 +720,436 @@ body.ready .reveal{opacity:1;transform:none}
   </nav>
 </header>
 
-<!-- ===================== PAGE HERO ===================== -->
-<section class="page-hero"><div class="container">
-  <nav class="crumbs" aria-label="Breadcrumb"><a href="index.html">Home</a><span>/</span><a href="services.html">Services</a><span>/</span><span aria-current="page">Expedited Car Shipping</span></nav>
-  <h1>Expedited Car Shipping</h1>
-  <p class="page-hero-sub">Priority pickup and faster delivery when you are working against the clock.</p>
-</div></section>
+<!-- ===================== HERO ===================== -->
+<section class="hero">
+  <div class="hero-media" aria-hidden="true">
+    <img class="hero-img" alt="" src="assets/hero.jpg">
+    <div class="hero-overlay"></div>
+  </div>
 
-<section class="article-section"><div class="container article">
-<p class="article-lead">When you can't wait, expedited car shipping moves your vehicle to the front of the line — faster pickup and a priority delivery timeline. Here's how it works and when it's worth it.</p>
-
-<h2>What Is Expedited Car Shipping?</h2>
-<p>Expedited car shipping is a priority service that gets your vehicle picked up and delivered faster than standard transport. Instead of waiting for the next available carrier on a route, your shipment is prioritized so a carrier is assigned quickly and your vehicle is dispatched as soon as possible — often within a day or two, and sometimes the same day depending on your location.</p>
-<p>With Ship Guy, expedited service combines fast dispatch with the same vetted carriers, transparent pricing, and door-to-door delivery as our standard shipments. It's the right choice when timing matters more than saving every dollar.</p>
-
-<h2>How Expedited Auto Transport Works</h2>
-<p>Expedited shipping follows the same three steps as any Ship Guy shipment, just on a faster track. You get a free quote and let us know your deadline. We prioritize your shipment to secure a carrier quickly, scheduling the earliest possible pickup window. The driver inspects and loads your vehicle, then transports it on a priority timeline while you track progress. At delivery, you inspect the vehicle, sign, and take your keys.</p>
-<p>Behind the scenes, expedited service often means offering carriers a rate that motivates an immediate response and routing your vehicle on the most direct schedule. The result is less waiting at every stage — from assignment to pickup to final delivery.</p>
-
-<h2>When Should You Choose Expedited Shipping?</h2>
-<p>Expedited car shipping is ideal whenever you're working against the clock. Common situations include:</p>
-<ul>
-  <li><strong>Last-minute relocations</strong> and job transfers with a hard start date</li>
-  <li><strong>Military orders (PCS)</strong> with a firm reporting deadline</li>
-  <li><strong>Online or auction purchases</strong> you need delivered fast</li>
-  <li><strong>Dealership and inventory moves</strong> on tight timelines</li>
-  <li><strong>Emergencies or schedule changes</strong> that can't wait for standard transit</li>
-</ul>
-<p>If your dates are flexible, standard shipping will save you money. But when a specific pickup or delivery day is non-negotiable, expedited service buys you speed and certainty.</p>
-
-<h2>How Much Does Expedited Car Shipping Cost?</h2>
-<p>Expedited shipping costs more than standard transport because your shipment takes priority over flexible loads and is scheduled around your deadline rather than the carrier's convenience. The premium depends on how quickly you need pickup, the distance, your vehicle's size and condition, transport type, and how busy your route is at the moment.</p>
-<p>The faster and more specific your timing requirements, the higher the priority — and the cost — tends to be. As with every Ship Guy shipment, your quote is all-in and transparent, with no hidden fees and no upfront deposit. You pay only once your vehicle is assigned and dispatched.</p>
-
-<h2>How Fast Is Expedited Shipping?</h2>
-<p>Expedited service mainly speeds up the front of the process — how quickly a carrier is assigned and your vehicle is picked up. Standard pickup can take a few days to coordinate; expedited pickup is often arranged within 24 to 48 hours, and sometimes the same day in busy metro areas. Once your vehicle is on the truck, actual transit time still depends on distance — a coast-to-coast haul covers more miles than a regional move — but priority routing helps keep delivery as direct as possible. When you request your quote, tell us your deadline and we'll tell you what's realistic for your route.</p>
-
-<h2>Expedited vs. Standard Shipping</h2>
-<p>The difference comes down to speed versus cost. Standard shipping is the most economical option and works well when you have a flexible window of several days for pickup. Expedited shipping prioritizes your vehicle for the fastest possible assignment and the tightest schedule, at a higher price. If you can plan ahead and stay flexible, standard is the value choice. If a deadline is driving your move, expedited is built for exactly that.</p>
-
-<h2>How to Prepare for a Fast Pickup</h2>
-<p>Because expedited shipments move quickly, a little readiness goes a long way. Have your vehicle prepared before the driver arrives: wash it and take dated photos, remove personal items and toll tags, leave about a quarter tank of fuel, disable alarms, and have one set of keys ready. Confirm your pickup and delivery addresses and contact details up front, and make sure you or an authorized adult is available on short notice. The more prepared you are, the faster the driver can inspect, load, and get your vehicle on the road.</p>
-
-<h2>Expedited Enclosed and Open Options</h2>
-<p>Expedited service isn't limited to one type of trailer. If you need a daily driver moved quickly, expedited <a href="open-car-transport.html">open transport</a> pairs priority dispatch with the affordability of an open carrier. If your vehicle is a classic, luxury, or high-value car that needs both speed and protection, expedited <a href="enclosed-auto-transport.html">enclosed transport</a> combines a fully covered trailer with a fast, prioritized schedule. Either way, the goal is the same: get a qualified carrier assigned and your vehicle on the road as soon as possible. When you request your quote, let us know your vehicle type, your destination, and your deadline, and we'll lay out the fastest realistic option for your situation — along with transparent, all-in pricing.</p>
-
-<h2>Ship Fast with Ship Guy</h2>
-<p>Ship Guy is a licensed, bonded, FMCSA-registered auto transport broker offering expedited car shipping to and from all 50 states. When time is tight, we combine priority dispatch with a vetted carrier network, transparent all-in pricing, no upfront deposit, real-time tracking, and 24/7 U.S.-based support to get your vehicle where it needs to be — fast.</p>
-<p>On a deadline? <a href="index.html#top">Get your free quote</a> in about 60 seconds, or call <a href="tel:+18664992815">(866) 499-2815</a> and tell us when you need it. You can also compare <a href="state-to-state-car-shipping.html">state-to-state shipping</a>, <a href="open-car-transport.html">open transport</a>, or <a href="enclosed-auto-transport.html">enclosed transport</a>.</p>
-
-</div></section>
-
-<!-- related --><section class="related-section"><div class="container">
-      <h2>Explore Other Services</h2>
-      <div class="related-grid">
-        <a class="related-card" href="open-car-transport.html">Open Car Transport <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-        <a class="related-card" href="enclosed-auto-transport.html">Enclosed Auto Transport <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-        <a class="related-card" href="door-to-door-car-shipping.html">Door-to-Door Shipping <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-        <a class="related-card" href="state-to-state-car-shipping.html">State-to-State Shipping <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+  <div class="container hero-grid">
+    <div class="hero-copy">
+      <div class="hero-head">
+      <p class="eyebrow reveal">Licensed&nbsp;•&nbsp;Insured&nbsp;•&nbsp;Nationwide</p>
+      <h1 class="reveal d2">California Auto Transport</h1>
       </div>
+      <div class="hero-rest">
+      <p class="lede reveal d2">Licensed, insured car shipping to and from California — transparent pricing, vetted carriers, and door-to-door delivery.</p>
+
+      <ul class="trust-list reveal d3">
+        <li>
+          <span class="trust-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/><path d="m9 12 2 2 4-4"/></svg></span>
+          Licensed Broker &amp; Fully Insured
+        </li>
+        <li>
+          <span class="trust-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="2" width="8" height="4" rx="1"/><path d="M9 4H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2h-3"/><path d="m9 14 2 2 4-4"/></svg></span>
+          FMCSA Registered
+        </li>
+        <li>
+          <span class="trust-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></span>
+          Vetted Carrier Network
+        </li>
+        <li>
+          <span class="trust-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M4 13a8 8 0 0 1 16 0"/><rect x="2" y="13" width="4.4" height="7" rx="1.6"/><rect x="17.6" y="13" width="4.4" height="7" rx="1.6"/><path d="M20 19.5v.5a3 3 0 0 1-3 3h-3"/></svg></span>
+          Real-Time Tracking &amp; 24/7 Support
+        </li>
+      </ul>
+
+      <div class="hero-divider reveal d3"></div>
+
+      <div class="stats reveal d3">
+        <div class="stat"><span class="num">50+</span><span class="lbl">States Served</span></div>
+        <div class="stat"><span class="num">100%</span><span class="lbl">Insured Transport</span></div>
+        <div class="stat"><span class="num">24/7</span><span class="lbl">Support &amp; Tracking</span></div>
+      </div>
+      </div>
+    </div>
+
+    <!-- QUOTE CARD (booking widget) -->
+    <div class="quote-card is-embed reveal d2" id="quoteForm">
+      <iframe src="https://widget.berocker.com?theme=pro&api_base=https%3A%2F%2Fapp.shipguy.com&api_key=6a5508b7cb2f4" title="Ship Guy Logistics booking form" loading="lazy"></iframe>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== REVIEWS ===================== -->
+<section class="reviews" id="reviews">
+  <div class="container">
+    <div class="reviews-head">
+      <div>
+        <h2>Verified customer reviews</h2>
+        <p>Trusted by vehicle owners nationwide.</p>
+      </div>
+      <div class="rating">
+        <span class="score">4.9</span>
+        <span class="stars" aria-label="4.9 out of 5 stars">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.06 6.6.79-4.86 4.53 1.27 6.52L12 17.9l-5.9 3.5 1.27-6.52L2.5 9.35l6.6-.79L12 2.5Z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.06 6.6.79-4.86 4.53 1.27 6.52L12 17.9l-5.9 3.5 1.27-6.52L2.5 9.35l6.6-.79L12 2.5Z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.06 6.6.79-4.86 4.53 1.27 6.52L12 17.9l-5.9 3.5 1.27-6.52L2.5 9.35l6.6-.79L12 2.5Z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.06 6.6.79-4.86 4.53 1.27 6.52L12 17.9l-5.9 3.5 1.27-6.52L2.5 9.35l6.6-.79L12 2.5Z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.06 6.6.79-4.86 4.53 1.27 6.52L12 17.9l-5.9 3.5 1.27-6.52L2.5 9.35l6.6-.79L12 2.5Z"/></svg>
+        </span>
+        <span class="count">487+ reviews</span>
+        <span class="divider-v"></span>
+        <span class="gword"><span class="b">G</span><span class="r">o</span><span class="y">o</span><span class="b">g</span><span class="g">l</span><span class="r">e</span></span>
+      </div>
+    </div>
+
+    <div class="review-grid">
+      <article class="review">
+        <div class="review-top">
+          <span class="avatar">JD</span>
+          <div><span class="name">James D.</span><span class="date">May 12, 2024</span></div>
+        </div>
+        <div class="stars" aria-label="5 out of 5">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.06 6.6.79-4.86 4.53 1.27 6.52L12 17.9l-5.9 3.5 1.27-6.52L2.5 9.35l6.6-.79L12 2.5Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.06 6.6.79-4.86 4.53 1.27 6.52L12 17.9l-5.9 3.5 1.27-6.52L2.5 9.35l6.6-.79L12 2.5Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.06 6.6.79-4.86 4.53 1.27 6.52L12 17.9l-5.9 3.5 1.27-6.52L2.5 9.35l6.6-.79L12 2.5Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.06 6.6.79-4.86 4.53 1.27 6.52L12 17.9l-5.9 3.5 1.27-6.52L2.5 9.35l6.6-.79L12 2.5Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.06 6.6.79-4.86 4.53 1.27 6.52L12 17.9l-5.9 3.5 1.27-6.52L2.5 9.35l6.6-.79L12 2.5Z"/></svg>
+        </div>
+        <p>Ship Guy made the whole process easy. Great communication and my car arrived earlier than expected. Highly recommend!</p>
+      </article>
+
+      <article class="review">
+        <div class="review-top">
+          <span class="avatar">SR</span>
+          <div><span class="name">Sarah R.</span><span class="date">April 28, 2024</span></div>
+        </div>
+        <div class="stars" aria-label="5 out of 5">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.06 6.6.79-4.86 4.53 1.27 6.52L12 17.9l-5.9 3.5 1.27-6.52L2.5 9.35l6.6-.79L12 2.5Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.06 6.6.79-4.86 4.53 1.27 6.52L12 17.9l-5.9 3.5 1.27-6.52L2.5 9.35l6.6-.79L12 2.5Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.06 6.6.79-4.86 4.53 1.27 6.52L12 17.9l-5.9 3.5 1.27-6.52L2.5 9.35l6.6-.79L12 2.5Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.06 6.6.79-4.86 4.53 1.27 6.52L12 17.9l-5.9 3.5 1.27-6.52L2.5 9.35l6.6-.79L12 2.5Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.06 6.6.79-4.86 4.53 1.27 6.52L12 17.9l-5.9 3.5 1.27-6.52L2.5 9.35l6.6-.79L12 2.5Z"/></svg>
+        </div>
+        <p>Excellent service from start to finish. The driver was professional and my vehicle arrived in perfect condition.</p>
+      </article>
+
+      <article class="review">
+        <div class="review-top">
+          <span class="avatar">MT</span>
+          <div><span class="name">Michael T.</span><span class="date">April 15, 2024</span></div>
+        </div>
+        <div class="stars" aria-label="5 out of 5">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.06 6.6.79-4.86 4.53 1.27 6.52L12 17.9l-5.9 3.5 1.27-6.52L2.5 9.35l6.6-.79L12 2.5Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.06 6.6.79-4.86 4.53 1.27 6.52L12 17.9l-5.9 3.5 1.27-6.52L2.5 9.35l6.6-.79L12 2.5Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.06 6.6.79-4.86 4.53 1.27 6.52L12 17.9l-5.9 3.5 1.27-6.52L2.5 9.35l6.6-.79L12 2.5Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.06 6.6.79-4.86 4.53 1.27 6.52L12 17.9l-5.9 3.5 1.27-6.52L2.5 9.35l6.6-.79L12 2.5Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.06 6.6.79-4.86 4.53 1.27 6.52L12 17.9l-5.9 3.5 1.27-6.52L2.5 9.35l6.6-.79L12 2.5Z"/></svg>
+        </div>
+        <p>Fast quote, fair price, and they kept me updated throughout the entire delivery. Will definitely use again.</p>
+      </article>
+
+      <article class="review">
+        <div class="review-top">
+          <span class="avatar">KB</span>
+          <div><span class="name">Kelsey B.</span><span class="date">March 30, 2024</span></div>
+        </div>
+        <div class="stars" aria-label="5 out of 5">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.06 6.6.79-4.86 4.53 1.27 6.52L12 17.9l-5.9 3.5 1.27-6.52L2.5 9.35l6.6-.79L12 2.5Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.06 6.6.79-4.86 4.53 1.27 6.52L12 17.9l-5.9 3.5 1.27-6.52L2.5 9.35l6.6-.79L12 2.5Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.06 6.6.79-4.86 4.53 1.27 6.52L12 17.9l-5.9 3.5 1.27-6.52L2.5 9.35l6.6-.79L12 2.5Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.06 6.6.79-4.86 4.53 1.27 6.52L12 17.9l-5.9 3.5 1.27-6.52L2.5 9.35l6.6-.79L12 2.5Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.06 6.6.79-4.86 4.53 1.27 6.52L12 17.9l-5.9 3.5 1.27-6.52L2.5 9.35l6.6-.79L12 2.5Z"/></svg>
+        </div>
+        <p>Shipped my SUV cross-country with no issues. The team was responsive and the experience was smooth.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+
+<!-- ===================== STATE CONTENT ===================== -->
+<section class="article-section"><div class="container article">
+  <nav class="crumbs" aria-label="Breadcrumb"><a href="index.html">Home</a><span>/</span><span aria-current="page">California Auto Transport</span></nav>
+  <p>Moving a vehicle to, from, or within California doesn&#x27;t have to be a headache. This guide covers everything you need to know about pricing, timelines, service types, and preparation so you can make a confident decision and get your car where it needs to be.</p>
+  <h2>Quick Start: Shipping Your Car To or From California With Ship Guy</h2>
+  <p>Ship Guy specializes in California auto transport, offering fast quotes and stress-free service for customers across the country. Whether you need to ship a car for a cross-country relocation or move a vehicle between California cities, Ship Guy handles the logistics from start to finish.</p>
+  <p>You can ship cars, SUVs, trucks, and motorcycles anywhere in the US to or from California. That includes major cities like Los Angeles, San Diego, San Francisco, Sacramento, and San Jose, as well as smaller communities throughout the state.</p>
+  <p>Here&#x27;s what to expect on timing:</p>
+  <p>Most standard open car transport moves within California (for example, Los Angeles to San Diego) take about 1–2 days once picked up.</p>
+  <p>Cross-country routes like San Diego to New York typically take 7–10 days, depending on weather and traffic conditions.</p>
+  <p>Most shipments to or from California fall in the 5 to 9-day range for interstate moves.</p>
+  <p>Ship Guy offers both open-car transport and enclosed options, plus door-to-door vehicle pickup and delivery, where accessible by truck. Door-to-door service allows for closer pickup and drop-off locations, eliminating the need to drive to a remote terminal.</p>
+  <p>Ready to move your vehicle? Request an instant online quote or call Ship Guy for personalized auto transport services tailored to your route and timeline.</p>
+  <h2>California Auto Transport Basics</h2>
+  <p>California auto transport refers to professional vehicle transport to, from, and within the state using licensed motor carriers. These carriers operate multi-car trailer rigs, either open or enclosed, moving motor vehicles along established highway corridors under federal and state oversight. Strict state regulations apply to vehicle transport in California, so working with a properly credentialed company matters.</p>
+  <p>Major corridors like I-5, I-10, I-15, US-101, and CA-99 are the primary shipping routes in California. Because carriers prefer high-traffic routes for efficient shipping, these interstates keep prices competitive and transit times predictable. California has high transport traffic from major hubs like Los Angeles and San Francisco, which means more carrier availability and better scheduling flexibility on these lanes.</p>
+  <p>Large metro areas such as Los Angeles, San Diego, Sacramento, and San Jose are considered &quot;easy&quot; markets. Frequent truck traffic through these cities translates to more flexible pickup windows, often within 1–3 business days for open transport.</p>
+  <p>Dense or hilly areas present a different challenge. In parts of San Francisco, Oakland, and coastal CA-1 communities, drivers may need to meet at nearby shopping centers or highway exits due to street weight restrictions, steep grades, and narrow roads.</p>
+  <p>Ship Guy coordinates all logistics with vetted car shipping companies and carriers. Rather than juggling calls between brokers and drivers, you get a single point of contact managing your California car shipment from booking through delivery. Customers moving into the state should also plan for California vehicle registration requirements after transport. You should always ensure the transport company is , and Ship Guy verifies this for every carrier in its network.</p>
+  <h2>California Car Shipping Costs in 2026</h2>
+  <p>Car shipping costs change with fuel prices, seasonal demand, and distance. Ship Guy uses up-to-date market data to keep pricing accurate, so you&#x27;re not working off stale numbers from last year. This matters especially in California, where shipping costs are higher due to gas prices - among the highest in the country.</p>
+  <p>Here are sample ranges for open car transport on popular routes:</p>
+  <div class="table-wrap"><table><tbody><tr><td>San Diego → Los Angeles (~120 mi)</td><td>$275–$425</td><td>1–2 days</td></tr><tr><td>San Francisco → Los Angeles (~380 mi)</td><td>$400–$600</td><td>1–2 days</td></tr><tr><td>San Francisco → San Diego (~500 mi)</td><td>$450–$650</td><td>2–3 days</td></tr><tr><td>Los Angeles → Houston (~1,400 mi)</td><td>$850–$1,150</td><td>4–6 days</td></tr><tr><td>San Diego → Miami (~2,400 mi)</td><td>$1,200–$1,500</td><td>7–9 days</td></tr></tbody></table></div>
+  <p>Shipping costs increase with longer distances, though the per-mile rate tends to decrease on longer hauls. Shipping from San Francisco to Los Angeles takes 1–2 days and sits at the lower end of the cost spectrum, while cross-country shipping can take up to 9 days for long distances.</p>
+  <p>Enclosed auto transport typically costs 50% to 100% more than open transport, especially for high-value vehicles or classic car shipments that require extra protection.</p>
+  <p>Key factors that influence your California car shipping cost:</p>
+  <p><strong>Distance</strong>: The single biggest cost driver. Short-hauls under 500 miles have higher per-mile rates but lower total costs.</p>
+  <p><strong>Vehicle type and size</strong>: Vehicle type affects shipping costs - larger vehicles like SUVs and trucks cost more due to weight and space on the trailer.</p>
+  <p><strong>Operable vs inoperable</strong>: Inoperable vehicles require specialized equipment, such as winches, which adds to the price.</p>
+  <p><strong>Open or enclosed transport</strong>: Enclosed adds high cost but provides more protection.</p>
+  <p><strong>Pickup and delivery locations</strong>: Urban areas with easy truck access cost less than remote or restricted addresses.</p>
+  <p><strong>Seasonality</strong>: Summer is the peak season for car shipping in California, and January relocations also push rates upward.</p>
+  <p>Ship Guy provides binding, firm quotes with no hidden fees. Line items like fuel surcharges, insurance, and door-to-door service are included where applicable, so the price you see is the price you pay. Shipping from San Diego can be more expensive than from Los Angeles on certain routes due to corridor positioning and carrier routing preferences.</p>
+  <h2>How California Auto Shipping Works With Ship Guy</h2>
+  <p>Auto transport in California follows a structured process that starts with requesting quotes. Here&#x27;s how Ship Guy&#x27;s car transport process works from start to finish.</p>
+  <h2>Step 1 - Get a Quote</h2>
+  <p>You provide your pickup and delivery cities or ZIP codes, vehicle details (year, make, model), vehicle condition (running or not), and preferred dates. Ship Guy generates an instant or same-day car shipping quote using live market data from current carrier routes.</p>
+  <h2>Step 2 - Book Your Shipment</h2>
+  <p>Once you accept the quote, you confirm the order with Ship Guy and sign a digital transport agreement. This agreement covers terms, insurance information, pickup window, and payment schedule. In major California cities, the estimated pickup window is usually 1–3 business days. Carrier availability on popular corridors tends to be strong, keeping windows tight.</p>
+  <h2>Step 3 - Vehicle Pickup</h2>
+  <p>The carrier calls ahead to coordinate timing. At pickup, the driver performs a visual inspection and marks any existing damage on a Bill of Lading (BOL). Your vehicle is loaded at the curbside or a mutually agreed safe location. Documentation such as the vehicle&#x27;s title, proof of insurance, and vehicle registration may be required before shipping, especially for moves into California, so have it ready.</p>
+  <h2>Step 4 - Transit</h2>
+  <p>Your vehicle is transported via open or enclosed trailer along major California corridors and interstate highways. Ship Guy or the carrier provides periodic updates and an estimated arrival window. Unforeseen delays from weather, wildfires, or highway closures can occasionally shift delivery dates, but Ship Guy communicates changes proactively.</p>
+  <h2>Step 5 - Delivery</h2>
+  <p>Upon arrival, the driver calls ahead, meets you or your authorized representative, and unloads the vehicle. A final inspection is completed by comparing the vehicle&#x27;s condition against the original BOL. You sign the BOL after confirming everything checks out.</p>
+  <p>Ship Guy focuses on door-to-door California car shipping services whenever access allows. If the truck can&#x27;t reach your exact address, Ship Guy arranges convenient meeting points near major roads or parking lots.</p>
+  <h2>Types of California Car Shipping Services Offered by Ship Guy</h2>
+  <p>Ship Guy offers multiple auto transport services so you can match the protection level and budget to your specific situation. California car shipping offers open and enclosed transport options, available on intra-state and cross-country routes.</p>
+  <p>Core service types include:</p>
+  <p><strong>Open car shipping</strong> - the standard, most affordable option for everyday vehicles</p>
+  <p><strong>Enclosed car transport</strong> - fully covered trailers for vehicles needing maximum protection.</p>
+  <p><strong>Cross-country shipping</strong> - to and from California, covering routes to Texas, Florida, New York, and beyond</p>
+  <p><strong>Intra-California regional routes</strong> - LA to Bay Area, SoCal to Sacramento, San Diego to San Jose, and similar corridors</p>
+  <p><strong>Guaranteed pickup service</strong> - for customers who need a firm pickup date rather than a flexible window</p>
+  <p>Ship Guy also coordinates specialized moves: college student relocations, seasonal &quot;snowbird&quot; routes between California and Arizona or Florida, and dealer- or auction-vehicle transport.</p>
+  <p>Need to pick up a vehicle from a California dealership, auction, or private seller? Ship Guy can arrange vehicle pickup at the origin and deliver it directly to a home, storage facility, or business anywhere in the country. Every vehicle shipment is fully insured under the carrier&#x27;s cargo policy while on the truck, and Ship Guy verifies the carrier&#x27;s coverage before dispatch.</p>
+  <h2>Open vs Enclosed Transport: Choosing the Right Option</h2>
+  <p>Most Ship Guy customers use open car transport because it covers the vast majority of shipping needs at a lower price point. But for certain vehicles, an enclosed call is the smarter choice. Understanding the trade-off between open and enclosed transport helps you make the right choice.</p>
+  <h2>Open Car Transport</h2>
+  <p>Open transport is the most common and cost-effective method for shipping motor vehicles. These are the standard multi-car trailer rigs you see on interstates carrying 7–10 vehicles at a time.</p>
+  <p>Benefits of open car shipping:</p>
+  <p>Lower car shipping costs compared to enclosed</p>
+  <p>More frequent truck availability on busy lanes like Los Angeles to Phoenix or San Diego to Las Vegas</p>
+  <p>Faster scheduling because more carriers run open equipment</p>
+  <p>Suitable for standard vehicle shipping of sedans, SUVs, pickups, and minivans</p>
+  <p>The trade-off is that your vehicle rides exposed to weather, road dust, and minor debris. For most daily drivers, this is perfectly acceptable.</p>
+  <h2>Enclosed Car Transport</h2>
+  <p>Enclosed transport uses a fully covered enclosed trailer that shields vehicles from weather, dust, UV exposure, and road debris. Enclosed carriers provide more protection for high-value vehicles and typically carry higher insurance limits - sometimes $250,000 to $1,000,000 per load compared to $100,000–$250,000 on open carriers.</p>
+  <p>Enclosed car shipping is strongly recommended when:</p>
+  <p>The vehicle is valued at over $75,000</p>
+  <p>You&#x27;re shipping luxury, exotic, or other high-end vehicles from California collections.</p>
+  <p>A classic car has been newly restored and needs cosmetic protection.</p>
+  <p>The vehicle has low clearance or custom modifications requiring specialized equipment.</p>
+  <p>Collectors are shipping to auctions in Monterey, Los Angeles, or Scottsdale.</p>
+  <p>Enclosed transport costs 50% to 100% more than open transport, and pickup windows can be longer since fewer carriers run enclosed equipment. If you&#x27;re unsure which option fits, ask Ship Guy for both an open and an enclosed quote so you can compare costs with the level of protection your vehicle needs.</p>
+  <h2>California Routes, Cities, and Regional Considerations</h2>
+  <p>California shipping is shaped by geography, traffic density, and fuel costs. Ship Guy tailors route planning to leverage high-volume corridors while accounting for regional challenges.</p>
+  <h2>High-Volume Corridors</h2>
+  <p>Locations along I-5 are the friendliest for car shipping. This north-south backbone runs from San Diego through Los Angeles, up the Central Valley to Sacramento, and into Oregon. CA-99 parallels I-5 through the agricultural heartland, and US-101 connects Los Angeles to San Jose and beyond through coastal communities. Locations along I-5 are quicker for car shipping because carrier density is highest on these roads.</p>
+  <h2>Popular California Car Shipping Routes</h2>
+  <p>Los Angeles ↔ San Diego</p>
+  <p>San Diego ↔ San Francisco Bay Area</p>
+  <p>Sacramento ↔ Seattle</p>
+  <p>Southern California ↔ Texas and Florida</p>
+  <p>West coast ↔ East Coast (New York, Virginia, Georgia)</p>
+  <h2>Challenging Areas</h2>
+  <p>San Francisco is the most challenging shipping location in California. Steep hills, narrow Victorian-era streets, and strict weight limits mean carriers often can&#x27;t reach residential addresses directly. Customers in central San Francisco or similar hillside neighborhoods should expect to meet the driver at a nearby freeway exit or park-and-ride lot.</p>
+  <p>Coastal roads along CA-1 and remote mountain communities present similar access issues.</p>
+  <h2>Far Northern California</h2>
+  <p>Far northern California towns like Eureka, Redding, and Crescent City see fewer carriers on their routes. This translates to slightly higher rates, longer pickup windows, and occasionally longer transit times due to deadhead mileage. Shipping during the summer peak season further increases delivery times in these areas, as available equipment is first absorbed by higher-volume corridors.</p>
+  <h2>San Diego as a Key Hub</h2>
+  <p>San Diego deserves its own mention. It&#x27;s a major hub for California car shipping with frequent traffic to Arizona, Nevada, Texas, and East Coast destinations.  drive consistent year-round demand, which helps stabilize pricing and carrier availability in the region.</p>
+  <h2>How to Save on Car Shipping in California</h2>
+  <p>Ship Guy helps customers reduce car shipping costs without cutting corners on safety or reliability in California. Here&#x27;s how to save money on your next vehicle shipment.</p>
+  <h2>Book Early</h2>
+  <p>Booking 2–3 weeks in advance improves shipping options and pricing. Booking in advance can save money during peak seasons, giving Ship Guy more time to match your shipment with the most efficient carrier route. This is especially important during summer months and end-of-year relocation cycles.</p>
+  <h2>Stay Flexible on Dates</h2>
+  <p>Allow a multi-day window for both vehicle pickup and delivery. Rigid, single-day requirements limit which carriers can take your load. Flexibility in delivery dates lets Ship Guy optimize routing, often resulting in lower quotes.</p>
+  <h2>Choose Open When Appropriate</h2>
+  <p>Open transport is the most common and cost-effective method for standard vehicles. If your car doesn&#x27;t require the extra protection of an enclosed trailer, choosing open car transport is the easiest way to keep costs down.</p>
+  <h2>Meet Near Major Highways</h2>
+  <p>If you live in a remote area or a neighborhood with difficult truck access, offering to meet the driver near a major highway or a larger city can lower the price. For example, meeting in San Diego instead of a mountain community east of the city may shave dollars off the quote and speed up dispatch.</p>
+  <h2>Ship Multiple Vehicles Together</h2>
+  <p>Customers shipping multiple vehicles - whether for a household move or a dealer shipment - should ask Ship Guy about multi-car discounts. Consolidating vehicles on the same run saves the carrier time and fuel, and those savings often get passed along.</p>
+  <h2>Avoid Peak Timing When Possible</h2>
+  <p>California&#x27;s peak shipping season is during the summer months (May through August). If your schedule allows, shipping in the shoulder months of April or September can mean lower rates and shorter pickup windows.</p>
+  <h2>Preparing Your Vehicle for California Car Transport</h2>
+  <p>Proper preparation protects your vehicle and helps avoid delays during the car shipping process. A few simple steps before pickup day make a noticeable difference.</p>
+  <h2>Wash Your Vehicle</h2>
+  <p>A clean exterior lets the driver clearly document the vehicle&#x27;s condition during the pre-shipment inspection. Dirt and grime can hide existing scratches or chips, making it harder to distinguish pre-existing damage from damage that might occur during transit.</p>
+  <h2>Photograph Everything</h2>
+  <p>Document your vehicle&#x27;s condition with photos before shipping. Capture all four sides, the roof, wheels, and interior on the day of pickup. Save time-stamped images to your phone or cloud storage. This creates a clear record if you need to file a claim later.</p>
+  <h2>Remove Personal Belongings</h2>
+  <p>Remove all personal items from your vehicle before transport. Personal belongings are generally not allowed in the car due to DOT weight limits, and car shipping companies do not insure personal property. This includes phone mounts, toll tags, removable roof racks, and anything stored in the trunk or back seat.</p>
+  <h2>Manage Fuel Level</h2>
+  <p>Keep your fuel tank at about a quarter full during transit. This reduces the weight on the trailer while leaving enough fuel for the driver to move your vehicle on and off the truck at both ends.</p>
+  <h2>Check Mechanical Basics</h2>
+  <p>Before pickup, check tire pressure and coolant levels. Verify that the emergency brake functions properly, and look under the vehicle for fluid leaks. Provide one working key set to the transport driver. If you&#x27;re moving into the state, prepare for California vehicle registration after delivery.</p>
+  <h2>Inoperable or Non-Running Vehicles</h2>
+  <p>Vehicles must comply with basic safety standards to be loaded. Inoperable vehicles require specialized loading equipment, such as winches or liftgates, which Ship Guy can arrange at an additional cost. Let Ship Guy know about the vehicle&#x27;s condition upfront so the right carrier and equipment are assigned.</p>
+  <h2>Receiving Your Vehicle in California</h2>
+  <p>The final handoff matters. A careful inspection at delivery protects you and ensures the car shipment is properly closed out.</p>
+  <h2>Be Present or Send a Representative</h2>
+  <p>Be available or have an authorized representative present during delivery in California. Schedule enough daylight for a thorough inspection, and make sure there&#x27;s adequate space for the truck to park and unload safely.</p>
+  <h2>Compare Against the Bill of Lading</h2>
+  <p>Inspect your vehicle for new damage upon delivery. Carefully compare the vehicle&#x27;s condition to the original Bill of Lading and your pre-shipment photos. Look at every panel, the roof, bumpers, glass, and wheels. If the car arrived with any discrepancies, note them on the paperwork before signing.</p>
+  <h2>What&#x27;s Normal vs What&#x27;s Not</h2>
+  <p>Minor dust or road film is completely normal after long-distance vehicle transport. This washes off easily and doesn&#x27;t damage. New dents, scratches, cracked glass, or missing parts are not normal and should be documented immediately.</p>
+  <h2>If Damage Is Found</h2>
+  <p>If any transport-related damage is found:</p>
+  <p>Notify the driver on the spot.</p>
+  <p>Take clear, close-up photos of the damage.</p>
+  <p>Mark the Bill of Lading with a written description of the issue.</p>
+  <p>Contact Ship Guy promptly for assistance with the carrier&#x27;s insurance claim process.</p>
+  <p>Your vehicle is insured through the carrier&#x27;s cargo policy, which means you have recourse, but proper documentation at delivery is essential.</p>
+  <h2>Delivery in Busy California Locations</h2>
+  <p>In congested areas like Los Angeles, San Diego, or Oakland ports, Ship Guy or the carrier will coordinate delivery to a convenient, truck-friendly area if street access is limited. This keeps the process smooth and avoids the risk of a large trailer getting stuck on a narrow residential street.</p>
+  <h2>Why Californians Choose Ship Guy for Auto Transport Services</h2>
+  <p>Ship Guy is a dedicated partner focused on transparent pricing, reliable scheduling, and responsive customer service throughout every vehicle shipment. No bait-and-switch tactics, no surprise fees, and no disappearing once you&#x27;ve booked.</p>
+  <p>Ship Guy uses a vetted network of licensed, insured carriers specializing in California car shipping on both major and secondary routes. Every carrier&#x27;s FMCSA authority, insurance coverage, and safety record are verified before they&#x27;re dispatched to handle your vehicle.</p>
+  <p>The car shipping experience with Ship Guy is built around stress-free service: dedicated support from quote through delivery, proactive status updates, and hands-on help resolving any issues with carriers or timing. Customer reviews are important to evaluate a transport company&#x27;s reliability, and Ship Guy&#x27;s track record reflects consistent communication and honest timelines.</p>
+  <p>Ship Guy regularly handles moves for:</p>
+  <p>Cross-country relocations to and from the West Coast</p>
+  <p>Vehicle purchases from California dealerships, auctions, and private sellers</p>
+  <p>Military PCS moves</p>
+  <p>Seasonal travel between California and snowbird destinations</p>
+  <p>Dealer inventory transfers and multiple vehicle shipments</p>
+  <p>Ship Guy&#x27;s commitment to realistic pickup windows and honest delivery dates means you&#x27;ll know what to expect - no inflated promises that fall apart once your vehicle is on the road.</p>
+  <p>Get a customized California shipping quote for your route today. Request a quote online or call Ship Guy directly to talk through your vehicle details and timeline.</p>
+  <h2>Car Transportation Areas We Serve Across California</h2>
+  <p>Ship Guy arranges vehicle transport in all California zip codes, covering both major cities and smaller communities from the Oregon border to San Diego.</p>
+  <h2>Key metro areas served:</h2>
+  <p>Los Angeles</p>
+  <p>San Diego</p>
+  <p>San Francisco</p>
+  <p>San Jose</p>
+  <p>Sacramento</p>
+  <p>Fresno</p>
+  <p>Bakersfield</p>
+  <p>Riverside</p>
+  <p>Anaheim</p>
+  <p>Long Beach</p>
+  <p>Oakland</p>
+  <p>Santa Ana</p>
+  <p>Stockton</p>
+  <p>Ship Guy also supports pickup and delivery in coastal cities such as Santa Barbara, Ventura, Monterey, and Santa Cruz, as well as in inland regions including the Central Valley and the Inland Empire. Northern California communities from Redding to Chico to Eureka are also covered, though carrier frequency varies.</p>
+  <h2>Short-Distance California Routes</h2>
+  <p>Routes within 200 miles in California - for example, Los Angeles to Bakersfield or San Diego to Riverside - often move in just a couple of days once a carrier is assigned. These short hops benefit from frequent truck traffic on I-5, CA-99, and I-15.</p>
+  <h2>Long-Haul Routes</h2>
+  <p>Shipping over 2,000 miles to or from California can take up to 9 days in transit, depending on route, weather, and traffic conditions. Popular long-haul destinations include Texas, Florida, New York, Washington, and Arizona.</p>
+  <p>Ship Guy coordinates both origin-in-California and destination-in-California shipments nationwide. Whether you need to ship cars from a San Francisco Bay Area dealership to a buyer in Miami, or move a vehicle directly from Chicago to your new home in San Diego, Ship Guy handles the routing, carrier selection, and communication so your vehicle arrives safely and on schedule.</p>
+  <p>To get started, request your California car shipping quote from Ship Guy today - online or by phone. Tell us your route, your vehicle, and your timeline, and we&#x27;ll handle the rest.</p>
 </div></section>
+
+<!-- ===================== WHAT WE SHIP ===================== -->
+<section class="ship-section" id="services">
+  <div class="container">
+    <div class="ship-head">
+      <p class="ship-eyebrow">What We Ship</p>
+      <h2>We Ship More Than Cars</h2>
+      <p class="ship-sub">Nationwide transport solutions for vehicles, household goods, equipment, and freight.</p>
+    </div>
+
+    <div class="ship-grid">
+      <article class="ship-card">
+        <div class="ship-img"><img src="assets/ship-vehicles.jpg" alt="Blue auto-transport carrier loaded with cars and a boat on a mountain highway" loading="lazy"></div>
+        <div class="ship-body">
+          <h3>Vehicles &amp; Boats</h3>
+          <p>Cars, trucks, motorcycles, RVs, and boats shipped nationwide.</p>
+          <a class="ship-link" href="#">Learn More <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </div>
+      </article>
+
+      <article class="ship-card">
+        <div class="ship-img"><img src="assets/ship-household.jpg" alt="Living room with a sofa and packed moving boxes ready for transport" loading="lazy"></div>
+        <div class="ship-body">
+          <h3>Household Items</h3>
+          <p>Furniture, boxes, and personal items moved with care.</p>
+          <a class="ship-link" href="#">Learn More <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </div>
+      </article>
+
+      <article class="ship-card">
+        <div class="ship-img"><img src="assets/ship-equipment.jpg" alt="Green tractor secured on a flatbed trailer for heavy equipment transport" loading="lazy"></div>
+        <div class="ship-body">
+          <h3>Heavy Equipment</h3>
+          <p>Tractors, machinery, and oversized equipment transport.</p>
+          <a class="ship-link" href="#">Learn More <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </div>
+      </article>
+
+      <article class="ship-card">
+        <div class="ship-img"><img src="assets/ship-freight.jpg" alt="Palletized and shrink-wrapped cargo in a warehouse for freight shipping" loading="lazy"></div>
+        <div class="ship-body">
+          <h3>Freight</h3>
+          <p>Palletized cargo, crates, and commercial freight shipping.</p>
+          <a class="ship-link" href="#">Learn More <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FAQ ===================== -->
+<section class="faq-section" id="faq">
+  <div class="container">
+    <div class="faq-head">
+      <p class="faq-eyebrow">Questions?</p>
+      <h2>Frequently Asked Questions</h2>
+      <span class="faq-accent" aria-hidden="true"></span>
+      <p class="faq-sub">Everything you need to know before you ship.</p>
+    </div>
+
+    <div class="faq-list">
+      <details class="faq-item" open>
+        <summary class="faq-q">How much does it cost to ship a vehicle?
+          <span class="faq-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></span>
+        </summary>
+        <div class="faq-a">Your price depends on the distance, vehicle size, transport type (open or enclosed), and how quickly you need it. We give you an upfront, all-in quote with no hidden fees — the number you see is the number you pay.</div>
+      </details>
+
+      <details class="faq-item">
+        <summary class="faq-q">How long will my shipment take?
+          <span class="faq-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></span>
+        </summary>
+        <div class="faq-a">Transit time depends on the route and distance. Once your vehicle is dispatched, we share an estimated delivery window and keep you updated from pickup to drop-off. Longer cross-country routes naturally take more time than regional moves.</div>
+      </details>
+
+      <details class="faq-item">
+        <summary class="faq-q">Is my vehicle insured during transport?
+          <span class="faq-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></span>
+        </summary>
+        <div class="faq-a">Yes. We only work with licensed, vetted carriers that carry active cargo insurance, and your vehicle is covered while it's on the truck. We're happy to share coverage details before you book.</div>
+      </details>
+
+      <details class="faq-item">
+        <summary class="faq-q">What's the difference between open and enclosed transport?
+          <span class="faq-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></span>
+        </summary>
+        <div class="faq-a">Open transport is the most common and most affordable option and is safe for everyday vehicles. Enclosed transport adds extra protection from weather and road debris — a great choice for classic, luxury, or high-value vehicles.</div>
+      </details>
+
+      <details class="faq-item">
+        <summary class="faq-q">Do I have to pay a deposit upfront?
+          <span class="faq-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></span>
+        </summary>
+        <div class="faq-a">No. You don't pay until your vehicle is assigned and dispatched to a carrier — so there's no risk in getting a quote and booking your shipment.</div>
+      </details>
+
+      <details class="faq-item">
+        <summary class="faq-q">Can you ship a vehicle that doesn't run?
+          <span class="faq-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></span>
+        </summary>
+        <div class="faq-a">Yes. We transport both operable and inoperable (non-running) vehicles — just let us know when you book so we assign a carrier with the right equipment, such as a winch.</div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== LOCAL / CONTACT ===================== -->
+<section class="local-section" id="contact-local">
+  <div class="container">
+    <div class="local-grid">
+      <div class="local-info">
+        <p class="local-eyebrow">Get Started</p>
+        <h2>Ship Your Car To or From California Today</h2>
+        <p class="local-lede">Call now or request a free quote. Transparent all-in pricing, no upfront deposit, vetted carriers, and 24/7 U.S.-based support.</p>
+        <div class="local-actions">
+          <a class="btn-call-lg" href="tel:+18664992815"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/></svg> Call (866) 499-2815</a>
+          <a class="btn-quote-lg" href="#top">Get a Free Quote <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </div>
+        <ul class="local-contact">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg><span>Serving all of California — door-to-door, statewide</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg><span>Ship Guy — Nationwide Auto Transport &nbsp;<em style="color:#9098b0">(add your business address)</em></span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/></svg><a href="tel:+18664992815">(866) 499-2815</a></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg><a href="mailto:quotes@shipguy.com">quotes@shipguy.com</a></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span>Open 24/7 — quotes &amp; support</span></li>
+        </ul>
+        <div class="local-social" aria-label="Follow Ship Guy"><a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.07C24 5.4 18.63 0 12 0S0 5.4 0 12.07C0 18.1 4.39 23.1 10.13 24v-8.44H7.08v-3.49h3.05V9.41c0-3.02 1.79-4.69 4.53-4.69 1.31 0 2.68.24 2.68.24v2.97h-1.51c-1.49 0-1.96.93-1.96 1.89v2.25h3.33l-.53 3.49h-2.8V24C19.61 23.1 24 18.1 24 12.07z"/></svg></a><a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5.5"/><circle cx="12" cy="12" r="4.2"/><line x1="17.6" y1="6.4" x2="17.61" y2="6.4"/></svg></a><a href="#" aria-label="X"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231 5.45-6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a><a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg></a></div>
+      </div>
+      <div class="local-map">
+        <iframe title="California auto transport service area" src="https://www.google.com/maps?q=California%2C%20USA&z=6&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+</section>
 
 <!-- ===================== FINAL CTA ===================== -->
 <section class="cta-band" id="get-started">
@@ -758,11 +1158,14 @@ body.ready .reveal{opacity:1;transform:none}
     <h2>Ready to Ship Your Vehicle?</h2>
     <p class="cta-sub">Get a free, no-obligation quote in about 60 seconds — or call and talk to a real specialist right now.</p>
     <div class="cta-actions">
-      <a class="cta-primary" href="index.html#top">Get Your Free Quote
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      <a class="cta-primary" href="#top">
+        Get Your Free Quote
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
       <a class="cta-secondary" href="tel:+18664992815">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/></svg>
-        (866) 499-2815</a>
+        (866) 499-2815
+      </a>
     </div>
     <ul class="cta-trust">
       <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Licensed &amp; insured</li>
@@ -793,7 +1196,7 @@ body.ready .reveal{opacity:1;transform:none}
       <h4>Company</h4>
       <ul>
         <li><a href="how-it-works.html">How It Works</a></li>
-        <li><a href="index.html#reviews">Reviews</a></li>
+        <li><a href="#reviews">Reviews</a></li>
         <li><a href="index.html#locations">Locations</a></li>
         <li><a href="faq.html">FAQ</a></li>
         <li><a href="contact.html">Contact</a></li>
@@ -896,68 +1299,18 @@ body.ready .reveal{opacity:1;transform:none}
     }
   }
 
-  /* ---- multi-step form ---- */
-  var form = document.getElementById('quoteForm');
-  if(!form) return;
-  var success = document.getElementById('quoteSuccess');
-  var panels = form.querySelectorAll('.qstep');
-  var stepEls = document.querySelectorAll('#steps .step');
-  var trackEls = document.querySelectorAll('#steps .track');
-  var current = 1;
-  var maxStep = 3;
-
-  function setStep(n){
-    current = n;
-    panels.forEach(function(p){ p.classList.toggle('is-current', +p.dataset.panel === n); });
-    stepEls.forEach(function(s){
-      var step = +s.dataset.step;
-      s.classList.toggle('is-active', step === n);
-      s.classList.toggle('is-done', step < n);
-      s.classList.toggle('is-clickable', step < n);
-    });
-    trackEls.forEach(function(t){ t.classList.toggle('is-filled', +t.dataset.track < n); });
-  }
-
-  function validate(n){
-    var panel = form.querySelector('.qstep[data-panel="'+n+'"]');
-    var ok = true, firstBad = null;
-    panel.querySelectorAll('input[required]').forEach(function(inp){
-      var field = inp.closest('.field');
-      var bad = !inp.value.trim() || (inp.type==='email' && !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(inp.value));
-      field.classList.toggle('has-error', bad);
-      if(bad){ ok = false; if(!firstBad) firstBad = inp; }
-    });
-    if(firstBad) firstBad.focus();
-    return ok;
-  }
-
-  // clear error as the user types
-  form.querySelectorAll('input[required]').forEach(function(inp){
-    inp.addEventListener('input', function(){ inp.closest('.field').classList.remove('has-error'); });
-  });
-
-  form.querySelectorAll('[data-next]').forEach(function(btn){
-    btn.addEventListener('click', function(){ if(validate(current)) setStep(Math.min(current+1, maxStep)); });
-  });
-  form.querySelectorAll('[data-back]').forEach(function(btn){
-    btn.addEventListener('click', function(){ setStep(Math.max(current-1, 1)); });
-  });
-
-  // clicking a completed step jumps back to it
-  stepEls.forEach(function(s){
-    s.addEventListener('click', function(){
-      var step = +s.dataset.step;
-      if(step < current) setStep(step);
-    });
-  });
-
-  form.addEventListener('submit', function(e){
-    e.preventDefault();
-    if(!validate(3)) return;
-    form.style.display = 'none';
-    document.getElementById('steps').style.display = 'none';
-    success.classList.add('show');
-  });
+  /* ---- auto-resize booking widget iframe ---- */
+  window.addEventListener('message', function(e){
+    if(String(e.origin).indexOf('berocker') === -1) return;
+    var d = e.data, h = null;
+    if(typeof d === 'number') h = d;
+    else if(d && typeof d === 'object') h = d.height || d.frameHeight || d.iframeHeight || (d.data && d.data.height);
+    h = parseInt(h, 10);
+    if(h && h > 200 && h < 4000){
+      var f = document.querySelector('.quote-card.is-embed iframe');
+      if(f) f.style.height = h + 'px';
+    }
+  }, false);
 })();
 </script>
 </body>

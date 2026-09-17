@@ -6,8 +6,8 @@
   <meta http-equiv="Pragma" content="no-cache">
   <meta http-equiv="Expires" content="0">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Expedited Car Shipping — Fast, Priority Auto Transport | Ship Guy</title>
-<meta name="description" content="Expedited car shipping gets your vehicle picked up fast and delivered on a priority timeline. Learn how expedited auto transport works and when it is worth it.">
+<title>Arkansas Auto Transport — Car Shipping to &amp; from Arkansas | Ship Guy</title>
+<meta name="description" content="Shipping a vehicle to or from Arkansas doesn&#x27;t have to be complicated. Whether you&#x27;re relocating across the country, buying a car from a dealer in Littl…">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
@@ -276,7 +276,7 @@ select.inp{appearance:none;-webkit-appearance:none;padding-right:38px;cursor:poi
 .reviews-head{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;flex-wrap:wrap;margin-bottom:30px}
 .reviews-head h2{font-size:clamp(1.7rem,2.6vw,2.1rem);font-weight:800;color:var(--brand)}
 .reviews-head p{margin:8px 0 0;color:var(--muted);font-size:15.5px}
-.rating{display:flex;align-items:center;gap:12px}
+.rating{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
 .rating .score{font-family:var(--font-display);font-weight:800;font-size:22px;color:var(--ink)}
 .stars{display:inline-flex;gap:2px;color:var(--star)}
 .stars svg{width:18px;height:18px}
@@ -483,10 +483,15 @@ section[id]{scroll-margin-top:104px}
    Responsive
    ========================================================= */
 @media (max-width:1180px){
-  .hero-grid{grid-template-columns:minmax(0,1fr);gap:36px;padding:54px 24px 60px}
-  .hero-copy{max-width:640px}
+  .hero-grid{grid-template-columns:minmax(0,1fr);gap:28px;padding:54px 24px 60px}
+  .hero-copy{display:contents}
+  .hero-head,.hero-rest{max-width:640px;width:100%}
+  .hero-head{order:1}
+  .quote-card{order:2;max-width:520px;width:100%}
+  .hero-rest{order:3}
+  .hero-head h1{margin-bottom:0}
+  .eyebrow{display:none}
   .lede{max-width:520px}
-  .quote-card{max-width:520px;width:100%}
   .hero-overlay{background:linear-gradient(180deg, rgba(4,9,22,.72) 0%, rgba(4,9,22,.8) 55%, rgba(4,9,22,.88) 100%)}
 }
 @media (max-width:1180px){
@@ -507,6 +512,7 @@ section[id]{scroll-margin-top:104px}
 @media (max-width:980px){
   .wc-bento{grid-template-columns:1fr}
   .loc-bento{grid-template-columns:1fr;gap:32px}
+  .review-grid{grid-template-columns:1fr 1fr}
 }
 @media (max-width:880px){
   .steps-row{flex-direction:column;gap:0;max-width:440px;margin:0 auto}
@@ -547,6 +553,31 @@ section[id]{scroll-margin-top:104px}
   .step .slabel{font-size:11.5px}
 }
 
+/* compact hero on laptop screens only (~25% shorter) */
+@media (min-width:1181px) and (max-width:1600px){
+  .hero-grid{padding-top:34px;padding-bottom:40px;gap:40px}
+  .eyebrow{margin-bottom:12px}
+  .hero-copy h1{font-size:clamp(2rem,3vw,2.5rem);margin-bottom:14px}
+  .lede{font-size:15.5px;margin-bottom:18px}
+  .trust-list{margin-bottom:16px;gap:9px}
+  .trust-list li{font-size:14.5px}
+  .trust-ic{width:30px;height:30px}
+  .trust-ic svg{width:17px;height:17px}
+  .hero-divider{margin-bottom:16px}
+  .stat .num{font-size:26px}
+  .stat .lbl{font-size:12px;margin-top:5px}
+  .quote-card{padding:20px 24px 18px}
+  .quote-card h2{font-size:22px;margin-bottom:13px}
+  .steps{margin-bottom:13px}
+  .step .dot{width:30px;height:30px}
+  .field{margin-bottom:9px}
+  .flabel{margin-bottom:4px}
+  .inp{height:40px}
+  .opt{padding:8px 12px}
+  .btn-primary{height:46px}
+  .assure{margin-top:8px}
+}
+
 /* reduced motion */
 @media (prefers-reduced-motion:reduce){
   *{animation-duration:.001ms!important;transition-duration:.001ms!important}
@@ -558,59 +589,58 @@ section[id]{scroll-margin-top:104px}
 body.ready .reveal{opacity:1;transform:none}
 .reveal.d2{transition-delay:.08s}
 .reveal.d3{transition-delay:.16s}
-/* ===== Subpage / article / services styles ===== */
-.page-hero{background:linear-gradient(135deg,#0a2a9e 0%, var(--brand) 60%, #1f54e0 100%);color:#fff;padding:62px 0 56px}
-.crumbs{display:flex;flex-wrap:wrap;gap:9px;font-size:13.5px;font-weight:600;color:#bcd2f8;margin-bottom:16px}
-.crumbs a{color:#dbe6fb}
-.crumbs a:hover{color:#fff}
-.page-hero h1{font-family:var(--font-display);font-weight:800;font-size:clamp(1.9rem,3.6vw,2.8rem);letter-spacing:-.015em;color:#fff;margin:0 0 13px;max-width:840px}
-.page-hero-sub{font-size:17.5px;line-height:1.6;color:rgba(233,239,251,.92);margin:0;max-width:680px}
-.article-section{background:#fff;padding:60px 0 70px;border-top:1px solid var(--line)}
-.article{max-width:780px}
-.article-lead{font-size:18.5px;line-height:1.7;color:#1d2350;font-weight:500;margin:0 0 28px}
-.article h2{font-family:var(--font-display);font-weight:800;font-size:clamp(1.45rem,2.4vw,1.85rem);letter-spacing:-.01em;color:#101a3d;margin:36px 0 13px}
-.article h2:first-of-type{margin-top:0}
-.article h3{font-family:var(--font-display);font-weight:700;font-size:1.15rem;color:#101a3d;margin:24px 0 9px}
-.article p{font-size:16.5px;line-height:1.75;color:#414a6b;margin:0 0 16px}
-.article ul{margin:0 0 18px;padding-left:22px}
-.article li{font-size:16.5px;line-height:1.7;color:#414a6b;margin-bottom:9px}
-.article a{color:var(--brand);font-weight:600;text-decoration:underline;text-decoration-color:#c7d3f5;text-underline-offset:3px}
-.article a:hover{color:var(--brand-press)}
-.svc-section{background:#fff;padding:58px 0 72px}
-.svc-intro{max-width:760px;margin:0 0 34px;font-size:17px;line-height:1.7;color:#586079}
-.svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
-.svc-card{display:flex;flex-direction:column;background:#fff;border:1px solid var(--line);border-radius:16px;padding:28px 26px;box-shadow:0 14px 34px -28px rgba(13,26,80,.4);transition:transform .18s ease,box-shadow .18s ease}
-.svc-card:hover{transform:translateY(-4px);box-shadow:0 26px 54px -28px rgba(13,26,80,.5)}
-.svc-ic{width:52px;height:52px;border-radius:14px;background:var(--brand-tint);color:var(--brand);display:grid;place-items:center;margin-bottom:16px}
-.svc-ic svg{width:26px;height:26px}
-.svc-card h2,.svc-card h3{font-family:var(--font-display);font-weight:800;font-size:19px;color:#101a3d;margin:0 0 9px}
-.svc-card p{font-size:15px;line-height:1.6;color:#586079;margin:0 0 16px;flex:1}
-.svc-more{display:inline-flex;align-items:center;gap:7px;color:var(--brand);font-family:var(--font-display);font-weight:700;font-size:15px}
-.svc-more svg{width:17px;height:17px;transition:transform .15s ease}
-.svc-card:hover .svc-more svg{transform:translateX(3px)}
-.related-section{background:#f5f8fc;padding:52px 0 60px;border-top:1px solid var(--line)}
-.related-section h2{text-align:center;font-family:var(--font-display);font-weight:800;font-size:1.4rem;color:#101a3d;margin:0 0 26px}
-.related-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
-.related-card{display:flex;align-items:center;justify-content:space-between;gap:10px;background:#fff;border:1px solid var(--line);border-radius:12px;padding:16px 18px;font-family:var(--font-display);font-weight:700;font-size:14.5px;color:#101a3d;transition:border-color .15s ease,color .15s ease}
-.related-card:hover{border-color:var(--brand);color:var(--brand)}
-.related-card svg{width:16px;height:16px;color:var(--brand);flex:0 0 auto}
-@media (max-width:900px){.svc-grid{grid-template-columns:1fr 1fr}.related-grid{grid-template-columns:1fr 1fr}}
-@media (max-width:560px){.svc-grid{grid-template-columns:1fr}.related-grid{grid-template-columns:1fr}}
-
 
 .menu.menu-mega{display:grid;grid-template-columns:1fr 1fr;column-gap:4px;min-width:452px}
 .menu.menu-mega .menu-all{grid-column:1 / -1;margin-top:6px;padding-top:12px;border-top:1px solid var(--line);color:var(--brand);font-weight:700}
 
 @media (max-width:460px){.footer-top{grid-template-columns:1fr;gap:28px}}/* resp-polish-footer */
+  .quote-card.is-embed{padding:0;overflow:hidden}
+  .quote-card.is-embed iframe{width:100%;height:630px;border:0;display:block}
+
+  .article-section{padding:52px 0 58px}
+  .article{max-width:820px;margin:0 auto}
+  .crumbs{display:flex;flex-wrap:wrap;gap:8px;align-items:center;font-size:13.5px;color:var(--muted);margin-bottom:22px}
+  .crumbs a{color:var(--brand)}.crumbs a:hover{text-decoration:underline}
+  .crumbs span[aria-current]{color:var(--ink-2)}
+  .article-lead{font-size:18px;line-height:1.7;color:var(--ink-2);margin:0 0 24px;padding-bottom:22px;border-bottom:1px solid var(--line)}
+  .article h2{font-family:var(--font-display);font-weight:800;font-size:clamp(1.35rem,2.4vw,1.7rem);color:#101a3d;margin:30px 0 12px}
+  .article p{color:var(--ink-2);font-size:16px;line-height:1.75;margin:0 0 16px}
+  .article a{color:var(--brand);font-weight:600}
+  .article table{width:100%;border-collapse:collapse;margin:16px 0 22px;font-size:15px}
+  .article table td,.article table th{border:1px solid var(--line);padding:10px 14px;text-align:left;vertical-align:top}
+  .article table tr:nth-child(even){background:#f7f9fd}
+  .article table td:first-child{font-weight:600;color:#101a3d}
+  .table-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:0 0 6px}
+  .local-section{background:#fff;padding:58px 0;border-top:1px solid var(--line)}
+  .local-grid{display:grid;grid-template-columns:1fr 1fr;gap:42px;align-items:stretch}
+  .local-eyebrow{font-family:var(--font-display);font-weight:800;letter-spacing:.14em;text-transform:uppercase;font-size:12.5px;color:var(--brand)}
+  .local-info h2{font-family:var(--font-display);font-weight:800;font-size:clamp(1.5rem,2.4vw,2rem);color:#101a3d;margin:8px 0 10px}
+  .local-lede{color:var(--ink-2);font-size:16px;line-height:1.6;margin:0 0 22px;max-width:480px}
+  .local-actions{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:24px}
+  .btn-call-lg{display:inline-flex;align-items:center;gap:9px;background:var(--brand);color:#fff;font-weight:700;font-size:16px;padding:13px 22px;border-radius:999px;box-shadow:0 10px 24px -12px rgba(11,52,192,.8);transition:background .15s ease}
+  .btn-call-lg:hover{background:var(--brand-press)}
+  .btn-quote-lg{display:inline-flex;align-items:center;gap:8px;background:#fff;color:var(--brand-deep);font-weight:700;font-size:16px;padding:13px 22px;border-radius:999px;border:2px solid var(--brand)}
+  .btn-quote-lg:hover{background:var(--brand-tint)}
+  .btn-call-lg svg,.btn-quote-lg svg{width:18px;height:18px}
+  .local-contact{list-style:none;margin:0 0 20px;padding:0;display:grid;gap:12px}
+  .local-contact li{display:flex;align-items:flex-start;gap:11px;color:var(--ink-2);font-size:15.5px;line-height:1.45}
+  .local-contact li svg{width:19px;height:19px;color:var(--brand);flex:0 0 auto;margin-top:1px}
+  .local-contact a{color:var(--ink-2)}.local-contact a:hover{color:var(--brand)}
+  .local-social{display:flex;gap:12px}
+  .local-social a{display:inline-flex;align-items:center;justify-content:center;width:42px;height:42px;border-radius:11px;background:var(--brand-tint);color:var(--brand-deep);transition:background .15s ease,color .15s ease}
+  .local-social a:hover{background:var(--brand);color:#fff}
+  .local-social svg{width:20px;height:20px}
+  .local-map{border-radius:16px;overflow:hidden;box-shadow:0 18px 40px -24px rgba(13,26,80,.55);border:1px solid var(--line);min-height:420px;background:#eef2fe}
+  .local-map iframe{width:100%;height:100%;min-height:420px;border:0;display:block}
+  @media (max-width:860px){.local-grid{grid-template-columns:1fr;gap:26px}.local-map{min-height:300px}.local-map iframe{min-height:300px}}
+  @media (max-width:560px){.article table{font-size:13.5px}.article table td,.article table th{padding:8px 10px}}
 .footer-states{display:flex;flex-wrap:wrap;gap:9px 20px;align-items:center;padding:20px 0 2px;margin-top:6px;border-top:1px solid rgba(255,255,255,.10)}.footer-states .fs-label{color:#fff;font-weight:700;font-size:14px}.footer-states a{font-size:14px;color:#9aa6c6;transition:color .15s ease}.footer-states a:hover{color:#fff}/* footer-states */
 </style>
 <script type="application/ld+json">
-{
-  "@context":"https://schema.org","@graph":[
-  {"@type":"Service","name":"Expedited Car Shipping","serviceType":"Auto transport","provider":{"@type":"Organization","name":"Ship Guy","telephone":"+1-866-499-2815"},"areaServed":{"@type":"Country","name":"United States"},"description":"Expedited car shipping gets your vehicle picked up fast and delivered on a priority timeline. Learn how expedited auto transport works and when it is worth it."},
-  {"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"index.html"},{"@type":"ListItem","position":2,"name":"Services","item":"services.html"},{"@type":"ListItem","position":3,"name":"Expedited Car Shipping","item":"expedited-car-shipping.html"}]}
-  ]
-}
+{"@context":"https://schema.org","@graph":[
+{"@type":"Service","serviceType":"Auto Transport","name":"Arkansas Auto Transport","areaServed":{"@type":"State","name":"Arkansas"},"provider":{"@type":"Organization","name":"Ship Guy","telephone":"+1-866-499-2815"},"description":"Shipping a vehicle to or from Arkansas doesn&#x27;t have to be complicated. Whether you&#x27;re relocating across the country, buying a car from a dealer in Littl…"},
+{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"index.html"},{"@type":"ListItem","position":2,"name":"Arkansas Auto Transport","item":"arkansas-auto-transport.html"}]}
+]}
 </script>
 </head>
 <body>
@@ -618,7 +648,7 @@ body.ready .reveal{opacity:1;transform:none}
 <!-- ===================== HEADER ===================== -->
 <header class="site-header" id="top">
   <div class="container header-inner">
-    <a class="brand" href="index.html#top" aria-label="Ship Guy — home"><svg class="sg-logo" role="img" aria-label="Ship Guy" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="209 227 180 145">
+    <a class="brand" href="index.html" aria-label="Ship Guy — home"><svg class="sg-logo" role="img" aria-label="Ship Guy" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="209 227 180 145">
 <path fill-rule="nonzero" fill="currentColor" fill-opacity="1" d="M 257.761719 304.929688 L 257.761719 247.621094 L 272.027344 245.128906 L 272.027344 265.167969 C 272.027344 265.933594 272.246094 266.5 272.679688 266.867188 C 273.109375 267.230469 273.703125 267.347656 274.460938 267.222656 L 279.570312 266.355469 C 281.136719 266.089844 281.921875 265.128906 281.921875 263.484375 L 281.921875 243.398438 L 296.191406 240.90625 L 296.191406 298.710938 L 281.921875 301.019531 L 281.921875 277.640625 L 272.027344 279.292969 L 272.027344 302.621094 Z M 257.761719 304.929688 "/>
 <path fill-rule="nonzero" fill="currentColor" fill-opacity="1" d="M 225.148438 310.390625 C 220.769531 311.101562 217.570312 310.632812 215.539062 308.984375 C 213.515625 307.339844 212.5 304.464844 212.5 300.359375 L 212.5 291.359375 L 226.769531 288.980469 L 226.769531 296.222656 C 226.769531 297.035156 226.984375 297.609375 227.417969 297.945312 C 227.851562 298.28125 228.472656 298.382812 229.28125 298.25 L 234.148438 297.449219 C 234.902344 297.328125 235.472656 297.054688 235.851562 296.640625 C 236.226562 296.222656 236.417969 295.636719 236.417969 294.875 L 236.417969 290.066406 C 236.417969 289.304688 236.324219 288.683594 236.136719 288.199219 C 235.945312 287.714844 235.632812 287.300781 235.203125 286.964844 C 234.769531 286.632812 234.175781 286.367188 233.417969 286.164062 L 221.257812 283.890625 C 219.472656 283.378906 217.957031 282.695312 216.71875 281.851562 C 215.472656 281.007812 214.539062 279.855469 213.917969 278.390625 C 213.296875 276.929688 212.988281 275.089844 212.988281 272.871094 L 212.988281 263.140625 C 212.988281 260.222656 213.636719 257.960938 214.933594 256.355469 C 216.230469 254.753906 218.390625 253.683594 221.417969 253.152344 L 237.957031 250.261719 C 242.28125 249.503906 245.457031 249.929688 247.484375 251.539062 C 249.511719 253.148438 250.523438 256.050781 250.523438 260.25 L 250.523438 265.890625 L 236.257812 268.328125 L 236.257812 264.5 C 236.257812 263.683594 236.039062 263.109375 235.605469 262.777344 C 235.175781 262.441406 234.578125 262.34375 233.824219 262.472656 L 229.527344 263.210938 C 228.714844 263.351562 228.132812 263.628906 227.785156 264.039062 C 227.433594 264.453125 227.257812 265.011719 227.257812 265.71875 L 227.257812 268.078125 C 227.257812 269.109375 227.511719 269.917969 228.027344 270.507812 C 228.539062 271.097656 229.3125 271.550781 230.335938 271.863281 L 241.929688 273.972656 C 243.984375 274.492188 245.660156 275.214844 246.957031 276.140625 C 248.253906 277.070312 249.199219 278.285156 249.796875 279.792969 C 250.390625 281.300781 250.6875 283.144531 250.6875 285.328125 L 250.6875 297.671875 C 250.6875 300.671875 250.023438 302.960938 248.699219 304.539062 C 247.375 306.117188 245.199219 307.148438 242.175781 307.636719 Z M 225.148438 310.390625 "/>
 <path fill-rule="nonzero" fill="currentColor" fill-opacity="1" d="M 305.007812 297.726562 L 305.007812 239.84375 L 319.277344 237.351562 L 319.277344 295.414062 Z M 305.007812 297.726562 "/>
@@ -631,7 +661,7 @@ body.ready .reveal{opacity:1;transform:none}
 </svg></a>
 
     <nav class="main-nav" aria-label="Primary">
-      <a href="index.html#top">Home</a>
+      <a href="index.html">Home</a>
       <a href="how-it-works.html">How It Works</a>
       <div class="has-menu">
         <button class="nav-toggle-btn" aria-haspopup="true" aria-expanded="false">Services
@@ -669,7 +699,7 @@ body.ready .reveal{opacity:1;transform:none}
   <!-- mobile nav -->
   <nav class="mobile-nav" id="mobileNav" aria-label="Mobile">
     <div class="inner">
-      <a href="index.html#top">Home</a>
+      <a href="index.html">Home</a>
       <a href="how-it-works.html">How It Works</a>
       <span class="m-sub">Services</span>
                   <a href="open-car-transport.html">Open Car Transport</a>
@@ -690,66 +720,372 @@ body.ready .reveal{opacity:1;transform:none}
   </nav>
 </header>
 
-<!-- ===================== PAGE HERO ===================== -->
-<section class="page-hero"><div class="container">
-  <nav class="crumbs" aria-label="Breadcrumb"><a href="index.html">Home</a><span>/</span><a href="services.html">Services</a><span>/</span><span aria-current="page">Expedited Car Shipping</span></nav>
-  <h1>Expedited Car Shipping</h1>
-  <p class="page-hero-sub">Priority pickup and faster delivery when you are working against the clock.</p>
-</div></section>
+<!-- ===================== HERO ===================== -->
+<section class="hero">
+  <div class="hero-media" aria-hidden="true">
+    <img class="hero-img" alt="" src="assets/hero.jpg">
+    <div class="hero-overlay"></div>
+  </div>
 
-<section class="article-section"><div class="container article">
-<p class="article-lead">When you can't wait, expedited car shipping moves your vehicle to the front of the line — faster pickup and a priority delivery timeline. Here's how it works and when it's worth it.</p>
-
-<h2>What Is Expedited Car Shipping?</h2>
-<p>Expedited car shipping is a priority service that gets your vehicle picked up and delivered faster than standard transport. Instead of waiting for the next available carrier on a route, your shipment is prioritized so a carrier is assigned quickly and your vehicle is dispatched as soon as possible — often within a day or two, and sometimes the same day depending on your location.</p>
-<p>With Ship Guy, expedited service combines fast dispatch with the same vetted carriers, transparent pricing, and door-to-door delivery as our standard shipments. It's the right choice when timing matters more than saving every dollar.</p>
-
-<h2>How Expedited Auto Transport Works</h2>
-<p>Expedited shipping follows the same three steps as any Ship Guy shipment, just on a faster track. You get a free quote and let us know your deadline. We prioritize your shipment to secure a carrier quickly, scheduling the earliest possible pickup window. The driver inspects and loads your vehicle, then transports it on a priority timeline while you track progress. At delivery, you inspect the vehicle, sign, and take your keys.</p>
-<p>Behind the scenes, expedited service often means offering carriers a rate that motivates an immediate response and routing your vehicle on the most direct schedule. The result is less waiting at every stage — from assignment to pickup to final delivery.</p>
-
-<h2>When Should You Choose Expedited Shipping?</h2>
-<p>Expedited car shipping is ideal whenever you're working against the clock. Common situations include:</p>
-<ul>
-  <li><strong>Last-minute relocations</strong> and job transfers with a hard start date</li>
-  <li><strong>Military orders (PCS)</strong> with a firm reporting deadline</li>
-  <li><strong>Online or auction purchases</strong> you need delivered fast</li>
-  <li><strong>Dealership and inventory moves</strong> on tight timelines</li>
-  <li><strong>Emergencies or schedule changes</strong> that can't wait for standard transit</li>
-</ul>
-<p>If your dates are flexible, standard shipping will save you money. But when a specific pickup or delivery day is non-negotiable, expedited service buys you speed and certainty.</p>
-
-<h2>How Much Does Expedited Car Shipping Cost?</h2>
-<p>Expedited shipping costs more than standard transport because your shipment takes priority over flexible loads and is scheduled around your deadline rather than the carrier's convenience. The premium depends on how quickly you need pickup, the distance, your vehicle's size and condition, transport type, and how busy your route is at the moment.</p>
-<p>The faster and more specific your timing requirements, the higher the priority — and the cost — tends to be. As with every Ship Guy shipment, your quote is all-in and transparent, with no hidden fees and no upfront deposit. You pay only once your vehicle is assigned and dispatched.</p>
-
-<h2>How Fast Is Expedited Shipping?</h2>
-<p>Expedited service mainly speeds up the front of the process — how quickly a carrier is assigned and your vehicle is picked up. Standard pickup can take a few days to coordinate; expedited pickup is often arranged within 24 to 48 hours, and sometimes the same day in busy metro areas. Once your vehicle is on the truck, actual transit time still depends on distance — a coast-to-coast haul covers more miles than a regional move — but priority routing helps keep delivery as direct as possible. When you request your quote, tell us your deadline and we'll tell you what's realistic for your route.</p>
-
-<h2>Expedited vs. Standard Shipping</h2>
-<p>The difference comes down to speed versus cost. Standard shipping is the most economical option and works well when you have a flexible window of several days for pickup. Expedited shipping prioritizes your vehicle for the fastest possible assignment and the tightest schedule, at a higher price. If you can plan ahead and stay flexible, standard is the value choice. If a deadline is driving your move, expedited is built for exactly that.</p>
-
-<h2>How to Prepare for a Fast Pickup</h2>
-<p>Because expedited shipments move quickly, a little readiness goes a long way. Have your vehicle prepared before the driver arrives: wash it and take dated photos, remove personal items and toll tags, leave about a quarter tank of fuel, disable alarms, and have one set of keys ready. Confirm your pickup and delivery addresses and contact details up front, and make sure you or an authorized adult is available on short notice. The more prepared you are, the faster the driver can inspect, load, and get your vehicle on the road.</p>
-
-<h2>Expedited Enclosed and Open Options</h2>
-<p>Expedited service isn't limited to one type of trailer. If you need a daily driver moved quickly, expedited <a href="open-car-transport.html">open transport</a> pairs priority dispatch with the affordability of an open carrier. If your vehicle is a classic, luxury, or high-value car that needs both speed and protection, expedited <a href="enclosed-auto-transport.html">enclosed transport</a> combines a fully covered trailer with a fast, prioritized schedule. Either way, the goal is the same: get a qualified carrier assigned and your vehicle on the road as soon as possible. When you request your quote, let us know your vehicle type, your destination, and your deadline, and we'll lay out the fastest realistic option for your situation — along with transparent, all-in pricing.</p>
-
-<h2>Ship Fast with Ship Guy</h2>
-<p>Ship Guy is a licensed, bonded, FMCSA-registered auto transport broker offering expedited car shipping to and from all 50 states. When time is tight, we combine priority dispatch with a vetted carrier network, transparent all-in pricing, no upfront deposit, real-time tracking, and 24/7 U.S.-based support to get your vehicle where it needs to be — fast.</p>
-<p>On a deadline? <a href="index.html#top">Get your free quote</a> in about 60 seconds, or call <a href="tel:+18664992815">(866) 499-2815</a> and tell us when you need it. You can also compare <a href="state-to-state-car-shipping.html">state-to-state shipping</a>, <a href="open-car-transport.html">open transport</a>, or <a href="enclosed-auto-transport.html">enclosed transport</a>.</p>
-
-</div></section>
-
-<!-- related --><section class="related-section"><div class="container">
-      <h2>Explore Other Services</h2>
-      <div class="related-grid">
-        <a class="related-card" href="open-car-transport.html">Open Car Transport <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-        <a class="related-card" href="enclosed-auto-transport.html">Enclosed Auto Transport <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-        <a class="related-card" href="door-to-door-car-shipping.html">Door-to-Door Shipping <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-        <a class="related-card" href="state-to-state-car-shipping.html">State-to-State Shipping <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+  <div class="container hero-grid">
+    <div class="hero-copy">
+      <div class="hero-head">
+      <p class="eyebrow reveal">Licensed&nbsp;•&nbsp;Insured&nbsp;•&nbsp;Nationwide</p>
+      <h1 class="reveal d2">Arkansas Auto Transport</h1>
       </div>
+      <div class="hero-rest">
+      <p class="lede reveal d2">Licensed, insured car shipping to and from Arkansas — transparent pricing, vetted carriers, and door-to-door delivery.</p>
+
+      <ul class="trust-list reveal d3">
+        <li>
+          <span class="trust-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/><path d="m9 12 2 2 4-4"/></svg></span>
+          Licensed Broker &amp; Fully Insured
+        </li>
+        <li>
+          <span class="trust-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="2" width="8" height="4" rx="1"/><path d="M9 4H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2h-3"/><path d="m9 14 2 2 4-4"/></svg></span>
+          FMCSA Registered
+        </li>
+        <li>
+          <span class="trust-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></span>
+          Vetted Carrier Network
+        </li>
+        <li>
+          <span class="trust-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M4 13a8 8 0 0 1 16 0"/><rect x="2" y="13" width="4.4" height="7" rx="1.6"/><rect x="17.6" y="13" width="4.4" height="7" rx="1.6"/><path d="M20 19.5v.5a3 3 0 0 1-3 3h-3"/></svg></span>
+          Real-Time Tracking &amp; 24/7 Support
+        </li>
+      </ul>
+
+      <div class="hero-divider reveal d3"></div>
+
+      <div class="stats reveal d3">
+        <div class="stat"><span class="num">50+</span><span class="lbl">States Served</span></div>
+        <div class="stat"><span class="num">100%</span><span class="lbl">Insured Transport</span></div>
+        <div class="stat"><span class="num">24/7</span><span class="lbl">Support &amp; Tracking</span></div>
+      </div>
+      </div>
+    </div>
+
+    <!-- QUOTE CARD (booking widget) -->
+    <div class="quote-card is-embed reveal d2" id="quoteForm">
+      <iframe src="https://widget.berocker.com?theme=pro&api_base=https%3A%2F%2Fapp.shipguy.com&api_key=6a5508b7cb2f4" title="Ship Guy Logistics booking form" loading="lazy"></iframe>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== REVIEWS ===================== -->
+<section class="reviews" id="reviews">
+  <div class="container">
+    <div class="reviews-head">
+      <div>
+        <h2>Verified customer reviews</h2>
+        <p>Trusted by vehicle owners nationwide.</p>
+      </div>
+      <div class="rating">
+        <span class="score">4.9</span>
+        <span class="stars" aria-label="4.9 out of 5 stars">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.06 6.6.79-4.86 4.53 1.27 6.52L12 17.9l-5.9 3.5 1.27-6.52L2.5 9.35l6.6-.79L12 2.5Z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.06 6.6.79-4.86 4.53 1.27 6.52L12 17.9l-5.9 3.5 1.27-6.52L2.5 9.35l6.6-.79L12 2.5Z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.06 6.6.79-4.86 4.53 1.27 6.52L12 17.9l-5.9 3.5 1.27-6.52L2.5 9.35l6.6-.79L12 2.5Z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.06 6.6.79-4.86 4.53 1.27 6.52L12 17.9l-5.9 3.5 1.27-6.52L2.5 9.35l6.6-.79L12 2.5Z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.06 6.6.79-4.86 4.53 1.27 6.52L12 17.9l-5.9 3.5 1.27-6.52L2.5 9.35l6.6-.79L12 2.5Z"/></svg>
+        </span>
+        <span class="count">487+ reviews</span>
+        <span class="divider-v"></span>
+        <span class="gword"><span class="b">G</span><span class="r">o</span><span class="y">o</span><span class="b">g</span><span class="g">l</span><span class="r">e</span></span>
+      </div>
+    </div>
+
+    <div class="review-grid">
+      <article class="review">
+        <div class="review-top">
+          <span class="avatar">JD</span>
+          <div><span class="name">James D.</span><span class="date">May 12, 2024</span></div>
+        </div>
+        <div class="stars" aria-label="5 out of 5">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.06 6.6.79-4.86 4.53 1.27 6.52L12 17.9l-5.9 3.5 1.27-6.52L2.5 9.35l6.6-.79L12 2.5Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.06 6.6.79-4.86 4.53 1.27 6.52L12 17.9l-5.9 3.5 1.27-6.52L2.5 9.35l6.6-.79L12 2.5Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.06 6.6.79-4.86 4.53 1.27 6.52L12 17.9l-5.9 3.5 1.27-6.52L2.5 9.35l6.6-.79L12 2.5Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.06 6.6.79-4.86 4.53 1.27 6.52L12 17.9l-5.9 3.5 1.27-6.52L2.5 9.35l6.6-.79L12 2.5Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.06 6.6.79-4.86 4.53 1.27 6.52L12 17.9l-5.9 3.5 1.27-6.52L2.5 9.35l6.6-.79L12 2.5Z"/></svg>
+        </div>
+        <p>Ship Guy made the whole process easy. Great communication and my car arrived earlier than expected. Highly recommend!</p>
+      </article>
+
+      <article class="review">
+        <div class="review-top">
+          <span class="avatar">SR</span>
+          <div><span class="name">Sarah R.</span><span class="date">April 28, 2024</span></div>
+        </div>
+        <div class="stars" aria-label="5 out of 5">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.06 6.6.79-4.86 4.53 1.27 6.52L12 17.9l-5.9 3.5 1.27-6.52L2.5 9.35l6.6-.79L12 2.5Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.06 6.6.79-4.86 4.53 1.27 6.52L12 17.9l-5.9 3.5 1.27-6.52L2.5 9.35l6.6-.79L12 2.5Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.06 6.6.79-4.86 4.53 1.27 6.52L12 17.9l-5.9 3.5 1.27-6.52L2.5 9.35l6.6-.79L12 2.5Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.06 6.6.79-4.86 4.53 1.27 6.52L12 17.9l-5.9 3.5 1.27-6.52L2.5 9.35l6.6-.79L12 2.5Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.06 6.6.79-4.86 4.53 1.27 6.52L12 17.9l-5.9 3.5 1.27-6.52L2.5 9.35l6.6-.79L12 2.5Z"/></svg>
+        </div>
+        <p>Excellent service from start to finish. The driver was professional and my vehicle arrived in perfect condition.</p>
+      </article>
+
+      <article class="review">
+        <div class="review-top">
+          <span class="avatar">MT</span>
+          <div><span class="name">Michael T.</span><span class="date">April 15, 2024</span></div>
+        </div>
+        <div class="stars" aria-label="5 out of 5">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.06 6.6.79-4.86 4.53 1.27 6.52L12 17.9l-5.9 3.5 1.27-6.52L2.5 9.35l6.6-.79L12 2.5Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.06 6.6.79-4.86 4.53 1.27 6.52L12 17.9l-5.9 3.5 1.27-6.52L2.5 9.35l6.6-.79L12 2.5Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.06 6.6.79-4.86 4.53 1.27 6.52L12 17.9l-5.9 3.5 1.27-6.52L2.5 9.35l6.6-.79L12 2.5Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.06 6.6.79-4.86 4.53 1.27 6.52L12 17.9l-5.9 3.5 1.27-6.52L2.5 9.35l6.6-.79L12 2.5Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.06 6.6.79-4.86 4.53 1.27 6.52L12 17.9l-5.9 3.5 1.27-6.52L2.5 9.35l6.6-.79L12 2.5Z"/></svg>
+        </div>
+        <p>Fast quote, fair price, and they kept me updated throughout the entire delivery. Will definitely use again.</p>
+      </article>
+
+      <article class="review">
+        <div class="review-top">
+          <span class="avatar">KB</span>
+          <div><span class="name">Kelsey B.</span><span class="date">March 30, 2024</span></div>
+        </div>
+        <div class="stars" aria-label="5 out of 5">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.06 6.6.79-4.86 4.53 1.27 6.52L12 17.9l-5.9 3.5 1.27-6.52L2.5 9.35l6.6-.79L12 2.5Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.06 6.6.79-4.86 4.53 1.27 6.52L12 17.9l-5.9 3.5 1.27-6.52L2.5 9.35l6.6-.79L12 2.5Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.06 6.6.79-4.86 4.53 1.27 6.52L12 17.9l-5.9 3.5 1.27-6.52L2.5 9.35l6.6-.79L12 2.5Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.06 6.6.79-4.86 4.53 1.27 6.52L12 17.9l-5.9 3.5 1.27-6.52L2.5 9.35l6.6-.79L12 2.5Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.06 6.6.79-4.86 4.53 1.27 6.52L12 17.9l-5.9 3.5 1.27-6.52L2.5 9.35l6.6-.79L12 2.5Z"/></svg>
+        </div>
+        <p>Shipped my SUV cross-country with no issues. The team was responsive and the experience was smooth.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+
+<!-- ===================== STATE CONTENT ===================== -->
+<section class="article-section"><div class="container article">
+  <nav class="crumbs" aria-label="Breadcrumb"><a href="index.html">Home</a><span>/</span><span aria-current="page">Arkansas Auto Transport</span></nav>
+  <p>Shipping a vehicle to or from Arkansas doesn&#x27;t have to be complicated. Whether you&#x27;re relocating across the country, buying a car from a dealer in Little Rock, or sending a classic truck to a new owner in California, the right auto transport partner makes the difference between a smooth move and a stressful one. This guide covers everything you need to know about Arkansas auto transport with Ship Guy - from costs and timelines to preparation tips and route details.</p>
+  <h2>Fast Answer: How Arkansas Auto Transport with Ship Guy Works</h2>
+  <p>Ship Guy offers door-to-door Arkansas car shipping for customers moving vehicles statewide and to any destination across the continental United States. Auto transport services in Arkansas offer various options for moving vehicles, and Ship Guy simplifies the process down to three core steps so you can ship a car without the runaround.</p>
+  <p><strong>Step 1: Get a quote.</strong> Share your vehicle details and route, and Ship Guy provides an accurate car shipping quote within hours.</p>
+  <p><strong>Step 2: Schedule pickup.</strong> Once you confirm, Ship Guy dispatches a vetted carrier to your location on your preferred shipping date.</p>
+  <p><strong>Step 3: Receive delivery.</strong> Your vehicle arrives at the delivery location, is inspected, and is ready to drive.</p>
+  <p>The vehicle transport process includes three steps - quote, pickup, and delivery - and most moves wrap up in just a few days, depending on distance. For example, shipping from Little Rock, AR to Dallas, TX usually takes 2–3 days via open car transport. A longer haul, like Little Rock to Los Angeles, runs about 4–7 days once the carrier departs.</p>
+  <p>Ship Guy handles sedans, SUVs, pickup trucks, and classic cars using licensed carriers with full cargo insurance from pickup to drop-off. As a broker-style Arkansas car shipping company, Ship Guy connects customers with insured car transport carriers rather than operating its own trucks, which means access to a wider network and more flexible scheduling.</p>
+  <h2>Why Ship Guy for Arkansas Auto Transport</h2>
+  <p>Ship Guy isn&#x27;t a generic national directory that hands you a list of phone numbers. It&#x27;s a focused auto transport company specializing in Arkansas auto transport services and taking ownership of the coordination from first call to final delivery.</p>
+  <p>Here&#x27;s what sets Ship Guy apart for vehicle transportation in Arkansas:</p>
+  <p>Transparent pricing with no hidden surcharges or bait-and-switch quotes</p>
+  <p>Every carrier is vetted for active MC and DOT licensing, adequate insurance, and proven performance.</p>
+  <p>Proactive communication - you receive updates during vehicle transport rather than chasing down your truck driver for information</p>
+  <p>A commitment to customer satisfaction on every shipment, not just the easy ones</p>
+  <p>Ship Guy maintains strong carrier coverage in Little Rock, Fort Smith, Fayetteville, and Jonesboro, along major corridors such as . These interstate highways are the backbone of Arkansas shipping, and Ship Guy&#x27;s carrier network runs them daily.</p>
+  <p>Unlike some car shipping companies that quote unrealistically fast pickup windows to win the booking, Ship Guy prioritizes realistic scheduling. That means fewer delays and a more predictable car shipping experience for you. Whether you need open car transport for a daily driver or enclosed transport options for high-value vehicles, Ship Guy arranges both to and from Arkansas with competitive pricing.</p>
+  <h2>How Arkansas Car Shipping Works Step-by-Step</h2>
+  <p>Understanding the car shipping process removes the guesswork. Here&#x27;s exactly how Arkansas car shipping services work when you book through Ship Guy, from first contact to safe delivery.</p>
+  <p><strong>Step 1 - Quote.</strong> You provide the year, make, and model of your vehicle, whether it&#x27;s running or non-running, the pickup city (e.g., Little Rock, AR 72201), the destination (e.g., Phoenix, AZ 85001), and your desired shipping date. Ship Guy uses these vehicle details to build an accurate estimate.</p>
+  <p><strong>Step 2 - Booking.</strong> Ship Guy confirms the price, estimated transit time, and transport type (open or enclosed). You receive a contract outlining all terms, and Ship Guy dispatches an available carrier matched to your route and schedule. Delivery dates are estimated based on distance and carrier availability at that time.</p>
+  <p><strong>Step 3 - Pickup.</strong> The assigned truck driver calls ahead to coordinate arrival. They meet you at a safe location - your driveway, a wide street, or a designated parking area - then inspect the car and note its condition on the bill of lading. This document protects both you and the carrier.</p>
+  <p><strong>Step 4 - Transit.</strong> Your vehicle moves along its route, with standard updates available by phone or email so you can track its location. Typical routes include Little Rock to Nashville via I-40, or Fort Smith to Denver via I-40 and US-287. Transport options include door-to-door shipping and terminal-to-terminal shipping, depending on access and preference.</p>
+  <p><strong>Step 5 - Delivery.</strong> The driver re-inspects the vehicle at the destination. You verify the condition against the original bill of lading, pay the remaining balance per your agreed method, and sign off. Once the vehicle arrives in confirmed condition, the job is complete.</p>
+  <h2>Arkansas Car Shipping Costs and Timeframes</h2>
+  <p>Car shipping costs depend on several interconnected factors: distance, vehicle type, time of year, and whether you choose open or enclosed transport. Rather than quoting a single number, here&#x27;s how pricing works for Arkansas routes so you can plan with realistic expectations.</p>
+  <p><strong>Distance is the biggest factor.</strong> Shipping a vehicle within or from Arkansas typically costs between $600 and $1,850, depending on the route. The average cost to ship a vehicle 1,400 miles is approximately $1,108. Shorter runs carry a higher per-mile rate - shipping distances under 200 miles can cost around $2.92 per mile - while longer hauls spread fixed costs over more miles, lowering the per-mile price. Distance significantly affects shipping costs on every route.</p>
+  <h2>Sample route guidance:</h2>
+  <div class="table-wrap"><table><tbody><tr><td>Little Rock to Houston</td><td>450–500 miles</td><td>1–3 days</td><td>$600–$700</td></tr><tr><td>Little Rock to Atlanta</td><td>~550 miles</td><td>2–4 days</td><td>$650–$850</td></tr><tr><td>Arkansas to Florida</td><td>~870 miles</td><td>3–5 days</td><td>$695–$805</td></tr><tr><td>Little Rock to Los Angeles</td><td>1,650–1,700 miles</td><td>4–7 days</td><td>$1,000–$1,200</td></tr></tbody></table></div>
+  <p><strong>Vehicle type impacts shipping prices.</strong> Larger vehicles generally have higher shipping costs than sedans because they take up more trailer space and add weight. A compact car will cost less to move than a full-size pickup truck or SUV on the same route. The vehicle type you&#x27;re shipping is one of the first things a carrier considers.</p>
+  <p><strong>Operable vs. inoperable matters.</strong> Vehicles that don&#x27;t run require special equipment for loading and unloading, which raises the price. Always disclose the running status upfront to get an accurate Arkansas car shipping cost.</p>
+  <p><strong>Rural vs. metro pickup.</strong> Picking up or delivering in a small town in the Ozarks costs more and takes longer than a shipment originating in metro Little Rock, AR. Transporting vehicles along major highways is usually cheaper and faster than in rural areas due to higher carrier density.</p>
+  <p><strong>Seasonal demand.</strong> Seasonal demand can influence auto transport pricing and availability. Hot, humid summers in Arkansas coincide with the peak moving season (late May through August), and holiday periods also tighten capacity. Open car shipping is usually the most cost-effective option, running 40–60% cheaper than enclosed-car shipping, which is ideal for luxury or classic cars.</p>
+  <p>Book 1–2 weeks ahead for the best pricing on Arkansas routes, especially during peak season. For an exact car shipping quote tailored to your move, contact Ship Guy directly rather than guessing from national averages.</p>
+  <h2>Popular Arkansas Auto Transport Routes</h2>
+  <p>Arkansas sits at a geographic crossroads for east–west and north–south vehicle transportation, which works in your favor. The state&#x27;s position along major interstate corridors means carriers frequently pass through, creating more opportunities for efficient routing and better ar car shipping rates.</p>
+  <h2>Major outbound routes:</h2>
+  <p><strong>Little Rock to Dallas (~320 miles):</strong> One of the busiest lanes, typically 1–3 days. I-30 runs directly between the two cities.</p>
+  <p><strong>Little Rock to Chicago (~530 miles):</strong> Usually 2–4 days heading north on I-55 and I-57.</p>
+  <p><strong>Little Rock to Atlanta (~550 miles):</strong> Average shipping time from Little Rock to Atlanta is 0–2 days, depending on carrier scheduling along the I-40/I-65 corridor.</p>
+  <p><strong>Fort Smith to Denver (~830 miles):</strong> A popular western route via I-40 and US-287, typically 3–5 days.</p>
+  <p><strong>Fort Smith to Phoenix (~1,100 miles):</strong> Often 4–6 days, connecting through I-40 across New Mexico and Arizona.</p>
+  <p>Interstate corridors like I-30, I-40, and I-55 are used for vehicle shipping in Arkansas, and shipments along these roads benefit from consistent carrier traffic.</p>
+  <p><strong>Common inbound moves</strong> include cars shipped into Arkansas from California, Florida, and New York. These often involve families relocating, college students returning to campus, and military families reporting to installations in the region. Out-of-state buyers purchasing from Arkansas dealerships or auctions also use Ship Guy to get their vehicles home.</p>
+  <p>Ship Guy arranges both single-vehicle transport and multi-car loads for dealerships and used-car buyers in Arkansas cities, making it a practical partner for personal and commercial moves alike.</p>
+  <h2>Open vs. Enclosed Arkansas Car Transport</h2>
+  <p>Choosing between open and enclosed auto transport services comes down to two things: how much protection your vehicle needs and how much you&#x27;re willing to spend. Both are legitimate options, and Ship Guy helps you pick the right one based on what you&#x27;re shipping.</p>
+  <p><strong>Open car transport</strong> uses multi-level open-air trailers - the kind you see on I-40 and I-30 carrying six to ten vehicles at a time. Open transport is the most common shipping method across the U.S., and most vehicles are shipped using open trailers. It&#x27;s ideal for standard vehicles, such as daily-driver sedans, SUVs, and pickup trucks. The savings are significant: open transport costs 40–60% less than enclosed transport on the same route.</p>
+  <p><strong>Enclosed car shipping</strong> places your vehicle inside a trailer with solid walls and a roof. Enclosed transport protects vehicles from weather and road debris, making it the right choice for classic cars, luxury vehicles, and low-clearance sports cars. If you&#x27;re moving high-value or classic vehicles that can&#x27;t risk rock chips or rain exposure, an enclosed trailer is the way to go.</p>
+  <p>Consider a car example: a collector shipping a restored 1967 Mustang from Little Rock, AR, to a show in Memphis or Dallas would choose an enclosed trailer to avoid cosmetic damage during transit. That premium service costs more, but it delivers peace of mind for irreplaceable vehicles.</p>
+  <p>Enclosed trailers carry fewer vehicles per load (typically two to six), which limits capacity. That&#x27;s why prices run higher, and schedules can book up faster. If you need enclosed transport, plan to book 2–4 weeks in advance for the best availability with the carrier.</p>
+  <h2>Arkansas Cities and Regions Ship Guy Serves</h2>
+  <p>Ship Guy covers the entire state of Arkansas for pickup and delivery, not just the largest metro areas. Whether you&#x27;re in a bustling city or a quieter corner of the state, Ship Guy can coordinate your move.</p>
+  <p><strong>Major cities served include:</strong> Little Rock, North Little Rock, Fort Smith, Fayetteville, Springdale, Jonesboro, Conway, Rogers, Bentonville, Hot Springs, and Pine Bluff. These cities sit along or near major interstate routes, which means strong carrier density and reliable scheduling.</p>
+  <p>Ship Guy also serves smaller communities across the Ozarks, Delta, and Ouachita regions. For pickups or deliveries in areas with narrow streets or low-hanging trees that prevent large trailer access, Ship Guy arranges meet-up points on main highways - wide intersections, commercial parking lots, or highway off-ramps that give the driver safe room to load.</p>
+  <p>Door-to-door service is standard when the delivery location is accessible. For tight residential areas where a 75-foot trailer simply can&#x27;t navigate, drivers coordinate nearby drop-off locations that still keep things convenient. This flexibility is what makes car shipping in Arkansas workable, even in less urban parts of the state.</p>
+  <p>Ship Guy also regularly coordinates ar car shipping from local dealerships and auctions directly to customer driveways in other states, handling the logistics so buyers and sellers can focus on the transaction.</p>
+  <h2>Little Rock, AR Car Shipping with Ship Guy</h2>
+  <p>Little Rock is Arkansas&#x27;s primary auto transport hub. Sitting at the junction of I-40 (east–west) and I-30 (southwest toward Dallas), the city enjoys heavy carrier traffic that benefits anyone shipping to or from the area. Shipping a car from Little Rock typically costs between $600 and $1,725, depending on the destination and transport type.</p>
+  <h2>Typical Little Rock, AR shipments include:</h2>
+  <p>Little Rock to Los Angeles: approximately 1,650–1,700 miles, shipping from Little Rock to Los Angeles takes 2–6 days, with open transport costs around $1,000–$1,200.</p>
+  <p>Little Rock to Chicago: roughly 530 miles, usually 2–4 days.</p>
+  <p>Little Rock to Houston: about 450 miles, often delivered in 1–3 days.</p>
+  <p>Little Rock to Atlanta: around 550 miles, typically very fast at 0–2 days once loaded.</p>
+  <p>Little Rock&#x27;s busy corridors and large carrier presence often lead to better pricing and shorter pickup windows than in extremely rural locations. The city&#x27;s central position means carriers passing through can pick up an additional vehicle without a significant detour, keeping costs down.</p>
+  <p>Common customer groups in the area include families relocating for work, UAMS and UALR students needing seasonal moves, and military personnel shipping vehicles to or from the region. Ship Guy coordinates with carriers experienced in navigating downtown Little Rock streets and residential neighborhoods, including areas around North Little Rock where access can vary by block.</p>
+  <h2>How Long Does Arkansas Vehicle Transport Take</h2>
+  <p>Most Arkansas auto transport shipments take 1 to 7 days, depending on distance and routing. Here&#x27;s a breakdown by distance category to help you set realistic expectations.</p>
+  <p><strong>In-state and short-distance moves:</strong> Transporting a vehicle less than 200 miles takes 1–2 days. Routes like Little Rock to Fayetteville or Little Rock to Fort Smith fall into this category, with typical delivery within 1–2 days after pickup.</p>
+  <p><strong>Regional moves:</strong> Shipping a car from Arkansas to Texas takes 3–5 days. Travel from Arkansas to Missouri, Tennessee, or Louisiana takes about 2–4 days. These mid-distance runs benefit from direct interstate access.</p>
+  <p><strong>East Coast moves:</strong> Arkansas to states like North Carolina, Virginia, or Florida generally take 3–5 days. The I-40 corridor provides a direct path east, and carrier flow is steady.</p>
+  <p><strong>Cross-country car shipping:</strong> Arkansas to West Coast destinations like California or Washington typically runs 4–7 days once the carrier departs. Shipping a car over 2,000 miles can take up to 9 days, particularly if the route involves multiple stops or less common destinations.</p>
+  <p><strong>What can add time?</strong> Weather events like thunderstorms, winter ice near the Ozarks, and heavy traffic near major metros can add a day to the schedule. Expedited shipping is available through Ship Guy for situations where faster delivery is essential, though it comes at a higher cost. Ship Guy keeps customers updated throughout transit so there are no surprises on delivery dates.</p>
+  <h2>Choosing the Best Arkansas Car Shipping Company</h2>
+  <p>Not every shipping company that quotes you a low price can actually deliver on that promise. Working with a reputable Arkansas car shipping company matters more than shaving $50 off a quote - especially when your vehicle is riding on a trailer across state lines.</p>
+  <p>Here&#x27;s what to look for when evaluating shipping companies in Arkansas and the best car shipping companies for your route:</p>
+  <p><strong>Licensing and insurance:</strong> Verify that carriers hold active MC and DOT numbers for interstate vehicle transportation. Insurance coverage for vehicles during transport should be verified with the carrier before you hand over your keys. Ask about the carrier&#x27;s insurance limits and what&#x27;s covered.</p>
+  <p><strong>Reviews and references:</strong> Check for reviews that specifically mention Arkansas Auto Moves or shipments to Little Rock, AR. Real feedback on nearby routes gives you a much better picture than generic five-star ratings.</p>
+  <p><strong>Clear contracts and payment terms:</strong> Reliable companies explain payment terms upfront and do not demand full cash payment before pickup. If a company asks for everything up front with no written agreement, that&#x27;s a red flag.</p>
+  <p><strong>No bait-and-switch pricing:</strong> The quote you receive should be the price you pay, barring disclosed conditions such as changes in vehicle operability.</p>
+  <p>Ship Guy handles the vetting and coordination process on your behalf. You don&#x27;t have to negotiate with multiple individual car shipping companies, cross-reference DOT numbers, or chase down proof of insurance. Ship Guy does that legwork so you can focus on everything else involved in your move. That&#x27;s what makes it a hassle-free experience.</p>
+  <h2>Preparing Your Vehicle for Arkansas Car Shipping</h2>
+  <p>Proper preparation helps avoid delays and protects your vehicle during auto shipping. Taking 30 minutes before pickup can prevent headaches down the road.</p>
+  <p><strong>Wash and document.</strong> Clean your vehicle to document any existing damage. A clean exterior makes scratches, dings, and dents visible during the pre-transport inspection. Take dated photos from multiple angles - front, back, sides, roof, and wheels - before the driver arrives.</p>
+  <p><strong>Remove personal belongings.</strong> Remove all personal items from your vehicle before transport. Most Arkansas car shipping carriers will not cover damage to loose items left inside, and extra weight can create loading issues. Clear the trunk, glove box, and door pockets. Do not leave personal belongings in the vehicle.</p>
+  <p><strong>Mechanical basics.</strong> Leave a quarter tank of gas for loading and unloading - a full tank adds unnecessary weight. Check tire pressure, and verify that the vehicle starts, steers, and brakes normally. If the car is non-running, let Ship Guy know upfront so the right equipment is dispatched.</p>
+  <p><strong>Alarms, tags, and keys.</strong> Disable any security alarms to avoid loading issues - an alarm going off mid-transport creates problems for the driver and other vehicles on the trailer. Remove toll tags or electronic passes, fold in mirrors if possible, and provide a working key for the carrier to access your vehicle. Keep your vehicle registration accessible in case it&#x27;s needed at any point.</p>
+  <p><strong>At delivery:</strong> Take another set of photos when your vehicle arrives and compare against the originals. This ensures you can verify the car safely made the trip in the same condition it left.</p>
+  <h2>Who Uses Arkansas Auto Transport?</h2>
+  <p>Ship Guy serves a wide range of customers across Arkansas, each with different reasons for choosing professional Arkansas vehicle shipping over driving the vehicle themselves.</p>
+  <p><strong>Relocating professionals and families.</strong> Individuals moving for work to or from cities like Little Rock, Fort Smith, and Fayetteville frequently use car shipping services to avoid putting hundreds or thousands of extra miles on their vehicles. When you&#x27;re already coordinating a household move, adding a multi-day solo drive isn&#x27;t always practical.</p>
+  <p><strong>College students.</strong> Students heading to the University of Arkansas in Fayetteville or Arkansas State University in Jonesboro often need seasonal car transport - shipping a vehicle at the start of the school year and bringing it back during summer. Ship Guy handles these moves so students (and their parents) don&#x27;t have to make the drive twice.</p>
+  <p><strong>Military families.</strong> Installations in and around Arkansas create regular demand for vehicle transport. Tight reporting timelines and base access requirements make professional auto transport a better fit than a DIY drive for many service members.</p>
+  <p><strong>Out-of-state vehicle buyers.</strong> Buyers who purchase from Arkansas dealers, private sellers, or auctions use Ship Guy to get their new cars home quickly and safely. Whether it&#x27;s a used SUV from a lot in Conway or a vintage pickup from a collector in Hot Springs, Ship Guy coordinates the car transport from seller to buyer.</p>
+  <h2>Tips to Save on Arkansas Car Shipping</h2>
+  <p>Vehicle transport is an investment, but smart planning can significantly reduce your overall shipping costs without sacrificing quality. Here are practical ways to save money on your next Arkansas move.</p>
+  <p><strong>Choose open car transport for standard vehicles.</strong> Unless you&#x27;re shipping luxury or classic cars that require extra protection, open auto transport delivers reliable service at a fraction of the cost of enclosed transport. Since open transport is 40–60% cheaper than enclosed transport, this single decision has the biggest impact on your final cost. Shipping costs rise during peak seasons like summer, so timing matters too.</p>
+  <p><strong>Stay flexible on dates.</strong> Keeping your pickup and delivery dates flexible by a few days lets Ship Guy match you with carriers already running through Arkansas. A rigid one-day pickup window limits options and can drive up cost.</p>
+  <p><strong>Meet near major interstates.</strong> If you can meet the driver near I-40 in Little Rock or I-49 near Fayetteville instead of requiring access to a remote driveway, you may avoid accessorial charges for difficult access. This is especially relevant in areas with narrow streets or limited turnaround space.</p>
+  <p><strong>Book early.</strong> Booking 1–2 weeks in advance can lower shipping costs by giving Ship Guy more time to find the most cost-effective carrier match. Last-minute or rush requests limit options and often carry a premium.</p>
+  <p><strong>Avoid peak season when possible.</strong> If your timeline allows, shipping during non-peak months (September through April, excluding holidays) typically means better availability and lower rates. That said, if you need to move during the summer, booking ahead is the best way to lock in a reasonable price.</p>
+  <h2>Start Your Arkansas Car Shipping with Ship Guy</h2>
+  <p>Ship Guy is ready to handle your next Arkansas auto transport move - whether you&#x27;re shipping from Little Rock, AR, Fort Smith, Fayetteville, or any other Arkansas city to any continental U.S. destination. From a sedan heading to Los Angeles to a premium, enclosed move for a collector car to a show in Dallas, Ship Guy coordinates every detail.</p>
+  <p>Every shipment is handled by licensed, insured carriers. You choose between open and enclosed options based on your needs and budget. And from dispatch to delivery, Ship Guy keeps you informed, so you always know where your vehicle stands.</p>
+  <p>Contact Ship Guy today for a personalized Arkansas car shipping quote. Share your route, your vehicle, and your timeline - and let Ship Guy turn your move into a car safely delivered, on time, and without the hassle.</p>
 </div></section>
+
+<!-- ===================== WHAT WE SHIP ===================== -->
+<section class="ship-section" id="services">
+  <div class="container">
+    <div class="ship-head">
+      <p class="ship-eyebrow">What We Ship</p>
+      <h2>We Ship More Than Cars</h2>
+      <p class="ship-sub">Nationwide transport solutions for vehicles, household goods, equipment, and freight.</p>
+    </div>
+
+    <div class="ship-grid">
+      <article class="ship-card">
+        <div class="ship-img"><img src="assets/ship-vehicles.jpg" alt="Blue auto-transport carrier loaded with cars and a boat on a mountain highway" loading="lazy"></div>
+        <div class="ship-body">
+          <h3>Vehicles &amp; Boats</h3>
+          <p>Cars, trucks, motorcycles, RVs, and boats shipped nationwide.</p>
+          <a class="ship-link" href="#">Learn More <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </div>
+      </article>
+
+      <article class="ship-card">
+        <div class="ship-img"><img src="assets/ship-household.jpg" alt="Living room with a sofa and packed moving boxes ready for transport" loading="lazy"></div>
+        <div class="ship-body">
+          <h3>Household Items</h3>
+          <p>Furniture, boxes, and personal items moved with care.</p>
+          <a class="ship-link" href="#">Learn More <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </div>
+      </article>
+
+      <article class="ship-card">
+        <div class="ship-img"><img src="assets/ship-equipment.jpg" alt="Green tractor secured on a flatbed trailer for heavy equipment transport" loading="lazy"></div>
+        <div class="ship-body">
+          <h3>Heavy Equipment</h3>
+          <p>Tractors, machinery, and oversized equipment transport.</p>
+          <a class="ship-link" href="#">Learn More <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </div>
+      </article>
+
+      <article class="ship-card">
+        <div class="ship-img"><img src="assets/ship-freight.jpg" alt="Palletized and shrink-wrapped cargo in a warehouse for freight shipping" loading="lazy"></div>
+        <div class="ship-body">
+          <h3>Freight</h3>
+          <p>Palletized cargo, crates, and commercial freight shipping.</p>
+          <a class="ship-link" href="#">Learn More <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FAQ ===================== -->
+<section class="faq-section" id="faq">
+  <div class="container">
+    <div class="faq-head">
+      <p class="faq-eyebrow">Questions?</p>
+      <h2>Frequently Asked Questions</h2>
+      <span class="faq-accent" aria-hidden="true"></span>
+      <p class="faq-sub">Everything you need to know before you ship.</p>
+    </div>
+
+    <div class="faq-list">
+      <details class="faq-item" open>
+        <summary class="faq-q">How much does it cost to ship a vehicle?
+          <span class="faq-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></span>
+        </summary>
+        <div class="faq-a">Your price depends on the distance, vehicle size, transport type (open or enclosed), and how quickly you need it. We give you an upfront, all-in quote with no hidden fees — the number you see is the number you pay.</div>
+      </details>
+
+      <details class="faq-item">
+        <summary class="faq-q">How long will my shipment take?
+          <span class="faq-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></span>
+        </summary>
+        <div class="faq-a">Transit time depends on the route and distance. Once your vehicle is dispatched, we share an estimated delivery window and keep you updated from pickup to drop-off. Longer cross-country routes naturally take more time than regional moves.</div>
+      </details>
+
+      <details class="faq-item">
+        <summary class="faq-q">Is my vehicle insured during transport?
+          <span class="faq-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></span>
+        </summary>
+        <div class="faq-a">Yes. We only work with licensed, vetted carriers that carry active cargo insurance, and your vehicle is covered while it's on the truck. We're happy to share coverage details before you book.</div>
+      </details>
+
+      <details class="faq-item">
+        <summary class="faq-q">What's the difference between open and enclosed transport?
+          <span class="faq-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></span>
+        </summary>
+        <div class="faq-a">Open transport is the most common and most affordable option and is safe for everyday vehicles. Enclosed transport adds extra protection from weather and road debris — a great choice for classic, luxury, or high-value vehicles.</div>
+      </details>
+
+      <details class="faq-item">
+        <summary class="faq-q">Do I have to pay a deposit upfront?
+          <span class="faq-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></span>
+        </summary>
+        <div class="faq-a">No. You don't pay until your vehicle is assigned and dispatched to a carrier — so there's no risk in getting a quote and booking your shipment.</div>
+      </details>
+
+      <details class="faq-item">
+        <summary class="faq-q">Can you ship a vehicle that doesn't run?
+          <span class="faq-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></span>
+        </summary>
+        <div class="faq-a">Yes. We transport both operable and inoperable (non-running) vehicles — just let us know when you book so we assign a carrier with the right equipment, such as a winch.</div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== LOCAL / CONTACT ===================== -->
+<section class="local-section" id="contact-local">
+  <div class="container">
+    <div class="local-grid">
+      <div class="local-info">
+        <p class="local-eyebrow">Get Started</p>
+        <h2>Ship Your Car To or From Arkansas Today</h2>
+        <p class="local-lede">Call now or request a free quote. Transparent all-in pricing, no upfront deposit, vetted carriers, and 24/7 U.S.-based support.</p>
+        <div class="local-actions">
+          <a class="btn-call-lg" href="tel:+18664992815"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/></svg> Call (866) 499-2815</a>
+          <a class="btn-quote-lg" href="#top">Get a Free Quote <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </div>
+        <ul class="local-contact">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg><span>Serving all of Arkansas — door-to-door, statewide</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg><span>Ship Guy — Nationwide Auto Transport &nbsp;<em style="color:#9098b0">(add your business address)</em></span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/></svg><a href="tel:+18664992815">(866) 499-2815</a></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg><a href="mailto:quotes@shipguy.com">quotes@shipguy.com</a></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span>Open 24/7 — quotes &amp; support</span></li>
+        </ul>
+        <div class="local-social" aria-label="Follow Ship Guy"><a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.07C24 5.4 18.63 0 12 0S0 5.4 0 12.07C0 18.1 4.39 23.1 10.13 24v-8.44H7.08v-3.49h3.05V9.41c0-3.02 1.79-4.69 4.53-4.69 1.31 0 2.68.24 2.68.24v2.97h-1.51c-1.49 0-1.96.93-1.96 1.89v2.25h3.33l-.53 3.49h-2.8V24C19.61 23.1 24 18.1 24 12.07z"/></svg></a><a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5.5"/><circle cx="12" cy="12" r="4.2"/><line x1="17.6" y1="6.4" x2="17.61" y2="6.4"/></svg></a><a href="#" aria-label="X"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231 5.45-6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a><a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg></a></div>
+      </div>
+      <div class="local-map">
+        <iframe title="Arkansas auto transport service area" src="https://www.google.com/maps?q=Arkansas%2C%20USA&z=6&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+</section>
 
 <!-- ===================== FINAL CTA ===================== -->
 <section class="cta-band" id="get-started">
@@ -758,11 +1094,14 @@ body.ready .reveal{opacity:1;transform:none}
     <h2>Ready to Ship Your Vehicle?</h2>
     <p class="cta-sub">Get a free, no-obligation quote in about 60 seconds — or call and talk to a real specialist right now.</p>
     <div class="cta-actions">
-      <a class="cta-primary" href="index.html#top">Get Your Free Quote
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      <a class="cta-primary" href="#top">
+        Get Your Free Quote
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
       <a class="cta-secondary" href="tel:+18664992815">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/></svg>
-        (866) 499-2815</a>
+        (866) 499-2815
+      </a>
     </div>
     <ul class="cta-trust">
       <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Licensed &amp; insured</li>
@@ -793,7 +1132,7 @@ body.ready .reveal{opacity:1;transform:none}
       <h4>Company</h4>
       <ul>
         <li><a href="how-it-works.html">How It Works</a></li>
-        <li><a href="index.html#reviews">Reviews</a></li>
+        <li><a href="#reviews">Reviews</a></li>
         <li><a href="index.html#locations">Locations</a></li>
         <li><a href="faq.html">FAQ</a></li>
         <li><a href="contact.html">Contact</a></li>
@@ -896,68 +1235,18 @@ body.ready .reveal{opacity:1;transform:none}
     }
   }
 
-  /* ---- multi-step form ---- */
-  var form = document.getElementById('quoteForm');
-  if(!form) return;
-  var success = document.getElementById('quoteSuccess');
-  var panels = form.querySelectorAll('.qstep');
-  var stepEls = document.querySelectorAll('#steps .step');
-  var trackEls = document.querySelectorAll('#steps .track');
-  var current = 1;
-  var maxStep = 3;
-
-  function setStep(n){
-    current = n;
-    panels.forEach(function(p){ p.classList.toggle('is-current', +p.dataset.panel === n); });
-    stepEls.forEach(function(s){
-      var step = +s.dataset.step;
-      s.classList.toggle('is-active', step === n);
-      s.classList.toggle('is-done', step < n);
-      s.classList.toggle('is-clickable', step < n);
-    });
-    trackEls.forEach(function(t){ t.classList.toggle('is-filled', +t.dataset.track < n); });
-  }
-
-  function validate(n){
-    var panel = form.querySelector('.qstep[data-panel="'+n+'"]');
-    var ok = true, firstBad = null;
-    panel.querySelectorAll('input[required]').forEach(function(inp){
-      var field = inp.closest('.field');
-      var bad = !inp.value.trim() || (inp.type==='email' && !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(inp.value));
-      field.classList.toggle('has-error', bad);
-      if(bad){ ok = false; if(!firstBad) firstBad = inp; }
-    });
-    if(firstBad) firstBad.focus();
-    return ok;
-  }
-
-  // clear error as the user types
-  form.querySelectorAll('input[required]').forEach(function(inp){
-    inp.addEventListener('input', function(){ inp.closest('.field').classList.remove('has-error'); });
-  });
-
-  form.querySelectorAll('[data-next]').forEach(function(btn){
-    btn.addEventListener('click', function(){ if(validate(current)) setStep(Math.min(current+1, maxStep)); });
-  });
-  form.querySelectorAll('[data-back]').forEach(function(btn){
-    btn.addEventListener('click', function(){ setStep(Math.max(current-1, 1)); });
-  });
-
-  // clicking a completed step jumps back to it
-  stepEls.forEach(function(s){
-    s.addEventListener('click', function(){
-      var step = +s.dataset.step;
-      if(step < current) setStep(step);
-    });
-  });
-
-  form.addEventListener('submit', function(e){
-    e.preventDefault();
-    if(!validate(3)) return;
-    form.style.display = 'none';
-    document.getElementById('steps').style.display = 'none';
-    success.classList.add('show');
-  });
+  /* ---- auto-resize booking widget iframe ---- */
+  window.addEventListener('message', function(e){
+    if(String(e.origin).indexOf('berocker') === -1) return;
+    var d = e.data, h = null;
+    if(typeof d === 'number') h = d;
+    else if(d && typeof d === 'object') h = d.height || d.frameHeight || d.iframeHeight || (d.data && d.data.height);
+    h = parseInt(h, 10);
+    if(h && h > 200 && h < 4000){
+      var f = document.querySelector('.quote-card.is-embed iframe');
+      if(f) f.style.height = h + 'px';
+    }
+  }, false);
 })();
 </script>
 </body>

@@ -6,8 +6,8 @@
   <meta http-equiv="Pragma" content="no-cache">
   <meta http-equiv="Expires" content="0">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Expedited Car Shipping — Fast, Priority Auto Transport | Ship Guy</title>
-<meta name="description" content="Expedited car shipping gets your vehicle picked up fast and delivered on a priority timeline. Learn how expedited auto transport works and when it is worth it.">
+<title>Connecticut Auto Transport — Car Shipping to &amp; from Connecticut | Ship Guy</title>
+<meta name="description" content="If you need to ship a car to or from Connecticut, Ship Guy provides auto transport coverage across every major corridor in the state. Whether your vehic…">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
@@ -276,7 +276,7 @@ select.inp{appearance:none;-webkit-appearance:none;padding-right:38px;cursor:poi
 .reviews-head{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;flex-wrap:wrap;margin-bottom:30px}
 .reviews-head h2{font-size:clamp(1.7rem,2.6vw,2.1rem);font-weight:800;color:var(--brand)}
 .reviews-head p{margin:8px 0 0;color:var(--muted);font-size:15.5px}
-.rating{display:flex;align-items:center;gap:12px}
+.rating{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
 .rating .score{font-family:var(--font-display);font-weight:800;font-size:22px;color:var(--ink)}
 .stars{display:inline-flex;gap:2px;color:var(--star)}
 .stars svg{width:18px;height:18px}
@@ -483,10 +483,15 @@ section[id]{scroll-margin-top:104px}
    Responsive
    ========================================================= */
 @media (max-width:1180px){
-  .hero-grid{grid-template-columns:minmax(0,1fr);gap:36px;padding:54px 24px 60px}
-  .hero-copy{max-width:640px}
+  .hero-grid{grid-template-columns:minmax(0,1fr);gap:28px;padding:54px 24px 60px}
+  .hero-copy{display:contents}
+  .hero-head,.hero-rest{max-width:640px;width:100%}
+  .hero-head{order:1}
+  .quote-card{order:2;max-width:520px;width:100%}
+  .hero-rest{order:3}
+  .hero-head h1{margin-bottom:0}
+  .eyebrow{display:none}
   .lede{max-width:520px}
-  .quote-card{max-width:520px;width:100%}
   .hero-overlay{background:linear-gradient(180deg, rgba(4,9,22,.72) 0%, rgba(4,9,22,.8) 55%, rgba(4,9,22,.88) 100%)}
 }
 @media (max-width:1180px){
@@ -507,6 +512,7 @@ section[id]{scroll-margin-top:104px}
 @media (max-width:980px){
   .wc-bento{grid-template-columns:1fr}
   .loc-bento{grid-template-columns:1fr;gap:32px}
+  .review-grid{grid-template-columns:1fr 1fr}
 }
 @media (max-width:880px){
   .steps-row{flex-direction:column;gap:0;max-width:440px;margin:0 auto}
@@ -547,6 +553,31 @@ section[id]{scroll-margin-top:104px}
   .step .slabel{font-size:11.5px}
 }
 
+/* compact hero on laptop screens only (~25% shorter) */
+@media (min-width:1181px) and (max-width:1600px){
+  .hero-grid{padding-top:34px;padding-bottom:40px;gap:40px}
+  .eyebrow{margin-bottom:12px}
+  .hero-copy h1{font-size:clamp(2rem,3vw,2.5rem);margin-bottom:14px}
+  .lede{font-size:15.5px;margin-bottom:18px}
+  .trust-list{margin-bottom:16px;gap:9px}
+  .trust-list li{font-size:14.5px}
+  .trust-ic{width:30px;height:30px}
+  .trust-ic svg{width:17px;height:17px}
+  .hero-divider{margin-bottom:16px}
+  .stat .num{font-size:26px}
+  .stat .lbl{font-size:12px;margin-top:5px}
+  .quote-card{padding:20px 24px 18px}
+  .quote-card h2{font-size:22px;margin-bottom:13px}
+  .steps{margin-bottom:13px}
+  .step .dot{width:30px;height:30px}
+  .field{margin-bottom:9px}
+  .flabel{margin-bottom:4px}
+  .inp{height:40px}
+  .opt{padding:8px 12px}
+  .btn-primary{height:46px}
+  .assure{margin-top:8px}
+}
+
 /* reduced motion */
 @media (prefers-reduced-motion:reduce){
   *{animation-duration:.001ms!important;transition-duration:.001ms!important}
@@ -558,59 +589,58 @@ section[id]{scroll-margin-top:104px}
 body.ready .reveal{opacity:1;transform:none}
 .reveal.d2{transition-delay:.08s}
 .reveal.d3{transition-delay:.16s}
-/* ===== Subpage / article / services styles ===== */
-.page-hero{background:linear-gradient(135deg,#0a2a9e 0%, var(--brand) 60%, #1f54e0 100%);color:#fff;padding:62px 0 56px}
-.crumbs{display:flex;flex-wrap:wrap;gap:9px;font-size:13.5px;font-weight:600;color:#bcd2f8;margin-bottom:16px}
-.crumbs a{color:#dbe6fb}
-.crumbs a:hover{color:#fff}
-.page-hero h1{font-family:var(--font-display);font-weight:800;font-size:clamp(1.9rem,3.6vw,2.8rem);letter-spacing:-.015em;color:#fff;margin:0 0 13px;max-width:840px}
-.page-hero-sub{font-size:17.5px;line-height:1.6;color:rgba(233,239,251,.92);margin:0;max-width:680px}
-.article-section{background:#fff;padding:60px 0 70px;border-top:1px solid var(--line)}
-.article{max-width:780px}
-.article-lead{font-size:18.5px;line-height:1.7;color:#1d2350;font-weight:500;margin:0 0 28px}
-.article h2{font-family:var(--font-display);font-weight:800;font-size:clamp(1.45rem,2.4vw,1.85rem);letter-spacing:-.01em;color:#101a3d;margin:36px 0 13px}
-.article h2:first-of-type{margin-top:0}
-.article h3{font-family:var(--font-display);font-weight:700;font-size:1.15rem;color:#101a3d;margin:24px 0 9px}
-.article p{font-size:16.5px;line-height:1.75;color:#414a6b;margin:0 0 16px}
-.article ul{margin:0 0 18px;padding-left:22px}
-.article li{font-size:16.5px;line-height:1.7;color:#414a6b;margin-bottom:9px}
-.article a{color:var(--brand);font-weight:600;text-decoration:underline;text-decoration-color:#c7d3f5;text-underline-offset:3px}
-.article a:hover{color:var(--brand-press)}
-.svc-section{background:#fff;padding:58px 0 72px}
-.svc-intro{max-width:760px;margin:0 0 34px;font-size:17px;line-height:1.7;color:#586079}
-.svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
-.svc-card{display:flex;flex-direction:column;background:#fff;border:1px solid var(--line);border-radius:16px;padding:28px 26px;box-shadow:0 14px 34px -28px rgba(13,26,80,.4);transition:transform .18s ease,box-shadow .18s ease}
-.svc-card:hover{transform:translateY(-4px);box-shadow:0 26px 54px -28px rgba(13,26,80,.5)}
-.svc-ic{width:52px;height:52px;border-radius:14px;background:var(--brand-tint);color:var(--brand);display:grid;place-items:center;margin-bottom:16px}
-.svc-ic svg{width:26px;height:26px}
-.svc-card h2,.svc-card h3{font-family:var(--font-display);font-weight:800;font-size:19px;color:#101a3d;margin:0 0 9px}
-.svc-card p{font-size:15px;line-height:1.6;color:#586079;margin:0 0 16px;flex:1}
-.svc-more{display:inline-flex;align-items:center;gap:7px;color:var(--brand);font-family:var(--font-display);font-weight:700;font-size:15px}
-.svc-more svg{width:17px;height:17px;transition:transform .15s ease}
-.svc-card:hover .svc-more svg{transform:translateX(3px)}
-.related-section{background:#f5f8fc;padding:52px 0 60px;border-top:1px solid var(--line)}
-.related-section h2{text-align:center;font-family:var(--font-display);font-weight:800;font-size:1.4rem;color:#101a3d;margin:0 0 26px}
-.related-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
-.related-card{display:flex;align-items:center;justify-content:space-between;gap:10px;background:#fff;border:1px solid var(--line);border-radius:12px;padding:16px 18px;font-family:var(--font-display);font-weight:700;font-size:14.5px;color:#101a3d;transition:border-color .15s ease,color .15s ease}
-.related-card:hover{border-color:var(--brand);color:var(--brand)}
-.related-card svg{width:16px;height:16px;color:var(--brand);flex:0 0 auto}
-@media (max-width:900px){.svc-grid{grid-template-columns:1fr 1fr}.related-grid{grid-template-columns:1fr 1fr}}
-@media (max-width:560px){.svc-grid{grid-template-columns:1fr}.related-grid{grid-template-columns:1fr}}
-
 
 .menu.menu-mega{display:grid;grid-template-columns:1fr 1fr;column-gap:4px;min-width:452px}
 .menu.menu-mega .menu-all{grid-column:1 / -1;margin-top:6px;padding-top:12px;border-top:1px solid var(--line);color:var(--brand);font-weight:700}
 
 @media (max-width:460px){.footer-top{grid-template-columns:1fr;gap:28px}}/* resp-polish-footer */
+  .quote-card.is-embed{padding:0;overflow:hidden}
+  .quote-card.is-embed iframe{width:100%;height:630px;border:0;display:block}
+
+  .article-section{padding:52px 0 58px}
+  .article{max-width:820px;margin:0 auto}
+  .crumbs{display:flex;flex-wrap:wrap;gap:8px;align-items:center;font-size:13.5px;color:var(--muted);margin-bottom:22px}
+  .crumbs a{color:var(--brand)}.crumbs a:hover{text-decoration:underline}
+  .crumbs span[aria-current]{color:var(--ink-2)}
+  .article-lead{font-size:18px;line-height:1.7;color:var(--ink-2);margin:0 0 24px;padding-bottom:22px;border-bottom:1px solid var(--line)}
+  .article h2{font-family:var(--font-display);font-weight:800;font-size:clamp(1.35rem,2.4vw,1.7rem);color:#101a3d;margin:30px 0 12px}
+  .article p{color:var(--ink-2);font-size:16px;line-height:1.75;margin:0 0 16px}
+  .article a{color:var(--brand);font-weight:600}
+  .article table{width:100%;border-collapse:collapse;margin:16px 0 22px;font-size:15px}
+  .article table td,.article table th{border:1px solid var(--line);padding:10px 14px;text-align:left;vertical-align:top}
+  .article table tr:nth-child(even){background:#f7f9fd}
+  .article table td:first-child{font-weight:600;color:#101a3d}
+  .table-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:0 0 6px}
+  .local-section{background:#fff;padding:58px 0;border-top:1px solid var(--line)}
+  .local-grid{display:grid;grid-template-columns:1fr 1fr;gap:42px;align-items:stretch}
+  .local-eyebrow{font-family:var(--font-display);font-weight:800;letter-spacing:.14em;text-transform:uppercase;font-size:12.5px;color:var(--brand)}
+  .local-info h2{font-family:var(--font-display);font-weight:800;font-size:clamp(1.5rem,2.4vw,2rem);color:#101a3d;margin:8px 0 10px}
+  .local-lede{color:var(--ink-2);font-size:16px;line-height:1.6;margin:0 0 22px;max-width:480px}
+  .local-actions{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:24px}
+  .btn-call-lg{display:inline-flex;align-items:center;gap:9px;background:var(--brand);color:#fff;font-weight:700;font-size:16px;padding:13px 22px;border-radius:999px;box-shadow:0 10px 24px -12px rgba(11,52,192,.8);transition:background .15s ease}
+  .btn-call-lg:hover{background:var(--brand-press)}
+  .btn-quote-lg{display:inline-flex;align-items:center;gap:8px;background:#fff;color:var(--brand-deep);font-weight:700;font-size:16px;padding:13px 22px;border-radius:999px;border:2px solid var(--brand)}
+  .btn-quote-lg:hover{background:var(--brand-tint)}
+  .btn-call-lg svg,.btn-quote-lg svg{width:18px;height:18px}
+  .local-contact{list-style:none;margin:0 0 20px;padding:0;display:grid;gap:12px}
+  .local-contact li{display:flex;align-items:flex-start;gap:11px;color:var(--ink-2);font-size:15.5px;line-height:1.45}
+  .local-contact li svg{width:19px;height:19px;color:var(--brand);flex:0 0 auto;margin-top:1px}
+  .local-contact a{color:var(--ink-2)}.local-contact a:hover{color:var(--brand)}
+  .local-social{display:flex;gap:12px}
+  .local-social a{display:inline-flex;align-items:center;justify-content:center;width:42px;height:42px;border-radius:11px;background:var(--brand-tint);color:var(--brand-deep);transition:background .15s ease,color .15s ease}
+  .local-social a:hover{background:var(--brand);color:#fff}
+  .local-social svg{width:20px;height:20px}
+  .local-map{border-radius:16px;overflow:hidden;box-shadow:0 18px 40px -24px rgba(13,26,80,.55);border:1px solid var(--line);min-height:420px;background:#eef2fe}
+  .local-map iframe{width:100%;height:100%;min-height:420px;border:0;display:block}
+  @media (max-width:860px){.local-grid{grid-template-columns:1fr;gap:26px}.local-map{min-height:300px}.local-map iframe{min-height:300px}}
+  @media (max-width:560px){.article table{font-size:13.5px}.article table td,.article table th{padding:8px 10px}}
 .footer-states{display:flex;flex-wrap:wrap;gap:9px 20px;align-items:center;padding:20px 0 2px;margin-top:6px;border-top:1px solid rgba(255,255,255,.10)}.footer-states .fs-label{color:#fff;font-weight:700;font-size:14px}.footer-states a{font-size:14px;color:#9aa6c6;transition:color .15s ease}.footer-states a:hover{color:#fff}/* footer-states */
 </style>
 <script type="application/ld+json">
-{
-  "@context":"https://schema.org","@graph":[
-  {"@type":"Service","name":"Expedited Car Shipping","serviceType":"Auto transport","provider":{"@type":"Organization","name":"Ship Guy","telephone":"+1-866-499-2815"},"areaServed":{"@type":"Country","name":"United States"},"description":"Expedited car shipping gets your vehicle picked up fast and delivered on a priority timeline. Learn how expedited auto transport works and when it is worth it."},
-  {"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"index.html"},{"@type":"ListItem","position":2,"name":"Services","item":"services.html"},{"@type":"ListItem","position":3,"name":"Expedited Car Shipping","item":"expedited-car-shipping.html"}]}
-  ]
-}
+{"@context":"https://schema.org","@graph":[
+{"@type":"Service","serviceType":"Auto Transport","name":"Connecticut Auto Transport","areaServed":{"@type":"State","name":"Connecticut"},"provider":{"@type":"Organization","name":"Ship Guy","telephone":"+1-866-499-2815"},"description":"If you need to ship a car to or from Connecticut, Ship Guy provides auto transport coverage across every major corridor in the state. Whether your vehic…"},
+{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"index.html"},{"@type":"ListItem","position":2,"name":"Connecticut Auto Transport","item":"connecticut-auto-transport.html"}]}
+]}
 </script>
 </head>
 <body>
@@ -618,7 +648,7 @@ body.ready .reveal{opacity:1;transform:none}
 <!-- ===================== HEADER ===================== -->
 <header class="site-header" id="top">
   <div class="container header-inner">
-    <a class="brand" href="index.html#top" aria-label="Ship Guy — home"><svg class="sg-logo" role="img" aria-label="Ship Guy" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="209 227 180 145">
+    <a class="brand" href="index.html" aria-label="Ship Guy — home"><svg class="sg-logo" role="img" aria-label="Ship Guy" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="209 227 180 145">
 <path fill-rule="nonzero" fill="currentColor" fill-opacity="1" d="M 257.761719 304.929688 L 257.761719 247.621094 L 272.027344 245.128906 L 272.027344 265.167969 C 272.027344 265.933594 272.246094 266.5 272.679688 266.867188 C 273.109375 267.230469 273.703125 267.347656 274.460938 267.222656 L 279.570312 266.355469 C 281.136719 266.089844 281.921875 265.128906 281.921875 263.484375 L 281.921875 243.398438 L 296.191406 240.90625 L 296.191406 298.710938 L 281.921875 301.019531 L 281.921875 277.640625 L 272.027344 279.292969 L 272.027344 302.621094 Z M 257.761719 304.929688 "/>
 <path fill-rule="nonzero" fill="currentColor" fill-opacity="1" d="M 225.148438 310.390625 C 220.769531 311.101562 217.570312 310.632812 215.539062 308.984375 C 213.515625 307.339844 212.5 304.464844 212.5 300.359375 L 212.5 291.359375 L 226.769531 288.980469 L 226.769531 296.222656 C 226.769531 297.035156 226.984375 297.609375 227.417969 297.945312 C 227.851562 298.28125 228.472656 298.382812 229.28125 298.25 L 234.148438 297.449219 C 234.902344 297.328125 235.472656 297.054688 235.851562 296.640625 C 236.226562 296.222656 236.417969 295.636719 236.417969 294.875 L 236.417969 290.066406 C 236.417969 289.304688 236.324219 288.683594 236.136719 288.199219 C 235.945312 287.714844 235.632812 287.300781 235.203125 286.964844 C 234.769531 286.632812 234.175781 286.367188 233.417969 286.164062 L 221.257812 283.890625 C 219.472656 283.378906 217.957031 282.695312 216.71875 281.851562 C 215.472656 281.007812 214.539062 279.855469 213.917969 278.390625 C 213.296875 276.929688 212.988281 275.089844 212.988281 272.871094 L 212.988281 263.140625 C 212.988281 260.222656 213.636719 257.960938 214.933594 256.355469 C 216.230469 254.753906 218.390625 253.683594 221.417969 253.152344 L 237.957031 250.261719 C 242.28125 249.503906 245.457031 249.929688 247.484375 251.539062 C 249.511719 253.148438 250.523438 256.050781 250.523438 260.25 L 250.523438 265.890625 L 236.257812 268.328125 L 236.257812 264.5 C 236.257812 263.683594 236.039062 263.109375 235.605469 262.777344 C 235.175781 262.441406 234.578125 262.34375 233.824219 262.472656 L 229.527344 263.210938 C 228.714844 263.351562 228.132812 263.628906 227.785156 264.039062 C 227.433594 264.453125 227.257812 265.011719 227.257812 265.71875 L 227.257812 268.078125 C 227.257812 269.109375 227.511719 269.917969 228.027344 270.507812 C 228.539062 271.097656 229.3125 271.550781 230.335938 271.863281 L 241.929688 273.972656 C 243.984375 274.492188 245.660156 275.214844 246.957031 276.140625 C 248.253906 277.070312 249.199219 278.285156 249.796875 279.792969 C 250.390625 281.300781 250.6875 283.144531 250.6875 285.328125 L 250.6875 297.671875 C 250.6875 300.671875 250.023438 302.960938 248.699219 304.539062 C 247.375 306.117188 245.199219 307.148438 242.175781 307.636719 Z M 225.148438 310.390625 "/>
 <path fill-rule="nonzero" fill="currentColor" fill-opacity="1" d="M 305.007812 297.726562 L 305.007812 239.84375 L 319.277344 237.351562 L 319.277344 295.414062 Z M 305.007812 297.726562 "/>
@@ -631,7 +661,7 @@ body.ready .reveal{opacity:1;transform:none}
 </svg></a>
 
     <nav class="main-nav" aria-label="Primary">
-      <a href="index.html#top">Home</a>
+      <a href="index.html">Home</a>
       <a href="how-it-works.html">How It Works</a>
       <div class="has-menu">
         <button class="nav-toggle-btn" aria-haspopup="true" aria-expanded="false">Services
@@ -669,7 +699,7 @@ body.ready .reveal{opacity:1;transform:none}
   <!-- mobile nav -->
   <nav class="mobile-nav" id="mobileNav" aria-label="Mobile">
     <div class="inner">
-      <a href="index.html#top">Home</a>
+      <a href="index.html">Home</a>
       <a href="how-it-works.html">How It Works</a>
       <span class="m-sub">Services</span>
                   <a href="open-car-transport.html">Open Car Transport</a>
@@ -690,66 +720,378 @@ body.ready .reveal{opacity:1;transform:none}
   </nav>
 </header>
 
-<!-- ===================== PAGE HERO ===================== -->
-<section class="page-hero"><div class="container">
-  <nav class="crumbs" aria-label="Breadcrumb"><a href="index.html">Home</a><span>/</span><a href="services.html">Services</a><span>/</span><span aria-current="page">Expedited Car Shipping</span></nav>
-  <h1>Expedited Car Shipping</h1>
-  <p class="page-hero-sub">Priority pickup and faster delivery when you are working against the clock.</p>
-</div></section>
+<!-- ===================== HERO ===================== -->
+<section class="hero">
+  <div class="hero-media" aria-hidden="true">
+    <img class="hero-img" alt="" src="assets/hero.jpg">
+    <div class="hero-overlay"></div>
+  </div>
 
-<section class="article-section"><div class="container article">
-<p class="article-lead">When you can't wait, expedited car shipping moves your vehicle to the front of the line — faster pickup and a priority delivery timeline. Here's how it works and when it's worth it.</p>
-
-<h2>What Is Expedited Car Shipping?</h2>
-<p>Expedited car shipping is a priority service that gets your vehicle picked up and delivered faster than standard transport. Instead of waiting for the next available carrier on a route, your shipment is prioritized so a carrier is assigned quickly and your vehicle is dispatched as soon as possible — often within a day or two, and sometimes the same day depending on your location.</p>
-<p>With Ship Guy, expedited service combines fast dispatch with the same vetted carriers, transparent pricing, and door-to-door delivery as our standard shipments. It's the right choice when timing matters more than saving every dollar.</p>
-
-<h2>How Expedited Auto Transport Works</h2>
-<p>Expedited shipping follows the same three steps as any Ship Guy shipment, just on a faster track. You get a free quote and let us know your deadline. We prioritize your shipment to secure a carrier quickly, scheduling the earliest possible pickup window. The driver inspects and loads your vehicle, then transports it on a priority timeline while you track progress. At delivery, you inspect the vehicle, sign, and take your keys.</p>
-<p>Behind the scenes, expedited service often means offering carriers a rate that motivates an immediate response and routing your vehicle on the most direct schedule. The result is less waiting at every stage — from assignment to pickup to final delivery.</p>
-
-<h2>When Should You Choose Expedited Shipping?</h2>
-<p>Expedited car shipping is ideal whenever you're working against the clock. Common situations include:</p>
-<ul>
-  <li><strong>Last-minute relocations</strong> and job transfers with a hard start date</li>
-  <li><strong>Military orders (PCS)</strong> with a firm reporting deadline</li>
-  <li><strong>Online or auction purchases</strong> you need delivered fast</li>
-  <li><strong>Dealership and inventory moves</strong> on tight timelines</li>
-  <li><strong>Emergencies or schedule changes</strong> that can't wait for standard transit</li>
-</ul>
-<p>If your dates are flexible, standard shipping will save you money. But when a specific pickup or delivery day is non-negotiable, expedited service buys you speed and certainty.</p>
-
-<h2>How Much Does Expedited Car Shipping Cost?</h2>
-<p>Expedited shipping costs more than standard transport because your shipment takes priority over flexible loads and is scheduled around your deadline rather than the carrier's convenience. The premium depends on how quickly you need pickup, the distance, your vehicle's size and condition, transport type, and how busy your route is at the moment.</p>
-<p>The faster and more specific your timing requirements, the higher the priority — and the cost — tends to be. As with every Ship Guy shipment, your quote is all-in and transparent, with no hidden fees and no upfront deposit. You pay only once your vehicle is assigned and dispatched.</p>
-
-<h2>How Fast Is Expedited Shipping?</h2>
-<p>Expedited service mainly speeds up the front of the process — how quickly a carrier is assigned and your vehicle is picked up. Standard pickup can take a few days to coordinate; expedited pickup is often arranged within 24 to 48 hours, and sometimes the same day in busy metro areas. Once your vehicle is on the truck, actual transit time still depends on distance — a coast-to-coast haul covers more miles than a regional move — but priority routing helps keep delivery as direct as possible. When you request your quote, tell us your deadline and we'll tell you what's realistic for your route.</p>
-
-<h2>Expedited vs. Standard Shipping</h2>
-<p>The difference comes down to speed versus cost. Standard shipping is the most economical option and works well when you have a flexible window of several days for pickup. Expedited shipping prioritizes your vehicle for the fastest possible assignment and the tightest schedule, at a higher price. If you can plan ahead and stay flexible, standard is the value choice. If a deadline is driving your move, expedited is built for exactly that.</p>
-
-<h2>How to Prepare for a Fast Pickup</h2>
-<p>Because expedited shipments move quickly, a little readiness goes a long way. Have your vehicle prepared before the driver arrives: wash it and take dated photos, remove personal items and toll tags, leave about a quarter tank of fuel, disable alarms, and have one set of keys ready. Confirm your pickup and delivery addresses and contact details up front, and make sure you or an authorized adult is available on short notice. The more prepared you are, the faster the driver can inspect, load, and get your vehicle on the road.</p>
-
-<h2>Expedited Enclosed and Open Options</h2>
-<p>Expedited service isn't limited to one type of trailer. If you need a daily driver moved quickly, expedited <a href="open-car-transport.html">open transport</a> pairs priority dispatch with the affordability of an open carrier. If your vehicle is a classic, luxury, or high-value car that needs both speed and protection, expedited <a href="enclosed-auto-transport.html">enclosed transport</a> combines a fully covered trailer with a fast, prioritized schedule. Either way, the goal is the same: get a qualified carrier assigned and your vehicle on the road as soon as possible. When you request your quote, let us know your vehicle type, your destination, and your deadline, and we'll lay out the fastest realistic option for your situation — along with transparent, all-in pricing.</p>
-
-<h2>Ship Fast with Ship Guy</h2>
-<p>Ship Guy is a licensed, bonded, FMCSA-registered auto transport broker offering expedited car shipping to and from all 50 states. When time is tight, we combine priority dispatch with a vetted carrier network, transparent all-in pricing, no upfront deposit, real-time tracking, and 24/7 U.S.-based support to get your vehicle where it needs to be — fast.</p>
-<p>On a deadline? <a href="index.html#top">Get your free quote</a> in about 60 seconds, or call <a href="tel:+18664992815">(866) 499-2815</a> and tell us when you need it. You can also compare <a href="state-to-state-car-shipping.html">state-to-state shipping</a>, <a href="open-car-transport.html">open transport</a>, or <a href="enclosed-auto-transport.html">enclosed transport</a>.</p>
-
-</div></section>
-
-<!-- related --><section class="related-section"><div class="container">
-      <h2>Explore Other Services</h2>
-      <div class="related-grid">
-        <a class="related-card" href="open-car-transport.html">Open Car Transport <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-        <a class="related-card" href="enclosed-auto-transport.html">Enclosed Auto Transport <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-        <a class="related-card" href="door-to-door-car-shipping.html">Door-to-Door Shipping <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-        <a class="related-card" href="state-to-state-car-shipping.html">State-to-State Shipping <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+  <div class="container hero-grid">
+    <div class="hero-copy">
+      <div class="hero-head">
+      <p class="eyebrow reveal">Licensed&nbsp;•&nbsp;Insured&nbsp;•&nbsp;Nationwide</p>
+      <h1 class="reveal d2">Connecticut Auto Transport</h1>
       </div>
+      <div class="hero-rest">
+      <p class="lede reveal d2">Licensed, insured car shipping to and from Connecticut — transparent pricing, vetted carriers, and door-to-door delivery.</p>
+
+      <ul class="trust-list reveal d3">
+        <li>
+          <span class="trust-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/><path d="m9 12 2 2 4-4"/></svg></span>
+          Licensed Broker &amp; Fully Insured
+        </li>
+        <li>
+          <span class="trust-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="2" width="8" height="4" rx="1"/><path d="M9 4H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2h-3"/><path d="m9 14 2 2 4-4"/></svg></span>
+          FMCSA Registered
+        </li>
+        <li>
+          <span class="trust-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></span>
+          Vetted Carrier Network
+        </li>
+        <li>
+          <span class="trust-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M4 13a8 8 0 0 1 16 0"/><rect x="2" y="13" width="4.4" height="7" rx="1.6"/><rect x="17.6" y="13" width="4.4" height="7" rx="1.6"/><path d="M20 19.5v.5a3 3 0 0 1-3 3h-3"/></svg></span>
+          Real-Time Tracking &amp; 24/7 Support
+        </li>
+      </ul>
+
+      <div class="hero-divider reveal d3"></div>
+
+      <div class="stats reveal d3">
+        <div class="stat"><span class="num">50+</span><span class="lbl">States Served</span></div>
+        <div class="stat"><span class="num">100%</span><span class="lbl">Insured Transport</span></div>
+        <div class="stat"><span class="num">24/7</span><span class="lbl">Support &amp; Tracking</span></div>
+      </div>
+      </div>
+    </div>
+
+    <!-- QUOTE CARD (booking widget) -->
+    <div class="quote-card is-embed reveal d2" id="quoteForm">
+      <iframe src="https://widget.berocker.com?theme=pro&api_base=https%3A%2F%2Fapp.shipguy.com&api_key=6a5508b7cb2f4" title="Ship Guy Logistics booking form" loading="lazy"></iframe>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== REVIEWS ===================== -->
+<section class="reviews" id="reviews">
+  <div class="container">
+    <div class="reviews-head">
+      <div>
+        <h2>Verified customer reviews</h2>
+        <p>Trusted by vehicle owners nationwide.</p>
+      </div>
+      <div class="rating">
+        <span class="score">4.9</span>
+        <span class="stars" aria-label="4.9 out of 5 stars">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.06 6.6.79-4.86 4.53 1.27 6.52L12 17.9l-5.9 3.5 1.27-6.52L2.5 9.35l6.6-.79L12 2.5Z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.06 6.6.79-4.86 4.53 1.27 6.52L12 17.9l-5.9 3.5 1.27-6.52L2.5 9.35l6.6-.79L12 2.5Z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.06 6.6.79-4.86 4.53 1.27 6.52L12 17.9l-5.9 3.5 1.27-6.52L2.5 9.35l6.6-.79L12 2.5Z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.06 6.6.79-4.86 4.53 1.27 6.52L12 17.9l-5.9 3.5 1.27-6.52L2.5 9.35l6.6-.79L12 2.5Z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.06 6.6.79-4.86 4.53 1.27 6.52L12 17.9l-5.9 3.5 1.27-6.52L2.5 9.35l6.6-.79L12 2.5Z"/></svg>
+        </span>
+        <span class="count">487+ reviews</span>
+        <span class="divider-v"></span>
+        <span class="gword"><span class="b">G</span><span class="r">o</span><span class="y">o</span><span class="b">g</span><span class="g">l</span><span class="r">e</span></span>
+      </div>
+    </div>
+
+    <div class="review-grid">
+      <article class="review">
+        <div class="review-top">
+          <span class="avatar">JD</span>
+          <div><span class="name">James D.</span><span class="date">May 12, 2024</span></div>
+        </div>
+        <div class="stars" aria-label="5 out of 5">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.06 6.6.79-4.86 4.53 1.27 6.52L12 17.9l-5.9 3.5 1.27-6.52L2.5 9.35l6.6-.79L12 2.5Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.06 6.6.79-4.86 4.53 1.27 6.52L12 17.9l-5.9 3.5 1.27-6.52L2.5 9.35l6.6-.79L12 2.5Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.06 6.6.79-4.86 4.53 1.27 6.52L12 17.9l-5.9 3.5 1.27-6.52L2.5 9.35l6.6-.79L12 2.5Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.06 6.6.79-4.86 4.53 1.27 6.52L12 17.9l-5.9 3.5 1.27-6.52L2.5 9.35l6.6-.79L12 2.5Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.06 6.6.79-4.86 4.53 1.27 6.52L12 17.9l-5.9 3.5 1.27-6.52L2.5 9.35l6.6-.79L12 2.5Z"/></svg>
+        </div>
+        <p>Ship Guy made the whole process easy. Great communication and my car arrived earlier than expected. Highly recommend!</p>
+      </article>
+
+      <article class="review">
+        <div class="review-top">
+          <span class="avatar">SR</span>
+          <div><span class="name">Sarah R.</span><span class="date">April 28, 2024</span></div>
+        </div>
+        <div class="stars" aria-label="5 out of 5">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.06 6.6.79-4.86 4.53 1.27 6.52L12 17.9l-5.9 3.5 1.27-6.52L2.5 9.35l6.6-.79L12 2.5Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.06 6.6.79-4.86 4.53 1.27 6.52L12 17.9l-5.9 3.5 1.27-6.52L2.5 9.35l6.6-.79L12 2.5Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.06 6.6.79-4.86 4.53 1.27 6.52L12 17.9l-5.9 3.5 1.27-6.52L2.5 9.35l6.6-.79L12 2.5Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.06 6.6.79-4.86 4.53 1.27 6.52L12 17.9l-5.9 3.5 1.27-6.52L2.5 9.35l6.6-.79L12 2.5Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.06 6.6.79-4.86 4.53 1.27 6.52L12 17.9l-5.9 3.5 1.27-6.52L2.5 9.35l6.6-.79L12 2.5Z"/></svg>
+        </div>
+        <p>Excellent service from start to finish. The driver was professional and my vehicle arrived in perfect condition.</p>
+      </article>
+
+      <article class="review">
+        <div class="review-top">
+          <span class="avatar">MT</span>
+          <div><span class="name">Michael T.</span><span class="date">April 15, 2024</span></div>
+        </div>
+        <div class="stars" aria-label="5 out of 5">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.06 6.6.79-4.86 4.53 1.27 6.52L12 17.9l-5.9 3.5 1.27-6.52L2.5 9.35l6.6-.79L12 2.5Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.06 6.6.79-4.86 4.53 1.27 6.52L12 17.9l-5.9 3.5 1.27-6.52L2.5 9.35l6.6-.79L12 2.5Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.06 6.6.79-4.86 4.53 1.27 6.52L12 17.9l-5.9 3.5 1.27-6.52L2.5 9.35l6.6-.79L12 2.5Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.06 6.6.79-4.86 4.53 1.27 6.52L12 17.9l-5.9 3.5 1.27-6.52L2.5 9.35l6.6-.79L12 2.5Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.06 6.6.79-4.86 4.53 1.27 6.52L12 17.9l-5.9 3.5 1.27-6.52L2.5 9.35l6.6-.79L12 2.5Z"/></svg>
+        </div>
+        <p>Fast quote, fair price, and they kept me updated throughout the entire delivery. Will definitely use again.</p>
+      </article>
+
+      <article class="review">
+        <div class="review-top">
+          <span class="avatar">KB</span>
+          <div><span class="name">Kelsey B.</span><span class="date">March 30, 2024</span></div>
+        </div>
+        <div class="stars" aria-label="5 out of 5">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.06 6.6.79-4.86 4.53 1.27 6.52L12 17.9l-5.9 3.5 1.27-6.52L2.5 9.35l6.6-.79L12 2.5Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.06 6.6.79-4.86 4.53 1.27 6.52L12 17.9l-5.9 3.5 1.27-6.52L2.5 9.35l6.6-.79L12 2.5Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.06 6.6.79-4.86 4.53 1.27 6.52L12 17.9l-5.9 3.5 1.27-6.52L2.5 9.35l6.6-.79L12 2.5Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.06 6.6.79-4.86 4.53 1.27 6.52L12 17.9l-5.9 3.5 1.27-6.52L2.5 9.35l6.6-.79L12 2.5Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.06 6.6.79-4.86 4.53 1.27 6.52L12 17.9l-5.9 3.5 1.27-6.52L2.5 9.35l6.6-.79L12 2.5Z"/></svg>
+        </div>
+        <p>Shipped my SUV cross-country with no issues. The team was responsive and the experience was smooth.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+
+<!-- ===================== STATE CONTENT ===================== -->
+<section class="article-section"><div class="container article">
+  <nav class="crumbs" aria-label="Breadcrumb"><a href="index.html">Home</a><span>/</span><span aria-current="page">Connecticut Auto Transport</span></nav>
+  <p>If you need to ship a car to or from Connecticut, Ship Guy provides auto transport coverage across every major corridor in the state. Whether your vehicle is heading down I-95 along the coast, moving east-west on I-84, or traveling the north-south stretch of I-91, Ship Guy coordinates with vetted carriers who run these lanes regularly. Connecticut has major interstates that enhance auto transport accessibility, and Ship Guy takes full advantage of that network to keep pickups and deliveries on schedule.</p>
+  <p>This page covers how Connecticut auto transport works, what Connecticut car shipping costs look like for popular routes, realistic timelines you can plan around, and how to book with Ship Guy right away. Instead of driving hundreds or thousands of miles yourself, burning days, fuel, and putting wear on your vehicle, auto transport puts your car on a professional carrier while you fly, settle into a new home, or simply skip the road trip. Ship Guy offers car shipping services in both open and enclosed configurations, door-to-door delivery across Connecticut ZIP codes, and expedited service for time-sensitive moves.</p>
+  <p>Ready to see what it costs? Get an instant quote from Ship Guy for shipping a car to or from Connecticut. Provide your pickup and delivery ZIP codes, vehicle details, and preferred dates, and you will receive a transparent price within minutes. The earlier you book, the more flexibility you have with scheduling and pricing, so there is no reason to wait.</p>
+  <h2>Connecticut Car Shipping at a Glance</h2>
+  <p>Here is a quick snapshot of what Connecticut car shipping typically looks like in terms of cost, transit time, and carrier availability. These ranges reflect 2026 market conditions for a standard sedan shipped via open transport, with enclosed pricing noted separately.</p>
+  <h2>Typical Cost Examples</h2>
+  <div class="table-wrap"><table><tbody><tr><td>Hartford, CT → Orlando, FL (~1,150 mi)</td><td>$900–$1,200</td><td>$1,200–$1,800</td></tr><tr><td>New Haven, CT → Chicago, IL (~800 mi)</td><td>$700–$900</td><td>$1,100–$1,400</td></tr><tr><td>Stamford, CT → Dallas, TX (~1,600 mi)</td><td>$1,200–$1,600</td><td>$1,800–$2,400</td></tr><tr><td>CT → New York or Massachusetts (regional)</td><td>$400–$700</td><td>$800–$1,200</td></tr></tbody></table></div>
+  <p>Prices vary based on vehicle type, exact pickup and delivery locations, time of year, and whether the vehicle is operable.</p>
+  <h2>Average Transit Times</h2>
+  <p>Regional Northeast moves (under 300 miles): 1–3 days total from booking to delivery.</p>
+  <p>Southeast or Midwest destinations (500–1,500 miles): 3–6 days transit once loaded; total window often 5–8 days</p>
+  <p>Cross-country shipments to the West Coast (2,000+ miles): 6–10 days transit; total window can stretch to 10–14 days</p>
+  <p>Ship Guy coordinates Connecticut auto transport services year-round. Winter weather from December through March-nor&#x27;easters, ice, and road closures-can cause delays, while summer brings peak seasonal demand from relocations. Seasonal factors, such as weather, can affect delivery times in Connecticut, so it&#x27;s always wise to build buffer days into your schedule.</p>
+  <p>Carrier availability in Connecticut is strong along the I-95 corridor and in major cities like Hartford, New Haven, Bridgeport, Stamford, and New London. Rural interior towns see somewhat fewer direct carrier runs and may require slightly longer pickup windows.</p>
+  <h2>Connecticut Auto Transport Services We Offer</h2>
+  <p>Ship Guy&#x27;s Connecticut car shipping services focus on flexible, door-to-door auto transport solutions in and out of Connecticut. Whether you are moving a daily commuter or a collector vehicle, Ship Guy matches your vehicle shipment with the right carrier and transport type for the job.</p>
+  <h2>Open Auto Transport</h2>
+  <p>Open transport is the most popular car shipping method and the most affordable option for standard vehicles. Your car rides on an open-air trailer alongside other vehicles, the same type of hauler dealerships use to move inventory across the country. This works well for everyday sedans, SUVs, commuter vehicles, auction purchases, and relocation moves. Open shipping offers the shortest scheduling windows because most carriers on Connecticut&#x27;s high-traffic lanes operate open trailers. The vast majority of Connecticut car shipping moves occur on open trailers, and for good reason: they are cost-effective and widely available.</p>
+  <h2>Enclosed Car Shipping Services</h2>
+  <p>For high-value vehicles-luxury sedans, classic cars, exotics, and rare collectibles-enclosed transport provides added protection from weather and road debris. Enclosed carriers shield your vehicle in a fully enclosed trailer, significantly reducing exposure risk. This is especially common for shipments originating from affluent Connecticut towns like Greenwich, Westport, and New Canaan, where owners regularly ship vehicles to auction hubs, Florida winter homes, or out-of-state shows. Enclosed transport costs , but for vehicles worth six or seven figures, the premium is a straightforward trade-off for protection. Enclosed trailers and enclosed carriers run less frequently than open ones, so plan for slightly longer scheduling windows.</p>
+  <h2>Door-to-Door Service</h2>
+  <p>Auto transport services in Connecticut include door-to-door shipping, meaning the carrier picks up and delivers as close to your address as safely possible. In Connecticut, historic neighborhoods with narrow streets can make driveway access challenging for a full-size car hauler. When that happens, drivers use nearby parking lots, wide intersections, or secondary meeting points for pickup and delivery. Ship Guy communicates these arrangements before pickup, so you know exactly where to meet the driver.</p>
+  <h2>Expedited and Priority Pickup</h2>
+  <p>For urgent moves, last-minute job relocations, military orders, or a daughter&#x27;s car heading to campus before the semester starts, Ship Guy offers expedited and priority pickup options. These guarantee tighter pickup windows and priority routing, though they cost more than standard scheduling.</p>
+  <h2>Operable and Inoperable Vehicles</h2>
+  <p>Ship Guy supports operable vehicles and certain inoperable vehicles. If your car does not run, carriers use winches or specialized equipment to load it, which adds $150–$300 or more to the cost, depending on condition and distance. Fewer carriers handle non-running vehicles, so expect slightly longer scheduling times. Be upfront about your vehicle&#x27;s condition when requesting a quote-this keeps pricing accurate and avoids adjustments later.</p>
+  <h2>Specialized Connecticut Routes and Situations</h2>
+  <p>Connecticut customers tend to cluster around a few high-demand lane patterns. Here is how Ship Guy handles the most common ones.</p>
+  <h2>Snowbird Car Shipping (CT → Florida)</h2>
+  <p>Between early fall, specifically mid-October to early November, many Connecticut residents ship cars to Florida destinations like Miami, Orlando, and Tampa. Return shipments come back north in March and April. These lanes fill quickly, and prices rise during peak demand windows. Booking four to six weeks ahead can substantially improve both price and carrier availability. If you wait until the last week, expect to pay a premium and face longer pickup windows.</p>
+  <h2>New England Regional Routes</h2>
+  <p>Hartford to Boston, New Haven to Providence, Stamford to New York City-these are among the most frequently run lanes on the East Coast. Transit times are often just 24–48 hours once loaded, and the total shipping window is typically 1–3 days. Prices are among the lowest in Connecticut car shipping because carriers run these routes constantly.</p>
+  <h2>Long-Distance to California and Beyond</h2>
+  <p>Shipping a car from Connecticut to California costs $1,300 to $1,600 for open transport on routes like Bridgeport to Los Angeles or . Enclosed transport for these cross-country shipments can cost $2,200–$3,000 or more, depending on the type of vehicle. Because your car travels such a long distance, enclosed transport is popular among owners of high-value vehicles who want maximum protection over 2,500+ miles.</p>
+  <h2>Dealer, Auction, and Online Purchase Shipments</h2>
+  <p>Ship Guy regularly handles shipments originating at or arriving at Connecticut dealerships, auction lots, and private sellers connected through online marketplaces. These moves often use terminal pickup or drop-off points, and condition reporting at both ends is especially important to protect all parties.</p>
+  <h2>How Connecticut Auto Transport Works With Ship Guy</h2>
+  <p>The entire process is the same whether you ship from Hartford, New Haven, Stamford, New London, or any smaller Connecticut town. Here is the step-by-step flow.</p>
+  <p><strong>Step 1: Request a Quote.</strong> Provide your origin and destination ZIP codes, vehicle make, model, and year, operable or inoperable status, preferred transport type (open or enclosed), and your ideal pickup window. You can do this online or by phone.</p>
+  <p><strong>Step 2: Confirm Details and Book</strong> Once you accept the quote, confirm your Connecticut pickup and delivery addresses, choose your carrier type, and sign the transport agreement. This agreement includes the bill of lading terms, insurance details, and scheduling window.</p>
+  <p><strong>Step 3: Pickup Day in Connecticut.</strong> On pickup day, the driver performs a thorough inspection. This includes a condition report with photos documenting existing damage, dents, scratches, paint chips, and rust, along with mileage. Document any existing damage before shipping your vehicle so that both you and the driver have a shared record. The driver checks that the vehicle is operable, the tires are properly inflated, and the car is ready for loading. If you are on a street that is too narrow for the carrier, the driver will arrange a nearby meeting point.</p>
+  <p><strong>Step 4: Tracking and Communication</strong> While your vehicle is en route, Ship Guy coordinates with the carrier to provide updates at pickup, approximate mid-route checkpoints, and pre-delivery scheduling. If weather, traffic, or road closures shift the ETA, you will hear about it before it becomes a problem. Transparency during transit is central to a stress-free experience.</p>
+  <p><strong>Step 5: Delivery.</strong> At delivery, the driver conducts another walk-around inspection. You compare the vehicle&#x27;s condition to the original pickup report. Inspect your vehicle before signing delivery paperwork-check the exterior, interior, and mileage against what was documented. If delivery locations have low-hanging trees, tight turns, or narrow access, an alternate drop-off spot, such as a nearby parking lot, may be used. Once satisfied, sign the bill of lading, and you are done. The whole process from booking to the moment your vehicle arrives is managed by Ship Guy, including logistics, carrier vetting, and issue resolution.</p>
+  <h2>Preparing Your Vehicle in Connecticut</h2>
+  <p>Getting your vehicle ready before the carrier shows up saves time and prevents disputes. Use this checklist to make sure everything goes smoothly on pickup day.</p>
+  <p><strong>Wash the car.</strong> A clean exterior makes existing damage clearly visible under Connecticut&#x27;s inspection light, ensuring the condition report is accurate.</p>
+  <p><strong>Remove personal items.</strong> Take out all belongings, toll tags (like E-ZPass for Hartford and New Haven tolls), and parking passes. Personal items are not covered by cargo insurance during transit, and leaving them in adds weight and liability.</p>
+  <p><strong>Fuel level.</strong> Leave about a quarter tank of gas, enough to drive onto the trailer but light enough to meet weight and safety standards.</p>
+  <p><strong>Tire pressure and battery.</strong> Ensure tire pressure is correct and the battery is charged for smooth loading and unloading. Check your vehicle&#x27;s battery and antifreeze levels before transport, especially during colder months.</p>
+  <p><strong>Disable alarms.</strong> Turn off any aftermarket alarm systems to avoid disturbances while your car is on the trailer.</p>
+  <p><strong>Provide keys.</strong> Give the driver a full set of keys and keep a spare set for yourself.</p>
+  <p><strong>Winter pickup tips.</strong> If you are shipping between December and March in Connecticut, clear all snow and ice off the vehicle, fold in mirrors, and note any existing salt-related paint wear on the condition report. Salt corrosion is common on Connecticut cars and should be documented beforehand.</p>
+  <h2>Connecticut Car Shipping Costs and Pricing Factors</h2>
+  <p>The cost of car shipping in Connecticut depends on several factors. Transport prices are influenced by distance, vehicle type, and route. Typical auto shipping costs range from $0.50 to $2.00 per mile, with shorter regional moves toward the higher end of that per-mile range and longer hauls trending lower per mile but higher in total cost.</p>
+  <h2>2026 Price Range Examples</h2>
+  <div class="table-wrap"><table><tbody><tr><td>Hartford, CT → Atlanta, GA (~950 mi)</td><td>$800–$1,100</td><td>$1,100–$1,500</td></tr><tr><td>Stamford, CT → Phoenix, AZ (~2,400 mi)</td><td>$1,400–$1,800</td><td>$2,000–$2,700</td></tr><tr><td>CT → Florida (various)</td><td>$900–$1,200</td><td>$1,300–$1,800</td></tr><tr><td>CT → California (various)</td><td>$1,300–$1,600</td><td>$2,200–$3,000</td></tr></tbody></table></div>
+  <h2>What Drives Price Up or Down</h2>
+  <p><strong>Route popularity and carrier availability.</strong> I-95 corridor routes are priced more competitively because carriers run them frequently. Rural pickups or uncommon lane pairs cost more because carriers must deviate from their main route.</p>
+  <p><strong>Distance and route.</strong> Distance and route significantly influence vehicle shipping costs. A 300-mile regional move costs less overall than a 2,500-mile cross-country haul, but the per-mile rate inverts.</p>
+  <p><strong>Vehicle size.</strong> Larger vehicles, such as SUVs and trucks, weigh more and take up more trailer space. Expect to pay more for these than for a standard sedan. The same applies to modified or oversized vehicles requiring specialized equipment.</p>
+  <p><strong>Operable vs. inoperable.</strong> Non-running vehicles cost more due to winching and extra handling time.</p>
+  <p><strong>Transport type.</strong> Open transport is the most affordable shipping option available. Enclosed transport costs 30–40% more than open transport-a meaningful premium, but one that makes sense for vehicles that justify it.</p>
+  <p><strong>Seasonality.</strong> Shipping costs increase during peak seasons, such as summer and snowbird months. The peak shipping season in Connecticut runs from October to January, driven by snowbird departures and holiday relocations. Seasonal demand also spikes in late August when college students ship cars to campus.</p>
+  <p>Booking several days-or ideally weeks-in advance with Ship Guy helps secure competitive pricing and more flexible pickup windows. Last-minute bookings during peak seasons often carry surcharges.</p>
+  <h2>Understanding Your Quote From Ship Guy</h2>
+  <p>This section helps you read and compare Connecticut car shipping quotes so you know exactly what you are paying for.</p>
+  <p>A Ship Guy quote includes door-to-door service (where feasible), carrier charges, basic cargo insurance for your vehicle during transit, and fuel costs. There are no hidden layers-what you see is what you pay, provided the relevant information you gave at booking is accurate.</p>
+  <p>What might change a quote after booking? A few things: if the pickup or delivery address turns out to be in a very remote area not disclosed initially, if the vehicle condition was misreported (for example, listed as running but actually non-running), or if last-minute route changes are requested. These situations are uncommon but worth understanding.</p>
+  <p>To keep your quote precise, provide accurate Connecticut ZIP codes, your vehicle&#x27;s exact make, model, year, and condition, and your preferred dates. Ship Guy&#x27;s approach to price transparency means avoiding surprise delivery fees. When the information provided at booking matches reality, the price holds.</p>
+  <h2>Choosing the Right Connecticut Auto Transport Company</h2>
+  <p>Selecting the best car shipping company for your Connecticut move matters more than most people realize. A low quote means nothing if the carrier is uninsured, the communication is nonexistent, or your vehicle arrives damaged. The best company for your shipment is one that balances competitive pricing with verified safety credentials and clear communication throughout the entire process.</p>
+  <h2>Verify Carrier Credentials</h2>
+  <p>All auto transport companies must have a USDOT number. Before booking with any auto transport company, verify the carrier&#x27;s USDOT and MC numbers through the . This confirms that the carrier has valid operating authority, proper insurance, and a clean safety record. National carriers offer auto transport services across all 50 states, but not all of them maintain the same standards. Checking credentials is a five-minute step that protects your vehicle and your money.</p>
+  <h2>Read Reviews That Matter</h2>
+  <p>Look for recent customer reviews that specifically mention Connecticut cities, weather-related delays, and delivery punctuality. A review from someone who shipped from Stamford in January tells you more about real performance than a generic five-star rating. Industry benchmarks exist, for example,  from Direct Connect Auto Transport, which gives you a useful reference point. While companies like Montway Auto Transport are well-known national players, what matters most is whether the company you choose delivers consistent results on the specific lanes you need.</p>
+  <h2>Insurance Clarity</h2>
+  <p>A reliable car shipping company will clearly explain its cargo insurance coverage-what is covered, the deductible, the claims process, and coverage limits. Do not assume every quote includes the same level of protection. Ask directly and get it in writing.</p>
+  <h2>Ship Guy&#x27;s Approach</h2>
+  <p>Ship Guy emphasizes careful carrier selection, communication standards, and reliable pickup and delivery across Connecticut. Every carrier in Ship Guy&#x27;s network is vetted for USDOT compliance, insurance coverage, and performance history. You can also check any company&#x27;s standing with the Better Business Bureau for additional insight into how they handle customer complaints-a clean business bureau record is a positive signal.</p>
+  <h2>Watch for Red Flags</h2>
+  <p>Be cautious of quotes that fall far below typical Connecticut car shipping costs. Unusually low pricing often signals unreliable carrier commitments, bait-and-switch tactics, or poor service quality. Customer satisfaction comes from realistic pricing paired with dependable execution, not from chasing the lowest number.</p>
+  <h2>Connecticut-Specific Challenges and How Ship Guy Handles Them</h2>
+  <p>Connecticut&#x27;s mix of dense coastal cities, small historic towns, and unpredictable winter weather creates specific challenges for auto transport.</p>
+  <h2>I-95 Congestion</h2>
+  <p>Connecticut&#x27;s I-95 is one of the most congested highways in the Northeast, particularly between Stamford, Norwalk, Bridgeport, and New Haven during weekday rush hours. Traffic congestion can add 1–3 hours to transit times on pickup or delivery days. Ship Guy schedules pickups and deliveries around peak traffic windows whenever possible and builds buffer time into routes that run through these corridors.</p>
+  <h2>Narrow Streets in Historic Towns</h2>
+  <p>Towns like Mystic, Essex, Litchfield, and parts of New London have narrow streets that complicate vehicle delivery for full-size car haulers. When a large carrier cannot safely reach your driveway, Ship Guy arranges nearby meeting points-a church parking lot, a wider side street, a municipal lot-for safe loading and unloading. This is communicated before pickup to avoid surprises.</p>
+  <h2>Winter Weather</h2>
+  <p>From December through March, nor&#x27;easters, ice, and road closures can disrupt schedules. Winter weather can cause 1–3 day shipping delays on Connecticut routes. Ship Guy builds flexible buffers into winter scheduling and proactively reschedules when conditions make transit unsafe. Connecticut customers receive direct communication about weather-related delays, so you can plan around more variable conditions rather than being left wondering where your vehicle is.</p>
+  <h2>Connecticut Auto Transport for Students, Military, and Relocations</h2>
+  <p>Connecticut sees recurring waves of car shipping tied to college moves, military orders, job relocations, and seasonal stays. Each situation has its own timing and logistical needs, and Ship Guy handles them all.</p>
+  <h2>College Students</h2>
+  <p>Students attending UConn in Storrs, Yale University in New Haven, the University of Hartford, and other Connecticut schools often need car shipping around semester start dates in late August and end dates in May, with a smaller window in December. Campus addresses can have access constraints-many universities have designated staging areas for large vehicles. If you are shipping a daughter&#x27;s car to school or bringing a student&#x27;s vehicle home for the summer, booking two weeks ahead of move-in day helps secure a better schedule and pricing. Most shipments for college moves are open transport, which is the affordable option that fits a student&#x27;s budget.</p>
+  <h2>Military Relocations</h2>
+  <p>Military personnel with PCS orders relocating to or through Connecticut need coordination with housing timelines and, in some cases, base access for delivery. Ship Guy works with military families to align vehicle shipment windows with fixed reporting dates. Expedited services and guaranteed pickup windows are available for moves where timing is non-negotiable.</p>
+  <h2>Job and Family Relocations</h2>
+  <p>When families move to or from major employment centers in Hartford, Stamford, or New Haven, auto transport often needs to align with household movers and housing lease dates. Shipping multiple vehicles on the same route can unlock multi-car savings. If you are relocating to Connecticut, ensure your vehicle is registered within 60 days of moving to Connecticut-this is a state requirement worth noting as you plan your move.</p>
+  <p>Planning one to two weeks ahead for any of these recurring Connecticut moves helps secure better schedules and pricing, and gives you a better understanding of what to expect on pickup and delivery days.</p>
+  <h2>Tips to Save on Connecticut Car Shipping</h2>
+  <p>Professional auto transport is an investment, but a few expert tips can help you save money without sacrificing service quality.</p>
+  <p><strong>Be flexible with dates.</strong> Flexible pickup and delivery windows let Ship Guy match your shipment with the most cost-effective carrier already running your lane. Even a two-day window can make a meaningful difference.</p>
+  <p><strong>Choose open transport.</strong> Unless your vehicle requires extra protection, open transport is the ideal and most affordable option for standard vehicles-sedans, SUVs, and most trucks. Enclosed transport is worth it for classic cars and exotics, but not for everyday vehicles.</p>
+  <p><strong>Avoid peak dates.</strong> Shipping during major holidays, extreme winter storms, or the heart of snowbird season (October through January) means higher rates and longer wait times. If your schedule allows, shifting your move by even a week or two outside peak seasons can lower costs.</p>
+  <p><strong>Book early.</strong> Most carriers price more favorably when they can plan loads in advance. Last-minute bookings during high-demand windows almost always cost more.</p>
+  <p><strong>Combine vehicles.</strong> If your family is relocating and has two or more cars heading in the same direction, coordinate with Ship Guy to explore multi-car pricing options. Loading multiple vehicles on the same carrier run can reduce the per-vehicle cost.</p>
+  <p>These are helpful resources for keeping your Connecticut car shipping cost in check while still getting a seamless process from pickup to delivery.</p>
+  <h2>Book Your Connecticut Auto Transport With Ship Guy</h2>
+  <p>Ship Guy is a strong choice for Connecticut auto transport services because of its experience on key Connecticut routes, its network of vetted carriers, and its commitment to clear communication at every stage. From the I-95 coast to the quietest Litchfield County back road, Ship Guy covers all major Connecticut regions-Hartford County, New Haven County, Fairfield County coastal cities, and more rural interior towns.</p>
+  <p>Whether you need Connecticut car shipping for a cross-country relocation, a snowbird seasonal move, a vehicle purchase, or a college drop-off, Ship Guy provides shipping services built around your timeline and budget. Every quote includes relevant information about what is covered, what to expect on pickup and delivery days, and how to reach your coordinator if anything changes while your vehicle is in transit.</p>
+  <p>Ship Guy can schedule shipments on short notice when carrier availability permits, but recommends booking early for the best options and competitive pricing. Most carriers on popular Connecticut lanes can accommodate pickups within a few days of booking, but advance planning gives you the widest selection and the most favorable rates.</p>
+  <p>Contact Ship Guy by phone or online form to get your personalized quote. Provide your ZIP codes, vehicle details, and preferred dates, and Ship Guy will handle the rest to make your Connecticut auto transport as straightforward as possible.</p>
 </div></section>
+
+<!-- ===================== WHAT WE SHIP ===================== -->
+<section class="ship-section" id="services">
+  <div class="container">
+    <div class="ship-head">
+      <p class="ship-eyebrow">What We Ship</p>
+      <h2>We Ship More Than Cars</h2>
+      <p class="ship-sub">Nationwide transport solutions for vehicles, household goods, equipment, and freight.</p>
+    </div>
+
+    <div class="ship-grid">
+      <article class="ship-card">
+        <div class="ship-img"><img src="assets/ship-vehicles.jpg" alt="Blue auto-transport carrier loaded with cars and a boat on a mountain highway" loading="lazy"></div>
+        <div class="ship-body">
+          <h3>Vehicles &amp; Boats</h3>
+          <p>Cars, trucks, motorcycles, RVs, and boats shipped nationwide.</p>
+          <a class="ship-link" href="#">Learn More <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </div>
+      </article>
+
+      <article class="ship-card">
+        <div class="ship-img"><img src="assets/ship-household.jpg" alt="Living room with a sofa and packed moving boxes ready for transport" loading="lazy"></div>
+        <div class="ship-body">
+          <h3>Household Items</h3>
+          <p>Furniture, boxes, and personal items moved with care.</p>
+          <a class="ship-link" href="#">Learn More <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </div>
+      </article>
+
+      <article class="ship-card">
+        <div class="ship-img"><img src="assets/ship-equipment.jpg" alt="Green tractor secured on a flatbed trailer for heavy equipment transport" loading="lazy"></div>
+        <div class="ship-body">
+          <h3>Heavy Equipment</h3>
+          <p>Tractors, machinery, and oversized equipment transport.</p>
+          <a class="ship-link" href="#">Learn More <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </div>
+      </article>
+
+      <article class="ship-card">
+        <div class="ship-img"><img src="assets/ship-freight.jpg" alt="Palletized and shrink-wrapped cargo in a warehouse for freight shipping" loading="lazy"></div>
+        <div class="ship-body">
+          <h3>Freight</h3>
+          <p>Palletized cargo, crates, and commercial freight shipping.</p>
+          <a class="ship-link" href="#">Learn More <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FAQ ===================== -->
+<section class="faq-section" id="faq">
+  <div class="container">
+    <div class="faq-head">
+      <p class="faq-eyebrow">Questions?</p>
+      <h2>Frequently Asked Questions</h2>
+      <span class="faq-accent" aria-hidden="true"></span>
+      <p class="faq-sub">Everything you need to know before you ship.</p>
+    </div>
+
+    <div class="faq-list">
+      <details class="faq-item" open>
+        <summary class="faq-q">How much does it cost to ship a vehicle?
+          <span class="faq-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></span>
+        </summary>
+        <div class="faq-a">Your price depends on the distance, vehicle size, transport type (open or enclosed), and how quickly you need it. We give you an upfront, all-in quote with no hidden fees — the number you see is the number you pay.</div>
+      </details>
+
+      <details class="faq-item">
+        <summary class="faq-q">How long will my shipment take?
+          <span class="faq-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></span>
+        </summary>
+        <div class="faq-a">Transit time depends on the route and distance. Once your vehicle is dispatched, we share an estimated delivery window and keep you updated from pickup to drop-off. Longer cross-country routes naturally take more time than regional moves.</div>
+      </details>
+
+      <details class="faq-item">
+        <summary class="faq-q">Is my vehicle insured during transport?
+          <span class="faq-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></span>
+        </summary>
+        <div class="faq-a">Yes. We only work with licensed, vetted carriers that carry active cargo insurance, and your vehicle is covered while it's on the truck. We're happy to share coverage details before you book.</div>
+      </details>
+
+      <details class="faq-item">
+        <summary class="faq-q">What's the difference between open and enclosed transport?
+          <span class="faq-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></span>
+        </summary>
+        <div class="faq-a">Open transport is the most common and most affordable option and is safe for everyday vehicles. Enclosed transport adds extra protection from weather and road debris — a great choice for classic, luxury, or high-value vehicles.</div>
+      </details>
+
+      <details class="faq-item">
+        <summary class="faq-q">Do I have to pay a deposit upfront?
+          <span class="faq-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></span>
+        </summary>
+        <div class="faq-a">No. You don't pay until your vehicle is assigned and dispatched to a carrier — so there's no risk in getting a quote and booking your shipment.</div>
+      </details>
+
+      <details class="faq-item">
+        <summary class="faq-q">Can you ship a vehicle that doesn't run?
+          <span class="faq-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></span>
+        </summary>
+        <div class="faq-a">Yes. We transport both operable and inoperable (non-running) vehicles — just let us know when you book so we assign a carrier with the right equipment, such as a winch.</div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== LOCAL / CONTACT ===================== -->
+<section class="local-section" id="contact-local">
+  <div class="container">
+    <div class="local-grid">
+      <div class="local-info">
+        <p class="local-eyebrow">Get Started</p>
+        <h2>Ship Your Car To or From Connecticut Today</h2>
+        <p class="local-lede">Call now or request a free quote. Transparent all-in pricing, no upfront deposit, vetted carriers, and 24/7 U.S.-based support.</p>
+        <div class="local-actions">
+          <a class="btn-call-lg" href="tel:+18664992815"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/></svg> Call (866) 499-2815</a>
+          <a class="btn-quote-lg" href="#top">Get a Free Quote <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </div>
+        <ul class="local-contact">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg><span>Serving all of Connecticut — door-to-door, statewide</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg><span>Ship Guy — Nationwide Auto Transport &nbsp;<em style="color:#9098b0">(add your business address)</em></span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/></svg><a href="tel:+18664992815">(866) 499-2815</a></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg><a href="mailto:quotes@shipguy.com">quotes@shipguy.com</a></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span>Open 24/7 — quotes &amp; support</span></li>
+        </ul>
+        <div class="local-social" aria-label="Follow Ship Guy"><a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.07C24 5.4 18.63 0 12 0S0 5.4 0 12.07C0 18.1 4.39 23.1 10.13 24v-8.44H7.08v-3.49h3.05V9.41c0-3.02 1.79-4.69 4.53-4.69 1.31 0 2.68.24 2.68.24v2.97h-1.51c-1.49 0-1.96.93-1.96 1.89v2.25h3.33l-.53 3.49h-2.8V24C19.61 23.1 24 18.1 24 12.07z"/></svg></a><a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5.5"/><circle cx="12" cy="12" r="4.2"/><line x1="17.6" y1="6.4" x2="17.61" y2="6.4"/></svg></a><a href="#" aria-label="X"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231 5.45-6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a><a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg></a></div>
+      </div>
+      <div class="local-map">
+        <iframe title="Connecticut auto transport service area" src="https://www.google.com/maps?q=Connecticut%2C%20USA&z=6&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+</section>
 
 <!-- ===================== FINAL CTA ===================== -->
 <section class="cta-band" id="get-started">
@@ -758,11 +1100,14 @@ body.ready .reveal{opacity:1;transform:none}
     <h2>Ready to Ship Your Vehicle?</h2>
     <p class="cta-sub">Get a free, no-obligation quote in about 60 seconds — or call and talk to a real specialist right now.</p>
     <div class="cta-actions">
-      <a class="cta-primary" href="index.html#top">Get Your Free Quote
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      <a class="cta-primary" href="#top">
+        Get Your Free Quote
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
       <a class="cta-secondary" href="tel:+18664992815">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/></svg>
-        (866) 499-2815</a>
+        (866) 499-2815
+      </a>
     </div>
     <ul class="cta-trust">
       <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Licensed &amp; insured</li>
@@ -793,7 +1138,7 @@ body.ready .reveal{opacity:1;transform:none}
       <h4>Company</h4>
       <ul>
         <li><a href="how-it-works.html">How It Works</a></li>
-        <li><a href="index.html#reviews">Reviews</a></li>
+        <li><a href="#reviews">Reviews</a></li>
         <li><a href="index.html#locations">Locations</a></li>
         <li><a href="faq.html">FAQ</a></li>
         <li><a href="contact.html">Contact</a></li>
@@ -896,68 +1241,18 @@ body.ready .reveal{opacity:1;transform:none}
     }
   }
 
-  /* ---- multi-step form ---- */
-  var form = document.getElementById('quoteForm');
-  if(!form) return;
-  var success = document.getElementById('quoteSuccess');
-  var panels = form.querySelectorAll('.qstep');
-  var stepEls = document.querySelectorAll('#steps .step');
-  var trackEls = document.querySelectorAll('#steps .track');
-  var current = 1;
-  var maxStep = 3;
-
-  function setStep(n){
-    current = n;
-    panels.forEach(function(p){ p.classList.toggle('is-current', +p.dataset.panel === n); });
-    stepEls.forEach(function(s){
-      var step = +s.dataset.step;
-      s.classList.toggle('is-active', step === n);
-      s.classList.toggle('is-done', step < n);
-      s.classList.toggle('is-clickable', step < n);
-    });
-    trackEls.forEach(function(t){ t.classList.toggle('is-filled', +t.dataset.track < n); });
-  }
-
-  function validate(n){
-    var panel = form.querySelector('.qstep[data-panel="'+n+'"]');
-    var ok = true, firstBad = null;
-    panel.querySelectorAll('input[required]').forEach(function(inp){
-      var field = inp.closest('.field');
-      var bad = !inp.value.trim() || (inp.type==='email' && !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(inp.value));
-      field.classList.toggle('has-error', bad);
-      if(bad){ ok = false; if(!firstBad) firstBad = inp; }
-    });
-    if(firstBad) firstBad.focus();
-    return ok;
-  }
-
-  // clear error as the user types
-  form.querySelectorAll('input[required]').forEach(function(inp){
-    inp.addEventListener('input', function(){ inp.closest('.field').classList.remove('has-error'); });
-  });
-
-  form.querySelectorAll('[data-next]').forEach(function(btn){
-    btn.addEventListener('click', function(){ if(validate(current)) setStep(Math.min(current+1, maxStep)); });
-  });
-  form.querySelectorAll('[data-back]').forEach(function(btn){
-    btn.addEventListener('click', function(){ setStep(Math.max(current-1, 1)); });
-  });
-
-  // clicking a completed step jumps back to it
-  stepEls.forEach(function(s){
-    s.addEventListener('click', function(){
-      var step = +s.dataset.step;
-      if(step < current) setStep(step);
-    });
-  });
-
-  form.addEventListener('submit', function(e){
-    e.preventDefault();
-    if(!validate(3)) return;
-    form.style.display = 'none';
-    document.getElementById('steps').style.display = 'none';
-    success.classList.add('show');
-  });
+  /* ---- auto-resize booking widget iframe ---- */
+  window.addEventListener('message', function(e){
+    if(String(e.origin).indexOf('berocker') === -1) return;
+    var d = e.data, h = null;
+    if(typeof d === 'number') h = d;
+    else if(d && typeof d === 'object') h = d.height || d.frameHeight || d.iframeHeight || (d.data && d.data.height);
+    h = parseInt(h, 10);
+    if(h && h > 200 && h < 4000){
+      var f = document.querySelector('.quote-card.is-embed iframe');
+      if(f) f.style.height = h + 'px';
+    }
+  }, false);
 })();
 </script>
 </body>

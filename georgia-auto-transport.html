@@ -6,8 +6,8 @@
   <meta http-equiv="Pragma" content="no-cache">
   <meta http-equiv="Expires" content="0">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Expedited Car Shipping — Fast, Priority Auto Transport | Ship Guy</title>
-<meta name="description" content="Expedited car shipping gets your vehicle picked up fast and delivered on a priority timeline. Learn how expedited auto transport works and when it is worth it.">
+<title>Georgia Auto Transport — Car Shipping to &amp; from Georgia | Ship Guy</title>
+<meta name="description" content="Moving a vehicle across Georgia or across the country doesn&#x27;t have to be complicated. Whether you&#x27;re relocating for work, buying a car online, or helpin…">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
@@ -276,7 +276,7 @@ select.inp{appearance:none;-webkit-appearance:none;padding-right:38px;cursor:poi
 .reviews-head{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;flex-wrap:wrap;margin-bottom:30px}
 .reviews-head h2{font-size:clamp(1.7rem,2.6vw,2.1rem);font-weight:800;color:var(--brand)}
 .reviews-head p{margin:8px 0 0;color:var(--muted);font-size:15.5px}
-.rating{display:flex;align-items:center;gap:12px}
+.rating{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
 .rating .score{font-family:var(--font-display);font-weight:800;font-size:22px;color:var(--ink)}
 .stars{display:inline-flex;gap:2px;color:var(--star)}
 .stars svg{width:18px;height:18px}
@@ -483,10 +483,15 @@ section[id]{scroll-margin-top:104px}
    Responsive
    ========================================================= */
 @media (max-width:1180px){
-  .hero-grid{grid-template-columns:minmax(0,1fr);gap:36px;padding:54px 24px 60px}
-  .hero-copy{max-width:640px}
+  .hero-grid{grid-template-columns:minmax(0,1fr);gap:28px;padding:54px 24px 60px}
+  .hero-copy{display:contents}
+  .hero-head,.hero-rest{max-width:640px;width:100%}
+  .hero-head{order:1}
+  .quote-card{order:2;max-width:520px;width:100%}
+  .hero-rest{order:3}
+  .hero-head h1{margin-bottom:0}
+  .eyebrow{display:none}
   .lede{max-width:520px}
-  .quote-card{max-width:520px;width:100%}
   .hero-overlay{background:linear-gradient(180deg, rgba(4,9,22,.72) 0%, rgba(4,9,22,.8) 55%, rgba(4,9,22,.88) 100%)}
 }
 @media (max-width:1180px){
@@ -507,6 +512,7 @@ section[id]{scroll-margin-top:104px}
 @media (max-width:980px){
   .wc-bento{grid-template-columns:1fr}
   .loc-bento{grid-template-columns:1fr;gap:32px}
+  .review-grid{grid-template-columns:1fr 1fr}
 }
 @media (max-width:880px){
   .steps-row{flex-direction:column;gap:0;max-width:440px;margin:0 auto}
@@ -547,6 +553,31 @@ section[id]{scroll-margin-top:104px}
   .step .slabel{font-size:11.5px}
 }
 
+/* compact hero on laptop screens only (~25% shorter) */
+@media (min-width:1181px) and (max-width:1600px){
+  .hero-grid{padding-top:34px;padding-bottom:40px;gap:40px}
+  .eyebrow{margin-bottom:12px}
+  .hero-copy h1{font-size:clamp(2rem,3vw,2.5rem);margin-bottom:14px}
+  .lede{font-size:15.5px;margin-bottom:18px}
+  .trust-list{margin-bottom:16px;gap:9px}
+  .trust-list li{font-size:14.5px}
+  .trust-ic{width:30px;height:30px}
+  .trust-ic svg{width:17px;height:17px}
+  .hero-divider{margin-bottom:16px}
+  .stat .num{font-size:26px}
+  .stat .lbl{font-size:12px;margin-top:5px}
+  .quote-card{padding:20px 24px 18px}
+  .quote-card h2{font-size:22px;margin-bottom:13px}
+  .steps{margin-bottom:13px}
+  .step .dot{width:30px;height:30px}
+  .field{margin-bottom:9px}
+  .flabel{margin-bottom:4px}
+  .inp{height:40px}
+  .opt{padding:8px 12px}
+  .btn-primary{height:46px}
+  .assure{margin-top:8px}
+}
+
 /* reduced motion */
 @media (prefers-reduced-motion:reduce){
   *{animation-duration:.001ms!important;transition-duration:.001ms!important}
@@ -558,59 +589,58 @@ section[id]{scroll-margin-top:104px}
 body.ready .reveal{opacity:1;transform:none}
 .reveal.d2{transition-delay:.08s}
 .reveal.d3{transition-delay:.16s}
-/* ===== Subpage / article / services styles ===== */
-.page-hero{background:linear-gradient(135deg,#0a2a9e 0%, var(--brand) 60%, #1f54e0 100%);color:#fff;padding:62px 0 56px}
-.crumbs{display:flex;flex-wrap:wrap;gap:9px;font-size:13.5px;font-weight:600;color:#bcd2f8;margin-bottom:16px}
-.crumbs a{color:#dbe6fb}
-.crumbs a:hover{color:#fff}
-.page-hero h1{font-family:var(--font-display);font-weight:800;font-size:clamp(1.9rem,3.6vw,2.8rem);letter-spacing:-.015em;color:#fff;margin:0 0 13px;max-width:840px}
-.page-hero-sub{font-size:17.5px;line-height:1.6;color:rgba(233,239,251,.92);margin:0;max-width:680px}
-.article-section{background:#fff;padding:60px 0 70px;border-top:1px solid var(--line)}
-.article{max-width:780px}
-.article-lead{font-size:18.5px;line-height:1.7;color:#1d2350;font-weight:500;margin:0 0 28px}
-.article h2{font-family:var(--font-display);font-weight:800;font-size:clamp(1.45rem,2.4vw,1.85rem);letter-spacing:-.01em;color:#101a3d;margin:36px 0 13px}
-.article h2:first-of-type{margin-top:0}
-.article h3{font-family:var(--font-display);font-weight:700;font-size:1.15rem;color:#101a3d;margin:24px 0 9px}
-.article p{font-size:16.5px;line-height:1.75;color:#414a6b;margin:0 0 16px}
-.article ul{margin:0 0 18px;padding-left:22px}
-.article li{font-size:16.5px;line-height:1.7;color:#414a6b;margin-bottom:9px}
-.article a{color:var(--brand);font-weight:600;text-decoration:underline;text-decoration-color:#c7d3f5;text-underline-offset:3px}
-.article a:hover{color:var(--brand-press)}
-.svc-section{background:#fff;padding:58px 0 72px}
-.svc-intro{max-width:760px;margin:0 0 34px;font-size:17px;line-height:1.7;color:#586079}
-.svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
-.svc-card{display:flex;flex-direction:column;background:#fff;border:1px solid var(--line);border-radius:16px;padding:28px 26px;box-shadow:0 14px 34px -28px rgba(13,26,80,.4);transition:transform .18s ease,box-shadow .18s ease}
-.svc-card:hover{transform:translateY(-4px);box-shadow:0 26px 54px -28px rgba(13,26,80,.5)}
-.svc-ic{width:52px;height:52px;border-radius:14px;background:var(--brand-tint);color:var(--brand);display:grid;place-items:center;margin-bottom:16px}
-.svc-ic svg{width:26px;height:26px}
-.svc-card h2,.svc-card h3{font-family:var(--font-display);font-weight:800;font-size:19px;color:#101a3d;margin:0 0 9px}
-.svc-card p{font-size:15px;line-height:1.6;color:#586079;margin:0 0 16px;flex:1}
-.svc-more{display:inline-flex;align-items:center;gap:7px;color:var(--brand);font-family:var(--font-display);font-weight:700;font-size:15px}
-.svc-more svg{width:17px;height:17px;transition:transform .15s ease}
-.svc-card:hover .svc-more svg{transform:translateX(3px)}
-.related-section{background:#f5f8fc;padding:52px 0 60px;border-top:1px solid var(--line)}
-.related-section h2{text-align:center;font-family:var(--font-display);font-weight:800;font-size:1.4rem;color:#101a3d;margin:0 0 26px}
-.related-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
-.related-card{display:flex;align-items:center;justify-content:space-between;gap:10px;background:#fff;border:1px solid var(--line);border-radius:12px;padding:16px 18px;font-family:var(--font-display);font-weight:700;font-size:14.5px;color:#101a3d;transition:border-color .15s ease,color .15s ease}
-.related-card:hover{border-color:var(--brand);color:var(--brand)}
-.related-card svg{width:16px;height:16px;color:var(--brand);flex:0 0 auto}
-@media (max-width:900px){.svc-grid{grid-template-columns:1fr 1fr}.related-grid{grid-template-columns:1fr 1fr}}
-@media (max-width:560px){.svc-grid{grid-template-columns:1fr}.related-grid{grid-template-columns:1fr}}
-
 
 .menu.menu-mega{display:grid;grid-template-columns:1fr 1fr;column-gap:4px;min-width:452px}
 .menu.menu-mega .menu-all{grid-column:1 / -1;margin-top:6px;padding-top:12px;border-top:1px solid var(--line);color:var(--brand);font-weight:700}
 
 @media (max-width:460px){.footer-top{grid-template-columns:1fr;gap:28px}}/* resp-polish-footer */
+  .quote-card.is-embed{padding:0;overflow:hidden}
+  .quote-card.is-embed iframe{width:100%;height:630px;border:0;display:block}
+
+  .article-section{padding:52px 0 58px}
+  .article{max-width:820px;margin:0 auto}
+  .crumbs{display:flex;flex-wrap:wrap;gap:8px;align-items:center;font-size:13.5px;color:var(--muted);margin-bottom:22px}
+  .crumbs a{color:var(--brand)}.crumbs a:hover{text-decoration:underline}
+  .crumbs span[aria-current]{color:var(--ink-2)}
+  .article-lead{font-size:18px;line-height:1.7;color:var(--ink-2);margin:0 0 24px;padding-bottom:22px;border-bottom:1px solid var(--line)}
+  .article h2{font-family:var(--font-display);font-weight:800;font-size:clamp(1.35rem,2.4vw,1.7rem);color:#101a3d;margin:30px 0 12px}
+  .article p{color:var(--ink-2);font-size:16px;line-height:1.75;margin:0 0 16px}
+  .article a{color:var(--brand);font-weight:600}
+  .article table{width:100%;border-collapse:collapse;margin:16px 0 22px;font-size:15px}
+  .article table td,.article table th{border:1px solid var(--line);padding:10px 14px;text-align:left;vertical-align:top}
+  .article table tr:nth-child(even){background:#f7f9fd}
+  .article table td:first-child{font-weight:600;color:#101a3d}
+  .table-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:0 0 6px}
+  .local-section{background:#fff;padding:58px 0;border-top:1px solid var(--line)}
+  .local-grid{display:grid;grid-template-columns:1fr 1fr;gap:42px;align-items:stretch}
+  .local-eyebrow{font-family:var(--font-display);font-weight:800;letter-spacing:.14em;text-transform:uppercase;font-size:12.5px;color:var(--brand)}
+  .local-info h2{font-family:var(--font-display);font-weight:800;font-size:clamp(1.5rem,2.4vw,2rem);color:#101a3d;margin:8px 0 10px}
+  .local-lede{color:var(--ink-2);font-size:16px;line-height:1.6;margin:0 0 22px;max-width:480px}
+  .local-actions{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:24px}
+  .btn-call-lg{display:inline-flex;align-items:center;gap:9px;background:var(--brand);color:#fff;font-weight:700;font-size:16px;padding:13px 22px;border-radius:999px;box-shadow:0 10px 24px -12px rgba(11,52,192,.8);transition:background .15s ease}
+  .btn-call-lg:hover{background:var(--brand-press)}
+  .btn-quote-lg{display:inline-flex;align-items:center;gap:8px;background:#fff;color:var(--brand-deep);font-weight:700;font-size:16px;padding:13px 22px;border-radius:999px;border:2px solid var(--brand)}
+  .btn-quote-lg:hover{background:var(--brand-tint)}
+  .btn-call-lg svg,.btn-quote-lg svg{width:18px;height:18px}
+  .local-contact{list-style:none;margin:0 0 20px;padding:0;display:grid;gap:12px}
+  .local-contact li{display:flex;align-items:flex-start;gap:11px;color:var(--ink-2);font-size:15.5px;line-height:1.45}
+  .local-contact li svg{width:19px;height:19px;color:var(--brand);flex:0 0 auto;margin-top:1px}
+  .local-contact a{color:var(--ink-2)}.local-contact a:hover{color:var(--brand)}
+  .local-social{display:flex;gap:12px}
+  .local-social a{display:inline-flex;align-items:center;justify-content:center;width:42px;height:42px;border-radius:11px;background:var(--brand-tint);color:var(--brand-deep);transition:background .15s ease,color .15s ease}
+  .local-social a:hover{background:var(--brand);color:#fff}
+  .local-social svg{width:20px;height:20px}
+  .local-map{border-radius:16px;overflow:hidden;box-shadow:0 18px 40px -24px rgba(13,26,80,.55);border:1px solid var(--line);min-height:420px;background:#eef2fe}
+  .local-map iframe{width:100%;height:100%;min-height:420px;border:0;display:block}
+  @media (max-width:860px){.local-grid{grid-template-columns:1fr;gap:26px}.local-map{min-height:300px}.local-map iframe{min-height:300px}}
+  @media (max-width:560px){.article table{font-size:13.5px}.article table td,.article table th{padding:8px 10px}}
 .footer-states{display:flex;flex-wrap:wrap;gap:9px 20px;align-items:center;padding:20px 0 2px;margin-top:6px;border-top:1px solid rgba(255,255,255,.10)}.footer-states .fs-label{color:#fff;font-weight:700;font-size:14px}.footer-states a{font-size:14px;color:#9aa6c6;transition:color .15s ease}.footer-states a:hover{color:#fff}/* footer-states */
 </style>
 <script type="application/ld+json">
-{
-  "@context":"https://schema.org","@graph":[
-  {"@type":"Service","name":"Expedited Car Shipping","serviceType":"Auto transport","provider":{"@type":"Organization","name":"Ship Guy","telephone":"+1-866-499-2815"},"areaServed":{"@type":"Country","name":"United States"},"description":"Expedited car shipping gets your vehicle picked up fast and delivered on a priority timeline. Learn how expedited auto transport works and when it is worth it."},
-  {"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"index.html"},{"@type":"ListItem","position":2,"name":"Services","item":"services.html"},{"@type":"ListItem","position":3,"name":"Expedited Car Shipping","item":"expedited-car-shipping.html"}]}
-  ]
-}
+{"@context":"https://schema.org","@graph":[
+{"@type":"Service","serviceType":"Auto Transport","name":"Georgia Auto Transport","areaServed":{"@type":"State","name":"Georgia"},"provider":{"@type":"Organization","name":"Ship Guy","telephone":"+1-866-499-2815"},"description":"Moving a vehicle across Georgia or across the country doesn&#x27;t have to be complicated. Whether you&#x27;re relocating for work, buying a car online, or helpin…"},
+{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"index.html"},{"@type":"ListItem","position":2,"name":"Georgia Auto Transport","item":"georgia-auto-transport.html"}]}
+]}
 </script>
 </head>
 <body>
@@ -618,7 +648,7 @@ body.ready .reveal{opacity:1;transform:none}
 <!-- ===================== HEADER ===================== -->
 <header class="site-header" id="top">
   <div class="container header-inner">
-    <a class="brand" href="index.html#top" aria-label="Ship Guy — home"><svg class="sg-logo" role="img" aria-label="Ship Guy" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="209 227 180 145">
+    <a class="brand" href="index.html" aria-label="Ship Guy — home"><svg class="sg-logo" role="img" aria-label="Ship Guy" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="209 227 180 145">
 <path fill-rule="nonzero" fill="currentColor" fill-opacity="1" d="M 257.761719 304.929688 L 257.761719 247.621094 L 272.027344 245.128906 L 272.027344 265.167969 C 272.027344 265.933594 272.246094 266.5 272.679688 266.867188 C 273.109375 267.230469 273.703125 267.347656 274.460938 267.222656 L 279.570312 266.355469 C 281.136719 266.089844 281.921875 265.128906 281.921875 263.484375 L 281.921875 243.398438 L 296.191406 240.90625 L 296.191406 298.710938 L 281.921875 301.019531 L 281.921875 277.640625 L 272.027344 279.292969 L 272.027344 302.621094 Z M 257.761719 304.929688 "/>
 <path fill-rule="nonzero" fill="currentColor" fill-opacity="1" d="M 225.148438 310.390625 C 220.769531 311.101562 217.570312 310.632812 215.539062 308.984375 C 213.515625 307.339844 212.5 304.464844 212.5 300.359375 L 212.5 291.359375 L 226.769531 288.980469 L 226.769531 296.222656 C 226.769531 297.035156 226.984375 297.609375 227.417969 297.945312 C 227.851562 298.28125 228.472656 298.382812 229.28125 298.25 L 234.148438 297.449219 C 234.902344 297.328125 235.472656 297.054688 235.851562 296.640625 C 236.226562 296.222656 236.417969 295.636719 236.417969 294.875 L 236.417969 290.066406 C 236.417969 289.304688 236.324219 288.683594 236.136719 288.199219 C 235.945312 287.714844 235.632812 287.300781 235.203125 286.964844 C 234.769531 286.632812 234.175781 286.367188 233.417969 286.164062 L 221.257812 283.890625 C 219.472656 283.378906 217.957031 282.695312 216.71875 281.851562 C 215.472656 281.007812 214.539062 279.855469 213.917969 278.390625 C 213.296875 276.929688 212.988281 275.089844 212.988281 272.871094 L 212.988281 263.140625 C 212.988281 260.222656 213.636719 257.960938 214.933594 256.355469 C 216.230469 254.753906 218.390625 253.683594 221.417969 253.152344 L 237.957031 250.261719 C 242.28125 249.503906 245.457031 249.929688 247.484375 251.539062 C 249.511719 253.148438 250.523438 256.050781 250.523438 260.25 L 250.523438 265.890625 L 236.257812 268.328125 L 236.257812 264.5 C 236.257812 263.683594 236.039062 263.109375 235.605469 262.777344 C 235.175781 262.441406 234.578125 262.34375 233.824219 262.472656 L 229.527344 263.210938 C 228.714844 263.351562 228.132812 263.628906 227.785156 264.039062 C 227.433594 264.453125 227.257812 265.011719 227.257812 265.71875 L 227.257812 268.078125 C 227.257812 269.109375 227.511719 269.917969 228.027344 270.507812 C 228.539062 271.097656 229.3125 271.550781 230.335938 271.863281 L 241.929688 273.972656 C 243.984375 274.492188 245.660156 275.214844 246.957031 276.140625 C 248.253906 277.070312 249.199219 278.285156 249.796875 279.792969 C 250.390625 281.300781 250.6875 283.144531 250.6875 285.328125 L 250.6875 297.671875 C 250.6875 300.671875 250.023438 302.960938 248.699219 304.539062 C 247.375 306.117188 245.199219 307.148438 242.175781 307.636719 Z M 225.148438 310.390625 "/>
 <path fill-rule="nonzero" fill="currentColor" fill-opacity="1" d="M 305.007812 297.726562 L 305.007812 239.84375 L 319.277344 237.351562 L 319.277344 295.414062 Z M 305.007812 297.726562 "/>
@@ -631,7 +661,7 @@ body.ready .reveal{opacity:1;transform:none}
 </svg></a>
 
     <nav class="main-nav" aria-label="Primary">
-      <a href="index.html#top">Home</a>
+      <a href="index.html">Home</a>
       <a href="how-it-works.html">How It Works</a>
       <div class="has-menu">
         <button class="nav-toggle-btn" aria-haspopup="true" aria-expanded="false">Services
@@ -669,7 +699,7 @@ body.ready .reveal{opacity:1;transform:none}
   <!-- mobile nav -->
   <nav class="mobile-nav" id="mobileNav" aria-label="Mobile">
     <div class="inner">
-      <a href="index.html#top">Home</a>
+      <a href="index.html">Home</a>
       <a href="how-it-works.html">How It Works</a>
       <span class="m-sub">Services</span>
                   <a href="open-car-transport.html">Open Car Transport</a>
@@ -690,66 +720,339 @@ body.ready .reveal{opacity:1;transform:none}
   </nav>
 </header>
 
-<!-- ===================== PAGE HERO ===================== -->
-<section class="page-hero"><div class="container">
-  <nav class="crumbs" aria-label="Breadcrumb"><a href="index.html">Home</a><span>/</span><a href="services.html">Services</a><span>/</span><span aria-current="page">Expedited Car Shipping</span></nav>
-  <h1>Expedited Car Shipping</h1>
-  <p class="page-hero-sub">Priority pickup and faster delivery when you are working against the clock.</p>
-</div></section>
+<!-- ===================== HERO ===================== -->
+<section class="hero">
+  <div class="hero-media" aria-hidden="true">
+    <img class="hero-img" alt="" src="assets/hero.jpg">
+    <div class="hero-overlay"></div>
+  </div>
 
-<section class="article-section"><div class="container article">
-<p class="article-lead">When you can't wait, expedited car shipping moves your vehicle to the front of the line — faster pickup and a priority delivery timeline. Here's how it works and when it's worth it.</p>
-
-<h2>What Is Expedited Car Shipping?</h2>
-<p>Expedited car shipping is a priority service that gets your vehicle picked up and delivered faster than standard transport. Instead of waiting for the next available carrier on a route, your shipment is prioritized so a carrier is assigned quickly and your vehicle is dispatched as soon as possible — often within a day or two, and sometimes the same day depending on your location.</p>
-<p>With Ship Guy, expedited service combines fast dispatch with the same vetted carriers, transparent pricing, and door-to-door delivery as our standard shipments. It's the right choice when timing matters more than saving every dollar.</p>
-
-<h2>How Expedited Auto Transport Works</h2>
-<p>Expedited shipping follows the same three steps as any Ship Guy shipment, just on a faster track. You get a free quote and let us know your deadline. We prioritize your shipment to secure a carrier quickly, scheduling the earliest possible pickup window. The driver inspects and loads your vehicle, then transports it on a priority timeline while you track progress. At delivery, you inspect the vehicle, sign, and take your keys.</p>
-<p>Behind the scenes, expedited service often means offering carriers a rate that motivates an immediate response and routing your vehicle on the most direct schedule. The result is less waiting at every stage — from assignment to pickup to final delivery.</p>
-
-<h2>When Should You Choose Expedited Shipping?</h2>
-<p>Expedited car shipping is ideal whenever you're working against the clock. Common situations include:</p>
-<ul>
-  <li><strong>Last-minute relocations</strong> and job transfers with a hard start date</li>
-  <li><strong>Military orders (PCS)</strong> with a firm reporting deadline</li>
-  <li><strong>Online or auction purchases</strong> you need delivered fast</li>
-  <li><strong>Dealership and inventory moves</strong> on tight timelines</li>
-  <li><strong>Emergencies or schedule changes</strong> that can't wait for standard transit</li>
-</ul>
-<p>If your dates are flexible, standard shipping will save you money. But when a specific pickup or delivery day is non-negotiable, expedited service buys you speed and certainty.</p>
-
-<h2>How Much Does Expedited Car Shipping Cost?</h2>
-<p>Expedited shipping costs more than standard transport because your shipment takes priority over flexible loads and is scheduled around your deadline rather than the carrier's convenience. The premium depends on how quickly you need pickup, the distance, your vehicle's size and condition, transport type, and how busy your route is at the moment.</p>
-<p>The faster and more specific your timing requirements, the higher the priority — and the cost — tends to be. As with every Ship Guy shipment, your quote is all-in and transparent, with no hidden fees and no upfront deposit. You pay only once your vehicle is assigned and dispatched.</p>
-
-<h2>How Fast Is Expedited Shipping?</h2>
-<p>Expedited service mainly speeds up the front of the process — how quickly a carrier is assigned and your vehicle is picked up. Standard pickup can take a few days to coordinate; expedited pickup is often arranged within 24 to 48 hours, and sometimes the same day in busy metro areas. Once your vehicle is on the truck, actual transit time still depends on distance — a coast-to-coast haul covers more miles than a regional move — but priority routing helps keep delivery as direct as possible. When you request your quote, tell us your deadline and we'll tell you what's realistic for your route.</p>
-
-<h2>Expedited vs. Standard Shipping</h2>
-<p>The difference comes down to speed versus cost. Standard shipping is the most economical option and works well when you have a flexible window of several days for pickup. Expedited shipping prioritizes your vehicle for the fastest possible assignment and the tightest schedule, at a higher price. If you can plan ahead and stay flexible, standard is the value choice. If a deadline is driving your move, expedited is built for exactly that.</p>
-
-<h2>How to Prepare for a Fast Pickup</h2>
-<p>Because expedited shipments move quickly, a little readiness goes a long way. Have your vehicle prepared before the driver arrives: wash it and take dated photos, remove personal items and toll tags, leave about a quarter tank of fuel, disable alarms, and have one set of keys ready. Confirm your pickup and delivery addresses and contact details up front, and make sure you or an authorized adult is available on short notice. The more prepared you are, the faster the driver can inspect, load, and get your vehicle on the road.</p>
-
-<h2>Expedited Enclosed and Open Options</h2>
-<p>Expedited service isn't limited to one type of trailer. If you need a daily driver moved quickly, expedited <a href="open-car-transport.html">open transport</a> pairs priority dispatch with the affordability of an open carrier. If your vehicle is a classic, luxury, or high-value car that needs both speed and protection, expedited <a href="enclosed-auto-transport.html">enclosed transport</a> combines a fully covered trailer with a fast, prioritized schedule. Either way, the goal is the same: get a qualified carrier assigned and your vehicle on the road as soon as possible. When you request your quote, let us know your vehicle type, your destination, and your deadline, and we'll lay out the fastest realistic option for your situation — along with transparent, all-in pricing.</p>
-
-<h2>Ship Fast with Ship Guy</h2>
-<p>Ship Guy is a licensed, bonded, FMCSA-registered auto transport broker offering expedited car shipping to and from all 50 states. When time is tight, we combine priority dispatch with a vetted carrier network, transparent all-in pricing, no upfront deposit, real-time tracking, and 24/7 U.S.-based support to get your vehicle where it needs to be — fast.</p>
-<p>On a deadline? <a href="index.html#top">Get your free quote</a> in about 60 seconds, or call <a href="tel:+18664992815">(866) 499-2815</a> and tell us when you need it. You can also compare <a href="state-to-state-car-shipping.html">state-to-state shipping</a>, <a href="open-car-transport.html">open transport</a>, or <a href="enclosed-auto-transport.html">enclosed transport</a>.</p>
-
-</div></section>
-
-<!-- related --><section class="related-section"><div class="container">
-      <h2>Explore Other Services</h2>
-      <div class="related-grid">
-        <a class="related-card" href="open-car-transport.html">Open Car Transport <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-        <a class="related-card" href="enclosed-auto-transport.html">Enclosed Auto Transport <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-        <a class="related-card" href="door-to-door-car-shipping.html">Door-to-Door Shipping <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-        <a class="related-card" href="state-to-state-car-shipping.html">State-to-State Shipping <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+  <div class="container hero-grid">
+    <div class="hero-copy">
+      <div class="hero-head">
+      <p class="eyebrow reveal">Licensed&nbsp;•&nbsp;Insured&nbsp;•&nbsp;Nationwide</p>
+      <h1 class="reveal d2">Georgia Auto Transport</h1>
       </div>
+      <div class="hero-rest">
+      <p class="lede reveal d2">Licensed, insured car shipping to and from Georgia — transparent pricing, vetted carriers, and door-to-door delivery.</p>
+
+      <ul class="trust-list reveal d3">
+        <li>
+          <span class="trust-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/><path d="m9 12 2 2 4-4"/></svg></span>
+          Licensed Broker &amp; Fully Insured
+        </li>
+        <li>
+          <span class="trust-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="2" width="8" height="4" rx="1"/><path d="M9 4H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2h-3"/><path d="m9 14 2 2 4-4"/></svg></span>
+          FMCSA Registered
+        </li>
+        <li>
+          <span class="trust-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></span>
+          Vetted Carrier Network
+        </li>
+        <li>
+          <span class="trust-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M4 13a8 8 0 0 1 16 0"/><rect x="2" y="13" width="4.4" height="7" rx="1.6"/><rect x="17.6" y="13" width="4.4" height="7" rx="1.6"/><path d="M20 19.5v.5a3 3 0 0 1-3 3h-3"/></svg></span>
+          Real-Time Tracking &amp; 24/7 Support
+        </li>
+      </ul>
+
+      <div class="hero-divider reveal d3"></div>
+
+      <div class="stats reveal d3">
+        <div class="stat"><span class="num">50+</span><span class="lbl">States Served</span></div>
+        <div class="stat"><span class="num">100%</span><span class="lbl">Insured Transport</span></div>
+        <div class="stat"><span class="num">24/7</span><span class="lbl">Support &amp; Tracking</span></div>
+      </div>
+      </div>
+    </div>
+
+    <!-- QUOTE CARD (booking widget) -->
+    <div class="quote-card is-embed reveal d2" id="quoteForm">
+      <iframe src="https://widget.berocker.com?theme=pro&api_base=https%3A%2F%2Fapp.shipguy.com&api_key=6a5508b7cb2f4" title="Ship Guy Logistics booking form" loading="lazy"></iframe>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== REVIEWS ===================== -->
+<section class="reviews" id="reviews">
+  <div class="container">
+    <div class="reviews-head">
+      <div>
+        <h2>Verified customer reviews</h2>
+        <p>Trusted by vehicle owners nationwide.</p>
+      </div>
+      <div class="rating">
+        <span class="score">4.9</span>
+        <span class="stars" aria-label="4.9 out of 5 stars">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.06 6.6.79-4.86 4.53 1.27 6.52L12 17.9l-5.9 3.5 1.27-6.52L2.5 9.35l6.6-.79L12 2.5Z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.06 6.6.79-4.86 4.53 1.27 6.52L12 17.9l-5.9 3.5 1.27-6.52L2.5 9.35l6.6-.79L12 2.5Z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.06 6.6.79-4.86 4.53 1.27 6.52L12 17.9l-5.9 3.5 1.27-6.52L2.5 9.35l6.6-.79L12 2.5Z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.06 6.6.79-4.86 4.53 1.27 6.52L12 17.9l-5.9 3.5 1.27-6.52L2.5 9.35l6.6-.79L12 2.5Z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.06 6.6.79-4.86 4.53 1.27 6.52L12 17.9l-5.9 3.5 1.27-6.52L2.5 9.35l6.6-.79L12 2.5Z"/></svg>
+        </span>
+        <span class="count">487+ reviews</span>
+        <span class="divider-v"></span>
+        <span class="gword"><span class="b">G</span><span class="r">o</span><span class="y">o</span><span class="b">g</span><span class="g">l</span><span class="r">e</span></span>
+      </div>
+    </div>
+
+    <div class="review-grid">
+      <article class="review">
+        <div class="review-top">
+          <span class="avatar">JD</span>
+          <div><span class="name">James D.</span><span class="date">May 12, 2024</span></div>
+        </div>
+        <div class="stars" aria-label="5 out of 5">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.06 6.6.79-4.86 4.53 1.27 6.52L12 17.9l-5.9 3.5 1.27-6.52L2.5 9.35l6.6-.79L12 2.5Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.06 6.6.79-4.86 4.53 1.27 6.52L12 17.9l-5.9 3.5 1.27-6.52L2.5 9.35l6.6-.79L12 2.5Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.06 6.6.79-4.86 4.53 1.27 6.52L12 17.9l-5.9 3.5 1.27-6.52L2.5 9.35l6.6-.79L12 2.5Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.06 6.6.79-4.86 4.53 1.27 6.52L12 17.9l-5.9 3.5 1.27-6.52L2.5 9.35l6.6-.79L12 2.5Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.06 6.6.79-4.86 4.53 1.27 6.52L12 17.9l-5.9 3.5 1.27-6.52L2.5 9.35l6.6-.79L12 2.5Z"/></svg>
+        </div>
+        <p>Ship Guy made the whole process easy. Great communication and my car arrived earlier than expected. Highly recommend!</p>
+      </article>
+
+      <article class="review">
+        <div class="review-top">
+          <span class="avatar">SR</span>
+          <div><span class="name">Sarah R.</span><span class="date">April 28, 2024</span></div>
+        </div>
+        <div class="stars" aria-label="5 out of 5">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.06 6.6.79-4.86 4.53 1.27 6.52L12 17.9l-5.9 3.5 1.27-6.52L2.5 9.35l6.6-.79L12 2.5Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.06 6.6.79-4.86 4.53 1.27 6.52L12 17.9l-5.9 3.5 1.27-6.52L2.5 9.35l6.6-.79L12 2.5Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.06 6.6.79-4.86 4.53 1.27 6.52L12 17.9l-5.9 3.5 1.27-6.52L2.5 9.35l6.6-.79L12 2.5Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.06 6.6.79-4.86 4.53 1.27 6.52L12 17.9l-5.9 3.5 1.27-6.52L2.5 9.35l6.6-.79L12 2.5Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.06 6.6.79-4.86 4.53 1.27 6.52L12 17.9l-5.9 3.5 1.27-6.52L2.5 9.35l6.6-.79L12 2.5Z"/></svg>
+        </div>
+        <p>Excellent service from start to finish. The driver was professional and my vehicle arrived in perfect condition.</p>
+      </article>
+
+      <article class="review">
+        <div class="review-top">
+          <span class="avatar">MT</span>
+          <div><span class="name">Michael T.</span><span class="date">April 15, 2024</span></div>
+        </div>
+        <div class="stars" aria-label="5 out of 5">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.06 6.6.79-4.86 4.53 1.27 6.52L12 17.9l-5.9 3.5 1.27-6.52L2.5 9.35l6.6-.79L12 2.5Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.06 6.6.79-4.86 4.53 1.27 6.52L12 17.9l-5.9 3.5 1.27-6.52L2.5 9.35l6.6-.79L12 2.5Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.06 6.6.79-4.86 4.53 1.27 6.52L12 17.9l-5.9 3.5 1.27-6.52L2.5 9.35l6.6-.79L12 2.5Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.06 6.6.79-4.86 4.53 1.27 6.52L12 17.9l-5.9 3.5 1.27-6.52L2.5 9.35l6.6-.79L12 2.5Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.06 6.6.79-4.86 4.53 1.27 6.52L12 17.9l-5.9 3.5 1.27-6.52L2.5 9.35l6.6-.79L12 2.5Z"/></svg>
+        </div>
+        <p>Fast quote, fair price, and they kept me updated throughout the entire delivery. Will definitely use again.</p>
+      </article>
+
+      <article class="review">
+        <div class="review-top">
+          <span class="avatar">KB</span>
+          <div><span class="name">Kelsey B.</span><span class="date">March 30, 2024</span></div>
+        </div>
+        <div class="stars" aria-label="5 out of 5">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.06 6.6.79-4.86 4.53 1.27 6.52L12 17.9l-5.9 3.5 1.27-6.52L2.5 9.35l6.6-.79L12 2.5Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.06 6.6.79-4.86 4.53 1.27 6.52L12 17.9l-5.9 3.5 1.27-6.52L2.5 9.35l6.6-.79L12 2.5Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.06 6.6.79-4.86 4.53 1.27 6.52L12 17.9l-5.9 3.5 1.27-6.52L2.5 9.35l6.6-.79L12 2.5Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.06 6.6.79-4.86 4.53 1.27 6.52L12 17.9l-5.9 3.5 1.27-6.52L2.5 9.35l6.6-.79L12 2.5Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.06 6.6.79-4.86 4.53 1.27 6.52L12 17.9l-5.9 3.5 1.27-6.52L2.5 9.35l6.6-.79L12 2.5Z"/></svg>
+        </div>
+        <p>Shipped my SUV cross-country with no issues. The team was responsive and the experience was smooth.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+
+<!-- ===================== STATE CONTENT ===================== -->
+<section class="article-section"><div class="container article">
+  <nav class="crumbs" aria-label="Breadcrumb"><a href="index.html">Home</a><span>/</span><span aria-current="page">Georgia Auto Transport</span></nav>
+  <p>Moving a vehicle across Georgia or across the country doesn&#x27;t have to be complicated. Whether you&#x27;re relocating for work, buying a car online, or helping a family member move, understanding how Georgia auto transport works puts you in control of the process from day one. This guide covers everything you need to know about shipping a car to or from Georgia with Ship Guy, including real pricing, transit times, service types, and how to prepare your vehicle for a smooth move.</p>
+  <h2>Quick Overview of Georgia Auto Transport with Ship Guy</h2>
+  <p>Ship Guy provides Georgia auto transport services built around fast quotes, door-to-door service, and a straightforward booking process. Whether you need to ship a car within the state or send it cross-country, the goal is the same: get your vehicle where it needs to go safely and on time.</p>
+  <p>Ship Guy handles car, SUV, truck, and motorcycle shipping to and from major Georgia cities, including Atlanta, Savannah, Augusta, Macon, Columbus, and Athens. Both open car transport and enclosed auto transport are available, and every carrier in the network is licensed and insured for vehicle transport.</p>
+  <p>Typical Georgia car shipping time frames run about 1–2 days for in-state moves and 2–6 days for interstate routes along common corridors. Open transport costs range from $550 to $1,600 for most standard vehicles, while enclosed transport costs range from $1,000 to $2,450, depending on distance and vehicle type. Auto transport services are fully insured, so your car is covered from pickup to delivery.</p>
+  <p>Detailed cost breakdowns, transit estimates, and service comparisons are all covered in the sections below. If you already know what you need, request a car shipping quote from Ship Guy right away to lock in current rates.</p>
+  <h2>How Georgia Car Transport Works with Ship Guy</h2>
+  <p>Ship Guy simplifies vehicle transport services in Georgia into a clear, repeatable car transport process. Auto transport services in Georgia follow a standard 5-step process: booking, vehicle preparation, pickup, transit, and delivery. Here&#x27;s how each stage works when you ship a car with Ship Guy.</p>
+  <p><strong>Step 1: Request a quote.</strong> Start by sharing your pickup and destination ZIP codes, vehicle year, make, and model, whether the car is running or not, and your preferred shipping dates. You can do this through Ship Guy&#x27;s online form or by calling directly. If you want an instant car shipping quote, the online tool returns pricing in minutes.</p>
+  <p><strong>Step 2: Confirm your rate and transport type.</strong> Once you receive your car shipping rates from Ship Guy, review the options for open or enclosed auto transport. Your quote includes the total cost, estimated pickup window, and estimated delivery dates with no surprise fees tacked on later. This is where you choose the transport type that fits your budget and vehicle.</p>
+  <p><strong>Step 3: Schedule vehicle pickup.</strong> After confirming your booking, Ship Guy assigns a vetted motor carrier to your route. Most vehicle pickup windows in Georgia are 1–3 business days on major corridors like I-75, I-85, and I-20. Routes to and from rural areas may take slightly longer to schedule due to carrier availability.</p>
+  <p><strong>Step 4: Day-of pickup.</strong> The driver calls ahead before arrival, then completes a thorough vehicle inspection at the pickup point. Every existing scratch, dent, or blemish is documented on the Bill of Lading, a legal record of the car&#x27;s condition before it leaves. Inspection documentation is crucial for insurance purposes during auto transport. The vehicle is then loaded onto the trailer.</p>
+  <p><strong>Step 5: Transit and tracking.</strong> While your car is on the carrier, Ship Guy provides regular status updates via text, email, or phone, along with approximate ETAs. You&#x27;re never left guessing where your vehicle is.</p>
+  <p><strong>Step 6: Delivery and final inspection.</strong> When the carrier arrives at the delivery location, you inspect the vehicle against the original Bill of Lading. Compare the car&#x27;s current condition with the documented pre-shipment notes. Once you&#x27;re satisfied, sign off on delivery. If there&#x27;s any discrepancy, note it immediately before signing.</p>
+  <p>This shipping process is designed so that even a first-time shipper can move through Georgia car shipping from start to finish without confusion.</p>
+  <h2>Georgia Car Shipping Cost: What Affects Your Price?</h2>
+  <p>Georgia car shipping costs vary based on several interconnected factors. The cost of auto transport in Georgia is influenced by distance, vehicle size, carrier type, and seasonal demand. Understanding what drives pricing helps you budget accurately and avoid surprises.</p>
+  <p><strong>Distance and route popularity</strong> are the biggest price levers. A shipment from Atlanta, GA to Miami, FL covers roughly 660 miles along one of the busiest auto shipping corridors in the Southeast, which means strong carrier availability and competitive rates. Compare that with a move from Albany, GA to Billings, MT-a route with far less carrier traffic, longer distance, and fewer scheduling options-and you&#x27;ll see a meaningful price difference. Shipping to or from major hubs in Georgia is typically cheaper and faster because carriers already run those lanes regularly.</p>
+  <p><strong>Vehicle type and condition</strong> matter significantly. Shipping costs vary based on distance and vehicle type. A compact sedan takes up less space and weighs less than a full-size SUV or heavy-duty pickup, so it costs less to ship. Vehicles that cannot be driven onto the trailer require special equipment, such as winches or hydraulic lifts, which increases the cost. Modifications like lift kits, oversized tires, or lowered suspensions also add to car shipping costs because they may require special loading procedures.</p>
+  <p><strong>Transport type</strong> directly affects what you pay. Open car shipping is the most common and affordable option. Enclosed transport typically costs 30–60% more than open transport, making it the preferred choice for luxury cars, classic vehicles, and exotic sports cars that need extra protection from weather and road debris. For perspective, open transport on a Georgia-to-California route might cost $1,100–$1,600, while .</p>
+  <p><strong>Seasonality</strong> plays a consistent role. Car shipping rates are highest during the summer months, early January, and the snowbird season, when demand spikes on north-south routes. Shipping rates are lowest in colder months, after holidays, typically late fall and mid-winter, outside holiday peaks. Fuel costs and weather patterns also shift with the seasons, creating additional price variation.</p>
+  <p><strong>Pickup and delivery locations</strong> round out the equation. Downtown Atlanta or areas along I-95 near Savannah are easy for carriers to access. Remote North Georgia mountain communities or neighborhoods with narrow streets may require the carrier to meet at a nearby parking lot, which can increase auto transport costs due to the extra first- or last-mile distance.</p>
+  <p>Ship Guy offers transparent pricing on all Georgia car shipping services with no hidden fees. Contact us to get current rates based on your exact route and vehicle.</p>
+  <h2>Sample Georgia Car Shipping Rates &amp; Transit Times</h2>
+  <p>To help you budget for Georgia auto transport, here are example routes with approximate cost ranges and transit times. These figures assume a standard-sized, running sedan using open car transport.</p>
+  <div class="table-wrap"><table><tbody><tr><td>Atlanta, GA → Orlando, FL</td><td>~440 miles</td><td>$400–$700</td><td>$600–$1,100</td><td>2–3 days</td></tr><tr><td>Atlanta, GA → Los Angeles, CA</td><td>~2,200 miles</td><td>$1,100–$1,600</td><td>$1,500–$2,200+</td><td>4–9 days</td></tr><tr><td>Savannah, GA → Chicago, IL</td><td>~830 miles</td><td>$800–$1,100</td><td>$1,200–$1,700</td><td>3–5 days</td></tr><tr><td>Augusta, GA → New York, NY</td><td>~710 miles</td><td>$750–$1,000</td><td>$1,050–$1,500</td><td>2–4 days</td></tr><tr><td>Macon, GA → Dallas, TX</td><td>~900 miles</td><td>$800–$1,100</td><td>$1,200–$1,700</td><td>3–5 days</td></tr></tbody></table></div>
+  <p>In-state Georgia car shipping moves like Atlanta to Savannah or Macon to Augusta generally take about 1–2 days once the vehicle is loaded on the carrier and often cost under $500 for open transport on a standard sedan.</p>
+  <p>Actual quotes from Ship Guy may fall slightly above or below these ranges based on current fuel prices, available trailer space at the time of booking, and exact pickup and drop-off locations. We meant to give you a realistic starting point.</p>
+  <p>Keep in mind that SUVs, trucks, non-running vehicles, or enclosed auto transport will run higher than the figures shown above. If you&#x27;re shipping multiple vehicles at once, bundling can sometimes help you save money per vehicle.</p>
+  <h2>Types of Auto Transport Services in Georgia</h2>
+  <p>Ship Guy offers multiple Georgia car shipping options so you can match the right service to your budget, timeline, and vehicle protection needs. Here&#x27;s how each option works.</p>
+  <p>Open car transport is the most common and cost-effective option for auto transport in Georgia. It involves loading onto a multi-car open trailer, the same type you see on highways every day. Open transport typically costs between $550 and $1,600, depending on distance and vehicle size. It&#x27;s ideal for daily drivers, standard sedans, trucks, and SUVs traveling along high-volume corridors like I-75 and I-85. The trade-off is that the vehicle is exposed to weather and road conditions during transit, though actual damage from these factors is uncommon.</p>
+  <p><strong>Enclosed car shipping</strong> provides a higher level of protection. Enclosed transport protects vehicles from weather and road debris by placing them inside a fully covered trailer. Fewer vehicles are loaded onto enclosed carriers for added security, which is why the service commands a premium; enclosed transport costs range from $1,000 to $2,450. This is the recommended choice for classic car shipping, freshly restored vehicles, and high-value cars that warrant extra protection. If you&#x27;re shipping a rare collector car or an exotic sports car, enclosed transport is worth the investment. Our<strong> shipping</strong> is available when timing is tight. Whether you&#x27;re facing a move deadline, closing on a home, or dealing with a last-minute military car shipping situation, expedited service reduces wait times for pickup. Expect to pay a premium of $150–$400 or more, depending on the route and urgency.</p>
+  <p><strong>Door-to-door vehicle transport services</strong> are standard across Georgia. Ship Guy arranges pickup and delivery as close to your address as possible. In congested areas or neighborhoods with tight streets, the carrier may need to meet at a nearby wide street or accessible parking lot.</p>
+  <p>Ship Guy can handle single-vehicle moves, multi-car family relocations, and small fleet shipments for Georgia car dealerships, auctions, or corporate transfers. Military personnel with PCS orders can also take advantage of military car shipping coordination to get vehicles moved on schedule.</p>
+  <h2>How Long Does Georgia Car Shipping Take?</h2>
+  <p>Most Georgia auto transport moves take 1 to 7 days in transit, with distance and route being the main variables. based on where you&#x27;re shipping.</p>
+  <p>For in-state moves, think Atlanta to Savannah or Macon to Augusta-delivery time is roughly 1–2 days once the vehicle is loaded. These short-haul routes are straightforward and rarely encounter scheduling complications.</p>
+  <p>Regional shipments from Georgia to neighboring states like Florida, Alabama, Tennessee, South Carolina, or North Carolina usually take 2–4 days door-to-door after the car is picked up. Many of these routes follow well-traveled interstate corridors with strong carrier traffic.</p>
+  <p>Cross-country routes from Georgia to California, the Pacific Northwest, or New England generally take 5–9 days. Shipping a car across the country can take over a week if there are weather delays, road construction along I-10 or I-20, or scheduling gaps. Factors such as weather and road conditions influence both shipping costs and delivery times on longer hauls.</p>
+  <p>Other timing factors include the time of year, hurricane season along the Gulf Coast, and the flexibility of your pickup window. A tighter, inflexible window can actually extend your wait because fewer carriers may be available on your exact date.</p>
+  <p>Ship Guy provides customers with estimated pickup and delivery windows at booking and keeps them updated as the carrier progresses. In many cases, your vehicle arrives in just a few days.</p>
+  <h2>How to Choose the Right Georgia Car Shipping Company</h2>
+  <p>Not all Georgia car shipping companies deliver the same level of reliability, communication, or pricing transparency. Choosing the wrong service provider can lead to delayed pickups, unexpected fees, or poor communication. Here&#x27;s what to evaluate before booking.</p>
+  <p><strong>Verify licensing and insurance.</strong> Every auto transport company must have a  for interstate moves, and most require one for verification. A. Moves: carriers must display their USDOT GA identification and legal name on their power unit, per the Georgia Department of Public Safety&#x27;s motor carrier compliance rules. Checking these credentials takes two minutes and protects you from unlicensed operators.</p>
+  <p><strong>Understand insurance coverage.</strong> Ask what the carrier&#x27;s cargo insurance covers, what the declared value per vehicle is, and whether damage from road debris or weather is included. Make sure your car is insured under your personal car insurance policy, which remains active until the vehicle is safely delivered and the vehicle&#x27;s insured status is confirmed. Auto transport services are fully insured, but knowing the details ahead of time prevents headaches if something goes wrong.</p>
+  <p><strong>Read reviews with Georgia-specific context.</strong> Look at customer feedback from people who&#x27;ve shipped to or from Atlanta, Savannah, or other Georgia cities. Industry data shows that 91% of customers reported on-time deliveries from Direct Connect, and 40% paid what they expected, benchmarks that illustrate what reliable service looks like across the industry. The BBB, Transport Reviews, and Trustpilot. Look for patterns: consistent delivery, clear communication, and strong customer satisfaction scores.</p>
+  <p><strong>Understand the broker vs. carrier distinction.</strong> A broker like Ship Guy arranges transport through a vetted network of carriers. A direct carrier owns or operates the truck. Both models work, but working with a reputable broker often gives you access to more scheduling options and competitive pricing. National car shipping companies usually offer the best pricing because they have broader carrier networks.</p>
+  <p><strong>Watch for red flags.</strong> Unusually low quotes compared to other car shipping companies, vague contract language, no written agreement, or pressure to pay large deposits before a carrier is confirmed are all warning signs. The best car shipping companies are upfront about terms, timelines, and total costs.</p>
+  <p>Ship Guy positions itself as a reliable Georgia auto transport partner by providing transparent quotes, responsive support, and access to a vetted carrier network. When you look at shipping companies in Georgia, compare not just price but the full experience, from your first call to the moment your car is delivered.</p>
+  <h2>Preparing Your Vehicle for Georgia Auto Transport</h2>
+  <p>Proper preparation of the vehicle can prevent delays and extra fees during transport. Taking 30 minutes before your scheduled pickup makes the entire car shipping process smoother for everyone involved.</p>
+  <p><strong>Clean the vehicle.</strong> Clean your car inside and out before transport. A washed exterior makes it much easier to identify and document pre-existing damage during the inspection. You don&#x27;t need a full detail; a basic wash is enough.</p>
+  <p><strong>Remove personal items.</strong> Remove all personal items from the vehicle before shipping. This includes phone chargers, sunglasses, GPS units, toll tags, and anything stored in the trunk. Personal belongings left inside are typically not covered by the carrier&#x27;s insurance. Loose items can also shift during transit, causing interior damage.</p>
+  <p><strong>Secure or remove external accessories.</strong> Take off bike racks, removable spoilers, aftermarket antennae, and any loosely attached parts. If an accessory can&#x27;t be removed, make sure it&#x27;s securely fastened.</p>
+  <p><strong>Handle mechanical checks.</strong> Verify that the car starts, steers, and brakes properly. Top off essential fluids-oil, coolant, and windshield washer fluid. Check that the tires are properly inflated before transport and that the battery holds a charge. If the vehicle is non-running, let Ship Guy know at booking so the carrier can bring the right loading equipment.</p>
+  <p><strong>Manage fuel level.</strong> Ensure your vehicle has about a quarter tank of gas. A quarter tank provides enough fuel for the driver to load, unload, and move the vehicle short distances without adding unnecessary weight to the trailer.</p>
+  <p><strong>Document the car&#x27;s condition.</strong> Note any existing scratches or dents for inspection. Take dated photos from all four sides, close-ups of any damage, and interior shots if relevant. These photos serve as your personal record, along with the Bill of Lading completed by the driver at pickup.</p>
+  <p><strong>Provide access details.</strong> Share clear directions, gate codes, or parking instructions for your Georgia neighborhood, apartment complex, or rural property well before vehicle pickup day. If your street has weight restrictions or limited access, alert the carrier in advance so alternative arrangements can be made. The driver may also ask for a valid driver&#x27;s license at pickup to verify identity before releasing or accepting the vehicle.</p>
+  <h2>Georgia Coverage Areas and Popular Shipping Routes</h2>
+  <p>Ship Guy serves the entire state of Georgia with nationwide pickup and delivery coverage. Whether you&#x27;re in a metro area or a smaller community, we can coordinate service to meet your Georgia car shipping needs.</p>
+  <p>Primary metro service areas include Atlanta, Savannah, Augusta, Columbus, Macon, Athens, Albany, Valdosta, Warner Robins, and their surrounding suburbs. These cities sit along major freight corridors, which means stronger carrier availability, faster scheduling, and more competitive car shipping rates.</p>
+  <p>Popular outbound routes from Georgia include Atlanta to New York, Savannah to Houston, Augusta to Chicago, and Macon to Denver. These high-volume lanes benefit from consistent carrier traffic, making them generally easier to schedule and price competitively. Companies in Georgia that regularly service these routes tend to offer reliable car shipping with predictable timing.</p>
+  <p>Inbound routes are just as well-covered. Common moves include New Jersey to Atlanta, Los Angeles to Savannah, and Chicago to Columbus, GA. Whether someone is relocating to Georgia, purchasing a vehicle from out of state, or returning from a seasonal stay, Ship Guy manages both directions with equal attention.</p>
+  <p>Key Georgia highway corridors-I-75, I-85, I-20, and I-95-form the backbone of most auto shipping services in the state. The Port of Savannah is also a significant hub for international shipping, with vehicles arriving by cargo ship for domestic distribution. Ship Guy can coordinate pickup from port areas, dealerships, auctions, college campuses, and military bases when permitted by local rules. Local auto transport services are available for shorter in-state moves as well.</p>
+  <p>If you&#x27;re looking for classic car shipping from a rural Georgia estate, motorcycle shipping from a Savannah dealer, or a car shipment from an Atlanta auction house, Ship Guy can handle it. Contact us with your specific Georgia ZIP codes to confirm exact service details, delivery time estimates, and current pricing.</p>
+  <h2>Get a Georgia Car Shipping Quote from Ship Guy</h2>
+  <p>If you&#x27;re ready to ship a car to or from Georgia, requesting a quote from Ship Guy takes just a few minutes. No commitment, no pressure-just clear numbers so you can make an informed decision.</p>
+  <p>To generate an accurate quote, Ship Guy needs your pickup and delivery ZIP codes, the vehicle&#x27;s year, make, and model (running or non-running), your preferred dates, and whether you&#x27;d like open or enclosed shipping. That&#x27;s it.</p>
+  <p>Quotes are free and include clear car shipping costs, an estimated pickup window, and estimated delivery dates. There are no hidden fees, no bait-and-switch tactics, and no ambiguity about what&#x27;s included. Ship Guy focuses on fair, competitive pricing rather than unrealistic lowball offers that lead to delays or surprise charges down the road.</p>
+  <p>As a reliable auto transport service provider, Ship Guy works to meet every customer&#x27;s Georgia car shipping needs-whether that&#x27;s a single sedan heading to Florida, enclosed shipping for a vintage Corvette bound for California, or a multi-vehicle corporate fleet transfer. You can also look for the Google logo on verified review platforms to read real customer feedback before you book.</p>
+  <p>Contact Ship Guy by phone or through the online form today to schedule your Georgia auto transport. Get your quote, confirm your rate, and let us handle the rest.</p>
 </div></section>
+
+<!-- ===================== WHAT WE SHIP ===================== -->
+<section class="ship-section" id="services">
+  <div class="container">
+    <div class="ship-head">
+      <p class="ship-eyebrow">What We Ship</p>
+      <h2>We Ship More Than Cars</h2>
+      <p class="ship-sub">Nationwide transport solutions for vehicles, household goods, equipment, and freight.</p>
+    </div>
+
+    <div class="ship-grid">
+      <article class="ship-card">
+        <div class="ship-img"><img src="assets/ship-vehicles.jpg" alt="Blue auto-transport carrier loaded with cars and a boat on a mountain highway" loading="lazy"></div>
+        <div class="ship-body">
+          <h3>Vehicles &amp; Boats</h3>
+          <p>Cars, trucks, motorcycles, RVs, and boats shipped nationwide.</p>
+          <a class="ship-link" href="#">Learn More <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </div>
+      </article>
+
+      <article class="ship-card">
+        <div class="ship-img"><img src="assets/ship-household.jpg" alt="Living room with a sofa and packed moving boxes ready for transport" loading="lazy"></div>
+        <div class="ship-body">
+          <h3>Household Items</h3>
+          <p>Furniture, boxes, and personal items moved with care.</p>
+          <a class="ship-link" href="#">Learn More <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </div>
+      </article>
+
+      <article class="ship-card">
+        <div class="ship-img"><img src="assets/ship-equipment.jpg" alt="Green tractor secured on a flatbed trailer for heavy equipment transport" loading="lazy"></div>
+        <div class="ship-body">
+          <h3>Heavy Equipment</h3>
+          <p>Tractors, machinery, and oversized equipment transport.</p>
+          <a class="ship-link" href="#">Learn More <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </div>
+      </article>
+
+      <article class="ship-card">
+        <div class="ship-img"><img src="assets/ship-freight.jpg" alt="Palletized and shrink-wrapped cargo in a warehouse for freight shipping" loading="lazy"></div>
+        <div class="ship-body">
+          <h3>Freight</h3>
+          <p>Palletized cargo, crates, and commercial freight shipping.</p>
+          <a class="ship-link" href="#">Learn More <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FAQ ===================== -->
+<section class="faq-section" id="faq">
+  <div class="container">
+    <div class="faq-head">
+      <p class="faq-eyebrow">Questions?</p>
+      <h2>Frequently Asked Questions</h2>
+      <span class="faq-accent" aria-hidden="true"></span>
+      <p class="faq-sub">Everything you need to know before you ship.</p>
+    </div>
+
+    <div class="faq-list">
+      <details class="faq-item" open>
+        <summary class="faq-q">How much does it cost to ship a vehicle?
+          <span class="faq-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></span>
+        </summary>
+        <div class="faq-a">Your price depends on the distance, vehicle size, transport type (open or enclosed), and how quickly you need it. We give you an upfront, all-in quote with no hidden fees — the number you see is the number you pay.</div>
+      </details>
+
+      <details class="faq-item">
+        <summary class="faq-q">How long will my shipment take?
+          <span class="faq-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></span>
+        </summary>
+        <div class="faq-a">Transit time depends on the route and distance. Once your vehicle is dispatched, we share an estimated delivery window and keep you updated from pickup to drop-off. Longer cross-country routes naturally take more time than regional moves.</div>
+      </details>
+
+      <details class="faq-item">
+        <summary class="faq-q">Is my vehicle insured during transport?
+          <span class="faq-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></span>
+        </summary>
+        <div class="faq-a">Yes. We only work with licensed, vetted carriers that carry active cargo insurance, and your vehicle is covered while it's on the truck. We're happy to share coverage details before you book.</div>
+      </details>
+
+      <details class="faq-item">
+        <summary class="faq-q">What's the difference between open and enclosed transport?
+          <span class="faq-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></span>
+        </summary>
+        <div class="faq-a">Open transport is the most common and most affordable option and is safe for everyday vehicles. Enclosed transport adds extra protection from weather and road debris — a great choice for classic, luxury, or high-value vehicles.</div>
+      </details>
+
+      <details class="faq-item">
+        <summary class="faq-q">Do I have to pay a deposit upfront?
+          <span class="faq-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></span>
+        </summary>
+        <div class="faq-a">No. You don't pay until your vehicle is assigned and dispatched to a carrier — so there's no risk in getting a quote and booking your shipment.</div>
+      </details>
+
+      <details class="faq-item">
+        <summary class="faq-q">Can you ship a vehicle that doesn't run?
+          <span class="faq-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></span>
+        </summary>
+        <div class="faq-a">Yes. We transport both operable and inoperable (non-running) vehicles — just let us know when you book so we assign a carrier with the right equipment, such as a winch.</div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== LOCAL / CONTACT ===================== -->
+<section class="local-section" id="contact-local">
+  <div class="container">
+    <div class="local-grid">
+      <div class="local-info">
+        <p class="local-eyebrow">Get Started</p>
+        <h2>Ship Your Car To or From Georgia Today</h2>
+        <p class="local-lede">Call now or request a free quote. Transparent all-in pricing, no upfront deposit, vetted carriers, and 24/7 U.S.-based support.</p>
+        <div class="local-actions">
+          <a class="btn-call-lg" href="tel:+18664992815"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/></svg> Call (866) 499-2815</a>
+          <a class="btn-quote-lg" href="#top">Get a Free Quote <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </div>
+        <ul class="local-contact">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg><span>Serving all of Georgia — door-to-door, statewide</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg><span>Ship Guy — Nationwide Auto Transport &nbsp;<em style="color:#9098b0">(add your business address)</em></span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/></svg><a href="tel:+18664992815">(866) 499-2815</a></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg><a href="mailto:quotes@shipguy.com">quotes@shipguy.com</a></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span>Open 24/7 — quotes &amp; support</span></li>
+        </ul>
+        <div class="local-social" aria-label="Follow Ship Guy"><a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.07C24 5.4 18.63 0 12 0S0 5.4 0 12.07C0 18.1 4.39 23.1 10.13 24v-8.44H7.08v-3.49h3.05V9.41c0-3.02 1.79-4.69 4.53-4.69 1.31 0 2.68.24 2.68.24v2.97h-1.51c-1.49 0-1.96.93-1.96 1.89v2.25h3.33l-.53 3.49h-2.8V24C19.61 23.1 24 18.1 24 12.07z"/></svg></a><a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5.5"/><circle cx="12" cy="12" r="4.2"/><line x1="17.6" y1="6.4" x2="17.61" y2="6.4"/></svg></a><a href="#" aria-label="X"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231 5.45-6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a><a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg></a></div>
+      </div>
+      <div class="local-map">
+        <iframe title="Georgia auto transport service area" src="https://www.google.com/maps?q=Georgia%2C%20USA&z=6&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+</section>
 
 <!-- ===================== FINAL CTA ===================== -->
 <section class="cta-band" id="get-started">
@@ -758,11 +1061,14 @@ body.ready .reveal{opacity:1;transform:none}
     <h2>Ready to Ship Your Vehicle?</h2>
     <p class="cta-sub">Get a free, no-obligation quote in about 60 seconds — or call and talk to a real specialist right now.</p>
     <div class="cta-actions">
-      <a class="cta-primary" href="index.html#top">Get Your Free Quote
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      <a class="cta-primary" href="#top">
+        Get Your Free Quote
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
       <a class="cta-secondary" href="tel:+18664992815">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/></svg>
-        (866) 499-2815</a>
+        (866) 499-2815
+      </a>
     </div>
     <ul class="cta-trust">
       <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Licensed &amp; insured</li>
@@ -793,7 +1099,7 @@ body.ready .reveal{opacity:1;transform:none}
       <h4>Company</h4>
       <ul>
         <li><a href="how-it-works.html">How It Works</a></li>
-        <li><a href="index.html#reviews">Reviews</a></li>
+        <li><a href="#reviews">Reviews</a></li>
         <li><a href="index.html#locations">Locations</a></li>
         <li><a href="faq.html">FAQ</a></li>
         <li><a href="contact.html">Contact</a></li>
@@ -896,68 +1202,18 @@ body.ready .reveal{opacity:1;transform:none}
     }
   }
 
-  /* ---- multi-step form ---- */
-  var form = document.getElementById('quoteForm');
-  if(!form) return;
-  var success = document.getElementById('quoteSuccess');
-  var panels = form.querySelectorAll('.qstep');
-  var stepEls = document.querySelectorAll('#steps .step');
-  var trackEls = document.querySelectorAll('#steps .track');
-  var current = 1;
-  var maxStep = 3;
-
-  function setStep(n){
-    current = n;
-    panels.forEach(function(p){ p.classList.toggle('is-current', +p.dataset.panel === n); });
-    stepEls.forEach(function(s){
-      var step = +s.dataset.step;
-      s.classList.toggle('is-active', step === n);
-      s.classList.toggle('is-done', step < n);
-      s.classList.toggle('is-clickable', step < n);
-    });
-    trackEls.forEach(function(t){ t.classList.toggle('is-filled', +t.dataset.track < n); });
-  }
-
-  function validate(n){
-    var panel = form.querySelector('.qstep[data-panel="'+n+'"]');
-    var ok = true, firstBad = null;
-    panel.querySelectorAll('input[required]').forEach(function(inp){
-      var field = inp.closest('.field');
-      var bad = !inp.value.trim() || (inp.type==='email' && !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(inp.value));
-      field.classList.toggle('has-error', bad);
-      if(bad){ ok = false; if(!firstBad) firstBad = inp; }
-    });
-    if(firstBad) firstBad.focus();
-    return ok;
-  }
-
-  // clear error as the user types
-  form.querySelectorAll('input[required]').forEach(function(inp){
-    inp.addEventListener('input', function(){ inp.closest('.field').classList.remove('has-error'); });
-  });
-
-  form.querySelectorAll('[data-next]').forEach(function(btn){
-    btn.addEventListener('click', function(){ if(validate(current)) setStep(Math.min(current+1, maxStep)); });
-  });
-  form.querySelectorAll('[data-back]').forEach(function(btn){
-    btn.addEventListener('click', function(){ setStep(Math.max(current-1, 1)); });
-  });
-
-  // clicking a completed step jumps back to it
-  stepEls.forEach(function(s){
-    s.addEventListener('click', function(){
-      var step = +s.dataset.step;
-      if(step < current) setStep(step);
-    });
-  });
-
-  form.addEventListener('submit', function(e){
-    e.preventDefault();
-    if(!validate(3)) return;
-    form.style.display = 'none';
-    document.getElementById('steps').style.display = 'none';
-    success.classList.add('show');
-  });
+  /* ---- auto-resize booking widget iframe ---- */
+  window.addEventListener('message', function(e){
+    if(String(e.origin).indexOf('berocker') === -1) return;
+    var d = e.data, h = null;
+    if(typeof d === 'number') h = d;
+    else if(d && typeof d === 'object') h = d.height || d.frameHeight || d.iframeHeight || (d.data && d.data.height);
+    h = parseInt(h, 10);
+    if(h && h > 200 && h < 4000){
+      var f = document.querySelector('.quote-card.is-embed iframe');
+      if(f) f.style.height = h + 'px';
+    }
+  }, false);
 })();
 </script>
 </body>
