@@ -7,7 +7,7 @@
   <meta http-equiv="Expires" content="0">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Vehicle Shipping — Instant Auto Transport Quote | Ship Guy</title>
-<meta name="description" content="Get an instant vehicle shipping quote from Ship Guy. Licensed, insured nationwide auto transport with transparent pricing, vetted carriers, and 24/7 support.">
+<meta name="description" content="Get an instant vehicle shipping quote from Ship Guy — licensed, insured nationwide auto transport with transparent pricing, vetted carriers, and 24/7 support.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
@@ -595,7 +595,7 @@ body.ready .reveal{opacity:1;transform:none}
 
 @media (max-width:460px){.footer-top{grid-template-columns:1fr;gap:28px}}/* resp-polish-footer */
   .quote-card.is-embed{padding:0;overflow:hidden}
-  .quote-card.is-embed iframe{width:100%;height:630px;border:0;display:block}
+  .quote-card.is-embed iframe{width:100%;height:560px;border:0;display:block}
 .footer-states{display:flex;flex-wrap:wrap;gap:9px 20px;align-items:center;padding:20px 0 2px;margin-top:6px;border-top:1px solid rgba(255,255,255,.10)}.footer-states .fs-label{color:#fff;font-weight:700;font-size:14px}.footer-states a{font-size:14px;color:#9aa6c6;transition:color .15s ease}.footer-states a:hover{color:#fff}/* footer-states */
   .quote-layout{display:grid;grid-template-columns:1fr 1.05fr;gap:44px;align-items:start;padding:4px 0}
   .pq-aside h2{font-family:var(--font-display);font-weight:800;font-size:clamp(1.5rem,2.6vw,2rem);color:#101a3d;margin:0 0 12px}
@@ -654,6 +654,12 @@ body.ready .reveal{opacity:1;transform:none}
   .pq-again{display:block;margin:14px auto 0;background:none;border:0;color:var(--brand);font-weight:600;font-size:13.5px;cursor:pointer}
   @media (max-width:900px){.quote-layout{grid-template-columns:1fr;gap:30px}}
   @media (max-width:520px){.pq-row,.pq-opts{grid-template-columns:1fr}}
+
+  .pq-secure{text-align:center;color:var(--muted);font-size:12px;margin:14px 0 0;display:flex;align-items:center;justify-content:center;gap:6px}
+  .pq-secure svg{width:13px;height:13px}
+  .pq-error{display:none;color:#c0392b;font-size:13px;margin:12px 0 0;text-align:center;line-height:1.5}
+  .pq-cta{display:flex;flex-direction:column;gap:10px;align-items:center}
+  .pq-cta a.pq-btn{display:inline-flex;width:100%;justify-content:center;padding:14px 22px;text-decoration:none}
 
 </style>
 </head>
@@ -779,10 +785,10 @@ body.ready .reveal{opacity:1;transform:none}
       </div>
     </div>
 
-    <!-- PRICING TOOL (custom) -->
+    <!-- CUSTOM PRICING TOOL (BeRocker Lead Source API) -->
     <div class="pquote" id="pquote">
       <h3 class="pq-title">Get Your Instant Quote</h3>
-      <p class="pq-sub">Free &amp; no obligation · about 60 seconds</p>
+      <p class="pq-sub">Fast, Reliable, Secure Car Transport.</p>
       <div class="pq-steps">
         <div class="pq-step is-active"><span>1</span><label>Route</label></div>
         <div class="pq-step"><span>2</span><label>Vehicle</label></div>
@@ -790,15 +796,15 @@ body.ready .reveal{opacity:1;transform:none}
       </div>
       <form id="pqForm" novalidate>
         <div class="pq-panel is-current" data-panel="1">
-          <div class="pq-field"><label for="pq-pickup">Pickup location</label><input id="pq-pickup" name="pickup" placeholder="City or ZIP" required></div>
-          <div class="pq-field"><label for="pq-delivery">Delivery location</label><input id="pq-delivery" name="delivery" placeholder="City or ZIP" required></div>
-          <div class="pq-field"><label>Transport type</label>
+          <div class="pq-field"><label for="pq-pickup">Pickup Location</label><input id="pq-pickup" name="pickup" placeholder="Enter city or ZIP code" required></div>
+          <div class="pq-field"><label for="pq-delivery">Delivery Location</label><input id="pq-delivery" name="delivery" placeholder="Enter city or ZIP code" required></div>
+          <div class="pq-field"><label>Trailer Type</label>
             <div class="pq-opts">
               <label class="pq-opt"><input type="radio" name="transport" value="Open" checked><span class="pq-opt-body"><b>Open</b><small>Most common</small></span></label>
               <label class="pq-opt"><input type="radio" name="transport" value="Enclosed"><span class="pq-opt-body"><b>Enclosed</b><small>Extra protection</small></span></label>
             </div>
           </div>
-          <button type="button" class="pq-btn" data-next>Next: Vehicle Details →</button>
+          <button type="button" class="pq-btn" data-next>Next: Vehicle Details &#8594;</button>
         </div>
         <div class="pq-panel" data-panel="2">
           <div class="pq-row">
@@ -806,33 +812,46 @@ body.ready .reveal{opacity:1;transform:none}
             <div class="pq-field"><label for="pq-make">Make</label><input id="pq-make" name="make" placeholder="Toyota"></div>
           </div>
           <div class="pq-field"><label for="pq-model">Model</label><input id="pq-model" name="model" placeholder="Camry"></div>
-          <div class="pq-field"><label for="pq-vtype">Vehicle type</label><select id="pq-vtype" name="vtype"><option>Sedan</option><option>SUV / Crossover</option><option>Pickup Truck</option><option>Van / Minivan</option><option>Motorcycle</option><option>Other</option></select></div>
+          <div class="pq-field"><label for="pq-vtype">Vehicle Type</label><select id="pq-vtype" name="vtype"><option>Sedan</option><option>SUV / Crossover</option><option>Pickup Truck</option><option>Van / Minivan</option><option>Motorcycle</option><option>Other</option></select></div>
           <div class="pq-field"><label>Is it running?</label>
             <div class="pq-opts">
               <label class="pq-opt"><input type="radio" name="running" value="Runs" checked><span class="pq-opt-body"><b>Runs</b></span></label>
-              <label class="pq-opt"><input type="radio" name="running" value="Not running"><span class="pq-opt-body"><b>Doesn’t run</b></span></label>
+              <label class="pq-opt"><input type="radio" name="running" value="Not running"><span class="pq-opt-body"><b>Doesn&#8217;t run</b></span></label>
             </div>
           </div>
-          <div class="pq-nav"><button type="button" class="pq-btn-ghost" data-back>← Back</button><button type="button" class="pq-btn" data-next>Next: Contact →</button></div>
+          <div class="pq-nav"><button type="button" class="pq-btn-ghost" data-back>&#8592; Back</button><button type="button" class="pq-btn" data-next>Next: Contact &#8594;</button></div>
         </div>
         <div class="pq-panel" data-panel="3">
-          <div class="pq-field"><label for="pq-date">Preferred ship date</label><input id="pq-date" name="date" type="date"></div>
-          <div class="pq-field"><label for="pq-name">Full name</label><input id="pq-name" name="name" autocomplete="name" required></div>
+          <div class="pq-field" id="pq-pickup-field"><label for="pq-timeframe">Pickup Timeframe</label>
+            <select id="pq-timeframe" name="timeframe">
+              <option value="asap">As soon as possible</option>
+              <option value="within_1_week">Within 1 week</option>
+              <option value="within_2_weeks">Within 2 weeks</option>
+              <option value="beyond_2_weeks">More than 2 weeks</option>
+            </select>
+          </div>
+          <div class="pq-field" id="pq-date-field" style="display:none"><label for="pq-date">Preferred Pickup Date</label><input id="pq-date" name="date" type="date"></div>
+          <div class="pq-field"><label for="pq-name">Full Name</label><input id="pq-name" name="name" autocomplete="name" required></div>
           <div class="pq-row">
             <div class="pq-field"><label for="pq-email">Email</label><input id="pq-email" name="email" type="email" autocomplete="email" required></div>
             <div class="pq-field"><label for="pq-phone">Phone</label><input id="pq-phone" name="phone" type="tel" autocomplete="tel" required></div>
           </div>
-          <div class="pq-nav"><button type="button" class="pq-btn-ghost" data-back>← Back</button><button type="submit" class="pq-btn">Get My Quote →</button></div>
+          <div class="pq-nav"><button type="button" class="pq-btn-ghost" data-back>&#8592; Back</button><button type="submit" class="pq-btn">Get My Quote &#8594;</button></div>
         </div>
+        <p class="pq-secure"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg> Your information is secure and encrypted</p>
+        <p class="pq-error" id="pqError"></p>
       </form>
       <div class="pq-result" id="pqResult">
-        <div class="pq-loading" id="pqLoading"><div class="pq-spin"></div>Calculating your estimate…</div>
+        <div class="pq-loading" id="pqLoading"><div class="pq-spin"></div><span id="pqLoadingText">Getting your quote&#8230;</span></div>
         <div class="pq-quote" id="pqQuote">
-          <p class="pq-eyebrow">Your estimated price</p>
-          <div class="pq-price" id="pqPrice">—</div>
+          <p class="pq-eyebrow" id="pqEyebrow">Your instant quote</p>
+          <div class="pq-price" id="pqPrice">&#8212;</div>
           <p class="pq-route" id="pqRoute"></p>
-          <p class="pq-note">This is an estimate. A specialist will confirm your exact, all-in price — no hidden fees.</p>
-          <div class="pq-cta"><a class="pq-btn" href="tel:+18664992815">Call to Book · (866) 499-2815</a></div>
+          <p class="pq-note" id="pqNote">All-in price &#8212; no hidden fees.</p>
+          <div class="pq-cta">
+            <a class="pq-btn" id="pqBookBtn" href="#" style="display:none">Continue to Booking &#8594;</a>
+            <a class="pq-btn pq-btn-ghost" id="pqCallBtn" href="tel:+18664992815" style="text-decoration:none">Call to Book &#183; (866) 499-2815</a>
+          </div>
           <button type="button" class="pq-again" id="pqAgain">Start a new quote</button>
         </div>
       </div>
@@ -1333,94 +1352,131 @@ body.ready .reveal{opacity:1;transform:none}
 </script>
 <script>
 /* ============================================================
-   SHIP GUY — CUSTOM PRICING TOOL
-   The form collects the shipment details and calls getQuote(data).
-   >>> To go live, connect your API inside getQuote() below. <<<
+   SHIP GUY \u2014 custom quote tool wired to the BeRocker Lead Source API
+   Docs: https://help.berocker.com/integrations/pickup-windows-api
+
+   >>> STEP 1: create a lead source in BeRocker
+       (Settings -> Lead Management -> Lead sources -> + Add new source,
+        set Per Lead Price = 0), then copy its "Lead save URL".
+   >>> STEP 2: paste that URL below (it ends with /save). <<<
+   Until you do, the tool shows a sample estimate so you can preview it.
    ============================================================ */
 (function(){
-  var form=document.getElementById('pqForm');
-  if(!form) return;
+  var LEAD_SAVE_URL = 'https://app.berocker.com/api/v1/auto-logistics/client/webhooks/lead/YOUR_LEAD_SOURCE_KEY/save';
+  var API_READY = LEAD_SAVE_URL.indexOf('YOUR_LEAD_SOURCE_KEY') === -1;
+
+  var form=document.getElementById('pqForm'); if(!form) return;
   var steps=[].slice.call(document.querySelectorAll('#pquote .pq-step'));
   var panels=[].slice.call(document.querySelectorAll('#pquote .pq-panel'));
   var stepsBar=document.querySelector('#pquote .pq-steps');
   var cur=0;
-  function show(i){
-    panels.forEach(function(p,idx){p.classList.toggle('is-current',idx===i);});
-    steps.forEach(function(s,idx){s.classList.toggle('is-active',idx===i);s.classList.toggle('is-done',idx<i);});
-    cur=i;
-  }
-  function validate(i){
-    var ok=true;
-    panels[i].querySelectorAll('input[required]').forEach(function(inp){
-      if(!inp.value.trim()){inp.classList.add('err');ok=false;} else inp.classList.remove('err');
-    });
-    var email=panels[i].querySelector('input[type=email]');
-    if(email&&email.value&&!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email.value)){email.classList.add('err');ok=false;}
-    return ok;
-  }
+  function show(i){panels.forEach(function(p,x){p.classList.toggle('is-current',x===i);});steps.forEach(function(sp,x){sp.classList.toggle('is-active',x===i);sp.classList.toggle('is-done',x<i);});cur=i;}
+  function validate(i){var ok=true;panels[i].querySelectorAll('input[required]').forEach(function(inp){if(!inp.value.trim()){inp.classList.add('err');ok=false;}else inp.classList.remove('err');});var em=panels[i].querySelector('input[type=email]');if(em&&em.value&&!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(em.value)){em.classList.add('err');ok=false;}return ok;}
   form.querySelectorAll('[data-next]').forEach(function(b){b.addEventListener('click',function(){if(validate(cur))show(cur+1);});});
   form.querySelectorAll('[data-back]').forEach(function(b){b.addEventListener('click',function(){show(cur-1);});});
   form.querySelectorAll('input').forEach(function(inp){inp.addEventListener('input',function(){inp.classList.remove('err');});});
+
+  /* On load: ask BeRocker which pickup question to show */
+  if(API_READY){
+    fetch(LEAD_SAVE_URL.replace('/save','/quote-config'))
+      .then(function(r){return r.ok?r.json():null;})
+      .then(function(cfg){
+        if(!cfg) return;
+        var tf=document.getElementById('pq-timeframe'), tfWrap=document.getElementById('pq-pickup-field'), dateWrap=document.getElementById('pq-date-field'), dateInp=document.getElementById('pq-date');
+        if(cfg.pickupTimeframes && cfg.pickupTimeframes.length){
+          tf.innerHTML=''; cfg.pickupTimeframes.forEach(function(t){var o=document.createElement('option');o.value=t.value;o.textContent=t.label;if(t.isDefault)o.selected=true;tf.appendChild(o);});
+        } else if(cfg.pickupWindow){
+          tfWrap.style.display='none'; dateWrap.style.display=''; if(cfg.pickupWindow.earliestDate) dateInp.min=cfg.pickupWindow.earliestDate;
+        } else {
+          tfWrap.style.display='none'; dateWrap.style.display='';
+        }
+      }).catch(function(){});
+  }
+
+  function mapType(v){return {'Sedan':'Car','SUV / Crossover':'SUV','Pickup Truck':'Pickup','Van / Minivan':'Van','Motorcycle':'Motorcycle','Other':'Other'}[v]||'Car';}
+
+  function submitLead(data){
+    if(!API_READY) return demoQuote(data);
+    var nm=(data.name||'').trim().split(/\s+/);
+    var payload={
+      first_name: nm[0]||data.name, phone: data.phone,
+      last_name: nm.slice(1).join(' ')||undefined, email: data.email||undefined,
+      transport_type: (data.transport||'Open').toLowerCase(),
+      secondary_id: 'WEB-'+Date.now(),
+      vehicles:[{vehicle_model_year: parseInt(data.year,10)||undefined, vehicle_make: data.make||undefined, vehicle_model: data.model||undefined, vehicle_type: mapType(data.vtype), vehicle_inop: data.running==='Not running'}]
+    };
+    var pk=(data.pickup||'').trim(), dl=(data.delivery||'').trim();
+    if(/^\d{5}$/.test(pk)) payload.origin_postal_code=pk; else payload.origin_city=pk;
+    if(/^\d{5}$/.test(dl)) payload.destination_postal_code=dl; else payload.destination_city=dl;
+    if(data.timeframe) payload.pickup_timeframe=data.timeframe; else if(data.date) payload.ship_date=data.date;
+    return fetch(LEAD_SAVE_URL,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)})
+      .then(function(r){return r.json().then(function(j){return {ok:r.ok,body:j};});})
+      .then(function(res){
+        if(!res.ok || !res.body || !res.body.id){var m=res.body&&res.body.errors?String(Object.values(res.body.errors)[0]):'We could not process that. Please check your details.';throw new Error(m);}
+        var lead=res.body, statusUrl=LEAD_SAVE_URL.replace('/save','/'+lead.id+'/booking-status');
+        setLoading('Calculating your price\u2026');
+        return pollStatus(statusUrl, lead.bookingLink, 0);
+      });
+  }
+  function pollStatus(url, bookingLink, tries){
+    if(tries>28) return Promise.resolve({bookingLink:bookingLink, price:null, manual:false});
+    return new Promise(function(res){setTimeout(res, tries===0?900:2000);}).then(function(){
+      return fetch(url).then(function(r){return r.json();}).then(function(s){
+        var link=s.bookingLink||bookingLink;
+        if(s.priceReady) return {bookingLink:link, price:s.price, manual:false};
+        if(s.manualReview) return {bookingLink:link, price:null, manual:true};
+        if(s.priceFailed) return {bookingLink:link, price:null, manual:false, failed:true};
+        return pollStatus(url, link, tries+1);
+      });
+    });
+  }
+  function demoQuote(data){
+    return new Promise(function(res){setTimeout(function(){
+      var base={'Sedan':600,'SUV / Crossover':720,'Pickup Truck':790,'Van / Minivan':820,'Motorcycle':480,'Other':720}[data.vtype]||700;
+      if(data.transport==='Enclosed') base=Math.round(base*1.5); if(data.running==='Not running') base+=150;
+      res({price:base, bookingLink:null, manual:false, demo:true});
+    },900);});
+  }
+
+  var loadingText=document.getElementById('pqLoadingText'), loading=document.getElementById('pqLoading'), quote=document.getElementById('pqQuote'), result=document.getElementById('pqResult'), errBox=document.getElementById('pqError');
+  function setLoading(t){if(loadingText)loadingText.textContent=t;}
+  function render(res, data){
+    loading.style.display='none';
+    var priceEl=document.getElementById('pqPrice'), eyebrow=document.getElementById('pqEyebrow'), note=document.getElementById('pqNote'), book=document.getElementById('pqBookBtn');
+    if(res.manual){
+      eyebrow.textContent='Quote request received'; priceEl.textContent='We\u2019ll be in touch'; priceEl.style.fontSize='23px';
+      note.textContent='Your vehicle needs a custom quote \u2014 a specialist will contact you shortly.';
+    } else if(res.price){
+      eyebrow.textContent = res.demo ? 'Your estimated price' : 'Your instant quote';
+      priceEl.textContent='$'+Number(res.price).toLocaleString(); priceEl.style.fontSize='38px';
+      note.textContent = res.demo ? 'Sample estimate for preview. Add your BeRocker Lead save URL for live pricing.' : 'All-in price \u2014 no hidden fees. Continue to lock in your booking.';
+    } else {
+      eyebrow.textContent='Almost there'; priceEl.textContent='Get your quote'; priceEl.style.fontSize='23px';
+      note.textContent='Continue to see your price and book, or call us now.';
+    }
+    document.getElementById('pqRoute').textContent=(data.pickup||'')+' \u2192 '+(data.delivery||'')+'  \u00b7  '+(data.transport||'Open')+' transport';
+    if(res.bookingLink){book.href=res.bookingLink; book.style.display='';}
+    quote.classList.add('show');
+  }
 
   form.addEventListener('submit',function(e){
     e.preventDefault();
     if(!validate(cur)) return;
     var data={}; new FormData(form).forEach(function(v,k){data[k]=v;});
+    if(errBox) errBox.style.display='none';
     form.style.display='none'; if(stepsBar) stepsBar.style.display='none';
-    var result=document.getElementById('pqResult'); result.classList.add('show');
-    var loading=document.getElementById('pqLoading'), quote=document.getElementById('pqQuote');
-    loading.style.display='block'; quote.classList.remove('show');
-    Promise.resolve(getQuote(data)).then(function(res){
-      loading.style.display='none';
-      if(res && typeof res.low==='number'){
-        document.getElementById('pqPrice').textContent='$'+res.low.toLocaleString()+' – $'+res.high.toLocaleString();
-      } else {
-        document.getElementById('pqPrice').textContent='Call for your quote';
-      }
-      document.getElementById('pqRoute').textContent=(data.pickup||'')+' → '+(data.delivery||'')+'  ·  '+(data.transport||'Open')+' transport';
-      quote.classList.add('show');
-    }).catch(function(){
-      loading.style.display='none';
-      document.getElementById('pqPrice').textContent='Call for your quote';
-      quote.classList.add('show');
+    result.classList.add('show'); loading.style.display='block'; quote.classList.remove('show'); setLoading('Getting your quote\u2026');
+    submitLead(data).then(function(res){render(res,data);}).catch(function(err){
+      // fall back to a sample estimate so the visitor still sees something, and surface the reason
+      demoQuote(data).then(function(d){ d.demo=true; render(d,data);
+        if(errBox){errBox.textContent=(err&&err.message?err.message+' ':'')+'(showing a sample estimate)'; }
+      });
     });
   });
   var again=document.getElementById('pqAgain');
-  if(again) again.addEventListener('click',function(){
-    document.getElementById('pqResult').classList.remove('show');
-    if(stepsBar) stepsBar.style.display='';
-    form.style.display=''; show(0);
-  });
-
-  /* ==========================================================
-     >>>  CONNECT YOUR PRICING API HERE  <<<
-     getQuote(data) receives all form fields:
-       data.pickup, data.delivery, data.transport,
-       data.year, data.make, data.model, data.vtype,
-       data.running, data.date, data.name, data.email, data.phone
-     It must return (or resolve to) { low: Number, high: Number }.
-     ========================================================== */
-  function getQuote(data){
-    /* ---- Real API (uncomment and point to your endpoint) ----
-    return fetch('https://app.shipguy.com/api/quote', {
-      method:'POST',
-      headers:{'Content-Type':'application/json'},
-      body: JSON.stringify(data)
-    }).then(function(r){ return r.json(); })
-      .then(function(j){ return { low: j.priceLow, high: j.priceHigh }; });
-    */
-
-    /* ---- DEMO estimate (remove once your API is connected) ---- */
-    return new Promise(function(resolve){
-      setTimeout(function(){
-        var base={'Sedan':600,'SUV / Crossover':720,'Pickup Truck':790,'Van / Minivan':820,'Motorcycle':480,'Other':720}[data.vtype]||700;
-        if(data.transport==='Enclosed') base=Math.round(base*1.5);
-        if(data.running==='Not running') base+=150;
-        resolve({ low: base, high: Math.round(base*1.55) });
-      }, 900);
-    });
-  }
+  if(again) again.addEventListener('click',function(){result.classList.remove('show'); if(stepsBar)stepsBar.style.display=''; form.style.display=''; show(0);});
 })();
 </script>
+
 </body>
 </html>
