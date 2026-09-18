@@ -597,70 +597,73 @@ body.ready .reveal{opacity:1;transform:none}
   .quote-card.is-embed{padding:0;overflow:hidden}
   .quote-card.is-embed iframe{width:100%;height:560px;border:0;display:block}
 .footer-states{display:flex;flex-wrap:wrap;gap:9px 20px;align-items:center;padding:20px 0 2px;margin-top:6px;border-top:1px solid rgba(255,255,255,.10)}.footer-states .fs-label{color:#fff;font-weight:700;font-size:14px}.footer-states a{font-size:14px;color:#9aa6c6;transition:color .15s ease}.footer-states a:hover{color:#fff}/* footer-states */
-  .quote-layout{display:grid;grid-template-columns:1fr 1.05fr;gap:44px;align-items:start;padding:4px 0}
-  .pq-aside h2{font-family:var(--font-display);font-weight:800;font-size:clamp(1.5rem,2.6vw,2rem);color:#101a3d;margin:0 0 12px}
-  .pq-aside>p{color:var(--ink-2);font-size:16px;line-height:1.65;margin:0 0 22px;max-width:440px}
-  .pq-trust{list-style:none;margin:0 0 22px;padding:0;display:grid;gap:14px}
-  .pq-trust li{display:flex;gap:12px;align-items:flex-start;color:var(--ink);font-weight:600;font-size:15.5px}
-  .pq-trust li svg{width:22px;height:22px;color:var(--brand);flex:0 0 auto;margin-top:1px}
-  .pq-trust li small{display:block;font-weight:400;color:var(--ink-2);font-size:13.5px;margin-top:2px}
-  .pq-callus{display:flex;align-items:center;gap:13px;background:var(--brand-tint);border:1px solid #dbe3fb;border-radius:14px;padding:15px 18px}
-  .pq-callus .cu-ic{width:42px;height:42px;border-radius:11px;background:#fff;color:var(--brand);display:flex;align-items:center;justify-content:center;flex:0 0 auto}
-  .pq-callus .cu-ic svg{width:20px;height:20px}
-  .pq-callus b{display:block;font-size:12.5px;color:var(--ink-2);font-weight:600}
-  .pq-callus a{font-family:var(--font-display);font-weight:800;font-size:19px;color:var(--brand-deep);text-decoration:none}
-  .pquote{background:#fff;border:1px solid var(--line);border-radius:20px;box-shadow:0 30px 60px -30px rgba(13,26,80,.45);padding:28px 26px}
-  .pq-title{font-family:var(--font-display);font-weight:800;font-size:22px;color:var(--brand);text-align:center;margin:0 0 3px}
-  .pq-sub{text-align:center;color:var(--muted);font-size:13.5px;margin:0 0 22px}
-  .pq-steps{display:flex;align-items:flex-start;justify-content:space-between;margin:0 0 22px;position:relative}
-  .pq-steps::before{content:'';position:absolute;top:17px;left:14%;right:14%;height:2px;background:#eef1f7;z-index:0}
-  .pq-step{display:flex;flex-direction:column;align-items:center;gap:6px;flex:1;position:relative;z-index:1}
-  .pq-step span{width:34px;height:34px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:#eef1f7;color:var(--muted);font-family:var(--font-display);font-weight:800;font-size:14px;border:3px solid #fff}
-  .pq-step label{font-size:12px;font-weight:600;color:var(--muted)}
-  .pq-step.is-active span{background:var(--brand);color:#fff}
+  .pquote{background:#fff;border:1px solid rgba(20,30,80,.05);border-radius:22px;box-shadow:0 40px 80px -42px rgba(13,26,80,.55),0 6px 16px -8px rgba(13,26,80,.12);overflow:hidden}
+  .pq-head{background:linear-gradient(135deg,#0b34c0 0%,#0429a3 100%);padding:24px 26px 20px;text-align:center;position:relative;overflow:hidden}
+  .pq-head::after{content:"";position:absolute;top:-40px;right:-30px;width:150px;height:150px;background:radial-gradient(circle,rgba(255,255,255,.14),transparent 70%)}
+  .pq-head h3{font-family:var(--font-display);font-weight:800;font-size:22px;color:#fff;margin:0 0 3px;letter-spacing:-.01em;position:relative}
+  .pq-head p{color:rgba(255,255,255,.82);font-size:13px;margin:0;position:relative}
+  .pq-badges{display:flex;justify-content:center;gap:7px;margin-top:13px;flex-wrap:wrap;position:relative}
+  .pq-badge{background:rgba(255,255,255,.16);color:#fff;font-size:11px;font-weight:600;padding:4px 10px;border-radius:999px;display:inline-flex;align-items:center;gap:5px}
+  .pq-badge svg{width:11px;height:11px}
+  .pq-body{padding:22px 24px 22px}
+  .pq-steps{display:flex;align-items:flex-start;justify-content:space-between;margin:2px 0 22px;position:relative}
+  .pq-steps::before{content:"";position:absolute;top:16px;left:17px;right:17px;height:3px;background:#e9edf6;border-radius:3px;z-index:0}
+  .pq-step{display:flex;flex-direction:column;align-items:center;gap:7px;flex:1;position:relative;z-index:2}
+  .pq-step span{width:34px;height:34px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:#fff;color:#9aa3b8;font-family:var(--font-display);font-weight:800;font-size:14px;border:3px solid #e9edf6;transition:all .2s ease}
+  .pq-step label{font-size:11.5px;font-weight:600;color:#9aa3b8;transition:color .2s ease}
+  .pq-step.is-active span{background:var(--brand);color:#fff;border-color:var(--brand);box-shadow:0 5px 14px -3px rgba(11,52,192,.55)}
   .pq-step.is-active label{color:var(--brand)}
-  .pq-step.is-done span{background:var(--brand-deep);color:#fff}
-  .pq-panel{display:none}
-  .pq-panel.is-current{display:block;animation:pqFade .28s ease both}
-  @keyframes pqFade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
-  .pq-field{margin-bottom:14px}
-  .pq-field>label{display:block;font-weight:600;font-size:13px;color:var(--ink);margin-bottom:6px}
-  .pq-field input,.pq-field select{width:100%;border:1.5px solid var(--line);border-radius:11px;padding:12px 14px;font:inherit;font-size:15px;color:var(--ink);background:#fff;transition:border-color .15s ease,box-shadow .15s ease}
-  .pq-field input:focus,.pq-field select:focus{outline:none;border-color:var(--brand);box-shadow:0 0 0 3px rgba(11,52,192,.12)}
-  .pq-field input.err{border-color:#e0524b;box-shadow:0 0 0 3px rgba(224,82,75,.12)}
-  .pq-row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
-  .pq-opts{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+  .pq-step.is-done span{background:var(--brand);color:#fff;border-color:var(--brand)}
+  .pq-step.is-done label{color:var(--ink-2)}
+  .pq-panel{display:none}.pq-panel.is-current{display:block;animation:pqFade .3s ease both}
+  @keyframes pqFade{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+  .pq-field{margin-bottom:15px}
+  .pq-field>label{display:block;font-weight:600;font-size:12.5px;color:var(--ink);margin-bottom:7px}
+  .pq-inp{position:relative}
+  .pq-inp>svg{position:absolute;left:14px;top:50%;transform:translateY(-50%);width:17px;height:17px;color:#9aa3b8;pointer-events:none;z-index:1;transition:color .15s ease}
+  .pq-field input,.pq-field select{width:100%;border:1.6px solid #e4e8f2;border-radius:12px;padding:13px 14px;font:inherit;font-size:15px;color:var(--ink);background:#fff;transition:border-color .15s ease,box-shadow .15s ease;-webkit-appearance:none;appearance:none}
+  .pq-inp input,.pq-inp select{padding-left:42px}
+  .pq-field input:focus,.pq-field select:focus{outline:none;border-color:var(--brand);box-shadow:0 0 0 4px rgba(11,52,192,.1)}
+  .pq-inp:focus-within>svg{color:var(--brand)}
+  .pq-field input::placeholder{color:#aeb6c8}
+  .pq-field input.err{border-color:#e0524b;box-shadow:0 0 0 4px rgba(224,82,75,.1)}
+  .pq-field select{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='none' stroke='%239aa3b8' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m4 6 4 4 4-4'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center;padding-right:38px}
+  .pq-row{display:grid;grid-template-columns:1fr 1fr;gap:13px}
+  .pq-opts{display:grid;grid-template-columns:1fr 1fr;gap:11px}
   .pq-opt{position:relative;cursor:pointer;display:block}
-  .pq-opt input{position:absolute;opacity:0;inset:0}
-  .pq-opt-body{display:block;border:1.5px solid var(--line);border-radius:12px;padding:11px 14px;transition:border-color .15s ease,background .15s ease}
-  .pq-opt-body b{display:block;font-family:var(--font-display);font-weight:700;font-size:15px;color:#101a3d}
-  .pq-opt-body small{color:var(--muted);font-size:12.5px}
-  .pq-opt input:checked+.pq-opt-body{border-color:var(--brand);background:var(--brand-tint)}
-  .pq-btn{width:100%;background:var(--brand);color:#fff;font-weight:700;font-size:16px;padding:14px;border:0;border-radius:12px;cursor:pointer;transition:background .15s ease;text-align:center}
-  .pq-btn:hover{background:var(--brand-press)}
-  .pq-btn-ghost{background:#fff;color:var(--ink-2);font-weight:600;font-size:15px;padding:14px 18px;border:1.5px solid var(--line);border-radius:12px;cursor:pointer}
-  .pq-btn-ghost:hover{border-color:var(--brand);color:var(--brand)}
-  .pq-nav{display:flex;gap:12px}.pq-nav .pq-btn{flex:1}
-  .pq-result{display:none}.pq-result.show{display:block}
-  .pq-loading{text-align:center;padding:34px 0;color:var(--ink-2);font-size:15px}
-  .pq-spin{width:42px;height:42px;border:3px solid var(--brand-tint);border-top-color:var(--brand);border-radius:50%;margin:0 auto 14px;animation:pqSpin .8s linear infinite}
+  .pq-opt input{position:absolute;opacity:0;inset:0;cursor:pointer;margin:0}
+  .pq-opt-body{display:flex;align-items:center;gap:11px;border:1.6px solid #e4e8f2;border-radius:14px;padding:12px 13px;transition:all .15s ease;background:#fff}
+  .pq-opt-body .oi{width:36px;height:36px;border-radius:10px;background:#f1f4fb;color:#8b93a8;display:flex;align-items:center;justify-content:center;flex:0 0 auto;transition:all .15s ease}
+  .pq-opt-body .oi svg{width:19px;height:19px}
+  .pq-opt-body .ot b{display:block;font-family:var(--font-display);font-weight:700;font-size:14px;color:#101a3d;line-height:1.2}
+  .pq-opt-body .ot small{color:#8b93a8;font-size:11.5px}
+  .pq-opt input:checked+.pq-opt-body{border-color:var(--brand);background:var(--brand-tint);box-shadow:inset 0 0 0 1px var(--brand)}
+  .pq-opt input:checked+.pq-opt-body .oi{background:var(--brand);color:#fff}
+  .pq-btn{width:100%;background:linear-gradient(135deg,var(--brand),var(--brand-deep));color:#fff;font-weight:700;font-size:15.5px;padding:15px;border:0;border-radius:13px;cursor:pointer;transition:transform .15s ease,box-shadow .15s ease;box-shadow:0 14px 26px -12px rgba(11,52,192,.75);display:inline-flex;align-items:center;justify-content:center;gap:8px}
+  .pq-btn svg{width:16px;height:16px}
+  .pq-btn:hover{transform:translateY(-1px);box-shadow:0 18px 32px -12px rgba(11,52,192,.85)}
+  .pq-btn:active{transform:translateY(0)}
+  .pq-btn-ghost{background:#f6f8fc;color:var(--ink-2);font-weight:600;font-size:14.5px;padding:15px 16px;border:1.6px solid #e4e8f2;border-radius:13px;cursor:pointer;box-shadow:none;flex:0 0 auto;text-decoration:none;display:inline-flex;align-items:center;justify-content:center}
+  .pq-btn-ghost:hover{border-color:var(--brand);color:var(--brand);background:#fff;transform:none;box-shadow:none}
+  .pq-nav{display:flex;gap:11px}.pq-nav .pq-btn{flex:1}
+  .pq-secure{text-align:center;color:#9aa3b8;font-size:11.5px;margin:16px 0 0;display:flex;align-items:center;justify-content:center;gap:6px}
+  .pq-secure svg{width:12px;height:12px}
+  .pq-error{display:none;color:#c0392b;font-size:12.5px;margin:12px 0 0;text-align:center;line-height:1.5}
+  .pq-result{display:none;text-align:center;padding:6px 0 2px}.pq-result.show{display:block}
+  .pq-loading{padding:34px 0;color:var(--ink-2);font-size:14.5px}
+  .pq-spin{width:44px;height:44px;border:3.5px solid var(--brand-tint);border-top-color:var(--brand);border-radius:50%;margin:0 auto 14px;animation:pqSpin .8s linear infinite}
   @keyframes pqSpin{to{transform:rotate(360deg)}}
-  .pq-quote{display:none;text-align:center}.pq-quote.show{display:block}
-  .pq-eyebrow{font-family:var(--font-display);font-weight:800;letter-spacing:.1em;text-transform:uppercase;font-size:12px;color:var(--brand)}
-  .pq-price{font-family:var(--font-display);font-weight:800;font-size:38px;color:#101a3d;margin:6px 0 2px}
-  .pq-route{color:var(--ink-2);font-size:14.5px;margin:0}
-  .pq-note{color:var(--muted);font-size:12.5px;margin:12px auto 18px;max-width:340px;line-height:1.5}
-  .pq-cta a.pq-btn{display:inline-block;width:auto;padding:14px 26px;text-decoration:none}
-  .pq-again{display:block;margin:14px auto 0;background:none;border:0;color:var(--brand);font-weight:600;font-size:13.5px;cursor:pointer}
-  @media (max-width:900px){.quote-layout{grid-template-columns:1fr;gap:30px}}
+  .pq-quote{display:none;animation:pqFade .3s ease both}.pq-quote.show{display:block}
+  .pq-check{width:56px;height:56px;border-radius:50%;background:#e7f7ee;color:#12a150;display:flex;align-items:center;justify-content:center;margin:4px auto 14px}
+  .pq-check svg{width:28px;height:28px}
+  .pq-eyebrow{font-family:var(--font-display);font-weight:800;letter-spacing:.09em;text-transform:uppercase;font-size:11.5px;color:var(--brand)}
+  .pq-price{font-family:var(--font-display);font-weight:800;font-size:40px;color:#101a3d;margin:5px 0 2px;letter-spacing:-.01em}
+  .pq-route{color:var(--ink-2);font-size:14px;margin:0}
+  .pq-note{color:#8b93a8;font-size:12px;margin:12px auto 18px;max-width:320px;line-height:1.5}
+  .pq-cta{display:flex;flex-direction:column;gap:10px}
+  .pq-cta a{width:100%;justify-content:center;text-decoration:none}
+  .pq-again{display:block;margin:14px auto 0;background:none;border:0;color:var(--brand);font-weight:600;font-size:13px;cursor:pointer}
   @media (max-width:520px){.pq-row,.pq-opts{grid-template-columns:1fr}}
-
-  .pq-secure{text-align:center;color:var(--muted);font-size:12px;margin:14px 0 0;display:flex;align-items:center;justify-content:center;gap:6px}
-  .pq-secure svg{width:13px;height:13px}
-  .pq-error{display:none;color:#c0392b;font-size:13px;margin:12px 0 0;text-align:center;line-height:1.5}
-  .pq-cta{display:flex;flex-direction:column;gap:10px;align-items:center}
-  .pq-cta a.pq-btn{display:inline-flex;width:100%;justify-content:center;padding:14px 22px;text-decoration:none}
-
 </style>
 </head>
 <body>
@@ -787,72 +790,75 @@ body.ready .reveal{opacity:1;transform:none}
 
     <!-- CUSTOM PRICING TOOL (BeRocker Lead Source API) -->
     <div class="pquote" id="pquote">
-      <h3 class="pq-title">Get Your Instant Quote</h3>
-      <p class="pq-sub">Fast, Reliable, Secure Car Transport.</p>
-      <div class="pq-steps">
-        <div class="pq-step is-active"><span>1</span><label>Route</label></div>
-        <div class="pq-step"><span>2</span><label>Vehicle</label></div>
-        <div class="pq-step"><span>3</span><label>Contact</label></div>
+      <div class="pq-head">
+        <h3>Get Your Instant Quote</h3>
+        <p>Fast, reliable, secure car transport</p>
+        <div class="pq-badges">
+          <span class="pq-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Free</span>
+          <span class="pq-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>~60 seconds</span>
+          <span class="pq-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v5c0 5-3.5 8.5-7 10-3.5-1.5-7-5-7-10V6l7-3Z"/></svg>No obligation</span>
+        </div>
       </div>
-      <form id="pqForm" novalidate>
-        <div class="pq-panel is-current" data-panel="1">
-          <div class="pq-field"><label for="pq-pickup">Pickup Location</label><input id="pq-pickup" name="pickup" placeholder="Enter city or ZIP code" required></div>
-          <div class="pq-field"><label for="pq-delivery">Delivery Location</label><input id="pq-delivery" name="delivery" placeholder="Enter city or ZIP code" required></div>
-          <div class="pq-field"><label>Trailer Type</label>
-            <div class="pq-opts">
-              <label class="pq-opt"><input type="radio" name="transport" value="Open" checked><span class="pq-opt-body"><b>Open</b><small>Most common</small></span></label>
-              <label class="pq-opt"><input type="radio" name="transport" value="Enclosed"><span class="pq-opt-body"><b>Enclosed</b><small>Extra protection</small></span></label>
+      <div class="pq-body">
+        <div class="pq-steps" id="pqSteps">
+          <div class="pq-step is-active"><span>1</span><label>Route</label></div>
+          <div class="pq-step"><span>2</span><label>Vehicle</label></div>
+          <div class="pq-step"><span>3</span><label>Contact</label></div>
+        </div>
+        <form id="pqForm" novalidate>
+          <div class="pq-panel is-current" data-panel="1">
+            <div class="pq-field"><label for="pq-pickup">Pickup location</label><div class="pq-inp"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg><input id="pq-pickup" name="pickup" placeholder="City or ZIP code" required></div></div>
+            <div class="pq-field"><label for="pq-delivery">Delivery location</label><div class="pq-inp"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg><input id="pq-delivery" name="delivery" placeholder="City or ZIP code" required></div></div>
+            <div class="pq-field"><label>Trailer type</label>
+              <div class="pq-opts">
+                <label class="pq-opt"><input type="radio" name="transport" value="Open" checked><span class="pq-opt-body"><span class="oi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 17h4V5H2v12h3"/><path d="M20 17h2v-3.3a4 4 0 0 0-1.2-2.9L19 9h-5v8h1"/><circle cx="7.5" cy="17.5" r="2"/><circle cx="17.5" cy="17.5" r="2"/></svg></span><span class="ot"><b>Open</b><small>Most common</small></span></span></label>
+                <label class="pq-opt"><input type="radio" name="transport" value="Enclosed"><span class="pq-opt-body"><span class="oi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 8 12 3 3 8l9 5 9-5Z"/><path d="M3 8v8l9 5 9-5V8"/><path d="M12 13v8"/></svg></span><span class="ot"><b>Enclosed</b><small>Extra care</small></span></span></label>
+              </div>
             </div>
+            <button type="button" class="pq-btn" data-next>Continue <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
           </div>
-          <button type="button" class="pq-btn" data-next>Next: Vehicle Details &#8594;</button>
-        </div>
-        <div class="pq-panel" data-panel="2">
-          <div class="pq-row">
-            <div class="pq-field"><label for="pq-year">Year</label><input id="pq-year" name="year" placeholder="2021" inputmode="numeric"></div>
-            <div class="pq-field"><label for="pq-make">Make</label><input id="pq-make" name="make" placeholder="Toyota"></div>
-          </div>
-          <div class="pq-field"><label for="pq-model">Model</label><input id="pq-model" name="model" placeholder="Camry"></div>
-          <div class="pq-field"><label for="pq-vtype">Vehicle Type</label><select id="pq-vtype" name="vtype"><option>Sedan</option><option>SUV / Crossover</option><option>Pickup Truck</option><option>Van / Minivan</option><option>Motorcycle</option><option>Other</option></select></div>
-          <div class="pq-field"><label>Is it running?</label>
-            <div class="pq-opts">
-              <label class="pq-opt"><input type="radio" name="running" value="Runs" checked><span class="pq-opt-body"><b>Runs</b></span></label>
-              <label class="pq-opt"><input type="radio" name="running" value="Not running"><span class="pq-opt-body"><b>Doesn&#8217;t run</b></span></label>
+          <div class="pq-panel" data-panel="2">
+            <div class="pq-row">
+              <div class="pq-field"><label for="pq-year">Year</label><input id="pq-year" name="year" placeholder="2021" inputmode="numeric"></div>
+              <div class="pq-field"><label for="pq-make">Make</label><input id="pq-make" name="make" placeholder="Toyota"></div>
             </div>
+            <div class="pq-field"><label for="pq-model">Model</label><input id="pq-model" name="model" placeholder="Camry"></div>
+            <div class="pq-field"><label for="pq-vtype">Vehicle type</label><div class="pq-inp"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13l1.5-4.5A2 2 0 0 1 8.4 7h7.2a2 2 0 0 1 1.9 1.5L19 13"/><path d="M5 13h14v4a1 1 0 0 1-1 1h-1a1 1 0 0 1-1-1v-1H8v1a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1v-4Z"/><circle cx="7.5" cy="15.5" r="1"/><circle cx="16.5" cy="15.5" r="1"/></svg><select id="pq-vtype" name="vtype"><option>Sedan</option><option>SUV / Crossover</option><option>Pickup Truck</option><option>Van / Minivan</option><option>Motorcycle</option><option>Other</option></select></div></div>
+            <div class="pq-field"><label>Is it running?</label>
+              <div class="pq-opts">
+                <label class="pq-opt"><input type="radio" name="running" value="Runs" checked><span class="pq-opt-body"><span class="oi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><span class="ot"><b>Runs</b></span></span></label>
+                <label class="pq-opt"><input type="radio" name="running" value="Not running"><span class="pq-opt-body"><span class="oi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.2L3 17.8 6.2 21l6.3-6.3a4 4 0 0 0 5.2-5.4l-2.5 2.5-2.3-.6-.6-2.3 2.4-2.6Z"/></svg></span><span class="ot"><b>Doesn&#8217;t run</b></span></span></label>
+              </div>
+            </div>
+            <div class="pq-nav"><button type="button" class="pq-btn-ghost" data-back>Back</button><button type="button" class="pq-btn" data-next>Continue <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button></div>
           </div>
-          <div class="pq-nav"><button type="button" class="pq-btn-ghost" data-back>&#8592; Back</button><button type="button" class="pq-btn" data-next>Next: Contact &#8594;</button></div>
-        </div>
-        <div class="pq-panel" data-panel="3">
-          <div class="pq-field" id="pq-pickup-field"><label for="pq-timeframe">Pickup Timeframe</label>
-            <select id="pq-timeframe" name="timeframe">
-              <option value="asap">As soon as possible</option>
-              <option value="within_1_week">Within 1 week</option>
-              <option value="within_2_weeks">Within 2 weeks</option>
-              <option value="beyond_2_weeks">More than 2 weeks</option>
-            </select>
+          <div class="pq-panel" data-panel="3">
+            <div class="pq-field" id="pq-pickup-field"><label for="pq-timeframe">Pickup timeframe</label><div class="pq-inp"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg><select id="pq-timeframe" name="timeframe"><option value="asap">As soon as possible</option><option value="within_1_week">Within 1 week</option><option value="within_2_weeks">Within 2 weeks</option><option value="beyond_2_weeks">More than 2 weeks</option></select></div></div>
+            <div class="pq-field" id="pq-date-field" style="display:none"><label for="pq-date">Preferred pickup date</label><div class="pq-inp"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg><input id="pq-date" name="date" type="date"></div></div>
+            <div class="pq-field"><label for="pq-name">Full name</label><div class="pq-inp"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg><input id="pq-name" name="name" autocomplete="name" required></div></div>
+            <div class="pq-row">
+              <div class="pq-field"><label for="pq-email">Email</label><div class="pq-inp"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg><input id="pq-email" name="email" type="email" autocomplete="email" required></div></div>
+              <div class="pq-field"><label for="pq-phone">Phone</label><div class="pq-inp"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"/></svg><input id="pq-phone" name="phone" type="tel" autocomplete="tel" required></div></div>
+            </div>
+            <div class="pq-nav"><button type="button" class="pq-btn-ghost" data-back>Back</button><button type="submit" class="pq-btn">Get My Quote <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button></div>
           </div>
-          <div class="pq-field" id="pq-date-field" style="display:none"><label for="pq-date">Preferred Pickup Date</label><input id="pq-date" name="date" type="date"></div>
-          <div class="pq-field"><label for="pq-name">Full Name</label><input id="pq-name" name="name" autocomplete="name" required></div>
-          <div class="pq-row">
-            <div class="pq-field"><label for="pq-email">Email</label><input id="pq-email" name="email" type="email" autocomplete="email" required></div>
-            <div class="pq-field"><label for="pq-phone">Phone</label><input id="pq-phone" name="phone" type="tel" autocomplete="tel" required></div>
+          <p class="pq-secure"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>Your information is secure &amp; encrypted</p>
+          <p class="pq-error" id="pqError"></p>
+        </form>
+        <div class="pq-result" id="pqResult">
+          <div class="pq-loading" id="pqLoading"><div class="pq-spin"></div><span id="pqLoadingText">Getting your quote&#8230;</span></div>
+          <div class="pq-quote" id="pqQuote">
+            <div class="pq-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></div>
+            <p class="pq-eyebrow" id="pqEyebrow">Your instant quote</p>
+            <div class="pq-price" id="pqPrice">&#8212;</div>
+            <p class="pq-route" id="pqRoute"></p>
+            <p class="pq-note" id="pqNote">All-in price &#8212; no hidden fees.</p>
+            <div class="pq-cta">
+              <a class="pq-btn" id="pqBookBtn" href="#" style="display:none">Continue to Booking <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+              <a class="pq-btn-ghost" id="pqCallBtn" href="tel:+18664992815">Call to Book &#183; (866) 499-2815</a>
+            </div>
+            <button type="button" class="pq-again" id="pqAgain">Start a new quote</button>
           </div>
-          <div class="pq-nav"><button type="button" class="pq-btn-ghost" data-back>&#8592; Back</button><button type="submit" class="pq-btn">Get My Quote &#8594;</button></div>
-        </div>
-        <p class="pq-secure"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg> Your information is secure and encrypted</p>
-        <p class="pq-error" id="pqError"></p>
-      </form>
-      <div class="pq-result" id="pqResult">
-        <div class="pq-loading" id="pqLoading"><div class="pq-spin"></div><span id="pqLoadingText">Getting your quote&#8230;</span></div>
-        <div class="pq-quote" id="pqQuote">
-          <p class="pq-eyebrow" id="pqEyebrow">Your instant quote</p>
-          <div class="pq-price" id="pqPrice">&#8212;</div>
-          <p class="pq-route" id="pqRoute"></p>
-          <p class="pq-note" id="pqNote">All-in price &#8212; no hidden fees.</p>
-          <div class="pq-cta">
-            <a class="pq-btn" id="pqBookBtn" href="#" style="display:none">Continue to Booking &#8594;</a>
-            <a class="pq-btn pq-btn-ghost" id="pqCallBtn" href="tel:+18664992815" style="text-decoration:none">Call to Book &#183; (866) 499-2815</a>
-          </div>
-          <button type="button" class="pq-again" id="pqAgain">Start a new quote</button>
         </div>
       </div>
     </div>
