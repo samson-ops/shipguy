@@ -1397,7 +1397,6 @@ body.ready .reveal{opacity:1;transform:none}
       .then(function(res){
         if(!res.ok || !res.body || !res.body.id){var m=res.body&&res.body.errors?String(Object.values(res.body.errors)[0]):'We could not process that. Please check your details.';throw new Error(m);}
         var lead=res.body;
-        if(lead.bookingLink){ setLoading('Taking you to your booking page...'); window.location.href=lead.bookingLink; return {redirecting:true}; }
         var statusUrl=LEAD_SAVE_URL.replace('/save','/'+lead.id+'/booking-status');
         setLoading('Getting your best price\u2026');
         return pollStatus(statusUrl, lead.bookingLink, 0);
@@ -1405,7 +1404,7 @@ body.ready .reveal{opacity:1;transform:none}
   }
   function pollStatus(url, bookingLink, startTime, tries){
     startTime = startTime || Date.now(); tries = tries || 0;
-    if(Date.now() - startTime > 8000) return Promise.resolve({bookingLink:bookingLink, price:null, manual:false, timedOut:true});
+    if(Date.now() - startTime > 20000) return Promise.resolve({bookingLink:bookingLink, price:null, manual:false, timedOut:true});
     return new Promise(function(res){setTimeout(res, tries===0?400:1000);}).then(function(){
       return fetch(url).then(function(r){return r.json();}).then(function(s){
         var link=s.bookingLink||bookingLink;
@@ -1437,6 +1436,9 @@ body.ready .reveal{opacity:1;transform:none}
       eyebrow.textContent = res.demo ? 'Your estimated price' : 'Your instant quote';
       priceEl.textContent='$'+Number(res.price).toLocaleString(); priceEl.style.fontSize='38px';
       note.textContent = res.demo ? 'Sample estimate for preview. Add your BeRocker Lead save URL for live pricing.' : 'All-in price \u2014 no hidden fees. Continue to lock in your booking.';
+    } else if(res.failed){
+      eyebrow.textContent='Almost there'; priceEl.textContent='Call for your price'; priceEl.style.fontSize='24px';
+      note.textContent='We could not price this online right now \u2014 call us and we will quote it for you.';
     } else if(res.timedOut){
       eyebrow.textContent='Your quote is ready'; priceEl.textContent='See your price'; priceEl.style.fontSize='25px';
       note.textContent='Tap Continue to Booking to see your exact price and reserve your pickup.';
@@ -1457,7 +1459,10 @@ body.ready .reveal{opacity:1;transform:none}
     if(errBox) errBox.style.display='none';
     form.style.display='none'; if(stepsBar) stepsBar.style.display='none';
     result.classList.add('show'); loading.style.display='block'; quote.classList.remove('show'); setLoading('Getting your quote\u2026');
-    submitLead(data).then(function(res){render(res,data);}).catch(function(err){
+    submitLead(data).then(function(res){
+      if(res && res.bookingLink && !res.demo && (res.price || res.timedOut)){ setLoading('Taking you to your booking page...'); window.location.href=res.bookingLink; return; }
+      render(res,data);
+    }).catch(function(err){
       // fall back to a sample estimate so the visitor still sees something, and surface the reason
       demoQuote(data).then(function(d){ d.demo=true; d.liveError=(err&&err.message)?err.message:'no response from the pricing service (possible CORS block)'; render(d,data);
         if(errBox){errBox.textContent=(err&&err.message?err.message+' ':'')+'(showing a sample estimate)'; }
