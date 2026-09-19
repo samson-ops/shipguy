@@ -1396,21 +1396,24 @@ body.ready .reveal{opacity:1;transform:none}
       .then(function(r){return r.json().then(function(j){return {ok:r.ok,body:j};});})
       .then(function(res){
         if(!res.ok || !res.body || !res.body.id){var m=res.body&&res.body.errors?String(Object.values(res.body.errors)[0]):'We could not process that. Please check your details.';throw new Error(m);}
-        var lead=res.body, statusUrl=LEAD_SAVE_URL.replace('/save','/'+lead.id+'/booking-status');
-        setLoading('Calculating your price\u2026');
+        var lead=res.body;
+        if(lead.bookingLink){ setLoading('Taking you to your booking page...'); window.location.href=lead.bookingLink; return {redirecting:true}; }
+        var statusUrl=LEAD_SAVE_URL.replace('/save','/'+lead.id+'/booking-status');
+        setLoading('Getting your best price\u2026');
         return pollStatus(statusUrl, lead.bookingLink, 0);
       });
   }
-  function pollStatus(url, bookingLink, tries){
-    if(tries>28) return Promise.resolve({bookingLink:bookingLink, price:null, manual:false});
-    return new Promise(function(res){setTimeout(res, tries===0?900:2000);}).then(function(){
+  function pollStatus(url, bookingLink, startTime, tries){
+    startTime = startTime || Date.now(); tries = tries || 0;
+    if(Date.now() - startTime > 8000) return Promise.resolve({bookingLink:bookingLink, price:null, manual:false, timedOut:true});
+    return new Promise(function(res){setTimeout(res, tries===0?400:1000);}).then(function(){
       return fetch(url).then(function(r){return r.json();}).then(function(s){
         var link=s.bookingLink||bookingLink;
         if(s.priceReady) return {bookingLink:link, price:s.price, manual:false};
         if(s.manualReview) return {bookingLink:link, price:null, manual:true};
         if(s.priceFailed) return {bookingLink:link, price:null, manual:false, failed:true};
-        return pollStatus(url, link, tries+1);
-      });
+        return pollStatus(url, link, startTime, tries+1);
+      }).catch(function(){ return pollStatus(url, bookingLink, startTime, tries+1); });
     });
   }
   function demoQuote(data){
@@ -1424,6 +1427,7 @@ body.ready .reveal{opacity:1;transform:none}
   var loadingText=document.getElementById('pqLoadingText'), loading=document.getElementById('pqLoading'), quote=document.getElementById('pqQuote'), result=document.getElementById('pqResult'), errBox=document.getElementById('pqError');
   function setLoading(t){if(loadingText)loadingText.textContent=t;}
   function render(res, data){
+    if(res && res.redirecting){ return; }
     loading.style.display='none';
     var priceEl=document.getElementById('pqPrice'), eyebrow=document.getElementById('pqEyebrow'), note=document.getElementById('pqNote'), book=document.getElementById('pqBookBtn');
     if(res.manual){
@@ -1433,6 +1437,9 @@ body.ready .reveal{opacity:1;transform:none}
       eyebrow.textContent = res.demo ? 'Your estimated price' : 'Your instant quote';
       priceEl.textContent='$'+Number(res.price).toLocaleString(); priceEl.style.fontSize='38px';
       note.textContent = res.demo ? 'Sample estimate for preview. Add your BeRocker Lead save URL for live pricing.' : 'All-in price \u2014 no hidden fees. Continue to lock in your booking.';
+    } else if(res.timedOut){
+      eyebrow.textContent='Your quote is ready'; priceEl.textContent='See your price'; priceEl.style.fontSize='25px';
+      note.textContent='Tap Continue to Booking to see your exact price and reserve your pickup.';
     } else {
       eyebrow.textContent='Almost there'; priceEl.textContent='Get your quote'; priceEl.style.fontSize='23px';
       note.textContent='Continue to see your price and book, or call us now.';
