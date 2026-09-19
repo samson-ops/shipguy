@@ -1437,6 +1437,7 @@ body.ready .reveal{opacity:1;transform:none}
       eyebrow.textContent='Almost there'; priceEl.textContent='Get your quote'; priceEl.style.fontSize='23px';
       note.textContent='Continue to see your price and book, or call us now.';
     }
+    if(res.liveError){eyebrow.textContent='Estimated price';note.textContent='⚠ Live pricing did not respond: '+res.liveError+'. Showing a sample — call for your exact quote.';}
     document.getElementById('pqRoute').textContent=(data.pickup||'')+' \u2192 '+(data.delivery||'')+'  \u00b7  '+(data.transport||'Open')+' transport';
     if(res.bookingLink){book.href=res.bookingLink; book.style.display='';}
     quote.classList.add('show');
@@ -1451,7 +1452,7 @@ body.ready .reveal{opacity:1;transform:none}
     result.classList.add('show'); loading.style.display='block'; quote.classList.remove('show'); setLoading('Getting your quote\u2026');
     submitLead(data).then(function(res){render(res,data);}).catch(function(err){
       // fall back to a sample estimate so the visitor still sees something, and surface the reason
-      demoQuote(data).then(function(d){ d.demo=true; render(d,data);
+      demoQuote(data).then(function(d){ d.demo=true; d.liveError=(err&&err.message)?err.message:'no response from the pricing service (possible CORS block)'; render(d,data);
         if(errBox){errBox.textContent=(err&&err.message?err.message+' ':'')+'(showing a sample estimate)'; }
       });
     });
