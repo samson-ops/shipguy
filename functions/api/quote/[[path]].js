@@ -3,14 +3,14 @@
 //
 // The lead-source key is read from an env var if set (recommended), else this default.
 // To use an env var: Cloudflare dashboard -> your Pages project -> Settings ->
-// Environment variables -> add  BEROCKER_LEAD_KEY = 6aa2e631abc36
+// Environment variables -> add  BEROCKER_LEAD_KEY = <your lead source key>
 const DEFAULT_KEY = '6aa2e631abc36';
 
 export async function onRequest(context) {
   const { request, params, env } = context;
   const key = (env && env.BEROCKER_LEAD_KEY) || DEFAULT_KEY;
   const sub = Array.isArray(params.path) ? params.path.join('/') : (params.path || '');
-  const base = 'https://app.berocker.com/api/v1/auto-logistics/client/webhooks/lead/' + key;
+  const base = 'https://app.shipguy.com/api/v1/auto-logistics/client/webhooks/lead/' + key;
   const target = base + (sub ? '/' + sub : '');
 
   const init = { method: request.method, headers: { 'Content-Type': 'application/json' } };
