@@ -642,6 +642,12 @@ body.ready .reveal{opacity:1;transform:none}
   .pq-cta a{width:100%;justify-content:center;text-decoration:none}
   .pq-again{display:block;margin:13px auto 0;background:none;border:0;color:var(--brand);font-weight:600;font-size:13px;cursor:pointer}
   @media (max-width:520px){.pq-row,.pq-opts{grid-template-columns:1fr}.pq-steps{font-size:12px}.pq-step{padding:8px 4px;gap:5px}}
+  .pac-container{z-index:10000;font-family:"Inter",system-ui,sans-serif;border-radius:10px;box-shadow:0 14px 34px -12px rgba(13,26,80,.4);border:1px solid var(--line);margin-top:4px;overflow:hidden}
+  .pac-item{padding:9px 13px;font-size:14px;color:var(--ink-2);cursor:pointer;border-top:1px solid #f0f2f8}
+  .pac-item:first-child{border-top:0}
+  .pac-item:hover,.pac-item-selected{background:var(--brand-tint)}
+  .pac-item-query{font-size:14px;color:#101a3d}
+  .pac-icon{margin-top:2px}
 </style>
 </head>
 <body>
@@ -1379,9 +1385,15 @@ body.ready .reveal{opacity:1;transform:none}
       secondary_id: 'WEB-'+Date.now(),
       vehicles:[{vehicle_model_year: parseInt(data.year,10)||undefined, vehicle_make: data.make||undefined, vehicle_model: data.model||undefined, vehicle_type: mapType(data.vtype), vehicle_inop: data.running==='Not running'}]
     };
-    var pk=(data.pickup||'').trim(), dl=(data.delivery||'').trim();
-    if(/^\d{5}$/.test(pk)) payload.origin_postal_code=pk; else payload.origin_city=pk;
-    if(/^\d{5}$/.test(dl)) payload.destination_postal_code=dl; else payload.destination_city=dl;
+    function setLoc(prefix, raw, elId){
+      var el=document.getElementById(elId), d=el&&el.dataset?el.dataset:{}, zip=d.zip||'', city=d.city||'', st=d.state||'';
+      raw=(raw||'').trim();
+      if(zip){payload[prefix+'_postal_code']=zip; if(city)payload[prefix+'_city']=city; if(st)payload[prefix+'_state']=st;}
+      else if(/^\d{5}$/.test(raw)){payload[prefix+'_postal_code']=raw;}
+      else {payload[prefix+'_city']=city||raw; if(st)payload[prefix+'_state']=st;}
+    }
+    setLoc('origin', data.pickup, 'pq-pickup');
+    setLoc('destination', data.delivery, 'pq-delivery');
     if(data.timeframe) payload.pickup_timeframe=data.timeframe; else if(data.date) payload.ship_date=data.date;
     return fetch(LEAD_SAVE_URL,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)})
       .then(function(r){return r.json().then(function(j){return {ok:r.ok,body:j};});})
@@ -1452,5 +1464,33 @@ body.ready .reveal{opacity:1;transform:none}
 })();
 </script>
 
+<script>
+/* Google Places autocomplete for the Pickup/Delivery fields */
+function pqInitPlaces(){
+  if(!(window.google && google.maps && google.maps.places)) return;
+  ['pq-pickup','pq-delivery'].forEach(function(id){
+    var el=document.getElementById(id); if(!el) return;
+    try{
+      var ac=new google.maps.places.Autocomplete(el,{componentRestrictions:{country:'us'},fields:['address_components','formatted_address'],types:['(regions)']});
+      ac.addListener('place_changed',function(){
+        var p=ac.getPlace(); if(!p||!p.address_components) return;
+        var zip='',city='',state='';
+        p.address_components.forEach(function(c){
+          if(c.types.indexOf('postal_code')>-1) zip=c.long_name;
+          if(c.types.indexOf('locality')>-1) city=c.long_name;
+          if(!city && c.types.indexOf('postal_town')>-1) city=c.long_name;
+          if(!city && c.types.indexOf('sublocality')>-1) city=c.long_name;
+          if(c.types.indexOf('administrative_area_level_1')>-1) state=c.short_name;
+        });
+        el.dataset.zip=zip; el.dataset.city=city; el.dataset.state=state;
+        el.value = city ? (city+(state?', '+state:'')+(zip?' '+zip:'')) : (zip||p.formatted_address||el.value);
+        el.classList.remove('err');
+      });
+      el.addEventListener('input',function(){el.dataset.zip='';el.dataset.city='';el.dataset.state='';});
+    }catch(e){}
+  });
+}
+</script>
+<script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDdLtDsWA23EBnDjGpXKueVzudvUVbopi8&libraries=places&loading=async&callback=pqInitPlaces"></script>
 </body>
 </html>
