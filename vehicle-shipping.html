@@ -794,12 +794,9 @@ body.ready .reveal{opacity:1;transform:none}
           <button type="button" class="pq-btn" data-next>Next: Vehicle Details</button>
         </div>
         <div class="pq-panel" data-panel="2">
-          <div class="pq-row">
-            <div class="pq-field"><label for="pq-year">Year</label><input id="pq-year" name="year" placeholder="2021" inputmode="numeric"></div>
-            <div class="pq-field"><label for="pq-make">Make</label><input id="pq-make" name="make" placeholder="Toyota"></div>
-          </div>
-          <div class="pq-field"><label for="pq-model">Model</label><input id="pq-model" name="model" placeholder="Camry"></div>
-          <div class="pq-field"><label for="pq-vtype">Vehicle Type</label><select id="pq-vtype" name="vtype"><option>Sedan</option><option>SUV / Crossover</option><option>Pickup Truck</option><option>Van / Minivan</option><option>Motorcycle</option><option>Other</option></select></div>
+          <div class="pq-field"><label for="pq-year">Year</label><select id="pq-year" name="year" required><option value="">Select year&#8230;</option></select></div>
+          <div class="pq-field"><label for="pq-make">Make</label><select id="pq-make" name="make" required disabled><option value="">Select a year first</option></select></div>
+          <div class="pq-field"><label for="pq-model">Model</label><select id="pq-model" name="model" required disabled><option value="">Select a make first</option></select></div>
           <div class="pq-field"><label>Is it running?</label>
             <div class="pq-opts">
               <label class="pq-opt"><input type="radio" name="running" value="Runs" checked><span class="pq-opt-body"><b>Runs</b></span></label>
@@ -1351,7 +1348,7 @@ body.ready .reveal{opacity:1;transform:none}
   var stepsBar=document.querySelector('#pquote .pq-steps');
   var cur=0;
   function show(i){panels.forEach(function(p,x){p.classList.toggle('is-current',x===i);});steps.forEach(function(sp,x){sp.classList.toggle('is-active',x===i);sp.classList.toggle('is-done',x<i);});cur=i;}
-  function validate(i){var ok=true;panels[i].querySelectorAll('input[required]').forEach(function(inp){if(!inp.value.trim()){inp.classList.add('err');ok=false;}else inp.classList.remove('err');});var em=panels[i].querySelector('input[type=email]');if(em&&em.value&&!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(em.value)){em.classList.add('err');ok=false;}return ok;}
+  function validate(i){var ok=true;panels[i].querySelectorAll('input[required],select[required]').forEach(function(inp){if(inp.disabled)return; if(!inp.value.trim()){inp.classList.add('err');ok=false;}else inp.classList.remove('err');});var em=panels[i].querySelector('input[type=email]');if(em&&em.value&&!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(em.value)){em.classList.add('err');ok=false;}return ok;}
   form.querySelectorAll('[data-next]').forEach(function(b){b.addEventListener('click',function(){if(validate(cur))show(cur+1);});});
   form.querySelectorAll('[data-back]').forEach(function(b){b.addEventListener('click',function(){show(cur-1);});});
   form.querySelectorAll('input').forEach(function(inp){inp.addEventListener('input',function(){inp.classList.remove('err');});});
@@ -1383,7 +1380,7 @@ body.ready .reveal{opacity:1;transform:none}
       last_name: nm.slice(1).join(' ')||undefined, email: data.email||undefined,
       transport_type: (data.transport||'Open').toLowerCase(),
       secondary_id: 'WEB-'+Date.now(),
-      vehicles:[{vehicle_model_year: parseInt(data.year,10)||undefined, vehicle_make: data.make||undefined, vehicle_model: data.model||undefined, vehicle_type: mapType(data.vtype), vehicle_inop: data.running==='Not running'}]
+      vehicles:[{vehicle_model_year: parseInt(data.year,10)||undefined, vehicle_make: data.make||undefined, vehicle_model: data.model||undefined, vehicle_type: (function(){var m=document.getElementById('pq-model');return m&&m.dataset&&m.dataset.vtype?m.dataset.vtype:undefined;})(), vehicle_inop: data.running==='Not running'}]
     };
     function setLoc(prefix, raw, elId){
       var el=document.getElementById(elId), d=el&&el.dataset?el.dataset:{}, zip=d.zip||'', city=d.city||'', st=d.state||'';
@@ -1492,5 +1489,47 @@ function pqInitPlaces(){
 }
 </script>
 <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDdLtDsWA23EBnDjGpXKueVzudvUVbopi8&libraries=places&loading=async&callback=pqInitPlaces"></script>
+<script>
+/* BeRocker Vehicle Database API - cascading Year -> Make -> Model pickers */
+(function(){
+  var API='https://app.berocker.com/api/v1/vehicles';
+  var KEY='bvk_vNxhnCfzk1XKqztmtfnf1exrm0aZmormR9smaNJdGoniaaQg';
+  var yearSel=document.getElementById('pq-year'), makeSel=document.getElementById('pq-make'), modelSel=document.getElementById('pq-model');
+  if(!yearSel||!makeSel||!modelSel) return;
+  function get(path, params){
+    var url=new URL(API+path);
+    if(params) Object.keys(params).forEach(function(k){url.searchParams.set(k,params[k]);});
+    return fetch(url.toString(),{headers:{'X-Api-Key':KEY}}).then(function(r){if(!r.ok)throw new Error('HTTP '+r.status);return r.json();}).then(function(j){return j.data||[];});
+  }
+  function fillSel(sel, items, getLabel, getVal, placeholder, getType){
+    sel.innerHTML='';
+    var o=document.createElement('option'); o.value=''; o.textContent=placeholder; sel.appendChild(o);
+    items.forEach(function(it){var op=document.createElement('option'); op.value=getVal(it); op.textContent=getLabel(it); if(getType)op.setAttribute('data-type',getType(it)||''); sel.appendChild(op);});
+    sel.disabled=items.length===0;
+  }
+  get('/years').then(function(years){ fillSel(yearSel, years, function(y){return y;}, function(y){return y;}, 'Select year…'); })
+    .catch(function(){ yearSel.innerHTML='<option value="">Select year…</option>'; });
+  yearSel.addEventListener('change', function(){
+    makeSel.innerHTML='<option value="">Select a year first</option>'; makeSel.disabled=true;
+    modelSel.innerHTML='<option value="">Select a make first</option>'; modelSel.disabled=true; modelSel.dataset.vtype='';
+    if(!yearSel.value) return;
+    makeSel.innerHTML='<option value="">Loading…</option>'; makeSel.disabled=true;
+    get('/makes',{year:yearSel.value}).then(function(makes){ fillSel(makeSel, makes, function(m){return m.name;}, function(m){return m.name;}, 'Select make…'); })
+      .catch(function(){ makeSel.innerHTML='<option value="">Could not load makes</option>'; makeSel.disabled=false; });
+  });
+  makeSel.addEventListener('change', function(){
+    modelSel.innerHTML='<option value="">Select a make first</option>'; modelSel.disabled=true; modelSel.dataset.vtype='';
+    if(!makeSel.value) return;
+    modelSel.innerHTML='<option value="">Loading…</option>'; modelSel.disabled=true;
+    get('/models',{year:yearSel.value, make:makeSel.value}).then(function(models){ fillSel(modelSel, models, function(m){return m.name;}, function(m){return m.name;}, 'Select model…', function(m){return m.type;}); })
+      .catch(function(){ modelSel.innerHTML='<option value="">Could not load models</option>'; modelSel.disabled=false; });
+  });
+  modelSel.addEventListener('change', function(){
+    var op=modelSel.options[modelSel.selectedIndex];
+    modelSel.dataset.vtype = op ? (op.getAttribute('data-type')||'') : '';
+    modelSel.classList.remove('err');
+  });
+})();
+</script>
 </body>
 </html>
