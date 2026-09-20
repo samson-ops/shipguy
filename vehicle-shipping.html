@@ -823,6 +823,12 @@ body.ready .reveal{opacity:1;transform:none}
     body.vsbright .btn-call .num-full{display:none}
     body.vsbright .btn-call .num-short{display:inline}
   }
+  body.vsbright .pq-trustbar{display:flex;flex-wrap:wrap;justify-content:center;gap:7px 13px;margin:15px 0 0;padding-top:14px;border-top:1px solid var(--line)}
+  body.vsbright .pq-trustbar span{display:inline-flex;align-items:center;gap:5px;font-size:11px;font-weight:700;color:var(--ink-2);white-space:nowrap}
+  body.vsbright .pq-trustbar svg{width:13px;height:13px;color:var(--brand);flex:0 0 auto}
+  body.vsbright .hero-creds{display:flex;flex-wrap:wrap;gap:8px 10px;margin-top:22px}
+  body.vsbright .hero-creds span{display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:700;color:var(--ink-2);background:#eaf0fd;border:1px solid #dbe4fb;padding:6px 11px;border-radius:999px}
+  body.vsbright .hero-creds svg{width:13px;height:13px;color:var(--brand)}
 </style>
 </head>
 <body class="vsbright">
@@ -901,9 +907,13 @@ body.ready .reveal{opacity:1;transform:none}
       <p class="lede reveal d2">Fully insured, door-to-door car shipping anywhere in the U.S. — fast, transparent pricing in seconds.</p>
       <div class="hero-badges reveal d3">
         <div class="hb"><span class="hb-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/><path d="m9 12 2 2 4-4"/></svg></span><span><b>Fully Insured Transport</b><small>Your vehicle is protected</small></span></div>
-        <div class="hb"><span class="hb-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1.5" x2="12" y2="22.5"/><path d="M17 5.5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></span><span><b>Competitive Pricing</b><small>No hidden fees</small></span></div>
+        <div class="hb"><span class="hb-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1.5" x2="12" y2="22.5"/><path d="M17 5.5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></span><span><b>Competitive Pricing</b><small>No hidden fees or deposit</small></span></div>
         <div class="hb"><span class="hb-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M4 13a8 8 0 0 1 16 0"/><rect x="2" y="13" width="4.4" height="7" rx="1.6"/><rect x="17.6" y="13" width="4.4" height="7" rx="1.6"/><path d="M20 19.5v.5a3 3 0 0 1-3 3h-3"/></svg></span><span><b>24/7 Support</b><small>Real people. Real answers.</small></span></div>
       </div>
+      <div class="hero-creds reveal d3">
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v5c0 5-3.5 8.5-7 10-3.5-1.5-7-5-7-10V6l7-3Z"/><path d="m9 12 2 2 4-4"/></svg>Licensed &amp; Insured Broker</span>
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>FMCSA MC #1457715 &middot; DOT #3932149</span>
+        </div>
       </div>
     </div>
 
@@ -911,7 +921,7 @@ body.ready .reveal{opacity:1;transform:none}
     <div class="pquote" id="pquote">
       <div class="pq-head-row"><span class="pq-lightning"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M13 2 4.5 13.5H11l-1 8.5L19.5 10H13l1-8Z"/></svg></span><div><h3 class="pq-title">Get Your Instant Quote</h3><p class="pq-sub">Fast, secure pricing in 30 seconds.</p></div></div>
       <div class="pq-progress" id="pqProgress">
-        <div class="pq-progress-top"><span id="pqStepName">Route</span><span id="pqStepCount">Step 1 of 3</span></div>
+        <div class="pq-progress-top"><span id="pqStepName">Route</span><span id="pqStepCount">Free &middot; No obligation</span></div>
         <div class="pq-progress-track"><div class="pq-progress-fill" id="pqProgressFill"></div></div>
       </div>
       <form id="pqForm" novalidate>
@@ -948,9 +958,9 @@ body.ready .reveal{opacity:1;transform:none}
           <div class="pq-field"><label for="pq-email"><span class="req">*</span>Email Address</label><div class="pq-inp"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg><input id="pq-email" name="email" type="email" placeholder="Enter email address" autocomplete="email" required></div></div>
           <div class="pq-field"><label for="pq-phone"><span class="req">*</span>Phone Number</label><div class="pq-inp"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"/></svg><input id="pq-phone" name="phone" type="tel" placeholder="Enter phone number" autocomplete="tel" required></div></div>
           <label class="pq-consent"><input type="checkbox" name="sms_consent" id="pq-consent"><span>By submitting this form, you consent to receive recurring SMS updates and notifications from Ship Guy Logistics regarding your requests and services. Message frequency may vary. Message &amp; data rates may apply. Consent is not a condition of purchase. Reply STOP to unsubscribe or HELP for assistance. For support, call <a href="tel:+18664992815">(866)&nbsp;499-2815</a> or visit <a href="https://shipguy.com">shipguy.com</a>.</span></label>
-          <div class="pq-nav"><button type="button" class="pq-btn-ghost" data-back>Back</button><button type="submit" class="pq-btn">Get My Quote</button></div>
+          <div class="pq-nav"><button type="button" class="pq-btn-ghost" data-back>Back</button><button type="submit" class="pq-btn">Get My Instant Quote</button></div>
         </div>
-        <p class="pq-secure"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>Your information is secure and encrypted</p>
+        <div class="pq-trustbar"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v5c0 5-3.5 8.5-7 10-3.5-1.5-7-5-7-10V6l7-3Z"/><path d="m9 12 2 2 4-4"/></svg>Licensed &amp; Insured</span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>No Upfront Deposit</span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>FMCSA MC #1457715</span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>Secure &amp; private</span></div>
         <p class="pq-error" id="pqError"></p>
       </form>
       <div class="pq-result" id="pqResult">
@@ -1479,7 +1489,7 @@ body.ready .reveal{opacity:1;transform:none}
   var panels=[].slice.call(document.querySelectorAll('#pquote .pq-panel'));
   var stepsBar=document.querySelector('#pquote .pq-progress');
   var cur=0;
-  function show(i){panels.forEach(function(p,x){p.classList.toggle('is-current',x===i);});steps.forEach(function(sp,x){sp.classList.toggle('is-active',x===i);sp.classList.toggle('is-done',x<i);});cur=i;var names=['Route','Vehicle','Contact'];var fill=document.getElementById('pqProgressFill');if(fill)fill.style.width=((i+1)/panels.length*100)+'%';var nm=document.getElementById('pqStepName');if(nm)nm.textContent=names[i]||'';var ct=document.getElementById('pqStepCount');if(ct)ct.textContent='Step '+(i+1)+' of '+panels.length;}
+  function show(i){panels.forEach(function(p,x){p.classList.toggle('is-current',x===i);});steps.forEach(function(sp,x){sp.classList.toggle('is-active',x===i);sp.classList.toggle('is-done',x<i);});cur=i;var names=['Route','Vehicle','Contact'];var fill=document.getElementById('pqProgressFill');if(fill)fill.style.width=((i+1)/panels.length*100)+'%';var nm=document.getElementById('pqStepName');if(nm)nm.textContent=names[i]||'';}
   function validate(i){var ok=true;panels[i].querySelectorAll('input[required],select[required]').forEach(function(inp){if(inp.disabled)return; if(!inp.value.trim()){inp.classList.add('err');ok=false;}else inp.classList.remove('err');});var em=panels[i].querySelector('input[type=email]');if(em&&em.value&&!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(em.value)){em.classList.add('err');ok=false;}return ok;}
   function validateAll(){var ok=true;form.querySelectorAll('input[required],select[required]').forEach(function(el){if(el.disabled)return;if(!el.value.trim()){el.classList.add('err');ok=false;}else el.classList.remove('err');});var em=document.getElementById('pq-email');if(em&&em.value&&!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(em.value)){em.classList.add('err');ok=false;}return ok;}
   form.querySelectorAll('[data-next]').forEach(function(b){b.addEventListener('click',function(){if(validate(cur))show(cur+1);});});
