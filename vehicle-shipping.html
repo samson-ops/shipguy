@@ -714,6 +714,28 @@ body.ready .reveal{opacity:1;transform:none}
     body.vsbright .pq-opts>*+*{margin-left:10px}
     body.vsbright .pq-nav>*+*{margin-left:10px}
   }
+  /* compact quote tool on mobile so each step fits without scrolling (inputs stay 16px to avoid iOS zoom) */
+  @media (max-width:600px){
+    body.vsbright .pquote{padding:18px 18px 16px;border-radius:18px}
+    body.vsbright .pq-lightning{width:38px;height:38px;border-radius:10px}
+    body.vsbright .pq-lightning svg{width:20px;height:20px}
+    body.vsbright .pq-head-row{gap:11px;margin-bottom:4px}
+    body.vsbright .pq-head-row .pq-title{font-size:18.5px;line-height:1.15}
+    body.vsbright .pq-head-row .pq-sub{font-size:12.5px}
+    body.vsbright .pq-obligation{font-size:11px;margin:0 0 13px}
+    body.vsbright #pquote .pq-field{margin-bottom:10px}
+    body.vsbright #pquote .pq-field>label{font-size:12px;margin-bottom:4px}
+    body.vsbright #pquote .pq-field input,body.vsbright #pquote .pq-field select{padding:10px 12px;border-radius:10px;font-size:16px}
+    body.vsbright #pquote .pq-opts{grid-template-columns:1fr 1fr;gap:8px}
+    body.vsbright #pquote .pq-opt-body{padding:9px 10px;border-radius:10px}
+    body.vsbright #pquote .pq-opt-body b{font-size:13.5px}
+    body.vsbright #pquote .pq-opt-body small{font-size:11px}
+    body.vsbright #pquote .pq-btn{padding:12px;border-radius:10px;font-size:15px;margin-top:2px}
+    body.vsbright #pquote .pq-nav{gap:8px}
+    body.vsbright .pq-trustrow{margin-top:12px;padding-top:11px}
+    body.vsbright .pq-trustrow span{font-size:10px;gap:5px}
+    body.vsbright .hero-grid{gap:20px}
+  }
 </style>
 </head>
 <body class="vsbright">
