@@ -831,6 +831,43 @@ body.ready .reveal{opacity:1;transform:none}
   body.vsbright .hero-creds{display:flex;flex-wrap:wrap;gap:8px 10px;margin-top:22px}
   body.vsbright .hero-creds span{display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:700;color:var(--ink-2);background:#eaf0fd;border:1px solid #dbe4fb;padding:6px 11px;border-radius:999px}
   body.vsbright .hero-creds svg{width:13px;height:13px;color:var(--brand)}
+  /* ===== LP body sections ===== */
+  .lp-how{background:#fff;padding:66px 0}
+  .lp-head{text-align:center;max-width:640px;margin:0 auto 44px}
+  .lp-eyebrow{font-family:var(--font-display);font-weight:800;letter-spacing:.14em;text-transform:uppercase;font-size:12.5px;color:var(--brand);margin:0 0 10px}
+  .lp-head h2{font-family:var(--font-display);font-weight:800;font-size:clamp(1.7rem,3.4vw,2.4rem);color:#101a3d;letter-spacing:-.01em;margin:0 0 12px}
+  .lp-sub{color:var(--ink-2);font-size:16.5px;line-height:1.6;margin:0}
+  .lp-steps{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .lp-step{background:#f7f9fd;border:1px solid var(--line);border-radius:18px;padding:30px 26px;position:relative;transition:transform .18s ease,box-shadow .18s ease}
+  .lp-step:hover{transform:translateY(-3px);box-shadow:0 20px 40px -26px rgba(13,26,80,.4)}
+  .lp-num{position:absolute;top:-14px;left:26px;width:34px;height:34px;border-radius:10px;background:var(--brand);color:#fff;font-family:var(--font-display);font-weight:800;font-size:15px;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 18px -8px rgba(11,52,192,.7)}
+  .lp-ic{width:54px;height:54px;border-radius:14px;background:#e8eefc;color:var(--brand);display:flex;align-items:center;justify-content:center;margin:8px 0 16px}
+  .lp-ic svg{width:26px;height:26px}
+  .lp-step h3{font-family:var(--font-display);font-weight:800;font-size:19px;color:#101a3d;margin:0 0 8px}
+  .lp-step p{color:var(--ink-2);font-size:14.5px;line-height:1.6;margin:0}
+  .lp-how-cta{display:flex;align-items:center;justify-content:center;gap:16px;margin-top:40px;flex-wrap:wrap}
+  .lp-how-cta span{color:var(--ink-2);font-size:15px}
+  .lp-how-cta span a{color:var(--brand);font-weight:700;text-decoration:none}
+  .lp-btn{display:inline-flex;align-items:center;background:var(--brand);color:#fff;font-family:var(--font-display);font-weight:700;font-size:16px;padding:15px 30px;border-radius:12px;text-decoration:none;box-shadow:0 14px 28px -12px rgba(11,52,192,.7);transition:background .15s ease,transform .15s ease}
+  .lp-btn:hover{background:var(--brand-press);transform:translateY(-1px)}
+  /* slim footer */
+  .lp-footer{background:#0a1230;color:#c7d0e6;padding:44px 0 26px}
+  .lp-foot-top{display:flex;justify-content:space-between;gap:30px;flex-wrap:wrap;padding-bottom:26px;border-bottom:1px solid rgba(255,255,255,.1)}
+  .lp-foot-brand{max-width:400px}
+  .lp-foot-brand .sg-logo{width:104px;height:auto;color:#fff;margin-bottom:12px}
+  .lp-foot-brand p{font-size:13.5px;line-height:1.6;color:#9aa6c6;margin:0}
+  .lp-foot-contact{display:flex;flex-direction:column;gap:9px;align-items:flex-start}
+  .lp-foot-call{display:inline-flex;align-items:center;gap:9px;font-family:var(--font-display);font-weight:800;font-size:20px;color:#fff;text-decoration:none}
+  .lp-foot-call svg{width:19px;height:19px;color:#7ea2f5}
+  .lp-foot-contact a{color:#c7d0e6;text-decoration:none;font-size:14.5px}
+  .lp-foot-contact a:hover{color:#fff}
+  .lp-foot-contact span{color:#9aa6c6;font-size:13.5px}
+  .lp-foot-bottom{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;align-items:center;margin-top:22px;font-size:12.5px;color:#8391b4}
+  .lp-foot-links{display:flex;gap:18px}
+  .lp-foot-links a{color:#8391b4;text-decoration:none}
+  .lp-foot-links a:hover{color:#fff}
+  @media (max-width:860px){.lp-steps{grid-template-columns:1fr;gap:26px;max-width:440px;margin:0 auto}.lp-num{top:-13px}}
+  @media (max-width:600px){.lp-how{padding:48px 0}.lp-foot-top{flex-direction:column;gap:22px}}
 </style>
 </head>
 <body class="vsbright">
@@ -1051,143 +1088,20 @@ body.ready .reveal{opacity:1;transform:none}
   </div>
 </section>
 
-<!-- ===================== HOW IT WORKS / THREE STEPS ===================== -->
-<section class="steps-section" id="how">
+<!-- ===================== HOW IT WORKS ===================== -->
+<section class="lp-how" id="how">
   <div class="container">
-    <div class="steps-head">
-      <h2>Three Steps to Ship</h2>
-      <span class="steps-accent" aria-hidden="true"></span>
-      <p>Ship Guy makes nationwide car shipping simple with transparent pricing, vetted carriers, and support from pickup to delivery.</p>
+    <div class="lp-head">
+      <p class="lp-eyebrow">How It Works</p>
+      <h2>Ship Your Car in 3 Simple Steps</h2>
+      <p class="lp-sub">From quote to delivery, Ship Guy makes nationwide car shipping easy, transparent, and fully insured.</p>
     </div>
-
-    <div class="steps-row">
-      <article class="step-card">
-        <div class="step-illus"><img src="assets/step-01.jpg" alt="Step 1: enter pickup, delivery, and vehicle on the Ship Guy quote form" loading="lazy"></div>
-        <h3>Get Your Quote</h3>
-        <p>Enter your pickup, delivery, and vehicle details to receive a fast, transparent shipping estimate.</p>
-      </article>
-
-      <div class="step-arrow" aria-hidden="true">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-      </div>
-
-      <article class="step-card">
-        <div class="step-illus"><img src="assets/step-02.jpg" alt="Step 2: a vetted auto-transport carrier loads vehicles for pickup" loading="lazy"></div>
-        <h3>Schedule Pickup</h3>
-        <p>We match your shipment with a vetted carrier and coordinate pickup around your preferred dates.</p>
-      </article>
-
-      <div class="step-arrow" aria-hidden="true">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-      </div>
-
-      <article class="step-card">
-        <div class="step-illus"><img src="assets/step-03.jpg" alt="Step 3: track your vehicle in transit from pickup to delivery" loading="lazy"></div>
-        <h3>Track Delivery</h3>
-        <p>Your vehicle is transported nationwide with support from pickup through final delivery.</p>
-      </article>
+    <div class="lp-steps">
+      <div class="lp-step"><span class="lp-num">1</span><span class="lp-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3v4a1 1 0 0 0 1 1h4"/><path d="M17 21H7a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h7l5 5v11a2 2 0 0 1-2 2Z"/><path d="M9 13h6M9 17h4"/></svg></span><h3>Get an Instant Quote</h3><p>Enter your pickup, delivery, and vehicle details for a free, all-in price in seconds &mdash; no obligation, no hidden fees.</p></div>
+      <div class="lp-step"><span class="lp-num">2</span><span class="lp-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M10 17h4V5H2v12h3"/><path d="M20 17h2v-3.3a4 4 0 0 0-1.2-2.9L19 9h-5v8h1"/><circle cx="7.5" cy="17.5" r="2.5"/><circle cx="17.5" cy="17.5" r="2.5"/></svg></span><h3>Book &amp; Schedule Pickup</h3><p>We match you with a licensed, insured, and vetted carrier and schedule pickup around your preferred dates.</p></div>
+      <div class="lp-step"><span class="lp-num">3</span><span class="lp-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><path d="m9 10 2 2 4-4"/></svg></span><h3>Track to Your Door</h3><p>Follow your shipment in real time and receive your vehicle safely at the destination &mdash; door to door, coast to coast.</p></div>
     </div>
-  </div>
-</section>
-
-<!-- ===================== WHAT WE SHIP ===================== -->
-<section class="ship-section" id="services">
-  <div class="container">
-    <div class="ship-head">
-      <p class="ship-eyebrow">What We Ship</p>
-      <h2>We Ship More Than Cars</h2>
-      <p class="ship-sub">Nationwide transport solutions for vehicles, household goods, equipment, and freight.</p>
-    </div>
-
-    <div class="ship-grid">
-      <article class="ship-card">
-        <div class="ship-img"><img src="assets/ship-vehicles.jpg" alt="Blue auto-transport carrier loaded with cars and a boat on a mountain highway" loading="lazy"></div>
-        <div class="ship-body">
-          <h3>Vehicles &amp; Boats</h3>
-          <p>Cars, trucks, motorcycles, RVs, and boats shipped nationwide.</p>
-          <a class="ship-link" href="#">Learn More <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-        </div>
-      </article>
-
-      <article class="ship-card">
-        <div class="ship-img"><img src="assets/ship-household.jpg" alt="Living room with a sofa and packed moving boxes ready for transport" loading="lazy"></div>
-        <div class="ship-body">
-          <h3>Household Items</h3>
-          <p>Furniture, boxes, and personal items moved with care.</p>
-          <a class="ship-link" href="#">Learn More <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-        </div>
-      </article>
-
-      <article class="ship-card">
-        <div class="ship-img"><img src="assets/ship-equipment.jpg" alt="Green tractor secured on a flatbed trailer for heavy equipment transport" loading="lazy"></div>
-        <div class="ship-body">
-          <h3>Heavy Equipment</h3>
-          <p>Tractors, machinery, and oversized equipment transport.</p>
-          <a class="ship-link" href="#">Learn More <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-        </div>
-      </article>
-
-      <article class="ship-card">
-        <div class="ship-img"><img src="assets/ship-freight.jpg" alt="Palletized and shrink-wrapped cargo in a warehouse for freight shipping" loading="lazy"></div>
-        <div class="ship-body">
-          <h3>Freight</h3>
-          <p>Palletized cargo, crates, and commercial freight shipping.</p>
-          <a class="ship-link" href="#">Learn More <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-        </div>
-      </article>
-    </div>
-  </div>
-</section>
-
-<!-- ===================== SERVICE AREAS ===================== -->
-<section class="loc-section" id="locations">
-  <div class="container">
-    <div class="loc-bento">
-      <div class="loc-intro">
-        <p class="loc-eyebrow">Service Areas</p>
-        <span class="loc-accent" aria-hidden="true"></span>
-        <h2>Nationwide Coverage, Coast to Coast</h2>
-        <p class="loc-sub">We move vehicles to and from all 50 states — from major metros to small towns, door to door.</p>
-        <ul class="loc-points">
-          <li><span class="loc-chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>All 50 states &amp; D.C.</li>
-          <li><span class="loc-chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>Door-to-door pickup &amp; delivery</li>
-          <li><span class="loc-chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>Open &amp; enclosed on every lane</li>
-          <li><span class="loc-chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>Expedited options available</li>
-        </ul>
-        <a class="loc-btn" href="#top">Get a quote for your route
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-        </a>
-      </div>
-
-      <div class="loc-routes">
-        <div class="loc-routes-head">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
-          <h3>Popular Routes</h3>
-        </div>
-        <ul class="loc-route-list">
-          <li><a href="#top"><span>Los Angeles, CA</span><svg class="ar" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg><span>New York, NY</span></a></li>
-          <li><a href="#top"><span>Miami, FL</span><svg class="ar" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg><span>Chicago, IL</span></a></li>
-          <li><a href="#top"><span>Dallas, TX</span><svg class="ar" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg><span>Seattle, WA</span></a></li>
-          <li><a href="#top"><span>Atlanta, GA</span><svg class="ar" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg><span>Los Angeles, CA</span></a></li>
-          <li><a href="#top"><span>Phoenix, AZ</span><svg class="ar" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg><span>Denver, CO</span></a></li>
-          <li><a href="#top"><span>Boston, MA</span><svg class="ar" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg><span>Miami, FL</span></a></li>
-        </ul>
-      </div>
-    </div>
-
-        <div class="loc-states">
-      <span class="loc-states-label">States we serve:</span>
-      <a href="alabama-auto-transport.html">Alabama</a>
-      <a href="alaska-auto-transport.html">Alaska</a>
-      <a href="arizona-auto-transport.html">Arizona</a>
-      <a href="arkansas-auto-transport.html">Arkansas</a>
-      <a href="california-auto-transport.html">California</a>
-      <a href="colorado-auto-transport.html">Colorado</a>
-      <a href="connecticut-auto-transport.html">Connecticut</a>
-      <a href="delaware-auto-transport.html">Delaware</a>
-      <a href="florida-auto-transport.html">Florida</a>
-      <a href="georgia-auto-transport.html">Georgia</a>
-    </div>
+    <div class="lp-how-cta"><a class="lp-btn" href="#top">Get Your Free Quote</a><span>or call <a href="tel:+18664992815">(866)&nbsp;499-2815</a></span></div>
   </div>
 </section>
 
@@ -1262,7 +1176,7 @@ body.ready .reveal{opacity:1;transform:none}
       </div>
     </div>
 
-    <p class="wc-mc">MC&nbsp;#XXXXXX&nbsp;&nbsp;·&nbsp;&nbsp;DOT&nbsp;#XXXXXXX</p>
+    <p class="wc-mc">MC&nbsp;#1457715&nbsp;&nbsp;·&nbsp;&nbsp;DOT&nbsp;#3932149</p>
   </div>
 </section>
 
@@ -1347,10 +1261,10 @@ body.ready .reveal{opacity:1;transform:none}
 </section>
 
 <!-- ===================== FOOTER ===================== -->
-<footer class="site-footer" id="contact">
-  <div class="container footer-top">
-    <div class="f-brand">
-      <svg class="sg-logo" role="img" aria-label="Ship Guy" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="209 227 180 145">
+<footer class="lp-footer" id="contact">
+  <div class="container">
+    <div class="lp-foot-top">
+      <div class="lp-foot-brand"><svg class="sg-logo" role="img" aria-label="Ship Guy" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="209 227 180 145">
 <path fill-rule="nonzero" fill="currentColor" fill-opacity="1" d="M 257.761719 304.929688 L 257.761719 247.621094 L 272.027344 245.128906 L 272.027344 265.167969 C 272.027344 265.933594 272.246094 266.5 272.679688 266.867188 C 273.109375 267.230469 273.703125 267.347656 274.460938 267.222656 L 279.570312 266.355469 C 281.136719 266.089844 281.921875 265.128906 281.921875 263.484375 L 281.921875 243.398438 L 296.191406 240.90625 L 296.191406 298.710938 L 281.921875 301.019531 L 281.921875 277.640625 L 272.027344 279.292969 L 272.027344 302.621094 Z M 257.761719 304.929688 "/>
 <path fill-rule="nonzero" fill="currentColor" fill-opacity="1" d="M 225.148438 310.390625 C 220.769531 311.101562 217.570312 310.632812 215.539062 308.984375 C 213.515625 307.339844 212.5 304.464844 212.5 300.359375 L 212.5 291.359375 L 226.769531 288.980469 L 226.769531 296.222656 C 226.769531 297.035156 226.984375 297.609375 227.417969 297.945312 C 227.851562 298.28125 228.472656 298.382812 229.28125 298.25 L 234.148438 297.449219 C 234.902344 297.328125 235.472656 297.054688 235.851562 296.640625 C 236.226562 296.222656 236.417969 295.636719 236.417969 294.875 L 236.417969 290.066406 C 236.417969 289.304688 236.324219 288.683594 236.136719 288.199219 C 235.945312 287.714844 235.632812 287.300781 235.203125 286.964844 C 234.769531 286.632812 234.175781 286.367188 233.417969 286.164062 L 221.257812 283.890625 C 219.472656 283.378906 217.957031 282.695312 216.71875 281.851562 C 215.472656 281.007812 214.539062 279.855469 213.917969 278.390625 C 213.296875 276.929688 212.988281 275.089844 212.988281 272.871094 L 212.988281 263.140625 C 212.988281 260.222656 213.636719 257.960938 214.933594 256.355469 C 216.230469 254.753906 218.390625 253.683594 221.417969 253.152344 L 237.957031 250.261719 C 242.28125 249.503906 245.457031 249.929688 247.484375 251.539062 C 249.511719 253.148438 250.523438 256.050781 250.523438 260.25 L 250.523438 265.890625 L 236.257812 268.328125 L 236.257812 264.5 C 236.257812 263.683594 236.039062 263.109375 235.605469 262.777344 C 235.175781 262.441406 234.578125 262.34375 233.824219 262.472656 L 229.527344 263.210938 C 228.714844 263.351562 228.132812 263.628906 227.785156 264.039062 C 227.433594 264.453125 227.257812 265.011719 227.257812 265.71875 L 227.257812 268.078125 C 227.257812 269.109375 227.511719 269.917969 228.027344 270.507812 C 228.539062 271.097656 229.3125 271.550781 230.335938 271.863281 L 241.929688 273.972656 C 243.984375 274.492188 245.660156 275.214844 246.957031 276.140625 C 248.253906 277.070312 249.199219 278.285156 249.796875 279.792969 C 250.390625 281.300781 250.6875 283.144531 250.6875 285.328125 L 250.6875 297.671875 C 250.6875 300.671875 250.023438 302.960938 248.699219 304.539062 C 247.375 306.117188 245.199219 307.148438 242.175781 307.636719 Z M 225.148438 310.390625 "/>
 <path fill-rule="nonzero" fill="currentColor" fill-opacity="1" d="M 305.007812 297.726562 L 305.007812 239.84375 L 319.277344 237.351562 L 319.277344 295.414062 Z M 305.007812 297.726562 "/>
@@ -1360,59 +1274,16 @@ body.ready .reveal{opacity:1;transform:none}
 <path fill-rule="nonzero" fill="currentColor" fill-opacity="1" d="M 351.558594 284.785156 L 353.078125 284.542969 L 354.574219 288.246094 L 356.019531 284.070312 L 357.511719 283.832031 L 357.511719 289.199219 L 356.410156 289.378906 L 356.410156 285.78125 L 355.007812 289.609375 L 354.066406 289.761719 L 352.664062 286.382812 L 352.664062 289.988281 L 351.558594 290.167969 Z M 351.558594 284.785156 "/>
 <path fill-rule="nonzero" fill="currentColor" fill-opacity="1" d="M 328.964844 301.867188 L 328.964844 344.914062 C 328.964844 345.726562 328.75 346.363281 328.316406 346.820312 C 327.882812 347.273438 327.289062 347.570312 326.53125 347.703125 L 321.75 348.550781 C 320.9375 348.691406 320.316406 348.613281 319.882812 348.3125 C 319.453125 348.007812 319.234375 347.449219 319.234375 346.636719 L 319.234375 303.542969 L 304.96875 305.996094 L 304.96875 350.058594 C 304.96875 354.226562 306.089844 357.25 308.332031 359.128906 C 310.574219 361.003906 313.804688 361.574219 318.019531 360.828125 L 333.425781 358.109375 C 336.394531 357.585938 338.707031 356.367188 340.355469 354.445312 C 342.003906 352.53125 342.828125 350.027344 342.828125 346.933594 L 342.828125 299.480469 Z M 328.964844 301.867188 "/>
 <path fill-rule="nonzero" fill="currentColor" fill-opacity="1" d="M 373.042969 294.429688 L 370.351562 319.472656 C 370.242188 320.523438 369.785156 321.296875 368.972656 321.792969 C 368.160156 322.289062 367.363281 322.433594 366.582031 322.21875 C 365.796875 322 365.324219 321.394531 365.160156 320.394531 L 362.542969 296.238281 L 347.644531 298.800781 L 354.703125 337.789062 L 360.539062 336.757812 L 360.539062 353.035156 L 374.808594 350.523438 L 374.808594 334.234375 L 380.484375 333.234375 L 387.5 291.941406 Z M 373.042969 294.429688 "/>
-</svg>
-      <p>Licensed, insured nationwide auto transport. Transparent pricing, vetted carriers, and real people from quote to delivery.</p>
+</svg><p>Licensed &amp; insured nationwide car shipping &mdash; transparent pricing, vetted carriers, door to door.</p></div>
+      <div class="lp-foot-contact">
+        <a class="lp-foot-call" href="tel:+18664992815"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"/></svg>(866) 499-2815</a>
+        <a href="mailto:quotes@shipguy.com">quotes@shipguy.com</a>
+        <span>Open 24/7 &middot; Serving all 50 states</span>
+      </div>
     </div>
-    <div class="f-col">
-      <h4>Company</h4>
-      <ul>
-        <li><a href="how-it-works.html">How It Works</a></li>
-        <li><a href="#reviews">Reviews</a></li>
-        <li><a href="#locations">Locations</a></li>
-        <li><a href="faq.html">FAQ</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </div>
-    <div class="f-col">
-      <h4>Services</h4>
-      <ul>
-                        <li><a href="open-car-transport.html">Open Car Transport</a></li>
-        <li><a href="enclosed-auto-transport.html">Enclosed Auto Transport</a></li>
-        <li><a href="door-to-door-car-shipping.html">Door-to-Door Shipping</a></li>
-        <li><a href="state-to-state-car-shipping.html">State-to-State Shipping</a></li>
-        <li><a href="expedited-car-shipping.html">Expedited Shipping</a></li>
-        <li><a href="snowbird-car-shipping.html">Snowbird Car Shipping</a></li>
-        <li><a href="military-car-shipping.html">Military Car Shipping</a></li>
-        <li><a href="dealer-auto-transport.html">Dealer Auto Transport</a></li>
-        <li><a href="auction-car-transport.html">Auction Car Transport</a></li>
-      </ul>
-    </div>
-    <div class="f-col f-contact">
-      <h4>Get in touch</h4>
-      <div class="line"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/></svg><a href="tel:+18664992815">(866) 499-2815</a></div>
-      <div class="line"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg><a href="mailto:quotes@shipguy.com">quotes@shipguy.com</a></div>
-      <div class="line"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span>Support available 24/7</span></div>
-    </div>
-  </div>
-  <div class="container footer-states">
-      <span class="fs-label">States we serve:</span>
-      <a href="alabama-auto-transport.html">Alabama</a>
-      <a href="alaska-auto-transport.html">Alaska</a>
-      <a href="arizona-auto-transport.html">Arizona</a>
-      <a href="arkansas-auto-transport.html">Arkansas</a>
-      <a href="california-auto-transport.html">California</a>
-      <a href="colorado-auto-transport.html">Colorado</a>
-      <a href="connecticut-auto-transport.html">Connecticut</a>
-      <a href="delaware-auto-transport.html">Delaware</a>
-      <a href="florida-auto-transport.html">Florida</a>
-      <a href="georgia-auto-transport.html">Georgia</a>
-  </div>
-  <div class="container footer-bottom">
-    <small>© 2026 Ship Guy. Licensed &amp; FMCSA-registered auto transport broker. All rights reserved.</small>
-    <div class="legal">
-      <a href="#">Privacy</a>
-      <a href="#">Terms</a>
-      <a href="#">Licensing &amp; Insurance</a>
+    <div class="lp-foot-bottom">
+      <span>&copy; 2026 Ship Guy Logistics &middot; FMCSA Licensed &middot; MC #1457715 &middot; DOT #3932149</span>
+      <div class="lp-foot-links"><a href="#">Privacy Policy</a><a href="#">Terms of Service</a></div>
     </div>
   </div>
 </footer>
