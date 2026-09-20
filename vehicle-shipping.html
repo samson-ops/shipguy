@@ -736,6 +736,11 @@ body.ready .reveal{opacity:1;transform:none}
     body.vsbright .pq-trustrow span{font-size:10px;gap:5px}
     body.vsbright .hero-grid{gap:20px}
   }
+  /* lock out any horizontal scroll / iOS side-bounce */
+  html{overflow-x:clip}
+  body{overflow-x:clip;max-width:100%;overscroll-behavior-x:none}
+  body.vsbright .hero{overflow:hidden}
+  body.vsbright .hero-bg,body.vsbright .hero-bg-svg{max-width:100%}
 </style>
 </head>
 <body class="vsbright">
