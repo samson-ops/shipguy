@@ -660,9 +660,9 @@ body.ready .reveal{opacity:1;transform:none}
   body.vsbright .btn-call{background:#fff;color:var(--brand);border:1.6px solid var(--brand);box-shadow:none}
   body.vsbright .btn-call:hover{background:var(--brand-tint)}
   body.vsbright .icon-burger{display:none}
-  body.vsbright .hero{background:#eaf1fb}
-  body.vsbright .hero-img{object-position:center 72%;filter:saturate(1.06)}
-  body.vsbright .hero-overlay{background:linear-gradient(100deg,rgba(248,250,254,1) 0%,rgba(248,250,254,.99) 30%,rgba(248,250,254,.82) 48%,rgba(244,248,253,.4) 72%,rgba(238,244,252,.18) 100%)}
+  body.vsbright .hero{background:#f5f9ff}
+  
+  
   body.vsbright .hero-copy{color:#101a3d}
   body.vsbright .hero-copy .eyebrow{color:#5b6480;letter-spacing:.26em;font-weight:700}
   body.vsbright .hero-copy h1{color:#0a1230;font-size:clamp(2.4rem,5.4vw,4rem);line-height:1.03;letter-spacing:-.02em}
@@ -694,11 +694,13 @@ body.ready .reveal{opacity:1;transform:none}
   body.vsbright .hero-badges{gap:20px}
   @media (max-width:1180px){body.vsbright .hero-grid{padding-top:96px}}
   @media (max-width:1180px){
-    body.vsbright .hero-overlay{background:linear-gradient(180deg,rgba(247,249,253,.97) 0%,rgba(247,249,253,.9) 55%,rgba(240,245,252,.6) 100%)}
+
     body.vsbright .site-header{position:sticky;background:rgba(255,255,255,.97);box-shadow:0 6px 24px -16px rgba(13,26,80,.4)}
     body.vsbright .brand-tag{display:none}
     body.vsbright .hero-badges{flex-wrap:wrap;gap:12px 22px}
   }
+  body.vsbright .hero-bg{position:absolute;inset:0;overflow:hidden}
+  body.vsbright .hero-bg-svg{width:100%;height:100%;display:block}
 </style>
 </head>
 <body class="vsbright">
@@ -738,8 +740,33 @@ body.ready .reveal{opacity:1;transform:none}
 <!-- ===================== HERO ===================== -->
 <section class="hero">
   <div class="hero-media" aria-hidden="true">
-    <img class="hero-img" alt="" src="assets/hero-banner.jpg">
-    <div class="hero-overlay"></div>
+    <div class="hero-bg" aria-hidden="true">
+      <svg class="hero-bg-svg" viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="hgWash" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#ffffff"/>
+            <stop offset="0.5" stop-color="#f3f7fe"/>
+            <stop offset="1" stop-color="#e7eefc"/>
+          </linearGradient>
+          <radialGradient id="hgGlow" cx="0.82" cy="0.12" r="0.9">
+            <stop offset="0" stop-color="#dbe6ff" stop-opacity="0.9"/>
+            <stop offset="1" stop-color="#dbe6ff" stop-opacity="0"/>
+          </radialGradient>
+        </defs>
+        <rect width="1440" height="900" fill="url(#hgWash)"/>
+        <rect width="1440" height="900" fill="url(#hgGlow)"/>
+        <g fill="none" stroke="#c7d6f5" stroke-opacity="0.5" stroke-width="2">
+          <path d="M-60 720 C 360 640, 760 780, 1200 560 S 1560 360, 1620 300"/>
+          <path d="M-60 800 C 360 720, 760 860, 1200 640 S 1560 440, 1620 380"/>
+        </g>
+        <g stroke="#9fb8ee" stroke-opacity="0.55" stroke-width="4" stroke-dasharray="26 22" stroke-linecap="round" fill="none">
+          <path d="M-60 762 C 360 682, 760 822, 1200 602 S 1560 402, 1620 342"/>
+        </g>
+        <g fill="#bcd0f6" fill-opacity="0.45">
+          <circle cx="1180" cy="300" r="5"/><circle cx="250" cy="250" r="4"/><circle cx="640" cy="180" r="3.5"/><circle cx="980" cy="150" r="3"/>
+        </g>
+      </svg>
+    </div>
   </div>
 
   <div class="container hero-grid">
