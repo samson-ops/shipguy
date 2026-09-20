@@ -1,41 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-MQ7HKJTJ');</script>
-<!-- End Google Tag Manager -->
-
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-3DSG1RCP4Y"></script>
-<script>
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
-gtag('config', 'G-3DSG1RCP4Y');
-</script>
-
 <meta charset="UTF-8">
   <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
   <meta http-equiv="Pragma" content="no-cache">
   <meta http-equiv="Expires" content="0">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Ship Guy — Reliable Nationwide Auto Transport</title>
 <meta name="description" content="Licensed, insured nationwide vehicle shipping with transparent pricing, vetted carriers, and support from quote to delivery. Get an instant quote.">
-  <link rel="canonical" href="https://shipguy.com/">
-  <meta property="og:type" content="website">
-  <meta property="og:site_name" content="Ship Guy Auto Transport">
-  <meta property="og:title" content="Ship Guy — Reliable Nationwide Auto Transport">
-  <meta property="og:description" content="Licensed, insured nationwide vehicle shipping with transparent pricing, vetted carriers, and support from quote to delivery. Get an instant quote.">
-  <meta property="og:url" content="https://shipguy.com/">
-  <meta property="og:image" content="https://shipguy.com/assets/hero.jpg">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Ship Guy — Reliable Nationwide Auto Transport">
-  <meta name="twitter:description" content="Licensed, insured nationwide vehicle shipping with transparent pricing, vetted carriers, and support from quote to delivery. Get an instant quote.">
-  <meta name="twitter:image" content="https://shipguy.com/assets/hero.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
@@ -98,7 +70,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,
    ========================================================= */
 .site-header{
   position:sticky;top:0;z-index:60;background:#fff;
-  border-bottom:1px solid var(--line);
+  border-bottom:1px solid transparent;
   transition:box-shadow .25s ease, border-color .25s ease;
 }
 .site-header.is-scrolled{box-shadow:0 6px 24px -16px rgba(13,26,80,.5);border-bottom-color:var(--line)}
@@ -515,7 +487,7 @@ section[id]{scroll-margin-top:104px}
   .hero-copy{display:contents}
   .hero-head,.hero-rest{max-width:640px;width:100%}
   .hero-head{order:1}
-  .quote-card{order:2;max-width:520px;width:100%}
+  .quote-card,.pquote{order:2;max-width:520px;width:100%}
   .hero-rest{order:3}
   .hero-head h1{margin-bottom:0}
   .eyebrow{display:none}
@@ -623,89 +595,122 @@ body.ready .reveal{opacity:1;transform:none}
 
 @media (max-width:460px){.footer-top{grid-template-columns:1fr;gap:28px}}/* resp-polish-footer */
   .quote-card.is-embed{padding:0;overflow:hidden}
-  .quote-card.is-embed iframe{width:100%;height:630px;border:0;display:block}
-
-/* ===================== HERO v2 "Ship Anything" ===================== */
-.hx-hero{background:#fff}
-.hx-wrap{padding:72px 24px 44px;display:grid;grid-template-columns:.82fr 1.18fr;gap:56px;align-items:center}
-.hx-eyebrow{font-family:var(--font-display);font-weight:700;font-size:13px;letter-spacing:.16em;text-transform:uppercase;color:var(--brand);margin:0 0 22px}
-.hx-title{font-family:var(--font-display);font-weight:800;font-size:clamp(1.65rem,2.75vw,2.2rem);line-height:1.08;letter-spacing:-.02em;color:#101a3d;margin:0 0 18px}
-.hx-lede{font-size:clamp(1rem,1.25vw,1.16rem);line-height:1.62;color:var(--ink-2);margin:0 0 32px;max-width:33ch}
-.hx-cta{display:flex;gap:14px;flex-wrap:wrap;margin:0 0 30px}
-.hx-btn,.hx-ghost{display:inline-flex;align-items:center;gap:9px;font-family:var(--font-display);font-weight:700;font-size:16px;padding:15px 26px;border-radius:12px;border:2px solid transparent;transition:transform .15s ease,background .15s ease,border-color .15s ease}
-.hx-btn{background:var(--brand);color:#fff;border-color:var(--brand)}
-.hx-btn:hover{background:var(--brand-press);border-color:var(--brand-press);transform:translateY(-1px)}
-.hx-ghost{background:#fff;color:var(--brand);border-color:var(--field)}
-.hx-ghost:hover{border-color:var(--brand);background:var(--brand-tint)}
-.hx-trust{list-style:none;display:flex;flex-wrap:wrap;align-items:center;margin:0;padding:0}
-.hx-trust li{display:flex;align-items:center;gap:9px;font-family:var(--font-display);font-weight:600;font-size:13.5px;color:var(--ink);padding:6px 18px;position:relative;white-space:nowrap}
-.hx-trust li:first-child{padding-left:0}
-.hx-trust li+li::before{content:"";position:absolute;left:0;top:50%;transform:translateY(-50%);width:1px;height:20px;background:var(--line)}
-.hx-trust svg{width:20px;height:20px;color:var(--brand);flex:none}
-.hx-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-.hx-cat{background:#fff;border:1px solid var(--line);border-radius:18px;padding:12px;box-shadow:var(--shadow-soft);transition:transform .18s ease,box-shadow .18s ease,border-color .18s ease}
-.hx-cat:hover{transform:translateY(-3px);box-shadow:var(--shadow-pop);border-color:#d7ddec}
-.hx-thumb{width:100%;height:130px;border-radius:12px;object-fit:cover;background:var(--bg-soft)}
-.hx-cat-body{padding:13px 6px 5px}
-.hx-cat-title{display:flex;align-items:center;gap:9px;font-family:var(--font-display);font-weight:700;font-size:17px;color:#101a3d;margin:0 0 5px}
-.hx-cat-title svg{width:22px;height:22px;color:var(--brand);flex:none}
-.hx-cat-desc{margin:0;font-size:13px;color:var(--muted);line-height:1.4}
-.hx-strip{border-top:1px solid var(--line);background:#fff}
-.hx-strip-wrap{padding:36px 24px;display:grid;grid-template-columns:repeat(4,1fr)}
-.hx-stat{text-align:center;padding:0 22px;position:relative}
-.hx-stat+.hx-stat::before{content:"";position:absolute;left:0;top:4px;bottom:4px;width:1px;background:var(--line)}
-.hx-stat svg{width:30px;height:30px;color:var(--brand);margin:0 auto 12px}
-.hx-stat h3{font-family:var(--font-display);font-weight:700;font-size:16px;color:#101a3d;margin:0 0 5px}
-.hx-stat p{margin:0;font-size:13.5px;color:var(--muted)}
-.hx-quote{background:var(--bg-soft);border-top:1px solid var(--line)}
-.hx-quote-wrap{padding:56px 24px}
-.hx-quote-head{text-align:center;max-width:620px;margin:0 auto 26px}
-.hx-quote-head h2{font-family:var(--font-display);font-weight:800;font-size:clamp(1.8rem,3.2vw,2.4rem);letter-spacing:-.01em;color:#101a3d;margin:0 0 10px}
-.hx-quote-head p{margin:0;font-size:16px;color:var(--ink-2)}
-.hx-quote .quote-card{max-width:680px;margin:0 auto}
-@media(max-width:1024px){.hx-wrap{grid-template-columns:1fr;gap:40px;padding-top:48px}.hx-lede{max-width:none}}
-@media(max-width:760px){.hx-grid{grid-template-columns:repeat(2,1fr)}.hx-strip-wrap{grid-template-columns:repeat(2,1fr);row-gap:30px}.hx-stat:nth-child(3)::before{display:none}}
-@media(max-width:440px){.hx-grid{grid-template-columns:1fr}.hx-strip-wrap{grid-template-columns:1fr;row-gap:26px}.hx-stat::before{display:none}.hx-trust li{padding:6px 0}.hx-trust li+li::before{display:none}}
-
-/* inline quote starter (hero) — visual only */
-.hx-quotebox{max-width:470px}
-.hx-field{margin:0 0 12px}
-.hx-select{width:100%;appearance:none;-webkit-appearance:none;-moz-appearance:none;background-color:#fff;background-image:url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='24'%20height='24'%20viewBox='0%200%2024%2024'%20fill='none'%20stroke='%236b7488'%20stroke-width='2'%20stroke-linecap='round'%20stroke-linejoin='round'%3E%3Cpath%20d='m6%209%206%206%206-6'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 15px center;background-size:20px;border:1.6px solid var(--field);border-radius:11px;padding:15px 46px 15px 16px;font-family:var(--font-body);font-size:16px;color:var(--ink);line-height:1.2;cursor:pointer;transition:border-color .15s ease,box-shadow .15s ease}
-.hx-select:hover{border-color:#c2cadd}
-.hx-select:focus{outline:none;border-color:var(--brand);box-shadow:0 0 0 3px var(--ring)}
-.hx-qbtns{display:flex;gap:12px;flex-wrap:wrap;margin-top:4px}
-.hx-qbtns > *{flex:1 1 150px;justify-content:center;text-align:center}
-
-/* header "Become A Carrier" outline pill */
-.btn-carrier{flex:0 0 auto;display:inline-flex;align-items:center;gap:8px;background:#fff;color:var(--brand);font-weight:700;font-size:15px;padding:11px 19px;border:1.6px solid var(--field);border-radius:999px;transition:transform .15s ease,background .15s ease,border-color .15s ease}
-.btn-carrier:hover{border-color:var(--brand);background:var(--brand-tint);transform:translateY(-1px)}
-@media (max-width:760px){.btn-carrier{display:none}}
-
-/* mobile: hide the whole category card grid in the hero */
-@media (max-width:760px){.hx-right{display:none}}
-
-/* === mobile horizontal-overflow fix === */
-html,body{overflow-x:clip}
-@media(max-width:760px){
- .cmp-grid{grid-template-columns:1fr}
- .season-grid{grid-template-columns:1fr}
- .route-row > *,.glance-cell,.cmp-card,.why-card,.step-card,.toc-nav a,.faq-item{min-width:0}
- .glance-cell span,.route-name,.faq-q,.txt-block p,.city-callout p,.cmp-card li{overflow-wrap:break-word}
- img,iframe,video,table,figure{max-width:100%}
- .container,.hero-grid,.hero-grid-solo{max-width:100%}
-}
-
-/* === quote widget: no tap-zoom, no shift === */
-.quote-card.is-embed{touch-action:manipulation;overscroll-behavior:contain}
-.quote-card.is-embed iframe{touch-action:manipulation;overscroll-behavior:contain}
+  .quote-card.is-embed iframe{width:100%;height:560px;border:0;display:block}
+.footer-states{display:flex;flex-wrap:wrap;gap:9px 20px;align-items:center;padding:20px 0 2px;margin-top:6px;border-top:1px solid rgba(255,255,255,.10)}.footer-states .fs-label{color:#fff;font-weight:700;font-size:14px}.footer-states a{font-size:14px;color:#9aa6c6;transition:color .15s ease}.footer-states a:hover{color:#fff}/* footer-states */
+@media (max-width:1180px){.quote-card,.pquote{order:2;max-width:520px;width:100%}}
+.pquote{background:#fff;border:1px solid var(--line);border-radius:16px;box-shadow:0 24px 50px -30px rgba(13,26,80,.4);padding:28px 26px}
+.pq-title{font-family:var(--font-display);font-weight:800;font-size:21px;color:#101a3d;text-align:center;margin:0 0 3px}
+.pq-sub{text-align:center;color:var(--muted);font-size:13.5px;margin:0 0 20px}
+.pq-steps{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin:0 0 22px}
+.pq-step{display:flex;align-items:center;justify-content:center;gap:7px;padding:9px 6px;border:1px solid var(--line);border-radius:9px;font-size:13px;font-weight:600;color:var(--muted);background:#fff}
+.pq-step span{width:20px;height:20px;border-radius:50%;background:#eef1f7;color:var(--muted);display:inline-flex;align-items:center;justify-content:center;font-size:11.5px;font-weight:700;flex:0 0 auto}
+.pq-step.is-active{border-color:var(--brand);color:var(--brand);background:var(--brand-tint)}
+.pq-step.is-active span{background:var(--brand);color:#fff}
+.pq-step.is-done{color:var(--ink-2)}
+.pq-step.is-done span{background:var(--brand);color:#fff}
+.pq-panel{display:none}
+.pq-panel.is-current{display:block}
+.pq-field{margin-bottom:14px}
+.pq-field>label{display:block;font-weight:600;font-size:13px;color:var(--ink);margin-bottom:6px}
+.pq-field input,.pq-field select{width:100%;border:1px solid #d9deea;border-radius:9px;padding:12px 13px;font:inherit;font-size:15px;color:var(--ink);background:#fff;transition:border-color .15s ease,box-shadow .15s ease}
+.pq-field input:focus,.pq-field select:focus{outline:none;border-color:var(--brand);box-shadow:0 0 0 3px rgba(11,52,192,.1)}
+.pq-field input::placeholder{color:#aab2c5}
+.pq-field input.err{border-color:#e0524b;box-shadow:0 0 0 3px rgba(224,82,75,.1)}
+.pq-row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.pq-opts{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.pq-opt{position:relative;cursor:pointer;display:block}
+.pq-opt input{position:absolute;opacity:0;inset:0;cursor:pointer;margin:0}
+.pq-opt-body{display:block;border:1px solid #d9deea;border-radius:9px;padding:11px 13px;transition:border-color .15s ease,background .15s ease}
+.pq-opt-body b{display:block;font-weight:700;font-size:14px;color:#101a3d}
+.pq-opt-body small{color:var(--muted);font-size:12px}
+.pq-opt input:checked+.pq-opt-body{border-color:var(--brand);background:var(--brand-tint)}
+.pq-btn{width:100%;background:var(--brand);color:#fff;font-weight:700;font-size:15px;padding:13px;border:0;border-radius:9px;cursor:pointer;transition:background .15s ease}
+.pq-btn:hover{background:var(--brand-press)}
+.pq-btn-ghost{background:#fff;color:var(--ink-2);font-weight:600;font-size:14.5px;padding:13px 16px;border:1px solid #d9deea;border-radius:9px;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;justify-content:center}
+.pq-btn-ghost:hover{border-color:var(--brand);color:var(--brand)}
+.pq-nav{display:flex;gap:10px}
+.pq-nav .pq-btn{flex:1}
+.pq-secure{text-align:center;color:var(--muted);font-size:12px;margin:16px 0 0}
+.pq-error{display:none;color:#c0392b;font-size:12.5px;margin:12px 0 0;text-align:center;line-height:1.5}
+.pq-result{display:none;text-align:center;padding:6px 0 2px}
+.pq-result.show{display:block}
+.pq-loading{padding:32px 0;color:var(--ink-2);font-size:14.5px}
+.pq-spin{width:40px;height:40px;border:3px solid var(--brand-tint);border-top-color:var(--brand);border-radius:50%;margin:0 auto 14px;animation:pqSpin .8s linear infinite}
+@keyframes pqSpin{to{transform:rotate(360deg)}}
+.pq-quote{display:none}
+.pq-quote.show{display:block}
+.pq-eyebrow{font-family:var(--font-display);font-weight:800;letter-spacing:.08em;text-transform:uppercase;font-size:11.5px;color:var(--brand)}
+.pq-price{font-family:var(--font-display);font-weight:800;font-size:36px;color:#101a3d;margin:5px 0 2px}
+.pq-route{color:var(--ink-2);font-size:14px;margin:0}
+.pq-note{color:var(--muted);font-size:12.5px;margin:11px auto 18px;max-width:320px;line-height:1.5}
+.pq-cta{display:flex;flex-direction:column;gap:9px}
+.pq-cta a{width:100%;justify-content:center;text-decoration:none}
+.pq-again{display:block;margin:13px auto 0;background:none;border:0;color:var(--brand);font-weight:600;font-size:13px;cursor:pointer}
+@media (max-width:520px){.pq-row,.pq-opts{grid-template-columns:1fr} .pq-steps{font-size:12px} .pq-step{padding:8px 4px;gap:5px}}
+.pquote{border-radius:22px;box-shadow:0 44px 90px -42px rgba(13,26,80,.5),0 10px 24px -12px rgba(13,26,80,.13);padding:26px 26px 22px}
+.pq-progress{margin:4px 0 20px}
+.pq-progress-top{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:9px}
+.pq-progress-track{height:6px;border-radius:999px;background:#e9edf6;overflow:hidden}
+.pq-progress-fill{height:100%;width:33.33%;border-radius:999px;background:linear-gradient(90deg,var(--brand),var(--brand-deep));transition:width .35s cubic-bezier(.4,0,.2,1)}
+.pq-head-row{display:flex;align-items:center;gap:13px;margin-bottom:6px}
+.pq-lightning{width:46px;height:46px;border-radius:13px;background:#e6eefc;color:var(--brand);display:flex;align-items:center;justify-content:center;flex:0 0 auto}
+.pq-lightning svg{width:23px;height:23px}
+.pq-head-row .pq-title{text-align:left;margin:0;font-size:21px}
+.pq-head-row .pq-sub{text-align:left;margin:2px 0 0}
+.pq-obligation{color:#9aa3b8;font-size:12px;margin:0 0 18px}
+.pq-secure{display:none}
+.pq-trustrow{display:flex;justify-content:space-between;gap:8px;margin-top:16px;padding-top:15px;border-top:1px solid var(--line)}
+.pq-trustrow span{display:inline-flex;align-items:center;gap:6px;color:#6b7488;font-size:11.5px;font-weight:600}
+.pq-trustrow svg{width:14px;height:14px;color:var(--brand);flex:0 0 auto}
+.pquote,.pq-field input,.pq-field select{-webkit-font-smoothing:antialiased}
+@media (max-width:600px){.pquote{padding:18px 18px 16px;border-radius:18px} .pq-lightning{width:38px;height:38px;border-radius:10px} .pq-lightning svg{width:19px;height:19px} .pq-head-row{gap:11px;margin-bottom:4px} .pq-head-row .pq-title{font-size:18.5px;line-height:1.15} .pq-head-row .pq-sub{font-size:12px} .pq-obligation{font-size:11px;margin:0 0 13px} #pquote .pq-field{margin-bottom:10px} #pquote .pq-field>label{font-size:12px;margin-bottom:4px} #pquote .pq-field input,#pquote .pq-field select{padding:10px 12px;border-radius:10px;font-size:16px} #pquote .pq-inp input,#pquote .pq-inp select{padding-left:46px} #pquote .pq-opts{grid-template-columns:1fr 1fr;gap:8px} #pquote .pq-opt-body{padding:9px 10px;border-radius:10px} #pquote .pq-opt-body b{font-size:13.5px} #pquote .pq-opt-body small{font-size:11px} #pquote .pq-btn{padding:12px;border-radius:10px;font-size:15px;margin-top:2px} #pquote .pq-nav{gap:8px} .pq-trustrow{margin-top:12px;padding-top:11px} .pq-trustrow span{font-size:10px;gap:5px}}
+.pq-panel.is-current{min-height:360px}
+@media (max-width:600px){.pq-panel.is-current{min-height:380px}}
+.pq-section{font-family:var(--font-display);font-weight:800;letter-spacing:.09em;text-transform:uppercase;font-size:10.5px;color:#9aa3b8;margin:20px 0 12px;padding-top:16px;border-top:1px solid var(--line)}
+.pq-consent{display:flex;gap:11px;align-items:flex-start;margin:16px 0 2px;cursor:pointer}
+.pq-consent input[type=checkbox]{-webkit-appearance:none;appearance:none;width:19px;height:19px;min-width:19px;border:1.6px solid #c2cee6;border-radius:5px;background:#fff;cursor:pointer;position:relative;margin:1px 0 0;flex:0 0 auto;transition:all .15s ease}
+.pq-consent input[type=checkbox]:checked{background:var(--brand);border-color:var(--brand)}
+.pq-consent input[type=checkbox]:checked::after{content:"";position:absolute;left:6px;top:2px;width:5px;height:9px;border:solid #fff;border-width:0 2px 2px 0;transform:rotate(45deg)}
+.pq-consent input[type=checkbox]:focus-visible{outline:2px solid var(--brand);outline-offset:2px}
+.pq-consent span{font-size:11px;line-height:1.55;color:#8b93a8}
+.pq-consent a{color:var(--brand);text-decoration:none}
+.pq-consent a:hover{text-decoration:underline}
+#pquote .pq-btn{margin-top:16px}
+.pq-progress{margin:4px 0 20px}
+.pq-progress-top{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:9px}
+.pq-progress-track{height:6px;border-radius:999px;background:#e9edf6;overflow:hidden}
+.pq-progress-fill{height:100%;width:33.33%;border-radius:999px;background:linear-gradient(90deg,var(--brand),var(--brand-deep));transition:width .35s cubic-bezier(.4,0,.2,1)}
+.pq-step{display:flex;align-items:center;justify-content:center;gap:7px;padding:9px 6px;border:1px solid var(--line);border-radius:9px;font-size:12.5px;font-weight:600;color:#9aa3b8;background:#fff}
+.pq-step span{width:20px;height:20px;border-radius:50%;background:#eef1f7;color:#9aa3b8;display:inline-flex;align-items:center;justify-content:center;font-size:11.5px;font-weight:700;flex:0 0 auto}
+.pq-step.is-active{border-color:var(--brand);color:var(--brand);background:var(--brand-tint)}
+.pq-step.is-active span{background:var(--brand);color:#fff}
+.pq-step.is-done{color:var(--ink-2)}
+.pq-step.is-done span{background:var(--brand);color:#fff}
+.pq-panel{display:none}
+.pq-panel.is-current{display:block;animation:pqFade .28s ease both}
+.req{color:#e0524b;margin-right:4px;font-weight:700}
+.pq-inp{position:relative}
+.pq-inp>svg{position:absolute;left:13px;top:50%;transform:translateY(-50%);width:17px;height:17px;color:#9aa3b8;pointer-events:none;z-index:1;transition:color .15s ease}
+.pq-inp input,.pq-inp select{padding-left:46px}
+.pq-inp:focus-within>svg{color:var(--brand)}
+.pq-opts{display:grid;grid-template-columns:1fr 1fr;gap:11px;align-items:stretch}
+.pq-opt{position:relative;cursor:pointer;display:block}
+.pq-opt input{position:absolute;opacity:0;inset:0;cursor:pointer;margin:0}
+.pq-opt-body{display:flex;align-items:center;gap:10px;height:100%;border:1.5px solid #d9deea;border-radius:12px;padding:13px 14px;background:#fff;transition:all .15s ease}
+.pq-check{width:20px;height:20px;border-radius:50%;border:2px solid #cbd5ec;background:#fff;flex:0 0 auto;position:relative;transition:all .15s ease}
+.pq-opt-body b{font-family:var(--font-display);font-weight:700;font-size:14px;color:#101a3d;line-height:1.25}
+.pq-opt input:checked+.pq-opt-body{border-color:var(--brand);background:var(--brand-tint);box-shadow:inset 0 0 0 1px var(--brand)}
+.pq-opt input:checked+.pq-opt-body .pq-check{border-color:var(--brand);background:var(--brand)}
+.pq-opt input:checked+.pq-opt-body .pq-check::after{content:"";position:absolute;left:5px;top:1.5px;width:5px;height:9px;border:solid #fff;border-width:0 2px 2px 0;transform:rotate(45deg)}
+.pq-opt input:focus-visible+.pq-opt-body{box-shadow:0 0 0 3px rgba(11,52,192,.15)}
+@media (max-width:600px){.pq-opts-wide{grid-template-columns:1fr}}
+@media (min-width:601px){.pquote{padding:20px 22px 16px} .pq-lightning{width:36px;height:36px;border-radius:10px} .pq-lightning svg{width:20px;height:20px} .pq-head-row{gap:12px;margin-bottom:4px} .pq-head-row .pq-title{font-size:18px} .pq-head-row .pq-sub{font-size:12px} .pq-obligation{font-size:11px;margin:0 0 4px} .pq-progress{margin:2px 0 11px} #pquote .pq-field{margin-bottom:9px} #pquote .pq-field>label{font-size:12px;margin-bottom:4px} #pquote .pq-field input,#pquote .pq-field select{padding:9px 12px} #pquote .pq-inp input,#pquote .pq-inp select{padding-left:46px} #pquote .pq-opt-body{padding:9px 11px} #pquote .pq-opts{gap:9px} #pquote .pq-btn{padding:11px;font-size:14.5px} #pquote .pq-btn-ghost{padding:11px 14px} .pq-consent{margin:9px 0 2px} .pq-trustbar{margin:11px 0 0;padding-top:11px} .pq-trustbar span{font-size:10.5px} .pq-consent span{font-size:10px;line-height:1.38} .pq-secure{margin-top:10px}}
+.pq-trustbar{display:flex;flex-wrap:wrap;justify-content:center;gap:7px 13px;margin:15px 0 0;padding-top:14px;border-top:1px solid var(--line)}
+.pq-trustbar span{display:inline-flex;align-items:center;gap:5px;font-size:11px;font-weight:700;color:var(--ink-2);white-space:nowrap}
+.pq-trustbar svg{width:13px;height:13px;color:var(--brand);flex:0 0 auto}
 </style>
 </head>
 <body>
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MQ7HKJTJ"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
-
 
 <!-- ===================== HEADER ===================== -->
 <header class="site-header" id="top">
@@ -747,7 +752,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <a href="contact.html">Contact</a>
     </nav>
 
-    <a class="btn-carrier" href="contact.html">Become A Carrier</a>
     <a class="btn-call" href="tel:+18664992815">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/></svg>
       <span class="num-full">Call (866) 499-2815</span>
@@ -783,59 +787,108 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </nav>
 </header>
 
-<!-- ===================== HERO (Ship Anything) ===================== -->
-<section class="hx-hero">
-  <div class="container hx-wrap">
-    <div class="hx-left">
-      <p class="hx-eyebrow">Licensed &bull; Insured &bull; Nationwide</p>
-      <h1 class="hx-title">Ship Anything.<br>Anywhere. Anytime...</h1>
-      <p class="hx-lede">Get quotes for vehicles, freight, furniture, equipment, boats, motorcycles, and more. Transparent pricing. Trusted carriers. Reliable delivery.</p>
-      <div class="hx-quotebox">
-        <div class="hx-field">
-          <select class="hx-select" aria-label="What are you shipping?">
-            <option selected>What are you shipping?</option>
-            <option>Vehicle (car, truck, SUV)</option>
-            <option>Motorcycle</option>
-            <option>Boat</option>
-            <option>Freight / pallets</option>
-            <option>Furniture</option>
-            <option>Heavy equipment</option>
-            <option>Household goods</option>
-            <option>Other</option>
-          </select>
-        </div>
-        <div class="hx-field">
-          <select class="hx-select" aria-label="When do you need it shipped?">
-            <option selected>When do you need it?</option>
-            <option>As soon as possible</option>
-            <option>Within 1 week</option>
-            <option>Within 2 weeks</option>
-            <option>Within a month</option>
-            <option>My dates are flexible</option>
-          </select>
-        </div>
-        <div class="hx-qbtns">
-          <button type="button" class="hx-btn">Get Shipping Quotes</button>
-        </div>
-      </div>
-    </div>
-    <div class="hx-right">
-      <div class="hx-grid">
-          <a class="hx-cat" href="/vehicle-quote/" style="display:block;color:inherit;text-decoration:none"><img class="hx-thumb" src="assets/cat-vehicles.jpg" alt="Vehicles"><div class="hx-cat-body"><h3 class="hx-cat-title"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-.6 0-1.1.4-1.4.9l-1.4 2.9A3.7 3.7 0 0 0 2 12v4c0 .6.4 1 1 1h2"/><circle cx="7" cy="17" r="2"/><circle cx="17" cy="17" r="2"/></svg>Vehicles</h3><p class="hx-cat-desc">Cars, trucks, SUVs &amp; more</p></div></a>
-          <article class="hx-cat"><img class="hx-thumb" src="assets/cat-freight.jpg" alt="Freight"><div class="hx-cat-body"><h3 class="hx-cat-title"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m7.5 4.27 9 5.15"/><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"/><path d="m3.3 7 8.7 5 8.7-5"/><path d="M12 22V12"/></svg>Freight</h3><p class="hx-cat-desc">LTL, pallets, crates &amp; more</p></div></article>
-          <article class="hx-cat"><img class="hx-thumb" src="assets/cat-furniture.jpg" alt="Furniture"><div class="hx-cat-body"><h3 class="hx-cat-title"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 11V8a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v3"/><path d="M4 11a2 2 0 0 0-2 2v4a1 1 0 0 0 1 1h18a1 1 0 0 0 1-1v-4a2 2 0 0 0-2-2 2 2 0 0 0-2 2v1H6v-1a2 2 0 0 0-2-2Z"/><path d="M6 19v1"/><path d="M18 19v1"/></svg>Furniture</h3><p class="hx-cat-desc">Home, office &amp; store</p></div></article>
-          <article class="hx-cat"><img class="hx-thumb" src="assets/cat-equipment.jpg" alt="Equipment"><div class="hx-cat-body"><h3 class="hx-cat-title"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="17" r="3"/><circle cx="17" cy="17" r="2"/><path d="M9 17h6"/><path d="M4 14v-4a1 1 0 0 1 1-1h4l2 3h4v3"/><path d="M15 11l5-3"/></svg>Equipment</h3><p class="hx-cat-desc">Heavy equipment &amp; machinery</p></div></article>
-          <article class="hx-cat"><img class="hx-thumb" src="assets/cat-motorcycle.jpg" alt="Motorcycles"><div class="hx-cat-body"><h3 class="hx-cat-title"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="16" r="3"/><circle cx="18" cy="16" r="3"/><path d="M9 16h4l2.5-5H11"/><path d="M15.5 11 18 16"/><path d="M11 8h3l1.2 3"/><path d="M4 12h3l1.5 2"/></svg>Motorcycles</h3><p class="hx-cat-desc">All makes &amp; models</p></div></article>
-          <article class="hx-cat"><img class="hx-thumb" src="assets/cat-boat.jpg" alt="And More"><div class="hx-cat-body"><h3 class="hx-cat-title"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="8.5" cy="12" r="1" fill="currentColor" stroke="none"/><circle cx="12" cy="12" r="1" fill="currentColor" stroke="none"/><circle cx="15.5" cy="12" r="1" fill="currentColor" stroke="none"/></svg>And More</h3><p class="hx-cat-desc">Boats, household items and anything else</p></div></article>
-      </div>
-    </div>
+<!-- ===================== HERO ===================== -->
+<section class="hero">
+  <div class="hero-media" aria-hidden="true">
+    <img class="hero-img" alt="" src="assets/hero.jpg">
+    <div class="hero-overlay"></div>
   </div>
-  <div class="hx-strip">
-    <div class="container hx-strip-wrap">
-        <div class="hx-stat"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3a14 14 0 0 1 0 18 14 14 0 0 1 0-18Z"/></svg><h3>Nationwide Coverage</h3><p>We ship to all 50 states.</p></div>
-        <div class="hx-stat"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v5c0 5-3.5 8.5-7 10-3.5-1.5-7-5-7-10V6l7-3Z"/><path d="m9 12 2 2 4-4"/></svg><h3>Insured Carrier Network</h3><p>Your shipment is protected.</p></div>
-        <div class="hx-stat"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><h3>24/7 Support</h3><p>Real people. Real help.</p></div>
-        <div class="hx-stat"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20.6 13.4 12 22l-9-9V3h10l7.6 7.6a2 2 0 0 1 0 2.8Z"/><circle cx="7.5" cy="7.5" r="1.2" fill="currentColor" stroke="none"/></svg><h3>Transparent Pricing</h3><p>No hidden fees. Ever.</p></div>
+
+  <div class="container hero-grid">
+    <div class="hero-copy">
+      <div class="hero-head">
+      <p class="eyebrow reveal">Licensed&nbsp;•&nbsp;Insured&nbsp;•&nbsp;Nationwide</p>
+      <h1 class="reveal d2">Reliable Nationwide<br>Auto Transport</h1>
+      </div>
+      <div class="hero-rest">
+      <p class="lede reveal d2">Licensed, insured vehicle shipping with transparent pricing, vetted carriers, and support from quote to delivery.</p>
+
+      <ul class="trust-list reveal d3">
+        <li>
+          <span class="trust-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/><path d="m9 12 2 2 4-4"/></svg></span>
+          Licensed Broker &amp; Fully Insured
+        </li>
+        <li>
+          <span class="trust-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="2" width="8" height="4" rx="1"/><path d="M9 4H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2h-3"/><path d="m9 14 2 2 4-4"/></svg></span>
+          FMCSA Registered
+        </li>
+        <li>
+          <span class="trust-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></span>
+          Vetted Carrier Network
+        </li>
+        <li>
+          <span class="trust-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M4 13a8 8 0 0 1 16 0"/><rect x="2" y="13" width="4.4" height="7" rx="1.6"/><rect x="17.6" y="13" width="4.4" height="7" rx="1.6"/><path d="M20 19.5v.5a3 3 0 0 1-3 3h-3"/></svg></span>
+          Real-Time Tracking &amp; 24/7 Support
+        </li>
+      </ul>
+
+      <div class="hero-divider reveal d3"></div>
+
+      <div class="stats reveal d3">
+        <div class="stat"><span class="num">50+</span><span class="lbl">States Served</span></div>
+        <div class="stat"><span class="num">100%</span><span class="lbl">Insured Transport</span></div>
+        <div class="stat"><span class="num">24/7</span><span class="lbl">Support &amp; Tracking</span></div>
+      </div>
+      </div>
+    </div>
+
+    <!-- QUOTE CARD (booking widget) -->
+    <div class="pquote" id="pquote">
+      <div class="pq-head-row"><span class="pq-lightning"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M13 2 4.5 13.5H11l-1 8.5L19.5 10H13l1-8Z"/></svg></span><div><h3 class="pq-title">Get Your Instant Quote</h3><p class="pq-sub">Fast, secure pricing in 30 seconds.</p></div></div>
+      <div class="pq-progress" id="pqProgress">
+        <div class="pq-progress-top"><span id="pqStepName">Route</span><span id="pqStepCount">Free &middot; No obligation</span></div>
+        <div class="pq-progress-track"><div class="pq-progress-fill" id="pqProgressFill"></div></div>
+      </div>
+      <form id="pqForm" novalidate>
+        <div class="pq-panel is-current" data-panel="1">
+          <div class="pq-field"><label for="pq-pickup"><span class="req">*</span>Pickup Location</label><div class="pq-inp"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg><input id="pq-pickup" name="pickup" placeholder="Enter city or ZIP code" autocomplete="off" required></div></div>
+          <div class="pq-field"><label for="pq-delivery"><span class="req">*</span>Delivery Location</label><div class="pq-inp"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg><input id="pq-delivery" name="delivery" placeholder="Enter city or ZIP code" autocomplete="off" required></div></div>
+          <div class="pq-field" id="pq-pickup-field"><label for="pq-timeframe"><span class="req">*</span>Pickup Timeframe</label><div class="pq-inp"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg><select id="pq-timeframe" name="timeframe" required><option value="asap">As soon as possible</option><option value="within_1_week">Within 1 week</option><option value="within_2_weeks">Within 2 weeks</option><option value="beyond_2_weeks">More than 2 weeks</option></select></div></div>
+          <div class="pq-field" id="pq-date-field" style="display:none"><label for="pq-date"><span class="req">*</span>Preferred Pickup Date</label><div class="pq-inp"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg><input id="pq-date" name="date" type="date"></div></div>
+          <div class="pq-field"><label><span class="req">*</span>Trailer Type</label>
+            <div class="pq-opts">
+              <label class="pq-opt"><input type="radio" name="transport" value="Open" checked><span class="pq-opt-body"><span class="pq-check"></span><b>Open</b></span></label>
+              <label class="pq-opt"><input type="radio" name="transport" value="Enclosed"><span class="pq-opt-body"><span class="pq-check"></span><b>Enclosed</b></span></label>
+            </div>
+          </div>
+          <button type="button" class="pq-btn" data-next>Continue</button>
+        </div>
+        <div class="pq-panel" data-panel="2">
+          <div class="pq-field"><label for="pq-year"><span class="req">*</span>Vehicle Year</label><div class="pq-inp"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg><select id="pq-year" name="year" required><option value="">Select vehicle year</option></select></div></div>
+          <div class="pq-field"><label for="pq-make"><span class="req">*</span>Vehicle Make</label><div class="pq-inp"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13l1.5-4.5A2 2 0 0 1 8.4 7h7.2a2 2 0 0 1 1.9 1.5L19 13"/><path d="M5 13h14v4a1 1 0 0 1-1 1h-1a1 1 0 0 1-1-1v-1H8v1a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1v-4Z"/><circle cx="7.5" cy="15.5" r="1"/><circle cx="16.5" cy="15.5" r="1"/></svg><select id="pq-make" name="make" required disabled><option value="">Select vehicle make</option></select></div></div>
+          <div class="pq-field"><label for="pq-model"><span class="req">*</span>Vehicle Model</label><div class="pq-inp"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13l1.5-4.5A2 2 0 0 1 8.4 7h7.2a2 2 0 0 1 1.9 1.5L19 13"/><path d="M5 13h14v4a1 1 0 0 1-1 1h-1a1 1 0 0 1-1-1v-1H8v1a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1v-4Z"/><circle cx="7.5" cy="15.5" r="1"/><circle cx="16.5" cy="15.5" r="1"/></svg><select id="pq-model" name="model" required disabled><option value="">Select vehicle model</option></select></div></div>
+          <div class="pq-field"><label>Is it operable?</label>
+            <div class="pq-opts pq-opts-wide">
+              <label class="pq-opt"><input type="radio" name="operable" value="Yes" checked><span class="pq-opt-body"><span class="pq-check"></span><b>Yes, it is operable</b></span></label>
+              <label class="pq-opt"><input type="radio" name="operable" value="No"><span class="pq-opt-body"><span class="pq-check"></span><b>No, it is not operable</b></span></label>
+            </div>
+          </div>
+          <div class="pq-nav"><button type="button" class="pq-btn-ghost" data-back>Back</button><button type="button" class="pq-btn" data-next>Continue</button></div>
+        </div>
+        <div class="pq-panel" data-panel="3">
+          <div class="pq-row">
+            <div class="pq-field"><label for="pq-firstname"><span class="req">*</span>First Name</label><div class="pq-inp"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg><input id="pq-firstname" name="firstname" placeholder="Enter first name" autocomplete="given-name" required></div></div>
+            <div class="pq-field"><label for="pq-lastname"><span class="req">*</span>Last Name</label><div class="pq-inp"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg><input id="pq-lastname" name="lastname" placeholder="Enter last name" autocomplete="family-name" required></div></div>
+          </div>
+          <div class="pq-field"><label for="pq-email"><span class="req">*</span>Email Address</label><div class="pq-inp"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg><input id="pq-email" name="email" type="email" placeholder="Enter email address" autocomplete="email" required></div></div>
+          <div class="pq-field"><label for="pq-phone"><span class="req">*</span>Phone Number</label><div class="pq-inp"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"/></svg><input id="pq-phone" name="phone" type="tel" placeholder="Enter phone number" autocomplete="tel" required></div></div>
+          <label class="pq-consent"><input type="checkbox" name="sms_consent" id="pq-consent"><span>By submitting this form, you consent to receive recurring SMS updates and notifications from Ship Guy Logistics regarding your requests and services. Message frequency may vary. Message &amp; data rates may apply. Consent is not a condition of purchase. Reply STOP to unsubscribe or HELP for assistance. For support, call <a href="tel:+18664992815">(866)&nbsp;499-2815</a> or visit <a href="https://shipguy.com">shipguy.com</a>.</span></label>
+          <div class="pq-nav"><button type="button" class="pq-btn-ghost" data-back>Back</button><button type="submit" class="pq-btn">Get My Instant Quote</button></div>
+        </div>
+        <div class="pq-trustbar"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v5c0 5-3.5 8.5-7 10-3.5-1.5-7-5-7-10V6l7-3Z"/><path d="m9 12 2 2 4-4"/></svg>Licensed &amp; Insured</span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>Secure &amp; Private</span></div>
+        <p class="pq-error" id="pqError"></p>
+      </form>
+      <div class="pq-result" id="pqResult">
+        <div class="pq-loading" id="pqLoading"><div class="pq-spin"></div><span id="pqLoadingText">Getting your quote&#8230;</span></div>
+        <div class="pq-quote" id="pqQuote">
+          <p class="pq-eyebrow" id="pqEyebrow">Your instant quote</p>
+          <div class="pq-price" id="pqPrice">&#8212;</div>
+          <p class="pq-route" id="pqRoute"></p>
+          <p class="pq-note" id="pqNote">All-in price &#8212; no hidden fees.</p>
+          <div class="pq-cta"><a class="pq-btn" id="pqBookBtn" href="#" style="display:none">Continue to Booking</a><a class="pq-btn-ghost" id="pqCallBtn" href="tel:+18664992815">Call to Book &#183; (866) 499-2815</a></div>
+          <button type="button" class="pq-again" id="pqAgain">Start a new quote</button>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -867,7 +920,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <article class="review">
         <div class="review-top">
           <span class="avatar">JD</span>
-          <div><span class="name">James D.</span><span class="date">May 12, 2024</span></div>
+          <div><span class="name">James D.</span><span class="date">May 12, 2026</span></div>
         </div>
         <div class="stars" aria-label="5 out of 5">
           <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.06 6.6.79-4.86 4.53 1.27 6.52L12 17.9l-5.9 3.5 1.27-6.52L2.5 9.35l6.6-.79L12 2.5Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.06 6.6.79-4.86 4.53 1.27 6.52L12 17.9l-5.9 3.5 1.27-6.52L2.5 9.35l6.6-.79L12 2.5Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.06 6.6.79-4.86 4.53 1.27 6.52L12 17.9l-5.9 3.5 1.27-6.52L2.5 9.35l6.6-.79L12 2.5Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.06 6.6.79-4.86 4.53 1.27 6.52L12 17.9l-5.9 3.5 1.27-6.52L2.5 9.35l6.6-.79L12 2.5Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.06 6.6.79-4.86 4.53 1.27 6.52L12 17.9l-5.9 3.5 1.27-6.52L2.5 9.35l6.6-.79L12 2.5Z"/></svg>
@@ -878,7 +931,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <article class="review">
         <div class="review-top">
           <span class="avatar">SR</span>
-          <div><span class="name">Sarah R.</span><span class="date">April 28, 2024</span></div>
+          <div><span class="name">Sarah R.</span><span class="date">April 28, 2026</span></div>
         </div>
         <div class="stars" aria-label="5 out of 5">
           <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.06 6.6.79-4.86 4.53 1.27 6.52L12 17.9l-5.9 3.5 1.27-6.52L2.5 9.35l6.6-.79L12 2.5Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.06 6.6.79-4.86 4.53 1.27 6.52L12 17.9l-5.9 3.5 1.27-6.52L2.5 9.35l6.6-.79L12 2.5Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.06 6.6.79-4.86 4.53 1.27 6.52L12 17.9l-5.9 3.5 1.27-6.52L2.5 9.35l6.6-.79L12 2.5Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.06 6.6.79-4.86 4.53 1.27 6.52L12 17.9l-5.9 3.5 1.27-6.52L2.5 9.35l6.6-.79L12 2.5Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.06 6.6.79-4.86 4.53 1.27 6.52L12 17.9l-5.9 3.5 1.27-6.52L2.5 9.35l6.6-.79L12 2.5Z"/></svg>
@@ -889,7 +942,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <article class="review">
         <div class="review-top">
           <span class="avatar">MT</span>
-          <div><span class="name">Michael T.</span><span class="date">April 15, 2024</span></div>
+          <div><span class="name">Michael T.</span><span class="date">April 15, 2026</span></div>
         </div>
         <div class="stars" aria-label="5 out of 5">
           <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.06 6.6.79-4.86 4.53 1.27 6.52L12 17.9l-5.9 3.5 1.27-6.52L2.5 9.35l6.6-.79L12 2.5Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.06 6.6.79-4.86 4.53 1.27 6.52L12 17.9l-5.9 3.5 1.27-6.52L2.5 9.35l6.6-.79L12 2.5Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.06 6.6.79-4.86 4.53 1.27 6.52L12 17.9l-5.9 3.5 1.27-6.52L2.5 9.35l6.6-.79L12 2.5Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.06 6.6.79-4.86 4.53 1.27 6.52L12 17.9l-5.9 3.5 1.27-6.52L2.5 9.35l6.6-.79L12 2.5Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.06 6.6.79-4.86 4.53 1.27 6.52L12 17.9l-5.9 3.5 1.27-6.52L2.5 9.35l6.6-.79L12 2.5Z"/></svg>
@@ -900,7 +953,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <article class="review">
         <div class="review-top">
           <span class="avatar">KB</span>
-          <div><span class="name">Kelsey B.</span><span class="date">March 30, 2024</span></div>
+          <div><span class="name">Kelsey B.</span><span class="date">March 30, 2026</span></div>
         </div>
         <div class="stars" aria-label="5 out of 5">
           <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.06 6.6.79-4.86 4.53 1.27 6.52L12 17.9l-5.9 3.5 1.27-6.52L2.5 9.35l6.6-.79L12 2.5Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.06 6.6.79-4.86 4.53 1.27 6.52L12 17.9l-5.9 3.5 1.27-6.52L2.5 9.35l6.6-.79L12 2.5Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.06 6.6.79-4.86 4.53 1.27 6.52L12 17.9l-5.9 3.5 1.27-6.52L2.5 9.35l6.6-.79L12 2.5Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.06 6.6.79-4.86 4.53 1.27 6.52L12 17.9l-5.9 3.5 1.27-6.52L2.5 9.35l6.6-.79L12 2.5Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.06 6.6.79-4.86 4.53 1.27 6.52L12 17.9l-5.9 3.5 1.27-6.52L2.5 9.35l6.6-.79L12 2.5Z"/></svg>
@@ -922,7 +975,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <div class="steps-row">
       <article class="step-card">
-        <div class="step-illus"><img src="assets/step-01.jpg" alt="Step 1: start a shipping quote on the Ship Guy website" loading="lazy"></div>
+        <div class="step-illus"><img src="assets/step-01.jpg" alt="Step 1: enter pickup, delivery, and vehicle on the Ship Guy quote form" loading="lazy"></div>
         <h3>Get Your Quote</h3>
         <p>Enter your pickup, delivery, and vehicle details to receive a fast, transparent shipping estimate.</p>
       </article>
@@ -1035,16 +1088,18 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
     </div>
 
-    <div class="loc-states">
-      <span class="loc-states-label">Popular states:</span>
-      <a href="#top">Florida</a>
-      <a href="#top">California</a>
-      <a href="#top">Texas</a>
-      <a href="#top">New York</a>
-      <a href="#top">Illinois</a>
-      <a href="#top">Georgia</a>
-      <a href="#top">Washington</a>
-      <a href="#top">Arizona</a>
+        <div class="loc-states">
+      <span class="loc-states-label">States we serve:</span>
+      <a href="alabama-auto-transport.html">Alabama</a>
+      <a href="alaska-auto-transport.html">Alaska</a>
+      <a href="arizona-auto-transport.html">Arizona</a>
+      <a href="arkansas-auto-transport.html">Arkansas</a>
+      <a href="california-auto-transport.html">California</a>
+      <a href="colorado-auto-transport.html">Colorado</a>
+      <a href="connecticut-auto-transport.html">Connecticut</a>
+      <a href="delaware-auto-transport.html">Delaware</a>
+      <a href="florida-auto-transport.html">Florida</a>
+      <a href="georgia-auto-transport.html">Georgia</a>
     </div>
   </div>
 </section>
@@ -1120,7 +1175,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
     </div>
 
-    <p class="wc-mc">MC&nbsp;#1457715&nbsp;&nbsp;·&nbsp;&nbsp;DOT&nbsp;#3932149</p>
+    <p class="wc-mc">MC&nbsp;#XXXXXX&nbsp;&nbsp;·&nbsp;&nbsp;DOT&nbsp;#XXXXXXX</p>
   </div>
 </section>
 
@@ -1226,13 +1281,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <ul>
         <li><a href="how-it-works.html">How It Works</a></li>
         <li><a href="#reviews">Reviews</a></li>
+        <li><a href="#locations">Locations</a></li>
         <li><a href="faq.html">FAQ</a></li>
         <li><a href="contact.html">Contact</a></li>
-        <li style="margin-top:10px;padding-top:10px;border-top:1px solid rgba(255,255,255,.15)"><a href="locations.html"><strong>All 49 Locations</strong></a></li>
-        <li><a href="about.html">About Us</a></li>
-        <li><a href="car-shipping-insurance.html">Insurance &amp; Claims</a></li>
-        <li><a href="privacy.html">Privacy</a></li>
-        <li><a href="terms.html">Terms</a></li>
       </ul>
     </div>
     <div class="f-col">
@@ -1255,6 +1306,19 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div class="line"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg><a href="mailto:quotes@shipguy.com">quotes@shipguy.com</a></div>
       <div class="line"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span>Support available 24/7</span></div>
     </div>
+  </div>
+  <div class="container footer-states">
+      <span class="fs-label">States we serve:</span>
+      <a href="alabama-auto-transport.html">Alabama</a>
+      <a href="alaska-auto-transport.html">Alaska</a>
+      <a href="arizona-auto-transport.html">Arizona</a>
+      <a href="arkansas-auto-transport.html">Arkansas</a>
+      <a href="california-auto-transport.html">California</a>
+      <a href="colorado-auto-transport.html">Colorado</a>
+      <a href="connecticut-auto-transport.html">Connecticut</a>
+      <a href="delaware-auto-transport.html">Delaware</a>
+      <a href="florida-auto-transport.html">Florida</a>
+      <a href="georgia-auto-transport.html">Georgia</a>
   </div>
   <div class="container footer-bottom">
     <small>© 2026 Ship Guy. Licensed &amp; FMCSA-registered auto transport broker. All rights reserved.</small>
@@ -1320,22 +1384,220 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   }
 })();
 </script>
-
 <script>
+/* ============================================================
+   SHIP GUY \u2014 custom quote tool wired to the BeRocker Lead Source API
+   Docs: https://help.berocker.com/integrations/pickup-windows-api
+
+   >>> STEP 1: create a lead source in BeRocker
+       (Settings -> Lead Management -> Lead sources -> + Add new source,
+        set Per Lead Price = 0), then copy its "Lead save URL".
+   >>> STEP 2: paste that URL below (it ends with /save). <<<
+   Until you do, the tool shows a sample estimate so you can preview it.
+   ============================================================ */
 (function(){
-  var btn=document.querySelector('.hx-qbtns .hx-btn');
-  var sel=document.querySelector('.hx-select[aria-label="What are you shipping?"]');
-  if(btn&&sel){
-    btn.addEventListener('click',function(){
-      var v=(sel.value||'').toLowerCase();
-      if(v.indexOf('vehicle')===0||v.indexOf('motorcycle')===0){
-        window.location.href='/vehicle-quote/';
-        return;
-      }
-      var q=document.querySelector('.hx-quote');
-      if(q){q.scrollIntoView({behavior:'smooth'});}
+  var LEAD_SAVE_URL = '/api/quote2/save';
+  var API_READY = LEAD_SAVE_URL.indexOf('YOUR_LEAD_SOURCE_KEY') === -1;
+
+  var form=document.getElementById('pqForm'); if(!form) return;
+  var steps=[].slice.call(document.querySelectorAll('#pquote .pq-step'));
+  var panels=[].slice.call(document.querySelectorAll('#pquote .pq-panel'));
+  var stepsBar=document.querySelector('#pquote .pq-progress');
+  var cur=0;
+  function show(i){panels.forEach(function(p,x){p.classList.toggle('is-current',x===i);});steps.forEach(function(sp,x){sp.classList.toggle('is-active',x===i);sp.classList.toggle('is-done',x<i);});cur=i;var names=['Route','Vehicle','Contact'];var fill=document.getElementById('pqProgressFill');if(fill)fill.style.width=((i+1)/panels.length*100)+'%';var nm=document.getElementById('pqStepName');if(nm)nm.textContent=names[i]||'';}
+  function validate(i){var ok=true;panels[i].querySelectorAll('input[required],select[required]').forEach(function(inp){if(inp.disabled)return; if(!inp.value.trim()){inp.classList.add('err');ok=false;}else inp.classList.remove('err');});var em=panels[i].querySelector('input[type=email]');if(em&&em.value&&!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(em.value)){em.classList.add('err');ok=false;}return ok;}
+  function validateAll(){var ok=true;form.querySelectorAll('input[required],select[required]').forEach(function(el){if(el.disabled)return;if(!el.value.trim()){el.classList.add('err');ok=false;}else el.classList.remove('err');});var em=document.getElementById('pq-email');if(em&&em.value&&!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(em.value)){em.classList.add('err');ok=false;}return ok;}
+  form.querySelectorAll('[data-next]').forEach(function(b){b.addEventListener('click',function(){if(validate(cur))show(cur+1);});});
+  form.querySelectorAll('[data-back]').forEach(function(b){b.addEventListener('click',function(){show(cur-1);});});
+  form.querySelectorAll('input,select').forEach(function(inp){inp.addEventListener('input',function(){inp.classList.remove('err');});inp.addEventListener('change',function(){inp.classList.remove('err');});});
+
+  /* On load: ask BeRocker which pickup question to show */
+  if(API_READY){
+    fetch(LEAD_SAVE_URL.replace('/save','/quote-config'))
+      .then(function(r){return r.ok?r.json():null;})
+      .then(function(cfg){
+        if(!cfg) return;
+        var tf=document.getElementById('pq-timeframe'), tfWrap=document.getElementById('pq-pickup-field'), dateWrap=document.getElementById('pq-date-field'), dateInp=document.getElementById('pq-date');
+        if(cfg.pickupTimeframes && cfg.pickupTimeframes.length){
+          tf.innerHTML=''; cfg.pickupTimeframes.forEach(function(t){var o=document.createElement('option');o.value=t.value;o.textContent=t.label;if(t.isDefault)o.selected=true;tf.appendChild(o);});
+        } else if(cfg.pickupWindow){
+          tfWrap.style.display='none'; dateWrap.style.display=''; if(cfg.pickupWindow.earliestDate) dateInp.min=cfg.pickupWindow.earliestDate;
+        } else {
+          tfWrap.style.display='none'; dateWrap.style.display='';
+        }
+      }).catch(function(){});
+  }
+
+  function mapType(v){return {'Sedan':'Car','SUV / Crossover':'SUV','Pickup Truck':'Pickup','Van / Minivan':'Van','Motorcycle':'Motorcycle','Other':'Other'}[v]||'Car';}
+
+  function submitLead(data){
+    if(!API_READY) return demoQuote(data);
+    var payload={
+      first_name: data.firstname||undefined, last_name: data.lastname||undefined, phone: data.phone, email: data.email||undefined,
+      transport_type: (data.transport||'Open').toLowerCase(),
+      secondary_id: 'WEB-'+Date.now(),
+      customer_comments: 'SMS consent: '+(data.sms_consent?'YES (opted in via web form)':'not given')+'.',
+      vehicles:[{vehicle_model_year: parseInt(data.year,10)||undefined, vehicle_make: data.make||undefined, vehicle_model: data.model||undefined, vehicle_type: (function(){var m=document.getElementById('pq-model');return m&&m.dataset&&m.dataset.vtype?m.dataset.vtype:undefined;})(), vehicle_inop: data.operable==='No'}]
+    };
+    function setLoc(prefix, raw, elId){
+      var el=document.getElementById(elId), d=el&&el.dataset?el.dataset:{}, zip=d.zip||'', city=d.city||'', st=d.state||'';
+      raw=(raw||'').trim();
+      if(zip){payload[prefix+'_postal_code']=zip; if(city)payload[prefix+'_city']=city; if(st)payload[prefix+'_state']=st;}
+      else if(/^\d{5}$/.test(raw)){payload[prefix+'_postal_code']=raw;}
+      else {payload[prefix+'_city']=city||raw; if(st)payload[prefix+'_state']=st;}
+    }
+    setLoc('origin', data.pickup, 'pq-pickup');
+    setLoc('destination', data.delivery, 'pq-delivery');
+    if(data.timeframe) payload.pickup_timeframe=data.timeframe; else if(data.date) payload.ship_date=data.date;
+    return fetch(LEAD_SAVE_URL,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)})
+      .then(function(r){return r.json().then(function(j){return {ok:r.ok,body:j};});})
+      .then(function(res){
+        if(!res.ok || !res.body || !res.body.id){var m=res.body&&res.body.errors?String(Object.values(res.body.errors)[0]):'We could not process that. Please check your details.';throw new Error(m);}
+        var lead=res.body;
+        var statusUrl=LEAD_SAVE_URL.replace('/save','/'+lead.id+'/booking-status');
+        setLoading('Getting your best price\u2026');
+        return pollStatus(statusUrl, lead.bookingLink, 0);
+      });
+  }
+  function pollStatus(url, bookingLink, startTime, tries){
+    startTime = startTime || Date.now(); tries = tries || 0;
+    if(Date.now() - startTime > 20000) return Promise.resolve({bookingLink:bookingLink, price:null, manual:false, timedOut:true});
+    return new Promise(function(res){setTimeout(res, tries===0?400:1000);}).then(function(){
+      return fetch(url).then(function(r){return r.json();}).then(function(s){
+        var link=s.bookingLink||bookingLink;
+        if(s.priceReady) return {bookingLink:link, price:s.price, manual:false};
+        if(s.manualReview) return {bookingLink:link, price:null, manual:true};
+        if(s.priceFailed) return {bookingLink:link, price:null, manual:false, failed:true};
+        return pollStatus(url, link, startTime, tries+1);
+      }).catch(function(){ return pollStatus(url, bookingLink, startTime, tries+1); });
     });
   }
+  function demoQuote(data){
+    return new Promise(function(res){setTimeout(function(){
+      var base={'Sedan':600,'SUV / Crossover':720,'Pickup Truck':790,'Van / Minivan':820,'Motorcycle':480,'Other':720}[data.vtype]||700;
+      if(data.transport==='Enclosed') base=Math.round(base*1.5); if(data.operable==='No') base+=150;
+      res({price:base, bookingLink:null, manual:false, demo:true});
+    },900);});
+  }
+
+  var loadingText=document.getElementById('pqLoadingText'), loading=document.getElementById('pqLoading'), quote=document.getElementById('pqQuote'), result=document.getElementById('pqResult'), errBox=document.getElementById('pqError');
+  function setLoading(t){if(loadingText)loadingText.textContent=t;}
+  function render(res, data){
+    if(res && res.redirecting){ return; }
+    loading.style.display='none';
+    var priceEl=document.getElementById('pqPrice'), eyebrow=document.getElementById('pqEyebrow'), note=document.getElementById('pqNote'), book=document.getElementById('pqBookBtn');
+    if(res.manual){
+      eyebrow.textContent='Quote request received'; priceEl.textContent='We\u2019ll be in touch'; priceEl.style.fontSize='23px';
+      note.textContent='Your vehicle needs a custom quote \u2014 a specialist will contact you shortly.';
+    } else if(res.price){
+      eyebrow.textContent = res.demo ? 'Your estimated price' : 'Your instant quote';
+      priceEl.textContent='$'+Number(res.price).toLocaleString(); priceEl.style.fontSize='38px';
+      note.textContent = res.demo ? 'Sample estimate for preview. Add your BeRocker Lead save URL for live pricing.' : 'All-in price \u2014 no hidden fees. Continue to lock in your booking.';
+    } else if(res.failed){
+      eyebrow.textContent='Almost there'; priceEl.textContent='Call for your price'; priceEl.style.fontSize='24px';
+      note.textContent='We could not price this online right now \u2014 call us and we will quote it for you.';
+    } else if(res.timedOut){
+      eyebrow.textContent='Your quote is ready'; priceEl.textContent='See your price'; priceEl.style.fontSize='25px';
+      note.textContent='Tap Continue to Booking to see your exact price and reserve your pickup.';
+    } else {
+      eyebrow.textContent='Almost there'; priceEl.textContent='Get your quote'; priceEl.style.fontSize='23px';
+      note.textContent='Continue to see your price and book, or call us now.';
+    }
+    if(res.liveError){eyebrow.textContent='Estimated price';note.textContent='⚠ Live pricing did not respond: '+res.liveError+'. Showing a sample — call for your exact quote.';}
+    document.getElementById('pqRoute').textContent=(data.pickup||'')+' \u2192 '+(data.delivery||'')+'  \u00b7  '+(data.transport||'Open')+' transport';
+    if(res.bookingLink){book.href=res.bookingLink; book.style.display='';}
+    quote.classList.add('show');
+  }
+
+  form.addEventListener('submit',function(e){
+    e.preventDefault();
+    if(!validate(cur)){var fe=panels[cur].querySelector('.err');if(fe&&fe.scrollIntoView)fe.scrollIntoView({behavior:'smooth',block:'center'});return;}
+    var data={}; new FormData(form).forEach(function(v,k){data[k]=v;});
+    if(errBox) errBox.style.display='none';
+    form.style.display='none'; if(stepsBar) stepsBar.style.display='none';
+    result.classList.add('show'); loading.style.display='block'; quote.classList.remove('show'); setLoading('Getting your quote\u2026');
+    submitLead(data).then(function(res){
+      if(res && res.bookingLink && !res.demo && (res.price || res.timedOut)){ setLoading('Taking you to your booking page...'); window.location.href=res.bookingLink; return; }
+      render(res,data);
+    }).catch(function(err){
+      // fall back to a sample estimate so the visitor still sees something, and surface the reason
+      demoQuote(data).then(function(d){ d.demo=true; d.liveError=(err&&err.message)?err.message:'no response from the pricing service (possible CORS block)'; render(d,data);
+        if(errBox){errBox.textContent=(err&&err.message?err.message+' ':'')+'(showing a sample estimate)'; }
+      });
+    });
+  });
+  var again=document.getElementById('pqAgain');
+  if(again) again.addEventListener('click',function(){result.classList.remove('show'); if(stepsBar)stepsBar.style.display=''; form.style.display=''; show(0);});
+})();
+</script>
+<script>
+/* Google Places autocomplete for the Pickup/Delivery fields */
+function pqInitPlaces(){
+  if(!(window.google && google.maps && google.maps.places)) return;
+  ['pq-pickup','pq-delivery'].forEach(function(id){
+    var el=document.getElementById(id); if(!el) return;
+    try{
+      var ac=new google.maps.places.Autocomplete(el,{componentRestrictions:{country:'us'},fields:['address_components','formatted_address'],types:['(regions)']});
+      ac.addListener('place_changed',function(){
+        var p=ac.getPlace(); if(!p||!p.address_components) return;
+        var zip='',city='',state='';
+        p.address_components.forEach(function(c){
+          if(c.types.indexOf('postal_code')>-1) zip=c.long_name;
+          if(c.types.indexOf('locality')>-1) city=c.long_name;
+          if(!city && c.types.indexOf('postal_town')>-1) city=c.long_name;
+          if(!city && c.types.indexOf('sublocality')>-1) city=c.long_name;
+          if(c.types.indexOf('administrative_area_level_1')>-1) state=c.short_name;
+        });
+        el.dataset.zip=zip; el.dataset.city=city; el.dataset.state=state;
+        el.value = city ? (city+(state?', '+state:'')+(zip?' '+zip:'')) : (zip||p.formatted_address||el.value);
+        el.classList.remove('err');
+      });
+      el.addEventListener('input',function(){el.dataset.zip='';el.dataset.city='';el.dataset.state='';});
+    }catch(e){}
+  });
+}
+</script>
+<script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDdLtDsWA23EBnDjGpXKueVzudvUVbopi8&libraries=places&loading=async&callback=pqInitPlaces"></script>
+<script>
+/* BeRocker Vehicle Database API - cascading Year -> Make -> Model pickers */
+(function(){
+  var API='https://app.berocker.com/api/v1/vehicles';
+  var KEY='bvk_vNxhnCfzk1XKqztmtfnf1exrm0aZmormR9smaNJdGoniaaQg';
+  var yearSel=document.getElementById('pq-year'), makeSel=document.getElementById('pq-make'), modelSel=document.getElementById('pq-model');
+  if(!yearSel||!makeSel||!modelSel) return;
+  function get(path, params){
+    var url=new URL(API+path);
+    if(params) Object.keys(params).forEach(function(k){url.searchParams.set(k,params[k]);});
+    return fetch(url.toString(),{headers:{'X-Api-Key':KEY}}).then(function(r){if(!r.ok)throw new Error('HTTP '+r.status);return r.json();}).then(function(j){return j.data||[];});
+  }
+  function fillSel(sel, items, getLabel, getVal, placeholder, getType){
+    sel.innerHTML='';
+    var o=document.createElement('option'); o.value=''; o.textContent=placeholder; sel.appendChild(o);
+    items.forEach(function(it){var op=document.createElement('option'); op.value=getVal(it); op.textContent=getLabel(it); if(getType)op.setAttribute('data-type',getType(it)||''); sel.appendChild(op);});
+    sel.disabled=items.length===0;
+  }
+  get('/years').then(function(years){ fillSel(yearSel, years, function(y){return y;}, function(y){return y;}, 'Select year…'); })
+    .catch(function(){ yearSel.innerHTML='<option value="">Select year…</option>'; });
+  yearSel.addEventListener('change', function(){
+    makeSel.innerHTML='<option value="">Select a year first</option>'; makeSel.disabled=true;
+    modelSel.innerHTML='<option value="">Select a make first</option>'; modelSel.disabled=true; modelSel.dataset.vtype='';
+    if(!yearSel.value) return;
+    makeSel.innerHTML='<option value="">Loading…</option>'; makeSel.disabled=true;
+    get('/makes',{year:yearSel.value}).then(function(makes){ fillSel(makeSel, makes, function(m){return m.name;}, function(m){return m.name;}, 'Select make…'); })
+      .catch(function(){ makeSel.innerHTML='<option value="">Could not load makes</option>'; makeSel.disabled=false; });
+  });
+  makeSel.addEventListener('change', function(){
+    modelSel.innerHTML='<option value="">Select a make first</option>'; modelSel.disabled=true; modelSel.dataset.vtype='';
+    if(!makeSel.value) return;
+    modelSel.innerHTML='<option value="">Loading…</option>'; modelSel.disabled=true;
+    get('/models',{year:yearSel.value, make:makeSel.value}).then(function(models){ fillSel(modelSel, models, function(m){return m.name;}, function(m){return m.name;}, 'Select model…', function(m){return m.type;}); })
+      .catch(function(){ modelSel.innerHTML='<option value="">Could not load models</option>'; modelSel.disabled=false; });
+  });
+  modelSel.addEventListener('change', function(){
+    var op=modelSel.options[modelSel.selectedIndex];
+    modelSel.dataset.vtype = op ? (op.getAttribute('data-type')||'') : '';
+    modelSel.classList.remove('err');
+  });
 })();
 </script>
 </body>
