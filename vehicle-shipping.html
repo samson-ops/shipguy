@@ -741,6 +741,9 @@ body.ready .reveal{opacity:1;transform:none}
   body{overflow-x:clip;max-width:100%;overscroll-behavior-x:none}
   body.vsbright .hero{overflow:hidden}
   body.vsbright .hero-bg,body.vsbright .hero-bg-svg{max-width:100%}
+  /* constant-height steps so the box never resizes and the page never shifts */
+  body.vsbright .pq-panel.is-current{min-height:400px}
+  @media (max-width:600px){ body.vsbright .pq-panel.is-current{min-height:380px} }
 </style>
 </head>
 <body class="vsbright">
@@ -1401,7 +1404,7 @@ body.ready .reveal{opacity:1;transform:none}
   var panels=[].slice.call(document.querySelectorAll('#pquote .pq-panel'));
   var stepsBar=document.querySelector('#pquote .pq-steps');
   var cur=0;
-  function show(i){var fEl=document.getElementById('pqForm');var startH=fEl?fEl.offsetHeight:0;panels.forEach(function(p,x){p.classList.toggle('is-current',x===i);});steps.forEach(function(sp,x){sp.classList.toggle('is-active',x===i);sp.classList.toggle('is-done',x<i);});cur=i;if(fEl){var endH=fEl.offsetHeight;if(startH&&endH&&startH!==endH){fEl.style.overflow='hidden';fEl.style.height=startH+'px';fEl.getBoundingClientRect();fEl.style.transition='height .32s cubic-bezier(.4,0,.2,1)';fEl.style.height=endH+'px';var done=function(){fEl.style.height='auto';fEl.style.overflow='';fEl.style.transition='';fEl.removeEventListener('transitionend',done);};fEl.addEventListener('transitionend',done);setTimeout(done,380);}}}
+  function show(i){panels.forEach(function(p,x){p.classList.toggle('is-current',x===i);});steps.forEach(function(sp,x){sp.classList.toggle('is-active',x===i);sp.classList.toggle('is-done',x<i);});cur=i;}
   function validate(i){var ok=true;panels[i].querySelectorAll('input[required],select[required]').forEach(function(inp){if(inp.disabled)return; if(!inp.value.trim()){inp.classList.add('err');ok=false;}else inp.classList.remove('err');});var em=panels[i].querySelector('input[type=email]');if(em&&em.value&&!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(em.value)){em.classList.add('err');ok=false;}return ok;}
   form.querySelectorAll('[data-next]').forEach(function(b){b.addEventListener('click',function(){if(validate(cur))show(cur+1);});});
   form.querySelectorAll('[data-back]').forEach(function(b){b.addEventListener('click',function(){show(cur-1);});});
