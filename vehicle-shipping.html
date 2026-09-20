@@ -648,9 +648,57 @@ body.ready .reveal{opacity:1;transform:none}
   .pac-item:hover,.pac-item-selected{background:var(--brand-tint)}
   .pac-item-query{font-size:14px;color:#101a3d}
   .pac-icon{margin-top:2px}
+
+  /* ============ BRIGHT HERO (vehicle-shipping only) ============ */
+  body.vsbright{background:#f7f9fd}
+  body.vsbright .site-header{position:absolute;top:0;left:0;right:0;background:transparent;border-bottom:0;box-shadow:none}
+  body.vsbright .site-header.is-scrolled{background:rgba(255,255,255,.96);box-shadow:0 6px 24px -16px rgba(13,26,80,.5);backdrop-filter:saturate(1.2) blur(6px)}
+  body.vsbright .brand{color:#0b34c0}
+  body.vsbright .brand-tag{margin-left:14px;padding-left:14px;border-left:1px solid #cbd5ec;color:#5b6480;font-size:10.5px;font-weight:700;letter-spacing:.13em;line-height:1.25;text-transform:uppercase}
+  body.vsbright .main-nav a,body.vsbright .nav-toggle-btn{color:#1d2350}
+  body.vsbright .main-nav a:hover,body.vsbright .nav-toggle-btn:hover{color:var(--brand)}
+  body.vsbright .btn-call{background:#fff;color:var(--brand);border:1.6px solid var(--brand);box-shadow:none}
+  body.vsbright .btn-call:hover{background:var(--brand-tint)}
+  body.vsbright .icon-burger{color:#12204a}
+  body.vsbright .hero{background:#eaf1fb}
+  body.vsbright .hero-img{object-position:center 72%;filter:saturate(1.06)}
+  body.vsbright .hero-overlay{background:linear-gradient(102deg,rgba(247,249,253,.975) 0%,rgba(247,249,253,.92) 33%,rgba(247,249,253,.55) 57%,rgba(238,244,252,.22) 100%)}
+  body.vsbright .hero-copy{color:#101a3d}
+  body.vsbright .hero-copy .eyebrow{color:#5b6480;letter-spacing:.26em;font-weight:700}
+  body.vsbright .hero-copy h1{color:#0a1230;font-size:clamp(2.4rem,5.4vw,4rem);line-height:1.03;letter-spacing:-.02em}
+  body.vsbright .hero-copy h1 .accent{color:var(--brand)}
+  body.vsbright .hero-copy .lede{color:#454e6d;font-size:clamp(1.02rem,1.5vw,1.2rem);max-width:520px}
+  body.vsbright .hero-badges{display:flex;flex-wrap:wrap;gap:14px 30px;margin-top:28px}
+  body.vsbright .hb{display:flex;align-items:center;gap:12px}
+  body.vsbright .hb-ic{width:46px;height:46px;border-radius:50%;background:#e6eefc;color:var(--brand);display:flex;align-items:center;justify-content:center;flex:0 0 auto}
+  body.vsbright .hb-ic svg{width:22px;height:22px}
+  body.vsbright .hb b{display:block;font-family:var(--font-display);font-weight:800;font-size:14.5px;color:#101a3d;line-height:1.18}
+  body.vsbright .hb small{color:#6b7488;font-size:12.5px}
+  /* quote card */
+  body.vsbright .pquote{border-radius:22px;box-shadow:0 44px 90px -42px rgba(13,26,80,.5),0 10px 24px -12px rgba(13,26,80,.13);padding:26px 26px 22px}
+  body.vsbright .pq-steps{display:none}
+  body.vsbright .pq-head-row{display:flex;align-items:center;gap:13px;margin-bottom:6px}
+  body.vsbright .pq-lightning{width:46px;height:46px;border-radius:13px;background:#e6eefc;color:var(--brand);display:flex;align-items:center;justify-content:center;flex:0 0 auto}
+  body.vsbright .pq-lightning svg{width:23px;height:23px}
+  body.vsbright .pq-head-row .pq-title{text-align:left;margin:0;font-size:21px}
+  body.vsbright .pq-head-row .pq-sub{text-align:left;margin:2px 0 0}
+  body.vsbright .pq-obligation{color:#9aa3b8;font-size:12px;margin:0 0 18px}
+  body.vsbright .pq-secure{display:none}
+  body.vsbright .pq-trustrow{display:flex;justify-content:space-between;gap:8px;margin-top:16px;padding-top:15px;border-top:1px solid var(--line)}
+  body.vsbright .pq-trustrow span{display:inline-flex;align-items:center;gap:6px;color:#6b7488;font-size:11.5px;font-weight:600}
+  body.vsbright .pq-trustrow svg{width:14px;height:14px;color:var(--brand);flex:0 0 auto}
+  body.vsbright .hero-grid{padding-top:118px;padding-bottom:58px;align-items:center}
+  body.vsbright .hero-badges{gap:14px 22px}
+  @media (max-width:1180px){body.vsbright .hero-grid{padding-top:96px}}
+  @media (max-width:1180px){
+    body.vsbright .hero-overlay{background:linear-gradient(180deg,rgba(247,249,253,.97) 0%,rgba(247,249,253,.9) 55%,rgba(240,245,252,.6) 100%)}
+    body.vsbright .site-header{position:sticky;background:rgba(255,255,255,.97);box-shadow:0 6px 24px -16px rgba(13,26,80,.4)}
+    body.vsbright .brand-tag{display:none}
+    body.vsbright .hero-badges{gap:12px 22px}
+  }
 </style>
 </head>
-<body>
+<body class="vsbright">
 
 <!-- ===================== HEADER ===================== -->
 <header class="site-header" id="top">
@@ -665,31 +713,13 @@ body.ready .reveal{opacity:1;transform:none}
 <path fill-rule="nonzero" fill="currentColor" fill-opacity="1" d="M 351.558594 284.785156 L 353.078125 284.542969 L 354.574219 288.246094 L 356.019531 284.070312 L 357.511719 283.832031 L 357.511719 289.199219 L 356.410156 289.378906 L 356.410156 285.78125 L 355.007812 289.609375 L 354.066406 289.761719 L 352.664062 286.382812 L 352.664062 289.988281 L 351.558594 290.167969 Z M 351.558594 284.785156 "/>
 <path fill-rule="nonzero" fill="currentColor" fill-opacity="1" d="M 328.964844 301.867188 L 328.964844 344.914062 C 328.964844 345.726562 328.75 346.363281 328.316406 346.820312 C 327.882812 347.273438 327.289062 347.570312 326.53125 347.703125 L 321.75 348.550781 C 320.9375 348.691406 320.316406 348.613281 319.882812 348.3125 C 319.453125 348.007812 319.234375 347.449219 319.234375 346.636719 L 319.234375 303.542969 L 304.96875 305.996094 L 304.96875 350.058594 C 304.96875 354.226562 306.089844 357.25 308.332031 359.128906 C 310.574219 361.003906 313.804688 361.574219 318.019531 360.828125 L 333.425781 358.109375 C 336.394531 357.585938 338.707031 356.367188 340.355469 354.445312 C 342.003906 352.53125 342.828125 350.027344 342.828125 346.933594 L 342.828125 299.480469 Z M 328.964844 301.867188 "/>
 <path fill-rule="nonzero" fill="currentColor" fill-opacity="1" d="M 373.042969 294.429688 L 370.351562 319.472656 C 370.242188 320.523438 369.785156 321.296875 368.972656 321.792969 C 368.160156 322.289062 367.363281 322.433594 366.582031 322.21875 C 365.796875 322 365.324219 321.394531 365.160156 320.394531 L 362.542969 296.238281 L 347.644531 298.800781 L 354.703125 337.789062 L 360.539062 336.757812 L 360.539062 353.035156 L 374.808594 350.523438 L 374.808594 334.234375 L 380.484375 333.234375 L 387.5 291.941406 Z M 373.042969 294.429688 "/>
-</svg></a>
+</svg></a><span class="brand-tag">America moves<br>with us</span>
 
     <nav class="main-nav" aria-label="Primary">
-      <a href="#top">Home</a>
       <a href="how-it-works.html">How It Works</a>
-      <div class="has-menu">
-        <button class="nav-toggle-btn" aria-haspopup="true" aria-expanded="false">Services
-          <span class="chev" aria-hidden="true"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></span>
-        </button>
-        <div class="menu" role="menu">
-          <a href="open-car-transport.html" role="menuitem">Open Car Transport</a>
-          <a href="enclosed-auto-transport.html" role="menuitem">Enclosed Auto Transport</a>
-          <a href="door-to-door-car-shipping.html" role="menuitem">Door-to-Door Shipping</a>
-          <a href="state-to-state-car-shipping.html" role="menuitem">State-to-State Shipping</a>
-          <a href="expedited-car-shipping.html" role="menuitem">Expedited Shipping</a>
-          <a href="snowbird-car-shipping.html" role="menuitem">Snowbird Car Shipping</a>
-          <a href="military-car-shipping.html" role="menuitem">Military Car Shipping</a>
-          <a href="dealer-auto-transport.html" role="menuitem">Dealer Auto Transport</a>
-          <a href="auction-car-transport.html" role="menuitem">Auction Car Transport</a>
-          <a href="services.html" role="menuitem" class="menu-all">All Services →</a>
-        </div>
-      </div>
-      
-      <a href="faq.html">FAQ</a>
-      <a href="contact.html">Contact</a>
+      <a href="index.html#why">Why Ship Guy</a>
+      <a href="services.html">Services</a>
+      <a href="index.html#reviews">Reviews</a>
     </nav>
 
     <a class="btn-call" href="tel:+18664992815">
@@ -730,52 +760,30 @@ body.ready .reveal{opacity:1;transform:none}
 <!-- ===================== HERO ===================== -->
 <section class="hero">
   <div class="hero-media" aria-hidden="true">
-    <img class="hero-img" alt="" src="assets/hero.jpg">
+    <img class="hero-img" alt="" src="assets/hero-banner.png">
     <div class="hero-overlay"></div>
   </div>
 
   <div class="container hero-grid">
     <div class="hero-copy">
       <div class="hero-head">
-      <p class="eyebrow reveal">Licensed&nbsp;•&nbsp;Insured&nbsp;•&nbsp;Nationwide</p>
-      <h1 class="reveal d2">Reliable Nationwide<br>Auto Transport</h1>
+      <p class="eyebrow reveal">Nationwide Car Shipping</p>
+      <h1 class="reveal d2">Your Car. <span class="accent">Anywhere</span><br>in the Country.</h1>
       </div>
       <div class="hero-rest">
-      <p class="lede reveal d2">Licensed, insured vehicle shipping with transparent pricing, vetted carriers, and support from quote to delivery.</p>
-
-      <ul class="trust-list reveal d3">
-        <li>
-          <span class="trust-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/><path d="m9 12 2 2 4-4"/></svg></span>
-          Licensed Broker &amp; Fully Insured
-        </li>
-        <li>
-          <span class="trust-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="2" width="8" height="4" rx="1"/><path d="M9 4H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2h-3"/><path d="m9 14 2 2 4-4"/></svg></span>
-          FMCSA Registered
-        </li>
-        <li>
-          <span class="trust-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></span>
-          Vetted Carrier Network
-        </li>
-        <li>
-          <span class="trust-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M4 13a8 8 0 0 1 16 0"/><rect x="2" y="13" width="4.4" height="7" rx="1.6"/><rect x="17.6" y="13" width="4.4" height="7" rx="1.6"/><path d="M20 19.5v.5a3 3 0 0 1-3 3h-3"/></svg></span>
-          Real-Time Tracking &amp; 24/7 Support
-        </li>
-      </ul>
-
-      <div class="hero-divider reveal d3"></div>
-
-      <div class="stats reveal d3">
-        <div class="stat"><span class="num">50+</span><span class="lbl">States Served</span></div>
-        <div class="stat"><span class="num">100%</span><span class="lbl">Insured Transport</span></div>
-        <div class="stat"><span class="num">24/7</span><span class="lbl">Support &amp; Tracking</span></div>
+      <p class="lede reveal d2">Fast, reliable, and fully insured auto transport for peace of mind, coast to coast.</p>
+      <div class="hero-badges reveal d3">
+        <div class="hb"><span class="hb-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/><path d="m9 12 2 2 4-4"/></svg></span><span><b>Fully Insured Transport</b><small>Your vehicle is protected</small></span></div>
+        <div class="hb"><span class="hb-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1.5" x2="12" y2="22.5"/><path d="M17 5.5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></span><span><b>Competitive Pricing</b><small>No hidden fees</small></span></div>
+        <div class="hb"><span class="hb-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M4 13a8 8 0 0 1 16 0"/><rect x="2" y="13" width="4.4" height="7" rx="1.6"/><rect x="17.6" y="13" width="4.4" height="7" rx="1.6"/><path d="M20 19.5v.5a3 3 0 0 1-3 3h-3"/></svg></span><span><b>24/7 Support</b><small>Real people. Real answers.</small></span></div>
       </div>
       </div>
     </div>
 
     <!-- CUSTOM PRICING TOOL (BeRocker Lead Source API) -->
     <div class="pquote" id="pquote">
-      <h3 class="pq-title">Get Your Instant Quote</h3>
-      <p class="pq-sub">Fast, reliable, secure car transport.</p>
+      <div class="pq-head-row"><span class="pq-lightning"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M13 2 4.5 13.5H11l-1 8.5L19.5 10H13l1-8Z"/></svg></span><div><h3 class="pq-title">Get Your Instant Quote</h3><p class="pq-sub">Fast, secure pricing in 30 seconds.</p></div></div>
+      <p class="pq-obligation">No obligation &bull; Takes less than 30 seconds</p>
       <div class="pq-steps" id="pqSteps" role="tablist">
         <div class="pq-step is-active"><span>1</span> Destination</div>
         <div class="pq-step"><span>2</span> Vehicle</div>
@@ -817,6 +825,7 @@ body.ready .reveal{opacity:1;transform:none}
         </div>
         <p class="pq-secure">Your information is secure and encrypted</p>
         <p class="pq-error" id="pqError"></p>
+        <div class="pq-trustrow"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>No Spam</span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1.5" x2="12" y2="22.5"/><path d="M17 5.5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>Competitive Pricing</span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/><path d="m9 12 2 2 4-4"/></svg>Secure &amp; private</span></div>
       </form>
       <div class="pq-result" id="pqResult">
         <div class="pq-loading" id="pqLoading"><div class="pq-spin"></div><span id="pqLoadingText">Getting your quote&#8230;</span></div>
