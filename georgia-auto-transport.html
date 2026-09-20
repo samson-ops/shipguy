@@ -788,7 +788,7 @@ body.ready .reveal{opacity:1;transform:none}
 .hero-lite .hb{min-width:0}
 .hero-lite .hb b{display:block;font-family:var(--font-display);font-weight:800;font-size:13.5px;color:#101a3d;line-height:1.16;white-space:nowrap}
 .hero-lite .hb small{color:#6b7488;font-size:12px;white-space:nowrap}
-.hero-lite .hero-grid{padding-top:30px;padding-bottom:52px;align-items:start}
+.hero-lite .hero-grid{padding-top:98px;padding-bottom:52px;align-items:start}
 .hero-lite .hero-badges{gap:20px}
 @media (max-width:1180px){.hero-lite .hero-grid{padding-top:26px;padding-bottom:44px}}
 @media (max-width:600px){.hero-lite .hero-grid{padding-top:18px}}
@@ -801,6 +801,19 @@ body.ready .reveal{opacity:1;transform:none}
 .hero-lite .hero-creds{display:flex;flex-wrap:wrap;gap:8px 10px;margin-top:22px}
 .hero-lite .hero-creds span{display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:700;color:var(--ink-2);background:#eaf0fd;border:1px solid #dbe4fb;padding:6px 11px;border-radius:999px}
 .hero-lite .hero-creds svg{width:13px;height:13px;color:var(--brand)}
+  /* ===== transparent overlay header ===== */
+  html{scroll-padding-top:96px}
+  .site-header{position:fixed;top:0;left:0;right:0;background:transparent;border-bottom:0;box-shadow:none;z-index:60}
+  .site-header.is-scrolled{background:rgba(255,255,255,.97);box-shadow:0 6px 24px -16px rgba(13,26,80,.5);-webkit-backdrop-filter:saturate(1.2) blur(6px);backdrop-filter:saturate(1.2) blur(6px)}
+  .brand-tag{align-self:center;margin-left:14px;padding-left:14px;border-left:1px solid #cbd5ec;color:#5b6480;font-size:10.5px;font-weight:700;letter-spacing:.13em;line-height:1.25;text-transform:uppercase}
+  .main-nav a,.nav-toggle-btn{color:#1d2350}
+  .main-nav a:hover,.nav-toggle-btn:hover{color:var(--brand)}
+  .btn-call{background:#fff;color:var(--brand);border:1.6px solid var(--brand);box-shadow:none}
+  .btn-call:hover{background:var(--brand-tint)}
+  @media (max-width:1180px){
+    .site-header{position:sticky;background:rgba(255,255,255,.97);box-shadow:0 6px 24px -16px rgba(13,26,80,.4)}
+    .brand-tag{display:none}
+  }
 </style>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@graph":[
@@ -824,7 +837,7 @@ body.ready .reveal{opacity:1;transform:none}
 <path fill-rule="nonzero" fill="currentColor" fill-opacity="1" d="M 351.558594 284.785156 L 353.078125 284.542969 L 354.574219 288.246094 L 356.019531 284.070312 L 357.511719 283.832031 L 357.511719 289.199219 L 356.410156 289.378906 L 356.410156 285.78125 L 355.007812 289.609375 L 354.066406 289.761719 L 352.664062 286.382812 L 352.664062 289.988281 L 351.558594 290.167969 Z M 351.558594 284.785156 "/>
 <path fill-rule="nonzero" fill="currentColor" fill-opacity="1" d="M 328.964844 301.867188 L 328.964844 344.914062 C 328.964844 345.726562 328.75 346.363281 328.316406 346.820312 C 327.882812 347.273438 327.289062 347.570312 326.53125 347.703125 L 321.75 348.550781 C 320.9375 348.691406 320.316406 348.613281 319.882812 348.3125 C 319.453125 348.007812 319.234375 347.449219 319.234375 346.636719 L 319.234375 303.542969 L 304.96875 305.996094 L 304.96875 350.058594 C 304.96875 354.226562 306.089844 357.25 308.332031 359.128906 C 310.574219 361.003906 313.804688 361.574219 318.019531 360.828125 L 333.425781 358.109375 C 336.394531 357.585938 338.707031 356.367188 340.355469 354.445312 C 342.003906 352.53125 342.828125 350.027344 342.828125 346.933594 L 342.828125 299.480469 Z M 328.964844 301.867188 "/>
 <path fill-rule="nonzero" fill="currentColor" fill-opacity="1" d="M 373.042969 294.429688 L 370.351562 319.472656 C 370.242188 320.523438 369.785156 321.296875 368.972656 321.792969 C 368.160156 322.289062 367.363281 322.433594 366.582031 322.21875 C 365.796875 322 365.324219 321.394531 365.160156 320.394531 L 362.542969 296.238281 L 347.644531 298.800781 L 354.703125 337.789062 L 360.539062 336.757812 L 360.539062 353.035156 L 374.808594 350.523438 L 374.808594 334.234375 L 380.484375 333.234375 L 387.5 291.941406 Z M 373.042969 294.429688 "/>
-</svg></a>
+</svg></a><span class="brand-tag">America moves<br>with us</span>
 
     <nav class="main-nav" aria-label="Primary">
       <a href="index.html">Home</a>

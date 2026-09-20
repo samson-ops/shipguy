@@ -750,7 +750,7 @@ body.ready .reveal{opacity:1;transform:none}
 .hero-lite .hb{min-width:0}
 .hero-lite .hb b{display:block;font-family:var(--font-display);font-weight:800;font-size:13.5px;color:#101a3d;line-height:1.16;white-space:nowrap}
 .hero-lite .hb small{color:#6b7488;font-size:12px;white-space:nowrap}
-.hero-lite .hero-grid{padding-top:30px;padding-bottom:52px;align-items:start}
+.hero-lite .hero-grid{padding-top:98px;padding-bottom:52px;align-items:start}
 .hero-lite .hero-badges{gap:20px}
 @media (max-width:1180px){.hero-lite .hero-grid{padding-top:26px;padding-bottom:44px}}
 @media (max-width:600px){.hero-lite .hero-grid{padding-top:18px}}
@@ -784,6 +784,77 @@ body.ready .reveal{opacity:1;transform:none}
 .lp-btn:hover{background:var(--brand-press);transform:translateY(-1px)}
 @media (max-width:860px){.lp-steps{grid-template-columns:1fr;gap:26px;max-width:440px;margin:0 auto} .lp-num{top:-13px}}
 @media (max-width:600px){.lp-how{padding:48px 0}}
+  /* ===== homepage content sections ===== */
+  .hp-head{text-align:center;max-width:640px;margin:0 auto 42px}
+  .hp-eyebrow{font-family:var(--font-display);font-weight:800;letter-spacing:.14em;text-transform:uppercase;font-size:12.5px;color:var(--brand);margin:0 0 10px}
+  .hp-head h2{font-family:var(--font-display);font-weight:800;font-size:clamp(1.7rem,3.4vw,2.4rem);color:#101a3d;letter-spacing:-.01em;margin:0 0 12px}
+  .hp-sub{color:var(--ink-2);font-size:16.5px;line-height:1.6;margin:0}
+  /* stats band */
+  .hp-stats{background:linear-gradient(135deg,var(--brand),var(--brand-deep));padding:40px 0}
+  .hp-stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;text-align:center}
+  .hp-stat-num{display:block;font-family:var(--font-display);font-weight:800;font-size:clamp(2rem,4vw,2.7rem);color:#fff;line-height:1}
+  .hp-stat-lbl{display:block;margin-top:8px;font-size:13.5px;font-weight:600;color:#c9d6fb;letter-spacing:.02em}
+  .hp-stat+.hp-stat{position:relative}
+  .hp-stats-grid .hp-stat:not(:first-child){border-left:1px solid rgba(255,255,255,.16)}
+  /* services */
+  .hp-services{background:#fff;padding:66px 0}
+  .hp-serv-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+  .hp-serv{display:block;text-decoration:none;background:#f7f9fd;border:1px solid var(--line);border-radius:16px;padding:26px 24px;transition:transform .18s ease,box-shadow .18s ease,border-color .18s ease}
+  .hp-serv:hover{transform:translateY(-3px);box-shadow:0 22px 44px -28px rgba(13,26,80,.45);border-color:#cfdcfa}
+  .hp-serv-ic{width:48px;height:48px;border-radius:12px;background:#e8eefc;color:var(--brand);display:flex;align-items:center;justify-content:center;margin-bottom:15px}
+  .hp-serv-ic svg{width:24px;height:24px}
+  .hp-serv h3{font-family:var(--font-display);font-weight:800;font-size:17.5px;color:#101a3d;margin:0 0 7px}
+  .hp-serv p{color:var(--ink-2);font-size:14px;line-height:1.55;margin:0 0 12px}
+  .hp-serv-link{font-weight:700;font-size:14px;color:var(--brand)}
+  .hp-serv-all{text-align:center;margin-top:32px}
+  .hp-serv-all a{display:inline-flex;align-items:center;font-family:var(--font-display);font-weight:700;font-size:15px;color:#fff;background:var(--brand);padding:14px 28px;border-radius:11px;text-decoration:none;box-shadow:0 14px 28px -14px rgba(11,52,192,.7);transition:background .15s,transform .15s}
+  .hp-serv-all a:hover{background:var(--brand-press);transform:translateY(-1px)}
+  /* vehicle types */
+  .hp-vehicles{background:#f4f7fe;padding:66px 0}
+  .hp-veh-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .hp-veh{background:#fff;border:1px solid var(--line);border-radius:14px;padding:24px 22px;display:flex;gap:15px;align-items:flex-start}
+  .hp-veh-ic{width:44px;height:44px;flex:0 0 auto;border-radius:11px;background:var(--brand-tint);color:var(--brand);display:flex;align-items:center;justify-content:center}
+  .hp-veh-ic svg{width:23px;height:23px}
+  .hp-veh h3{font-family:var(--font-display);font-weight:800;font-size:16px;color:#101a3d;margin:2px 0 5px}
+  .hp-veh p{color:var(--ink-2);font-size:13.5px;line-height:1.5;margin:0}
+  /* about */
+  .hp-about{background:#fff;padding:66px 0}
+  .hp-about-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center}
+  .hp-about-copy h2{font-family:var(--font-display);font-weight:800;font-size:clamp(1.7rem,3.2vw,2.3rem);color:#101a3d;letter-spacing:-.01em;margin:0 0 16px}
+  .hp-about-copy p{color:var(--ink-2);font-size:15.5px;line-height:1.7;margin:0 0 14px}
+  .hp-about-points{display:grid;gap:12px;margin-top:22px}
+  .hp-about-points div{display:flex;gap:11px;align-items:flex-start;font-size:14.5px;font-weight:600;color:#1d2350}
+  .hp-about-points svg{width:19px;height:19px;color:var(--brand);flex:0 0 auto;margin-top:1px}
+  .hp-about-card{background:linear-gradient(150deg,#0a1230,#0f1f52);border-radius:22px;padding:38px 34px;color:#fff;box-shadow:0 40px 80px -40px rgba(13,26,80,.6)}
+  .hp-about-card .hp-ac-eyebrow{font-family:var(--font-display);font-weight:700;letter-spacing:.12em;text-transform:uppercase;font-size:11.5px;color:#8fb0f5;margin:0 0 18px}
+  .hp-ac-rows{display:grid;gap:18px}
+  .hp-ac-row{display:flex;justify-content:space-between;align-items:baseline;padding-bottom:16px;border-bottom:1px solid rgba(255,255,255,.12)}
+  .hp-ac-row:last-child{border-bottom:0;padding-bottom:0}
+  .hp-ac-row b{font-family:var(--font-display);font-weight:800;font-size:24px;color:#fff}
+  .hp-ac-row span{font-size:13.5px;color:#aeb9d6;text-align:right;max-width:160px}
+  @media (max-width:900px){
+    .hp-serv-grid,.hp-veh-grid{grid-template-columns:1fr 1fr}
+    .hp-about-grid{grid-template-columns:1fr;gap:32px}
+  }
+  @media (max-width:600px){
+    .hp-stats-grid{grid-template-columns:1fr 1fr;gap:24px 12px}
+    .hp-stats-grid .hp-stat:not(:first-child){border-left:0}
+    .hp-serv-grid,.hp-veh-grid{grid-template-columns:1fr}
+    .hp-services,.hp-vehicles,.hp-about{padding:48px 0}
+  }
+  /* ===== transparent overlay header (homepage) ===== */
+  html{scroll-padding-top:96px}
+  .site-header{position:fixed;top:0;left:0;right:0;background:transparent;border-bottom:0;box-shadow:none;z-index:60}
+  .site-header.is-scrolled{background:rgba(255,255,255,.97);box-shadow:0 6px 24px -16px rgba(13,26,80,.5);-webkit-backdrop-filter:saturate(1.2) blur(6px);backdrop-filter:saturate(1.2) blur(6px)}
+  .brand-tag{align-self:center;margin-left:14px;padding-left:14px;border-left:1px solid #cbd5ec;color:#5b6480;font-size:10.5px;font-weight:700;letter-spacing:.13em;line-height:1.25;text-transform:uppercase}
+  .main-nav a,.nav-toggle-btn{color:#1d2350}
+  .main-nav a:hover,.nav-toggle-btn:hover{color:var(--brand)}
+  .btn-call{background:#fff;color:var(--brand);border:1.6px solid var(--brand);box-shadow:none}
+  .btn-call:hover{background:var(--brand-tint)}
+  @media (max-width:1180px){
+    .site-header{position:sticky;background:rgba(255,255,255,.97);box-shadow:0 6px 24px -16px rgba(13,26,80,.4)}
+    .brand-tag{display:none}
+  }
 </style>
 </head>
 <body>
@@ -801,7 +872,7 @@ body.ready .reveal{opacity:1;transform:none}
 <path fill-rule="nonzero" fill="currentColor" fill-opacity="1" d="M 351.558594 284.785156 L 353.078125 284.542969 L 354.574219 288.246094 L 356.019531 284.070312 L 357.511719 283.832031 L 357.511719 289.199219 L 356.410156 289.378906 L 356.410156 285.78125 L 355.007812 289.609375 L 354.066406 289.761719 L 352.664062 286.382812 L 352.664062 289.988281 L 351.558594 290.167969 Z M 351.558594 284.785156 "/>
 <path fill-rule="nonzero" fill="currentColor" fill-opacity="1" d="M 328.964844 301.867188 L 328.964844 344.914062 C 328.964844 345.726562 328.75 346.363281 328.316406 346.820312 C 327.882812 347.273438 327.289062 347.570312 326.53125 347.703125 L 321.75 348.550781 C 320.9375 348.691406 320.316406 348.613281 319.882812 348.3125 C 319.453125 348.007812 319.234375 347.449219 319.234375 346.636719 L 319.234375 303.542969 L 304.96875 305.996094 L 304.96875 350.058594 C 304.96875 354.226562 306.089844 357.25 308.332031 359.128906 C 310.574219 361.003906 313.804688 361.574219 318.019531 360.828125 L 333.425781 358.109375 C 336.394531 357.585938 338.707031 356.367188 340.355469 354.445312 C 342.003906 352.53125 342.828125 350.027344 342.828125 346.933594 L 342.828125 299.480469 Z M 328.964844 301.867188 "/>
 <path fill-rule="nonzero" fill="currentColor" fill-opacity="1" d="M 373.042969 294.429688 L 370.351562 319.472656 C 370.242188 320.523438 369.785156 321.296875 368.972656 321.792969 C 368.160156 322.289062 367.363281 322.433594 366.582031 322.21875 C 365.796875 322 365.324219 321.394531 365.160156 320.394531 L 362.542969 296.238281 L 347.644531 298.800781 L 354.703125 337.789062 L 360.539062 336.757812 L 360.539062 353.035156 L 374.808594 350.523438 L 374.808594 334.234375 L 380.484375 333.234375 L 387.5 291.941406 Z M 373.042969 294.429688 "/>
-</svg></a>
+</svg></a><span class="brand-tag">America moves<br>with us</span>
 
     <nav class="main-nav" aria-label="Primary">
       <a href="#top">Home</a>
@@ -975,6 +1046,18 @@ body.ready .reveal{opacity:1;transform:none}
   </div>
 </section>
 
+<!-- ===================== STATS BAND ===================== -->
+<section class="hp-stats">
+  <div class="container">
+    <div class="hp-stats-grid">
+      <div class="hp-stat"><span class="hp-stat-num">50</span><span class="hp-stat-lbl">States Covered</span></div>
+      <div class="hp-stat"><span class="hp-stat-num">100%</span><span class="hp-stat-lbl">Insured &amp; Bonded</span></div>
+      <div class="hp-stat"><span class="hp-stat-num">24/7</span><span class="hp-stat-lbl">Live Support</span></div>
+      <div class="hp-stat"><span class="hp-stat-num">$0</span><span class="hp-stat-lbl">Upfront Deposit</span></div>
+    </div>
+  </div>
+</section>
+
 <!-- ===================== REVIEWS ===================== -->
 <section class="reviews" id="reviews">
   <div class="container">
@@ -1060,6 +1143,45 @@ body.ready .reveal{opacity:1;transform:none}
       <div class="lp-step"><span class="lp-num">3</span><span class="lp-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><path d="m9 10 2 2 4-4"/></svg></span><h3>Track to Your Door</h3><p>Follow your shipment in real time and receive your vehicle safely at the destination &mdash; door to door, coast to coast.</p></div>
     </div>
     <div class="lp-how-cta"><a class="lp-btn" href="#pquote">Get Your Free Quote</a><span>or call <a href="tel:+18662973244">(866)&nbsp;297-3244</a></span></div>
+  </div>
+</section>
+
+<!-- ===================== SERVICES ===================== -->
+<section class="hp-services" id="services">
+  <div class="container">
+    <div class="hp-head">
+      <p class="hp-eyebrow">Our Services</p>
+      <h2>Complete Car Shipping Solutions</h2>
+      <p class="hp-sub">Whatever you're shipping and wherever it's headed, we have a transport option built for it — all fully insured, door to door.</p>
+    </div>
+    <div class="hp-serv-grid">
+      <a class="hp-serv" href="open-car-transport.html"><span class="hp-serv-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M10 17h4V5H2v12h3"/><path d="M20 17h2v-3.3a4 4 0 0 0-1.2-2.9L19 9h-5v8h1"/><circle cx="7.5" cy="17.5" r="2.5"/><circle cx="17.5" cy="17.5" r="2.5"/></svg></span><h3>Open Transport</h3><p>Our most popular, cost-effective way to ship your vehicle safely across the country.</p><span class="hp-serv-link">Learn more &rarr;</span></a>
+      <a class="hp-serv" href="enclosed-auto-transport.html"><span class="hp-serv-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v5c0 5-3.5 8.5-7 10-3.5-1.5-7-5-7-10V6l7-3Z"/><path d="m9 12 2 2 4-4"/></svg></span><h3>Enclosed Transport</h3><p>Fully enclosed carriers for luxury, exotic, classic, and high-value vehicles.</p><span class="hp-serv-link">Learn more &rarr;</span></a>
+      <a class="hp-serv" href="door-to-door-car-shipping.html"><span class="hp-serv-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M6 21V4a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v17"/><circle cx="15" cy="12" r="1"/></svg></span><h3>Door-to-Door</h3><p>We pick up and deliver as close to your doorstep as the truck can safely reach.</p><span class="hp-serv-link">Learn more &rarr;</span></a>
+      <a class="hp-serv" href="expedited-car-shipping.html"><span class="hp-serv-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 4.5 13.5H11l-1 8.5L19.5 10H13l1-8Z"/></svg></span><h3>Expedited Shipping</h3><p>Priority pickup and faster transit when you're on a tight timeline.</p><span class="hp-serv-link">Learn more &rarr;</span></a>
+      <a class="hp-serv" href="snowbird-car-shipping.html"><span class="hp-serv-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M4 6l16 12M20 6 4 18M2 12h20"/></svg></span><h3>Snowbird Transport</h3><p>Seamless seasonal shipping between your northern and southern homes.</p><span class="hp-serv-link">Learn more &rarr;</span></a>
+      <a class="hp-serv" href="military-car-shipping.html"><span class="hp-serv-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l2.6 5.3 5.9.9-4.3 4.1 1 5.8L12 16.9 6.8 19.2l1-5.8L3.5 9.2l5.9-.9L12 3Z"/></svg></span><h3>Military Transport</h3><p>Trusted, discounted auto transport for active-duty and relocating service members.</p><span class="hp-serv-link">Learn more &rarr;</span></a>
+    </div>
+    <div class="hp-serv-all"><a href="services.html">View all services &rarr;</a></div>
+  </div>
+</section>
+
+<!-- ===================== VEHICLE TYPES ===================== -->
+<section class="hp-vehicles">
+  <div class="container">
+    <div class="hp-head">
+      <p class="hp-eyebrow">What We Ship</p>
+      <h2>Every Vehicle, Handled with Care</h2>
+      <p class="hp-sub">From daily drivers to rare collectibles, we match each vehicle with the right carrier, equipment, and level of protection.</p>
+    </div>
+    <div class="hp-veh-grid">
+      <div class="hp-veh"><span class="hp-veh-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13l1.6-4.2A2 2 0 0 1 8.5 7.5h7a2 2 0 0 1 1.9 1.3L19 13"/><path d="M4 13h16v4a1 1 0 0 1-1 1h-1.5a1 1 0 0 1-1-1v-1h-9v1a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-3a1 1 0 0 1 1-1Z"/><circle cx="7.5" cy="15.5" r="1"/><circle cx="16.5" cy="15.5" r="1"/></svg></span><div><h3>Sedans &amp; Coupes</h3><p>Standard cars shipped safely and affordably on open or enclosed carriers.</p></div></div>
+      <div class="hp-veh"><span class="hp-veh-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12l1.2-4.5A2 2 0 0 1 6.1 6H16a2 2 0 0 1 1.9 1.4L19.5 12"/><path d="M2 12h19a1 1 0 0 1 1 1v4a1 1 0 0 1-1 1h-1v-1a1 1 0 0 0-1-1H5a1 1 0 0 0-1 1v1H3a1 1 0 0 1-1-1v-4a1 1 0 0 1 1-1Z"/><path d="M11 6v6"/><circle cx="7" cy="16" r="1.2"/><circle cx="17" cy="16" r="1.2"/></svg></span><div><h3>SUVs &amp; Trucks</h3><p>Larger vehicles and pickups transported nationwide with proper securing.</p></div></div>
+      <div class="hp-veh"><span class="hp-veh-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m12 2 2.4 4.9 5.4.8-3.9 3.8.9 5.4L12 19.1 7.2 21.6l.9-5.4L4.2 8.5l5.4-.8L12 2Z"/></svg></span><div><h3>Luxury &amp; Exotic</h3><p>High-value vehicles moved in fully enclosed, climate-conscious trailers.</p></div></div>
+      <div class="hp-veh"><span class="hp-veh-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span><div><h3>Classic &amp; Vintage</h3><p>Careful, white-glove handling for collectible and antique automobiles.</p></div></div>
+      <div class="hp-veh"><span class="hp-veh-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="5.5" cy="17" r="3"/><circle cx="18.5" cy="17" r="3"/><path d="M5.5 17h6l4-6h3M12 11l-2-3H7"/></svg></span><div><h3>Motorcycles</h3><p>Specialized equipment and securing for safe, damage-free motorcycle transport.</p></div></div>
+      <div class="hp-veh"><span class="hp-veh-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4l-2.5 2.5-2.5-.5-.5-2.5 2.5-2.5Z"/></svg></span><div><h3>Non-Running Vehicles</h3><p>Inoperable vehicles loaded with winches and the right carrier for the job.</p></div></div>
+    </div>
   </div>
 </section>
 
@@ -1187,6 +1309,37 @@ body.ready .reveal{opacity:1;transform:none}
     </div>
 
     <p class="wc-mc">MC&nbsp;#XXXXXX&nbsp;&nbsp;·&nbsp;&nbsp;DOT&nbsp;#XXXXXXX</p>
+  </div>
+</section>
+
+<!-- ===================== ABOUT ===================== -->
+<section class="hp-about">
+  <div class="container">
+    <div class="hp-about-grid">
+      <div class="hp-about-copy">
+        <p class="hp-eyebrow">About Ship Guy</p>
+        <h2>Nationwide Auto Transport You Can Trust</h2>
+        <p>Ship Guy Logistics is a licensed, fully insured auto-transport broker built on a simple idea: shipping a vehicle should be transparent, reliable, and stress-free. We connect you with a nationwide network of carefully vetted carriers and stay with you from your first quote through final delivery.</p>
+        <p>Every carrier in our network is screened for active licensing, safety record, and cargo insurance — so your vehicle is in trusted hands from pickup to drop-off, coast to coast.</p>
+        <div class="hp-about-points">
+          <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span>Licensed &amp; FMCSA-registered &mdash; MC #1457715 &middot; DOT #3932149</span></div>
+          <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span>Every carrier vetted for license, safety &amp; active insurance</span></div>
+          <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span>Transparent, all-in pricing with no upfront deposit</span></div>
+          <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span>Real, U.S.-based support available 24/7</span></div>
+        </div>
+      </div>
+      <div class="hp-about-visual">
+        <div class="hp-about-card">
+          <p class="hp-ac-eyebrow">Why Customers Choose Us</p>
+          <div class="hp-ac-rows">
+            <div class="hp-ac-row"><b>Licensed &amp; Insured</b><span>Fully bonded FMCSA broker</span></div>
+            <div class="hp-ac-row"><b>Vetted Carriers</b><span>Screened for safety &amp; insurance</span></div>
+            <div class="hp-ac-row"><b>All-In Pricing</b><span>No hidden fees or deposit</span></div>
+            <div class="hp-ac-row"><b>Door-to-Door</b><span>Nationwide, coast to coast</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
