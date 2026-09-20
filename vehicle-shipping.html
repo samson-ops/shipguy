@@ -659,21 +659,24 @@ body.ready .reveal{opacity:1;transform:none}
   body.vsbright .main-nav a:hover,body.vsbright .nav-toggle-btn:hover{color:var(--brand)}
   body.vsbright .btn-call{background:#fff;color:var(--brand);border:1.6px solid var(--brand);box-shadow:none}
   body.vsbright .btn-call:hover{background:var(--brand-tint)}
-  body.vsbright .icon-burger{color:#12204a}
+  body.vsbright .icon-burger{display:none}
   body.vsbright .hero{background:#eaf1fb}
   body.vsbright .hero-img{object-position:center 72%;filter:saturate(1.06)}
-  body.vsbright .hero-overlay{background:linear-gradient(102deg,rgba(247,249,253,.975) 0%,rgba(247,249,253,.92) 33%,rgba(247,249,253,.55) 57%,rgba(238,244,252,.22) 100%)}
+  body.vsbright .hero-overlay{background:linear-gradient(100deg,rgba(248,250,254,1) 0%,rgba(248,250,254,.99) 30%,rgba(248,250,254,.82) 48%,rgba(244,248,253,.4) 72%,rgba(238,244,252,.18) 100%)}
   body.vsbright .hero-copy{color:#101a3d}
   body.vsbright .hero-copy .eyebrow{color:#5b6480;letter-spacing:.26em;font-weight:700}
   body.vsbright .hero-copy h1{color:#0a1230;font-size:clamp(2.4rem,5.4vw,4rem);line-height:1.03;letter-spacing:-.02em}
   body.vsbright .hero-copy h1 .accent{color:var(--brand)}
+  body.vsbright .hero-copy h1,body.vsbright .hero-copy .lede,body.vsbright .hero-copy .eyebrow{text-shadow:none}
   body.vsbright .hero-copy .lede{color:#454e6d;font-size:clamp(1.02rem,1.5vw,1.2rem);max-width:520px}
-  body.vsbright .hero-badges{display:flex;flex-wrap:wrap;gap:14px 30px;margin-top:28px}
-  body.vsbright .hb{display:flex;align-items:center;gap:12px}
-  body.vsbright .hb-ic{width:46px;height:46px;border-radius:50%;background:#e6eefc;color:var(--brand);display:flex;align-items:center;justify-content:center;flex:0 0 auto}
-  body.vsbright .hb-ic svg{width:22px;height:22px}
-  body.vsbright .hb b{display:block;font-family:var(--font-display);font-weight:800;font-size:14.5px;color:#101a3d;line-height:1.18}
-  body.vsbright .hb small{color:#6b7488;font-size:12.5px}
+  body.vsbright .hero-copy{max-width:700px}
+  body.vsbright .hero-badges{display:flex;flex-wrap:wrap;gap:16px 20px;margin-top:28px}
+  body.vsbright .hb{display:flex;align-items:center;gap:10px}
+  body.vsbright .hb-ic{width:38px;height:38px;border-radius:50%;background:#e6eefc;color:var(--brand);display:flex;align-items:center;justify-content:center;flex:0 0 auto}
+  body.vsbright .hb-ic svg{width:20px;height:20px}
+  body.vsbright .hb{min-width:0}
+  body.vsbright .hb b{display:block;font-family:var(--font-display);font-weight:800;font-size:13.5px;color:#101a3d;line-height:1.16;white-space:nowrap}
+  body.vsbright .hb small{color:#6b7488;font-size:12px;white-space:nowrap}
   /* quote card */
   body.vsbright .pquote{border-radius:22px;box-shadow:0 44px 90px -42px rgba(13,26,80,.5),0 10px 24px -12px rgba(13,26,80,.13);padding:26px 26px 22px}
   body.vsbright .pq-steps{display:none}
@@ -688,13 +691,13 @@ body.ready .reveal{opacity:1;transform:none}
   body.vsbright .pq-trustrow span{display:inline-flex;align-items:center;gap:6px;color:#6b7488;font-size:11.5px;font-weight:600}
   body.vsbright .pq-trustrow svg{width:14px;height:14px;color:var(--brand);flex:0 0 auto}
   body.vsbright .hero-grid{padding-top:118px;padding-bottom:58px;align-items:center}
-  body.vsbright .hero-badges{gap:14px 22px}
+  body.vsbright .hero-badges{gap:20px}
   @media (max-width:1180px){body.vsbright .hero-grid{padding-top:96px}}
   @media (max-width:1180px){
     body.vsbright .hero-overlay{background:linear-gradient(180deg,rgba(247,249,253,.97) 0%,rgba(247,249,253,.9) 55%,rgba(240,245,252,.6) 100%)}
     body.vsbright .site-header{position:sticky;background:rgba(255,255,255,.97);box-shadow:0 6px 24px -16px rgba(13,26,80,.4)}
     body.vsbright .brand-tag{display:none}
-    body.vsbright .hero-badges{gap:12px 22px}
+    body.vsbright .hero-badges{flex-wrap:wrap;gap:12px 22px}
   }
 </style>
 </head>
@@ -715,12 +718,7 @@ body.ready .reveal{opacity:1;transform:none}
 <path fill-rule="nonzero" fill="currentColor" fill-opacity="1" d="M 373.042969 294.429688 L 370.351562 319.472656 C 370.242188 320.523438 369.785156 321.296875 368.972656 321.792969 C 368.160156 322.289062 367.363281 322.433594 366.582031 322.21875 C 365.796875 322 365.324219 321.394531 365.160156 320.394531 L 362.542969 296.238281 L 347.644531 298.800781 L 354.703125 337.789062 L 360.539062 336.757812 L 360.539062 353.035156 L 374.808594 350.523438 L 374.808594 334.234375 L 380.484375 333.234375 L 387.5 291.941406 Z M 373.042969 294.429688 "/>
 </svg></a><span class="brand-tag">America moves<br>with us</span>
 
-    <nav class="main-nav" aria-label="Primary">
-      <a href="how-it-works.html">How It Works</a>
-      <a href="index.html#why">Why Ship Guy</a>
-      <a href="services.html">Services</a>
-      <a href="index.html#reviews">Reviews</a>
-    </nav>
+    <nav class="main-nav" aria-label="Primary"></nav>
 
     <a class="btn-call" href="tel:+18664992815">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/></svg>
@@ -734,33 +732,13 @@ body.ready .reveal{opacity:1;transform:none}
   </div>
 
   <!-- mobile nav -->
-  <nav class="mobile-nav" id="mobileNav" aria-label="Mobile">
-    <div class="inner">
-      <a href="#top">Home</a>
-      <a href="how-it-works.html">How It Works</a>
-      <span class="m-sub">Services</span>
-                  <a href="open-car-transport.html">Open Car Transport</a>
-      <a href="enclosed-auto-transport.html">Enclosed Auto Transport</a>
-      <a href="door-to-door-car-shipping.html">Door-to-Door Shipping</a>
-      <a href="state-to-state-car-shipping.html">State-to-State Shipping</a>
-      <a href="expedited-car-shipping.html">Expedited Shipping</a>
-      <a href="snowbird-car-shipping.html">Snowbird Car Shipping</a>
-      <a href="military-car-shipping.html">Military Car Shipping</a>
-      <a href="dealer-auto-transport.html">Dealer Auto Transport</a>
-      <a href="auction-car-transport.html">Auction Car Transport</a>
-      <a href="services.html">All Services</a>
-      <span class="m-sub">More</span>
-      
-      <a href="faq.html">FAQ</a>
-      <a href="contact.html">Contact</a>
-    </div>
-  </nav>
+  <nav class="mobile-nav" id="mobileNav" aria-label="Mobile"><div class="inner"></div></nav>
 </header>
 
 <!-- ===================== HERO ===================== -->
 <section class="hero">
   <div class="hero-media" aria-hidden="true">
-    <img class="hero-img" alt="" src="assets/hero-banner.png">
+    <img class="hero-img" alt="" src="assets/hero-banner.jpg">
     <div class="hero-overlay"></div>
   </div>
 
