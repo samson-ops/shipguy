@@ -679,7 +679,12 @@ body.ready .reveal{opacity:1;transform:none}
   body.vsbright .hb small{color:#6b7488;font-size:12px;white-space:nowrap}
   /* quote card */
   body.vsbright .pquote{border-radius:22px;box-shadow:0 44px 90px -42px rgba(13,26,80,.5),0 10px 24px -12px rgba(13,26,80,.13);padding:26px 26px 22px}
-  body.vsbright .pq-steps{display:none}
+  body.vsbright .pq-progress{margin:4px 0 20px}
+  body.vsbright .pq-progress-top{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:9px}
+  body.vsbright #pqStepName{font-family:var(--font-display);font-weight:800;font-size:14px;color:#101a3d}
+  body.vsbright #pqStepCount{font-size:12px;font-weight:600;color:#9aa3b8}
+  body.vsbright .pq-progress-track{height:6px;border-radius:999px;background:#e9edf6;overflow:hidden}
+  body.vsbright .pq-progress-fill{height:100%;width:33.33%;border-radius:999px;background:linear-gradient(90deg,var(--brand),var(--brand-deep));transition:width .35s cubic-bezier(.4,0,.2,1)}
   body.vsbright .pq-head-row{display:flex;align-items:center;gap:13px;margin-bottom:6px}
   body.vsbright .pq-lightning{width:46px;height:46px;border-radius:13px;background:#e6eefc;color:var(--brand);display:flex;align-items:center;justify-content:center;flex:0 0 auto}
   body.vsbright .pq-lightning svg{width:23px;height:23px}
@@ -755,7 +760,12 @@ body.ready .reveal{opacity:1;transform:none}
   body.vsbright .pq-consent a:hover{text-decoration:underline}
   body.vsbright #pquote .pq-btn{margin-top:16px}
   /* ===== 3-step form (clean) ===== */
-  body.vsbright .pq-steps{display:grid;grid-template-columns:1fr 1fr 1fr;gap:7px;margin:2px 0 20px}
+  body.vsbright .pq-progress{margin:4px 0 20px}
+  body.vsbright .pq-progress-top{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:9px}
+  body.vsbright #pqStepName{font-family:var(--font-display);font-weight:800;font-size:14px;color:#101a3d}
+  body.vsbright #pqStepCount{font-size:12px;font-weight:600;color:#9aa3b8}
+  body.vsbright .pq-progress-track{height:6px;border-radius:999px;background:#e9edf6;overflow:hidden}
+  body.vsbright .pq-progress-fill{height:100%;width:33.33%;border-radius:999px;background:linear-gradient(90deg,var(--brand),var(--brand-deep));transition:width .35s cubic-bezier(.4,0,.2,1)}
   body.vsbright .pq-step{display:flex;align-items:center;justify-content:center;gap:7px;padding:9px 6px;border:1px solid var(--line);border-radius:9px;font-size:12.5px;font-weight:600;color:#9aa3b8;background:#fff}
   body.vsbright .pq-step span{width:20px;height:20px;border-radius:50%;background:#eef1f7;color:#9aa3b8;display:inline-flex;align-items:center;justify-content:center;font-size:11.5px;font-weight:700;flex:0 0 auto}
   body.vsbright .pq-step.is-active{border-color:var(--brand);color:var(--brand);background:var(--brand-tint)}
@@ -867,10 +877,9 @@ body.ready .reveal{opacity:1;transform:none}
     <!-- CUSTOM PRICING TOOL (BeRocker Lead Source API) -->
     <div class="pquote" id="pquote">
       <div class="pq-head-row"><span class="pq-lightning"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M13 2 4.5 13.5H11l-1 8.5L19.5 10H13l1-8Z"/></svg></span><div><h3 class="pq-title">Get Your Instant Quote</h3><p class="pq-sub">Fast, secure pricing in 30 seconds.</p></div></div>
-      <div class="pq-steps" id="pqSteps">
-        <div class="pq-step is-active"><span>1</span> Route</div>
-        <div class="pq-step"><span>2</span> Vehicle</div>
-        <div class="pq-step"><span>3</span> Contact</div>
+      <div class="pq-progress" id="pqProgress">
+        <div class="pq-progress-top"><span id="pqStepName">Route</span><span id="pqStepCount">Step 1 of 3</span></div>
+        <div class="pq-progress-track"><div class="pq-progress-fill" id="pqProgressFill"></div></div>
       </div>
       <form id="pqForm" novalidate>
         <div class="pq-panel is-current" data-panel="1">
@@ -1435,9 +1444,9 @@ body.ready .reveal{opacity:1;transform:none}
   var form=document.getElementById('pqForm'); if(!form) return;
   var steps=[].slice.call(document.querySelectorAll('#pquote .pq-step'));
   var panels=[].slice.call(document.querySelectorAll('#pquote .pq-panel'));
-  var stepsBar=document.querySelector('#pquote .pq-steps');
+  var stepsBar=document.querySelector('#pquote .pq-progress');
   var cur=0;
-  function show(i){panels.forEach(function(p,x){p.classList.toggle('is-current',x===i);});steps.forEach(function(sp,x){sp.classList.toggle('is-active',x===i);sp.classList.toggle('is-done',x<i);});cur=i;}
+  function show(i){panels.forEach(function(p,x){p.classList.toggle('is-current',x===i);});steps.forEach(function(sp,x){sp.classList.toggle('is-active',x===i);sp.classList.toggle('is-done',x<i);});cur=i;var names=['Route','Vehicle','Contact'];var fill=document.getElementById('pqProgressFill');if(fill)fill.style.width=((i+1)/panels.length*100)+'%';var nm=document.getElementById('pqStepName');if(nm)nm.textContent=names[i]||'';var ct=document.getElementById('pqStepCount');if(ct)ct.textContent='Step '+(i+1)+' of '+panels.length;}
   function validate(i){var ok=true;panels[i].querySelectorAll('input[required],select[required]').forEach(function(inp){if(inp.disabled)return; if(!inp.value.trim()){inp.classList.add('err');ok=false;}else inp.classList.remove('err');});var em=panels[i].querySelector('input[type=email]');if(em&&em.value&&!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(em.value)){em.classList.add('err');ok=false;}return ok;}
   function validateAll(){var ok=true;form.querySelectorAll('input[required],select[required]').forEach(function(el){if(el.disabled)return;if(!el.value.trim()){el.classList.add('err');ok=false;}else el.classList.remove('err');});var em=document.getElementById('pq-email');if(em&&em.value&&!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(em.value)){em.classList.add('err');ok=false;}return ok;}
   form.querySelectorAll('[data-next]').forEach(function(b){b.addEventListener('click',function(){if(validate(cur))show(cur+1);});});
