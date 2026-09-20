@@ -750,7 +750,7 @@ body.ready .reveal{opacity:1;transform:none}
 .hero-lite .hb{min-width:0}
 .hero-lite .hb b{display:block;font-family:var(--font-display);font-weight:800;font-size:13.5px;color:#101a3d;line-height:1.16;white-space:nowrap}
 .hero-lite .hb small{color:#6b7488;font-size:12px;white-space:nowrap}
-.hero-lite .hero-grid{padding-top:98px;padding-bottom:56px;align-items:start}
+.hero-lite .hero-grid{padding-top:30px;padding-bottom:52px;align-items:start}
 .hero-lite .hero-badges{gap:20px}
 @media (max-width:1180px){.hero-lite .hero-grid{padding-top:26px;padding-bottom:44px}}
 @media (max-width:600px){.hero-lite .hero-grid{padding-top:18px}}
@@ -763,6 +763,27 @@ body.ready .reveal{opacity:1;transform:none}
 .hero-lite .hero-creds{display:flex;flex-wrap:wrap;gap:8px 10px;margin-top:22px}
 .hero-lite .hero-creds span{display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:700;color:var(--ink-2);background:#eaf0fd;border:1px solid #dbe4fb;padding:6px 11px;border-radius:999px}
 .hero-lite .hero-creds svg{width:13px;height:13px;color:var(--brand)}
+  /* clean how-it-works */
+  .lp-how{background:#fff;padding:66px 0}
+.lp-head{text-align:center;max-width:640px;margin:0 auto 44px}
+.lp-eyebrow{font-family:var(--font-display);font-weight:800;letter-spacing:.14em;text-transform:uppercase;font-size:12.5px;color:var(--brand);margin:0 0 10px}
+.lp-head h2{font-family:var(--font-display);font-weight:800;font-size:clamp(1.7rem,3.4vw,2.4rem);color:#101a3d;letter-spacing:-.01em;margin:0 0 12px}
+.lp-sub{color:var(--ink-2);font-size:16.5px;line-height:1.6;margin:0}
+.lp-steps{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.lp-step{background:#f7f9fd;border:1px solid var(--line);border-radius:18px;padding:30px 26px;position:relative;transition:transform .18s ease,box-shadow .18s ease}
+.lp-step:hover{transform:translateY(-3px);box-shadow:0 20px 40px -26px rgba(13,26,80,.4)}
+.lp-num{position:absolute;top:-14px;left:26px;width:34px;height:34px;border-radius:10px;background:var(--brand);color:#fff;font-family:var(--font-display);font-weight:800;font-size:15px;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 18px -8px rgba(11,52,192,.7)}
+.lp-ic{width:54px;height:54px;border-radius:14px;background:#e8eefc;color:var(--brand);display:flex;align-items:center;justify-content:center;margin:8px 0 16px}
+.lp-ic svg{width:26px;height:26px}
+.lp-step h3{font-family:var(--font-display);font-weight:800;font-size:19px;color:#101a3d;margin:0 0 8px}
+.lp-step p{color:var(--ink-2);font-size:14.5px;line-height:1.6;margin:0}
+.lp-how-cta{display:flex;align-items:center;justify-content:center;gap:16px;margin-top:40px;flex-wrap:wrap}
+.lp-how-cta span{color:var(--ink-2);font-size:15px}
+.lp-how-cta span a{color:var(--brand);font-weight:700;text-decoration:none}
+.lp-btn{display:inline-flex;align-items:center;background:var(--brand);color:#fff;font-family:var(--font-display);font-weight:700;font-size:16px;padding:15px 30px;border-radius:12px;text-decoration:none;box-shadow:0 14px 28px -12px rgba(11,52,192,.7);transition:background .15s ease,transform .15s ease}
+.lp-btn:hover{background:var(--brand-press);transform:translateY(-1px)}
+@media (max-width:860px){.lp-steps{grid-template-columns:1fr;gap:26px;max-width:440px;margin:0 auto} .lp-num{top:-13px}}
+@media (max-width:600px){.lp-how{padding:48px 0}}
 </style>
 </head>
 <body>
@@ -1025,91 +1046,20 @@ body.ready .reveal{opacity:1;transform:none}
   </div>
 </section>
 
-<!-- ===================== HOW IT WORKS / THREE STEPS ===================== -->
-<section class="steps-section" id="how">
+<!-- ===================== HOW IT WORKS ===================== -->
+<section class="lp-how" id="how">
   <div class="container">
-    <div class="steps-head">
-      <h2>Three Steps to Ship</h2>
-      <span class="steps-accent" aria-hidden="true"></span>
-      <p>Ship Guy makes nationwide car shipping simple with transparent pricing, vetted carriers, and support from pickup to delivery.</p>
+    <div class="lp-head">
+      <p class="lp-eyebrow">How It Works</p>
+      <h2>Ship Your Car in 3 Simple Steps</h2>
+      <p class="lp-sub">From quote to delivery, Ship Guy makes nationwide car shipping easy, transparent, and fully insured.</p>
     </div>
-
-    <div class="steps-row">
-      <article class="step-card">
-        <div class="step-illus"><img src="assets/step-01.jpg" alt="Step 1: enter pickup, delivery, and vehicle on the Ship Guy quote form" loading="lazy"></div>
-        <h3>Get Your Quote</h3>
-        <p>Enter your pickup, delivery, and vehicle details to receive a fast, transparent shipping estimate.</p>
-      </article>
-
-      <div class="step-arrow" aria-hidden="true">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-      </div>
-
-      <article class="step-card">
-        <div class="step-illus"><img src="assets/step-02.jpg" alt="Step 2: a vetted auto-transport carrier loads vehicles for pickup" loading="lazy"></div>
-        <h3>Schedule Pickup</h3>
-        <p>We match your shipment with a vetted carrier and coordinate pickup around your preferred dates.</p>
-      </article>
-
-      <div class="step-arrow" aria-hidden="true">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-      </div>
-
-      <article class="step-card">
-        <div class="step-illus"><img src="assets/step-03.jpg" alt="Step 3: track your vehicle in transit from pickup to delivery" loading="lazy"></div>
-        <h3>Track Delivery</h3>
-        <p>Your vehicle is transported nationwide with support from pickup through final delivery.</p>
-      </article>
+    <div class="lp-steps">
+      <div class="lp-step"><span class="lp-num">1</span><span class="lp-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3v4a1 1 0 0 0 1 1h4"/><path d="M17 21H7a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h7l5 5v11a2 2 0 0 1-2 2Z"/><path d="M9 13h6M9 17h4"/></svg></span><h3>Get an Instant Quote</h3><p>Enter your pickup, delivery, and vehicle details for a free, all-in price in seconds &mdash; no obligation, no hidden fees.</p></div>
+      <div class="lp-step"><span class="lp-num">2</span><span class="lp-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M10 17h4V5H2v12h3"/><path d="M20 17h2v-3.3a4 4 0 0 0-1.2-2.9L19 9h-5v8h1"/><circle cx="7.5" cy="17.5" r="2.5"/><circle cx="17.5" cy="17.5" r="2.5"/></svg></span><h3>Book &amp; Schedule Pickup</h3><p>We match you with a licensed, insured, and vetted carrier and schedule pickup around your preferred dates.</p></div>
+      <div class="lp-step"><span class="lp-num">3</span><span class="lp-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><path d="m9 10 2 2 4-4"/></svg></span><h3>Track to Your Door</h3><p>Follow your shipment in real time and receive your vehicle safely at the destination &mdash; door to door, coast to coast.</p></div>
     </div>
-  </div>
-</section>
-
-<!-- ===================== WHAT WE SHIP ===================== -->
-<section class="ship-section" id="services">
-  <div class="container">
-    <div class="ship-head">
-      <p class="ship-eyebrow">What We Ship</p>
-      <h2>We Ship More Than Cars</h2>
-      <p class="ship-sub">Nationwide transport solutions for vehicles, household goods, equipment, and freight.</p>
-    </div>
-
-    <div class="ship-grid">
-      <article class="ship-card">
-        <div class="ship-img"><img src="assets/ship-vehicles.jpg" alt="Blue auto-transport carrier loaded with cars and a boat on a mountain highway" loading="lazy"></div>
-        <div class="ship-body">
-          <h3>Vehicles &amp; Boats</h3>
-          <p>Cars, trucks, motorcycles, RVs, and boats shipped nationwide.</p>
-          <a class="ship-link" href="#">Learn More <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-        </div>
-      </article>
-
-      <article class="ship-card">
-        <div class="ship-img"><img src="assets/ship-household.jpg" alt="Living room with a sofa and packed moving boxes ready for transport" loading="lazy"></div>
-        <div class="ship-body">
-          <h3>Household Items</h3>
-          <p>Furniture, boxes, and personal items moved with care.</p>
-          <a class="ship-link" href="#">Learn More <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-        </div>
-      </article>
-
-      <article class="ship-card">
-        <div class="ship-img"><img src="assets/ship-equipment.jpg" alt="Green tractor secured on a flatbed trailer for heavy equipment transport" loading="lazy"></div>
-        <div class="ship-body">
-          <h3>Heavy Equipment</h3>
-          <p>Tractors, machinery, and oversized equipment transport.</p>
-          <a class="ship-link" href="#">Learn More <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-        </div>
-      </article>
-
-      <article class="ship-card">
-        <div class="ship-img"><img src="assets/ship-freight.jpg" alt="Palletized and shrink-wrapped cargo in a warehouse for freight shipping" loading="lazy"></div>
-        <div class="ship-body">
-          <h3>Freight</h3>
-          <p>Palletized cargo, crates, and commercial freight shipping.</p>
-          <a class="ship-link" href="#">Learn More <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-        </div>
-      </article>
-    </div>
+    <div class="lp-how-cta"><a class="lp-btn" href="#pquote">Get Your Free Quote</a><span>or call <a href="tel:+18662973244">(866)&nbsp;297-3244</a></span></div>
   </div>
 </section>
 

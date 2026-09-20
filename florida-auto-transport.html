@@ -746,6 +746,61 @@ body.ready .reveal{opacity:1;transform:none}
 .pq-trustbar{display:flex;flex-wrap:wrap;justify-content:center;gap:7px 13px;margin:15px 0 0;padding-top:14px;border-top:1px solid var(--line)}
 .pq-trustbar span{display:inline-flex;align-items:center;gap:5px;font-size:11px;font-weight:700;color:var(--ink-2);white-space:nowrap}
 .pq-trustbar svg{width:13px;height:13px;color:var(--brand);flex:0 0 auto}
+  /* ===== BRIGHT HERO (scoped to .hero-lite) ===== */
+  h1,h2,h3{font-family:var(--font-display);margin:0;letter-spacing:-.01em}
+.hero{position:relative;isolation:isolate;overflow:hidden}
+.hero-media{position:absolute;inset:0;z-index:-2}
+.hero-img{width:100%;height:100%;object-fit:cover;object-position:52% 42%}
+.hero-overlay{position:absolute;inset:0;z-index:1;
+  background:
+    linear-gradient(90deg,
+      rgba(4,9,22,.84) 0%,
+      rgba(4,9,22,.74) 28%,
+      rgba(4,9,22,.54) 48%,
+      rgba(4,9,22,.28) 66%,
+      rgba(4,9,22,.06) 86%,
+      rgba(4,9,22,0) 100%),
+    linear-gradient(180deg, rgba(4,9,22,.2) 0%, rgba(4,9,22,0) 24%, rgba(4,9,22,0) 64%, rgba(4,9,22,.3) 100%);}
+.hero-grid{display:grid;grid-template-columns:minmax(0,1fr) 420px;gap:56px;
+  align-items:center;padding:64px 24px 74px;}
+.hero-copy{max-width:624px;color:#fff}
+.eyebrow{font-family:var(--font-display);font-weight:700;font-size:13px;
+  letter-spacing:.16em;text-transform:uppercase;color:#9fc0f6;margin:0 0 18px;}
+.hero-copy h1{font-weight:800;font-size:clamp(2.4rem,4vw,3.2rem);line-height:1.05;letter-spacing:-.018em;
+  color:#fff;margin:0 0 18px;text-shadow:0 2px 24px rgba(0,0,0,.32);}
+.lede{font-size:17px;line-height:1.6;color:rgba(245,248,253,.96);max-width:392px;margin:0 0 28px;text-shadow:0 1px 3px rgba(0,0,0,.6),0 2px 20px rgba(0,0,0,.55)}
+.hero-divider{height:1px;background:rgba(255,255,255,.2);margin:0 0 22px;max-width:520px}
+@media (max-width:1180px){.hero-grid{grid-template-columns:minmax(0,1fr);gap:28px;padding:54px 24px 60px} .hero-copy{display:contents} .hero-head,.hero-rest{max-width:640px;width:100%} .hero-head{order:1} .hero-rest{order:3} .hero-head h1{margin-bottom:0} .eyebrow{display:none} .lede{max-width:520px} .hero-overlay{background:linear-gradient(180deg, rgba(4,9,22,.72) 0%, rgba(4,9,22,.8) 55%, rgba(4,9,22,.88) 100%)}}
+@media (max-width:600px){.hero-copy h1{font-size:clamp(1.9rem,7vw,2.45rem)}}
+@media (min-width:1181px) and (max-width:1600px){.hero-grid{padding-top:34px;padding-bottom:40px;gap:40px} .eyebrow{margin-bottom:12px} .hero-copy h1{font-size:clamp(2rem,3vw,2.5rem);margin-bottom:14px} .lede{font-size:15.5px;margin-bottom:18px} .hero-divider{margin-bottom:16px}}
+.hero-lite .hero{background:#f5f9ff}
+.hero-lite .hero-copy{color:#101a3d}
+.hero-lite .hero-copy .eyebrow{color:#5b6480;letter-spacing:.26em;font-weight:700}
+.hero-lite .hero-copy h1{color:#0a1230;font-size:clamp(2.4rem,5.4vw,4rem);line-height:1.03;letter-spacing:-.02em}
+.hero-lite .hero-copy h1 .accent{color:var(--brand)}
+.hero-lite .hero-copy h1,.hero-lite .hero-copy .lede,.hero-lite .hero-copy .eyebrow{text-shadow:none}
+.hero-lite .hero-copy .lede{color:#454e6d;font-size:clamp(1.02rem,1.5vw,1.2rem);max-width:520px}
+.hero-lite .hero-copy{max-width:700px}
+.hero-lite .hero-badges{display:flex;flex-wrap:wrap;gap:16px 20px;margin-top:28px}
+.hero-lite .hb{display:flex;align-items:center;gap:10px}
+.hero-lite .hb-ic{width:38px;height:38px;border-radius:50%;background:#e6eefc;color:var(--brand);display:flex;align-items:center;justify-content:center;flex:0 0 auto}
+.hero-lite .hb-ic svg{width:20px;height:20px}
+.hero-lite .hb{min-width:0}
+.hero-lite .hb b{display:block;font-family:var(--font-display);font-weight:800;font-size:13.5px;color:#101a3d;line-height:1.16;white-space:nowrap}
+.hero-lite .hb small{color:#6b7488;font-size:12px;white-space:nowrap}
+.hero-lite .hero-grid{padding-top:30px;padding-bottom:52px;align-items:start}
+.hero-lite .hero-badges{gap:20px}
+@media (max-width:1180px){.hero-lite .hero-grid{padding-top:26px;padding-bottom:44px}}
+@media (max-width:600px){.hero-lite .hero-grid{padding-top:18px}}
+@media (max-width:1180px){.hero-lite .hero-badges{flex-wrap:wrap;gap:12px 22px}}
+.hero-lite .hero-bg{position:absolute;inset:0;overflow:hidden}
+.hero-lite .hero-bg-svg{width:100%;height:100%;display:block}
+@media (max-width:600px){.hero-lite .hero-grid{gap:20px}}
+.hero-lite .hero{overflow:hidden}
+.hero-lite .hero-bg,.hero-lite .hero-bg-svg{max-width:100%}
+.hero-lite .hero-creds{display:flex;flex-wrap:wrap;gap:8px 10px;margin-top:22px}
+.hero-lite .hero-creds span{display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:700;color:var(--ink-2);background:#eaf0fd;border:1px solid #dbe4fb;padding:6px 11px;border-radius:999px}
+.hero-lite .hero-creds svg{width:13px;height:13px;color:var(--brand)}
 </style>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@graph":[
@@ -832,47 +887,54 @@ body.ready .reveal{opacity:1;transform:none}
 </header>
 
 <!-- ===================== HERO ===================== -->
-<section class="hero">
+<section class="hero hero-lite">
   <div class="hero-media" aria-hidden="true">
-    <img class="hero-img" alt="" src="assets/hero.jpg">
-    <div class="hero-overlay"></div>
+    <div class="hero-bg" aria-hidden="true">
+      <svg class="hero-bg-svg" viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="hgWash" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#ffffff"/>
+            <stop offset="0.5" stop-color="#f3f7fe"/>
+            <stop offset="1" stop-color="#e7eefc"/>
+          </linearGradient>
+          <radialGradient id="hgGlow" cx="0.82" cy="0.12" r="0.9">
+            <stop offset="0" stop-color="#dbe6ff" stop-opacity="0.9"/>
+            <stop offset="1" stop-color="#dbe6ff" stop-opacity="0"/>
+          </radialGradient>
+        </defs>
+        <rect width="1440" height="900" fill="url(#hgWash)"/>
+        <rect width="1440" height="900" fill="url(#hgGlow)"/>
+        <g fill="none" stroke="#c7d6f5" stroke-opacity="0.5" stroke-width="2">
+          <path d="M-60 720 C 360 640, 760 780, 1200 560 S 1560 360, 1620 300"/>
+          <path d="M-60 800 C 360 720, 760 860, 1200 640 S 1560 440, 1620 380"/>
+        </g>
+        <g stroke="#9fb8ee" stroke-opacity="0.55" stroke-width="4" stroke-dasharray="26 22" stroke-linecap="round" fill="none">
+          <path d="M-60 762 C 360 682, 760 822, 1200 602 S 1560 402, 1620 342"/>
+        </g>
+        <g fill="#bcd0f6" fill-opacity="0.45">
+          <circle cx="1180" cy="300" r="5"/><circle cx="250" cy="250" r="4"/><circle cx="640" cy="180" r="3.5"/><circle cx="980" cy="150" r="3"/>
+        </g>
+      </svg>
+    </div>
   </div>
 
   <div class="container hero-grid">
     <div class="hero-copy">
       <div class="hero-head">
       <p class="eyebrow reveal">Licensed&nbsp;•&nbsp;Insured&nbsp;•&nbsp;Nationwide</p>
-      <h1 class="reveal d2">Florida Auto Transport</h1>
+      <h1 class="reveal d2">Florida Auto <span class="accent">Transport</span></h1>
       </div>
       <div class="hero-rest">
       <p class="lede reveal d2">Licensed, insured car shipping to and from Florida — transparent pricing, vetted carriers, and door-to-door delivery.</p>
-
-      <ul class="trust-list reveal d3">
-        <li>
-          <span class="trust-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/><path d="m9 12 2 2 4-4"/></svg></span>
-          Licensed Broker &amp; Fully Insured
-        </li>
-        <li>
-          <span class="trust-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="2" width="8" height="4" rx="1"/><path d="M9 4H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2h-3"/><path d="m9 14 2 2 4-4"/></svg></span>
-          FMCSA Registered
-        </li>
-        <li>
-          <span class="trust-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></span>
-          Vetted Carrier Network
-        </li>
-        <li>
-          <span class="trust-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M4 13a8 8 0 0 1 16 0"/><rect x="2" y="13" width="4.4" height="7" rx="1.6"/><rect x="17.6" y="13" width="4.4" height="7" rx="1.6"/><path d="M20 19.5v.5a3 3 0 0 1-3 3h-3"/></svg></span>
-          Real-Time Tracking &amp; 24/7 Support
-        </li>
-      </ul>
-
-      <div class="hero-divider reveal d3"></div>
-
-      <div class="stats reveal d3">
-        <div class="stat"><span class="num">50+</span><span class="lbl">States Served</span></div>
-        <div class="stat"><span class="num">100%</span><span class="lbl">Insured Transport</span></div>
-        <div class="stat"><span class="num">24/7</span><span class="lbl">Support &amp; Tracking</span></div>
+      <div class="hero-badges reveal d3">
+        <div class="hb"><span class="hb-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/><path d="m9 12 2 2 4-4"/></svg></span><span><b>Fully Insured Transport</b><small>Your vehicle is protected</small></span></div>
+        <div class="hb"><span class="hb-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1.5" x2="12" y2="22.5"/><path d="M17 5.5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></span><span><b>Competitive Pricing</b><small>No hidden fees or deposit</small></span></div>
+        <div class="hb"><span class="hb-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M4 13a8 8 0 0 1 16 0"/><rect x="2" y="13" width="4.4" height="7" rx="1.6"/><rect x="17.6" y="13" width="4.4" height="7" rx="1.6"/><path d="M20 19.5v.5a3 3 0 0 1-3 3h-3"/></svg></span><span><b>24/7 Support</b><small>Real people. Real answers.</small></span></div>
       </div>
+      <div class="hero-creds reveal d3">
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v5c0 5-3.5 8.5-7 10-3.5-1.5-7-5-7-10V6l7-3Z"/><path d="m9 12 2 2 4-4"/></svg>Licensed &amp; Insured</span>
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>FMCSA MC #1457715 &middot; DOT #3932149</span>
+        </div>
       </div>
     </div>
 
