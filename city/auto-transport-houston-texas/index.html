@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<meta charset="UTF-8">
 <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -8,34 +9,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','GTM-MQ7HKJTJ');</script>
 <!-- End Google Tag Manager -->
-
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-3DSG1RCP4Y"></script>
-<script>
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
-gtag('config', 'G-3DSG1RCP4Y');
-</script>
-
-<meta charset="UTF-8">
   <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
   <meta http-equiv="Pragma" content="no-cache">
   <meta http-equiv="Expires" content="0">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Houston Auto Transport — Car Shipping Rates &amp; Times | Ship Guy</title>
-<meta name="description" content="Car shipping for Houston &amp; the Gulf Coast: Texas Triangle shuttle depth, energy-assignment fluency, Texas Medical Center scale, flood-aware craft.">
-  <link rel="canonical" href="https://shipguy.com/city/auto-transport-houston-texas/">
-  <meta property="og:type" content="website">
-  <meta property="og:site_name" content="Ship Guy Auto Transport">
-  <meta property="og:title" content="Houston Auto Transport — Car Shipping Rates &amp; Times | Ship Guy">
-  <meta property="og:description" content="Car shipping for Houston &amp; the Gulf Coast: Texas Triangle shuttle depth, energy-assignment fluency, Texas Medical Center scale, flood-aware craft.">
-  <meta property="og:url" content="https://shipguy.com/city/auto-transport-houston-texas/">
-  <meta property="og:image" content="https://shipguy.com/assets/hero.jpg">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Houston Auto Transport — Car Shipping Rates &amp; Times | Ship Guy">
-  <meta name="twitter:description" content="Car shipping for Houston &amp; the Gulf Coast: Texas Triangle shuttle depth, energy-assignment fluency, Texas Medical Center scale, flood-aware craft.">
-  <meta name="twitter:image" content="https://shipguy.com/assets/hero.jpg">
+<link rel="canonical" href="https://shipguy.com/city/auto-transport-houston-texas/">
+<meta name="description" content="Car shipping for Houston &amp; the Gulf Coast: Texas Triangle shuttle depth, energy-assignment fluency, Texas Medical Center scale, flood-aware craft. Get a free quote.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
@@ -98,8 +78,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,
    ========================================================= */
 .site-header{
   position:sticky;top:0;z-index:60;background:#fff;
-  border-bottom:1px solid var(--field);
-  box-shadow:0 3px 12px -9px rgba(13,26,80,.45);
+  border-bottom:1px solid transparent;
   transition:box-shadow .25s ease, border-color .25s ease;
 }
 .site-header.is-scrolled{box-shadow:0 6px 24px -16px rgba(13,26,80,.5);border-bottom-color:var(--line)}
@@ -305,7 +284,7 @@ select.inp{appearance:none;-webkit-appearance:none;padding-right:38px;cursor:poi
 .reviews-head{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;flex-wrap:wrap;margin-bottom:30px}
 .reviews-head h2{font-size:clamp(1.7rem,2.6vw,2.1rem);font-weight:800;color:var(--brand)}
 .reviews-head p{margin:8px 0 0;color:var(--muted);font-size:15.5px}
-.rating{display:flex;align-items:center;gap:12px}
+.rating{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
 .rating .score{font-family:var(--font-display);font-weight:800;font-size:22px;color:var(--ink)}
 .stars{display:inline-flex;gap:2px;color:var(--star)}
 .stars svg{width:18px;height:18px}
@@ -512,10 +491,15 @@ section[id]{scroll-margin-top:104px}
    Responsive
    ========================================================= */
 @media (max-width:1180px){
-  .hero-grid{grid-template-columns:minmax(0,1fr);gap:36px;padding:54px 24px 60px}
-  .hero-copy{max-width:640px}
+  .hero-grid{grid-template-columns:minmax(0,1fr);gap:28px;padding:54px 24px 60px}
+  .hero-copy{display:contents}
+  .hero-head,.hero-rest{max-width:640px;width:100%}
+  .hero-head{order:1}
+  .quote-card,.pquote{order:2;max-width:520px;width:100%}
+  .hero-rest{order:3}
+  .hero-head h1{margin-bottom:0}
+  .eyebrow{display:none}
   .lede{max-width:520px}
-  .quote-card{max-width:520px;width:100%}
   .hero-overlay{background:linear-gradient(180deg, rgba(4,9,22,.72) 0%, rgba(4,9,22,.8) 55%, rgba(4,9,22,.88) 100%)}
 }
 @media (max-width:1180px){
@@ -536,6 +520,7 @@ section[id]{scroll-margin-top:104px}
 @media (max-width:980px){
   .wc-bento{grid-template-columns:1fr}
   .loc-bento{grid-template-columns:1fr;gap:32px}
+  .review-grid{grid-template-columns:1fr 1fr}
 }
 @media (max-width:880px){
   .steps-row{flex-direction:column;gap:0;max-width:440px;margin:0 auto}
@@ -576,6 +561,31 @@ section[id]{scroll-margin-top:104px}
   .step .slabel{font-size:11.5px}
 }
 
+/* compact hero on laptop screens only (~25% shorter) */
+@media (min-width:1181px) and (max-width:1600px){
+  .hero-grid{padding-top:34px;padding-bottom:40px;gap:40px}
+  .eyebrow{margin-bottom:12px}
+  .hero-copy h1{font-size:clamp(2rem,3vw,2.5rem);margin-bottom:14px}
+  .lede{font-size:15.5px;margin-bottom:18px}
+  .trust-list{margin-bottom:16px;gap:9px}
+  .trust-list li{font-size:14.5px}
+  .trust-ic{width:30px;height:30px}
+  .trust-ic svg{width:17px;height:17px}
+  .hero-divider{margin-bottom:16px}
+  .stat .num{font-size:26px}
+  .stat .lbl{font-size:12px;margin-top:5px}
+  .quote-card{padding:20px 24px 18px}
+  .quote-card h2{font-size:22px;margin-bottom:13px}
+  .steps{margin-bottom:13px}
+  .step .dot{width:30px;height:30px}
+  .field{margin-bottom:9px}
+  .flabel{margin-bottom:4px}
+  .inp{height:40px}
+  .opt{padding:8px 12px}
+  .btn-primary{height:46px}
+  .assure{margin-top:8px}
+}
+
 /* reduced motion */
 @media (prefers-reduced-motion:reduce){
   *{animation-duration:.001ms!important;transition-duration:.001ms!important}
@@ -587,449 +597,383 @@ section[id]{scroll-margin-top:104px}
 body.ready .reveal{opacity:1;transform:none}
 .reveal.d2{transition-delay:.08s}
 .reveal.d3{transition-delay:.16s}
-/* ===== Subpage / article / services styles ===== */
-.page-hero{background:linear-gradient(135deg,#0a2a9e 0%, var(--brand) 60%, #1f54e0 100%);color:#fff;padding:62px 0 56px}
-.crumbs{display:flex;flex-wrap:wrap;gap:9px;font-size:13.5px;font-weight:600;color:#bcd2f8;margin-bottom:16px}
-.crumbs a{color:#dbe6fb}
-.crumbs a:hover{color:#fff}
-.page-hero h1{font-family:var(--font-display);font-weight:800;font-size:clamp(1.9rem,3.6vw,2.8rem);letter-spacing:-.015em;color:#fff;margin:0 0 13px;max-width:840px}
-.page-hero-sub{font-size:17.5px;line-height:1.6;color:rgba(233,239,251,.92);margin:0;max-width:680px}
-.article-section{background:#fff;padding:60px 0 70px;border-top:1px solid var(--line)}
-.article{max-width:780px}
-.article-lead{font-size:18.5px;line-height:1.7;color:#1d2350;font-weight:500;margin:0 0 28px}
-.article h2{font-family:var(--font-display);font-weight:800;font-size:clamp(1.45rem,2.4vw,1.85rem);letter-spacing:-.01em;color:#101a3d;margin:36px 0 13px}
-.article h2:first-of-type{margin-top:0}
-.article h3{font-family:var(--font-display);font-weight:700;font-size:1.15rem;color:#101a3d;margin:24px 0 9px}
-.article p{font-size:16.5px;line-height:1.75;color:#414a6b;margin:0 0 16px}
-.article ul{margin:0 0 18px;padding-left:22px}
-.article li{font-size:16.5px;line-height:1.7;color:#414a6b;margin-bottom:9px}
-.article a{color:var(--brand);font-weight:600;text-decoration:underline;text-decoration-color:#c7d3f5;text-underline-offset:3px}
-.article a:hover{color:var(--brand-press)}
-.svc-section{background:#fff;padding:58px 0 72px}
-.svc-intro{max-width:760px;margin:0 0 34px;font-size:17px;line-height:1.7;color:#586079}
-.svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
-.svc-card{display:flex;flex-direction:column;background:#fff;border:1px solid var(--line);border-radius:16px;padding:28px 26px;box-shadow:0 14px 34px -28px rgba(13,26,80,.4);transition:transform .18s ease,box-shadow .18s ease}
-.svc-card:hover{transform:translateY(-4px);box-shadow:0 26px 54px -28px rgba(13,26,80,.5)}
-.svc-ic{width:52px;height:52px;border-radius:14px;background:var(--brand-tint);color:var(--brand);display:grid;place-items:center;margin-bottom:16px}
-.svc-ic svg{width:26px;height:26px}
-.svc-card h2,.svc-card h3{font-family:var(--font-display);font-weight:800;font-size:19px;color:#101a3d;margin:0 0 9px}
-.svc-card p{font-size:15px;line-height:1.6;color:#586079;margin:0 0 16px;flex:1}
-.svc-more{display:inline-flex;align-items:center;gap:7px;color:var(--brand);font-family:var(--font-display);font-weight:700;font-size:15px}
-.svc-more svg{width:17px;height:17px;transition:transform .15s ease}
-.svc-card:hover .svc-more svg{transform:translateX(3px)}
-.related-section{background:#f5f8fc;padding:52px 0 60px;border-top:1px solid var(--line)}
-.related-section h2{text-align:center;font-family:var(--font-display);font-weight:800;font-size:1.4rem;color:#101a3d;margin:0 0 26px}
-.related-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
-.related-card{display:flex;align-items:center;justify-content:space-between;gap:10px;background:#fff;border:1px solid var(--line);border-radius:12px;padding:16px 18px;font-family:var(--font-display);font-weight:700;font-size:14.5px;color:#101a3d;transition:border-color .15s ease,color .15s ease}
-.related-card:hover{border-color:var(--brand);color:var(--brand)}
-.related-card svg{width:16px;height:16px;color:var(--brand);flex:0 0 auto}
-@media (max-width:900px){.svc-grid{grid-template-columns:1fr 1fr}.related-grid{grid-template-columns:1fr 1fr}}
-@media (max-width:560px){.svc-grid{grid-template-columns:1fr}.related-grid{grid-template-columns:1fr}}
-
 
 .menu.menu-mega{display:grid;grid-template-columns:1fr 1fr;column-gap:4px;min-width:452px}
 .menu.menu-mega .menu-all{grid-column:1 / -1;margin-top:6px;padding-top:12px;border-top:1px solid var(--line);color:var(--brand);font-weight:700}
 
 @media (max-width:460px){.footer-top{grid-template-columns:1fr;gap:28px}}/* resp-polish-footer */
-
-/* ===================== CITY PAGE ===================== */
-.city-hero-btns{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}
-.city-btn,.city-btn-ghost{display:inline-flex;align-items:center;gap:9px;font-family:var(--font-display);font-weight:700;font-size:15.5px;padding:14px 24px;border-radius:12px;border:2px solid transparent;transition:transform .15s ease,background .15s ease,border-color .15s ease}
-.city-btn{background:#fff;color:var(--brand)}
-.city-btn:hover{transform:translateY(-1px);background:#f2f5ff}
-.city-btn-ghost{background:transparent;color:#fff;border-color:rgba(255,255,255,.55)}
-.city-btn-ghost:hover{border-color:#fff;background:rgba(255,255,255,.12)}
-.city-stats{background:#fff;border-bottom:1px solid var(--line)}
-.city-stats-wrap{display:grid;grid-template-columns:repeat(4,1fr);padding:30px 24px}
-.city-stat{text-align:center;padding:0 18px;position:relative}
-.city-stat+.city-stat::before{content:"";position:absolute;left:0;top:2px;bottom:2px;width:1px;background:var(--line)}
-.city-stat svg{width:26px;height:26px;color:var(--brand);margin:0 auto 10px}
-.city-stat h3{font-family:var(--font-display);font-weight:700;font-size:15.5px;color:#101a3d;margin:0 0 4px}
-.city-stat p{margin:0;font-size:13px;color:var(--muted)}
-.city-section{padding:58px 0;border-top:1px solid var(--line)}
-.city-section.alt{background:var(--bg-soft)}
-.city-head{text-align:center;max-width:680px;margin:0 auto 30px}
-.city-head h2{font-family:var(--font-display);font-weight:800;font-size:clamp(1.6rem,3vw,2.15rem);letter-spacing:-.015em;color:#101a3d;margin:0 0 10px}
-.city-head p{margin:0;font-size:15.5px;line-height:1.6;color:#586079}
-.route-table{background:#fff;border:1px solid var(--line);border-radius:16px;overflow:hidden;box-shadow:0 1px 2px rgba(16,24,40,.05)}
-.route-row{display:grid;grid-template-columns:2fr 1fr 1fr auto;gap:18px;align-items:center;padding:15px 20px;border-top:1px solid var(--line)}
-.route-row:first-child{border-top:0}
-.route-head{background:var(--bg-soft);font-family:var(--font-display);font-weight:700;font-size:12px;letter-spacing:.07em;text-transform:uppercase;color:var(--muted)}
-.route-name{font-family:var(--font-display);font-weight:700;font-size:15px;color:#101a3d}
-.route-val{font-size:14.5px;color:#586079}
-.route-cta{display:inline-flex;align-items:center;gap:6px;font-family:var(--font-display);font-weight:700;font-size:14px;color:var(--brand);white-space:nowrap}
-.route-cta svg{width:15px;height:15px;transition:transform .15s ease}
-.route-cta:hover svg{transform:translateX(3px)}
-.chips{display:flex;flex-wrap:wrap;gap:10px;justify-content:center}
-.chip{background:#fff;border:1px solid var(--line);border-radius:999px;padding:9px 17px;font-family:var(--font-display);font-weight:600;font-size:14px;color:var(--ink)}
-.chip-soft{background:var(--brand-tint);border-color:#d9e2fb;color:var(--brand)}
-.city-callout{display:flex;gap:18px;align-items:flex-start;background:var(--brand-tint);border:1px solid #d9e2fb;border-radius:16px;padding:22px 24px;max-width:900px;margin:34px auto 0}
-.city-callout svg{width:26px;height:26px;color:var(--brand);flex:0 0 auto;margin-top:2px}
-.city-callout h3{font-family:var(--font-display);font-weight:700;font-size:17px;color:#101a3d;margin:0 0 6px}
-.city-callout p{margin:0;font-size:15px;line-height:1.6;color:#41507a}
-.city-callout a{color:var(--brand);font-weight:700}
-.why-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
-.why-card{background:#fff;border:1px solid var(--line);border-radius:16px;padding:22px 20px;box-shadow:0 1px 2px rgba(16,24,40,.05)}
-.why-ic{display:grid;place-items:center;width:42px;height:42px;border-radius:12px;background:var(--brand-tint);color:var(--brand);margin-bottom:14px}
-.why-ic svg{width:22px;height:22px}
-.why-card h3{font-family:var(--font-display);font-weight:700;font-size:16.5px;color:#101a3d;margin:0 0 7px}
-.why-card p{margin:0;font-size:14.5px;line-height:1.6;color:#586079}
-.nearby-wrap{margin-top:38px;text-align:center}
-.nearby-label{font-family:var(--font-display);font-weight:700;font-size:14px;letter-spacing:.05em;text-transform:uppercase;color:var(--muted);margin:0 0 16px}
-@media (max-width:900px){
-  .city-stats-wrap{grid-template-columns:repeat(2,1fr);row-gap:26px}
-  .city-stat:nth-child(3)::before{display:none}
-  .why-grid{grid-template-columns:repeat(2,1fr)}
-  .route-row{grid-template-columns:1fr 1fr;row-gap:6px}
-  .route-head{display:none}
-  .route-name{grid-column:1 / -1}
-  .route-cta{grid-column:1 / -1;margin-top:4px}
-}
-@media (max-width:560px){
-  .city-stats-wrap{grid-template-columns:1fr;row-gap:24px}
-  .city-stat::before{display:none}
-  .why-grid{grid-template-columns:1fr}
-  .city-callout{flex-direction:column;gap:12px}
-  .city-hero-btns .city-btn,.city-hero-btns .city-btn-ghost{flex:1 1 100%;justify-content:center}
-}
-
-.quote-card.is-embed{padding:0;overflow:hidden}
-.quote-card.is-embed iframe{width:100%;height:540px;border:0;display:block}
-
-
-/* ============ CITY HERO — brand blue ============ */
-.hero-overlay{
+  .quote-card.is-embed{padding:0;overflow:hidden}
+  .quote-card.is-embed iframe{width:100%;height:560px;border:0;display:block}
+.footer-states{display:flex;flex-wrap:wrap;gap:9px 20px;align-items:center;padding:20px 0 2px;margin-top:6px;border-top:1px solid rgba(255,255,255,.10)}.footer-states .fs-label{color:#fff;font-weight:700;font-size:14px}.footer-states a{font-size:14px;color:#9aa6c6;transition:color .15s ease}.footer-states a:hover{color:#fff}/* footer-states */
+@media (max-width:1180px){.quote-card,.pquote{order:2;max-width:520px;width:100%}}
+.pquote{background:#fff;border:1px solid var(--line);border-radius:16px;box-shadow:0 24px 50px -30px rgba(13,26,80,.4);padding:28px 26px}
+.pq-title{font-family:var(--font-display);font-weight:800;font-size:21px;color:#101a3d;text-align:center;margin:0 0 3px}
+.pq-sub{text-align:center;color:var(--muted);font-size:13.5px;margin:0 0 20px}
+.pq-steps{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin:0 0 22px}
+.pq-step{display:flex;align-items:center;justify-content:center;gap:7px;padding:9px 6px;border:1px solid var(--line);border-radius:9px;font-size:13px;font-weight:600;color:var(--muted);background:#fff}
+.pq-step span{width:20px;height:20px;border-radius:50%;background:#eef1f7;color:var(--muted);display:inline-flex;align-items:center;justify-content:center;font-size:11.5px;font-weight:700;flex:0 0 auto}
+.pq-step.is-active{border-color:var(--brand);color:var(--brand);background:var(--brand-tint)}
+.pq-step.is-active span{background:var(--brand);color:#fff}
+.pq-step.is-done{color:var(--ink-2)}
+.pq-step.is-done span{background:var(--brand);color:#fff}
+.pq-panel{display:none}
+.pq-panel.is-current{display:block}
+.pq-field{margin-bottom:14px}
+.pq-field>label{display:block;font-weight:600;font-size:13px;color:var(--ink);margin-bottom:6px}
+.pq-field input,.pq-field select{width:100%;border:1px solid #d9deea;border-radius:9px;padding:12px 13px;font:inherit;font-size:15px;color:var(--ink);background:#fff;transition:border-color .15s ease,box-shadow .15s ease}
+.pq-field input:focus,.pq-field select:focus{outline:none;border-color:var(--brand);box-shadow:0 0 0 3px rgba(11,52,192,.1)}
+.pq-field input::placeholder{color:#aab2c5}
+.pq-field input.err{border-color:#e0524b;box-shadow:0 0 0 3px rgba(224,82,75,.1)}
+.pq-row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.pq-opts{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.pq-opt{position:relative;cursor:pointer;display:block}
+.pq-opt input{position:absolute;opacity:0;inset:0;cursor:pointer;margin:0}
+.pq-opt-body{display:block;border:1px solid #d9deea;border-radius:9px;padding:11px 13px;transition:border-color .15s ease,background .15s ease}
+.pq-opt-body b{display:block;font-weight:700;font-size:14px;color:#101a3d}
+.pq-opt-body small{color:var(--muted);font-size:12px}
+.pq-opt input:checked+.pq-opt-body{border-color:var(--brand);background:var(--brand-tint)}
+.pq-btn{width:100%;background:var(--brand);color:#fff;font-weight:700;font-size:15px;padding:13px;border:0;border-radius:9px;cursor:pointer;transition:background .15s ease}
+.pq-btn:hover{background:var(--brand-press)}
+.pq-btn-ghost{background:#fff;color:var(--ink-2);font-weight:600;font-size:14.5px;padding:13px 16px;border:1px solid #d9deea;border-radius:9px;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;justify-content:center}
+.pq-btn-ghost:hover{border-color:var(--brand);color:var(--brand)}
+.pq-nav{display:flex;gap:10px}
+.pq-nav .pq-btn{flex:1}
+.pq-secure{text-align:center;color:var(--muted);font-size:12px;margin:16px 0 0}
+.pq-error{display:none;color:#c0392b;font-size:12.5px;margin:12px 0 0;text-align:center;line-height:1.5}
+.pq-result{display:none;text-align:center;padding:6px 0 2px}
+.pq-result.show{display:block}
+.pq-loading{padding:32px 0;color:var(--ink-2);font-size:14.5px}
+.pq-spin{width:40px;height:40px;border:3px solid var(--brand-tint);border-top-color:var(--brand);border-radius:50%;margin:0 auto 14px;animation:pqSpin .8s linear infinite}
+@keyframes pqSpin{to{transform:rotate(360deg)}}
+.pq-quote{display:none}
+.pq-quote.show{display:block}
+.pq-eyebrow{font-family:var(--font-display);font-weight:800;letter-spacing:.08em;text-transform:uppercase;font-size:11.5px;color:var(--brand)}
+.pq-price{font-family:var(--font-display);font-weight:800;font-size:36px;color:#101a3d;margin:5px 0 2px}
+.pq-route{color:var(--ink-2);font-size:14px;margin:0}
+.pq-note{color:var(--muted);font-size:12.5px;margin:11px auto 18px;max-width:320px;line-height:1.5}
+.pq-cta{display:flex;flex-direction:column;gap:9px}
+.pq-cta a{width:100%;justify-content:center;text-decoration:none}
+.pq-again{display:block;margin:13px auto 0;background:none;border:0;color:var(--brand);font-weight:600;font-size:13px;cursor:pointer}
+@media (max-width:520px){.pq-row,.pq-opts{grid-template-columns:1fr} .pq-steps{font-size:12px} .pq-step{padding:8px 4px;gap:5px}}
+.pquote{border-radius:22px;box-shadow:0 44px 90px -42px rgba(13,26,80,.5),0 10px 24px -12px rgba(13,26,80,.13);padding:26px 26px 22px}
+.pq-progress{margin:4px 0 20px}
+.pq-progress-top{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:9px}
+.pq-progress-track{height:6px;border-radius:999px;background:#e9edf6;overflow:hidden}
+.pq-progress-fill{height:100%;width:33.33%;border-radius:999px;background:linear-gradient(90deg,var(--brand),var(--brand-deep));transition:width .35s cubic-bezier(.4,0,.2,1)}
+.pq-head-row{display:flex;align-items:center;gap:13px;margin-bottom:6px}
+.pq-lightning{width:46px;height:46px;border-radius:13px;background:#e6eefc;color:var(--brand);display:flex;align-items:center;justify-content:center;flex:0 0 auto}
+.pq-lightning svg{width:23px;height:23px}
+.pq-head-row .pq-title{text-align:left;margin:0;font-size:21px}
+.pq-head-row .pq-sub{text-align:left;margin:2px 0 0}
+.pq-obligation{color:#9aa3b8;font-size:12px;margin:0 0 18px}
+.pq-secure{display:none}
+.pq-trustrow{display:flex;justify-content:space-between;gap:8px;margin-top:16px;padding-top:15px;border-top:1px solid var(--line)}
+.pq-trustrow span{display:inline-flex;align-items:center;gap:6px;color:#6b7488;font-size:11.5px;font-weight:600}
+.pq-trustrow svg{width:14px;height:14px;color:var(--brand);flex:0 0 auto}
+.pquote,.pq-field input,.pq-field select{-webkit-font-smoothing:antialiased}
+@media (max-width:600px){.pquote{padding:18px 18px 16px;border-radius:18px} .pq-lightning{width:38px;height:38px;border-radius:10px} .pq-lightning svg{width:19px;height:19px} .pq-head-row{gap:11px;margin-bottom:4px} .pq-head-row .pq-title{font-size:18.5px;line-height:1.15} .pq-head-row .pq-sub{font-size:12px} .pq-obligation{font-size:11px;margin:0 0 13px} #pquote .pq-field{margin-bottom:10px} #pquote .pq-field>label{font-size:12px;margin-bottom:4px} #pquote .pq-field input,#pquote .pq-field select{padding:10px 12px;border-radius:10px;font-size:16px} #pquote .pq-inp input,#pquote .pq-inp select{padding-left:46px} #pquote .pq-opts{grid-template-columns:1fr 1fr;gap:8px} #pquote .pq-opt-body{padding:9px 10px;border-radius:10px} #pquote .pq-opt-body b{font-size:13.5px} #pquote .pq-opt-body small{font-size:11px} #pquote .pq-btn{padding:12px;border-radius:10px;font-size:15px;margin-top:2px} #pquote .pq-nav{gap:8px} .pq-trustrow{margin-top:12px;padding-top:11px} .pq-trustrow span{font-size:10px;gap:5px}}
+.pq-panel.is-current{min-height:360px}
+@media (max-width:600px){.pq-panel.is-current{min-height:380px}}
+.pq-section{font-family:var(--font-display);font-weight:800;letter-spacing:.09em;text-transform:uppercase;font-size:10.5px;color:#9aa3b8;margin:20px 0 12px;padding-top:16px;border-top:1px solid var(--line)}
+.pq-consent{display:flex;gap:11px;align-items:flex-start;margin:16px 0 2px;cursor:pointer}
+.pq-consent input[type=checkbox]{-webkit-appearance:none;appearance:none;width:19px;height:19px;min-width:19px;border:1.6px solid #c2cee6;border-radius:5px;background:#fff;cursor:pointer;position:relative;margin:1px 0 0;flex:0 0 auto;transition:all .15s ease}
+.pq-consent input[type=checkbox]:checked{background:var(--brand);border-color:var(--brand)}
+.pq-consent input[type=checkbox]:checked::after{content:"";position:absolute;left:6px;top:2px;width:5px;height:9px;border:solid #fff;border-width:0 2px 2px 0;transform:rotate(45deg)}
+.pq-consent input[type=checkbox]:focus-visible{outline:2px solid var(--brand);outline-offset:2px}
+.pq-consent span{font-size:11px;line-height:1.55;color:#8b93a8}
+.pq-consent a{color:var(--brand);text-decoration:none}
+.pq-consent a:hover{text-decoration:underline}
+#pquote .pq-btn{margin-top:16px}
+.pq-progress{margin:4px 0 20px}
+.pq-progress-top{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:9px}
+.pq-progress-track{height:6px;border-radius:999px;background:#e9edf6;overflow:hidden}
+.pq-progress-fill{height:100%;width:33.33%;border-radius:999px;background:linear-gradient(90deg,var(--brand),var(--brand-deep));transition:width .35s cubic-bezier(.4,0,.2,1)}
+.pq-step{display:flex;align-items:center;justify-content:center;gap:7px;padding:9px 6px;border:1px solid var(--line);border-radius:9px;font-size:12.5px;font-weight:600;color:#9aa3b8;background:#fff}
+.pq-step span{width:20px;height:20px;border-radius:50%;background:#eef1f7;color:#9aa3b8;display:inline-flex;align-items:center;justify-content:center;font-size:11.5px;font-weight:700;flex:0 0 auto}
+.pq-step.is-active{border-color:var(--brand);color:var(--brand);background:var(--brand-tint)}
+.pq-step.is-active span{background:var(--brand);color:#fff}
+.pq-step.is-done{color:var(--ink-2)}
+.pq-step.is-done span{background:var(--brand);color:#fff}
+.pq-panel{display:none}
+.pq-panel.is-current{display:block;animation:pqFade .28s ease both}
+.req{color:#e0524b;margin-right:4px;font-weight:700}
+.pq-inp{position:relative}
+.pq-inp>svg{position:absolute;left:13px;top:50%;transform:translateY(-50%);width:17px;height:17px;color:#9aa3b8;pointer-events:none;z-index:1;transition:color .15s ease}
+.pq-inp input,.pq-inp select{padding-left:46px}
+.pq-inp:focus-within>svg{color:var(--brand)}
+.pq-opts{display:grid;grid-template-columns:1fr 1fr;gap:11px;align-items:stretch}
+.pq-opt{position:relative;cursor:pointer;display:block}
+.pq-opt input{position:absolute;opacity:0;inset:0;cursor:pointer;margin:0}
+.pq-opt-body{display:flex;align-items:center;gap:10px;height:100%;border:1.5px solid #d9deea;border-radius:12px;padding:13px 14px;background:#fff;transition:all .15s ease}
+.pq-check{width:20px;height:20px;border-radius:50%;border:2px solid #cbd5ec;background:#fff;flex:0 0 auto;position:relative;transition:all .15s ease}
+.pq-opt-body b{font-family:var(--font-display);font-weight:700;font-size:14px;color:#101a3d;line-height:1.25}
+.pq-opt input:checked+.pq-opt-body{border-color:var(--brand);background:var(--brand-tint);box-shadow:inset 0 0 0 1px var(--brand)}
+.pq-opt input:checked+.pq-opt-body .pq-check{border-color:var(--brand);background:var(--brand)}
+.pq-opt input:checked+.pq-opt-body .pq-check::after{content:"";position:absolute;left:5px;top:1.5px;width:5px;height:9px;border:solid #fff;border-width:0 2px 2px 0;transform:rotate(45deg)}
+.pq-opt input:focus-visible+.pq-opt-body{box-shadow:0 0 0 3px rgba(11,52,192,.15)}
+@media (max-width:600px){.pq-opts-wide{grid-template-columns:1fr}}
+@media (min-width:601px){.pquote{padding:20px 22px 16px} .pq-lightning{width:36px;height:36px;border-radius:10px} .pq-lightning svg{width:20px;height:20px} .pq-head-row{gap:12px;margin-bottom:4px} .pq-head-row .pq-title{font-size:18px} .pq-head-row .pq-sub{font-size:12px} .pq-obligation{font-size:11px;margin:0 0 4px} .pq-progress{margin:2px 0 11px} #pquote .pq-field{margin-bottom:9px} #pquote .pq-field>label{font-size:12px;margin-bottom:4px} #pquote .pq-field input,#pquote .pq-field select{padding:9px 12px} #pquote .pq-inp input,#pquote .pq-inp select{padding-left:46px} #pquote .pq-opt-body{padding:9px 11px} #pquote .pq-opts{gap:9px} #pquote .pq-btn{padding:11px;font-size:14.5px} #pquote .pq-btn-ghost{padding:11px 14px} .pq-consent{margin:9px 0 2px} .pq-trustbar{margin:11px 0 0;padding-top:11px} .pq-trustbar span{font-size:10.5px} .pq-consent span{font-size:10px;line-height:1.38} .pq-secure{margin-top:10px}}
+.pq-trustbar{display:flex;flex-wrap:wrap;justify-content:center;gap:7px 13px;margin:15px 0 0;padding-top:14px;border-top:1px solid var(--line)}
+.pq-trustbar span{display:inline-flex;align-items:center;gap:5px;font-size:11px;font-weight:700;color:var(--ink-2);white-space:nowrap}
+.pq-trustbar svg{width:13px;height:13px;color:var(--brand);flex:0 0 auto}
+  /* ===== BRIGHT HOMEPAGE HERO (scoped to .hero-lite) ===== */
+  h1,h2,h3{font-family:var(--font-display);margin:0;letter-spacing:-.01em}
+.hero{position:relative;isolation:isolate;overflow:hidden}
+.hero-media{position:absolute;inset:0;z-index:-2}
+.hero-img{width:100%;height:100%;object-fit:cover;object-position:52% 42%}
+.hero-overlay{position:absolute;inset:0;z-index:1;
   background:
     linear-gradient(90deg,
-      rgba(6,18,70,.92) 0%,
-      rgba(6,18,70,.84) 30%,
-      rgba(6,18,70,.62) 52%,
-      rgba(6,18,70,.38) 72%,
-      rgba(6,18,70,.22) 100%),
-    linear-gradient(180deg, rgba(6,18,70,0) 0%, rgba(6,18,70,0) 65%, rgba(6,18,70,.35) 100%);
-}
-.hero{background:#0a1a5c;border-bottom:1px solid var(--line)}
-.hero-grid{padding:66px 24px 64px}
-.hero-copy{color:#fff}
-.hero-copy .crumbs{color:#bcd2f8}
-.hero-copy .crumbs a{color:#dbe6fb}
-.hero-copy .eyebrow{color:#9fc0f6}
-.hero-copy h1{color:#fff;text-shadow:0 2px 18px rgba(4,9,22,.5);font-size:clamp(2.1rem,3.4vw,2.85rem)}
-.hero-top h1{color:#fff;text-shadow:0 2px 18px rgba(4,9,22,.5);font-size:clamp(2.1rem,3.4vw,2.85rem);font-weight:800;line-height:1.08}
-.mobile-tagline{color:#dbe6fb}
-.hero-copy .lede{color:rgba(245,248,253,.95);text-shadow:0 1px 3px rgba(4,9,22,.5);max-width:430px}
-.trust-list li{color:#f1f4fb;text-shadow:0 1px 8px rgba(4,9,22,.45);font-weight:600}
-.trust-ic{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.22);color:#cfe0ff}
-.hero-divider{background:rgba(255,255,255,.16)}
-.stats .stat{border-right-color:rgba(255,255,255,.16)}
-.stat .num{color:#fff;text-shadow:0 2px 14px rgba(4,9,22,.5)}
-.stat .lbl{color:#bcd2f8}
-.quote-card{border:1px solid var(--line)}
-@media (max-width:900px){
-  /* stacked: text sits over the photo, so keep the scrim strong and even */
-  .hero-overlay{background:linear-gradient(180deg, rgba(6,18,70,.82) 0%, rgba(6,18,70,.74) 50%, rgba(6,18,70,.86) 100%)}
-}
-
-.hero-media{inset:0}
-
-/* ===== Miami page additions (uses existing tokens) ===== */
-.qa-box{display:flex;gap:16px;align-items:flex-start;background:var(--brand-tint);border:1px solid #d9e2fb;border-left:4px solid var(--brand);border-radius:14px;padding:20px 22px;margin:26px 0 0}
-.qa-box svg{width:24px;height:24px;color:var(--brand);flex:0 0 auto;margin-top:2px}
-.qa-box p{margin:0;font-size:15.5px;line-height:1.65;color:#33406b}
-.qa-box strong{color:#101a3d}
-.qa-kicker{font-family:var(--font-display);font-weight:800;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--brand);display:block;margin-bottom:6px}
-.route-table.has-price .route-row{grid-template-columns:1.9fr 1fr 1fr 1.1fr auto}
-.route-note{max-width:900px;margin:14px auto 0;font-size:13.5px;color:var(--muted);text-align:center}
-.season-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;max-width:900px;margin:8px auto 22px}
-.season-card{background:#fff;border:1px solid var(--line);border-radius:16px;padding:22px 24px;box-shadow:var(--shadow-soft)}
-.season-dir{display:inline-flex;align-items:center;gap:8px;font-family:var(--font-display);font-weight:800;font-size:13px;letter-spacing:.06em;text-transform:uppercase;margin-bottom:10px}
-.season-card.south .season-dir{color:var(--brand)}
-.season-card.north .season-dir{color:#0b7d3e}
-.season-card p{margin:0;font-size:15px;line-height:1.6;color:#41507a}
-.season-tip{max-width:900px;margin:0 auto;font-size:15.5px;line-height:1.65;color:#41507a;text-align:center}
-.season-tip strong{color:#101a3d}
-.eeat-byline{background:var(--bg-soft);border-top:1px solid var(--line)}
-.eeat-inner{max-width:var(--maxw);margin:0 auto;padding:26px 24px;font-size:13.5px;line-height:1.7;color:var(--muted)}
-.eeat-inner a{color:var(--brand);font-weight:600}
-.eeat-inner strong{color:var(--ink)}
-@media(max-width:900px){.season-grid{grid-template-columns:1fr}}
-@media(max-width:760px){.route-table.has-price .route-row{grid-template-columns:1fr 1fr}}
-
-/* ===== v2 additions: comparison, location/map, checklists ===== */
-.cmp-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;max-width:980px;margin:6px auto 20px}
-.cmp-card{background:#fff;border:1px solid var(--line);border-radius:16px;padding:24px 26px;box-shadow:var(--shadow-soft)}
-.cmp-card h3{font-family:var(--font-display);font-weight:800;font-size:1.15rem;color:#101a3d;margin:0 0 4px}
-.cmp-tag{display:inline-block;font-family:var(--font-display);font-weight:700;font-size:12px;letter-spacing:.07em;text-transform:uppercase;color:var(--brand);background:var(--brand-tint);border-radius:999px;padding:4px 12px;margin-bottom:12px}
-.cmp-card p{margin:0 0 12px;font-size:15px;line-height:1.65;color:#41507a}
-.cmp-card ul{margin:0;padding-left:19px}
-.cmp-card li{font-size:14.5px;line-height:1.6;color:#41507a;margin-bottom:6px}
-.cmp-verdict{max-width:980px;margin:0 auto;background:var(--brand-tint);border:1px solid #d9e2fb;border-radius:14px;padding:18px 22px;font-size:15.5px;line-height:1.65;color:#33406b}
-.cmp-verdict strong{color:#101a3d}
-.txt-block{max-width:860px;margin:0 auto}
-.txt-block p{font-size:16.5px;line-height:1.75;color:#414a6b;margin:0 0 16px}
-.txt-block h3{font-family:var(--font-display);font-weight:700;font-size:1.15rem;color:#101a3d;margin:26px 0 9px}
-.txt-block ul{margin:0 0 18px;padding-left:22px}
-.txt-block li{font-size:16px;line-height:1.7;color:#414a6b;margin-bottom:9px}
-.txt-block a{color:var(--brand);font-weight:600;text-decoration:underline;text-decoration-color:#c7d3f5;text-underline-offset:3px}
-.loc-grid{display:grid;grid-template-columns:1fr 1.15fr;gap:26px;align-items:stretch;max-width:1040px;margin:0 auto}
-.loc-info{background:#fff;border:1px solid var(--line);border-radius:16px;padding:28px 30px;box-shadow:var(--shadow-soft);display:flex;flex-direction:column;gap:4px}
-.loc-info h3{font-family:var(--font-display);font-weight:800;font-size:1.2rem;color:#101a3d;margin:0 0 14px}
-.loc-row{display:flex;gap:13px;align-items:flex-start;padding:11px 0;border-top:1px solid var(--line)}
-.loc-row:first-of-type{border-top:0}
-.loc-row svg{width:21px;height:21px;color:var(--brand);flex:0 0 auto;margin-top:2px}
-.loc-row div{font-size:15.5px;line-height:1.55;color:#41507a}
-.loc-row strong{display:block;font-family:var(--font-display);font-weight:700;font-size:13px;letter-spacing:.05em;text-transform:uppercase;color:var(--muted);margin-bottom:2px}
-.loc-row a{color:var(--brand);font-weight:700}
-.loc-map{border-radius:16px;overflow:hidden;border:1px solid var(--line);box-shadow:var(--shadow-soft);min-height:340px}
-.loc-map iframe{width:100%;height:100%;min-height:340px;border:0;display:block}
-@media(max-width:900px){.cmp-grid,.loc-grid{grid-template-columns:1fr}.loc-map{min-height:300px}}
-
-/* === helpfulness pass === */
-.toc-nav{margin:26px 0 6px;padding:16px 20px;background:var(--bg-soft);border:1px solid var(--line);border-radius:14px}
-.toc-nav b{display:block;font-family:var(--font-display);font-size:12px;letter-spacing:.07em;text-transform:uppercase;color:var(--muted);margin-bottom:9px}
-.toc-nav a{display:inline-block;margin:3px 12px 3px 0;font-size:14px;font-weight:600;color:var(--brand);text-decoration:none}
-.toc-nav a:hover{text-decoration:underline}
-.glance-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin:20px 0 4px}
-.glance-cell{background:#fff;border:1px solid var(--line);border-radius:12px;padding:13px 14px}
-.glance-cell b{display:block;font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin-bottom:5px;font-family:var(--font-display)}
-.glance-cell span{font-size:14px;font-weight:700;color:#101a3d;line-height:1.4}
-.upd-line{font-size:12.5px;color:var(--muted);margin:10px 0 0}
-.bt-wrap{background:var(--bg-soft);border:1px solid var(--line);border-radius:14px;padding:18px 20px;margin:26px 0 0}
-.bt-wrap h3{margin:0 0 7px;font-family:var(--font-display);font-size:16px;color:#101a3d}
-.bt-wrap p{margin:0;font-size:14.5px;line-height:1.65;color:#41507a}
-.est-box{margin:22px 0 0;padding:16px 18px;border:1.5px solid var(--brand);border-radius:14px;background:#fff}
-.est-box label{font-family:var(--font-display);font-weight:700;font-size:14px;color:#101a3d;display:block;margin-bottom:8px}
-.est-box select{width:100%;max-width:420px;padding:10px 12px;font-size:14.5px;border:1px solid var(--line);border-radius:10px;color:#101a3d;background:#fff}
-.est-out{margin-top:10px;font-size:15px;color:#101a3d}
-.est-out strong{color:var(--brand)}
-.sticky-call{display:none}
-@media(max-width:760px){
- .glance-grid{grid-template-columns:1fr 1fr}
-}
-
-.hero-grid-solo{grid-template-areas:"top quote" "bottom quote";row-gap:0;column-gap:52px;align-items:start}
-.hero-top{grid-area:top}
-.mobile-tagline{display:none}
-.hero-bottom{grid-area:bottom}
-.hero-grid-solo .quote-card{grid-area:quote;max-width:480px;box-shadow:0 10px 24px -14px rgba(13,26,80,.3)}
-@media(min-width:1181px){
- .hero-grid-solo .quote-card.is-embed iframe{height:540px}
-}
-@media(max-width:1180px){
- .hero-grid-solo{grid-template-areas:"top" "bottom" "quote";row-gap:36px;column-gap:0;align-items:stretch}
- .hero-grid-solo .quote-card{max-width:520px}
-}
-@media(max-width:760px){
- .hero-grid-solo{grid-template-areas:"crumbs" "tagline" "quote" "h1mobile" "bottom"!important;row-gap:0!important}
- .hero-top{display:contents}
- .hero-grid-solo{padding:18px 20px 22px!important}
- .hero-top .crumbs{grid-area:crumbs;margin-bottom:6px;font-size:12px}
- .hero-top .eyebrow{display:none}
- .hero-top h1{grid-area:h1mobile;margin:10px 0 6px!important}
- .mobile-tagline{display:block;grid-area:tagline;margin:2px 0 8px;font-family:var(--font-display);font-weight:800;font-size:clamp(1.05rem,5.2vw,1.35rem);letter-spacing:-.01em;color:#fff;text-shadow:0 2px 14px rgba(4,9,22,.55);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;text-align:center}
- .hero-grid-solo .quote-card{margin:8px 0 12px!important;max-width:100%}
- .hero-bottom .lede{margin-top:0}
- .hero-grid-solo .quote-card.is-embed iframe{height:540px}
-}
-.hero-top h1 br{}
-@media(max-width:760px){
- .hero-top h1 br{display:none}
- .hero-top h1{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;display:block}
-}
-
-/* === mobile horizontal-overflow fix === */
-html,body{overflow-x:clip}
-@media(max-width:760px){
- .cmp-grid{grid-template-columns:1fr}
- .season-grid{grid-template-columns:1fr}
- .route-row > *,.glance-cell,.cmp-card,.why-card,.step-card,.toc-nav a,.faq-item{min-width:0}
- .glance-cell span,.route-name,.faq-q,.txt-block p,.city-callout p,.cmp-card li{overflow-wrap:break-word}
- img,iframe,video,table,figure{max-width:100%}
- .container,.hero-grid,.hero-grid-solo{max-width:100%}
-}
-
-/* === quote widget: no tap-zoom, no shift === */
-.quote-card.is-embed{touch-action:manipulation;overscroll-behavior:contain}
-.quote-card.is-embed iframe{touch-action:manipulation;overscroll-behavior:contain}
-</style>
-<script type="application/ld+json">
-{
- "@context": "https://schema.org",
- "@graph": [
-  {
-   "@type": "Service",
-   "name": "Auto Transport in Houston, TX",
-   "serviceType": "Auto transport",
-   "provider": {
-    "@type": "LocalBusiness",
-    "name": "Ship Guy Auto Transport",
-    "url": "https://shipguy.com",
-    "telephone": "+1-346-615-4970",
-    "email": "quotes@shipguy.com",
-    "address": {
-     "@type": "PostalAddress",
-     "streetAddress": "9525 Bissonnet St ste 1175",
-     "addressLocality": "Houston",
-     "addressRegion": "TX",
-     "postalCode": "77036",
-     "addressCountry": "US"
-    },
-    "geo": {
-     "@type": "GeoCoordinates",
-     "latitude": 29.6752729,
-     "longitude": -95.5449125
-    },
-    "openingHoursSpecification": [
-     {
-      "@type": "OpeningHoursSpecification",
-      "dayOfWeek": [
-       "Monday",
-       "Tuesday",
-       "Wednesday",
-       "Thursday",
-       "Friday",
-       "Saturday",
-       "Sunday"
-      ],
-      "opens": "06:00",
-      "closes": "23:00"
-     }
-    ],
-    "identifier": [
-     {
-      "@type": "PropertyValue",
-      "name": "MC Number",
-      "value": "MC-1457715"
-     },
-     {
-      "@type": "PropertyValue",
-      "name": "USDOT Number",
-      "value": "USDOT-3932149"
-     }
-    ]
-   },
-   "areaServed": {
-    "@type": "City",
-    "name": "Houston",
-    "containedInPlace": {
-     "@type": "State",
-     "name": "Texas"
-    }
-   },
-   "description": "Auto transport for Houston and the Gulf Coast — energy-assignment fluency, Texas Medical Center scale, flood-aware craft, loop-literate metro dispatch, and Texas Triangle depth from the southwest side.",
-   "offers": {
-    "@type": "Offer",
-    "priceCurrency": "USD",
-    "price": "215",
-    "description": "Auto transport from Houston starting price, standard sedan"
-   }
-  },
-  {
-   "@type": "BreadcrumbList",
-   "itemListElement": [
-    {
-     "@type": "ListItem",
-     "position": 1,
-     "name": "Home",
-     "item": "https://shipguy.com/"
-    },
-    {
-     "@type": "ListItem",
-     "position": 2,
-     "name": "Houston, TX",
-     "item": "https://shipguy.com/city/auto-transport-houston-texas/"
-    }
-   ]
-  },
-  {
-   "@type": "FAQPage",
-   "mainEntity": [
-    {
-     "@type": "Question",
-     "name": "What does it cost to ship a car to or from Houston?",
-     "acceptedAnswer": {
-      "@type": "Answer",
-      "text": "Open-transport sedan figures run roughly: $215–$350 to Austin or San Antonio, $235–$380 to Dallas or Corpus Christi, $310–$490 to New Orleans, $420–$640 to Oklahoma City or Memphis, $540–$800 to Atlanta, $560–$840 to Albuquerque, $640–$940 to Chicago, $700–$1,020 to Florida's peninsula, $780–$1,140 to Phoenix, and $900–$1,300 to either coast. Enclosed runs 40–60% over. The Texas Triangle's traffic keeps the near lanes shuttle-deep."
-     }
-    },
-    {
-     "@type": "Question",
-     "name": "How fast is pickup across the Houston metro?",
-     "acceptedAnswer": {
-      "@type": "Answer",
-      "text": "Usually 1–3 days across one of the largest carrier markets in America: the Texas Triangle's constant cycle, the port's processing volume, and the loop system's distribution geography keep equipment everywhere from Katy to Clear Lake. The metro's sheer size means the practical variable is which side of town — dispatch quotes windows by loop, not just by city."
-     }
-    },
-    {
-     "@type": "Question",
-     "name": "How does the energy industry's calendar shape shipping here?",
-     "acceptedAnswer": {
-      "@type": "Answer",
-      "text": "It's the market's signature current: the majors and the service companies rotate talent globally on assignment cycles, the Energy Corridor and the west side land expat arrivals year-round, and the trade runs on corporate-mobility machinery — relocation-provider invoicing, assignment-date scheduling, and the ship-versus-buy conversation for overseas rotations answered honestly (for most international assignments, storage-or-sell beats shipping; for domestic transfers, the car almost always travels). Price cycles ripple the volume; the machinery never changes."
-     }
-    },
-    {
-     "@type": "Question",
-     "name": "What should I know about flood history and shipping in Houston?",
-     "acceptedAnswer": {
-      "@type": "Answer",
-      "text": "Two practical things: first, our own craft is flood-aware — hurricane-season windows carry contingency language, low-lying pickup addresses get staging alternatives named upfront, and post-storm recovery scheduling is a practiced local drill. Second, for used-vehicle purchases shipping out of this region: check the title history and flood databases before you buy, because storm-salvage vehicles circulate nationally after every major event. We ship what you bought either way — but we'd rather you buy well, and the lookup takes five minutes."
-     }
-    },
-    {
-     "@type": "Question",
-     "name": "Do you handle Texas Medical Center relocations?",
-     "acceptedAnswer": {
-      "@type": "Answer",
-      "text": "At the scale the world's largest medical complex generates: match-day cohorts across multiple institutions at once, fellowship and research cycles on academic clocks, and international clinical talent arriving with the purchase-delivery needs newcomers have. Start dates run as contracts, campus-area handoffs run the practiced spots, and the density means our medical column stays full every month."
-     }
-    },
-    {
-     "@type": "Question",
-     "name": "Can you serve the whole metro — Woodlands to Galveston?",
-     "acceptedAnswer": {
-      "@type": "Answer",
-      "text": "One market, many loops: the master-planned north (Woodlands, Spring), the western arcs (Katy, Sugar Land, Cypress), the bay side (Clear Lake, League City) and the island itself all ship on the same metro pool, with the loop-and-corridor geography setting windows more than mileage does. Gate codes and HOA customs in the planned communities get gathered at booking, coastal deliveries watch the seasonal almanac."
-     }
-    },
-    {
-     "@type": "Question",
-     "name": "What's hurricane season protocol?",
-     "acceptedAnswer": {
-      "@type": "Answer",
-      "text": "June through November, the Gulf's calendar gets respect without drama: forecasts watched from a week out, windows around landfall threats carry built-in flexibility, evacuation-adjacent scheduling defers to official guidance, and post-storm recovery books fast as the market restarts. Most seasons pass with a few watched systems and zero disruption — but the protocol exists because this coast earned it."
-     }
-    },
-    {
-     "@type": "Question",
-     "name": "Where is Ship Guy located in Houston?",
-     "acceptedAnswer": {
-      "@type": "Answer",
-      "text": "9525 Bissonnet St Ste 1175, Houston, TX 77036 — southwest side, inside Beltway 8. Local line (346) 615-4970, staffed daily 6:00 AM to 11:00 PM Central."
-     }
-    }
-   ]
-  },
-  {
-   "@type": "WebPage",
-   "@id": "https://shipguy.com/city/auto-transport-houston-texas/#webpage",
-   "url": "https://shipguy.com/city/auto-transport-houston-texas/",
-   "name": "Houston Auto Transport — Car Shipping Rates & Times | Ship Guy",
-   "datePublished": "2026-07-01",
-   "dateModified": "2026-07-25",
-   "isPartOf": {
-    "@type": "WebSite",
-    "name": "Ship Guy Auto Transport",
-    "url": "https://shipguy.com"
-   },
-   "author": {
-    "@type": "Person",
-    "name": "Brittany Newles",
-    "jobTitle": "Blog Writer"
-   }
+      rgba(4,9,22,.84) 0%,
+      rgba(4,9,22,.74) 28%,
+      rgba(4,9,22,.54) 48%,
+      rgba(4,9,22,.28) 66%,
+      rgba(4,9,22,.06) 86%,
+      rgba(4,9,22,0) 100%),
+    linear-gradient(180deg, rgba(4,9,22,.2) 0%, rgba(4,9,22,0) 24%, rgba(4,9,22,0) 64%, rgba(4,9,22,.3) 100%);}
+.hero-grid{display:grid;grid-template-columns:minmax(0,1fr) 420px;gap:56px;
+  align-items:center;padding:64px 24px 74px;}
+.hero-copy{max-width:624px;color:#fff}
+.eyebrow{font-family:var(--font-display);font-weight:700;font-size:13px;
+  letter-spacing:.16em;text-transform:uppercase;color:#9fc0f6;margin:0 0 18px;}
+.hero-copy h1{font-weight:800;font-size:clamp(2.4rem,4vw,3.2rem);line-height:1.05;letter-spacing:-.018em;
+  color:#fff;margin:0 0 18px;text-shadow:0 2px 24px rgba(0,0,0,.32);}
+.lede{font-size:17px;line-height:1.6;color:rgba(245,248,253,.96);max-width:392px;margin:0 0 28px;text-shadow:0 1px 3px rgba(0,0,0,.6),0 2px 20px rgba(0,0,0,.55)}
+.hero-divider{height:1px;background:rgba(255,255,255,.2);margin:0 0 22px;max-width:520px}
+@media (max-width:1180px){.hero-grid{grid-template-columns:minmax(0,1fr);gap:28px;padding:54px 24px 60px} .hero-copy{display:contents} .hero-head,.hero-rest{max-width:640px;width:100%} .hero-head{order:1} .hero-rest{order:3} .hero-head h1{margin-bottom:0} .eyebrow{display:none} .lede{max-width:520px} .hero-overlay{background:linear-gradient(180deg, rgba(4,9,22,.72) 0%, rgba(4,9,22,.8) 55%, rgba(4,9,22,.88) 100%)}}
+@media (max-width:600px){.hero-copy h1{font-size:clamp(1.9rem,7vw,2.45rem)}}
+@media (min-width:1181px) and (max-width:1600px){.hero-grid{padding-top:34px;padding-bottom:40px;gap:40px} .eyebrow{margin-bottom:12px} .hero-copy h1{font-size:clamp(2rem,3vw,2.5rem);margin-bottom:14px} .lede{font-size:15.5px;margin-bottom:18px} .hero-divider{margin-bottom:16px}}
+.hero-lite .hero{background:#f5f9ff}
+.hero-lite .hero-copy{color:#101a3d}
+.hero-lite .hero-copy .eyebrow{color:#5b6480;letter-spacing:.26em;font-weight:700}
+.hero-lite .hero-copy h1{color:#0a1230;font-size:clamp(2.4rem,5.4vw,4rem);line-height:1.03;letter-spacing:-.02em}
+.hero-lite .hero-copy h1 .accent{color:var(--brand)}
+.hero-lite .hero-copy h1,.hero-lite .hero-copy .lede,.hero-lite .hero-copy .eyebrow{text-shadow:none}
+.hero-lite .hero-copy .lede{color:#454e6d;font-size:clamp(1.02rem,1.5vw,1.2rem);max-width:520px}
+.hero-lite .hero-copy{max-width:700px}
+.hero-lite .hero-badges{display:flex;flex-wrap:wrap;gap:16px 20px;margin-top:28px}
+.hero-lite .hb{display:flex;align-items:center;gap:10px}
+.hero-lite .hb-ic{width:38px;height:38px;border-radius:50%;background:#e6eefc;color:var(--brand);display:flex;align-items:center;justify-content:center;flex:0 0 auto}
+.hero-lite .hb-ic svg{width:20px;height:20px}
+.hero-lite .hb{min-width:0}
+.hero-lite .hb b{display:block;font-family:var(--font-display);font-weight:800;font-size:13.5px;color:#101a3d;line-height:1.16;white-space:nowrap}
+.hero-lite .hb small{color:#6b7488;font-size:12px;white-space:nowrap}
+.hero-lite .hero-grid{padding-top:98px;padding-bottom:52px;align-items:start}
+  @media (min-width:1181px){.hero-lite .hero-head{margin-top:28px}}
+.hero-lite .hero-badges{gap:20px}
+@media (max-width:1180px){.hero-lite .hero-grid{padding-top:26px;padding-bottom:44px}}
+@media (max-width:600px){.hero-lite .hero-grid{padding-top:18px}}
+@media (max-width:1180px){.hero-lite .hero-badges{flex-wrap:wrap;gap:12px 22px}}
+.hero-lite .hero-bg{position:absolute;inset:0;overflow:hidden}
+.hero-lite .hero-bg-svg{width:100%;height:100%;display:block}
+@media (max-width:600px){.hero-lite .hero-grid{gap:20px}}
+.hero-lite .hero{overflow:hidden}
+.hero-lite .hero-bg,.hero-lite .hero-bg-svg{max-width:100%}
+.hero-lite .hero-creds{display:flex;flex-wrap:wrap;gap:8px 10px;margin-top:22px}
+.hero-lite .hero-creds span{display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:700;color:var(--ink-2);background:#eaf0fd;border:1px solid #dbe4fb;padding:6px 11px;border-radius:999px}
+.hero-lite .hero-creds svg{width:13px;height:13px;color:var(--brand)}
+  /* clean how-it-works */
+  .lp-how{background:#fff;padding:66px 0}
+.lp-head{text-align:center;max-width:640px;margin:0 auto 44px}
+.lp-eyebrow{font-family:var(--font-display);font-weight:800;letter-spacing:.14em;text-transform:uppercase;font-size:12.5px;color:var(--brand);margin:0 0 10px}
+.lp-head h2{font-family:var(--font-display);font-weight:800;font-size:clamp(1.7rem,3.4vw,2.4rem);color:#101a3d;letter-spacing:-.01em;margin:0 0 12px}
+.lp-sub{color:var(--ink-2);font-size:16.5px;line-height:1.6;margin:0}
+.lp-steps{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.lp-step{background:#f7f9fd;border:1px solid var(--line);border-radius:18px;padding:30px 26px;position:relative;transition:transform .18s ease,box-shadow .18s ease}
+.lp-step:hover{transform:translateY(-3px);box-shadow:0 20px 40px -26px rgba(13,26,80,.4)}
+.lp-num{position:absolute;top:-14px;left:26px;width:34px;height:34px;border-radius:10px;background:var(--brand);color:#fff;font-family:var(--font-display);font-weight:800;font-size:15px;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 18px -8px rgba(11,52,192,.7)}
+.lp-ic{width:54px;height:54px;border-radius:14px;background:#e8eefc;color:var(--brand);display:flex;align-items:center;justify-content:center;margin:8px 0 16px}
+.lp-ic svg{width:26px;height:26px}
+.lp-step h3{font-family:var(--font-display);font-weight:800;font-size:19px;color:#101a3d;margin:0 0 8px}
+.lp-step p{color:var(--ink-2);font-size:14.5px;line-height:1.6;margin:0}
+.lp-how-cta{display:flex;align-items:center;justify-content:center;gap:16px;margin-top:40px;flex-wrap:wrap}
+.lp-how-cta span{color:var(--ink-2);font-size:15px}
+.lp-how-cta span a{color:var(--brand);font-weight:700;text-decoration:none}
+.lp-btn{display:inline-flex;align-items:center;background:var(--brand);color:#fff;font-family:var(--font-display);font-weight:700;font-size:16px;padding:15px 30px;border-radius:12px;text-decoration:none;box-shadow:0 14px 28px -12px rgba(11,52,192,.7);transition:background .15s ease,transform .15s ease}
+.lp-btn:hover{background:var(--brand-press);transform:translateY(-1px)}
+@media (max-width:860px){.lp-steps{grid-template-columns:1fr;gap:26px;max-width:440px;margin:0 auto} .lp-num{top:-13px}}
+@media (max-width:600px){.lp-how{padding:48px 0}}
+  /* ===== homepage content sections ===== */
+  .hp-head{text-align:center;max-width:640px;margin:0 auto 42px}
+  .hp-eyebrow{font-family:var(--font-display);font-weight:800;letter-spacing:.14em;text-transform:uppercase;font-size:12.5px;color:var(--brand);margin:0 0 10px}
+  .hp-head h2{font-family:var(--font-display);font-weight:800;font-size:clamp(1.7rem,3.4vw,2.4rem);color:#101a3d;letter-spacing:-.01em;margin:0 0 12px}
+  .hp-sub{color:var(--ink-2);font-size:16.5px;line-height:1.6;margin:0}
+  /* stats band */
+  .hp-stats{background:linear-gradient(135deg,var(--brand),var(--brand-deep));padding:40px 0}
+  .hp-stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;text-align:center}
+  .hp-stat-num{display:block;font-family:var(--font-display);font-weight:800;font-size:clamp(2rem,4vw,2.7rem);color:#fff;line-height:1}
+  .hp-stat-lbl{display:block;margin-top:8px;font-size:13.5px;font-weight:600;color:#c9d6fb;letter-spacing:.02em}
+  .hp-stat+.hp-stat{position:relative}
+  .hp-stats-grid .hp-stat:not(:first-child){border-left:1px solid rgba(255,255,255,.16)}
+  /* services */
+  .hp-services{background:#fff;padding:66px 0}
+  .hp-serv-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+  .hp-serv{display:block;text-decoration:none;background:#f7f9fd;border:1px solid var(--line);border-radius:16px;padding:26px 24px;transition:transform .18s ease,box-shadow .18s ease,border-color .18s ease}
+  .hp-serv:hover{transform:translateY(-3px);box-shadow:0 22px 44px -28px rgba(13,26,80,.45);border-color:#cfdcfa}
+  .hp-serv-ic{width:48px;height:48px;border-radius:12px;background:#e8eefc;color:var(--brand);display:flex;align-items:center;justify-content:center;margin-bottom:15px}
+  .hp-serv-ic svg{width:24px;height:24px}
+  .hp-serv h3{font-family:var(--font-display);font-weight:800;font-size:17.5px;color:#101a3d;margin:0 0 7px}
+  .hp-serv p{color:var(--ink-2);font-size:14px;line-height:1.55;margin:0 0 12px}
+  .hp-serv-link{font-weight:700;font-size:14px;color:var(--brand)}
+  .hp-serv-all{text-align:center;margin-top:32px}
+  .hp-serv-all a{display:inline-flex;align-items:center;font-family:var(--font-display);font-weight:700;font-size:15px;color:#fff;background:var(--brand);padding:14px 28px;border-radius:11px;text-decoration:none;box-shadow:0 14px 28px -14px rgba(11,52,192,.7);transition:background .15s,transform .15s}
+  .hp-serv-all a:hover{background:var(--brand-press);transform:translateY(-1px)}
+  /* vehicle types */
+  .hp-vehicles{background:#f4f7fe;padding:66px 0}
+  .hp-veh-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .hp-veh{background:#fff;border:1px solid var(--line);border-radius:14px;padding:24px 22px;display:flex;gap:15px;align-items:flex-start}
+  .hp-veh-ic{width:44px;height:44px;flex:0 0 auto;border-radius:11px;background:var(--brand-tint);color:var(--brand);display:flex;align-items:center;justify-content:center}
+  .hp-veh-ic svg{width:23px;height:23px}
+  .hp-veh h3{font-family:var(--font-display);font-weight:800;font-size:16px;color:#101a3d;margin:2px 0 5px}
+  .hp-veh p{color:var(--ink-2);font-size:13.5px;line-height:1.5;margin:0}
+  /* about */
+  .hp-about{background:#fff;padding:66px 0}
+  .hp-about-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center}
+  .hp-about-copy h2{font-family:var(--font-display);font-weight:800;font-size:clamp(1.7rem,3.2vw,2.3rem);color:#101a3d;letter-spacing:-.01em;margin:0 0 16px}
+  .hp-about-copy p{color:var(--ink-2);font-size:15.5px;line-height:1.7;margin:0 0 14px}
+  .hp-about-points{display:grid;gap:12px;margin-top:22px}
+  .hp-about-points div{display:flex;gap:11px;align-items:flex-start;font-size:14.5px;font-weight:600;color:#1d2350}
+  .hp-about-points svg{width:19px;height:19px;color:var(--brand);flex:0 0 auto;margin-top:1px}
+  .hp-about-card{background:linear-gradient(150deg,#0a1230,#0f1f52);border-radius:22px;padding:38px 34px;color:#fff;box-shadow:0 40px 80px -40px rgba(13,26,80,.6)}
+  .hp-about-card .hp-ac-eyebrow{font-family:var(--font-display);font-weight:700;letter-spacing:.12em;text-transform:uppercase;font-size:11.5px;color:#8fb0f5;margin:0 0 18px}
+  .hp-ac-rows{display:grid;gap:18px}
+  .hp-ac-row{display:flex;justify-content:space-between;align-items:baseline;padding-bottom:16px;border-bottom:1px solid rgba(255,255,255,.12)}
+  .hp-ac-row:last-child{border-bottom:0;padding-bottom:0}
+  .hp-ac-row b{font-family:var(--font-display);font-weight:800;font-size:24px;color:#fff}
+  .hp-ac-row span{font-size:13.5px;color:#aeb9d6;text-align:right;max-width:160px}
+  @media (max-width:900px){
+    .hp-serv-grid,.hp-veh-grid{grid-template-columns:1fr 1fr}
+    .hp-about-grid{grid-template-columns:1fr;gap:32px}
   }
- ]
-}
+  @media (max-width:600px){
+    .hp-stats-grid{grid-template-columns:1fr 1fr;gap:24px 12px}
+    .hp-stats-grid .hp-stat:not(:first-child){border-left:0}
+    .hp-serv-grid,.hp-veh-grid{grid-template-columns:1fr}
+    .hp-services,.hp-vehicles,.hp-about{padding:48px 0}
+  }
+  /* ===== transparent overlay header (homepage) ===== */
+  html{scroll-padding-top:96px}
+  .site-header{position:fixed;top:0;left:0;right:0;background:transparent;border-bottom:0;box-shadow:none;z-index:60}
+  .site-header.is-scrolled{background:rgba(255,255,255,.97);box-shadow:0 6px 24px -16px rgba(13,26,80,.5);-webkit-backdrop-filter:saturate(1.2) blur(6px);backdrop-filter:saturate(1.2) blur(6px)}
+  .brand-tag{align-self:center;margin-left:14px;padding-left:14px;border-left:1px solid #cbd5ec;color:#5b6480;font-size:10.5px;font-weight:700;letter-spacing:.13em;line-height:1.25;text-transform:uppercase}
+  .main-nav a,.nav-toggle-btn{color:#1d2350}
+  .main-nav a:hover,.nav-toggle-btn:hover{color:var(--brand)}
+  .btn-call{background:#fff;color:var(--brand);border:1.6px solid var(--brand);box-shadow:none}
+  .btn-call:hover{background:var(--brand-tint)}
+  @media (max-width:1180px){
+    .site-header{position:sticky;background:rgba(255,255,255,.97);box-shadow:0 6px 24px -16px rgba(13,26,80,.4)}
+    .brand-tag{display:none}
+  }
+  /* ===== searchable dropdowns for year/make/model ===== */
+  .pqs-native{position:absolute!important;width:1px;height:1px;opacity:0;pointer-events:none;margin:0;padding:0;border:0}
+  .pqs-host .pqs-trigger{display:flex;align-items:center;justify-content:space-between;gap:8px;width:100%;text-align:left;background:#fff;border:1.5px solid #d9deea;border-radius:12px;padding:11px 13px 11px 44px;font-family:inherit;font-size:15px;color:#101a3d;cursor:pointer;line-height:1.35}
+  .pqs-host .pqs-trigger:hover{border-color:#c2cbe0}
+  .pqs-host.pqs-open .pqs-trigger{border-color:var(--brand);box-shadow:0 0 0 3px rgba(11,52,192,.12)}
+  .pqs-host .pqs-trigger:disabled{opacity:.55;cursor:not-allowed;background:#f4f6fb}
+  .pqs-val{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+  .pqs-val.is-ph{color:#9aa3b8}
+  .pqs-chev{flex:0 0 auto;width:0;height:0;border-left:5px solid transparent;border-right:5px solid transparent;border-top:6px solid #9aa3b8}
+  .pqs-panel{position:fixed;z-index:99999;background:#fff;border:1px solid #e7eaf2;border-radius:12px;box-shadow:0 24px 50px -18px rgba(13,26,80,.5);overflow:hidden}
+  .pqs-search{padding:8px;border-bottom:1px solid #eef1f7}
+  .pqs-search input{width:100%;box-sizing:border-box;border:1.5px solid #d9deea;border-radius:8px;padding:9px 11px;font-size:15px;outline:none;font-family:inherit;color:#101a3d}
+  .pqs-search input:focus{border-color:var(--brand)}
+  .pqs-list{max-height:240px;overflow-y:auto;padding:5px;-webkit-overflow-scrolling:touch}
+  .pqs-opt{padding:10px 11px;border-radius:8px;font-size:14.5px;color:#1d2350;cursor:pointer}
+  .pqs-opt:hover{background:#f4f6fb}
+  .pqs-opt.active{background:#eef2fe;color:var(--brand);font-weight:600}
+  .pqs-none{padding:14px;text-align:center;color:#9aa3b8;font-size:14px}
+  /* compact back button + equal radio heights */
+  #pquote .pq-nav{display:flex;gap:10px;align-items:stretch}
+  #pquote .pq-nav .pq-btn{flex:1}
+  #pquote .pq-btn-ghost{flex:0 0 auto;gap:5px;padding:11px 15px}
+  #pquote .pq-btn-ghost svg{flex:0 0 auto}
+  #pquote .pq-opt-body{min-height:50px;padding:9px 12px}
+  #pquote .pq-opts-wide .pq-opt-body b{font-size:12.5px;line-height:1.2}
+  /* ===== Phoenix city page ===== */
+  .ph-sec{padding:70px 0;background:#fff}
+  .ph-alt{background:linear-gradient(180deg,#f4f8ff,#eef4ff)}
+  .ph-wrap{max-width:1160px;margin:0 auto;padding:0 24px}
+  .ph-eyebrow{font-family:var(--font-display);font-weight:800;font-size:12.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--brand);margin:0 0 12px}
+  .ph-sec h2{font-family:var(--font-display);font-weight:800;font-size:clamp(1.7rem,3.1vw,2.4rem);line-height:1.14;letter-spacing:-.02em;color:#101a3d;margin:0 0 14px}
+  .ph-head{text-align:center;max-width:720px;margin:0 auto 44px}
+  .ph-sub{color:var(--ink-2);font-size:clamp(1rem,1.4vw,1.1rem);line-height:1.6;margin:0}
+  .ph-stats{background:linear-gradient(120deg,var(--brand-deep),var(--brand));padding:40px 0}
+  .ph-stats .ph-wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;text-align:center}
+  .ph-stat b{display:block;font-family:var(--font-display);font-weight:800;font-size:clamp(1.7rem,3.4vw,2.3rem);color:#fff;line-height:1}
+  .ph-stat span{display:block;margin-top:8px;color:rgba(255,255,255,.85);font-size:14px;font-weight:600}
+  .ph-intro-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:44px;align-items:start}
+  .ph-intro-copy p{color:var(--ink-2);font-size:1.05rem;line-height:1.7;margin:0 0 16px}
+  .ph-quick{background:#0b1f57;color:#fff;border-radius:20px;padding:30px;box-shadow:0 30px 60px -28px rgba(11,52,192,.6)}
+  .ph-quick-head{display:inline-block;font-family:var(--font-display);font-weight:800;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#9fc0ff;background:rgba(255,255,255,.1);padding:6px 12px;border-radius:999px;margin-bottom:14px}
+  .ph-quick p{color:rgba(255,255,255,.92);font-size:1rem;line-height:1.65;margin:0 0 12px}
+  .ph-quick p b{color:#fff}
+  .ph-quick-note{font-size:.9rem !important;color:rgba(255,255,255,.72) !important}
+  .ph-table-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:16px;background:#fff;box-shadow:0 14px 34px -28px rgba(13,26,80,.4)}
+  .ph-rates{width:100%;border-collapse:collapse;min-width:560px}
+  .ph-rates th{background:#f5f8ff;text-align:left;font-family:var(--font-display);font-weight:800;font-size:13px;color:#101a3d;padding:15px 20px;border-bottom:2px solid var(--brand-tint)}
+  .ph-rates td{padding:15px 20px;font-size:15px;color:#3a4266;border-bottom:1px solid var(--line)}
+  .ph-rates tbody tr:last-child td{border-bottom:none}
+  .ph-rates tbody tr:hover{background:#f7f9ff}
+  .ph-rates td:first-child{font-weight:700;color:#101a3d}
+  .ph-rates td:last-child{font-weight:800;color:var(--brand)}
+  .ph-fine{max-width:900px;margin:18px auto 0;color:var(--muted);font-size:13px;line-height:1.55;text-align:center}
+  .ph-tcta{text-align:center;margin-top:26px}
+  .ph-cards{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+  .ph-cards.c2{grid-template-columns:repeat(2,1fr)}
+  .ph-card{background:#fff;border:1px solid var(--line);border-radius:16px;padding:28px 24px;transition:all .18s ease}
+  .ph-card:hover{border-color:#cfd8ee;box-shadow:0 18px 40px -22px rgba(13,26,80,.4);transform:translateY(-2px)}
+  .ph-ic{width:48px;height:48px;border-radius:12px;background:#eef2fe;color:var(--brand);display:flex;align-items:center;justify-content:center;margin-bottom:15px}
+  .ph-ic svg{width:25px;height:25px}
+  .ph-card h3{font-family:var(--font-display);font-weight:800;font-size:1.08rem;color:#101a3d;margin:0 0 8px;line-height:1.25}
+  .ph-card p{color:var(--ink-2);font-size:.94rem;line-height:1.55;margin:0}
+  .ph-card ul{list-style:none;margin:12px 0 0;padding:0;display:flex;flex-direction:column;gap:8px}
+  .ph-card li{display:flex;gap:9px;align-items:flex-start;color:#2a3255;font-size:.9rem;line-height:1.4}
+  .ph-card li svg{width:17px;height:17px;color:var(--brand);flex:0 0 auto;margin-top:1px}
+  .ph-prose{max-width:820px;margin:0 auto}
+  .ph-prose p{color:var(--ink-2);font-size:1.05rem;line-height:1.75;margin:0 0 18px}
+  .ph-prose p:last-child{margin-bottom:0}
+  .ph-chips{display:flex;flex-wrap:wrap;gap:10px;max-width:900px;margin:0 auto;justify-content:center}
+  .ph-chip{background:#fff;border:1px solid var(--line);border-radius:999px;padding:9px 18px;font-weight:600;font-size:14px;color:#2a3255}
+  .ph-note{max-width:820px;margin:34px auto 0;background:var(--brand-tint);border:1px solid #dbe3fb;border-radius:14px;padding:22px 24px;color:var(--ink-2);font-size:.98rem;line-height:1.6}
+  .ph-note b{color:#101a3d}
+  .ph-office{display:grid;grid-template-columns:.9fr 1.1fr;gap:36px;align-items:stretch}
+  .ph-office-card{background:#fff;border:1px solid var(--line);border-radius:18px;padding:32px}
+  .ph-office-card h3{font-family:var(--font-display);font-weight:800;font-size:1.3rem;color:#101a3d;margin:0 0 20px}
+  .ph-office-row{display:flex;gap:14px;align-items:flex-start;margin-bottom:18px}
+  .ph-office-row:last-child{margin-bottom:0}
+  .ph-office-ic{width:38px;height:38px;border-radius:10px;background:#eef2fe;color:var(--brand);display:flex;align-items:center;justify-content:center;flex:0 0 auto}
+  .ph-office-ic svg{width:20px;height:20px}
+  .ph-office-row b{display:block;font-family:var(--font-display);font-weight:700;font-size:14px;color:#101a3d;margin-bottom:2px}
+  .ph-office-row span,.ph-office-row a{color:var(--ink-2);font-size:15px;line-height:1.5}
+  .ph-office-row a{color:var(--brand);font-weight:600}
+  .ph-map{border-radius:18px;overflow:hidden;border:1px solid var(--line);min-height:340px}
+  .ph-map iframe{width:100%;height:100%;min-height:340px;border:0;display:block}
+  .ph-faq-list{max-width:860px;margin:0 auto;display:flex;flex-direction:column;gap:12px}
+  .ph-faq{border:1px solid var(--line);border-radius:12px;background:#fff}
+  .ph-faq summary{list-style:none;cursor:pointer;padding:18px 22px;font-family:var(--font-display);font-weight:700;font-size:15.5px;color:#101a3d;display:flex;justify-content:space-between;align-items:center;gap:16px}
+  .ph-faq summary::-webkit-details-marker{display:none}
+  .ph-fp{flex:0 0 auto;width:20px;height:20px;position:relative}
+  .ph-fp::before,.ph-fp::after{content:'';position:absolute;background:var(--brand);border-radius:2px}
+  .ph-fp::before{left:0;right:0;top:9px;height:2px}
+  .ph-fp::after{top:0;bottom:0;left:9px;width:2px;transition:opacity .2s}
+  .ph-faq[open] .ph-fp::after{opacity:0}
+  .ph-faq[open] summary{color:var(--brand)}
+  .ph-faq .fa{padding:0 22px 20px;color:var(--ink-2);font-size:15px;line-height:1.65}
+  .ph-faq .fa a{color:var(--brand);font-weight:600}
+  @media(max-width:900px){
+    .ph-stats .ph-wrap{grid-template-columns:1fr 1fr;gap:26px}
+    .ph-intro-grid,.ph-office{grid-template-columns:1fr;gap:28px}
+    .ph-cards{grid-template-columns:1fr 1fr}
+    .ph-cards.c2{grid-template-columns:1fr}
+  }
+  @media(max-width:560px){
+    .ph-sec{padding:52px 0}
+    .ph-cards{grid-template-columns:1fr}
+  }
+</style>
+
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What does it cost to ship a car to or from Houston?", "acceptedAnswer": {"@type": "Answer", "text": "Sedan on open transport: about $215–$350 to Austin or San Antonio, $235–$380 to Dallas or Corpus Christi, $310–$490 to New Orleans, $420–$640 to Oklahoma City, $540–$800 to Atlanta, $640–$940 to Chicago, $720–$1,050 to Florida’s peninsula, and $900–$1,300 to either coast. Enclosed runs 40–60% over. The Texas Triangle’s traffic keeps the near lanes shuttle-deep."}}, {"@type": "Question", "name": "How fast is pickup across the Houston metro?", "acceptedAnswer": {"@type": "Answer", "text": "Usually 1–3 days across one of the largest carrier markets in America: the Texas Triangle’s constant cycle, the port’s processing volume, and the loop system’s distribution geography keep equipment everywhere from Katy to Clear Lake. The metro’s sheer size means the practical variable is which side of town — dispatch quotes windows by loop, not just by city."}}, {"@type": "Question", "name": "How does the energy industry’s calendar shape shipping here?", "acceptedAnswer": {"@type": "Answer", "text": "It’s the market’s signature current: the majors and the service companies rotate talent globally on assignment cycles, the Energy Corridor and the west side land expat arrivals year-round, and the trade runs on corporate-mobility machinery — relocation-provider invoicing, assignment-date scheduling, and the ship-versus-buy conversation for overseas rotations answered honestly (for most international assignments, storage-or-sell beats shipping; for domestic transfers, the car almost always travels). Price cycles ripple the volume; the machinery never changes."}}, {"@type": "Question", "name": "What should I know about flood history and shipping in Houston?", "acceptedAnswer": {"@type": "Answer", "text": "Two practical things: first, our own craft is flood-aware — hurricane-season windows carry contingency language, low-lying pickup addresses get staging alternatives named upfront, and post-storm recovery scheduling is a practiced local drill. Second, for used-vehicle purchases shipping out of this region: check the title history and flood databases before you buy, because storm-salvage vehicles circulate nationally after every major event. We ship what you bought either way — but we’d rather you buy well, and the lookup takes five minutes."}}, {"@type": "Question", "name": "Do you handle Texas Medical Center relocations?", "acceptedAnswer": {"@type": "Answer", "text": "At the scale the world’s largest medical complex generates: match-day cohorts across multiple institutions at once, fellowship and research cycles on academic clocks, and international clinical talent arriving with the purchase-delivery needs newcomers have. Start dates run as contracts, campus-area handoffs run the practiced spots, and the density means our medical column stays full every month."}}, {"@type": "Question", "name": "Can you serve the whole metro — Woodlands to Galveston?", "acceptedAnswer": {"@type": "Answer", "text": "One market, many loops: the master-planned north (Woodlands, Spring), the western arcs (Katy, Sugar Land, Cypress), the bay side (Clear Lake, League City) and the island itself all ship on the same metro pool, with the loop-and-corridor geography setting windows more than mileage does. Gate codes and HOA customs in the planned communities get gathered at booking, and coastal deliveries watch the seasonal almanac."}}, {"@type": "Question", "name": "What’s hurricane season protocol?", "acceptedAnswer": {"@type": "Answer", "text": "June through November, the Gulf’s calendar gets respect without drama: forecasts watched from a week out, windows around landfall threats carry built-in flexibility, evacuation-adjacent scheduling defers to official guidance, and post-storm recovery books fast as the market restarts. Most seasons pass with a few watched systems and zero disruption — but the protocol exists because this coast earned it."}}, {"@type": "Question", "name": "Where is Ship Guy located in Houston?", "acceptedAnswer": {"@type": "Answer", "text": "9525 Bissonnet St Ste 1175, Houston, TX 77036 — southwest side, inside Beltway 8. Local line (346) 615-4970, staffed daily 6:00 AM to 11:00 PM Central."}}]}
 </script>
 </head>
 <body>
@@ -1038,10 +982,10 @@ html,body{overflow-x:clip}
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
 
-
+<!-- ===================== HEADER ===================== -->
 <header class="site-header" id="top">
   <div class="container header-inner">
-    <a class="brand" href="/index.html#top" aria-label="Ship Guy — home"><svg class="sg-logo" role="img" aria-label="Ship Guy" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="209 227 180 145">
+    <a class="brand" href="#top" aria-label="Ship Guy — home"><svg class="sg-logo" role="img" aria-label="Ship Guy" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="209 227 180 145">
 <path fill-rule="nonzero" fill="currentColor" fill-opacity="1" d="M 257.761719 304.929688 L 257.761719 247.621094 L 272.027344 245.128906 L 272.027344 265.167969 C 272.027344 265.933594 272.246094 266.5 272.679688 266.867188 C 273.109375 267.230469 273.703125 267.347656 274.460938 267.222656 L 279.570312 266.355469 C 281.136719 266.089844 281.921875 265.128906 281.921875 263.484375 L 281.921875 243.398438 L 296.191406 240.90625 L 296.191406 298.710938 L 281.921875 301.019531 L 281.921875 277.640625 L 272.027344 279.292969 L 272.027344 302.621094 Z M 257.761719 304.929688 "/>
 <path fill-rule="nonzero" fill="currentColor" fill-opacity="1" d="M 225.148438 310.390625 C 220.769531 311.101562 217.570312 310.632812 215.539062 308.984375 C 213.515625 307.339844 212.5 304.464844 212.5 300.359375 L 212.5 291.359375 L 226.769531 288.980469 L 226.769531 296.222656 C 226.769531 297.035156 226.984375 297.609375 227.417969 297.945312 C 227.851562 298.28125 228.472656 298.382812 229.28125 298.25 L 234.148438 297.449219 C 234.902344 297.328125 235.472656 297.054688 235.851562 296.640625 C 236.226562 296.222656 236.417969 295.636719 236.417969 294.875 L 236.417969 290.066406 C 236.417969 289.304688 236.324219 288.683594 236.136719 288.199219 C 235.945312 287.714844 235.632812 287.300781 235.203125 286.964844 C 234.769531 286.632812 234.175781 286.367188 233.417969 286.164062 L 221.257812 283.890625 C 219.472656 283.378906 217.957031 282.695312 216.71875 281.851562 C 215.472656 281.007812 214.539062 279.855469 213.917969 278.390625 C 213.296875 276.929688 212.988281 275.089844 212.988281 272.871094 L 212.988281 263.140625 C 212.988281 260.222656 213.636719 257.960938 214.933594 256.355469 C 216.230469 254.753906 218.390625 253.683594 221.417969 253.152344 L 237.957031 250.261719 C 242.28125 249.503906 245.457031 249.929688 247.484375 251.539062 C 249.511719 253.148438 250.523438 256.050781 250.523438 260.25 L 250.523438 265.890625 L 236.257812 268.328125 L 236.257812 264.5 C 236.257812 263.683594 236.039062 263.109375 235.605469 262.777344 C 235.175781 262.441406 234.578125 262.34375 233.824219 262.472656 L 229.527344 263.210938 C 228.714844 263.351562 228.132812 263.628906 227.785156 264.039062 C 227.433594 264.453125 227.257812 265.011719 227.257812 265.71875 L 227.257812 268.078125 C 227.257812 269.109375 227.511719 269.917969 228.027344 270.507812 C 228.539062 271.097656 229.3125 271.550781 230.335938 271.863281 L 241.929688 273.972656 C 243.984375 274.492188 245.660156 275.214844 246.957031 276.140625 C 248.253906 277.070312 249.199219 278.285156 249.796875 279.792969 C 250.390625 281.300781 250.6875 283.144531 250.6875 285.328125 L 250.6875 297.671875 C 250.6875 300.671875 250.023438 302.960938 248.699219 304.539062 C 247.375 306.117188 245.199219 307.148438 242.175781 307.636719 Z M 225.148438 310.390625 "/>
 <path fill-rule="nonzero" fill="currentColor" fill-opacity="1" d="M 305.007812 297.726562 L 305.007812 239.84375 L 319.277344 237.351562 L 319.277344 295.414062 Z M 305.007812 297.726562 "/>
@@ -1051,10 +995,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <path fill-rule="nonzero" fill="currentColor" fill-opacity="1" d="M 351.558594 284.785156 L 353.078125 284.542969 L 354.574219 288.246094 L 356.019531 284.070312 L 357.511719 283.832031 L 357.511719 289.199219 L 356.410156 289.378906 L 356.410156 285.78125 L 355.007812 289.609375 L 354.066406 289.761719 L 352.664062 286.382812 L 352.664062 289.988281 L 351.558594 290.167969 Z M 351.558594 284.785156 "/>
 <path fill-rule="nonzero" fill="currentColor" fill-opacity="1" d="M 328.964844 301.867188 L 328.964844 344.914062 C 328.964844 345.726562 328.75 346.363281 328.316406 346.820312 C 327.882812 347.273438 327.289062 347.570312 326.53125 347.703125 L 321.75 348.550781 C 320.9375 348.691406 320.316406 348.613281 319.882812 348.3125 C 319.453125 348.007812 319.234375 347.449219 319.234375 346.636719 L 319.234375 303.542969 L 304.96875 305.996094 L 304.96875 350.058594 C 304.96875 354.226562 306.089844 357.25 308.332031 359.128906 C 310.574219 361.003906 313.804688 361.574219 318.019531 360.828125 L 333.425781 358.109375 C 336.394531 357.585938 338.707031 356.367188 340.355469 354.445312 C 342.003906 352.53125 342.828125 350.027344 342.828125 346.933594 L 342.828125 299.480469 Z M 328.964844 301.867188 "/>
 <path fill-rule="nonzero" fill="currentColor" fill-opacity="1" d="M 373.042969 294.429688 L 370.351562 319.472656 C 370.242188 320.523438 369.785156 321.296875 368.972656 321.792969 C 368.160156 322.289062 367.363281 322.433594 366.582031 322.21875 C 365.796875 322 365.324219 321.394531 365.160156 320.394531 L 362.542969 296.238281 L 347.644531 298.800781 L 354.703125 337.789062 L 360.539062 336.757812 L 360.539062 353.035156 L 374.808594 350.523438 L 374.808594 334.234375 L 380.484375 333.234375 L 387.5 291.941406 Z M 373.042969 294.429688 "/>
-</svg></a>
+</svg></a><span class="brand-tag">Houston moves<br>with us</span>
 
     <nav class="main-nav" aria-label="Primary">
-      <a href="/index.html#top">Home</a>
+      <a href="#top">Home</a>
       <a href="/how-it-works.html">How It Works</a>
       <div class="has-menu">
         <button class="nav-toggle-btn" aria-haspopup="true" aria-expanded="false">Services
@@ -1068,7 +1012,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <a href="/expedited-car-shipping.html" role="menuitem">Expedited Shipping</a>
           <a href="/snowbird-car-shipping.html" role="menuitem">Snowbird Car Shipping</a>
           <a href="/military-car-shipping.html" role="menuitem">Military Car Shipping</a>
-          <a href="/dealer-auto-transport.html" role="menuitem">Dealer Auto Transport</a>
           <a href="/auction-car-transport.html" role="menuitem">Auction Car Transport</a>
           <a href="/services.html" role="menuitem" class="menu-all">All Services →</a>
         </div>
@@ -1078,9 +1021,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <a href="/contact.html">Contact</a>
     </nav>
 
-    <a class="btn-call" href="tel:+18664992815">
+    <a class="btn-call" href="tel:+13466154970">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/></svg>
-      <span class="num-full">Call (866) 499-2815</span>
+      <span class="num-full">Call (346) 615-4970</span>
       <span class="num-short">Call</span>
     </a>
 
@@ -1092,7 +1035,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- mobile nav -->
   <nav class="mobile-nav" id="mobileNav" aria-label="Mobile">
     <div class="inner">
-      <a href="/index.html#top">Home</a>
+      <a href="#top">Home</a>
       <a href="/how-it-works.html">How It Works</a>
       <span class="m-sub">Services</span>
                   <a href="/open-car-transport.html">Open Car Transport</a>
@@ -1102,7 +1045,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <a href="/expedited-car-shipping.html">Expedited Shipping</a>
       <a href="/snowbird-car-shipping.html">Snowbird Car Shipping</a>
       <a href="/military-car-shipping.html">Military Car Shipping</a>
-      <a href="/dealer-auto-transport.html">Dealer Auto Transport</a>
       <a href="/auction-car-transport.html">Auction Car Transport</a>
       <a href="/services.html">All Services</a>
       <span class="m-sub">More</span>
@@ -1113,268 +1055,209 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </nav>
 </header>
 
-<!-- ===================== PAGE HERO ===================== -->
-<section class="hero">
+<!-- ===================== HERO ===================== -->
+<section class="hero hero-lite">
   <div class="hero-media" aria-hidden="true">
-    <img class="hero-img" width="1389" height="737" alt="Open car carrier hauling vehicles — Houston, TX auto transport by Ship Guy" src="/assets/hero.jpg" fetchpriority="high">
-    <div class="hero-overlay"></div>
+    <div class="hero-bg" aria-hidden="true">
+      <svg class="hero-bg-svg" viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="hgWash" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#ffffff"/>
+            <stop offset="0.5" stop-color="#f3f7fe"/>
+            <stop offset="1" stop-color="#e7eefc"/>
+          </linearGradient>
+          <radialGradient id="hgGlow" cx="0.82" cy="0.12" r="0.9">
+            <stop offset="0" stop-color="#dbe6ff" stop-opacity="0.9"/>
+            <stop offset="1" stop-color="#dbe6ff" stop-opacity="0"/>
+          </radialGradient>
+        </defs>
+        <rect width="1440" height="900" fill="url(#hgWash)"/>
+        <rect width="1440" height="900" fill="url(#hgGlow)"/>
+        <g fill="none" stroke="#c7d6f5" stroke-opacity="0.5" stroke-width="2">
+          <path d="M-60 720 C 360 640, 760 780, 1200 560 S 1560 360, 1620 300"/>
+          <path d="M-60 800 C 360 720, 760 860, 1200 640 S 1560 440, 1620 380"/>
+        </g>
+        <g stroke="#9fb8ee" stroke-opacity="0.55" stroke-width="4" stroke-dasharray="26 22" stroke-linecap="round" fill="none">
+          <path d="M-60 762 C 360 682, 760 822, 1200 602 S 1560 402, 1620 342"/>
+        </g>
+        <g fill="#bcd0f6" fill-opacity="0.45">
+          <circle cx="1180" cy="300" r="5"/><circle cx="250" cy="250" r="4"/><circle cx="640" cy="180" r="3.5"/><circle cx="980" cy="150" r="3"/>
+        </g>
+      </svg>
+    </div>
   </div>
 
-  <div class="container hero-grid hero-grid-solo">
-    <div class="hero-top">
-      <nav class="crumbs" aria-label="Breadcrumb"><a href="/index.html">Home</a><span>/</span><span aria-current="page">Houston, TX</span></nav>
-      <p class="eyebrow reveal">Houston,&nbsp;TX&nbsp;&bull;&nbsp;Licensed&nbsp;&bull;&nbsp;Insured</p>
-      <h1 class="reveal d2">Auto Transport in <br>Houston, TX</h1>
-    </div>
-    <h2 class="mobile-tagline">Nationwide Auto Transport</h2>
-    <!-- QUOTE CARD (booking widget) -->
-    <div class="quote-card is-embed reveal d2" id="quoteForm">
-      <iframe src="https://widget.berocker.com?theme=pro&amp;api_base=https%3A%2F%2Fapp.shipguy.com&amp;api_key=6a5508b7cb2f4" title="Ship Guy Logistics booking form" loading="lazy"></iframe>
-    </div>
-    <div class="hero-bottom">
+  <div class="container hero-grid">
+    <div class="hero-copy">
+      <div class="hero-head">
+      <h1 class="reveal d2">Car Shipping in<br>Houston, <span class="accent">Texas</span></h1>
+      </div>
+      <div class="hero-rest">
       <p class="lede reveal d2">The Bayou City at continental scale &mdash; loop-literate, assignment-fluent, and candid as the coast requires.</p>
-      <ul class="trust-list reveal d3">
-        <li><span class="trust-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/><path d="m9 12 2 2 4-4"/></svg></span>Licensed Broker &amp; Fully Insured</li>
-        <li><span class="trust-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="2" width="8" height="4" rx="1"/><path d="M9 4H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2h-3"/><path d="m9 14 2 2 4-4"/></svg></span>FMCSA Registered</li>
-        <li><span class="trust-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></span>Vetted Carrier Network</li>
-        <li><span class="trust-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M4 13a8 8 0 0 1 16 0"/><rect x="2" y="13" width="4.4" height="7" rx="1.6"/><rect x="17.6" y="13" width="4.4" height="7" rx="1.6"/><path d="M20 19.5v.5a3 3 0 0 1-3 3h-3"/></svg></span>Real-Time Tracking &amp; 24/7 Support</li>
-      </ul>
-      <div class="hero-divider reveal d3"></div>
-      <div class="stats reveal d3">
-        <div class="stat"><span class="num">50+</span><span class="lbl">States Served</span></div>
-        <div class="stat"><span class="num">100%</span><span class="lbl">Insured Transport</span></div>
-        <div class="stat"><span class="num">24/7</span><span class="lbl">Support &amp; Tracking</span></div>
+      <div class="hero-badges reveal d3">
+        <div class="hb"><span class="hb-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/><path d="m9 12 2 2 4-4"/></svg></span><span><b>Fully Insured Transport</b><small>Your vehicle is protected</small></span></div>
+        <div class="hb"><span class="hb-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1.5" x2="12" y2="22.5"/><path d="M17 5.5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></span><span><b>Competitive Pricing</b><small>No hidden fees or surprises</small></span></div>
+        <div class="hb"><span class="hb-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M4 13a8 8 0 0 1 16 0"/><rect x="2" y="13" width="4.4" height="7" rx="1.6"/><rect x="17.6" y="13" width="4.4" height="7" rx="1.6"/><path d="M20 19.5v.5a3 3 0 0 1-3 3h-3"/></svg></span><span><b>Dedicated Support</b><small>Real people. Real answers.</small></span></div>
+      </div>
+      </div>
+    </div>
+    <!-- QUOTE CARD (booking widget) -->
+    <div class="pquote" id="pquote">
+      <div class="pq-head-row"><span class="pq-lightning"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M13 2 4.5 13.5H11l-1 8.5L19.5 10H13l1-8Z"/></svg></span><div><h3 class="pq-title">Get Your Instant Quote</h3><p class="pq-sub">Fast, secure pricing in 30 seconds.</p></div></div>
+      <div class="pq-progress" id="pqProgress">
+        <div class="pq-progress-top"><span id="pqStepName">Route</span><span id="pqStepCount">Free &middot; No obligation</span></div>
+        <div class="pq-progress-track"><div class="pq-progress-fill" id="pqProgressFill"></div></div>
+      </div>
+      <form id="pqForm" novalidate>
+        <div class="pq-panel is-current" data-panel="1">
+          <div class="pq-field"><label for="pq-pickup"><span class="req">*</span>Pickup Location</label><div class="pq-inp"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg><input id="pq-pickup" name="pickup" placeholder="Enter city or ZIP code" autocomplete="off" required></div></div>
+          <div class="pq-field"><label for="pq-delivery"><span class="req">*</span>Delivery Location</label><div class="pq-inp"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg><input id="pq-delivery" name="delivery" placeholder="Enter city or ZIP code" autocomplete="off" required></div></div>
+          <div class="pq-field" id="pq-pickup-field"><label for="pq-timeframe"><span class="req">*</span>Pickup Timeframe</label><div class="pq-inp"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg><select id="pq-timeframe" name="timeframe" required><option value="asap">As soon as possible</option><option value="within_1_week">Within 1 week</option><option value="within_2_weeks">Within 2 weeks</option><option value="beyond_2_weeks">More than 2 weeks</option></select></div></div>
+          <div class="pq-field" id="pq-date-field" style="display:none"><label for="pq-date"><span class="req">*</span>Preferred Pickup Date</label><div class="pq-inp"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg><input id="pq-date" name="date" type="date"></div></div>
+          <div class="pq-field"><label><span class="req">*</span>Trailer Type</label>
+            <div class="pq-opts">
+              <label class="pq-opt"><input type="radio" name="transport" value="Open" checked><span class="pq-opt-body"><span class="pq-check"></span><b>Open</b></span></label>
+              <label class="pq-opt"><input type="radio" name="transport" value="Enclosed"><span class="pq-opt-body"><span class="pq-check"></span><b>Enclosed</b></span></label>
+            </div>
+          </div>
+          <button type="button" class="pq-btn" data-next>Continue</button>
+        </div>
+        <div class="pq-panel" data-panel="2">
+          <div class="pq-field"><label for="pq-year"><span class="req">*</span>Vehicle Year</label><div class="pq-inp"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg><select id="pq-year" name="year" required><option value="">Select vehicle year</option></select></div></div>
+          <div class="pq-field"><label for="pq-make"><span class="req">*</span>Vehicle Make</label><div class="pq-inp"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13l1.5-4.5A2 2 0 0 1 8.4 7h7.2a2 2 0 0 1 1.9 1.5L19 13"/><path d="M5 13h14v4a1 1 0 0 1-1 1h-1a1 1 0 0 1-1-1v-1H8v1a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1v-4Z"/><circle cx="7.5" cy="15.5" r="1"/><circle cx="16.5" cy="15.5" r="1"/></svg><select id="pq-make" name="make" required disabled><option value="">Select vehicle make</option></select></div></div>
+          <div class="pq-field"><label for="pq-model"><span class="req">*</span>Vehicle Model</label><div class="pq-inp"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13l1.5-4.5A2 2 0 0 1 8.4 7h7.2a2 2 0 0 1 1.9 1.5L19 13"/><path d="M5 13h14v4a1 1 0 0 1-1 1h-1a1 1 0 0 1-1-1v-1H8v1a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1v-4Z"/><circle cx="7.5" cy="15.5" r="1"/><circle cx="16.5" cy="15.5" r="1"/></svg><select id="pq-model" name="model" required disabled><option value="">Select vehicle model</option></select></div></div>
+          <div class="pq-field"><label>Is it operable?</label>
+            <div class="pq-opts pq-opts-wide">
+              <label class="pq-opt"><input type="radio" name="operable" value="Yes" checked><span class="pq-opt-body"><span class="pq-check"></span><b>Yes, it is operable</b></span></label>
+              <label class="pq-opt"><input type="radio" name="operable" value="No"><span class="pq-opt-body"><span class="pq-check"></span><b>No, it is not operable</b></span></label>
+            </div>
+          </div>
+          <div class="pq-nav"><button type="button" class="pq-btn-ghost" data-back><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>Back</button><button type="button" class="pq-btn" data-next>Continue</button></div>
+        </div>
+        <div class="pq-panel" data-panel="3">
+          <div class="pq-row">
+            <div class="pq-field"><label for="pq-firstname"><span class="req">*</span>First Name</label><div class="pq-inp"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg><input id="pq-firstname" name="firstname" placeholder="Enter first name" autocomplete="given-name" required></div></div>
+            <div class="pq-field"><label for="pq-lastname"><span class="req">*</span>Last Name</label><div class="pq-inp"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg><input id="pq-lastname" name="lastname" placeholder="Enter last name" autocomplete="family-name" required></div></div>
+          </div>
+          <div class="pq-field"><label for="pq-email"><span class="req">*</span>Email Address</label><div class="pq-inp"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg><input id="pq-email" name="email" type="email" placeholder="Enter email address" autocomplete="email" required></div></div>
+          <div class="pq-field"><label for="pq-phone"><span class="req">*</span>Phone Number</label><div class="pq-inp"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"/></svg><input id="pq-phone" name="phone" type="tel" placeholder="Enter phone number" autocomplete="tel" required></div></div>
+          <label class="pq-consent"><input type="checkbox" name="sms_consent" id="pq-consent"><span>By submitting this form, you consent to receive recurring SMS updates and notifications from Ship Guy Logistics regarding your requests and services. Message frequency may vary. Message &amp; data rates may apply. Consent is not a condition of purchase. Reply STOP to unsubscribe or HELP for assistance. For support, call <a href="tel:+13466154970">(346)&nbsp;615-4970</a> or visit <a href="https://shipguy.com">shipguy.com</a>.</span></label>
+          <div class="pq-nav"><button type="button" class="pq-btn-ghost" data-back>Back</button><button type="submit" class="pq-btn">Get My Instant Quote</button></div>
+        </div>
+        <div class="pq-trustbar"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v5c0 5-3.5 8.5-7 10-3.5-1.5-7-5-7-10V6l7-3Z"/><path d="m9 12 2 2 4-4"/></svg>Licensed &amp; Insured</span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>Secure &amp; Private</span></div>
+        <p class="pq-error" id="pqError"></p>
+      </form>
+      <div class="pq-result" id="pqResult">
+        <div class="pq-loading" id="pqLoading"><div class="pq-spin"></div><span id="pqLoadingText">Getting your quote&#8230;</span></div>
+        <div class="pq-quote" id="pqQuote">
+          <p class="pq-eyebrow" id="pqEyebrow">Your instant quote</p>
+          <div class="pq-price" id="pqPrice">&#8212;</div>
+          <p class="pq-route" id="pqRoute"></p>
+          <p class="pq-note" id="pqNote">All-in price &#8212; no hidden fees.</p>
+          <div class="pq-cta"><a class="pq-btn" id="pqBookBtn" href="#" style="display:none">Continue to Booking</a><a class="pq-btn-ghost" id="pqCallBtn" href="tel:+13466154970">Call to Book &#183; (346) 615-4970</a></div>
+          <button type="button" class="pq-again" id="pqAgain">Start a new quote</button>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-
-<section class="article-section"><div class="container article">
-  <p class="article-lead">Houston ships at the scale it does everything: the largest metro on the Gulf, the energy capital of the hemisphere, home to the world&rsquo;s largest medical complex, and a carrier market deep enough that the Texas Triangle&rsquo;s lanes run like transit routes. The craft here is fluency with bigness &mdash; loop-literate dispatch across a metro wider than some states, assignment-cycle machinery for an industry that rotates the globe, flood-aware habits a storm coast earned honestly, and a no-zoning sprawl that taught the trade to navigate by corridor and courtesy in equal measure.</p>
-<div class="qa-box">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>
-    <p><span class="qa-kicker">Quick answer</span>Houston ships at continental scale: <strong>$215&ndash;$380</strong> around the Texas Triangle&rsquo;s shuttle lanes, <strong>$310&ndash;$1,050</strong> across the South, the Midwest, and down to Florida, and <strong>$900&ndash;$1,300</strong> to either coast &mdash; pickup in <strong>1&ndash;3 days</strong> from one of America&rsquo;s largest carrier pools. Energy assignments, TMC calendars, flood-aware craft: the Bayou City&rsquo;s book, below. <a href='#quoteForm'>Price your lane</a> in two minutes.</p>
-  </div>
-  <p style="margin-top:26px">From Bissonnet inside Beltway 8, Ship Guy runs the whole metro &mdash; the Energy Corridor&rsquo;s rotations, the Medical Center&rsquo;s calendars, the master-planned arcs from the Woodlands to Sugar Land, the bay side down to the island, and the Triangle&rsquo;s constant trade. Below: the continental-scale economics, the energy desk&rsquo;s machinery, the TMC current, the flood-aware chapter written plainly, and the Gulf year in the Bayou City&rsquo;s accent.</p>
-<nav class="toc-nav" aria-label="On this page"><b>On this page</b><a href="#sec0">Houston Shipping Lanes &amp; Current</a><a href="#sec1">Continental Scale</a><a href="#sec2">The Energy Desk</a><a href="#sec3">The Medical City</a><a href="#sec4">The Gulf Almanac</a><a href="#sec5">The Sprawl&rsquo;s Craft</a><a href="#sec6">The Bay Side</a><a href="#sec7">Open vs. Enclosed</a><a href="#sec8">The Loops and the Arcs</a><a href="#sec9">Why Ship Guy</a><a href="#location">Office &amp; Map</a></nav>
-  <div class="glance-grid">
-    <div class="glance-cell"><b>Typical pickup</b><span>1&ndash;3 days</span></div>
-    <div class="glance-cell"><b>Nearest listed lane</b><span>Austin, TX &middot; $215&ndash;$350</span></div>
-    <div class="glance-cell"><b>Longest listed lane</b><span>Los Angeles, CA &middot; $900&ndash;$1,300</span></div>
-    <div class="glance-cell"><b>Enclosed option</b><span>+40&ndash;60% over open</span></div>
-    <div class="glance-cell"><b>Local desk</b><span>(346) 615-4970 &middot; 6a&ndash;11p CT</span></div>
-  </div>
-  <p class="upd-line">Updated July 25, 2026 &middot; rate figures: July 2026 board.</p>
+<!-- ===================== STATS BAND ===================== -->
+<section class="ph-stats"><div class="ph-wrap">
+  <div class="ph-stat"><b>50</b><span>States Served</span></div>
+  <div class="ph-stat"><b>100%</b><span>Insured Transport</span></div>
+  <div class="ph-stat"><b>1–3 Days</b><span>Typical Pickup</span></div>
+  <div class="ph-stat"><b>7 Days</b><span>Local Support</span></div>
 </div></section>
-<section class="city-section alt" id="sec0">
-  <div class="container">
-    <div class="city-head"><h2>Houston Shipping Lanes &amp; Current Rates</h2><p>The Bayou City&rsquo;s working routes &mdash; the Triangle rows lead because Texas trades with Texas first. Sedan baseline, open trailer.</p></div>
-    <div class="route-table has-price">
-      <div class="route-row route-head"><span>Route</span><span>Approx. distance</span><span>Est. transit</span><span>Est. open rate*</span><span></span></div>
-      <div class="route-row"><span class="route-name">Houston, TX &rarr; Austin, TX</span><span class="route-val">~165 mi</span><span class="route-val">1 day</span><span class="route-val" style="font-weight:600;color:#101a3d">$215&ndash;$350</span><a class="route-cta" href="#quoteForm">Get price <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
-      <div class="route-row"><span class="route-name">Houston, TX &rarr; San Antonio, TX</span><span class="route-val">~200 mi</span><span class="route-val">1 day</span><span class="route-val" style="font-weight:600;color:#101a3d">$220&ndash;$355</span><a class="route-cta" href="#quoteForm">Get price <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
-      <div class="route-row"><span class="route-name">Houston, TX &rarr; Corpus Christi, TX</span><span class="route-val">~210 mi</span><span class="route-val">1 day</span><span class="route-val" style="font-weight:600;color:#101a3d">$225&ndash;$365</span><a class="route-cta" href="#quoteForm">Get price <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
-      <div class="route-row"><span class="route-name">Houston, TX &rarr; Dallas / Fort Worth, TX</span><span class="route-val">~240 mi</span><span class="route-val">1 day</span><span class="route-val" style="font-weight:600;color:#101a3d">$235&ndash;$380</span><a class="route-cta" href="#quoteForm">Get price <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
-      <div class="route-row"><span class="route-name">Houston, TX &rarr; New Orleans, LA</span><span class="route-val">~350 mi</span><span class="route-val">1&ndash;2 days</span><span class="route-val" style="font-weight:600;color:#101a3d">$310&ndash;$490</span><a class="route-cta" href="#quoteForm">Get price <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
-      <div class="route-row"><span class="route-name">Houston, TX &rarr; Oklahoma City, OK</span><span class="route-val">~450 mi</span><span class="route-val">1&ndash;2 days</span><span class="route-val" style="font-weight:600;color:#101a3d">$420&ndash;$640</span><a class="route-cta" href="#quoteForm">Get price <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
-      <div class="route-row"><span class="route-name">Houston, TX &rarr; Atlanta, GA</span><span class="route-val">~790 mi</span><span class="route-val">2&ndash;3 days</span><span class="route-val" style="font-weight:600;color:#101a3d">$540&ndash;$800</span><a class="route-cta" href="#quoteForm">Get price <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
-      <div class="route-row"><span class="route-name">Houston, TX &rarr; Chicago, IL</span><span class="route-val">~1,080 mi</span><span class="route-val">3&ndash;4 days</span><span class="route-val" style="font-weight:600;color:#101a3d">$640&ndash;$940</span><a class="route-cta" href="#quoteForm">Get price <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
-      <div class="route-row"><span class="route-name">Houston, TX &rarr; Miami, FL</span><span class="route-val">~1,190 mi</span><span class="route-val">3&ndash;4 days</span><span class="route-val" style="font-weight:600;color:#101a3d">$720&ndash;$1,050</span><a class="route-cta" href="#quoteForm">Get price <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
-      <div class="route-row"><span class="route-name">Houston, TX &rarr; Los Angeles, CA</span><span class="route-val">~1,550 mi</span><span class="route-val">4&ndash;5 days</span><span class="route-val" style="font-weight:600;color:#101a3d">$900&ndash;$1,300</span><a class="route-cta" href="#quoteForm">Get price <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
-    </div>
-    <p class="route-note">*Gulf Coast board, July 2026, sedan figures; larger vehicles carry 10&ndash;25% premiums, oversized units price by their dimensions, and winch loading runs $100&ndash;$200 for non-starters. Hurricane-season windows June&ndash;November carry contingency flexibility; energy-cycle surges ripple assignment volume without warning &mdash; book to your start date, not the news.</p>
-  </div>
-    <div class="bt-wrap"><h3>Best time to book from here</h3><p>Energy cycles ripple volume without regard to season; June opens the Gulf-watch months. Softest board: February, cycle-quiet and storm-free.</p></div>
-</section>
-<section class="city-section" id="sec1">
-  <div class="container">
-    <div class="city-head"><h2>Continental Scale: The Triangle, the Port, and the Pool</h2></div>
-    <div class="txt-block">
-      <p>Three structures give Houston its market depth. The <strong>Texas Triangle</strong> &mdash; the Dallas, Austin, San Antonio circuit this metro anchors from the Gulf corner &mdash; carries some of the country&rsquo;s heaviest intrastate traffic, and the rate table&rsquo;s Texas rows read like shuttle fares because functionally they are: single-day transits, constant equipment, and booking lead times in days. The <strong>port&rsquo;s processing economy</strong> keeps vehicle-logistics infrastructure humming at industrial scale, with the import trade&rsquo;s volume feeding carrier density the whole region draws on. And the <strong>pool itself</strong> &mdash; one of America&rsquo;s largest carrier markets by any measure &mdash; means matches land fast, recovery lands faster, and pricing stays disciplined by more competition than any Gulf market offers.</p>
-      <p>The currents run continental: the corporate migration Texas keeps winning (California arrivals sequencing household fleets into the master-planned arcs), the energy rotations per their own section, the international city&rsquo;s constant global churn &mdash; this is among the most diverse metros in the hemisphere, and the purchase-delivery and newcomer trades reflect it daily &mdash; and the outbound legs to both coasts riding the long-haul corridors at continental pricing. Big markets forgive nothing and reward fluency; this page is the fluency, priced honestly. In a market this size, honesty scales better than anything else we could offer.</p>
-    </div>
-  </div>
-</section>
 
-<section class="city-section alt" id="sec2">
-  <div class="container">
-    <div class="city-head"><h2>The Energy Desk: Assignment Cycles and the Global Rotation</h2></div>
-    <div class="txt-block">
-      <p>The industry that named this city runs the most international relocation trade in American shipping, and serving it is a Houston specialty with its own grammar. <strong>Domestic transfers</strong> ship on the corporate machinery at its most polished &mdash; provider invoicing, assignment-date scheduling worked backward, household fleets sequenced into the Energy Corridor&rsquo;s and the west side&rsquo;s neighborhoods. <strong>Overseas rotations</strong> get the conversation run honestly: for most international assignments, storing or selling beats shipping a vehicle abroad, and we say so before anyone spends a dollar &mdash; then handle the storage coordination, the return-leg booking, or the assignment-end repatriation when the rotation cycles home. <strong>The expat arrivals</strong> landing from every producing basin bring the newcomer&rsquo;s needs &mdash; purchase deliveries documented to reassure, registration questions answered plainly, and the patience of a desk that has onboarded arrivals from a hundred countries.</p>
-      <p>The cycle&rsquo;s rhythm is the trade&rsquo;s weather: price surges ripple hiring waves and assignment volume without warning, downturns reverse them, and the machinery holds steady through both because start dates are start dates at any commodity price. Our counsel through every cycle is the same: book to your assignment letter, not the headlines &mdash; the desk that serves this industry learned long ago that the only calendar that matters is the one with your name on it. Crude has cycles; commitments don&rsquo;t. The desk that learns the difference keeps the industry&rsquo;s business through every barrel price. Boom hiring and bust repatriations both ship through this office; only the direction changes.</p>
-    </div>
+<section class="ph-sec"><div class="ph-wrap ph-intro-grid">
+  <div class="ph-intro-copy">
+    <p class="ph-eyebrow">Houston, Texas</p>
+    <h2>The Bayou City at continental scale</h2>
+    <p>Houston ships at the scale it does everything: the largest metro on the Gulf, the energy capital of the hemisphere, home to the world&rsquo;s largest medical complex, and a carrier market deep enough that the Texas Triangle&rsquo;s lanes run like transit routes. The craft here is fluency with bigness &mdash; loop-literate dispatch across a metro wider than some states, assignment-cycle machinery for an industry that rotates the globe, flood-aware habits a storm coast earned honestly, and a no-zoning sprawl that taught the trade to navigate by corridor and courtesy in equal measure.</p>
+    <p>From Bissonnet inside Beltway 8, Ship Guy runs the whole metro &mdash; the Energy Corridor&rsquo;s rotations, the Medical Center&rsquo;s calendars, the master-planned arcs from the Woodlands to Sugar Land, the bay side down to the island, and the Triangle&rsquo;s constant trade. Below: the continental-scale economics, the energy desk&rsquo;s machinery, the TMC current, the flood-aware chapter written plainly, and the Gulf year in the Bayou City&rsquo;s accent.</p>
   </div>
-</section>
-
-<section class="city-section" id="sec3">
-  <div class="container">
-    <div class="city-head"><h2>The Medical City: TMC Scale and Its Calendars</h2></div>
-    <div class="txt-block">
-      <p>The Texas Medical Center is not a hospital district; it is a city of medicine &mdash; the largest complex of its kind on Earth &mdash; and the relocation trade around it runs at commensurate scale: match-day cohorts landing across multiple institutions simultaneously on the national calendar&rsquo;s exact weeks, fellowship and research rotations turning on academic clocks, faculty recruitment drawing globally, and the clinical-trial and biotech orbit adding its program-timeline currents. The machinery is the credentialed standard this site describes in every institutional market, run here at a volume that keeps the medical column of our booking board full twelve months a year.</p>
-      <p>The craft&rsquo;s local accents: campus-area handoffs run the practiced spots around a district denser than most downtowns, the parking-infrastructure realities get respected in every window, the international clinical arrivals fold into the newcomer machinery the energy desk already runs daily, and the midnight-arrival-before-orientation delivery is a request this market&rsquo;s scale long ago made routine. Medicine at this magnitude runs on precision; the trade serving it either matches the standard or loses the account &mdash; and our account here, like the complex itself, keeps growing. Scale is Houston&rsquo;s native condition; matching it is simply the price of serving here, gladly paid. Everything in Houston is bigger, including, we&rsquo;d argue, the standard for keeping your word. We measure ours in kept windows per year; the number would fill a refinery ledger.</p>
-    </div>
+  <div class="ph-quick">
+    <span class="ph-quick-head">Quick answer</span>
+    <p>Houston ships at continental scale: <b>$215&ndash;$380</b> around the Texas Triangle&rsquo;s shuttle lanes, <b>$310&ndash;$1,050</b> across the South, the Midwest, and down to Florida, and <b>$900&ndash;$1,300</b> to either coast &mdash; pickup in <b>1&ndash;3 days</b> from one of America&rsquo;s largest carrier pools.</p>
+    <p class="ph-quick-note">Energy assignments, TMC calendars, flood-aware craft &mdash; the Bayou City&rsquo;s book, below. Price your lane above in two minutes.</p>
   </div>
-</section>
-
-<section class="city-section alt" id="sec4">
-  <div class="container">
-    <div class="city-head"><h2>The Gulf Almanac: Season, Storm, and the Honest Chapter</h2></div>
-    <div class="txt-block">
-      <p>Houston&rsquo;s weather book runs simple most of the year &mdash; heat that counsels morning loading through deep summer, humidity as atmosphere rather than obstacle, and winters so mild the occasional ice morning makes the news &mdash; but the Gulf chapter deserves plain writing. <strong>Hurricane season</strong>, June through November: forecasts watched from a week out, windows near landfall threats carrying built-in contingency, evacuation-adjacent scheduling deferring to official guidance without argument, and the post-storm restart booking fast as the region&rsquo;s formidable recovery machinery spins up. Most seasons pass with watched systems and zero disruption; the protocol exists because this coast paid its tuition and keeps the notes.</p>
-      <p><strong>The flood-awareness inheritance</strong> shapes the craft year-round: low-lying addresses get staging alternatives named at booking, bayou-adjacent neighborhoods carry their own dispatch notes, and the used-purchase counsel from the FAQ bears repeating in prose &mdash; title and flood-database checks before buying from any storm region, this one included, because salvage metal travels nationally after every event and the five-minute lookup is the cheapest insurance in the industry. A candid page serves customers better than a glossy one; on this coast, candor is the local dialect anyway. Nobody on this coast trusts a forecast without error bars or a vendor without caveats; we supply both, clearly labeled. Engineering culture runs this town, and engineering culture reads the footnotes first; ours are written to be read. Peer review welcome; revision history available; conclusions reproducible at any loop.</p>
-    </div>
-  </div>
-</section>
-
-<section class="city-section" id="sec5">
-  <div class="container">
-    <div class="city-head"><h2>The Sprawl&rsquo;s Craft: No Zoning, Many Answers</h2></div>
-    <div class="txt-block">
-      <p>Houston&rsquo;s famous no-zoning geography built a receiving map like nowhere else &mdash; townhomes beside warehouses beside high-rises beside bungalows &mdash; and the craft answers it address by address: the <strong>master-planned arcs</strong> (the Woodlands&rsquo; forested plans, Katy and Sugar Land&rsquo;s gated geographies, Cypress&rsquo;s new growth) ship on the gate-code-and-HOA choreography gathered at booking; the <strong>inner-loop neighborhoods</strong> run corner meets where the live oaks narrow the streets and townhome courts complicate the turning radii; the <strong>bay side</strong> from Clear Lake to League City adds the aerospace corridor&rsquo;s professional current and the marina geography&rsquo;s gentle staging; and <strong>the island</strong> ships on the coastal almanac with the causeway as the practiced meet when the season argues for it.</p>
-      <p>The unifying custom is Texan and practical: name the address, and the answer arrives pre-solved &mdash; because a metro that never met a land-use plan it couldn&rsquo;t ignore taught its logistics trade to carry the whole map in its head. Ours does, loop by loop, and the windows show it. Ask for a window by neighborhood and you&rsquo;ll hear the difference immediately &mdash; the answer names your beltway before it names your day.</p>
-    </div>
-  </div>
-</section>
-
-
-<section class="city-section alt" id="sec6">
-  <div class="container">
-    <div class="city-head"><h2>The Bay Side: Aerospace, the Island, and the Coastal Current</h2></div>
-    <div class="txt-block">
-      <p>Southeast of the loops, the metro runs its coastal chapter: the aerospace corridor around Clear Lake moves engineering talent on program cycles that predate most industries&rsquo; existence &mdash; mission-timeline relocations, contractor rotations, and the international cooperation a spacefaring campus generates &mdash; while the bay communities from League City to Kemah add the marina geography&rsquo;s gentle staging and the island itself ships on Galveston&rsquo;s own rhythm: causeway meets when summer traffic argues for them, seasonal awareness in the almanac&rsquo;s watchful months, and the historic district&rsquo;s narrow streets taking corner meets by island custom.</p>
-      <p>The coastal current&rsquo;s counsel mirrors every Gulf page in this site&rsquo;s library, Houston edition: salt-adjacent vehicles earn the post-transit rinse, beach-house positioning books midweek ahead of summer weekends, and the bay side&rsquo;s professional class &mdash; commuting to the corridor or the Medical Center on schedules our loop-literate windows already speak &mdash; ships on the same metro pool at the same metro depth. One market, many waters; the dispatch board charts them all. Bay, bayou, island, loop: four geographies, one standard, zero excuses. The metro never apologizes for its size; neither does the service that matches it.</p>
-    </div>
-  </div>
-</section>
-
-<section class="city-section" id="sec7">
-  <div class="container">
-    <div class="city-head">
-      <h2>Open or Enclosed on the Gulf Coast?</h2>
-      <p>The Triangle ships open at shuttle depth; the enclosed tier serves the corner offices and the collections.</p>
-    </div>
-    <div class="cmp-grid">
-      <article class="cmp-card">
-        <span class="cmp-tag">The loop answer</span>
-        <h3>Open Transport</h3>
-        <p>Energy transfers, TMC cohorts, Triangle errands, the California arrival wave: open trailers on one of America&rsquo;s deepest pools, through a climate whose real chapter is seasonal, not daily. The default, priced by continental competition.</p>
-        <ul>
-          <li>Texas Triangle at single-day shuttle rates</li>
-          <li>Hurricane-season contingency built in</li>
-          <li>Cargo coverage typically $100K&ndash;$250K</li>
-        </ul>
-      </article>
-      <article class="cmp-card">
-        <span class="cmp-tag">The corner-office answer</span>
-        <h3>Enclosed Transport</h3>
-        <p>Executive garages from River Oaks to the Woodlands, the collector culture oil wealth built, and the exotics of a city that celebrates arrival: enclosed walls, liftgate patience, and documentation to boardroom standard.</p>
-        <ul>
-          <li>Roughly 40&ndash;60% above open rates</li>
-          <li>Collection and estate moves paced to the owner</li>
-          <li>Cargo coverage $250K&ndash;$1M, higher arranged</li>
-        </ul>
-      </article>
-    </div>
-    <p class="cmp-verdict"><strong>Bayou City rule:</strong> the commuter rides open on the Triangle; the trophy rides enclosed past the season. Full comparison: <a href="/open-car-transport.html">open</a> vs. <a href="/enclosed-auto-transport.html">enclosed</a>.</p>
-  </div>
-</section>
-
-<section class="city-section alt" id="sec8">
-  <div class="container">
-    <div class="city-head">
-      <h2>The Loops and the Arcs: Where We Pick Up</h2>
-      <p>Inner loop to outer arc, bay to forest &mdash; each with its practiced answer.</p>
-    </div>
-    <div class="chips">
-      <span class="chip">Downtown / Midtown</span><span class="chip">The Heights</span><span class="chip">Montrose</span>
-      <span class="chip">River Oaks</span><span class="chip">West University</span><span class="chip">Bellaire</span>
-      <span class="chip">Medical Center</span><span class="chip">Energy Corridor</span><span class="chip">Memorial</span>
-      <span class="chip">Katy</span><span class="chip">Sugar Land</span><span class="chip">The Woodlands</span>
-      <span class="chip">Cypress</span><span class="chip">Clear Lake</span><span class="chip">Pearland</span>
-    </div>
-<div class="city-callout"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.5" fill="currentColor" stroke="none"/></svg><div><h3>Loop-literate dispatch</h3><p>A metro this size runs on its loops &mdash; the 610 core, Beltway 8&rsquo;s middle ring, the Grand Parkway&rsquo;s outer arc &mdash; and honest windows quote by them: a Katy pickup and a Clear Lake delivery are different mornings, not different cities, and dispatch that speaks loop saves everyone the discovery. Houston measures distance in minutes and traffic, never miles; so do we.</p></div></div><div class="city-callout"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2c3 4 6 7.5 6 11a6 6 0 0 1-12 0c0-3.5 3-7 6-11Z"/><path d="M9 14a3 3 0 0 0 3 3"/></svg><div><h3>Flood-aware, purchase-wise</h3><p>This coast&rsquo;s storm history wrote two habits into our craft: operationally, low-lying addresses get staging alternatives named upfront and hurricane-season windows carry contingency language; commercially, we counsel every used-vehicle buyer shipping from this region to run the title and flood-database checks first &mdash; storm-salvage metal circulates nationally after every major event, and five minutes of lookup beats years of regret. We ship what you bought; we&rsquo;d rather you bought well.</p></div></div><div class="city-callout"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2c3 3 4.5 6.5 4.5 10S15 19 12 22c-3-3-4.5-6.5-4.5-10S9 5 12 2Z"/></svg><div><h3>The world&rsquo;s energy desk</h3><p>No American city rotates talent globally like this one: assignment cycles move engineers and executives between here and every producing basin on Earth, expat arrivals land in the west-side corridors year-round, and the mobility machinery &mdash; provider invoicing, assignment-date precision, the honest overseas ship-versus-store conversation &mdash; runs as this market&rsquo;s native language. The price of crude sets the volume; the professionalism holds at every price.</p></div></div>
-    <div class="nearby-wrap">
-      <p class="nearby-label">And the Gulf Coast&rsquo;s reach, daily</p>
-      <div class="chips">
-        <span class="chip chip-soft">Galveston</span><span class="chip chip-soft">League City</span><span class="chip chip-soft">Baytown</span><span class="chip chip-soft">Spring</span><span class="chip chip-soft">Conroe</span><span class="chip chip-soft">Richmond / Rosenberg</span><span class="chip chip-soft">Beaumont</span><span class="chip chip-soft">Texas City</span>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="city-section" id="sec9">
-  <div class="container">
-    <div class="city-head"><h2>Why Ship with Ship Guy in Houston</h2></div>
-    <div class="why-grid">
-      <article class="why-card"><span class="why-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v5c0 5-3.5 8.5-7 10-3.5-1.5-7-5-7-10V6l7-3Z"/><path d="m9 12 2 2 4-4"/></svg></span><h3>Licensed &amp; bonded</h3><p>Federal broker authority carrying the $75,000 surety bond &mdash; the SAFER lookup takes a minute, and an industry built on due diligence should expect nothing less.</p></article>
-      <article class="why-card"><span class="why-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg></span><h3>Loop-and-cycle fluent</h3><p>Beltways read like locals, assignment calendars read like mobility desks, storm season read like a coast that earned its notes &mdash; the whole metro&rsquo;s grammar, spoken daily.</p></article>
-      <article class="why-card"><span class="why-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="6" r="3"/><circle cx="18" cy="18" r="3"/><path d="M9 6h6a3 3 0 0 1 3 3v6"/></svg></span><h3>Continental depth</h3><p>One of America&rsquo;s largest carrier pools behind every booking &mdash; Triangle shuttles, coast-to-coast hauls, and recovery capacity measured in hours.</p></article>
-      <article class="why-card"><span class="why-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20.6 13.4 12 22l-9-9V3h10l7.6 7.6a2 2 0 0 1 0 2.8Z"/><circle cx="7.5" cy="7.5" r="1.2" fill="currentColor" stroke="none"/></svg></span><h3>Candid at scale</h3><p>Flood counsel given freely, overseas ship-versus-store answered honestly, and nothing owed until a carrier is assigned &mdash; big-market service, straight-talk terms.</p></article>
-    </div>
-  </div>
-</section>
-<section class="city-section alt" id="location">
-  <div class="container">
-    <div class="city-head"><h2>Find Us on Bissonnet</h2><p>Our Houston office sits on the southwest side inside Beltway 8 &mdash; the loops in every direction, the Medical Center twenty minutes east, the Energy Corridor north, and the whole metro&rsquo;s sprawl in working range. Daily on the local line, Central time.</p></div>
-    <div class="loc-grid">
-      <div class="loc-info">
-        <h3>Ship Guy Auto Transport &mdash; Houston</h3>
-        <div class="loc-row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg><div><strong>Address</strong>9525 Bissonnet St Ste 1175<br>Houston, TX 77036</div></div>
-        <div class="loc-row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/></svg><div><strong>Local phone</strong><a href="tel:+13466154970">(346) 615-4970</a></div></div>
-        <div class="loc-row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg><div><strong>Hours</strong>Monday&ndash;Sunday<br>6:00 AM &ndash; 11:00 PM CT</div></div>
-        <div class="loc-row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16v16H4z"/><path d="m4 9 8 5 8-5"/></svg><div><strong>Email</strong><a href="mailto:quotes@shipguy.com">quotes@shipguy.com</a></div></div>
-      </div>
-      <div class="loc-map"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3466.5347290876803!2d-95.5449125!3d29.6752729!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8640c3cbeee07f21%3A0x6a2409420e944048!2s!5e0!3m2!1sen!2sus!4v1784902882595!5m2!1sen!2sus" title="Map to Ship Guy Auto Transport, 9525 Bissonnet St Ste 1175, Houston, TX 77036" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe></div>
-    </div>
-  </div>
-</section>
-<section class="faq-section">
-  <div class="container">
-    <div class="faq-head"><span class="faq-eyebrow">Houston Car Shipping FAQ</span><h2>Common Questions</h2><span class="faq-accent"></span></div>
-    <div class="faq-list">
-      <details class="faq-item"><summary class="faq-q">What does it cost to ship a car to or from Houston?<span class="faq-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></span></summary><div class="faq-a">Open-transport sedan figures run roughly: $215–$350 to Austin or San Antonio, $235–$380 to Dallas or Corpus Christi, $310–$490 to New Orleans, $420–$640 to Oklahoma City or Memphis, $540–$800 to Atlanta, $560–$840 to Albuquerque, $640–$940 to Chicago, $700–$1,020 to Florida's peninsula, $780–$1,140 to Phoenix, and $900–$1,300 to either coast. Enclosed runs 40–60% over. The Texas Triangle's traffic keeps the near lanes shuttle-deep.</div></details>
-      <details class="faq-item"><summary class="faq-q">How fast is pickup across the Houston metro?<span class="faq-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></span></summary><div class="faq-a">Usually 1–3 days across one of the largest carrier markets in America: the Texas Triangle's constant cycle, the port's processing volume, and the loop system's distribution geography keep equipment everywhere from Katy to Clear Lake. The metro's sheer size means the practical variable is which side of town — dispatch quotes windows by loop, not just by city.</div></details>
-      <details class="faq-item"><summary class="faq-q">How does the energy industry's calendar shape shipping here?<span class="faq-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></span></summary><div class="faq-a">It's the market's signature current: the majors and the service companies rotate talent globally on assignment cycles, the Energy Corridor and the west side land expat arrivals year-round, and the trade runs on corporate-mobility machinery — relocation-provider invoicing, assignment-date scheduling, and the ship-versus-buy conversation for overseas rotations answered honestly (for most international assignments, storage-or-sell beats shipping; for domestic transfers, the car almost always travels). Price cycles ripple the volume; the machinery never changes.</div></details>
-      <details class="faq-item"><summary class="faq-q">What should I know about flood history and shipping in Houston?<span class="faq-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></span></summary><div class="faq-a">Two practical things: first, our own craft is flood-aware — hurricane-season windows carry contingency language, low-lying pickup addresses get staging alternatives named upfront, and post-storm recovery scheduling is a practiced local drill. Second, for used-vehicle purchases shipping out of this region: check the title history and flood databases before you buy, because storm-salvage vehicles circulate nationally after every major event. We ship what you bought either way — but we'd rather you buy well, and the lookup takes five minutes.</div></details>
-      <details class="faq-item"><summary class="faq-q">Do you handle Texas Medical Center relocations?<span class="faq-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></span></summary><div class="faq-a">At the scale the world's largest medical complex generates: match-day cohorts across multiple institutions at once, fellowship and research cycles on academic clocks, and international clinical talent arriving with the purchase-delivery needs newcomers have. Start dates run as contracts, campus-area handoffs run the practiced spots, and the density means our medical column stays full every month.</div></details>
-      <details class="faq-item"><summary class="faq-q">Can you serve the whole metro — Woodlands to Galveston?<span class="faq-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></span></summary><div class="faq-a">One market, many loops: the master-planned north (Woodlands, Spring), the western arcs (Katy, Sugar Land, Cypress), the bay side (Clear Lake, League City) and the island itself all ship on the same metro pool, with the loop-and-corridor geography setting windows more than mileage does. Gate codes and HOA customs in the planned communities get gathered at booking, coastal deliveries watch the seasonal almanac.</div></details>
-      <details class="faq-item"><summary class="faq-q">What's hurricane season protocol?<span class="faq-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></span></summary><div class="faq-a">June through November, the Gulf's calendar gets respect without drama: forecasts watched from a week out, windows around landfall threats carry built-in flexibility, evacuation-adjacent scheduling defers to official guidance, and post-storm recovery books fast as the market restarts. Most seasons pass with a few watched systems and zero disruption — but the protocol exists because this coast earned it.</div></details>
-      <details class="faq-item"><summary class="faq-q">Where is Ship Guy located in Houston?<span class="faq-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></span></summary><div class="faq-a">9525 Bissonnet St Ste 1175, Houston, TX 77036 — southwest side, inside Beltway 8. Local line (346) 615-4970, staffed daily 6:00 AM to 11:00 PM Central.</div></details>
-    </div>
-  </div>
-</section>
-
-<!-- related --><section class="related-section"><div class="container">
-      <h2>Related Guides &amp; Locations</h2>
-      <div class="related-grid">
-        <a class="related-card" href="/city/auto-transport-dallas-texas/">Dallas Auto Transport <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-        <a class="related-card" href="/city/auto-transport-corpus-christi-texas/">Corpus Christi Auto Transport <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-        <a class="related-card" href="/city/auto-transport-new-orleans-louisiana/">New Orleans Auto Transport <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-        <a class="related-card" href="/city/auto-transport-austin-texas/">Austin Auto Transport <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-              <a class="related-card" href="/car-shipping-texas.html">Texas Shipping Hub <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-</div>
 </div></section>
-<section class="cta-band" id="get-started">
-  <div class="container cta-inner">
-    <p class="cta-eyebrow">Ready When You Are</p>
-    <h2>Ready to Ship? The Triangle Runs Daily.</h2>
-    <p class="cta-sub">Get a free, no-obligation quote in about 60 seconds — or call and talk to a real specialist right now.</p>
-    <ul class="cta-trust">
-      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Licensed &amp; insured</li>
-      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> No upfront deposit</li>
-      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> 24/7 support</li>
-    </ul>
-  </div>
-</section>
 
-<!-- ===================== FOOTER ===================== -->
-<section class="eeat-byline">
-  <div class="eeat-inner">
-    <p>Ship Guy is a licensed, bonded auto transport broker (<strong>MC #1457715</strong> &bull; <strong>USDOT #3932149</strong>) with a local office at 9525 Bissonnet St Ste 1175, Houston, TX 77036 &bull; <a href="tel:+13466154970">(346) 615-4970</a> &bull; open 7 days, 6 AM&ndash;11 PM, serving Houston&rsquo;s loops, the Gulf Coast, and the Texas Triangle. Verify our operating authority anytime in the <a href="https://safer.fmcsa.dot.gov/query.asp?searchtype=ANY&query_type=queryCarrierSnapshot&query_param=USDOT&query_string=3932149" rel="noopener" target="_blank">FMCSA SAFER database</a>. Rate estimates on this page reflect current lane conditions and are refreshed quarterly. Learn <a href="/car-shipping-insurance.html">how insurance &amp; claims work</a> and <a href="/about.html">who we are</a>.</p>
-    <p><strong>Written &amp; reviewed by Brittany Newles</strong>, Blog Writer, 12+ years in vehicle logistics &bull; Last updated: <time datetime="2026-07">July 2026</time></p>
+<section class="ph-sec ph-alt"><div class="ph-wrap">
+  <div class="ph-head"><p class="ph-eyebrow">Current Rates</p><h2>Houston lanes &amp; rates</h2><p class="ph-sub">The Bayou City&rsquo;s working routes &mdash; the Triangle rows lead because Texas trades with Texas first. Sedan baseline, open trailer.</p></div>
+  <div class="ph-table-wrap"><table class="ph-rates">
+    <thead><tr><th>Route</th><th>Distance</th><th>Est. transit</th><th>Est. open rate*</th></tr></thead>
+    <tbody><tr><td>Houston, TX → Austin, TX</td><td>~165 mi</td><td>1 day</td><td>$215–$350</td></tr><tr><td>Houston, TX → San Antonio, TX</td><td>~200 mi</td><td>1 day</td><td>$220–$355</td></tr><tr><td>Houston, TX → Corpus Christi, TX</td><td>~210 mi</td><td>1 day</td><td>$225–$365</td></tr><tr><td>Houston, TX → Dallas / Fort Worth, TX</td><td>~240 mi</td><td>1 day</td><td>$235–$380</td></tr><tr><td>Houston, TX → New Orleans, LA</td><td>~350 mi</td><td>1–2 days</td><td>$310–$490</td></tr><tr><td>Houston, TX → Oklahoma City, OK</td><td>~450 mi</td><td>1–2 days</td><td>$420–$640</td></tr><tr><td>Houston, TX → Atlanta, GA</td><td>~790 mi</td><td>2–3 days</td><td>$540–$800</td></tr><tr><td>Houston, TX → Chicago, IL</td><td>~1,080 mi</td><td>3–4 days</td><td>$640–$940</td></tr><tr><td>Houston, TX → Miami, FL</td><td>~1,190 mi</td><td>3–4 days</td><td>$720–$1,050</td></tr><tr><td>Houston, TX → Los Angeles, CA</td><td>~1,550 mi</td><td>4–5 days</td><td>$900–$1,300</td></tr></tbody>
+  </table></div>
+  <p class="ph-fine">*Figures reflect 2026 for a running sedan; larger vehicles carry 10&ndash;25% premiums, oversized units price by their dimensions, and winch loading runs $100&ndash;$200 for non-starters. Hurricane-season windows June&ndash;November carry contingency flexibility; energy-cycle surges ripple assignment volume without warning &mdash; book to your start date, not the news. Softest board: February, cycle-quiet and storm-free.</p>
+  <div class="ph-tcta"><a href="#pquote" class="btn btn-primary">Price your exact lane</a></div>
+</div></section>
+
+<section class="ph-sec"><div class="ph-wrap">
+  <div class="ph-head"><p class="ph-eyebrow">Continental Scale</p><h2>The Triangle, the port, and the pool</h2></div>
+  <div class="ph-prose">
+    <p>Three structures give Houston its market depth. The Texas Triangle &mdash; the Dallas, Austin, San Antonio circuit this metro anchors from the Gulf corner &mdash; carries some of the country&rsquo;s heaviest intrastate traffic, and the rate table&rsquo;s Texas rows read like shuttle fares because functionally they are: single-day transits, constant equipment, and booking lead times in days. The port&rsquo;s processing economy keeps vehicle-logistics infrastructure humming at industrial scale, with the import trade&rsquo;s volume feeding carrier density the whole region draws on. And the pool itself &mdash; one of America&rsquo;s largest carrier markets by any measure &mdash; means matches land fast, recovery lands faster, and pricing stays disciplined by more competition than any Gulf market offers.</p>
+    <p>The currents run continental: the corporate migration Texas keeps winning (California arrivals sequencing household fleets into the master-planned arcs), the energy rotations detailed below, the international city&rsquo;s constant global churn &mdash; this is among the most diverse metros in the hemisphere, and the purchase-delivery and newcomer trades reflect it daily &mdash; and the outbound legs to both coasts riding the long-haul corridors at continental pricing. Big markets forgive nothing and reward fluency; this page is the fluency, priced honestly. Our <a href="/city/auto-transport-dallas-texas/">Dallas</a> and <a href="/city/auto-transport-austin-texas/">Austin</a> pages work the Triangle&rsquo;s other corners; Houston anchors it from the Gulf.</p>
   </div>
-</section>
+</div></section>
+
+<section class="ph-sec ph-alt"><div class="ph-wrap">
+  <div class="ph-head"><p class="ph-eyebrow">The Bayou City Trades</p><h2>The energy desk &amp; the medical city</h2><p class="ph-sub">Two engines no other market runs at this scale: the industry that rotates the globe, and the largest medical complex on Earth.</p></div>
+  <div class="ph-cards c2"><div class="ph-card"><div class="ph-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7h11v8H3z"/><path d="M14 10h3.5l3 3v2H14z"/><circle cx="7" cy="17.5" r="1.7"/><circle cx="17" cy="17.5" r="1.7"/></svg></div><h3>The energy desk</h3><p>The industry that named this city runs the most international relocation trade in American shipping, and serving it is a Houston specialty with its own grammar. Domestic transfers ship on the corporate machinery at its most polished &mdash; provider invoicing, assignment-date scheduling worked backward, household fleets sequenced into the Energy Corridor&rsquo;s and the west side&rsquo;s neighborhoods. Overseas rotations get the conversation run honestly: for most international assignments, storing or selling beats shipping a vehicle abroad, and we say so before anyone spends a dollar, then handle the storage coordination, the return-leg booking, or the assignment-end repatriation when the rotation cycles home. The expat arrivals landing from every producing basin bring the newcomer&rsquo;s needs &mdash; purchase deliveries documented to reassure, registration questions answered plainly, and the patience of a desk that has onboarded arrivals from a hundred countries. The cycle&rsquo;s rhythm is the trade&rsquo;s weather: price surges ripple hiring waves without warning and downturns reverse them, yet the machinery holds steady through both, because start dates are start dates at any commodity price. The counsel never changes: book to your assignment letter, not the headlines.</p></div><div class="ph-card"><div class="ph-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v5c0 5-3.5 8.5-7 10-3.5-1.5-7-5-7-10V6l7-3Z"/><path d="m9 12 2 2 4-4"/></svg></div><h3>The medical city</h3><p>The Texas Medical Center is not a hospital district; it is a city of medicine, the largest complex of its kind on Earth, and the relocation trade around it runs at commensurate scale: match-day cohorts landing across multiple institutions simultaneously on the national calendar&rsquo;s exact weeks, fellowship and research rotations turning on academic clocks, faculty recruitment drawing globally, and the clinical-trial and biotech orbit adding its program-timeline currents. The machinery is the credentialed standard &mdash; start dates as contracts, institutional paperwork, family fleets sequenced &mdash; run at a volume that keeps the medical column of our booking board full twelve months a year. The local accents: campus-area handoffs run the practiced spots around a district denser than most downtowns, parking-infrastructure realities get respected in every window, the international clinical arrivals fold into the newcomer machinery the energy desk already runs, and the midnight-arrival-before-orientation delivery is a request this market&rsquo;s scale long ago made routine.</p></div></div>
+</div></section>
+
+<section class="ph-sec"><div class="ph-wrap">
+  <div class="ph-head"><p class="ph-eyebrow">The Gulf Almanac</p><h2>Season, storm, and the honest chapter</h2></div>
+  <div class="ph-prose">
+    <p>Houston&rsquo;s weather book runs simple most of the year &mdash; heat that counsels morning loading through deep summer, humidity as atmosphere rather than obstacle, and winters so mild the occasional ice morning makes the news &mdash; but the Gulf chapter deserves plain writing. Hurricane season, June through November: forecasts watched from a week out, windows near landfall threats carrying built-in contingency, evacuation-adjacent scheduling deferring to official guidance without argument, and the post-storm restart booking fast as the region&rsquo;s formidable recovery machinery spins up. Most seasons pass with watched systems and zero disruption; the protocol exists because this coast paid its tuition and keeps the notes.</p>
+    <p>The flood-awareness inheritance shapes the craft year-round: low-lying addresses get staging alternatives named at booking, bayou-adjacent neighborhoods carry their own dispatch notes, and one piece of purchase counsel bears repeating in plain prose &mdash; run title and flood-database checks before buying a used vehicle from any storm region, this one included, because salvage metal travels nationally after every event and the five-minute lookup is the cheapest insurance in the industry. We ship what you bought either way; we&rsquo;d simply rather you bought well. Candor is the local dialect on this coast, and an engineering town reads the footnotes first &mdash; so ours are written to be read.</p>
+  </div>
+</div></section>
+
+<section class="ph-sec ph-alt"><div class="ph-wrap">
+  <div class="ph-head"><p class="ph-eyebrow">The Sprawl &amp; the Bay</p><h2>No zoning, many answers</h2></div>
+  <div class="ph-prose">
+    <p>Houston&rsquo;s famous no-zoning geography built a receiving map like nowhere else &mdash; townhomes beside warehouses beside high-rises beside bungalows &mdash; and the craft answers it address by address: the master-planned arcs (the Woodlands&rsquo; forested plans, Katy and Sugar Land&rsquo;s gated geographies, Cypress&rsquo;s new growth) ship on the gate-code-and-HOA choreography gathered at booking; the inner-loop neighborhoods run corner meets where the live oaks narrow the streets and townhome courts complicate the turning radii; and the whole metro quotes by loop rather than by mile, because a Katy pickup and a Clear Lake delivery are different mornings, not different cities. Name the address, and the answer arrives pre-solved &mdash; a metro that never met a land-use plan it couldn&rsquo;t ignore taught its logistics trade to carry the whole map in its head.</p>
+    <p>Southeast of the loops, the metro runs its coastal chapter. The aerospace corridor around Clear Lake moves engineering talent on program cycles that predate most industries&rsquo; existence &mdash; mission-timeline relocations, contractor rotations, and the international cooperation a spacefaring campus generates &mdash; while the bay communities from League City to Kemah add the marina geography&rsquo;s gentle staging, and Galveston ships on the island&rsquo;s own rhythm: causeway meets when summer traffic argues for them, seasonal awareness in the watchful months, and the historic district&rsquo;s narrow streets taking corner meets by island custom. The coastal counsel is the Gulf standard, Houston edition: salt-adjacent vehicles earn the post-transit rinse, beach-house positioning books midweek ahead of summer weekends, and the bay side&rsquo;s professional class ships on the same metro pool at the same metro depth. One market, many waters.</p>
+  </div>
+  <div class="ph-note"><b>Loop-literate dispatch, in plain terms:</b> a metro this size runs on its loops &mdash; the 610 core, Beltway 8&rsquo;s middle ring, the Grand Parkway&rsquo;s outer arc &mdash; and honest windows quote by them. A Katy pickup and a Clear Lake delivery are different mornings, not different cities, and dispatch that speaks loop saves everyone the discovery. Houston measures distance in minutes and traffic, never miles; so do we.</div>
+</div></section>
+
+<section class="ph-sec"><div class="ph-wrap">
+  <div class="ph-head"><p class="ph-eyebrow">Your Options</p><h2>Open or enclosed on the Gulf Coast?</h2><p class="ph-sub">The Triangle ships open at shuttle depth; the enclosed tier serves the corner offices and the collections.</p></div>
+  <div class="ph-cards c2"><div class="ph-card"><div class="ph-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 11l1.6-4h10.8L19 11"/><path d="M3 11h18v4H3z"/><circle cx="7.5" cy="16.5" r="1.7"/><circle cx="16.5" cy="16.5" r="1.7"/></svg></div><h3>Open transport</h3><p>Energy transfers, TMC cohorts, Triangle errands, the California arrival wave: open trailers on one of America&rsquo;s deepest pools, through a climate whose real chapter is seasonal, not daily. The default, priced by continental competition.</p><ul><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span>Texas Triangle at single-day shuttle rates</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span>Hurricane-season contingency built in</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span>Cargo coverage typically $100K&ndash;$250K</span></li></ul></div><div class="ph-card"><div class="ph-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v5c0 5-3.5 8.5-7 10-3.5-1.5-7-5-7-10V6l7-3Z"/><path d="m9 12 2 2 4-4"/></svg></div><h3>Enclosed transport</h3><p>Executive garages from River Oaks to the Woodlands, the collector culture oil wealth built, and the exotics of a city that celebrates arrival: enclosed walls, liftgate patience, and documentation to boardroom standard.</p><ul><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span>Roughly 40&ndash;60% above open rates</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span>Collection and estate moves paced to the owner</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span>Cargo coverage $250K&ndash;$1M, higher arranged</span></li></ul></div></div>
+  <div class="ph-note"><b>Bayou City rule:</b> the commuter rides open on the Triangle; the trophy rides enclosed past the season. See <a href="/open-car-transport.html">open</a> vs. <a href="/enclosed-auto-transport.html">enclosed</a>.</div>
+</div></section>
+
+<section class="ph-sec ph-alt"><div class="ph-wrap">
+  <div class="ph-head"><p class="ph-eyebrow">Coverage</p><h2>The loops and the arcs</h2><p class="ph-sub">Inner loop to outer arc, bay to forest &mdash; each with its practiced answer.</p></div>
+  <div class="ph-chips"><span class="ph-chip">Downtown / Midtown</span><span class="ph-chip">The Heights</span><span class="ph-chip">Montrose</span><span class="ph-chip">River Oaks</span><span class="ph-chip">West University</span><span class="ph-chip">Bellaire</span><span class="ph-chip">Medical Center</span><span class="ph-chip">Energy Corridor</span><span class="ph-chip">Memorial</span><span class="ph-chip">Katy</span><span class="ph-chip">Sugar Land</span><span class="ph-chip">The Woodlands</span><span class="ph-chip">Cypress</span><span class="ph-chip">Clear Lake</span><span class="ph-chip">Pearland</span><span class="ph-chip">Galveston</span><span class="ph-chip">League City</span><span class="ph-chip">Baytown</span><span class="ph-chip">Spring</span><span class="ph-chip">Conroe</span><span class="ph-chip">Richmond / Rosenberg</span><span class="ph-chip">Beaumont</span><span class="ph-chip">Texas City</span></div>
+  <div class="ph-note"><b>Loop-literate dispatch:</b> a metro this size runs on its loops &mdash; the 610 core, Beltway 8&rsquo;s middle ring, the Grand Parkway&rsquo;s outer arc &mdash; and honest windows quote by them, because a Katy pickup and a Clear Lake delivery are different mornings, not different cities. <b>Flood-aware, purchase-wise:</b> low-lying addresses get staging alternatives named upfront and hurricane-season windows carry contingency language, and we counsel every used-vehicle buyer shipping from this region to run the title and flood-database checks first &mdash; storm-salvage metal circulates nationally after every major event. And <b>the world&rsquo;s energy desk:</b> assignment cycles move engineers and executives between here and every producing basin on Earth, the mobility machinery runs as this market&rsquo;s native language, and the price of crude sets the volume while the professionalism holds at every price.</div>
+</div></section>
+
+<section class="ph-sec"><div class="ph-wrap">
+  <div class="ph-head"><p class="ph-eyebrow">Why Ship Guy</p><h2>Why ship with us in Houston</h2></div>
+  <div class="ph-cards"><div class="ph-card"><div class="ph-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v5c0 5-3.5 8.5-7 10-3.5-1.5-7-5-7-10V6l7-3Z"/><path d="m9 12 2 2 4-4"/></svg></div><h3>Licensed &amp; bonded</h3><p>Federal broker authority carrying the $75,000 surety bond &mdash; the SAFER lookup takes a minute, and an industry built on due diligence should expect nothing less.</p></div><div class="ph-card"><div class="ph-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10.5c0 5.5-8 10.5-8 10.5s-8-5-8-10.5a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10.5" r="2.6"/></svg></div><h3>Loop-and-cycle fluent</h3><p>Beltways read like locals, assignment calendars like mobility desks, storm season like a coast that earned its notes &mdash; the whole metro&rsquo;s grammar, spoken daily.</p></div><div class="ph-card"><div class="ph-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7h11v8H3z"/><path d="M14 10h3.5l3 3v2H14z"/><circle cx="7" cy="17.5" r="1.7"/><circle cx="17" cy="17.5" r="1.7"/></svg></div><h3>Continental depth</h3><p>One of America&rsquo;s largest carrier pools behind every booking &mdash; Triangle shuttles, coast-to-coast hauls, and recovery capacity measured in hours.</p></div><div class="ph-card"><div class="ph-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4.5" width="18" height="16.5" rx="2"/><path d="M3 9.5h18M8 2.5v4M16 2.5v4"/></svg></div><h3>Candid at scale</h3><p>Flood counsel given freely, overseas ship-versus-store answered honestly, and windows quoted honestly and held &mdash; big-market service, straight-talk terms.</p></div></div>
+</div></section>
+
+<section class="ph-sec ph-alt"><div class="ph-wrap">
+  <div class="ph-head"><p class="ph-eyebrow">Visit Us</p><h2>Find us on Bissonnet</h2><p class="ph-sub">Our Houston office sits on the southwest side inside Beltway 8 &mdash; the loops in every direction, the Medical Center twenty minutes east, the Energy Corridor north, and the whole metro&rsquo;s sprawl in working range.</p></div>
+  <div class="ph-office">
+    <div class="ph-office-card">
+      <h3>Ship Guy Auto Transport &mdash; Houston</h3>
+      <div class="ph-office-row"><span class="ph-office-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10.5c0 5.5-8 10.5-8 10.5s-8-5-8-10.5a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10.5" r="2.6"/></svg></span><div><b>Address</b><span>9525 Bissonnet St Ste 1175<br>Houston, TX 77036</span></div></div>
+      <div class="ph-office-row"><span class="ph-office-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L20 13l1 4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2Z"/></svg></span><div><b>Local phone</b><a href="tel:+13466154970">(346) 615-4970</a></div></div>
+      <div class="ph-office-row"><span class="ph-office-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7.5v5l3 2"/></svg></span><div><b>Hours</b><span>Monday&ndash;Sunday<br>6:00 AM &ndash; 11:00 PM CT</span></div></div>
+    </div>
+    <div class="ph-map"><iframe loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=9525+Bissonnet+St+Ste+1175,+Houston,+TX+77036&output=embed" title="Ship Guy Houston office map"></iframe></div>
+  </div>
+</div></section>
+
+<section class="ph-sec"><div class="ph-wrap">
+  <div class="ph-head"><p class="ph-eyebrow">Houston FAQ</p><h2>Common questions</h2></div>
+  <div class="ph-faq-list"><details class="ph-faq"><summary>What does it cost to ship a car to or from Houston?<span class="ph-fp"></span></summary><div class="fa">Sedan on open transport: about $215&ndash;$350 to Austin or San Antonio, $235&ndash;$380 to Dallas or Corpus Christi, $310&ndash;$490 to New Orleans, $420&ndash;$640 to Oklahoma City, $540&ndash;$800 to Atlanta, $640&ndash;$940 to Chicago, $720&ndash;$1,050 to Florida&rsquo;s peninsula, and $900&ndash;$1,300 to either coast. Enclosed runs 40&ndash;60% over. The Texas Triangle&rsquo;s traffic keeps the near lanes shuttle-deep.</div></details><details class="ph-faq"><summary>How fast is pickup across the Houston metro?<span class="ph-fp"></span></summary><div class="fa">Usually 1&ndash;3 days across one of the largest carrier markets in America: the Texas Triangle&rsquo;s constant cycle, the port&rsquo;s processing volume, and the loop system&rsquo;s distribution geography keep equipment everywhere from Katy to Clear Lake. The metro&rsquo;s sheer size means the practical variable is which side of town &mdash; dispatch quotes windows by loop, not just by city.</div></details><details class="ph-faq"><summary>How does the energy industry&rsquo;s calendar shape shipping here?<span class="ph-fp"></span></summary><div class="fa">It&rsquo;s the market&rsquo;s signature current: the majors and the service companies rotate talent globally on assignment cycles, the Energy Corridor and the west side land expat arrivals year-round, and the trade runs on corporate-mobility machinery &mdash; relocation-provider invoicing, assignment-date scheduling, and the ship-versus-buy conversation for overseas rotations answered honestly (for most international assignments, storage-or-sell beats shipping; for domestic transfers, the car almost always travels). Price cycles ripple the volume; the machinery never changes.</div></details><details class="ph-faq"><summary>What should I know about flood history and shipping in Houston?<span class="ph-fp"></span></summary><div class="fa">Two practical things: first, our own craft is flood-aware &mdash; hurricane-season windows carry contingency language, low-lying pickup addresses get staging alternatives named upfront, and post-storm recovery scheduling is a practiced local drill. Second, for used-vehicle purchases shipping out of this region: check the title history and flood databases before you buy, because storm-salvage vehicles circulate nationally after every major event. We ship what you bought either way &mdash; but we&rsquo;d rather you buy well, and the lookup takes five minutes.</div></details><details class="ph-faq"><summary>Do you handle Texas Medical Center relocations?<span class="ph-fp"></span></summary><div class="fa">At the scale the world&rsquo;s largest medical complex generates: match-day cohorts across multiple institutions at once, fellowship and research cycles on academic clocks, and international clinical talent arriving with the purchase-delivery needs newcomers have. Start dates run as contracts, campus-area handoffs run the practiced spots, and the density means our medical column stays full every month.</div></details><details class="ph-faq"><summary>Can you serve the whole metro &mdash; Woodlands to Galveston?<span class="ph-fp"></span></summary><div class="fa">One market, many loops: the master-planned north (Woodlands, Spring), the western arcs (Katy, Sugar Land, Cypress), the bay side (Clear Lake, League City) and the island itself all ship on the same metro pool, with the loop-and-corridor geography setting windows more than mileage does. Gate codes and HOA customs in the planned communities get gathered at booking, and coastal deliveries watch the seasonal almanac.</div></details><details class="ph-faq"><summary>What&rsquo;s hurricane season protocol?<span class="ph-fp"></span></summary><div class="fa">June through November, the Gulf&rsquo;s calendar gets respect without drama: forecasts watched from a week out, windows around landfall threats carry built-in flexibility, evacuation-adjacent scheduling defers to official guidance, and post-storm recovery books fast as the market restarts. Most seasons pass with a few watched systems and zero disruption &mdash; but the protocol exists because this coast earned it.</div></details><details class="ph-faq"><summary>Where is Ship Guy located in Houston?<span class="ph-fp"></span></summary><div class="fa">9525 Bissonnet St Ste 1175, Houston, TX 77036 &mdash; southwest side, inside Beltway 8. Local line (346) 615-4970, staffed daily 6:00 AM to 11:00 PM Central.</div></details></div>
+</div></section>
 
 <footer class="site-footer" id="contact">
   <div class="container footer-top">
@@ -1397,13 +1280,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <ul>
         <li><a href="/how-it-works.html">How It Works</a></li>
         <li><a href="#reviews">Reviews</a></li>
+        <li><a href="#locations">Locations</a></li>
         <li><a href="/faq.html">FAQ</a></li>
         <li><a href="/contact.html">Contact</a></li>
-        <li style="margin-top:10px;padding-top:10px;border-top:1px solid rgba(255,255,255,.15)"><a href="/locations.html"><strong>All 49 Locations</strong></a></li>
-        <li><a href="/about.html">About Us</a></li>
-        <li><a href="/car-shipping-insurance.html">Insurance &amp; Claims</a></li>
-        <li><a href="/privacy.html">Privacy</a></li>
-        <li><a href="/terms.html">Terms</a></li>
       </ul>
     </div>
     <div class="f-col">
@@ -1416,22 +1295,34 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <li><a href="/expedited-car-shipping.html">Expedited Shipping</a></li>
         <li><a href="/snowbird-car-shipping.html">Snowbird Car Shipping</a></li>
         <li><a href="/military-car-shipping.html">Military Car Shipping</a></li>
-        <li><a href="/dealer-auto-transport.html">Dealer Auto Transport</a></li>
         <li><a href="/auction-car-transport.html">Auction Car Transport</a></li>
       </ul>
     </div>
     <div class="f-col f-contact">
       <h4>Get in touch</h4>
-      <div class="line"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/></svg><a href="tel:+18664992815">(866) 499-2815</a></div>
+      <div class="line"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/></svg><a href="tel:+13466154970">(346) 615-4970</a></div>
       <div class="line"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg><a href="mailto:quotes@shipguy.com">quotes@shipguy.com</a></div>
-      <div class="line"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span>Support available 24/7</span></div>
+      <div class="line"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span>Support when you need it</span></div>
     </div>
+  </div>
+  <div class="container footer-states">
+      <span class="fs-label">States we serve:</span>
+      <a href="/alabama-auto-transport.html">Alabama</a>
+      <a href="/alaska-auto-transport.html">Alaska</a>
+      <a href="/arizona-auto-transport.html">Arizona</a>
+      <a href="/arkansas-auto-transport.html">Arkansas</a>
+      <a href="/california-auto-transport.html">California</a>
+      <a href="/colorado-auto-transport.html">Colorado</a>
+      <a href="/connecticut-auto-transport.html">Connecticut</a>
+      <a href="/delaware-auto-transport.html">Delaware</a>
+      <a href="/florida-auto-transport.html">Florida</a>
+      <a href="/georgia-auto-transport.html">Georgia</a>
   </div>
   <div class="container footer-bottom">
     <small>© 2026 Ship Guy. Licensed &amp; FMCSA-registered auto transport broker. All rights reserved.</small>
     <div class="legal">
-      <a href="#">Privacy</a>
-      <a href="#">Terms</a>
+      <a href="/privacy-policy.html">Privacy</a>
+      <a href="/terms.html">Terms</a>
       <a href="#">Licensing &amp; Insurance</a>
     </div>
   </div>
@@ -1489,144 +1380,272 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       var o = document.createElement('option'); o.value = y; o.textContent = y; year.appendChild(o);
     }
   }
+})();
+</script>
+<script>
+/* ============================================================
+   SHIP GUY \u2014 custom quote tool wired to the BeRocker Lead Source API
+   Docs: https://help.berocker.com/integrations/pickup-windows-api
 
-  /* ---- multi-step form ---- */
-  var form = document.getElementById('quoteForm');
-  if(!form) return;
-  var success = document.getElementById('quoteSuccess');
-  var panels = form.querySelectorAll('.qstep');
-  var stepEls = document.querySelectorAll('#steps .step');
-  var trackEls = document.querySelectorAll('#steps .track');
-  var current = 1;
-  var maxStep = 3;
+   >>> STEP 1: create a lead source in BeRocker
+       (Settings -> Lead Management -> Lead sources -> + Add new source,
+        set Per Lead Price = 0), then copy its "Lead save URL".
+   >>> STEP 2: paste that URL below (it ends with /save). <<<
+   Until you do, the tool shows a sample estimate so you can preview it.
+   ============================================================ */
+(function(){
+  var LEAD_SAVE_URL = '/api/quote2/save';
+  var API_READY = LEAD_SAVE_URL.indexOf('YOUR_LEAD_SOURCE_KEY') === -1;
 
-  function setStep(n){
-    current = n;
-    panels.forEach(function(p){ p.classList.toggle('is-current', +p.dataset.panel === n); });
-    stepEls.forEach(function(s){
-      var step = +s.dataset.step;
-      s.classList.toggle('is-active', step === n);
-      s.classList.toggle('is-done', step < n);
-      s.classList.toggle('is-clickable', step < n);
-    });
-    trackEls.forEach(function(t){ t.classList.toggle('is-filled', +t.dataset.track < n); });
+  var form=document.getElementById('pqForm'); if(!form) return;
+  var steps=[].slice.call(document.querySelectorAll('#pquote .pq-step'));
+  var panels=[].slice.call(document.querySelectorAll('#pquote .pq-panel'));
+  var stepsBar=document.querySelector('#pquote .pq-progress');
+  var cur=0;
+  function show(i){panels.forEach(function(p,x){p.classList.toggle('is-current',x===i);});steps.forEach(function(sp,x){sp.classList.toggle('is-active',x===i);sp.classList.toggle('is-done',x<i);});cur=i;var names=['Route','Vehicle','Contact'];var fill=document.getElementById('pqProgressFill');if(fill)fill.style.width=((i+1)/panels.length*100)+'%';var nm=document.getElementById('pqStepName');if(nm)nm.textContent=names[i]||'';}
+  function validate(i){var ok=true;panels[i].querySelectorAll('input[required],select[required]').forEach(function(inp){if(inp.disabled)return; if(!inp.value.trim()){inp.classList.add('err');ok=false;}else inp.classList.remove('err');});var em=panels[i].querySelector('input[type=email]');if(em&&em.value&&!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(em.value)){em.classList.add('err');ok=false;}return ok;}
+  function validateAll(){var ok=true;form.querySelectorAll('input[required],select[required]').forEach(function(el){if(el.disabled)return;if(!el.value.trim()){el.classList.add('err');ok=false;}else el.classList.remove('err');});var em=document.getElementById('pq-email');if(em&&em.value&&!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(em.value)){em.classList.add('err');ok=false;}return ok;}
+  form.querySelectorAll('[data-next]').forEach(function(b){b.addEventListener('click',function(){if(validate(cur))show(cur+1);});});
+  form.querySelectorAll('[data-back]').forEach(function(b){b.addEventListener('click',function(){show(cur-1);});});
+  form.querySelectorAll('input,select').forEach(function(inp){inp.addEventListener('input',function(){inp.classList.remove('err');});inp.addEventListener('change',function(){inp.classList.remove('err');});});
+
+  /* On load: ask BeRocker which pickup question to show */
+  if(API_READY){
+    fetch(LEAD_SAVE_URL.replace('/save','/quote-config'))
+      .then(function(r){return r.ok?r.json():null;})
+      .then(function(cfg){
+        if(!cfg) return;
+        var tf=document.getElementById('pq-timeframe'), tfWrap=document.getElementById('pq-pickup-field'), dateWrap=document.getElementById('pq-date-field'), dateInp=document.getElementById('pq-date');
+        if(cfg.pickupTimeframes && cfg.pickupTimeframes.length){
+          tf.innerHTML=''; cfg.pickupTimeframes.forEach(function(t){var o=document.createElement('option');o.value=t.value;o.textContent=t.label;if(t.isDefault)o.selected=true;tf.appendChild(o);});
+        } else if(cfg.pickupWindow){
+          tfWrap.style.display='none'; dateWrap.style.display=''; if(cfg.pickupWindow.earliestDate) dateInp.min=cfg.pickupWindow.earliestDate;
+        } else {
+          tfWrap.style.display='none'; dateWrap.style.display='';
+        }
+      }).catch(function(){});
   }
 
-  function validate(n){
-    var panel = form.querySelector('.qstep[data-panel="'+n+'"]');
-    var ok = true, firstBad = null;
-    panel.querySelectorAll('input[required]').forEach(function(inp){
-      var field = inp.closest('.field');
-      var bad = !inp.value.trim() || (inp.type==='email' && !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(inp.value));
-      field.classList.toggle('has-error', bad);
-      if(bad){ ok = false; if(!firstBad) firstBad = inp; }
+  function mapType(v){return {'Sedan':'Car','SUV / Crossover':'SUV','Pickup Truck':'Pickup','Van / Minivan':'Van','Motorcycle':'Motorcycle','Other':'Other'}[v]||'Car';}
+
+  function submitLead(data){
+    if(!API_READY) return demoQuote(data);
+    var payload={
+      first_name: data.firstname||undefined, last_name: data.lastname||undefined, phone: data.phone, email: data.email||undefined,
+      transport_type: (data.transport||'Open').toLowerCase(),
+      secondary_id: 'WEB-'+Date.now(),
+      customer_comments: 'SMS consent: '+(data.sms_consent?'YES (opted in via web form)':'not given')+'.',
+      vehicles:[{vehicle_model_year: parseInt(data.year,10)||undefined, vehicle_make: data.make||undefined, vehicle_model: data.model||undefined, vehicle_type: (function(){var m=document.getElementById('pq-model');return m&&m.dataset&&m.dataset.vtype?m.dataset.vtype:undefined;})(), vehicle_inop: data.operable==='No'}]
+    };
+    function setLoc(prefix, raw, elId){
+      var el=document.getElementById(elId), d=el&&el.dataset?el.dataset:{}, zip=d.zip||'', city=d.city||'', st=d.state||'';
+      raw=(raw||'').trim();
+      if(zip){payload[prefix+'_postal_code']=zip; if(city)payload[prefix+'_city']=city; if(st)payload[prefix+'_state']=st;}
+      else if(/^\d{5}$/.test(raw)){payload[prefix+'_postal_code']=raw;}
+      else {payload[prefix+'_city']=city||raw; if(st)payload[prefix+'_state']=st;}
+    }
+    setLoc('origin', data.pickup, 'pq-pickup');
+    setLoc('destination', data.delivery, 'pq-delivery');
+    if(data.timeframe) payload.pickup_timeframe=data.timeframe; else if(data.date) payload.ship_date=data.date;
+    return fetch(LEAD_SAVE_URL,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)})
+      .then(function(r){return r.json().then(function(j){return {ok:r.ok,body:j};});})
+      .then(function(res){
+        if(!res.ok || !res.body || !res.body.id){var m=res.body&&res.body.errors?String(Object.values(res.body.errors)[0]):'We could not process that. Please check your details.';throw new Error(m);}
+        var lead=res.body;
+        var statusUrl=LEAD_SAVE_URL.replace('/save','/'+lead.id+'/booking-status');
+        setLoading('Getting your best price\u2026');
+        return pollStatus(statusUrl, lead.bookingLink, 0);
+      });
+  }
+  function pollStatus(url, bookingLink, startTime, tries){
+    startTime = startTime || Date.now(); tries = tries || 0;
+    if(Date.now() - startTime > 20000) return Promise.resolve({bookingLink:bookingLink, price:null, manual:false, timedOut:true});
+    return new Promise(function(res){setTimeout(res, tries===0?400:1000);}).then(function(){
+      return fetch(url).then(function(r){return r.json();}).then(function(s){
+        var link=s.bookingLink||bookingLink;
+        if(s.priceReady) return {bookingLink:link, price:s.price, manual:false};
+        if(s.manualReview) return {bookingLink:link, price:null, manual:true};
+        if(s.priceFailed) return {bookingLink:link, price:null, manual:false, failed:true};
+        return pollStatus(url, link, startTime, tries+1);
+      }).catch(function(){ return pollStatus(url, bookingLink, startTime, tries+1); });
     });
-    if(firstBad) firstBad.focus();
-    return ok;
+  }
+  function demoQuote(data){
+    return new Promise(function(res){setTimeout(function(){
+      var base={'Sedan':600,'SUV / Crossover':720,'Pickup Truck':790,'Van / Minivan':820,'Motorcycle':480,'Other':720}[data.vtype]||700;
+      if(data.transport==='Enclosed') base=Math.round(base*1.5); if(data.operable==='No') base+=150;
+      res({price:base, bookingLink:null, manual:false, demo:true});
+    },900);});
   }
 
-  // clear error as the user types
-  form.querySelectorAll('input[required]').forEach(function(inp){
-    inp.addEventListener('input', function(){ inp.closest('.field').classList.remove('has-error'); });
-  });
+  var loadingText=document.getElementById('pqLoadingText'), loading=document.getElementById('pqLoading'), quote=document.getElementById('pqQuote'), result=document.getElementById('pqResult'), errBox=document.getElementById('pqError');
+  function setLoading(t){if(loadingText)loadingText.textContent=t;}
+  function render(res, data){
+    if(res && res.redirecting){ return; }
+    loading.style.display='none';
+    var priceEl=document.getElementById('pqPrice'), eyebrow=document.getElementById('pqEyebrow'), note=document.getElementById('pqNote'), book=document.getElementById('pqBookBtn');
+    if(res.manual){
+      eyebrow.textContent='Quote request received'; priceEl.textContent='We\u2019ll be in touch'; priceEl.style.fontSize='23px';
+      note.textContent='Your vehicle needs a custom quote \u2014 a specialist will contact you shortly.';
+    } else if(res.price){
+      eyebrow.textContent = res.demo ? 'Your estimated price' : 'Your instant quote';
+      priceEl.textContent='$'+Number(res.price).toLocaleString(); priceEl.style.fontSize='38px';
+      note.textContent = res.demo ? 'Sample estimate for preview. Add your BeRocker Lead save URL for live pricing.' : 'All-in price \u2014 no hidden fees. Continue to lock in your booking.';
+    } else if(res.failed){
+      eyebrow.textContent='Almost there'; priceEl.textContent='Call for your price'; priceEl.style.fontSize='24px';
+      note.textContent='We could not price this online right now \u2014 call us and we will quote it for you.';
+    } else if(res.timedOut){
+      eyebrow.textContent='Your quote is ready'; priceEl.textContent='See your price'; priceEl.style.fontSize='25px';
+      note.textContent='Tap Continue to Booking to see your exact price and reserve your pickup.';
+    } else {
+      eyebrow.textContent='Almost there'; priceEl.textContent='Get your quote'; priceEl.style.fontSize='23px';
+      note.textContent='Continue to see your price and book, or call us now.';
+    }
+    if(res.liveError){eyebrow.textContent='Estimated price';note.textContent='⚠ Live pricing did not respond: '+res.liveError+'. Showing a sample — call for your exact quote.';}
+    document.getElementById('pqRoute').textContent=(data.pickup||'')+' \u2192 '+(data.delivery||'')+'  \u00b7  '+(data.transport||'Open')+' transport';
+    if(res.bookingLink){book.href=res.bookingLink; book.style.display='';}
+    quote.classList.add('show');
+  }
 
-  form.querySelectorAll('[data-next]').forEach(function(btn){
-    btn.addEventListener('click', function(){ if(validate(current)) setStep(Math.min(current+1, maxStep)); });
-  });
-  form.querySelectorAll('[data-back]').forEach(function(btn){
-    btn.addEventListener('click', function(){ setStep(Math.max(current-1, 1)); });
-  });
-
-  // clicking a completed step jumps back to it
-  stepEls.forEach(function(s){
-    s.addEventListener('click', function(){
-      var step = +s.dataset.step;
-      if(step < current) setStep(step);
-    });
-  });
-
-  form.addEventListener('submit', function(e){
+  form.addEventListener('submit',function(e){
     e.preventDefault();
-    if(!validate(3)) return;
-    form.style.display = 'none';
-    document.getElementById('steps').style.display = 'none';
-    success.classList.add('show');
+    if(!validate(cur)){var fe=panels[cur].querySelector('.err');if(fe&&fe.scrollIntoView)fe.scrollIntoView({behavior:'smooth',block:'center'});return;}
+    var data={}; new FormData(form).forEach(function(v,k){data[k]=v;});
+    if(errBox) errBox.style.display='none';
+    form.style.display='none'; if(stepsBar) stepsBar.style.display='none';
+    result.classList.add('show'); loading.style.display='block'; quote.classList.remove('show'); setLoading('Getting your quote\u2026');
+    submitLead(data).then(function(res){
+      if(res && res.bookingLink && !res.demo && (res.price || res.timedOut)){ setLoading('Taking you to your booking page...'); window.location.href=res.bookingLink; return; }
+      render(res,data);
+    }).catch(function(err){
+      // fall back to a sample estimate so the visitor still sees something, and surface the reason
+      demoQuote(data).then(function(d){ d.demo=true; d.liveError=(err&&err.message)?err.message:'no response from the pricing service (possible CORS block)'; render(d,data);
+        if(errBox){errBox.textContent=(err&&err.message?err.message+' ':'')+'(showing a sample estimate)'; }
+      });
+    });
+  });
+  var again=document.getElementById('pqAgain');
+  if(again) again.addEventListener('click',function(){result.classList.remove('show'); if(stepsBar)stepsBar.style.display=''; form.style.display=''; show(0);});
+})();
+</script>
+<script>
+/* Google Places autocomplete for the Pickup/Delivery fields */
+function pqInitPlaces(){
+  if(!(window.google && google.maps && google.maps.places)) return;
+  ['pq-pickup','pq-delivery'].forEach(function(id){
+    var el=document.getElementById(id); if(!el) return;
+    try{
+      var ac=new google.maps.places.Autocomplete(el,{componentRestrictions:{country:'us'},fields:['address_components','formatted_address'],types:['(regions)']});
+      ac.addListener('place_changed',function(){
+        var p=ac.getPlace(); if(!p||!p.address_components) return;
+        var zip='',city='',state='';
+        p.address_components.forEach(function(c){
+          if(c.types.indexOf('postal_code')>-1) zip=c.long_name;
+          if(c.types.indexOf('locality')>-1) city=c.long_name;
+          if(!city && c.types.indexOf('postal_town')>-1) city=c.long_name;
+          if(!city && c.types.indexOf('sublocality')>-1) city=c.long_name;
+          if(c.types.indexOf('administrative_area_level_1')>-1) state=c.short_name;
+        });
+        el.dataset.zip=zip; el.dataset.city=city; el.dataset.state=state;
+        el.value = city ? (city+(state?', '+state:'')+(zip?' '+zip:'')) : (zip||p.formatted_address||el.value);
+        el.classList.remove('err');
+      });
+      el.addEventListener('input',function(){el.dataset.zip='';el.dataset.city='';el.dataset.state='';});
+    }catch(e){}
+  });
+}
+</script>
+<script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDdLtDsWA23EBnDjGpXKueVzudvUVbopi8&libraries=places&loading=async&callback=pqInitPlaces"></script>
+<script>
+/* BeRocker Vehicle Database API - cascading Year -> Make -> Model pickers */
+(function(){
+  var API='https://app.berocker.com/api/v1/vehicles';
+  var KEY='bvk_vNxhnCfzk1XKqztmtfnf1exrm0aZmormR9smaNJdGoniaaQg';
+  var yearSel=document.getElementById('pq-year'), makeSel=document.getElementById('pq-make'), modelSel=document.getElementById('pq-model');
+  if(!yearSel||!makeSel||!modelSel) return;
+  function get(path, params){
+    var url=new URL(API+path);
+    if(params) Object.keys(params).forEach(function(k){url.searchParams.set(k,params[k]);});
+    return fetch(url.toString(),{headers:{'X-Api-Key':KEY}}).then(function(r){if(!r.ok)throw new Error('HTTP '+r.status);return r.json();}).then(function(j){return j.data||[];});
+  }
+  function fillSel(sel, items, getLabel, getVal, placeholder, getType){
+    sel.innerHTML='';
+    var o=document.createElement('option'); o.value=''; o.textContent=placeholder; sel.appendChild(o);
+    items.forEach(function(it){var op=document.createElement('option'); op.value=getVal(it); op.textContent=getLabel(it); if(getType)op.setAttribute('data-type',getType(it)||''); sel.appendChild(op);});
+    sel.disabled=items.length===0;
+  }
+  get('/years').then(function(years){ fillSel(yearSel, years, function(y){return y;}, function(y){return y;}, 'Select year…'); })
+    .catch(function(){ yearSel.innerHTML='<option value="">Select year…</option>'; });
+  yearSel.addEventListener('change', function(){
+    makeSel.innerHTML='<option value="">Select a year first</option>'; makeSel.disabled=true;
+    modelSel.innerHTML='<option value="">Select a make first</option>'; modelSel.disabled=true; modelSel.dataset.vtype='';
+    if(!yearSel.value) return;
+    makeSel.innerHTML='<option value="">Loading…</option>'; makeSel.disabled=true;
+    get('/makes',{year:yearSel.value}).then(function(makes){ fillSel(makeSel, makes, function(m){return m.name;}, function(m){return m.name;}, 'Select make…'); })
+      .catch(function(){ makeSel.innerHTML='<option value="">Could not load makes</option>'; makeSel.disabled=false; });
+  });
+  makeSel.addEventListener('change', function(){
+    modelSel.innerHTML='<option value="">Select a make first</option>'; modelSel.disabled=true; modelSel.dataset.vtype='';
+    if(!makeSel.value) return;
+    modelSel.innerHTML='<option value="">Loading…</option>'; modelSel.disabled=true;
+    get('/models',{year:yearSel.value, make:makeSel.value}).then(function(models){ fillSel(modelSel, models, function(m){return m.name;}, function(m){return m.name;}, 'Select model…', function(m){return m.type;}); })
+      .catch(function(){ modelSel.innerHTML='<option value="">Could not load models</option>'; modelSel.disabled=false; });
+  });
+  modelSel.addEventListener('change', function(){
+    var op=modelSel.options[modelSel.selectedIndex];
+    modelSel.dataset.vtype = op ? (op.getAttribute('data-type')||'') : '';
+    modelSel.classList.remove('err');
   });
 })();
 </script>
 <script>
 (function(){
-  // Heights used on MOBILE only, per widget step. Desktop keeps its CSS height.
-  var STEP_H = {1:625, 2:625, 3:625};
-  var DIAG = /[?&]widgetdebug=1/.test(location.search); // add ?widgetdebug=1 to the URL to log what Berocker sends
+  var openOne=null;
+  function enhance(sel){
+    if(!sel||sel.dataset.pqsOn) return; sel.dataset.pqsOn='1';
+    var host=sel.closest('.pq-inp')||sel.parentNode; host.classList.add('pqs-host');
+    var trig=document.createElement('button'); trig.type='button'; trig.className='pqs-trigger';
+    var val=document.createElement('span'); val.className='pqs-val';
+    var chev=document.createElement('span'); chev.className='pqs-chev';
+    trig.appendChild(val); trig.appendChild(chev);
+    sel.classList.add('pqs-native'); host.appendChild(trig);
+    var panel=document.createElement('div'); panel.className='pqs-panel'; panel.style.display='none';
+    var sb=document.createElement('div'); sb.className='pqs-search';
+    var search=document.createElement('input'); search.type='text'; search.placeholder='Search\u2026'; search.setAttribute('autocomplete','off'); search.setAttribute('inputmode','search');
+    sb.appendChild(search);
+    var list=document.createElement('div'); list.className='pqs-list';
+    panel.appendChild(sb); panel.appendChild(list); document.body.appendChild(panel);
 
-  function frame(){ return document.querySelector('.quote-card.is-embed iframe'); }
-  function isMobile(){ return window.matchMedia('(max-width:760px)').matches; }
-
-  function applyStep(step){
-    if(!isMobile()) return;
-    var h = STEP_H[step];
-    var f = frame();
-    if(h && f) f.style.height = h + 'px';
-  }
-
-  window.addEventListener('message', function(e){
-    if(String(e.origin).indexOf('berocker') === -1) return;
-    var d = e.data;
-    if(DIAG){ try{ console.log('[berocker message]', JSON.stringify(d)); }catch(err){ console.log('[berocker message]', d); } }
-
-    // 1) explicit height wins (works on every breakpoint)
-    var h = null;
-    if(typeof d === 'number') h = d;
-    else if(d && typeof d === 'object') h = d.height || d.frameHeight || d.iframeHeight || (d.data && d.data.height);
-    h = parseInt(h, 10);
-    if(h && h > 200 && h < 4000){
-      var f = frame();
-      if(f) f.style.height = h + 'px';
-      return;
+    function sync(){ var o=sel.options[sel.selectedIndex]; val.textContent=o?o.textContent:''; val.classList.toggle('is-ph',!sel.value); trig.disabled=sel.disabled; }
+    function build(){
+      var q=(search.value||'').trim().toLowerCase(); list.innerHTML=''; var any=false;
+      Array.prototype.forEach.call(sel.options,function(o){
+        if(o.value==='') return;
+        if(q && o.textContent.toLowerCase().indexOf(q)===-1) return;
+        any=true;
+        var it=document.createElement('div'); it.className='pqs-opt'+(o.value===sel.value?' active':''); it.textContent=o.textContent;
+        it.addEventListener('mousedown',function(e){ e.preventDefault(); sel.value=o.value; sel.dispatchEvent(new Event('change',{bubbles:true})); sync(); close(); });
+        list.appendChild(it);
+      });
+      if(!any){ var n=document.createElement('div'); n.className='pqs-none'; n.textContent='No matches'; list.appendChild(n); }
     }
-
-    // 2) otherwise look for a step indicator in common shapes
-    var step = null;
-    if(d && typeof d === 'object'){
-      step = d.step || d.currentStep || d.page || (d.data && (d.data.step || d.data.currentStep));
-    } else if(typeof d === 'string'){
-      var m = d.match(/step[^0-9]{0,3}([1-3])/i);
-      if(m) step = m[1];
+    function place(){
+      var r=trig.getBoundingClientRect(); panel.style.width=r.width+'px'; panel.style.left=r.left+'px';
+      var ph=panel.offsetHeight, below=window.innerHeight-r.bottom;
+      if(below<ph+10 && r.top>below){ panel.style.top=Math.max(8,r.top-ph-6)+'px'; } else { panel.style.top=(r.bottom+6)+'px'; }
     }
-    step = parseInt(step, 10);
-    if(step >= 1 && step <= 3) applyStep(step);
-  }, false);
-
-  window.addEventListener('resize', function(){
-    var f = frame();
-    if(f && !isMobile()) f.style.height = '';  // hand control back to CSS on desktop
-  });
-})();
-</script>
-<script>
-(function(){
-  function fitOneLine(el, min){
-    if(!el) return;
-    el.style.fontSize='';
-    var size=parseFloat(getComputedStyle(el).fontSize);
-    var guard=0;
-    var boxWidth=el.getBoundingClientRect().width;
-    while(el.scrollWidth>boxWidth && size>min && guard<40){
-      size-=1;
-      el.style.fontSize=size+'px';
-      guard++;
-      boxWidth=el.getBoundingClientRect().width;
-    }
+    function open(){ if(sel.disabled) return; if(openOne&&openOne!==close) openOne(); panel.style.display='block'; host.classList.add('pqs-open'); search.value=''; build(); place(); setTimeout(function(){try{search.focus();}catch(e){}} ,10); openOne=close; window.addEventListener('scroll',place,true); window.addEventListener('resize',place); }
+    function close(){ panel.style.display='none'; host.classList.remove('pqs-open'); if(openOne===close) openOne=null; window.removeEventListener('scroll',place,true); window.removeEventListener('resize',place); }
+    trig.addEventListener('click',function(e){ e.stopPropagation(); host.classList.contains('pqs-open')?close():open(); });
+    search.addEventListener('input',function(){ build(); place(); });
+    document.addEventListener('click',function(e){ if(host.classList.contains('pqs-open')&&!panel.contains(e.target)&&!host.contains(e.target)) close(); });
+    document.addEventListener('keydown',function(e){ if(e.key==='Escape'&&host.classList.contains('pqs-open')) close(); });
+    new MutationObserver(function(){ sync(); if(host.classList.contains('pqs-open')){ build(); place(); } }).observe(sel,{childList:true});
+    sel.addEventListener('change',sync);
+    sync();
   }
-  function fitH1(){
-    if(window.innerWidth>760) return;
-    fitOneLine(document.querySelector('.hero-top h1'), 15);
-    fitOneLine(document.querySelector('.mobile-tagline'), 14);
-  }
-  document.addEventListener('DOMContentLoaded', fitH1);
-  window.addEventListener('load', fitH1);
-  window.addEventListener('resize', fitH1);
+  function init(){ ['pq-year','pq-make','pq-model'].forEach(function(id){ var s=document.getElementById(id); if(s) enhance(s); }); }
+  if(document.readyState!=='loading') init(); else document.addEventListener('DOMContentLoaded',init);
 })();
 </script>
 </body>
