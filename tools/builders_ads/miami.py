@@ -20,7 +20,7 @@ CFG = dict(
         'default':  ['Miami Car Shipping', 'Instant ', 'Quote'],
         'enclosed': ['Enclosed Car Shipping', 'Miami · Instant ', 'Quote'],
         'exotic':   ['Exotic & Luxury Car Shipping', 'Miami · Instant ', 'Quote'],
-        'snowbird': ['Snowbird Car Shipping', 'Miami to New York · Instant ', 'Quote'],
+        'snowbird': ['Snowbird Car Shipping', 'Miami \u00b7 Instant ', 'Quote'],
         'newyork':  ['Miami to New York', 'Car Shipping · Instant ', 'Quote'],
         'to':       ['Ship Your Car to Miami', 'Instant ', 'Quote'],
         'from':     ['Ship Your Car from Miami', 'Instant ', 'Quote'],

@@ -856,6 +856,16 @@ The two "CTA buttons side by side / stacked" checks in `test_new_pages.cjs` are 
 always reported FAIL on the quote and home pages (no `.cta-actions` block there); everything else on the quote page
 passes.
 
+## Ads pages: two-line H1 (Oct 28, 2026)
+On all four Ads pages the H1 now always sits on two lines. Under 600px the `<br>` is hidden (the builder emits a space
+before it), `text-wrap:balance` splits the words evenly, and the stylesheet size drops to `clamp(1.6rem,8.4vw,2.4rem)`;
+at every width the inline `window.sgFitH1()` (in the variant script right after the H1, re-run on fonts.ready, load and
+resize) shrinks the font 1px at a time until the block is two lines high, with a floor of 22px or 60% of the stylesheet
+size. Measured at 360/390/430px across every headline variant: nothing exceeds two lines (defaults land at 28–36px,
+Jacksonville's desktop H1 at 56px instead of three lines at 64px). The snowbird variant was shortened to
+"Snowbird Car Shipping / <City> · Instant Quote" on all four pages so it fits too. Scratch measurer:
+`scratchpad/h1_lines.cjs`.
+
 ## Google Ads landing page: Jacksonville (Oct 28, 2026)
 `/vehicle-quote-jacksonville-florida` on **(904) 567-4124** from `tools/builders_ads/jacksonville.py` (lead prefix
 `ADS-JAX`, variants `enclosed`, `exotic`, `military`, `port`, `snowbird`, `newyork`, `to`, `from`). The lede names the

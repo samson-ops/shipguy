@@ -22,7 +22,7 @@ CFG = dict(
         'exotic':   ['Exotic & Luxury Car Shipping', 'Jacksonville · Instant ', 'Quote'],
         'military': ['Military Car Shipping', 'Jacksonville · Instant ', 'Quote'],
         'port':     ['JAXPORT Pickup & Delivery', 'Instant ', 'Quote'],
-        'snowbird': ['Snowbird Car Shipping', 'Jacksonville to the Northeast · Instant ', 'Quote'],
+        'snowbird': ['Snowbird Car Shipping', 'Jacksonville \u00b7 Instant ', 'Quote'],
         'newyork':  ['Jacksonville to New York', 'Car Shipping · Instant ', 'Quote'],
         'to':       ['Ship Your Car to Jacksonville', 'Instant ', 'Quote'],
         'from':     ['Ship Your Car from Jacksonville', 'Instant ', 'Quote'],

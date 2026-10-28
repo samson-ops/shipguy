@@ -91,6 +91,7 @@ def faq_ld(cfg):
     return '<script type="application/ld+json">%s</script>' % json.dumps(d, ensure_ascii=False)
 
 CSS = r'''<style id="sg-ads-css">
+@media (max-width:600px){body.vsbright .hero-copy h1#heroH1{font-size:clamp(1.6rem,8.4vw,2.4rem);text-wrap:balance}#heroH1 br{display:none}}
 .hero-rating{display:inline-flex;align-items:center;gap:7px;margin:12px 0 0;text-decoration:none;color:var(--ink-2);font-size:14px;font-weight:600}
 .hero-rating .hr-stars{display:inline-flex;gap:1px}.hero-rating .hr-stars svg{width:15px;height:15px;color:var(--star)}
 .hero-rating b{color:var(--ink);font-size:15px}.hero-rating:hover span.hr-txt{text-decoration:underline}
@@ -151,6 +152,7 @@ def ads_script(cfg):
     KEYS.forEach(function(k){ if(saved[k]) parts.push(k+'='+saved[k]); }); return parts.join(' | ')+'.';
   }};
   dl.push({event:'lp_view', page_variant:v, ads_gclid:saved.gclid||'', ads_campaign:saved.utm_campaign||'', ads_source:saved.utm_source||''});
+  if(window.sgFitH1){ if(document.fonts&&document.fonts.ready) document.fonts.ready.then(window.sgFitH1); window.addEventListener('load',window.sgFitH1); window.addEventListener('resize',window.sgFitH1); }
 
   /* every tel: link on the page, by location */
   document.addEventListener('click', function(e){
@@ -190,9 +192,17 @@ def ads_script(cfg):
            open_label=cfg['open_label'], close_label=cfg['close_label'])
 
 def variant_script(cfg):
-    return ('<script>(function(){var V=%s;var m=/[?&]v=([a-z-]+)/.exec(location.search);var v=m&&V[m[1]]?m[1]:\'default\';window.sgVariant=v;'
-            'if(v!==\'default\'){var h=document.getElementById(\'heroH1\');if(!h)return;h.textContent=\'\';h.appendChild(document.createTextNode(V[v][0]));h.appendChild(document.createElement(\'br\'));'
-            'h.appendChild(document.createTextNode(V[v][1]));var s=document.createElement(\'span\');s.className=\'accent\';s.textContent=V[v][2];h.appendChild(s);}})();</script>') % json.dumps(cfg['variants'], ensure_ascii=False)
+    """Inline right after the H1: applies a whitelisted ?v= headline and, on phones, shrinks the H1 until it sits on
+    two lines at any width (under 600px the <br> is hidden and text-wrap:balance splits the words evenly; the floor is
+    22px or 60% of the stylesheet size, whichever is larger)."""
+    return ('<script>(function(){var V=%s;window.sgH1Variants=V;var m=/[?&]v=([a-z-]+)/.exec(location.search);var v=m&&V[m[1]]?m[1]:\'default\';window.sgVariant=v;'
+            'var h=document.getElementById(\'heroH1\');if(!h)return;'
+            'if(v!==\'default\'){h.textContent=\'\';h.appendChild(document.createTextNode(V[v][0]+\' \'));h.appendChild(document.createElement(\'br\'));'
+            'h.appendChild(document.createTextNode(V[v][1]));var s=document.createElement(\'span\');s.className=\'accent\';s.textContent=V[v][2];h.appendChild(s);}'
+            'window.sgFitH1=function(){var h=document.getElementById(\'heroH1\');if(!h)return;h.style.fontSize=\'\';'
+            'var cs=getComputedStyle(h),size=parseFloat(cs.fontSize),min=Math.max(22,size*0.6),lh=parseFloat(cs.lineHeight)||size*1.03,n=0;'
+            'while(h.getBoundingClientRect().height>lh*2+2&&size>min&&n<30){size-=1;h.style.fontSize=size+\'px\';cs=getComputedStyle(h);lh=parseFloat(cs.lineHeight)||size*1.03;n++;}};'
+            'window.sgFitH1();})();</script>') % json.dumps(cfg['variants'], ensure_ascii=False)
 
 # ----------------------------------------------------------------------------------------------- build
 def build(cfg):
@@ -225,7 +235,7 @@ def build(cfg):
     h = rep(h, '<p class="eyebrow reveal">Nationwide Auto Transport</p>', '<p class="eyebrow reveal">%s</p>' % cfg['eyebrow'])
     d = cfg['variants']['default']
     h = rep(h, '<h1 class="reveal d2">Get an Instant<br>Car Shipping <span class="accent">Quote</span></h1>',
-            '<h1 class="reveal d2" id="heroH1">%s<br>%s<span class="accent">%s</span></h1>\n      %s\n      <a class="hero-rating reveal d2" href="#reviews" aria-label="Rated 4.9 out of 5, see customer reviews"><span class="hr-stars" aria-hidden="true">%s</span><b>4.9</b><span class="hr-txt">&middot; 487+ reviews</span></a>' % (
+            '<h1 class="reveal d2" id="heroH1">%s <br>%s<span class="accent">%s</span></h1>\n      %s\n      <a class="hero-rating reveal d2" href="#reviews" aria-label="Rated 4.9 out of 5, see customer reviews"><span class="hr-stars" aria-hidden="true">%s</span><b>4.9</b><span class="hr-txt">&middot; 487+ reviews</span></a>' % (
                 H.escape(d[0], quote=False), H.escape(d[1], quote=False), H.escape(d[2], quote=False), variant_script(cfg), _stars()))
     h = rep(h, '<p class="lede reveal d2">Fully insured, door-to-door car shipping anywhere in the U.S. — fast, transparent pricing in seconds.</p>',
             '<p class="lede reveal d2">%s</p>' % cfg['lede'])
