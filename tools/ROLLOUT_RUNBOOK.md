@@ -856,6 +856,25 @@ The two "CTA buttons side by side / stacked" checks in `test_new_pages.cjs` are 
 always reported FAIL on the quote and home pages (no `.cta-actions` block there); everything else on the quote page
 passes.
 
+## Google Ads landing pages: four topic pages (Oct 28, 2026)
+Same builder, main line **(866) 297-3244** (the quote page's number, so nothing is swapped), no hours indicator (the
+main line's hours are not stated anywhere on the site), noindex, not in the sitemap, not linked:
+- `/vehicle-quote-state-to-state-car-shipping` — `builders_ads/state_to_state.py`, prefix `ADS-S2S`, variants
+  `interstate`, `crosscountry`, `relocation`, `dealer`, `enclosed`; interstate lanes table from the city tables.
+  `_redirects` also sends the capital-S spelling from the brief to the lowercase URL.
+- `/vehicle-quote-snowbird-car-shipping` — `snowbird.py`, `ADS-SNOW`, variants `florida`, `arizona`, `north`,
+  `enclosed`, `newyork`, `chicago`; North→Sun Belt lanes table, seasonal cards, destination chips.
+- `/vehicle-quote-expedited-car-shipping` — `expedited.py`, `ADS-EXP`, variants `fast`, `rush`, `sameweek`,
+  `enclosed`, `relocation`; three-column standard-vs-expedited text table (`table_rate_col=False`), claims kept to
+  the existing expedited page's ("quickest available pickup, often within 1 to 3 days", priority premium shown before
+  booking, no same-day promise); the tip and two FAQs push the call.
+- `/vehicle-quote-how-car-shipping-works` — `how_it_works.py`, `ADS-HOW`, variants `cost`, `first`, `process`,
+  `doortodoor`; timing-and-cost-by-distance table, stage cards, prep checklist chips, nine FAQs.
+`adspage.py` was generalised for these (generic `table_*` / `cards_*` / `chips` / `tip` keys, optional hours; the
+city configs still build byte-identical apart from one added CSS rule). `test_ads_page.cjs` now reads each page's
+own variant list and tolerates the missing hours element; `test_new_pages.cjs` accepts `ADS-S2S`. All four pass both
+tests, the H1 two-line measurement at 360/390/430 across every variant, and `audit_site.py` (30 core pages).
+
 ## Ads pages: two-line H1 (Oct 28, 2026)
 On all four Ads pages the H1 now always sits on two lines. Under 600px the `<br>` is hidden (the builder emits a space
 before it), `text-wrap:balance` splits the words evenly, and the stylesheet size drops to `clamp(1.6rem,8.4vw,2.4rem)`;

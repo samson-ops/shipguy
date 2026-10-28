@@ -126,3 +126,6 @@
 
 # ---- Oct 2026: build tooling is versioned in the repo but never served ----
 /tools/*                                         /  301
+
+# ---- Oct 2026: Ads landing page typed with a capital S in the brief; keep the lowercase URL canonical ----
+/vehicle-quote-State-to-state-car-shipping       /vehicle-quote-state-to-state-car-shipping  301

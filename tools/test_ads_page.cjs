@@ -16,19 +16,22 @@ function ok(cond, msg){ console.log((cond ? 'PASS ' : 'FAIL ') + msg); if(!cond)
   const errors = [];
   page.on('pageerror', e => errors.push('pageerror: ' + e.message));
   page.on('console', m => { if (m.type() === 'error' && !/ERR_TUNNEL|ERR_NAME|quote-config|404|501|net::/.test(m.text())) errors.push('console: ' + m.text()); });
-  await page.goto(URL + '?v=enclosed&gclid=TESTGCLID123&utm_campaign=test-enclosed', { waitUntil: 'load' });
+  await page.goto(URL, { waitUntil: 'load' });
+  const V = await page.evaluate(() => window.sgH1Variants);
+  const VK = Object.keys(V).find(k => k !== 'default');   // first whitelisted variant on this page
+  await page.goto(URL + '?v=' + VK + '&gclid=TESTGCLID123&utm_campaign=test-enclosed', { waitUntil: 'load' });
   await page.waitForTimeout(600);
   const h1 = await page.$eval('#heroH1', e => e.innerText.replace(/\s+/g, ' ').trim());
-  ok(/Enclosed Car Shipping/.test(h1) && /Quote/.test(h1), 'H1 variant applied: ' + h1);
+  ok(h1 === (V[VK][0] + ' ' + V[VK][1] + V[VK][2]).replace(/\s+/g, ' ').trim(), 'H1 variant ?v=' + VK + ' applied: ' + h1);
   let dl = await page.evaluate(() => window.dataLayer.filter(x => x && x.event && !/^gtm\./.test(x.event)));
   const lp = dl.find(x => x.event === 'lp_view');
-  ok(lp && lp.ads_gclid === 'TESTGCLID123' && lp.page_variant === 'enclosed' && lp.ads_campaign === 'test-enclosed', 'lp_view carries gclid/variant/campaign: ' + JSON.stringify(lp));
+  ok(lp && lp.ads_gclid === 'TESTGCLID123' && lp.page_variant === VK && lp.ads_campaign === 'test-enclosed', 'lp_view carries gclid/variant/campaign: ' + JSON.stringify(lp));
   const stored = await page.evaluate(() => localStorage.getItem('sg_ads'));
   ok(stored && stored.includes('TESTGCLID123'), 'gclid persisted in localStorage');
   const note = await page.evaluate(() => window.sgAds.note());
-  ok(note === 'Landing page: /' + SLUG + ' | variant=enclosed | gclid=TESTGCLID123 | utm_campaign=test-enclosed.', 'lead note: ' + note);
-  const hours = await page.$eval('#hoursNow', e => e.textContent);
-  ok(/Open now|Closed now/.test(hours), 'hours indicator: ' + hours);
+  ok(note === 'Landing page: /' + SLUG + ' | variant=' + VK + ' | gclid=TESTGCLID123 | utm_campaign=test-enclosed.', 'lead note: ' + note);
+  const hours = await page.evaluate(() => { const e = document.getElementById('hoursNow'); return e ? e.textContent : null; });
+  ok(hours === null || /Open now|Closed now/.test(hours), hours === null ? 'no hours indicator (main-line page)' : 'hours indicator: ' + hours);
   const step = await page.$eval('#pqStepCount', e => e.textContent);
   ok(/Step 1 of 3/.test(step), 'step counter: ' + step);
   // call click tracking (block navigation)
@@ -65,7 +68,7 @@ function ok(cond, msg){ console.log((cond ? 'PASS ' : 'FAIL ') + msg); if(!cond)
   const resultTel = await page.$eval('#pqCallBtn', e => e.getAttribute('href'));
   ok(resultTel === 'tel:' + TEL, 'result call button uses the city line');
   await page.goto(URL, { waitUntil: 'load' }); await page.waitForTimeout(500);
-  ok(!/Enclosed/.test(await page.$eval('#heroH1', e => e.innerText)), 'default H1 without ?v: ' + (await page.$eval('#heroH1', e => e.innerText.replace(/\s+/g,' '))));
+  { const d = await page.$eval('#heroH1', e => e.innerText.replace(/\s+/g, ' ').trim()); ok(d === (V.default[0] + ' ' + V.default[1] + V.default[2]).replace(/\s+/g, ' ').trim(), 'default H1 without ?v: ' + d); }
   await page.screenshot({ path: OUT + SLUG + '-desktop.png', fullPage: false });
   await page.screenshot({ path: OUT + SLUG + '-desktop-full.png', fullPage: true });
   await ctx.close();

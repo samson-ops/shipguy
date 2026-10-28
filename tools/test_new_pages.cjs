@@ -90,7 +90,7 @@ const EXPECT_COUNT = String(require('fs').readdirSync('/home/claude/build/shipgu
         ok('lead posted + redirected to booking', booked && posts.length === 1, `posts=${posts.length}`);
         if (posts[0]) {
           const p0 = posts[0];
-          ok('payload: ZIPs + vehicle + consent', p0.origin_postal_code === '74119' && p0.destination_postal_code === '75201' && p0.vehicle_make === undefined && p0.vehicles[0].vehicle_make === 'Toyota' && p0.vehicles[0].vehicle_type === 'SUV' && /YES/.test(p0.customer_comments) && /^(WEB|ADS-[A-Z]+)-\d+$/.test(p0.secondary_id), JSON.stringify({ o: p0.origin_postal_code, d: p0.destination_postal_code, v: p0.vehicles[0], c: p0.customer_comments }));
+          ok('payload: ZIPs + vehicle + consent', p0.origin_postal_code === '74119' && p0.destination_postal_code === '75201' && p0.vehicle_make === undefined && p0.vehicles[0].vehicle_make === 'Toyota' && p0.vehicles[0].vehicle_type === 'SUV' && /YES/.test(p0.customer_comments) && /^(WEB|ADS-[A-Z0-9]+)-\d+$/.test(p0.secondary_id), JSON.stringify({ o: p0.origin_postal_code, d: p0.destination_postal_code, v: p0.vehicles[0], c: p0.customer_comments }));
         }
       }
       ok(`${label} no JS errors`, errors.length === 0, errors.join(' | ').slice(0, 200));

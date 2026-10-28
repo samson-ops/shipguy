@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
 """Google Ads landing-page builder (Oct 28, 2026).
 
-Derives a city-focused copy of the /vehicle-quote page: same quote tool, same /api/quote proxy (the
+Derives a focused copy of the /vehicle-quote page for one city (Miami, Tampa, ...) or one topic
+(state-to-state, snowbird, expedited, how it works): same quote tool, same /api/quote proxy (the
 vehicle-quote BeRocker lead source), same GTM container, plus
-  * a city phone line on every tel: link (header, hero call block, quote result, consent text, how/CTA band,
+  * a phone line on every tel: link (a city line, or the main (866) 297-3244 for topic pages) (header, hero call block, quote result, consent text, how/CTA band,
     footer, mobile sticky bar), each tagged with data-track="call-<location>"
   * city hero copy (broker disclosure in the lede), city lanes table, pickup/access cards, city FAQ (+FAQPage
     JSON-LD generated from the same data), Miami-flavoured how-it-works and CTA band
@@ -11,7 +12,11 @@ vehicle-quote BeRocker lead source), same GTM container, plus
     quote_redirect, quote_error), gclid/gbraid/wbraid/utm capture (90-day localStorage) written into the
     lead's customer_comments, `?v=` whitelisted headline variants, a 900 ms floor between quote_lead and the
     booking redirect so the conversion tag has time to fire
-  * noindex,follow (the SEO page for the city is /city/<slug>/; this one is paid traffic only)
+  * noindex,follow (the SEO page for the city/topic already exists; this one is paid traffic only)
+Config keys: city pages use lanes_*/access_*/neighborhoods/season; topic pages use the generic table_* (any column
+count, `table_hide_m` = column index hidden on phones, `table_rate_col`=False for text in the last column),
+cards_*/cards, chips/chips_cap, tip. Hours keys (hours_open/hours_close/tz/...) are optional: without them the hero
+call note keeps the quote page's wording and no open/closed indicator is rendered.
 Usage: a config module in builders_ads/ calls build(CFG). The base is read from the live build tree so the
 quote tool's JS stays the single source; every edit is an asserted replacement, so a changed base fails loudly.
 """
@@ -50,6 +55,23 @@ def _text(s):
 def _stars(n=5):
     return STAR * n
 
+def _norm(cfg):
+    """Accept the original city keys and the generic topic keys; return one dict with the generic names filled."""
+    c = dict(cfg)
+    for k in ('eyebrow', 'h2', 'sub', 'foot', 'note'):
+        c.setdefault('table_' + k, c.get('lanes_' + k))
+    c.setdefault('table_rows', c.get('lanes'))
+    c.setdefault('table_cols', ['Route', 'Corridor &middot; distance', 'Est. transit', 'Est. open rate*'])
+    c.setdefault('table_hide_m', 1)
+    c.setdefault('table_rate_col', True)
+    for k in ('eyebrow', 'h2', 'sub'):
+        c.setdefault('cards_' + k, c.get('access_' + k))
+    c.setdefault('cards', c.get('access_cards'))
+    c.setdefault('chips', c.get('neighborhoods'))
+    c.setdefault('tip', c.get('season'))
+    c.setdefault('call_small', 'Prefer to talk? Call now')
+    return c
+
 # ----------------------------------------------------------------------------------------------- sections
 def hero_badges(cfg):
     out = []
@@ -58,18 +80,23 @@ def hero_badges(cfg):
     return '<div class="hero-badges reveal d3">\n        %s\n      </div>' % '\n        '.join(out)
 
 def lanes_section(cfg):
-    rows = ''.join('<tr><td>%s</td><td class="sg-hide-m">%s</td><td>%s</td><td>%s</td></tr>' % r for r in cfg['lanes'])
+    hm = cfg['table_hide_m']
+    def cell(tag, i, v): return '<%s%s>%s</%s>' % (tag, ' class="sg-hide-m"' if i == hm else '', v, tag)
+    head = ''.join(cell('th', i, v) for i, v in enumerate(cfg['table_cols']))
+    for r in cfg['table_rows']: assert len(r) == len(cfg['table_cols']), r
+    rows = ''.join('<tr>%s</tr>' % ''.join(cell('td', i, v) for i, v in enumerate(r)) for r in cfg['table_rows'])
+    cls = 'sg-table' + ('' if cfg['table_rate_col'] else ' sg-table-text')
     return ('<section class="sg-lanes" id="lanes">\n  <div class="container">\n    <div class="lp-head">\n      <p class="lp-eyebrow">%s</p>\n      <h2>%s</h2>\n      <p class="lp-sub">%s</p>\n    </div>\n'
-            '    <div class="sg-table-wrap"><table class="sg-table"><thead><tr><th>Route</th><th class="sg-hide-m">Corridor &middot; distance</th><th>Est. transit</th><th>Est. open rate*</th></tr></thead><tbody>%s</tbody></table></div>\n'
+            '    <div class="sg-table-wrap"><table class="%s"><thead><tr>%s</tr></thead><tbody>%s</tbody></table></div>\n'
             '    <p class="sg-foot">%s</p>\n    <p class="sg-lanes-note">%s</p>\n  </div>\n</section>\n') % (
-            cfg['lanes_eyebrow'], cfg['lanes_h2'], cfg['lanes_sub'], rows, cfg['lanes_foot'], cfg['lanes_note'])
+            cfg['table_eyebrow'], cfg['table_h2'], cfg['table_sub'], cls, head, rows, cfg['table_foot'], cfg['table_note'])
 
 def access_section(cfg):
-    cards = ''.join('<div class="sg-card"><span class="ic">%s</span><h3>%s</h3><p>%s</p></div>' % (ICONS[ic], t, p) for ic, t, p in cfg['access_cards'])
-    chips = ''.join('<span class="sg-chip">%s</span>' % c for c in cfg['neighborhoods'])
+    cards = ''.join('<div class="sg-card"><span class="ic">%s</span><h3>%s</h3><p>%s</p></div>' % (ICONS[ic], t, p) for ic, t, p in cfg['cards'])
+    chips = ''.join('<span class="sg-chip">%s</span>' % c for c in cfg['chips'])
     return ('<section class="sg-access" id="pickup">\n  <div class="container">\n    <div class="lp-head">\n      <p class="lp-eyebrow">%s</p>\n      <h2>%s</h2>\n      <p class="lp-sub">%s</p>\n    </div>\n'
             '    <div class="sg-cards">%s</div>\n    <div class="sg-chips">%s</div>\n    <p class="sg-chips-cap">%s</p>\n    <p class="sg-season">%s</p>\n  </div>\n</section>\n') % (
-            cfg['access_eyebrow'], cfg['access_h2'], cfg['access_sub'], cards, chips, cfg['chips_cap'], cfg['season'])
+            cfg['cards_eyebrow'], cfg['cards_h2'], cfg['cards_sub'], cards, chips, cfg['chips_cap'], cfg['tip'])
 
 def how_section(cfg):
     ics = ['doc', 'truck', 'shield']
@@ -104,6 +131,7 @@ CSS = r'''<style id="sg-ads-css">
 .sg-table th{background:var(--brand-tint);color:var(--ink);font-family:var(--font-display);font-weight:800;font-size:12.5px;letter-spacing:.06em;text-transform:uppercase;text-align:left;padding:12px 16px}
 .sg-table td{padding:12px 16px;border-top:1px solid var(--line);color:var(--ink-2);vertical-align:top}
 .sg-table td:first-child{color:var(--ink);font-weight:600}.sg-table td:last-child{font-weight:700;color:var(--brand-deep);white-space:nowrap}
+.sg-table-text td:last-child{white-space:normal;color:var(--ink);font-weight:600}
 .sg-foot{max-width:900px;margin:14px auto 0;color:var(--muted);font-size:13.5px;line-height:1.55}
 .sg-lanes-note{max-width:900px;margin:18px auto 0;color:var(--ink-2);font-size:15.5px;line-height:1.6}
 .sg-access{background:#fff;padding:64px 0}
@@ -161,15 +189,7 @@ def ads_script(cfg):
     dl.push({event:'call_click', call_location:t.getAttribute('data-track')||'call-other', phone:(t.getAttribute('href')||'').replace(/^tel:/i,''), page_variant:v});
   }, true);
 
-  /* hours indicator (%(hours_open)d:00-%(hours_close)d:00 %(tz_label)s, seven days) */
-  try{
-    var f=new Intl.DateTimeFormat('en-US',{timeZone:'%(tz)s',hour:'numeric',hour12:false});
-    var hr=parseInt(f.format(new Date()),10); if(hr===24) hr=0;
-    var open=hr>=%(hours_open)d && hr<%(hours_close)d, el=document.getElementById('hoursNow'), dot=document.getElementById('hoursDot');
-    if(el){ el.textContent=open?'Open now · real people until %(close_label)s %(tz_label)s':'Closed now · opens %(open_label)s %(tz_label)s, quote online any time'; }
-    if(dot){ dot.classList.toggle('is-open', open); }
-  }catch(e){}
-
+%(hours_js)s
   /* "Step N of 3" on the quote card */
   var card=document.getElementById('pquote'), sc=document.getElementById('pqStepCount');
   if(card && sc){
@@ -188,8 +208,22 @@ def ads_script(cfg):
   }
 })();
 </script>
-''' % dict(slug=cfg['slug'], tz=cfg['tz'], tz_label=cfg['tz_label'], hours_open=cfg['hours_open'], hours_close=cfg['hours_close'],
-           open_label=cfg['open_label'], close_label=cfg['close_label'])
+''' % dict(slug=cfg['slug'], hours_js=hours_js(cfg))
+
+HOURS_JS = '''  /* hours indicator (%(hours_open)d:00-%(hours_close)d:00 %(tz_label)s, seven days) */
+  try{
+    var f=new Intl.DateTimeFormat('en-US',{timeZone:'%(tz)s',hour:'numeric',hour12:false});
+    var hr=parseInt(f.format(new Date()),10); if(hr===24) hr=0;
+    var open=hr>=%(hours_open)d && hr<%(hours_close)d, el=document.getElementById('hoursNow'), dot=document.getElementById('hoursDot');
+    if(el){ el.textContent=open?'Open now · real people until %(close_label)s %(tz_label)s':'Closed now · opens %(open_label)s %(tz_label)s, quote online any time'; }
+    if(dot){ dot.classList.toggle('is-open', open); }
+  }catch(e){}
+'''
+
+def hours_js(cfg):
+    if cfg.get('hours_open') is None: return '  /* no hours indicator: this page uses the main line */\n'
+    return HOURS_JS % dict(tz=cfg['tz'], tz_label=cfg['tz_label'], hours_open=cfg['hours_open'], hours_close=cfg['hours_close'],
+                           open_label=cfg['open_label'], close_label=cfg['close_label'])
 
 def variant_script(cfg):
     """Inline right after the H1: applies a whitelisted ?v= headline and, on phones, shrinks the H1 until it sits on
@@ -206,16 +240,17 @@ def variant_script(cfg):
 
 # ----------------------------------------------------------------------------------------------- build
 def build(cfg):
+    cfg = _norm(cfg)
     h = open(BASE, encoding='utf-8').read()
     base_index = open(SITE + 'vehicle-quote/index.html', encoding='utf-8').read()
     assert h == base_index, 'vehicle-quote.html and vehicle-quote/index.html differ'
     url = 'https://shipguy.com/' + cfg['slug']
 
-    # ---- phone line everywhere
-    h = rep(h, BASE_TEL, 'tel:' + cfg['tel'], 7)
-    h = rep(h, BASE_DISP.replace(' ', '&nbsp;'), cfg['disp_nbsp'], 3)
-    h = rep(h, BASE_DISP, cfg['disp'], 5)
-    assert '297-3244' not in h and '18662973244' not in h
+    # ---- phone line everywhere (a topic page keeps the quote page's main line)
+    assert h.count(BASE_TEL) == 7 and h.count(BASE_DISP) == 5 and h.count(BASE_DISP.replace(' ', '&nbsp;')) == 3
+    if 'tel:' + cfg['tel'] != BASE_TEL:
+        h = h.replace(BASE_TEL, 'tel:' + cfg['tel']).replace(BASE_DISP.replace(' ', '&nbsp;'), cfg['disp_nbsp']).replace(BASE_DISP, cfg['disp'])
+        assert '297-3244' not in h and '18662973244' not in h
     h = rep(h, '<a class="btn-call" href="tel:', '<a class="btn-call" data-track="call-header" href="tel:')
     h = rep(h, '<a class="pq-btn-ghost" id="pqCallBtn" href="tel:', '<a class="pq-btn-ghost" id="pqCallBtn" data-track="call-quote-result" href="tel:')
     h = rep(h, 'For support, call <a href="tel:', 'For support, call <a data-track="call-consent" href="tel:')
@@ -242,8 +277,9 @@ def build(cfg):
     h = re.sub(r'<div class="hero-badges reveal d3">.*?</div>\n      </div>', lambda m: hero_badges(cfg), h, count=1, flags=re.S)
     assert 'Fully Insured Transport' not in h
     h = rep(h, '<small>Prefer to talk? Call now</small>', '<small>%s</small>' % cfg['call_small'])
-    h = rep(h, '<p class="hero-call-note">Real people, seven days a week &middot; Quotes in minutes &middot; No obligation</p>',
-            '<p class="hero-call-note"><span class="hours-dot" id="hoursDot"></span><span id="hoursNow">%s</span> &middot; No obligation</p>' % cfg['hours_static'])
+    if cfg.get('hours_open') is not None:
+        h = rep(h, '<p class="hero-call-note">Real people, seven days a week &middot; Quotes in minutes &middot; No obligation</p>',
+                '<p class="hero-call-note"><span class="hours-dot" id="hoursDot"></span><span id="hoursNow">%s</span> &middot; No obligation</p>' % cfg['hours_static'])
 
     # ---- quote card copy
     h = rep(h, '<p class="pq-sub">Fast, secure pricing in 30 seconds.</p>', '<p class="pq-sub">%s</p>' % cfg['pq_sub'])
@@ -303,9 +339,11 @@ def check(path, cfg):
     for kw in CLAIMS:
         if kw in low and not (kw == 'guarantee' and 'no guarantee' in low): issues.append(('over-claim', kw))
     # sentence length on everything the config authored + the sections built from it
-    authored = [cfg['lede'], cfg['lanes_sub'], cfg['lanes_foot'], cfg['lanes_note'], cfg['access_sub'], cfg['chips_cap'], cfg['season'], cfg['how_sub'],
+    cfg = _norm(cfg)
+    authored = [cfg['lede'], cfg['table_sub'], cfg['table_foot'], cfg['table_note'], cfg['cards_sub'], cfg['chips_cap'], cfg['tip'], cfg['how_sub'],
                 cfg['why_sub'], cfg['why_support'], cfg['cta_sub'], cfg['reviews_sub'], cfg['foot_tag']]
-    authored += [p for _, _, p in cfg['access_cards']] + [p for _, p in cfg['how_steps']] + [a for _, a in cfg['faq']] + [s for _, _, s in cfg['badges']]
+    authored += [p for _, _, p in cfg['cards']] + [p for _, p in cfg['how_steps']] + [a for _, a in cfg['faq']] + [s for _, _, s in cfg['badges']]
+    if not cfg['table_rate_col']: authored += [c for r in cfg['table_rows'] for c in r]
     for u in authored:
         for s in sents(u):
             if len(s.split()) > 18: issues.append(('long-sentence(%d)' % len(s.split()), s))
