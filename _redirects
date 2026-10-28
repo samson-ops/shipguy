@@ -120,8 +120,6 @@
 /city/vehicle-quote/                             /vehicle-quote  301
 /vehicle-quote/vehicle-quote                     /vehicle-quote  301
 /vehicle-quote/vehicle-quote/                    /vehicle-quote  301
-/vehicle-quote-florida                           /vehicle-quote  301
-/vehicle-quote-florida/                          /vehicle-quote  301
 /city/auto-transport-phoenix-arizona.html        /city/auto-transport-phoenix-arizona/  301
 
 # ---- Oct 2026: build tooling is versioned in the repo but never served ----

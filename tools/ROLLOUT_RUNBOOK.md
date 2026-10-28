@@ -856,6 +856,16 @@ The two "CTA buttons side by side / stacked" checks in `test_new_pages.cjs` are 
 always reported FAIL on the quote and home pages (no `.cta-actions` block there); everything else on the quote page
 passes.
 
+## Google Ads landing page: Florida (Oct 28, 2026)
+`/vehicle-quote-florida` on the main **(866) 297-3244** line (no hours indicator), `builders_ads/florida.py`, prefix
+`ADS-FL`, variants `to`, `from`, `snowbird`, `newyork`, `midwest`, `enclosed`, `military`. Content follows
+florida-auto-transport.html: the state lanes table (Orlando-to-Miami ranges, tolls included), four region cards
+(South Florida, Gulf/Central, Northeast/Panhandle, the Keys), 26 city chips, snowbird/hurricane timing tip, nine FAQs
+(bases, tolls, storms). The legacy `/vehicle-quote-florida -> /vehicle-quote` redirects (both forms) were removed from
+`_redirects`, since Cloudflare evaluates redirects before static files and the page would never have been served.
+`audit_site.py` now globs `vehicle-quote-*.html` (37 core pages). Passes `test_ads_page.cjs`, `test_new_pages.cjs`
+and the two-line H1 measurement.
+
 ## Google Ads landing pages: Fort Lauderdale, West Palm Beach, Boca Raton, Naples (Oct 28, 2026)
 Four more South Florida city pages, same build, ET hours indicator on:
 - `/vehicle-quote-fort-lauderdale-florida` — **(954) 866-9281**, `builders_ads/fort_lauderdale.py`, prefix `ADS-FLL`.
