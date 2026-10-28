@@ -856,6 +856,20 @@ The two "CTA buttons side by side / stacked" checks in `test_new_pages.cjs` are 
 always reported FAIL on the quote and home pages (no `.cta-actions` block there); everything else on the quote page
 passes.
 
+## Google Ads landing pages: insurance and instant quote (Oct 28, 2026)
+Two more topic pages on the main line, same build:
+- `/vehicle-quote-car-shipping-insurance` — `builders_ads/insurance.py`, prefix `ADS-INS`, variants `insured`,
+  `damage`, `claims`, `enclosed`, `luxury`. Every coverage statement mirrors wording already on the site (faq, services,
+  terms, enclosed page): carrier cargo insurance covers the car on the truck and is included in the quote, Ship Guy is a
+  broker that verifies coverage and helps communicate a claim, the Bill of Lading at delivery preserves a claim,
+  personal items are not covered, enclosed carriers carry higher limits, "check your own policy". No dollar limits
+  and no "no deductible" claim. Three-column covered / not-covered table, four claim-habit cards, nine FAQs.
+- `/vehicle-quote-instant-car-shipping-quote` — `instant_quote.py`, `ADS-IQ`, variants `cost`, `affordable`, `online`,
+  `calculator`, `enclosed`, `door`, `nationwide`; "what sets the price" table (seven factors, examples from the city
+  tables and the open-vs-enclosed 30–40 percent figure from open-car-transport.html), four "why instant" cards,
+  service chips, nine FAQs. The default H1 is the quote page's own ("Get an Instant / Car Shipping Quote").
+Both pass `test_ads_page.cjs`, `test_new_pages.cjs`, the two-line H1 measurement and `audit_site.py` (32 core pages).
+
 ## Google Ads landing pages: four topic pages (Oct 28, 2026)
 Same builder, main line **(866) 297-3244** (the quote page's number, so nothing is swapped), no hours indicator (the
 main line's hours are not stated anywhere on the site), noindex, not in the sitemap, not linked:
