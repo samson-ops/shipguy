@@ -856,6 +856,22 @@ The two "CTA buttons side by side / stacked" checks in `test_new_pages.cjs` are 
 always reported FAIL on the quote and home pages (no `.cta-actions` block there); everything else on the quote page
 passes.
 
+## Google Ads landing pages: Fort Lauderdale, West Palm Beach, Boca Raton, Naples (Oct 28, 2026)
+Four more South Florida city pages, same build, ET hours indicator on:
+- `/vehicle-quote-fort-lauderdale-florida` — **(954) 866-9281**, `builders_ads/fort_lauderdale.py`, prefix `ADS-FLL`.
+  There is no Fort Lauderdale city page, so the lane figures interpolate the Miami, Boca and Naples tables; cards
+  cover the barrier island and drawbridges, downtown condos, Weston/Parkland gates, the suburbs.
+- `/vehicle-quote-west-palm-beach-florida` — **(561) 960-3491**, `west_palm_beach.py`, `ADS-WPB`; Palm Beach island
+  rules, Flagler Drive meeting spots, Wellington and the equestrian season (`?v=equestrian`), the suburbs.
+- `/vehicle-quote-boca-raton-florida` — **(561) 960-3491** (same line as West Palm Beach, as briefed), `boca_raton.py`,
+  `ADS-BOCA`; gatehouse rules, meeting spots, Intracoastal condos, West Boca/Delray/Deerfield.
+- `/vehicle-quote-naples-florida` — **(239) 388-5753**, `naples.py`, `ADS-NAP`; golf-community gates, Old Naples
+  streets, Golden Gate Estates and Marco Island, the Midwest lanes (`?v=midwest`, `chicago`, `detroit`), the Alley toll.
+Jacksonville's line in the same brief, (904) 567-4124, is what that page already uses. The content check now treats
+"St. Andrews" / "Dr. Phillips" as place names. All four pass `test_ads_page.cjs`, `test_new_pages.cjs`, the two-line
+H1 measurement (the exotic/equestrian variants were shortened for the long city names) and `audit_site.py`
+(36 core pages). Owner check: the three new lines ring sales, 6 AM–11 PM ET seven days.
+
 ## Google Ads landing pages: insurance and instant quote (Oct 28, 2026)
 Two more topic pages on the main line, same build:
 - `/vehicle-quote-car-shipping-insurance` — `builders_ads/insurance.py`, prefix `ADS-INS`, variants `insured`,

@@ -332,7 +332,7 @@ def check(path, cfg):
     body = h[h.index('<body'):]
     vis = re.sub(r'<script.*?</script>|<style.*?</style>|<svg.*?</svg>', ' ', body, flags=re.S)
     vis = re.sub(r'<[^>]+>', ' ', vis); vis = H.unescape(re.sub(r'\s+', ' ', vis))
-    scan = vis.replace('Dr. Phillips', 'Dr Phillips')   # a neighborhood name, not an abbreviation in prose
+    scan = re.sub(r'\b(St|Dr)\. (?=[A-Z])', r'\1 ', vis)   # St. Andrews / Dr. Phillips are place names, not abbreviations in prose
     for tok, rx in BANNED:
         for m in re.finditer(rx, scan): issues.append(('banned-token ' + tok, scan[max(0, m.start() - 50):m.end() + 30]))
     low = vis.lower()
