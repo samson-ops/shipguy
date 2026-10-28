@@ -844,6 +844,18 @@ parses: 217 FAQPage, 217 BreadcrumbList, 166 LocalBusiness, Organization, WebSit
 Gilbert note); Playwright 0 failures on Reading, Detroit, the Michigan page and locations.html; breadcrumb screenshots
 checked at 1366 and 390 px. Pushed straight to main.
 
+## Quote page call CTA (Oct 28, 2026)
+`/vehicle-quote` (both byte-identical files) got a tap-to-call block directly under the "Licensed & Insured" and "FMCSA MC
+#1457715 · DOT #3932149" pills in the hero: a brand-blue button ("Prefer to talk? Call now / (866) 297-3244",
+`id="heroCallBtn"`, `data-track="call-hero"`, `href="tel:+18662973244"`) and a note line ("Real people, seven days a
+week · Quotes in minutes · No obligation"). The number is the one the quote page already uses in its header, booking
+CTA and footer. On phones the block sits below the quote card (the hero-rest column) and the sticky header's Call
+button covers the top of the page. For Google Ads call tracking, target the `#heroCallBtn` click in GTM, or let a
+website call-conversion / forwarding-number tag swap the number — the digits are plain text inside the `<b>`.
+The two "CTA buttons side by side / stacked" checks in `test_new_pages.cjs` are city/state-page checks and have
+always reported FAIL on the quote and home pages (no `.cta-actions` block there); everything else on the quote page
+passes.
+
 ## Florida Google Business Profile links (this delivery)
 A fourth "Directions → Open in Google Maps" row was added to the office card on Gainesville, Jacksonville,
 Tallahassee and Daytona Beach using the maps.app.goo.gl links you sent. The builders carry `map_link=` so rebuilds keep it.
