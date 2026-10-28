@@ -36,6 +36,7 @@ ICONS = {
   'bridge': '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12h20"/><path d="M4 12V8M20 12V8M8 12V7M16 12V7M12 12V6"/><path d="M2 8c3-3 7-4 10-4s7 1 10 4"/><path d="M4 12v6M20 12v6"/></svg>',
   'gate': '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="10" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/><circle cx="12" cy="16" r="1.4"/></svg>',
   'home': '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11 12 3l9 8"/><path d="M5 10v10a1 1 0 0 0 1 1h4v-6h4v6h4a1 1 0 0 0 1-1V10"/></svg>',
+  'clock': '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>',
   'doc': '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3v4a1 1 0 0 0 1 1h4"/><path d="M17 21H7a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h7l5 5v11a2 2 0 0 1-2 2Z"/><path d="M9 13h6M9 17h4"/></svg>',
   'shield': '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><path d="m9 10 2 2 4-4"/></svg>',
 }
@@ -285,8 +286,9 @@ def check(path, cfg):
     body = h[h.index('<body'):]
     vis = re.sub(r'<script.*?</script>|<style.*?</style>|<svg.*?</svg>', ' ', body, flags=re.S)
     vis = re.sub(r'<[^>]+>', ' ', vis); vis = H.unescape(re.sub(r'\s+', ' ', vis))
+    scan = vis.replace('Dr. Phillips', 'Dr Phillips')   # a neighborhood name, not an abbreviation in prose
     for tok, rx in BANNED:
-        for m in re.finditer(rx, vis): issues.append(('banned-token ' + tok, vis[max(0, m.start() - 50):m.end() + 30]))
+        for m in re.finditer(rx, scan): issues.append(('banned-token ' + tok, scan[max(0, m.start() - 50):m.end() + 30]))
     low = vis.lower()
     for kw in CLAIMS:
         if kw in low and not (kw == 'guarantee' and 'no guarantee' in low): issues.append(('over-claim', kw))

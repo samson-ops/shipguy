@@ -856,6 +856,18 @@ The two "CTA buttons side by side / stacked" checks in `test_new_pages.cjs` are 
 always reported FAIL on the quote and home pages (no `.cta-actions` block there); everything else on the quote page
 passes.
 
+## Google Ads landing pages: Tampa and Orlando (Oct 28, 2026)
+Same build as Miami below, from `tools/builders_ads/tampa.py` and `orlando.py`:
+`/vehicle-quote-tampa-florida` on **(813) 497-4151** (lead prefix `ADS-TPA`, variants `enclosed`, `exotic`,
+`military`, `snowbird`, `newyork`, `to`, `from`) and `/vehicle-quote-orlando-florida` on **(407) 604-7299** (`ADS-ORL`,
+variants `enclosed`, `exotic`, `vacation`, `snowbird`, `newyork`, `to`, `from`). Lanes tables carry the city pages'
+figures; pickup cards cover the bay bridges / Bayshore and Davis Islands / MacDill and gated sections / the suburbs for
+Tampa, and Interstate 4 timing / vacation-home gates / International Drive / Lake Nona and the suburbs for Orlando.
+Both noindex, not in the sitemap, not linked. `audit_site.py` now globs `vehicle-quote-*-*.html` into core and the
+orphan skip set, so new Ads pages need no audit edit. The functional check is now `tools/test_ads_page.cjs <slug>
+<+1XXXXXXXXXX>` (preview server on 8765 in the build tree); both pages pass it and `test_new_pages.cjs`. Owner checks
+as for Miami: the two lines ring sales and keep 6 AM–11 PM ET seven days.
+
 ## Google Ads landing page: Miami (Oct 28, 2026)
 `/vehicle-quote-miami-florida` (file `vehicle-quote-miami-florida.html`, final URL with no trailing slash — Cloudflare
 serves `name.html` at `/name`). Built by `python3 tools/builders_ads/miami.py` from the LIVE `vehicle-quote.html`
@@ -885,7 +897,7 @@ utm_campaign=…") — that is the hook for offline-conversion import; `secondar
 leads are filterable in BeRocker. Headline variants by final-URL suffix, whitelisted: `?v=enclosed`, `exotic`,
 `snowbird`, `newyork`, `to`, `from` (anything else = default "Miami Car Shipping / Instant Quote").
 
-Verified locally (Playwright, `scratchpad/test_miami.cjs`): variant H1, gclid capture + lead note, hours text, step
+Verified locally (Playwright, now `tools/test_ads_page.cjs`): variant H1, gclid capture + lead note, hours text, step
 counter, call_click per location, step events, submit → (local API absent) quote_error → sample estimate → quote_price,
 result button on the Miami line, mobile sticky bar appears once the card scrolls away, no horizontal scroll; the mocked
 end-to-end booking redirect in `test_new_pages.cjs` passes (the test now accepts the `ADS-<CITY>-` prefix and skips the
