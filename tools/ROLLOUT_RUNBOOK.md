@@ -856,6 +856,14 @@ The two "CTA buttons side by side / stacked" checks in `test_new_pages.cjs` are 
 always reported FAIL on the quote and home pages (no `.cta-actions` block there); everything else on the quote page
 passes.
 
+## Google Ads landing page: Jacksonville (Oct 28, 2026)
+`/vehicle-quote-jacksonville-florida` on **(904) 567-4124** from `tools/builders_ads/jacksonville.py` (lead prefix
+`ADS-JAX`, variants `enclosed`, `exotic`, `military`, `port`, `snowbird`, `newyork`, `to`, `from`). The lede names the
+Riverside Avenue office; pickup cards cover the interstates and bridges, Riverside/Avondale/San Marco canopy streets,
+Mayport/NAS Jacksonville and gated communities, the beaches and Orange Park; FAQ adds Navy PCS, JAXPORT and the Puerto
+Rico sailing. Passes `test_ads_page.cjs`, `test_new_pages.cjs` and `audit_site.py` (26 core pages now). Owner check as
+for the other lines: (904) 567-4124 rings sales, 6 AM–11 PM ET seven days.
+
 ## Google Ads landing pages: Tampa and Orlando (Oct 28, 2026)
 Same build as Miami below, from `tools/builders_ads/tampa.py` and `orlando.py`:
 `/vehicle-quote-tampa-florida` on **(813) 497-4151** (lead prefix `ADS-TPA`, variants `enclosed`, `exotic`,
