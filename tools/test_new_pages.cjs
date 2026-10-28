@@ -51,11 +51,12 @@ const EXPECT_COUNT = String(require('fs').readdirSync('/home/claude/build/shipgu
       ok(`${label} no horizontal overflow`, m.sw <= m.iw, `(${m.sw}/${m.iw})`);
       ok(`${label} h1 + tool + one canonical`, m.h1 && m.tool && m.canon === 1, `h1="${(m.h1 || '').replace(/\n/g, ' ')}"`);
       if (!slug.includes('/') && !slug.endsWith('.html')) ok(`${label} office card rows`, m.rows.length >= 3, m.rows.join('/'));
-      if (slug.includes('florida')) ok(`${label} directions link`, m.dir.startsWith('https://maps.app.goo.gl/'), m.dir);
+      if (slug.includes('florida') && !slug.endsWith('.html')) ok(`${label} directions link`, m.dir.startsWith('https://maps.app.goo.gl/'), m.dir);   // city pages only
       if (!slug.includes('/') && !slug.endsWith('.html')) ok(`${label} nearby chips + count`, m.nearby >= 5 && m.seeAll === EXPECT_COUNT, `(${m.nearby} chips, see all ${m.seeAll})`);
       ok(`${label} ZIP placeholder`, m.placeholder === 'Enter 5-digit ZIP code');
-      if (label === 'desktop') ok('desktop CTA buttons side by side', m.ctaBtns.length === 2 && m.ctaBtns[0][1] === m.ctaBtns[1][1] && m.ctaBtns[0][2] < 500, JSON.stringify(m.ctaBtns));
-      if (label === 'mobile') ok('mobile CTA buttons stacked full width', m.ctaBtns.length === 2 && m.ctaBtns[0][1] !== m.ctaBtns[1][1], JSON.stringify(m.ctaBtns));
+      if (m.ctaBtns.length === 0) log.push('SKIP CTA button layout (no .ph-tcta block on this page)');
+      else if (label === 'desktop') ok('desktop CTA buttons side by side', m.ctaBtns.length === 2 && m.ctaBtns[0][1] === m.ctaBtns[1][1] && m.ctaBtns[0][2] < 500, JSON.stringify(m.ctaBtns));
+      else if (label === 'mobile') ok('mobile CTA buttons stacked full width', m.ctaBtns.length === 2 && m.ctaBtns[0][1] !== m.ctaBtns[1][1], JSON.stringify(m.ctaBtns));
 
       if (label === 'desktop') {
         // --- ZIP lock ---
@@ -89,7 +90,7 @@ const EXPECT_COUNT = String(require('fs').readdirSync('/home/claude/build/shipgu
         ok('lead posted + redirected to booking', booked && posts.length === 1, `posts=${posts.length}`);
         if (posts[0]) {
           const p0 = posts[0];
-          ok('payload: ZIPs + vehicle + consent', p0.origin_postal_code === '74119' && p0.destination_postal_code === '75201' && p0.vehicle_make === undefined && p0.vehicles[0].vehicle_make === 'Toyota' && p0.vehicles[0].vehicle_type === 'SUV' && /YES/.test(p0.customer_comments) && /^WEB-\d+$/.test(p0.secondary_id), JSON.stringify({ o: p0.origin_postal_code, d: p0.destination_postal_code, v: p0.vehicles[0], c: p0.customer_comments }));
+          ok('payload: ZIPs + vehicle + consent', p0.origin_postal_code === '74119' && p0.destination_postal_code === '75201' && p0.vehicle_make === undefined && p0.vehicles[0].vehicle_make === 'Toyota' && p0.vehicles[0].vehicle_type === 'SUV' && /YES/.test(p0.customer_comments) && /^(WEB|ADS-[A-Z]+)-\d+$/.test(p0.secondary_id), JSON.stringify({ o: p0.origin_postal_code, d: p0.destination_postal_code, v: p0.vehicles[0], c: p0.customer_comments }));
         }
       }
       ok(`${label} no JS errors`, errors.length === 0, errors.join(' | ').slice(0, 200));

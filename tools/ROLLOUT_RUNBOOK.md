@@ -856,6 +856,48 @@ The two "CTA buttons side by side / stacked" checks in `test_new_pages.cjs` are 
 always reported FAIL on the quote and home pages (no `.cta-actions` block there); everything else on the quote page
 passes.
 
+## Google Ads landing page: Miami (Oct 28, 2026)
+`/vehicle-quote-miami-florida` (file `vehicle-quote-miami-florida.html`, final URL with no trailing slash — Cloudflare
+serves `name.html` at `/name`). Built by `python3 tools/builders_ads/miami.py` from the LIVE `vehicle-quote.html`
+through `tools/adspage.py`, so it carries the same quote tool, the same `/api/quote` proxy (the vehicle-quote BeRocker
+lead source) and the same GTM container (GTM-MQ7HKJTJ ×2). Rerun the builder after any quote-tool change; every edit
+is an asserted replacement, so a changed base fails loudly instead of silently drifting.
+
+What is on it: Miami line **(305) 676-9433** on every tel: link (header, hero call block, quote-result button, consent
+text, how-it-works, CTA band, footer, FAQ, mobile sticky bar), each tagged `data-track="call-<location>"`; hero copy
+with the broker disclosure in the lede, a 4.9 · 487+ rating line under the H1 (same figure as the quote page — still on
+the verify list), three concrete badges, the Licensed & Insured / FMCSA pills, the call block with a live "Open now ·
+until 11 PM ET" / "Closed now · opens 6 AM ET" indicator (America/New_York, 6–23); then reviews (unchanged), a Miami
+lanes & costs table (the city page's figures), pickup/access cards + neighborhood chips + season tip, how-it-works,
+why-Ship-Guy (US-abbreviation lines rewritten), an 8-question Miami FAQ with FAQPage JSON-LD generated from the same
+data, CTA band and footer. `noindex,follow`, not in the sitemap, not linked from the site: the SEO page for Miami is
+`/city/auto-transport-miami-florida/` and this one is for paid traffic only (AdsBot ignores noindex; robots.txt does not
+block it, which is what matters for Ads).
+
+Tracking (dataLayer, GTM-ready — nothing fires in Ads until a trigger is built for it):
+`lp_view {page_variant, ads_gclid, ads_campaign, ads_source}` · `call_click {call_location, phone, page_variant}` ·
+`quote_step {step}` · `quote_submit` · `quote_lead {lead_id, transport, timeframe, page_variant}` (fires the moment
+BeRocker returns the lead id — make this the primary conversion) · `quote_price {price, demo, manual, failed, timed_out}` ·
+`quote_redirect {price}` (the booking redirect waits ≥900 ms after quote_lead so the conversion tag can send) ·
+`quote_error {message}`. `gclid` / `gbraid` / `wbraid` / `utm_*` are kept 90 days in localStorage (`sg_ads`) and
+written into the lead's `customer_comments` ("Landing page: /vehicle-quote-miami-florida | variant=… | gclid=… |
+utm_campaign=…") — that is the hook for offline-conversion import; `secondary_id` is `ADS-MIA-<timestamp>` so Miami Ads
+leads are filterable in BeRocker. Headline variants by final-URL suffix, whitelisted: `?v=enclosed`, `exotic`,
+`snowbird`, `newyork`, `to`, `from` (anything else = default "Miami Car Shipping / Instant Quote").
+
+Verified locally (Playwright, `scratchpad/test_miami.cjs`): variant H1, gclid capture + lead note, hours text, step
+counter, call_click per location, step events, submit → (local API absent) quote_error → sample estimate → quote_price,
+result button on the Miami line, mobile sticky bar appears once the card scrolls away, no horizontal scroll; the mocked
+end-to-end booking redirect in `test_new_pages.cjs` passes (the test now accepts the `ADS-<CITY>-` prefix and skips the
+city-only directions/CTA-layout checks on non-city pages). `audit_site.py` lists the page under core and in the
+orphan skip set.
+
+Owner checks: confirm (305) 676-9433 rings the sales line and that its hours really are 6 AM–11 PM ET seven days (the
+indicator shows exactly that); the Maps key referrer rule must cover `shipguy.com/*` (same domain, new path); in Ads
+use `https://shipguy.com/vehicle-quote-miami-florida` (or the www form if www is the primary host — whichever does not
+redirect). Another city = copy `builders_ads/miami.py`, change CFG (slug `vehicle-quote-<city>-<state>`, phone, copy,
+lanes, FAQ), run it, add the file to `audit_site.py` core + skip.
+
 ## Florida Google Business Profile links (this delivery)
 A fourth "Directions → Open in Google Maps" row was added to the office card on Gainesville, Jacksonville,
 Tallahassee and Daytona Beach using the maps.app.goo.gl links you sent. The builders carry `map_link=` so rebuilds keep it.

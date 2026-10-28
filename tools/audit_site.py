@@ -9,7 +9,7 @@ cities = sorted(L.NAMES)
 core = ['index.html','how-it-works.html','services.html','locations.html','faq.html','contact.html','car-shipping-cost.html','car-shipping-preparation.html',
         'cross-country-car-shipping.html','open-car-transport.html','enclosed-auto-transport.html','door-to-door-car-shipping.html','state-to-state-car-shipping.html',
         'expedited-car-shipping.html','snowbird-car-shipping.html','military-car-shipping.html','auction-car-transport.html','privacy-policy.html','terms.html','404.html',
-        'vehicle-quote.html','vehicle-quote/index.html']
+        'vehicle-quote.html','vehicle-quote/index.html','vehicle-quote-miami-florida.html']   # Ads landing pages: vehicle-quote-<city>-<state>.html
 pages = [s + '.html' for s in states] + ['city/%s/index.html' % c for c in cities] + [c for c in core if os.path.isfile(c)]
 issues = collections.defaultdict(list)
 ids = {p: set(re.findall(r'\sid="([^"]+)"', open(p, encoding='utf-8').read())) for p in pages}
@@ -49,7 +49,7 @@ for p in pages:
     if 'id="pqForm"' in h:
         if 'data-zipfield' not in h: issues['zip-lock-missing'].append(p)
         if 'pq-consent-err' not in h: issues['consent-gate-missing'].append(p)
-skip = {'vehicle-quote.html', 'vehicle-quote/index.html', '404.html', 'privacy-policy.html', 'terms.html'}
+skip = {'vehicle-quote.html', 'vehicle-quote/index.html', 'vehicle-quote-miami-florida.html', '404.html', 'privacy-policy.html', 'terms.html'}   # Ads pages are noindex and unlinked on purpose
 orphans = [p for p in pages if p not in skip and not inbound[p]]
 if orphans: issues['orphan'] = orphans
 # hub + state + city interlinking
