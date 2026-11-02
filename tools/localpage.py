@@ -713,6 +713,37 @@ for _k, _vs in {'cleveland-ohio':['auto-transport-pittsburgh-pennsylvania'], 'ak
     for _v in _vs:
         if _k in NEARBY and _v not in NEARBY[_k]: NEARBY[_k].append(_v)
 
+# ---- Batch 42 (Nov 2, 2026): Lansing (MI); Vancouver (WA); Chesapeake, Richmond (VA); Erie (PA); Cranston (RI) ----
+#      NOTE: Cranston is Rhode Island's first city page (the Rhode Island page gets its first City Pages block).
+register('auto-transport-lansing-michigan', 'Lansing', 'MI')
+register('auto-transport-vancouver-washington', 'Vancouver', 'WA')
+register('auto-transport-chesapeake-virginia', 'Chesapeake', 'VA')
+register('auto-transport-richmond-virginia', 'Richmond', 'VA')
+register('auto-transport-erie-pennsylvania', 'Erie', 'PA')
+register('auto-transport-cranston-rhode-island', 'Cranston', 'RI')
+_s('lansing-michigan', ['auto-transport-grand-rapids-michigan','auto-transport-ann-arbor-michigan','auto-transport-detroit-michigan','auto-transport-warren-michigan','auto-transport-fort-wayne-indiana','auto-transport-south-bend-indiana','auto-transport-chicago-illinois'])
+_s('vancouver-washington', ['auto-transport-portland-oregon','auto-transport-seattle-washington','auto-transport-spokane-washington','auto-transport-boise-idaho','auto-transport-sacramento-california','auto-transport-san-francisco-california'])
+_s('chesapeake-virginia', ['auto-transport-virginia-beach-virginia','auto-transport-richmond-virginia','auto-transport-raleigh-north-carolina','auto-transport-durham-north-carolina','auto-transport-columbia-maryland','auto-transport-baltimore-maryland','auto-transport-charlotte-north-carolina'])
+_s('richmond-virginia', ['auto-transport-virginia-beach-virginia','auto-transport-chesapeake-virginia','auto-transport-columbia-maryland','auto-transport-germantown-maryland','auto-transport-baltimore-maryland','auto-transport-raleigh-north-carolina','auto-transport-durham-north-carolina','auto-transport-charlotte-north-carolina'])
+_s('erie-pennsylvania', ['auto-transport-pittsburgh-pennsylvania','auto-transport-buffalo-new-york','auto-transport-cleveland-ohio','auto-transport-akron-ohio','auto-transport-rochester-new-york','auto-transport-columbus-ohio'])
+_s('cranston-rhode-island', ['auto-transport-boston-massachusetts','auto-transport-worcester-massachusetts','auto-transport-hartford-connecticut','auto-transport-new-haven-connecticut','auto-transport-springfield-massachusetts','auto-transport-manhattan-new-york','auto-transport-bridgeport-connecticut'])
+NEARBY['detroit-michigan'] = ['auto-transport-warren-michigan','auto-transport-ann-arbor-michigan','auto-transport-grand-rapids-michigan','auto-transport-lansing-michigan','auto-transport-cleveland-ohio','auto-transport-chicago-illinois','auto-transport-fort-wayne-indiana','auto-transport-columbus-ohio']
+NEARBY['grand-rapids-michigan'] = ['auto-transport-lansing-michigan','auto-transport-detroit-michigan','auto-transport-warren-michigan','auto-transport-ann-arbor-michigan','auto-transport-chicago-illinois','auto-transport-milwaukee-wisconsin','auto-transport-fort-wayne-indiana','auto-transport-indianapolis-indiana']
+NEARBY['seattle-washington'] = ['auto-transport-spokane-washington','auto-transport-portland-oregon','auto-transport-vancouver-washington','auto-transport-boise-idaho','auto-transport-anchorage-alaska','auto-transport-sacramento-california','auto-transport-san-francisco-california']
+NEARBY['portland-oregon'] = ['auto-transport-vancouver-washington','auto-transport-seattle-washington','auto-transport-spokane-washington','auto-transport-sacramento-california','auto-transport-san-francisco-california','auto-transport-oakland-california','auto-transport-salt-lake-city-utah','auto-transport-boise-idaho']
+NEARBY['virginia-beach-virginia'] = ['auto-transport-chesapeake-virginia','auto-transport-richmond-virginia','auto-transport-raleigh-north-carolina','auto-transport-durham-north-carolina','auto-transport-baltimore-maryland','auto-transport-columbia-maryland','auto-transport-charlotte-north-carolina','auto-transport-philadelphia-pennsylvania']
+NEARBY['boston-massachusetts'] = ['auto-transport-worcester-massachusetts','auto-transport-cranston-rhode-island','auto-transport-manhattan-new-york','auto-transport-hartford-connecticut','auto-transport-portland-maine','auto-transport-albany-new-york','auto-transport-philadelphia-pennsylvania','auto-transport-baltimore-maryland']
+NEARBY['pittsburgh-pennsylvania'] = ['auto-transport-philadelphia-pennsylvania','auto-transport-erie-pennsylvania','auto-transport-cleveland-ohio','auto-transport-akron-ohio','auto-transport-columbus-ohio','auto-transport-buffalo-new-york','auto-transport-baltimore-maryland']
+for _k, _vs in {'warren-michigan':['auto-transport-lansing-michigan'], 'ann-arbor-michigan':['auto-transport-lansing-michigan'], 'fort-wayne-indiana':['auto-transport-lansing-michigan'],
+               'spokane-washington':['auto-transport-vancouver-washington'],
+               'raleigh-north-carolina':['auto-transport-richmond-virginia'], 'durham-north-carolina':['auto-transport-richmond-virginia'], 'charlotte-north-carolina':['auto-transport-richmond-virginia'],
+               'columbia-maryland':['auto-transport-richmond-virginia'], 'germantown-maryland':['auto-transport-richmond-virginia'], 'baltimore-maryland':['auto-transport-richmond-virginia'],
+               'buffalo-new-york':['auto-transport-erie-pennsylvania'], 'cleveland-ohio':['auto-transport-erie-pennsylvania'], 'akron-ohio':['auto-transport-erie-pennsylvania'], 'rochester-new-york':['auto-transport-erie-pennsylvania'],
+               'worcester-massachusetts':['auto-transport-cranston-rhode-island'], 'hartford-connecticut':['auto-transport-cranston-rhode-island'],
+               'new-haven-connecticut':['auto-transport-cranston-rhode-island'], 'springfield-massachusetts':['auto-transport-cranston-rhode-island']}.items():
+    for _v in _vs:
+        if _k in NEARBY and _v not in NEARBY[_k]: NEARBY[_k].append(_v)
+
 # ---- Oct 27, 2026 SEO pass: the legacy Corpus Christi page (old-generation template, pending a rebuild row)
 #      is registered so the hub, the Texas City Pages block, the sitemap and the counts include it. It is NOT
 #      rebuilt by localpage (no builder); patches/seo_pass_2026_10.py left its own breadcrumb/schema in place.

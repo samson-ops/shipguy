@@ -1,0 +1,19 @@
+Batch 42 rows (received Nov 2, 2026) — phone | address | city | state | map embed src
+
+5176866771 | 725 Prudden St #554, Lansing, MI 48906 | Lansing | Michigan
+  https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3616.9795563350367!2d-84.5415489!3d42.7415818!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8822eb6181a6fe89%3A0xa55548e30d7f0113!2sShip%20Guy%20Auto%20Transports!5e1!3m2!1sen!2sus!4v1793287376859!5m2!1sen!2sus
+
+3608452434 | 915 Broadway St #574, Vancouver, WA 98660 | Vancouver | Washington
+  https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3444.0467003098684!2d-122.6700536!3d45.62845050000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5495a92e4b1e845b%3A0x9fd72c5fd0bffcb2!2sShip%20Guy%20Auto%20Transports!5e1!3m2!1sen!2sus!4v1793287436877!5m2!1sen!2sus
+
+7576376136 | 555 Belaire Ave #555A, Chesapeake, VA 23320 | Chesapeake | Virginia
+  https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3945.191866026209!2d-76.2402147!3d36.7680532!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89babd01d3a29379%3A0x3ef9c2f9c2727e93!2sShip%20Guy%20Auto%20Transports!5e1!3m2!1sen!2sus!4v1793287611563!5m2!1sen!2sus
+
+8045811574 | 2920 W Broad St #420a, Richmond, VA 23230 | Richmond | Virginia
+  https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3903.848322613531!2d-77.47205989999999!3d37.56422070000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89b115cc463594e5%3A0x68162b377e1dd52d!2sShip%20Guy%20Auto%20Transports!5e1!3m2!1sen!2sus!4v1793287623957!5m2!1sen!2sus
+
+8142929839 | 900 State St #473, Erie, PA 16501 | Erie | Pennsylvania
+  https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3652.667313931434!2d-80.0834368!3d42.1262524!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882d7f4767564099%3A0xf8a94036fa828fed!2sShip%20Guy%20Auto%20Transports!5e1!3m2!1sen!2sus!4v1793287839615!5m2!1sen!2sus
+
+4015841240 | 869 Reservoir Ave #42a, Cranston, RI 02910 | Cranston | Rhode Island
+  https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3672.714598032118!2d-71.4469254!3d41.7773743!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e44ffafdfc3bc1%3A0x64eea3539f781aa7!2sShip%20Guy%20Auto%20Transports!5e1!3m2!1sen!2sus!4v1793288005485!5m2!1sen!2sus

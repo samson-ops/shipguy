@@ -987,6 +987,59 @@ use `https://shipguy.com/vehicle-quote-miami-florida` (or the www form if www is
 redirect). Another city = copy `builders_ads/miami.py`, change CFG (slug `vehicle-quote-<city>-<state>`, phone, copy,
 lanes, FAQ), run it, add the file to `audit_site.py` core + skip.
 
+## Batch 42 — Lansing, Vancouver, Chesapeake, Richmond, Erie, Cranston (Nov 2, 2026)
+| City | URL | Phone | Office |
+|---|---|---|---|
+| Lansing, MI | /city/auto-transport-lansing-michigan/ | (517) 686-6771 | 725 Prudden St #554, Lansing, MI 48906 (north of downtown, by the Grand River) |
+| Vancouver, WA | /city/auto-transport-vancouver-washington/ | (360) 845-2434 | 915 Broadway St #574, Vancouver, WA 98660 (downtown, by Esther Short Park) |
+| Chesapeake, VA | /city/auto-transport-chesapeake-virginia/ | (757) 637-6136 | 555 Belaire Ave #555A, Chesapeake, VA 23320 (Greenbrier, off Battlefield) |
+| Richmond, VA | /city/auto-transport-richmond-virginia/ | (804) 581-1574 | 2920 W Broad St #420a, Richmond, VA 23230 (Scott's Addition, at Arthur Ashe Blvd) |
+| Erie, PA | /city/auto-transport-erie-pennsylvania/ | (814) 292-9839 | 900 State St #473, Erie, PA 16501 (downtown, up from Perry Square) |
+| Cranston, RI | /city/auto-transport-cranston-rhode-island/ | (401) 584-1240 | 869 Reservoir Ave #42a, Cranston, RI 02910 (Route 2, by Route 10) |
+
+GBP embeds on all six (rows saved to `tools/rows/batch42_rows.txt` on arrival). Hours ET except Vancouver (PT); stats
+rows "1–3 Days" on all six. Cranston is Rhode Island's first city page, so the Rhode Island page got its FIRST City
+Pages block (after The Corridor, before Providence) and the "Rhode Island has no city page yet" note was retired.
+Pricing: Lansing = between Grand Rapids and Detroit (both pools reach it in ninety minutes); Vancouver = the Portland
+table shifted ten miles (same trucks across the river); Chesapeake = a shade under Virginia Beach (no tunnels);
+Richmond = the Virginia table's Richmond figures (Washington $170–$280, Orlando $500–$730); Erie = Buffalo and
+Cleveland on every lane; Cranston = Providence on every lane (Orlando $820–$1,180 to match the Rhode Island FAQ).
+Angles: Lansing = 96/69/496/127 and the Eastwood/Frandor/Meridian Mall handoffs, the Capitol and the state
+workforce with the fourth-January appointee class (FAQ), MSU move-in and football Saturdays (FAQ), the two assembly
+plants and the insurers (FAQ), the Feb 2018 Grand River flood in Old Town and Urbandale (FAQ), Okemos/Holt/Grand
+Ledge (FAQ); Vancouver = the two bridges with the lift spans and the 205 choice (FAQ), the Portland commute and the
+tax split (FAQ), the port's automaker imports with the customs release (FAQ), the hospitals and the software/wafer
+firms, the Salmon Creek campus move-in (FAQ), the Fourth of July fireworks and the Ridgefield fair, the Jan 2024 ice
+storm (FAQ), Camas/Battle Ground/Ridgefield (FAQ); Chesapeake = 64/464/664, the High Rise widening, the Great
+Bridge and Gilmerton drawbridges, the Expressway toll (FAQ), Navy families with the annex and Fentress (FAQ), the
+Outer Banks weekend traffic (FAQ), the Summit Pointe headquarters and the hospital (FAQ), Isabel/Matthew and the
+swamp fires (FAQ), Suffolk/Portsmouth/Moyock (FAQ); Richmond = 95/64/295/288 and the Expressway/Powhite tolls (FAQ),
+the Fan and Church Hill with the Broad Street handoff (FAQ), the state workforce and the West Creek headquarters
+(FAQ), VCU move-in (FAQ), Fort Gregg-Adams and the Chesterfield depot (FAQ), the raceway weekend (FAQ), Gaston and
+the floodwall, the Jan 2022 95 shutdown, Short Pump/Midlothian/Mechanicsville (FAQ); Erie = 90/79/86, Peach Street
+and the mall handoff, the insurer and the locomotive plant (FAQ), the four campuses' move-in (FAQ), the hundred
+inches and the Christmas 2017 storm with the truck bans (FAQ), Presque Isle summers (FAQ), the Thruway/Turnpike
+tolls (FAQ), Millcreek/Harborcreek/North East (FAQ); Cranston = 95/Route 10/Route 37/Route 2, the Garden City and
+stadium handoffs, the state campus and the prison, the Providence hospitals and colleges (FAQ), the Warwick airport
+fly-and-ship (FAQ), the Knightsville feast and Gaspee Days, the 1978 and 2013 blizzards (FAQ), the March 2010
+Pawtuxet flood (FAQ), Warwick/Providence/Johnston (FAQ). One long-sentence pass (`patches/fix_batch42_long.py`, 118
+splits) plus a fresh-wording pass on the standard blocks (`patches/fix_batch42_overlap.py`, the six pages had
+shared one phrasing) brought all six to CLEAR and 17.0–21.3% overlap.
+Integration (`patches/batch42_states.py`): Michigan block regenerated (5 cities) with the intro and quick note
+rewritten, Lansing linked in the capital sentence, the chip and the move-in FAQ (resynced); Washington block (3)
+with Vancouver linked in the Portland-pool sentence, the lanes sub and the chip; Virginia block (3) with Chesapeake
+linked in the suburbs sentence and Richmond in the Richmond section lead, both chips linked; Pennsylvania block (5)
+with Erie linked in the lanes sub, the lake-effect sentence, the chip and the snow FAQ (resynced); Rhode Island
+block inserted (1) with the quick note and the Warwick/Cranston sentence rewritten and the chip linked. Neighbor
+city pages: the first plain prose mention linked on Grand Rapids (Lansing), Portland (Vancouver), Virginia Beach
+(Chesapeake and Richmond), Raleigh, Durham, Columbia, Germantown and Charlotte (Richmond), Pittsburgh (Erie).
+Chips regenerated on the six new pages plus 25 neighbors (Detroit, Grand Rapids, Seattle, Portland, Virginia Beach,
+Pittsburgh and Boston re-cut explicitly; the rest appended). See-all 173 on every built page; hub rows for MI, WA,
+VA, PA regenerated and a Rhode Island block inserted before Texas; hub counts 173; sitemap +6 (241 URLs, lastmod
+2026-11-02); `audit_site.py` clean apart from the Gilbert note; `test_new_pages.cjs` passes on the six pages, the
+five state pages, the hub, Virginia Beach and Grand Rapids. Open: the Corpus Christi legacy page still lacks the
+"See all" line (expected until its rebuild row arrives).
+
 ## Florida Google Business Profile links (this delivery)
 A fourth "Directions → Open in Google Maps" row was added to the office card on Gainesville, Jacksonville,
 Tallahassee and Daytona Beach using the maps.app.goo.gl links you sent. The builders carry `map_link=` so rebuilds keep it.
@@ -1003,7 +1056,7 @@ Tallahassee and Daytona Beach using the maps.app.goo.gl links you sent. The buil
 
 ## Verification run (all green)
 - `audit_content.py` on the 3 new pages: CLEAR.
-- `audit_site.py` over 239 pages (50 state + 167 city + 22 core, latest run after the Oct 27 SEO pass): links/anchors resolve, tags balanced, JSON-LD valid, GTM ×2, one H1, one canonical,
+- `audit_site.py` over 260 pages (50 state + 173 city + 37 core, latest run after Batch 42 on Nov 2, 2026): links/anchors resolve, tags balanced, JSON-LD valid, GTM ×2, one H1, one canonical,
   no orphans, hub/state/city interlinked, sitemap complete, ZIP lock + consent gate on every tool page.
   (One pre-existing note: Gilbert's "the number one thing that delays…" is not a superiority claim.)
 - `test_new_pages.cjs` (Playwright) on Tulsa, Norman, Edmond, Gainesville + home, vehicle-quote, Texas: desktop & mobile

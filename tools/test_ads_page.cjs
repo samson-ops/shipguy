@@ -1,7 +1,7 @@
 // Functional + visual check of a Google Ads landing page on the local preview server (python3 -m http.server 8765 in the build tree).
 // usage: node test_ads_page.cjs vehicle-quote-miami-florida +13056769433
 const { chromium } = require('playwright');
-const OUT = '/tmp/claude-0/-home-claude/4242216d-7b3b-527b-ae0a-9f0d0d263145/scratchpad/';
+const OUT = (process.env.SG_OUT || '/home/claude/scratch') + '/';   // screenshots land here
 const SLUG = process.argv[2]; const TEL = process.argv[3];
 if (!SLUG || !/^\+1\d{10}$/.test(TEL || '')) { console.log('usage: node test_ads_page.cjs <slug> <+1XXXXXXXXXX>'); process.exit(2); }
 const URL = 'http://127.0.0.1:8765/' + SLUG + '.html';
