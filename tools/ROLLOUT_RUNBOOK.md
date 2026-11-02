@@ -1154,6 +1154,78 @@ inserted; hub counts 182; sitemap +3 (250 URLs, lastmod 2026-11-02); `audit_site
 note; `test_new_pages.cjs` passes on the three pages, the three state pages and the hub. Open: the Corpus Christi
 legacy page still lacks the "See all" line (expected until its rebuild row arrives).
 
+## Batch 45 — Bellevue, Bloomington, Great Falls, Santa Fe, Bismarck, Eugene, Charleston (Nov 2, 2026)
+| City | URL | Phone | Office |
+|---|---|---|---|
+| Bellevue, WA | /city/auto-transport-bellevue-washington/ | (425) 318-7183 | 2265 116th Ave NE #741, Bellevue, WA 98004 (east of 405, a few blocks from Overlake) |
+| Bloomington, MN | /city/auto-transport-bloomington-minnesota/ | (952) 248-8173 | 3800 American Blvd W #147, Bloomington, MN 55431 (American Blvd at France, off 494) |
+| Great Falls, MT | /city/auto-transport-great-falls-montana/ | (406) 692-3846 | 721 Central Ave #852, Great Falls, MT 59401 (downtown, east of the Civic Center) |
+| Santa Fe, NM | /city/auto-transport-santa-fe-new-mexico/ | (505) 487-8959 | 141 E Palace Ave #445, Santa Fe, NM 87501 (a block east of the Plaza) |
+| Bismarck, ND | /city/auto-transport-bismarck-north-dakota/ | (701) 699-4053 | 630 E Main Ave #592, Bismarck, ND 58501 (downtown, two blocks east of the old depot) |
+| Eugene, OR | /city/auto-transport-eugene-oregon/ | (541) 236-9511 | 207 E 5th Ave #922, Eugene, OR 97401 (downtown, across from the 5th Street Market) |
+| Charleston, SC | /city/auto-transport-charleston-south-carolina/ | (843) 703-1419 | 1064 Gardner Rd Suite 257, Charleston, SC 29407 (West Ashley, by the mall on Sam Rittenberg) |
+
+GBP embeds on all seven (rows saved to `tools/rows/batch45_rows.txt` on arrival). Hours PT (Bellevue, Eugene), CT
+(Bloomington, Bismarck), MT (Great Falls, Santa Fe), ET (Charleston). Stats rows: "1–3 Days" for Bellevue,
+Bloomington, Eugene and Charleston; "3–6 Days" for Great Falls and Bismarck (pass-through markets, same honest-window
+wording as the Montana and North Dakota state pages, Missoula and Fargo); "2–4 Days" for Santa Fe (the Albuquerque
+pool an hour down La Bajada, matching the New Mexico page). Charleston is South Carolina's FIRST city page: the
+South Carolina page got its first City Pages block (after The Corridors, before The Upstate), the "no city page yet"
+note was retired, and a South Carolina block was inserted on the hub before Texas. Pricing: Bellevue = the Seattle
+table (same trucks both sides of the lake; the 520 toll inside the quote when the route uses it); Bloomington = the
+St. Paul/Minneapolis table (Chicago $340–$490, Phoenix $950–$1,350); Great Falls = a stop on 15 with a detour from
+90 (Missoula $220–$340, Salt Lake $430–$620, Seattle $500–$720, Bismarck $450–$650, Phoenix $900–$1,250); Santa Fe =
+a shade above Albuquerque (Albuquerque $150–$240 per the Albuquerque table, Denver $340–$490, Phoenix $400–$570);
+Bismarck = the North Dakota table's Bismarck rows (Billings $380–$540, Denver $520–$750, Seattle $800–$1,150) plus
+Minot, Fargo, Minneapolis, Sioux Falls, Great Falls, Omaha and Chicago; Eugene = the Portland table with a hundred
+miles moved from the California side to the Seattle side (Portland $180–$290 to match the Portland table); Charleston
+= the South Carolina table's Charleston rows (Savannah $170–$280, Jacksonville $250–$380, Orlando $340–$490) plus
+Columbia, Augusta, Charlotte, Raleigh, Atlanta, Washington and New York. Angles: Bellevue = 405, the free 90 bridge
+and the tolled 520 bridge (FAQ), downtown garages and the Gold Coast gates (FAQ), the software campuses and the
+towers (FAQ, unnamed), JBLM and Everett families (FAQ), Redmond/Kirkland/Issaquah (FAQ), the snow days on the hills
+(FAQ), Bellevue College and UW move-in (FAQ), Snowflake Lane, the 2006 windstorm, the 2019 snow, the 2020 smoke;
+Bloomington = 494/35W/Cedar, the mall and the airport, East Bloomington's grids vs the Bush Lake cul-de-sacs (FAQ),
+the airline crews (FAQ), the headquarters on the strip (FAQ, unnamed), the holiday crush (FAQ),
+Richfield/Edina/Burnsville (FAQ), the parking ban (FAQ), Normandale and the U of M (FAQ), the river; Great Falls =
+15/87/89/200, Wolf Creek Canyon and Rogers Pass (FAQ), the honest window (FAQ), Malmstrom PCS outside the gate (FAQ),
+the Lower North Side vs the East Side (FAQ), the hospital, the refinery and the Guard wing (FAQ), Helena/Havre/the
+Hi-Line (FAQ), the state fair and the PCS season (FAQ), the wind, the Chinook, the 2018 Sun River flood; Santa Fe =
+25/La Bajada/St. Francis/Cerrillos, the 2–4 day window (FAQ), the Plaza and Canyon Road lot handoffs (FAQ), the lab
+and the state (FAQ), St. John's and the community college (FAQ), Los Alamos/Española/Eldorado (FAQ), La Bajada and
+Raton Pass (FAQ), Indian Market and Fiesta (FAQ), the monsoon, the 2022 Hermits Peak fire; Bismarck = 94/83/the
+Expressway, the gates (FAQ), the honest window (FAQ), the Cathedral District vs north of 43rd (FAQ), the Capitol and
+the hospitals (FAQ), BSC and Mary move-in (FAQ), Mandan/Minot/Williston (FAQ), the 2011 flood and the 2009 ice jam
+(FAQ), the October 2019 storm, the powwow; Eugene = 5/105/126/the Beltline, the Whiteaker and College Hill (FAQ), UO
+move-in (FAQ), the hospital and the mills (FAQ), Ducks Saturdays and the Hayward meets (FAQ),
+Springfield/Corvallis/Florence (FAQ), the Siskiyou (FAQ), the January 2024 ice storm and the 2020 Holiday Farm fire
+(FAQ), the Country Fair, the 2021 heat; Charleston = 26/526/17 and the Ravenel, the peninsula below the Crosstown
+(FAQ), Joint Base Charleston PCS outside the gate (FAQ), port releases (FAQ), MUSC and the plants (FAQ, unnamed),
+CofC and Citadel move-in (FAQ), Mount Pleasant/Summerville/Kiawah (FAQ), hurricane evacuations with the 26 reversal
+(FAQ), the king tides, the October 2015 rain, the January 2018 ice, the Bridge Run and Spoleto. Long-sentence
+passes (`patches/fix_batch45_long.py`, 175 splits) plus a fresh-wording pass (`patches/fix_batch45_overlap.py`,
+53 rewrites: the pass-through, winter-oil, PCS, open-trailer, reimbursement, non-running and "what do you need"
+blocks the seven shared with each other and with Batch 44) brought all seven to CLEAR and 16.5–21.8% overlap
+(Bismarck had opened at 29.2% against Fargo).
+Integration (`patches/batch45_states.py`): Washington block regenerated (4) with the quick note rewritten (it also
+fixes the "Seattle and Spokane, and Vancouver" grammar left by Batch 42), the engineers lead and the chip linked, and
+the tech FAQ (resynced); Minnesota block (2) with the quick note, the chip and the headquarters FAQ (resynced);
+Montana block (2) with the Malmstrom sentence, the chip and the PCS FAQ (resynced); New Mexico block (3) with the
+quick note, the overview sentence, the Santa Fe lead, the chip and the Santa Fe FAQ (resynced); North Dakota block
+(2) with the section lead and the Bismarck paragraph linked and the chip; Oregon block (2) with the quick note, the
+campus sentence, the chip and the student FAQ (resynced); South Carolina block inserted (1) with the quick note, the
+Charleston lead, the chip and the peninsula FAQ (resynced). Neighbor city pages: the first plain prose mention linked
+on Missoula (Great Falls), Albuquerque (Santa Fe), Fargo (Bismarck), Portland and Vancouver (Eugene), Augusta,
+Jacksonville and Savannah (Charleston); `link_first` now stops at the FAQ list so a neighbor link can never desync a
+FAQ's JSON-LD. Seattle's only Bellevue mention is a FAQ question, and the Green Bay/Omaha Bellevues, the Rockford
+Bloomington, and the Denver/Gainesville/Olathe/Overland Park Santa Fes are other places, so those stay unlinked.
+Nearby chips regenerated wherever the NEARBY tables changed (Seattle, Spokane, Portland, St. Paul, Fargo, Ankeny,
+Sioux City, Madison, Missoula, Denver and Charlotte re-cut explicitly; Vancouver, Albuquerque, El Paso, Las Cruces,
+Colorado Springs, Aurora, Savannah, Jacksonville, Macon, Augusta, Raleigh, Sacramento and San Francisco appended);
+see-all 189 on every built page; hub rows for WA, MN, MT, NM, ND, OR regenerated and a South Carolina block inserted
+before Texas; hub counts 189; sitemap +7 (257 URLs, lastmod 2026-11-02); `audit_site.py` clean apart from the
+Gilbert note; `test_new_pages.cjs` passes on the seven pages, the seven state pages and the hub. Open: the Corpus
+Christi legacy page still lacks the "See all" line (expected until its rebuild row arrives).
+
 ## Florida Google Business Profile links (this delivery)
 A fourth "Directions → Open in Google Maps" row was added to the office card on Gainesville, Jacksonville,
 Tallahassee and Daytona Beach using the maps.app.goo.gl links you sent. The builders carry `map_link=` so rebuilds keep it.
@@ -1170,7 +1242,7 @@ Tallahassee and Daytona Beach using the maps.app.goo.gl links you sent. The buil
 
 ## Verification run (all green)
 - `audit_content.py` on the 3 new pages: CLEAR.
-- `audit_site.py` over 269 pages (50 state + 182 city + 37 core, latest run after Batch 44 on Nov 2, 2026): links/anchors resolve, tags balanced, JSON-LD valid, GTM ×2, one H1, one canonical,
+- `audit_site.py` over 276 pages (50 state + 189 city + 37 core, latest run after Batch 45 on Nov 2, 2026): links/anchors resolve, tags balanced, JSON-LD valid, GTM ×2, one H1, one canonical,
   no orphans, hub/state/city interlinked, sitemap complete, ZIP lock + consent gate on every tool page.
   (One pre-existing note: Gilbert's "the number one thing that delays…" is not a superiority claim.)
 - `test_new_pages.cjs` (Playwright) on Tulsa, Norman, Edmond, Gainesville + home, vehicle-quote, Texas: desktop & mobile

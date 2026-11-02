@@ -817,6 +817,46 @@ for _k, _vs in {'spokane-washington':['auto-transport-missoula-montana'], 'seatt
     for _v in _vs:
         if _k in NEARBY and _v not in NEARBY[_k]: NEARBY[_k].append(_v)
 
+# ---- Batch 45 (Nov 2, 2026): Bellevue (WA); Bloomington (MN); Great Falls (MT); Santa Fe (NM); Bismarck (ND); Eugene (OR); Charleston (SC) ----
+#      NOTE: Charleston is South Carolina's first city page (first City Pages block on SC; new hub block before Texas).
+#      Great Falls and Bismarck are pass-through markets like Missoula and Fargo (stats rows "3–6 Days"); Santa Fe reads "2–4 Days" like Albuquerque.
+A='auto-transport-'
+register('auto-transport-bellevue-washington', 'Bellevue', 'WA')
+register('auto-transport-bloomington-minnesota', 'Bloomington', 'MN')
+register('auto-transport-great-falls-montana', 'Great Falls', 'MT')
+register('auto-transport-santa-fe-new-mexico', 'Santa Fe', 'NM')
+register('auto-transport-bismarck-north-dakota', 'Bismarck', 'ND')
+register('auto-transport-eugene-oregon', 'Eugene', 'OR')
+register('auto-transport-charleston-south-carolina', 'Charleston', 'SC')
+_s('bellevue-washington', [A+x for x in ['seattle-washington','portland-oregon','vancouver-washington','spokane-washington','eugene-oregon','missoula-montana','boise-idaho','sacramento-california']])
+_s('bloomington-minnesota', [A+x for x in ['st-paul-minnesota','ankeny-iowa','sioux-city-iowa','fargo-north-dakota','madison-wisconsin','milwaukee-wisconsin','omaha-nebraska','chicago-illinois']])
+_s('great-falls-montana', [A+x for x in ['missoula-montana','spokane-washington','bismarck-north-dakota','salt-lake-city-utah','boise-idaho','fargo-north-dakota','seattle-washington','denver-colorado']])
+_s('santa-fe-new-mexico', [A+x for x in ['albuquerque-new-mexico','las-cruces-new-mexico','el-paso-texas','colorado-springs-colorado','denver-colorado','aurora-colorado','phoenix-arizona','tucson-arizona']])
+_s('bismarck-north-dakota', [A+x for x in ['fargo-north-dakota','st-paul-minnesota','bloomington-minnesota','sioux-city-iowa','great-falls-montana','missoula-montana','omaha-nebraska','denver-colorado']])
+_s('eugene-oregon', [A+x for x in ['portland-oregon','vancouver-washington','seattle-washington','bellevue-washington','sacramento-california','san-francisco-california','boise-idaho','spokane-washington']])
+_s('charleston-south-carolina', [A+x for x in ['savannah-georgia','augusta-georgia','charlotte-north-carolina','jacksonville-florida','atlanta-georgia','raleigh-north-carolina','greensboro-north-carolina','macon-georgia']])
+# explicit re-cuts (8 max)
+NEARBY['seattle-washington'] = [A+x for x in ['bellevue-washington','spokane-washington','portland-oregon','vancouver-washington','eugene-oregon','boise-idaho','missoula-montana','anchorage-alaska']]
+NEARBY['spokane-washington'] = [A+x for x in ['seattle-washington','bellevue-washington','boise-idaho','portland-oregon','meridian-idaho','salt-lake-city-utah','vancouver-washington','missoula-montana']]
+NEARBY['portland-oregon'] = [A+x for x in ['vancouver-washington','eugene-oregon','seattle-washington','bellevue-washington','spokane-washington','sacramento-california','san-francisco-california','boise-idaho']]
+NEARBY['st-paul-minnesota'] = [A+x for x in ['bloomington-minnesota','fargo-north-dakota','madison-wisconsin','ankeny-iowa','sioux-city-iowa','milwaukee-wisconsin','green-bay-wisconsin','omaha-nebraska']]
+NEARBY['fargo-north-dakota'] = [A+x for x in ['bismarck-north-dakota','st-paul-minnesota','bloomington-minnesota','sioux-city-iowa','omaha-nebraska','ankeny-iowa','madison-wisconsin','missoula-montana']]
+NEARBY['ankeny-iowa'] = [A+x for x in ['davenport-iowa','sioux-city-iowa','omaha-nebraska','kansas-city-missouri','st-paul-minnesota','bloomington-minnesota','chicago-illinois','madison-wisconsin']]
+NEARBY['sioux-city-iowa'] = [A+x for x in ['omaha-nebraska','ankeny-iowa','st-paul-minnesota','bloomington-minnesota','fargo-north-dakota','davenport-iowa','kansas-city-missouri','denver-colorado']]
+NEARBY['madison-wisconsin'] = [A+x for x in ['milwaukee-wisconsin','green-bay-wisconsin','kenosha-wisconsin','chicago-illinois','st-paul-minnesota','bloomington-minnesota','rockford-illinois','davenport-iowa']]
+NEARBY['missoula-montana'] = [A+x for x in ['great-falls-montana','spokane-washington','seattle-washington','boise-idaho','meridian-idaho','salt-lake-city-utah','portland-oregon','fargo-north-dakota']]
+NEARBY['denver-colorado'] = [A+x for x in ['aurora-colorado','colorado-springs-colorado','salt-lake-city-utah','albuquerque-new-mexico','santa-fe-new-mexico','las-cruces-new-mexico','kansas-city-missouri','omaha-nebraska']]
+NEARBY['charlotte-north-carolina'] = [A+x for x in ['raleigh-north-carolina','durham-north-carolina','greensboro-north-carolina','charleston-south-carolina','atlanta-georgia','augusta-georgia','richmond-virginia','virginia-beach-virginia']]
+# appends (lists under 8)
+for _k, _vs in {'vancouver-washington':[A+'bellevue-washington',A+'eugene-oregon'],
+               'albuquerque-new-mexico':[A+'santa-fe-new-mexico'], 'el-paso-texas':[A+'santa-fe-new-mexico'], 'las-cruces-new-mexico':[A+'santa-fe-new-mexico'],
+               'colorado-springs-colorado':[A+'santa-fe-new-mexico'], 'aurora-colorado':[A+'santa-fe-new-mexico'],
+               'savannah-georgia':[A+'charleston-south-carolina'], 'jacksonville-florida':[A+'charleston-south-carolina'], 'macon-georgia':[A+'charleston-south-carolina'],
+               'augusta-georgia':[A+'charleston-south-carolina'], 'raleigh-north-carolina':[A+'charleston-south-carolina'],
+               'sacramento-california':[A+'eugene-oregon'], 'san-francisco-california':[A+'eugene-oregon']}.items():
+    for _v in _vs:
+        if _k in NEARBY and _v not in NEARBY[_k]: NEARBY[_k].append(_v)
+
 # ---- Oct 27, 2026 SEO pass: the legacy Corpus Christi page (old-generation template, pending a rebuild row)
 #      is registered so the hub, the Texas City Pages block, the sitemap and the counts include it. It is NOT
 #      rebuilt by localpage (no builder); patches/seo_pass_2026_10.py left its own breadcrumb/schema in place.

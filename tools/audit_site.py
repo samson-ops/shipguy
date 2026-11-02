@@ -67,7 +67,7 @@ for s in states:
     if 'https://shipguy.com/%s<' % s not in sm: issues['sitemap-missing'].append(s)
 print('pages audited: %d (%d state + %d city + %d core)' % (len(pages), len(states), len(cities), len(pages) - len(states) - len(cities)))
 print('sitemap urls:', sm.count('<loc>'), '| hub city links:', sum(1 for c in cities if 'city/%s/index.html' % c in hub), '/', len(cities))
-for c in ['auto-transport-missoula-montana', 'auto-transport-greensboro-north-carolina', 'auto-transport-fargo-north-dakota']:
+for c in ['auto-transport-bellevue-washington', 'auto-transport-bloomington-minnesota', 'auto-transport-great-falls-montana', 'auto-transport-santa-fe-new-mexico', 'auto-transport-bismarck-north-dakota', 'auto-transport-eugene-oregon', 'auto-transport-charleston-south-carolina']:
     print('inbound to %-36s %2d pages e.g. %s' % (c, len(inbound['city/%s/index.html' % c]), sorted(inbound['city/%s/index.html' % c])[:4]))
 for k, v in issues.items(): print('ISSUE', k, len(v), v[:5])
 if not issues: print('ALL CLEAR: links resolve, anchors exist, tags balanced, JSON-LD valid, GTM x2, one H1, one canonical, no review schema, no over-claims, no orphans, hub/state/city interlinked, sitemap complete, zip lock + consent gate on every tool page')
