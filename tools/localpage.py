@@ -857,6 +857,42 @@ for _k, _vs in {'vancouver-washington':[A+'bellevue-washington',A+'eugene-oregon
     for _v in _vs:
         if _k in NEARBY and _v not in NEARBY[_k]: NEARBY[_k].append(_v)
 
+# ---- Batch 46 (Nov 2, 2026): Sioux Falls (SD); Charleston (WV); Cheyenne (WY); Norfolk (VA); Bethlehem (PA) ----
+#      NOTE: Sioux Falls, Charleston (WV) and Cheyenne are their states' first city pages (first City Pages blocks on SD, WV, WY;
+#      new hub blocks South Dakota before Texas, West Virginia before Wisconsin, Wyoming at the end). Two Charlestons now exist:
+#      the chips carry the state, and neighbor linking by the bare word "Charleston" is never done. Pass-through windows:
+#      Sioux Falls "2–5 Days" (SD page), Cheyenne "3–6 Days" (WY page), Charleston WV "2–4 Days" (WV page).
+#      The Cheyenne row carried a 304 (WV) area code; used as given and flagged to the owner.
+register('auto-transport-sioux-falls-south-dakota', 'Sioux Falls', 'SD')
+register('auto-transport-charleston-west-virginia', 'Charleston', 'WV')
+register('auto-transport-cheyenne-wyoming', 'Cheyenne', 'WY')
+register('auto-transport-norfolk-virginia', 'Norfolk', 'VA')
+register('auto-transport-bethlehem-pennsylvania', 'Bethlehem', 'PA')
+_s('sioux-falls-south-dakota', [A+x for x in ['sioux-city-iowa','omaha-nebraska','fargo-north-dakota','bloomington-minnesota','st-paul-minnesota','ankeny-iowa','kansas-city-missouri','bismarck-north-dakota']])
+_s('charleston-west-virginia', [A+x for x in ['columbus-ohio','lexington-kentucky','cincinnati-ohio','pittsburgh-pennsylvania','dayton-ohio','louisville-kentucky','akron-ohio','richmond-virginia']])
+_s('cheyenne-wyoming', [A+x for x in ['denver-colorado','aurora-colorado','colorado-springs-colorado','salt-lake-city-utah','omaha-nebraska','sioux-falls-south-dakota','albuquerque-new-mexico','kansas-city-missouri']])
+_s('norfolk-virginia', [A+x for x in ['virginia-beach-virginia','chesapeake-virginia','richmond-virginia','raleigh-north-carolina','durham-north-carolina','greensboro-north-carolina','baltimore-maryland','columbia-maryland']])
+_s('bethlehem-pennsylvania', [A+x for x in ['allentown-pennsylvania','reading-pennsylvania','philadelphia-pennsylvania','newark-new-jersey','wilmington-delaware','manhattan-new-york','staten-island-new-york','yonkers-new-york']])
+# explicit re-cuts (8 max)
+NEARBY['sioux-city-iowa'] = [A+x for x in ['sioux-falls-south-dakota','omaha-nebraska','ankeny-iowa','st-paul-minnesota','bloomington-minnesota','fargo-north-dakota','kansas-city-missouri','denver-colorado']]
+NEARBY['omaha-nebraska'] = [A+x for x in ['ankeny-iowa','sioux-city-iowa','sioux-falls-south-dakota','kansas-city-missouri','davenport-iowa','st-paul-minnesota','topeka-kansas','denver-colorado']]
+NEARBY['fargo-north-dakota'] = [A+x for x in ['bismarck-north-dakota','st-paul-minnesota','bloomington-minnesota','sioux-falls-south-dakota','sioux-city-iowa','omaha-nebraska','ankeny-iowa','missoula-montana']]
+NEARBY['bloomington-minnesota'] = [A+x for x in ['st-paul-minnesota','ankeny-iowa','sioux-city-iowa','sioux-falls-south-dakota','fargo-north-dakota','madison-wisconsin','omaha-nebraska','chicago-illinois']]
+NEARBY['st-paul-minnesota'] = [A+x for x in ['bloomington-minnesota','fargo-north-dakota','sioux-falls-south-dakota','madison-wisconsin','ankeny-iowa','sioux-city-iowa','milwaukee-wisconsin','omaha-nebraska']]
+NEARBY['bismarck-north-dakota'] = [A+x for x in ['fargo-north-dakota','st-paul-minnesota','bloomington-minnesota','sioux-falls-south-dakota','sioux-city-iowa','great-falls-montana','omaha-nebraska','denver-colorado']]
+NEARBY['denver-colorado'] = [A+x for x in ['cheyenne-wyoming','aurora-colorado','colorado-springs-colorado','salt-lake-city-utah','albuquerque-new-mexico','santa-fe-new-mexico','kansas-city-missouri','omaha-nebraska']]
+NEARBY['virginia-beach-virginia'] = [A+x for x in ['norfolk-virginia','chesapeake-virginia','richmond-virginia','raleigh-north-carolina','durham-north-carolina','baltimore-maryland','columbia-maryland','greensboro-north-carolina']]
+NEARBY['chesapeake-virginia'] = [A+x for x in ['norfolk-virginia','virginia-beach-virginia','richmond-virginia','raleigh-north-carolina','durham-north-carolina','columbia-maryland','baltimore-maryland','greensboro-north-carolina']]
+NEARBY['richmond-virginia'] = [A+x for x in ['virginia-beach-virginia','norfolk-virginia','chesapeake-virginia','columbia-maryland','baltimore-maryland','raleigh-north-carolina','durham-north-carolina','greensboro-north-carolina']]
+NEARBY['philadelphia-pennsylvania'] = [A+x for x in ['pittsburgh-pennsylvania','allentown-pennsylvania','bethlehem-pennsylvania','reading-pennsylvania','newark-new-jersey','manhattan-new-york','baltimore-maryland','wilmington-delaware']]
+# appends (lists under 8)
+for _k, _vs in {'columbus-ohio':[A+'charleston-west-virginia'], 'lexington-kentucky':[A+'charleston-west-virginia'], 'cincinnati-ohio':[A+'charleston-west-virginia'],
+               'pittsburgh-pennsylvania':[A+'charleston-west-virginia'], 'dayton-ohio':[A+'charleston-west-virginia'],
+               'aurora-colorado':[A+'cheyenne-wyoming'], 'colorado-springs-colorado':[A+'cheyenne-wyoming'],
+               'allentown-pennsylvania':[A+'bethlehem-pennsylvania'], 'reading-pennsylvania':[A+'bethlehem-pennsylvania']}.items():
+    for _v in _vs:
+        if _k in NEARBY and _v not in NEARBY[_k]: NEARBY[_k].append(_v)
+
 # ---- Oct 27, 2026 SEO pass: the legacy Corpus Christi page (old-generation template, pending a rebuild row)
 #      is registered so the hub, the Texas City Pages block, the sitemap and the counts include it. It is NOT
 #      rebuilt by localpage (no builder); patches/seo_pass_2026_10.py left its own breadcrumb/schema in place.

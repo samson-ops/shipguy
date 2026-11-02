@@ -1226,6 +1226,86 @@ before Texas; hub counts 189; sitemap +7 (257 URLs, lastmod 2026-11-02); `audit_
 Gilbert note; `test_new_pages.cjs` passes on the seven pages, the seven state pages and the hub. Open: the Corpus
 Christi legacy page still lacks the "See all" line (expected until its rebuild row arrives).
 
+## Batch 46 — Sioux Falls, Charleston (WV), Cheyenne, Norfolk, Bethlehem (Nov 2, 2026)
+| City | URL | Phone | Office |
+|---|---|---|---|
+| Sioux Falls, SD | /city/auto-transport-sioux-falls-south-dakota/ | (605) 702-2358 | 101 S Reid St Suite 455, Sioux Falls, SD 57103 (East Bank, across the river from downtown) |
+| Charleston, WV | /city/auto-transport-charleston-west-virginia/ | (304) 684-6422 | 232 Capitol St #458, Charleston, WV 25301 (Capitol Street downtown, between the river and the Coliseum) |
+| Cheyenne, WY | /city/auto-transport-cheyenne-wyoming/ | (304) 849-6570 | 1600 E 19th St #447, Cheyenne, WY 82001 (East 19th, a mile east of downtown and the Capitol) |
+| Norfolk, VA | /city/auto-transport-norfolk-virginia/ | (757) 786-3123 | 259 Granby St Ste 556, Norfolk, VA 23510 (Granby Street downtown, near Waterside and the MacArthur Center) |
+| Bethlehem, PA | /city/auto-transport-bethlehem-pennsylvania/ | (610) 615-7620 | 1349 Lynn Ave #547, Bethlehem, PA 18015 (South Side, off Route 412 and minutes from 78) |
+
+GBP embeds on all five (rows saved to `tools/rows/batch46_rows.txt` on arrival; the row spelled the city "Sioiux
+Falls", built as Sioux Falls). FLAG FOR THE OWNER: the Cheyenne row's number 3048496570 carries a 304 area code,
+which is West Virginia (Wyoming is 307), and the Charleston WV row is also 304, so the two lines may have been
+provisioned together. The page uses the number exactly as supplied; swap it with one line in
+`builders_city/build_cheyenne_local.py` (the `office(...)` call) and a rebuild if the owner sends a 307 line. Hours
+CT (Sioux Falls), MT (Cheyenne), ET (Charleston, Norfolk, Bethlehem). Stats rows: "1–3 Days" for Norfolk and
+Bethlehem; "2–5 Days" for Sioux Falls (the busiest corner of a pass-through state, matching the South Dakota page);
+"2–4 Days" for Charleston (the Kanawha Valley figure on the West Virginia page); "3–6 Days" for Cheyenne (the
+Wyoming page's honest window; the Denver pool an hour south shortens the Colorado lanes but not the long ones).
+Sioux Falls, Charleston and Cheyenne are the FIRST city pages for South Dakota, West Virginia and Wyoming: each
+state page got its first City Pages block (SD before Sioux Falls, WV before Charleston &amp; Huntington, WY before
+Cheyenne), and South Dakota, West Virginia and Wyoming blocks were inserted on the hub (SD before Texas, WV before
+Wisconsin, WY last after Wisconsin, 47 state blocks now). Two Charlestons are live (SC since Batch 45, WV now): every
+chip and table row carries the state, the hub and nearby chips read "Charleston, SC" / "Charleston, WV", and no page
+links a bare "Charleston" (the Columbus page links the WV one, the Savannah page the SC one). Pricing: Sioux Falls =
+Sioux City $160–$260, Omaha $220–$340, Minneapolis and Fargo $250–$380, Des Moines $260–$390, Kansas City $320–$460,
+Rapid City $330–$480, Chicago $430–$620, Denver $450–$650, Dallas $650–$900 (the Omaha and Fargo tables' Sioux Falls
+rows agree); Charleston WV = Columbus and Lexington $220–$340, Cincinnati $230–$350, Pittsburgh and Louisville
+$250–$380, Cleveland $260–$390, Charlotte $280–$410, Richmond $290–$420, Washington $330–$470, Atlanta $430–$620
+(Turnpike tolls inside the number where the route uses it, FAQ); Cheyenne = Fort Collins $150–$240, Denver $170–$280,
+Colorado Springs $220–$340 (the Denver pool), Salt Lake $400–$570, Omaha and Albuquerque $430–$620, Kansas City
+$470–$680, Dallas $650–$900, Chicago $680–$950, Phoenix $700–$1,000; Norfolk = the Virginia Beach table (Richmond
+$170–$280, Raleigh and Washington $230–$350, Baltimore $250–$380, Philadelphia $270–$400, Charlotte $300–$440, New
+York $350–$510, Atlanta $440–$630, Jacksonville $450–$650, Orlando $520–$750; tunnel tolls inside the number, FAQ);
+Bethlehem = the Allentown table (Philadelphia and Harrisburg $150–$240, Newark $160–$260, New York $170–$280,
+Baltimore $210–$320, Hartford $220–$340, Washington $230–$350, Boston and Pittsburgh $270–$400, Orlando
+$720–$1,020). Angles: Sioux Falls = 29/90/229, Minnesota and Cliff avenues, the East Bank, the Cathedral District
+vs the south-side subdivisions (FAQ), the 2–5 day window (FAQ), the two health systems and the card centers (FAQ,
+unnamed), the pork plant, the Guard wing, Augustana/USF move-in (FAQ), Brandon/Harrisburg/Brookings (FAQ), the
+blizzards on 29 and 90 (FAQ), the fair and the rally (FAQ), the pheasant opener, the ice, the snowbirds; Charleston WV
+= 64/77/79, the Turnpike toll (FAQ), Corridor G, MacCorkle and Kanawha Boulevard, the 2–4 day window (FAQ), South
+Hills vs the East End (FAQ), the Capitol and the hospitals (FAQ), the chemical plants and the engine plant (unnamed),
+the Guard wing, UC/WV State move-in (FAQ), Huntington/Teays Valley/Beckley (FAQ), the floods and the ice (FAQ), the
+session, FestivALL, the Regatta, Bridge Day, buck season; Cheyenne = 80/25/180, the Summit and the wind closures
+(FAQ), Lincolnway, Dell Range, the Avenues vs the Ranchettes (FAQ), the 3–6 day window (FAQ), F.E. Warren PCS outside
+the gate (FAQ), the Capitol, the railroad, the data centers, Frontier Days (FAQ), Laramie/Fort Collins/Casper (FAQ),
+LCCC move-in (FAQ), the blizzards and the hail; Norfolk = 64/264/564 and the tunnels (toll FAQ), Hampton Boulevard,
+Ghent vs Ocean View (FAQ), the naval station and Little Creek PCS (FAQ), port releases (FAQ), the hospitals, ODU and
+Norfolk State move-in (FAQ), the allied command, Virginia Beach/Portsmouth/Hampton (FAQ), hurricanes and nor'easters
+(FAQ), Harborfest, the Tattoo, the Illumination; Bethlehem = 78/22/378/412/33, the Hill-to-Hill Bridge, the Moravian
+District vs the South Side (FAQ), Lehigh and Moravian move-in (FAQ), the hospital and the device maker (FAQ,
+unnamed), the casino, the warehouses, the New York commuters, Musikfest (FAQ), Allentown/Easton/Nazareth (FAQ), ice on
+78 and the hills (FAQ), the Monocacy floods (FAQ), Christkindlmarkt, the Celtic Classic, the Rivalry. Long-sentence
+passes (`patches/fix_batch46_long.py`, 142 splits) plus a fresh-wording pass (`patches/fix_batch46_overlap.py`, 95
+rewrites over three rounds: the honest-window, PCS, open-trailer, reimbursement, non-running, winter and "what do
+you need" blocks the five shared with each other and with Batches 44–45) brought all five to CLEAR with no local
+terms missing and 21.2–22.2% overlap (Sioux Falls 22.2, Norfolk 21.8, Bethlehem 21.5, Charleston 21.5, Cheyenne
+21.2).
+Integration (`patches/batch46_states.py`): South Dakota first block inserted (1) with the Sioux Falls lead linked
+("It has its own page now."), the chip, and the pickup FAQ now naming the Sioux Falls page's meeting lots
+(resynced); West Virginia first block (1) with the quick note ("Charleston has its own page"), the Kanawha sentence
+linked, the chip, and the Turnpike FAQ pointing at the Charleston page (resynced); Wyoming first block (1) with the
+Cheyenne lead linked, the chip, and the PCS FAQ pointing at the Cheyenne page for the gate handoff (resynced);
+Virginia block regenerated (4) with the quick note listing Norfolk, the Naval Station sentence linked, the chip, and
+the PCS FAQ split between the Virginia Beach page (Oceana) and the Norfolk page (the naval station and Little Creek)
+(resynced); Pennsylvania block regenerated (6) with the quick note rewritten (it also fixes the "…and Reading, and
+Erie" grammar left by Batch 42), "Allentown and Bethlehem have their own pages", and the chip. Neighbor city pages:
+the first plain prose mention linked on Bismarck, Fargo, Omaha and Sioux City (Sioux Falls), Denver (Cheyenne),
+Chesapeake, Virginia Beach, Richmond, Dover and San Diego (Norfolk), and Allentown (Bethlehem). Left unlinked on
+purpose: "North Charleston" and "South Charleston", "Cheyenne Cañon" on Colorado Springs, "South Norfolk" on
+Chesapeake (the link there is on the downtown Norfolk mention), the Bethlehem town on Albany and the Bethlehem
+neighborhood chip on Augusta.
+Nearby chips regenerated wherever the NEARBY tables changed (Sioux City, Omaha, Fargo, Bloomington, St. Paul,
+Bismarck, Denver, Virginia Beach, Chesapeake, Richmond and Philadelphia re-cut explicitly; Columbus, Lexington,
+Cincinnati, Pittsburgh and Dayton gained Charleston WV; Aurora and Colorado Springs gained Cheyenne; Allentown and
+Reading gained Bethlehem); see-all 194 on every built page; hub rows for VA and PA regenerated plus the three new
+state blocks; hub counts 194 ("One hundred ninety-four" / "one hundred ninety-four local pages"); sitemap +5 (262
+URLs, lastmod 2026-11-02); `audit_site.py` clean over 281 pages apart from the Gilbert note; `test_new_pages.cjs`
+passes on the five pages, the five state pages and the hub. Open: the Corpus Christi legacy page still lacks the
+"See all" line (expected until its rebuild row arrives); the Cheyenne 304 line awaits the owner's word.
+
 ## Florida Google Business Profile links (this delivery)
 A fourth "Directions → Open in Google Maps" row was added to the office card on Gainesville, Jacksonville,
 Tallahassee and Daytona Beach using the maps.app.goo.gl links you sent. The builders carry `map_link=` so rebuilds keep it.
@@ -1242,7 +1322,7 @@ Tallahassee and Daytona Beach using the maps.app.goo.gl links you sent. The buil
 
 ## Verification run (all green)
 - `audit_content.py` on the 3 new pages: CLEAR.
-- `audit_site.py` over 276 pages (50 state + 189 city + 37 core, latest run after Batch 45 on Nov 2, 2026): links/anchors resolve, tags balanced, JSON-LD valid, GTM ×2, one H1, one canonical,
+- `audit_site.py` over 281 pages (50 state + 194 city + 37 core, latest run after Batch 46 on Nov 2, 2026): links/anchors resolve, tags balanced, JSON-LD valid, GTM ×2, one H1, one canonical,
   no orphans, hub/state/city interlinked, sitemap complete, ZIP lock + consent gate on every tool page.
   (One pre-existing note: Gilbert's "the number one thing that delays…" is not a superiority claim.)
 - `test_new_pages.cjs` (Playwright) on Tulsa, Norman, Edmond, Gainesville + home, vehicle-quote, Texas: desktop & mobile

@@ -1,0 +1,17 @@
+Batch 46 rows (received Nov 2, 2026) — phone | address | city | state | map embed src
+(The Sioux Falls row read "Sioiux Falls"; the Cheyenne number carries a 304 area code — flagged to the owner.)
+
+6057022358 | 101 S Reid St Suite 455, Sioux Falls, SD 57103 | Sioux Falls | South Dakota
+  https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3569.6373631357365!2d-96.7230185!3d43.546999400000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x878eb52abb982a5d%3A0x8c286e51ed0695a6!2sShip%20Guy%20Auto%20Transports!5e1!3m2!1sen!2sus!4v1793628650857!5m2!1sen!2sus
+
+3046846422 | 232 Capitol St #458, Charleston, WV 25301 | Charleston | West Virginia
+  https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3862.28412543473!2d-81.6338055!3d38.350393!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x884f2d3d388346cd%3A0x42b2e73fc4657725!2sShip%20Guy%20Auto%20Transports!5e1!3m2!1sen!2sus!4v1793628944637!5m2!1sen!2sus
+
+3048496570 | 1600 E 19th St #447, Cheyenne, WY 82001 | Cheyenne | Wyoming
+  https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3708.854009698389!2d-104.79895839999999!3d41.142357499999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x876f3bc7cc12fdf3%3A0x37e16f34f87bc5fc!2sShip%20Guy%20Auto%20Transports!5e1!3m2!1sen!2sus!4v1793629038945!5m2!1sen!2sus
+
+7577863123 | 259 Granby St Ste 556, Norfolk, VA 23510 | Norfolk | Virginia
+  https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3940.9910309031766!2d-76.2907793!3d36.8496221!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89ba99f59d086cb1%3A0x9e844d7ceee18f33!2sShip%20Guy%20Auto%20Transports!5e1!3m2!1sen!2sus!4v1793629099305!5m2!1sen!2sus
+
+6106157620 | 1349 Lynn Ave #547, Bethlehem, PA 18015 | Bethlehem | Pennsylvania
+  https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3739.030647627125!2d-75.3503765!3d40.605879400000006!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c43fbac2185493%3A0xefb590780332c613!2sShip%20Guy%20Auto%20Transports!5e1!3m2!1sen!2sus!4v1793629175798!5m2!1sen!2sus
