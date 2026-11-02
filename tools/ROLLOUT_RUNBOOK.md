@@ -1306,6 +1306,108 @@ URLs, lastmod 2026-11-02); `audit_site.py` clean over 281 pages apart from the G
 passes on the five pages, the five state pages and the hub. Open: the Corpus Christi legacy page still lacks the
 "See all" line (expected until its rebuild row arrives); the Cheyenne 304 line awaits the owner's word.
 
+## Batch 47 — Rochester (MN), Gulfport, Billings, Lincoln, Nashua, Winston-Salem (Nov 2, 2026)
+| City | URL | Phone | Office |
+|---|---|---|---|
+| Rochester, MN | /city/auto-transport-rochester-minnesota/ | (507) 713-1601 | 300 3rd Ave SE Suites 258, Rochester, MN 55904 (downtown, a few blocks east of Broadway and the clinic campus) |
+| Gulfport, MS | /city/auto-transport-gulfport-mississippi/ | (228) 395-8234 | 14231 Seaway Rd #789, Gulfport, MS 39503 (north Gulfport, between the airport and the outlets off 49) |
+| Billings, MT | /city/auto-transport-billings-montana/ | (406) 629-2642 | 1500 Poly Dr #753, Billings, MT 59102 (Poly Drive, across from the college and below the Rims) |
+| Lincoln, NE | /city/auto-transport-lincoln-nebraska/ | (402) 814-8622 | 3400 Plantation Dr Ste 445, Lincoln, NE 68516 (south Lincoln, off Highway 2 near 27th Street) |
+| Nashua, NH | /city/auto-transport-nashua-new-hampshire/ | (802) 308-8118 | 74 Northeastern Blvd #774, Nashua, NH 03062 (southwest Nashua, between Exits 4 and 5 of the Everett Turnpike) |
+| Winston-Salem, NC | /city/auto-transport-winston-salem-north-carolina/ | (336) 444-6889 | 500 W 5th St #562, Winston-Salem, NC 27101 (the tower on West Fifth downtown, two blocks from the convention center) |
+
+GBP embeds on all six (rows saved to `tools/rows/batch47_rows.txt` on arrival; the rows carried trailing spaces on
+several city and state names, trimmed). The Rochester MN builder is `builders_city/build_rochestermn_local.py`,
+because `build_rochester_local.py` is the Rochester NY one (it was overwritten for a moment during this batch and
+restored from git before the commit; the NY page itself was never rebuilt). FLAG FOR THE OWNER: the Nashua row's number 8023088118 carries an 802 area
+code, which is Vermont (New Hampshire is 603). The page uses the number exactly as supplied; swap it with one line in
+`builders_city/build_nashua_local.py` (the `office(...)` call, the `cta(...)` call and the `tel`/`disp` keys) and a
+rebuild if the owner sends a 603 line. Office locations verified by web search: 300 3rd Ave SE is the Ironwood
+Square / Hub on 3rd office building on the east side of downtown Rochester; 14231 Seaway Rd is a medical-office
+complex on Seaway Road in north Gulfport by the airport and the 49/10 outlets; 1500 Poly Dr faces Rocky Mountain
+College (1511 Poly Dr); 3400 Plantation Dr is the Southern Hills office cluster at Nebraska Parkway and South 27th;
+74 Northeastern Blvd is the Northbridge Business Center between Exits 4 and 5 of the Everett Turnpike; 500 W 5th St
+is the 500 West Fifth tower (the former GMAC building) two blocks from the Benton Convention Center. Hours CT
+(Rochester, Gulfport, Lincoln), MT (Billings), ET (Nashua, Winston-Salem). Stats rows: "1–3 Days" for Rochester,
+Gulfport, Lincoln, Nashua and Winston-Salem; "3–6 Days" for Billings (the Montana page's honest window, with the page
+explaining that Billings runs the fastest end of it as the one city the 90 carriers pass on purpose). Nashua is NEW
+HAMPSHIRE'S FIRST city page: the New Hampshire page got its first City Pages block (after The Corridors, before The
+Southern Tier), the "no city page yet" note was retired, and a New Hampshire block was inserted on the hub between
+Nevada and New Jersey (48 state blocks now). Two Rochesters are live (NY since the early batches, MN now): the nearby
+and hub chips carry the state, and no page was linked on the bare word "Rochester" without its first mention being
+read first (St. Paul's is the 52 road south, Bloomington's is the same-day list; both are the Minnesota city).
+Pricing: Rochester = the south end of the Twin Cities pool (Minneapolis / St. Paul $160–$260 per the St. Paul and
+Bloomington tables, Madison and Des Moines $230–$350, Sioux Falls $250–$380, Milwaukee $280–$410, Chicago $300–$440,
+Omaha $320–$460, Kansas City $400–$570, Denver $600–$850, Phoenix $950–$1,350); Gulfport = Mobile and Hattiesburg
+$140–$230, New Orleans $150–$240, Pensacola $190–$300, Baton Rouge $200–$310, Jackson $220–$340 (the Jackson table's
+coast rows agree), Houston and Atlanta $380–$540, Tampa and Dallas $480–$690; Billings = the Montana state table's
+Billings rows (Rapid City $310–$450, Spokane $380–$540, Salt Lake $400–$570, Denver $450–$650, Fargo $470–$680,
+Seattle $600–$880) plus Bozeman $150–$240, Great Falls $240–$360 and Missoula $320–$460 (matching those pages' Billings
+rows) and Bismarck $380–$540 (the Bismarck table); Lincoln = the Omaha table plus or minus fifty miles (Omaha
+$140–$230 per the Omaha table, Kansas City $210–$330, Des Moines $220–$340, Sioux Falls $250–$380, Wichita $280–$410,
+Minneapolis $360–$520, St. Louis and Denver $400–$570, Chicago $430–$620, Dallas $460–$670); Nashua = the top of the
+Boston pool (Manchester $120–$200, Boston and Worcester $150–$240 with the Boston lane matching the New Hampshire
+page's figure, Providence $170–$280, Hartford $190–$300, Portland $200–$310, New York $280–$410, Philadelphia
+$330–$480, Washington $400–$570, Orlando $820–$1,160 per the Worcester table); Winston-Salem = the Greensboro table
+shifted thirty miles west (Charlotte and Raleigh $150–$240, Columbia $220–$340, Richmond $240–$360, Washington and
+Atlanta $300–$440, Nashville $390–$560, New York $450–$650, Orlando $460–$660, Chicago $550–$800). Angles: Rochester =
+52/14/63/90, Broadway and Civic Center Drive, Pill Hill and Kutzky Park (FAQ), the clinic calendar and the July
+changeover (FAQ, "Mayo Clinic" named once in the FAQ as the state page does), the downtown construction (FAQ), the
+old computer campus (unnamed), RCTC/UMR move-in (FAQ), Byron/Stewartville/Winona (FAQ), the Arizona snowbird lane
+(FAQ), the blizzards on 52 and 90 (FAQ), the 1978 flood and the flood walls, the August 2007 rain; Gulfport =
+10/49/90 and Pass Road, the Seabee base PCS outside the gate (FAQ), Keesler (FAQ), the port and the fruit ships, the
+casinos, the hospital, the shipyard and the rocket test center (unnamed), the October car week (FAQ, the enclosed
+angle), Bayou View and the beachfront (FAQ), MGCCC/Southern Miss Gulf Park move-in (FAQ), Biloxi/Long
+Beach/Hattiesburg (FAQ), the hurricanes with Katrina as the benchmark (FAQ), the January 2014 ice, the winter
+residents from Canada and the Midwest; Billings = 90/94/87/Highway 3, the Rims and the two cliff roads, the honest
+window (FAQ), the North Side and the Heights (FAQ), the two hospitals and the refineries (FAQ), the railroad's Laurel
+yard, the oil offices, the beet plant, MSU Billings/Rocky move-in (FAQ), Laurel/Red Lodge/Hardin (FAQ), the blizzards
+and the cold (FAQ), the fair (FAQ), the Father's Day 2010 tornado, the June 2022 flood, the chinooks and the hail;
+Lincoln = 80/180/Highway 2/77 and the South Beltway, the Near South and Country Club (FAQ), the seven Husker
+Saturdays and the 1962 sellout streak (FAQ), university move-in at the Vine Street lots (FAQ), the state and the
+hospitals (FAQ), the insurance offices and the sports video company (unnamed), the plant on Northwest 27th and the
+Havelock car shops (unnamed), the Guard refueling wing at the airport (FAQ), Omaha/Waverly/Crete (FAQ), the gates on
+80 (FAQ), the October 1997 and Christmas 2009 storms, the April 2024 tornado, the December 2021 windstorm; Nashua =
+the Everett Turnpike, 101A, 111, Daniel Webster Highway and the three bridges, the turnpike toll (FAQ), French Hill
+and the Tree Streets (FAQ), the tax migration from Massachusetts (FAQ), the mall on the state line, the defense
+campus and the two hospitals (FAQ, unnamed), Rivier/NCC move-in and Boston's September 1 moving day (FAQ),
+Hudson/Manchester/Lowell (FAQ), the nor'easters with December 2008, February 2013 and March 2018 (FAQ), mud season,
+the May 2006 and April 2007 floods, the snowbird lane to Florida; Winston-Salem = 40/52 (now 74)/421, the Salem
+Parkway rebuild (FAQ), Silas Creek, Stratford and University Parkway, Old Salem and the West End (FAQ), the medical
+center and the research campus in the old cigarette factories (FAQ), the tobacco and apparel companies (unnamed),
+the banks that left for Charlotte, Wake Forest/Winston-Salem State move-in (FAQ), the furniture market weeks (FAQ),
+Greensboro/Clemmons/Mount Airy (FAQ), the ice storms with December 2002, February 2014 and December 2018 (FAQ), the
+fair, the Tanglewood lights, Hugo. Long-sentence passes (`patches/fix_batch47_long.py`, 98 splits; all six came
+up CLEAR on the first re-audit) plus a fresh-wording pass (`patches/fix_batch47_overlap.py`, 103 rewrites over two
+rounds: the basics, options, why, quote/non-running/snow FAQ, student and reimbursement blocks the six shared with
+each other and with Batches 44–46, plus the Lincoln and Rochester checklists) brought all six to CLEAR with no local
+terms missing and 18.4–21.6% overlap (Nashua 21.6, Lincoln 19.6, Billings 19.5, Gulfport 19.4, Rochester 18.9,
+Winston-Salem 18.4, measured before the hub patch touched every page).
+Integration (`patches/batch47_states.py`): Minnesota block regenerated (3) with the quick note, the Rochester lead
+linked ("It has its own page now."), the chip, and the Mayo FAQ pointing at the Rochester page for the lots
+(resynced); Mississippi block (2) with the quick note, the Seabee sentence linked, the chip, and the PCS FAQ pointing
+at the Gulfport page for the Seabee base and Keesler (resynced); Montana block (3) with the Billings hub sentence
+linked, the chip, and the Seattle/Denver FAQ pointing at the Billings lane table (resynced; the 19-word Malmstrom
+sentence left by Batch 45 was split while there); Nebraska block (2) with the quick note, the Lincoln lead linked,
+the chip, and the Husker FAQ pointing at the Lincoln page for the game-day lots (resynced); New Hampshire first
+block inserted (1) with the quick note rewritten, the Southern Tier sentence linked plus "Nashua has its own page
+now.", the chip, and the Massachusetts FAQ pointing at the Nashua page (resynced); North Carolina block regenerated
+(5) with the quick note now linking all five cities, the Triad paragraph ("Both have their own pages now."), the
+chip, and the Triad FAQ linking Greensboro and Winston-Salem (resynced). Neighbor city pages: the first plain prose
+mention linked on St. Paul and Bloomington (Rochester), Great Falls, Missoula, Bismarck and Cheyenne (Billings; the
+Cheyenne link sits inside "the Denver-to-Billings road"), Omaha and Topeka (Lincoln), and Greensboro
+(Winston-Salem). Gulfport and Nashua have no plain prose mention on any neighbor page, so their inbound links are
+the nearby chips, the state pages and the hub. Left unlinked on purpose: every "Rochester" outside the two read
+mentions, and every "Lincoln" that is a road, a park or a tunnel. Nearby chips regenerated wherever the NEARBY tables
+changed (St. Paul, Bloomington, Sioux Falls, Jackson, Mobile, New Orleans, Metairie, Baton Rouge, Great Falls,
+Missoula, Bismarck, Cheyenne, Omaha, Sioux City, Topeka, Ankeny, Boston, Worcester, Greensboro, Charlotte and Raleigh
+re-cut explicitly; Portland (ME), Warwick, Cranston and Springfield (MA) gained Nashua; Durham gained Winston-Salem);
+see-all 200 on every built page; hub rows for MN, MS, MT, NE, NC regenerated plus the New Hampshire block; hub
+counts 200 ("Two hundred" / "two hundred local pages"); sitemap +6 (268 URLs, lastmod 2026-11-02); `audit_site.py`
+clean over 287 pages apart from the Gilbert note; `test_new_pages.cjs` passes on the six pages, the six state pages
+and the hub. Open: the Corpus Christi legacy page still lacks the "See all" line (expected until its rebuild row
+arrives); the Nashua 802 line awaits the owner's word, as does the Cheyenne 304 line from Batch 46.
+
 ## Florida Google Business Profile links (this delivery)
 A fourth "Directions → Open in Google Maps" row was added to the office card on Gainesville, Jacksonville,
 Tallahassee and Daytona Beach using the maps.app.goo.gl links you sent. The builders carry `map_link=` so rebuilds keep it.
@@ -1322,7 +1424,7 @@ Tallahassee and Daytona Beach using the maps.app.goo.gl links you sent. The buil
 
 ## Verification run (all green)
 - `audit_content.py` on the 3 new pages: CLEAR.
-- `audit_site.py` over 281 pages (50 state + 194 city + 37 core, latest run after Batch 46 on Nov 2, 2026): links/anchors resolve, tags balanced, JSON-LD valid, GTM ×2, one H1, one canonical,
+- `audit_site.py` over 287 pages (50 state + 200 city + 37 core, latest run after Batch 47 on Nov 2, 2026): links/anchors resolve, tags balanced, JSON-LD valid, GTM ×2, one H1, one canonical,
   no orphans, hub/state/city interlinked, sitemap complete, ZIP lock + consent gate on every tool page.
   (One pre-existing note: Gilbert's "the number one thing that delays…" is not a superiority claim.)
 - `test_new_pages.cjs` (Playwright) on Tulsa, Norman, Edmond, Gainesville + home, vehicle-quote, Texas: desktop & mobile
