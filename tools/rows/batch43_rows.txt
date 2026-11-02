@@ -1,0 +1,19 @@
+Batch 43 rows (received Nov 2, 2026) — phone | address | city | state | map embed src
+
+4019925420 | 200 Centerville Rd #404, Warwick, RI 02886 | Warwick | Rhode Island
+  https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3677.2883442204748!2d-71.46746089999999!3d41.6974453!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e44db9070c979f%3A0x208803bddd450dcb!2sShip%20Guy%20Auto%20Transports!5e1!3m2!1sen!2sus!4v1793288018292!5m2!1sen!2sus
+
+6515381308 | 428 Minnesota St Unit 369, St Paul, MN 55101 | Saint Paul | Minnesota
+  https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3485.569103873132!2d-93.0935269!3d44.948705499999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87f7d5f59ecc58a9%3A0xbd43c1351a2421aa!2sShip%20Guy%20Auto%20Transports!5e1!3m2!1sen!2sus!4v1793288210686!5m2!1sen!2sus
+
+6016888963 | 135 Bounds St #132, Jackson, MS 39206 | Jackson | Mississippi
+  https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4159.640780966632!2d-90.1513901!3d32.3699563!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8629cd1b1985db3f%3A0x83b5b3ea344577eb!2sShip%20Guy%20Auto%20Transports!5e1!3m2!1sen!2sus!4v1793288271515!5m2!1sen!2sus
+
+4022794512 | 1901 Howard St suite 256, Omaha, NE 68102 | Omaha | Nebraska
+  https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3702.4611807907318!2d-95.94149039999999!3d41.2552708!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87938ff8538ab767%3A0xe1f69a3e8644654f!2sShip%20Guy%20Auto%20Transports!5e1!3m2!1sen!2sus!4v1793288330268!5m2!1sen!2sus
+
+8624182888 | 625 Broad St Ste 440, Newark, NJ 07102 | Newark | New Jersey
+  https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3731.4983312474346!2d-74.169975!3d40.740333799999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c253324bd9ddfd%3A0x4a231226155a2903!2sShip%20Guy%20Auto%20Transports!5e1!3m2!1sen!2sus!4v1793288409685!5m2!1sen!2sus
+
+5752105082 | 141 Roadrunner Pkwy #447, Las Cruces, NM 88011 | Las Cruces | New Mexico
+  https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4161.7723461040805!2d-106.7348909!3d32.3236081!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x86de3d867af7a42b%3A0x1335aa9e61e13c7f!2sShip%20Guy%20Auto%20Transports!5e1!3m2!1sen!2sus!4v1793288462164!5m2!1sen!2sus

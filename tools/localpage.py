@@ -389,7 +389,7 @@ def template():
 def short_meta(meta, limit=160, tail=' Free quote.'):
     """First sentence whole, then comma-clauses greedily while the result stays within the limit."""
     m = re.sub(r'\s*Free quote\.?\s*$', '', meta.strip())
-    parts = re.split(r'(?<=\.)\s+', m, maxsplit=1)
+    parts = re.split(r'(?<=\.)(?<!\bSt\.)(?<!\bMt\.)(?<!\bFt\.)\s+', m, maxsplit=1)   # "St. Paul" is not a sentence end (Nov 2, 2026)
     out = parts[0]
     if len(parts) > 1:
         clauses = re.split(r',\s*', parts[1])
@@ -741,6 +741,53 @@ for _k, _vs in {'warren-michigan':['auto-transport-lansing-michigan'], 'ann-arbo
                'buffalo-new-york':['auto-transport-erie-pennsylvania'], 'cleveland-ohio':['auto-transport-erie-pennsylvania'], 'akron-ohio':['auto-transport-erie-pennsylvania'], 'rochester-new-york':['auto-transport-erie-pennsylvania'],
                'worcester-massachusetts':['auto-transport-cranston-rhode-island'], 'hartford-connecticut':['auto-transport-cranston-rhode-island'],
                'new-haven-connecticut':['auto-transport-cranston-rhode-island'], 'springfield-massachusetts':['auto-transport-cranston-rhode-island']}.items():
+    for _v in _vs:
+        if _k in NEARBY and _v not in NEARBY[_k]: NEARBY[_k].append(_v)
+
+# ---- Batch 43 (Nov 2, 2026): Warwick (RI); St. Paul (MN); Jackson (MS); Omaha (NE); Newark (NJ); Las Cruces (NM) ----
+#      NOTE: St. Paul, Jackson, Omaha and Newark are their states' first city pages (first City Pages blocks on MN, MS, NE, NJ).
+#      The row said "Saint Paul"; the slug and the display follow the St. Louis / St. Petersburg precedent ("St. Paul").
+register('auto-transport-warwick-rhode-island', 'Warwick', 'RI')
+register('auto-transport-st-paul-minnesota', 'St. Paul', 'MN')
+register('auto-transport-jackson-mississippi', 'Jackson', 'MS')
+register('auto-transport-omaha-nebraska', 'Omaha', 'NE')
+register('auto-transport-newark-new-jersey', 'Newark', 'NJ')
+register('auto-transport-las-cruces-new-mexico', 'Las Cruces', 'NM')
+_s('warwick-rhode-island', ['auto-transport-cranston-rhode-island','auto-transport-boston-massachusetts','auto-transport-worcester-massachusetts','auto-transport-hartford-connecticut','auto-transport-new-haven-connecticut','auto-transport-springfield-massachusetts','auto-transport-manhattan-new-york'])
+_s('st-paul-minnesota', ['auto-transport-madison-wisconsin','auto-transport-ankeny-iowa','auto-transport-sioux-city-iowa','auto-transport-milwaukee-wisconsin','auto-transport-green-bay-wisconsin','auto-transport-davenport-iowa','auto-transport-chicago-illinois','auto-transport-omaha-nebraska'])
+_s('jackson-mississippi', ['auto-transport-new-orleans-louisiana','auto-transport-baton-rouge-louisiana','auto-transport-mobile-alabama','auto-transport-shreveport-louisiana','auto-transport-little-rock-arkansas','auto-transport-tuscaloosa-alabama','auto-transport-montgomery-alabama','auto-transport-metairie-louisiana'])
+_s('omaha-nebraska', ['auto-transport-ankeny-iowa','auto-transport-sioux-city-iowa','auto-transport-kansas-city-missouri','auto-transport-davenport-iowa','auto-transport-st-paul-minnesota','auto-transport-topeka-kansas','auto-transport-denver-colorado','auto-transport-wichita-kansas'])
+_s('newark-new-jersey', ['auto-transport-manhattan-new-york','auto-transport-staten-island-new-york','auto-transport-brooklyn-new-york','auto-transport-yonkers-new-york','auto-transport-philadelphia-pennsylvania','auto-transport-allentown-pennsylvania','auto-transport-stamford-connecticut','auto-transport-wilmington-delaware'])
+_s('las-cruces-new-mexico', ['auto-transport-el-paso-texas','auto-transport-albuquerque-new-mexico','auto-transport-tucson-arizona','auto-transport-phoenix-arizona','auto-transport-denver-colorado','auto-transport-san-antonio-texas'])
+NEARBY['cranston-rhode-island'] = ['auto-transport-warwick-rhode-island','auto-transport-boston-massachusetts','auto-transport-worcester-massachusetts','auto-transport-hartford-connecticut','auto-transport-new-haven-connecticut','auto-transport-springfield-massachusetts','auto-transport-manhattan-new-york']
+NEARBY['el-paso-texas'] = ['auto-transport-las-cruces-new-mexico','auto-transport-albuquerque-new-mexico','auto-transport-tucson-arizona','auto-transport-san-antonio-texas','auto-transport-austin-texas','auto-transport-phoenix-arizona']
+NEARBY['albuquerque-new-mexico'] = ['auto-transport-las-cruces-new-mexico','auto-transport-el-paso-texas','auto-transport-phoenix-arizona','auto-transport-tucson-arizona','auto-transport-denver-colorado','auto-transport-oklahoma-city-oklahoma','auto-transport-salt-lake-city-utah']
+NEARBY['manhattan-new-york'] = ['auto-transport-brooklyn-new-york','auto-transport-queens-new-york','auto-transport-bronx-new-york','auto-transport-newark-new-jersey','auto-transport-yonkers-new-york','auto-transport-staten-island-new-york','auto-transport-philadelphia-pennsylvania','auto-transport-boston-massachusetts']
+NEARBY['staten-island-new-york'] = ['auto-transport-brooklyn-new-york','auto-transport-manhattan-new-york','auto-transport-newark-new-jersey','auto-transport-queens-new-york','auto-transport-bronx-new-york','auto-transport-philadelphia-pennsylvania','auto-transport-yonkers-new-york']
+NEARBY['ankeny-iowa'] = ['auto-transport-davenport-iowa','auto-transport-sioux-city-iowa','auto-transport-omaha-nebraska','auto-transport-kansas-city-missouri','auto-transport-st-paul-minnesota','auto-transport-chicago-illinois','auto-transport-st-louis-missouri','auto-transport-madison-wisconsin']
+NEARBY['sioux-city-iowa'] = ['auto-transport-omaha-nebraska','auto-transport-ankeny-iowa','auto-transport-st-paul-minnesota','auto-transport-davenport-iowa','auto-transport-kansas-city-missouri','auto-transport-overland-park-kansas','auto-transport-denver-colorado','auto-transport-chicago-illinois']
+NEARBY['new-orleans-louisiana'] = ['auto-transport-metairie-louisiana','auto-transport-baton-rouge-louisiana','auto-transport-jackson-mississippi','auto-transport-mobile-alabama','auto-transport-houston-texas','auto-transport-shreveport-louisiana','auto-transport-lafayette-louisiana','auto-transport-atlanta-georgia']
+NEARBY['davenport-iowa'] = ['auto-transport-ankeny-iowa','auto-transport-chicago-illinois','auto-transport-rockford-illinois','auto-transport-st-paul-minnesota','auto-transport-omaha-nebraska','auto-transport-madison-wisconsin','auto-transport-milwaukee-wisconsin','auto-transport-st-louis-missouri']
+NEARBY['denver-colorado'] = ['auto-transport-aurora-colorado','auto-transport-colorado-springs-colorado','auto-transport-salt-lake-city-utah','auto-transport-albuquerque-new-mexico','auto-transport-las-cruces-new-mexico','auto-transport-kansas-city-missouri','auto-transport-omaha-nebraska','auto-transport-wichita-kansas']
+NEARBY['kansas-city-missouri'] = ['auto-transport-overland-park-kansas','auto-transport-olathe-kansas','auto-transport-lawrence-kansas','auto-transport-independence-missouri','auto-transport-lees-summit-missouri','auto-transport-topeka-kansas','auto-transport-omaha-nebraska','auto-transport-columbia-missouri']
+NEARBY['milwaukee-wisconsin'] = ['auto-transport-madison-wisconsin','auto-transport-kenosha-wisconsin','auto-transport-green-bay-wisconsin','auto-transport-chicago-illinois','auto-transport-waukegan-illinois','auto-transport-st-paul-minnesota','auto-transport-grand-rapids-michigan','auto-transport-detroit-michigan']
+NEARBY['madison-wisconsin'] = ['auto-transport-milwaukee-wisconsin','auto-transport-green-bay-wisconsin','auto-transport-kenosha-wisconsin','auto-transport-chicago-illinois','auto-transport-st-paul-minnesota','auto-transport-rockford-illinois','auto-transport-davenport-iowa','auto-transport-indianapolis-indiana']
+NEARBY['philadelphia-pennsylvania'] = ['auto-transport-pittsburgh-pennsylvania','auto-transport-allentown-pennsylvania','auto-transport-reading-pennsylvania','auto-transport-newark-new-jersey','auto-transport-manhattan-new-york','auto-transport-baltimore-maryland','auto-transport-wilmington-delaware','auto-transport-staten-island-new-york']
+NEARBY['wilmington-delaware'] = ['auto-transport-philadelphia-pennsylvania','auto-transport-dover-delaware','auto-transport-baltimore-maryland','auto-transport-allentown-pennsylvania','auto-transport-reading-pennsylvania','auto-transport-newark-new-jersey','auto-transport-columbia-maryland','auto-transport-staten-island-new-york']
+NEARBY['queens-new-york'] = ['auto-transport-manhattan-new-york','auto-transport-brooklyn-new-york','auto-transport-bronx-new-york','auto-transport-yonkers-new-york','auto-transport-staten-island-new-york','auto-transport-newark-new-jersey','auto-transport-boston-massachusetts','auto-transport-philadelphia-pennsylvania']
+NEARBY['bronx-new-york'] = ['auto-transport-manhattan-new-york','auto-transport-yonkers-new-york','auto-transport-queens-new-york','auto-transport-brooklyn-new-york','auto-transport-newark-new-jersey','auto-transport-stamford-connecticut','auto-transport-boston-massachusetts','auto-transport-albany-new-york']
+NEARBY['tucson-arizona'] = ['auto-transport-phoenix-arizona','auto-transport-gilbert-arizona','auto-transport-mesa-arizona','auto-transport-chandler-arizona','auto-transport-tempe-arizona','auto-transport-las-cruces-new-mexico','auto-transport-el-paso-texas','auto-transport-albuquerque-new-mexico']
+NEARBY['phoenix-arizona'] = [x for x in NEARBY['phoenix-arizona'] if x != 'auto-transport-las-vegas-nevada'][:7] + ['auto-transport-las-cruces-new-mexico']
+NEARBY['wichita-kansas'] = ['auto-transport-oklahoma-city-oklahoma','auto-transport-kansas-city-missouri','auto-transport-overland-park-kansas','auto-transport-topeka-kansas','auto-transport-tulsa-oklahoma','auto-transport-omaha-nebraska','auto-transport-dallas-texas','auto-transport-denver-colorado']
+NEARBY['boston-massachusetts'] = ['auto-transport-worcester-massachusetts','auto-transport-cranston-rhode-island','auto-transport-warwick-rhode-island','auto-transport-manhattan-new-york','auto-transport-hartford-connecticut','auto-transport-portland-maine','auto-transport-albany-new-york','auto-transport-philadelphia-pennsylvania']
+NEARBY['worcester-massachusetts'] = ['auto-transport-boston-massachusetts','auto-transport-cranston-rhode-island','auto-transport-warwick-rhode-island','auto-transport-springfield-massachusetts','auto-transport-hartford-connecticut','auto-transport-albany-new-york','auto-transport-new-haven-connecticut','auto-transport-manhattan-new-york']
+NEARBY['yonkers-new-york'] = ['auto-transport-bronx-new-york','auto-transport-manhattan-new-york','auto-transport-queens-new-york','auto-transport-newark-new-jersey','auto-transport-stamford-connecticut','auto-transport-albany-new-york','auto-transport-boston-massachusetts','auto-transport-philadelphia-pennsylvania']
+for _k, _vs in {'green-bay-wisconsin':['auto-transport-st-paul-minnesota'],
+               'baton-rouge-louisiana':['auto-transport-jackson-mississippi'], 'mobile-alabama':['auto-transport-jackson-mississippi'], 'shreveport-louisiana':['auto-transport-jackson-mississippi'],
+               'little-rock-arkansas':['auto-transport-jackson-mississippi'], 'tuscaloosa-alabama':['auto-transport-jackson-mississippi'], 'montgomery-alabama':['auto-transport-jackson-mississippi'], 'metairie-louisiana':['auto-transport-jackson-mississippi'],
+               'topeka-kansas':['auto-transport-omaha-nebraska'],
+               'brooklyn-new-york':['auto-transport-newark-new-jersey'], 'yonkers-new-york':['auto-transport-newark-new-jersey'], 'allentown-pennsylvania':['auto-transport-newark-new-jersey'], 'stamford-connecticut':['auto-transport-newark-new-jersey'],
+               'san-antonio-texas':['auto-transport-las-cruces-new-mexico']}.items():
     for _v in _vs:
         if _k in NEARBY and _v not in NEARBY[_k]: NEARBY[_k].append(_v)
 

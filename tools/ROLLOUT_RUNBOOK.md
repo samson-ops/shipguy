@@ -1040,6 +1040,71 @@ VA, PA regenerated and a Rhode Island block inserted before Texas; hub counts 17
 five state pages, the hub, Virginia Beach and Grand Rapids. Open: the Corpus Christi legacy page still lacks the
 "See all" line (expected until its rebuild row arrives).
 
+## Batch 43 — Warwick, St. Paul, Jackson, Omaha, Newark, Las Cruces (Nov 2, 2026)
+| City | URL | Phone | Office |
+|---|---|---|---|
+| Warwick, RI | /city/auto-transport-warwick-rhode-island/ | (401) 992-5420 | 200 Centerville Rd #404, Warwick, RI 02886 (Apponaug, minutes from 95 and the airport) |
+| St. Paul, MN | /city/auto-transport-st-paul-minnesota/ | (651) 538-1308 | 428 Minnesota St Unit 369, St Paul, MN 55101 (downtown, between Rice Park and the Capitol) |
+| Jackson, MS | /city/auto-transport-jackson-mississippi/ | (601) 688-8963 | 135 Bounds St #132, Jackson, MS 39206 (Northeast Jackson, off Northside Drive east of 55) |
+| Omaha, NE | /city/auto-transport-omaha-nebraska/ | (402) 279-4512 | 1901 Howard St Suite 256, Omaha, NE 68102 (downtown, west of the Old Market) |
+| Newark, NJ | /city/auto-transport-newark-new-jersey/ | (862) 418-2888 | 625 Broad St Ste 440, Newark, NJ 07102 (downtown, at Washington Park) |
+| Las Cruces, NM | /city/auto-transport-las-cruces-new-mexico/ | (575) 210-5082 | 141 Roadrunner Pkwy #447, Las Cruces, NM 88011 (East Mesa, at Lohman, minutes from 25) |
+
+GBP embeds on all six (rows saved to `tools/rows/batch43_rows.txt` on arrival). The row said "Saint Paul"; the slug
+and the display name follow the St. Louis / St. Petersburg precedent (`st-paul`, "St. Paul"), and `short_meta()` was
+taught not to split a meta description at "St.", "Mt." or "Ft." (the St. Louis meta is unchanged). Hours ET
+(Warwick, Newark), CT (St. Paul, Jackson, Omaha), MT (Las Cruces); stats rows "1–3 Days" on all six. Four states got
+their FIRST City Pages block: Minnesota (after The Corridors, before The Twin Cities), Mississippi (before Jackson),
+Nebraska (before Omaha), New Jersey (after The Roads, before North Jersey); the "has no city page yet" notes on
+MN/MS/NE were retired (NJ's quick note is about tolls and stays). Pricing: Warwick = Providence on every lane (same
+trucks ten minutes north; Boston/Worcester lowest, Orlando $820–$1,180 to match the Rhode Island FAQ); St. Paul =
+Minneapolis on every lane (same trucks ten miles west; Chicago $340–$490 down 94); Jackson = four interstates and the
+Canton plant's return-trip haulers (New Orleans/Memphis lowest, Dallas $360–$520, Atlanta $340–$490); Omaha =
+80/29 (Lincoln $140–$230, Chicago $400–$580, Denver $430–$620, Dallas $480–$700 to match the Nebraska FAQ); Newark =
+95/Turnpike with the port's carrier base (Manhattan $100–$170 lowest, Orlando $760–$1,080, Chicago $560–$820; Turnpike,
+78 and Hudson tolls inside the number); Las Cruces = El Paso on every lane (same trucks forty minutes south; Phoenix
+$350–$510, Dallas and Denver a day). Angles: Warwick = 95/Route 2/Route 37/Airport Connector and the Apponaug
+rotary, the bay villages' lanes with the mall and station handoffs (FAQ), fly-and-ship through the airport (FAQ), the
+hospital on Toll Gate Road and the Quonset submarine yard (FAQ), Cranston/East Greenwich/Coventry (FAQ), the
+nor'easter and 2013 blizzard hold (FAQ), the March 2010 Pawtuxet flood (FAQ), the community college and Providence
+campuses (FAQ); St. Paul = 94/35E/494/694 and the 35E truck ban (FAQ), Summit Hill and downtown with the Midway and
+Grand Avenue handoffs (FAQ), the Capitol workforce and the headquarters with the fourth-January appointee class (FAQ),
+St. Thomas/Macalester/Hamline move-in (FAQ), Woodbury/Roseville/Minneapolis (FAQ), snow emergencies (FAQ), the State
+Fair (FAQ); Jackson = 55/20/220/Stack and the Canton plant, Belhaven/Fondren streets with the main-road handoff
+(FAQ), why pickups are quick (FAQ), the state workforce and the medical center (FAQ), Jackson State/Millsaps/Belhaven
+move-in (FAQ), Madison/Flowood/Clinton (FAQ), tornado warnings (FAQ), the State Fair (FAQ); Omaha = 80/29/480/680
+and Dodge, the Old Market and Dundee brick streets (FAQ), Offutt PCS with the gated housing (FAQ), the Fortune 500
+headquarters (FAQ), Creighton/UNO move-in (FAQ), Papillion/Elkhorn/Council Bluffs (FAQ), the College World Series
+(FAQ), blizzards and tornado warnings (FAQ); Newark = 95/78/280/Turnpike/Parkway (trucks banned on the Parkway) and
+the airport, the Ironbound and downtown with the river-lot handoffs (FAQ), Port Newark customs releases (FAQ), the
+airline hub and the headquarters (FAQ), Rutgers-Newark/NJIT move-in (FAQ), tolls inside the price (FAQ),
+Montclair/Elizabeth/Jersey City (FAQ), nor'easters and hurricanes (FAQ); Las Cruces = 10/25/70 and the pass, Mesilla
+and the Mesquite district (FAQ), White Sands and Fort Bliss PCS (FAQ), NMSU move-in (FAQ), the Border Patrol
+checkpoints (FAQ), Hatch/Anthony/Santa Teresa (FAQ), dust storms closing 10 (FAQ), cars crossing at Santa Teresa
+(FAQ). Two long-sentence passes (`patches/fix_batch43_long.py`, 154 splits) plus a fresh-wording pass on the standard
+blocks (`patches/fix_batch43_overlap.py`, 84 rewrites: Basics, checklist, FMCSA/bond, coordinator, open/enclosed,
+campus move-in body + FAQ, appointee class, reimbursement line, military/state-to-state link sentences,
+"what do you need", non-running FAQ, CTA sub, cost-guide lead; Warwick had also shared Cranston's storm and flood
+wording) brought all six to CLEAR and 12.8–19.5% overlap (from 23.0–29.1%).
+Integration (`patches/batch43_states.py`): Rhode Island block regenerated (2 cities) with the intro, the quick note
+and the Warwick/Cranston sentence rewritten and the chip linked; Minnesota block inserted (1) with the quick note
+and the Fortune 500 lead linked, the chip, and the headquarters FAQ (resynced); Mississippi block inserted (1) with
+the quick note, the section lead, the chip and the "quick to schedule" FAQ (resynced); Nebraska block inserted (1)
+with the quick note, the section lead, the chip and the corporate-relocation FAQ (resynced; the FAQ's "cheapest long
+lanes" became "lowest-cost long lanes" while there); New Jersey block inserted (1) with the Newark/Oranges/Montclair
+sentence linked and the chip; New Mexico block regenerated (2) with the quick note, the overview sentence, the Las
+Cruces section lead, the chip and the campus FAQ (resynced). Neighbor city pages: the first plain prose mention
+linked on Cranston (Warwick); Baton Rouge, Lafayette, Shreveport, Metairie, New Orleans and Tuscaloosa (Jackson);
+Ankeny, Davenport, Independence, Lee's Summit, Olathe, Kansas City, Lawrence, Topeka, Overland Park and Sioux City
+(Omaha); Albuquerque and El Paso (Las Cruces). No plain St. Paul mentions existed, and the Newark mentions on
+Columbus, Fremont and Wilmington are other Newarks, so those stay unlinked. Nearby chips regenerated wherever the
+NEARBY tables changed (23 neighbors re-cut explicitly to eight entries, 13 appended); see-all 179 on every built
+page; hub rows for RI and NM regenerated and Minnesota, Mississippi (before Missouri), Nebraska (before Nevada) and
+New Jersey (before New Mexico) blocks inserted; hub counts 179; sitemap +6 (247 URLs, lastmod 2026-11-02);
+`audit_site.py` clean apart from the Gilbert note; `test_new_pages.cjs` passes on the six pages, the six state
+pages and the hub. Open: the Corpus Christi legacy page still lacks the "See all" line (expected until its rebuild
+row arrives).
+
 ## Florida Google Business Profile links (this delivery)
 A fourth "Directions → Open in Google Maps" row was added to the office card on Gainesville, Jacksonville,
 Tallahassee and Daytona Beach using the maps.app.goo.gl links you sent. The builders carry `map_link=` so rebuilds keep it.
@@ -1056,7 +1121,7 @@ Tallahassee and Daytona Beach using the maps.app.goo.gl links you sent. The buil
 
 ## Verification run (all green)
 - `audit_content.py` on the 3 new pages: CLEAR.
-- `audit_site.py` over 260 pages (50 state + 173 city + 37 core, latest run after Batch 42 on Nov 2, 2026): links/anchors resolve, tags balanced, JSON-LD valid, GTM ×2, one H1, one canonical,
+- `audit_site.py` over 266 pages (50 state + 179 city + 37 core, latest run after Batch 43 on Nov 2, 2026): links/anchors resolve, tags balanced, JSON-LD valid, GTM ×2, one H1, one canonical,
   no orphans, hub/state/city interlinked, sitemap complete, ZIP lock + consent gate on every tool page.
   (One pre-existing note: Gilbert's "the number one thing that delays…" is not a superiority claim.)
 - `test_new_pages.cjs` (Playwright) on Tulsa, Norman, Edmond, Gainesville + home, vehicle-quote, Texas: desktop & mobile
