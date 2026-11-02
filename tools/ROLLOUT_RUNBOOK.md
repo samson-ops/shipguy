@@ -1408,6 +1408,94 @@ clean over 287 pages apart from the Gilbert note; `test_new_pages.cjs` passes on
 and the hub. Open: the Corpus Christi legacy page still lacks the "See all" line (expected until its rebuild row
 arrives); the Nashua 802 line awaits the owner's word, as does the Cheyenne 304 line from Batch 46.
 
+## Batch 48 — Newport News, Duluth, Sparks, Paterson, Fayetteville (NC) (Nov 2, 2026)
+| City | URL | Phone | Office |
+|---|---|---|---|
+| Newport News, VA | /city/auto-transport-newport-news-virginia/ | (757) 797-9348 | 733 Thimble Shoals Blvd #425a, Newport News, VA 23606 (Oyster Point, off J. Clyde Morris and 64) |
+| Duluth, MN | /city/auto-transport-duluth-minnesota/ | (218) 392-4894 | 317 W Superior St #456, Duluth, MN 55802 (West Superior Street downtown, near the Depot and Canal Park) |
+| Sparks, NV | /city/auto-transport-sparks-nevada/ | (775) 256-5954 | 250 Vista Blvd #447, Sparks, NV 89434 (Vista Boulevard by the Marina, off 80 at the Vista exit) |
+| Paterson, NJ | /city/auto-transport-paterson-new-jersey/ | (862) 292-9533 | 237 River St #449, Paterson, NJ 07501 (River Street along the Passaic at the east edge of downtown) |
+| Fayetteville, NC | /city/auto-transport-fayetteville-north-carolina/ | (910) 996-5586 | 109 Hay St #457, Fayetteville, NC 28301 (Hay Street downtown, a block from the Market House) |
+
+GBP embeds on all five (rows saved to `tools/rows/batch48_rows.txt` on arrival; the Sparks row spelled the city
+"Spraks", built as Sparks; several names carried trailing spaces, trimmed). Area codes all match their states for
+once. Office locations verified by web search: 733 Thimble Shoals Blvd is the "Work place at Oyster Point" suites
+in the Oyster Point City Center office park; 317 W Superior St is the 300 block of downtown Duluth's main street;
+250 Vista Blvd is the Cubework / Vista Industrial Park building by the Sparks Marina at the I-80 Vista exit; 237
+River St is the low-numbered, downtown (07501) stretch of River Street along the Passaic; 109 Hay St is the first
+block of Hay Street beside the Market House. Hours ET (Newport News, Paterson, Fayetteville), CT (Duluth), PT
+(Sparks). Stats rows: "1–3 Days" for Newport News, Sparks, Paterson and Fayetteville; "2–4 Days" for Duluth (the
+Minnesota page's Duluth figure, with the page explaining that the carriers are Twin Cities-based and come up when a
+load justifies it). All five states already had City Pages blocks, so this batch adds no hub block (48 states
+still). Two Fayettevilles are live (AR since the early batches, NC now): the nearby and hub chips carry the state,
+and no neighbor page is linked on the bare word (none mentions it in prose anyway). Duluth GA is an Atlanta suburb,
+so "Duluth" was linked only on St. Paul and Bloomington after reading both first mentions (the same-day lists).
+Sparks is the first Reno-area page; the Nevada page's Reno content now points at it. Pricing: Newport News = the
+Norfolk table less the tunnel (Richmond $150–$240, Washington $220–$340, Raleigh $230–$350, Baltimore $240–$360,
+Philadelphia $260–$390, Charlotte $300–$440, New York $340–$490, Atlanta $440–$630, Jacksonville $450–$650, Orlando
+$520–$750); Duluth = the far end of the Twin Cities pool (Minneapolis / St. Paul $200–$310 per the St. Paul and
+Bloomington tables' Duluth rows, Fargo $250–$380, Madison $300–$440, Milwaukee and Des Moines $330–$470, Chicago
+$380–$540, Omaha $420–$600, Kansas City $450–$650, Denver $700–$980, Phoenix $1,000–$1,400); Sparks = the Nevada
+state table's Reno rows (Sacramento $180–$290, San Francisco $230–$350, Boise $380–$540, Las Vegas $400–$560,
+Portland $460–$670) plus Salt Lake $380–$540, Los Angeles $400–$570, Seattle $520–$750, Phoenix $600–$850 and
+Denver $650–$920; Paterson = the Newark table plus a few dollars (Manhattan $110–$190, Allentown $160–$260,
+Philadelphia $170–$280, Hartford $180–$290, Baltimore $230–$350, Boston $240–$360, Washington $250–$380, Pittsburgh
+$330–$470, Chicago $560–$820, Orlando $760–$1,080); Fayetteville = a stop on 95 (Raleigh $140–$230, Wilmington
+$150–$240, Charlotte $190–$300, Columbia $200–$310, Richmond $230–$350, Washington $280–$410, Atlanta $320–$460,
+Jacksonville $340–$490, Orlando and New York $420–$600). Angles: Newport News = 64/664, Jefferson and Warwick, the
+two bridge-tunnels and which one a tall trailer takes (FAQ), the James River Bridge wind closures, the shipyard
+(FAQ, the carriers and submarines, "largest industrial employer in the state"), Fort Eustis and Langley PCS outside
+the gates (FAQ), the accelerator lab (unnamed), the hospital, Christopher Newport move-in (FAQ), the marine
+terminal, Hilton Village and the Southeast Community (FAQ), Hampton/Williamsburg/Smithfield (FAQ), Isabel and
+Matthew (FAQ), the January 2018 snow, the christenings; Duluth = 35 and the tunnels, 53 up the hill, the Bong and
+Blatnik bridges, the lift bridge and Park Point, the Can of Worms, the 2–4 day window (FAQ), the Hillside avenues
+vs the East End (FAQ), the two hospitals and the port (FAQ), the Guard's fighter wing and the airplane maker
+(unnamed), UMD move-in (FAQ), Superior/Hermantown/Two Harbors (FAQ), 35 at Hinckley (FAQ), the marathon (FAQ), the
+1991 Halloween blizzard, the October 2019 lakewalk storm, the June 2012 flood, the last ship in January; Sparks =
+80 and the Vista/Sparks/Pyramid exits, 580/395, McCarran, Donner Pass and the chain controls (FAQ), the industrial
+center with the battery plant and data centers (FAQ, unnamed), the Greg Street warehouses, the casino on Victorian
+Avenue (unnamed), the rail yard, the California tax migration (FAQ), the old grid vs Spanish Springs horse
+properties (FAQ), the August car week (FAQ), Reno/Carson City/Fernley (FAQ), University of Nevada move-in (FAQ),
+the rib cook-off, the desert festival exodus, the 1997 and 2017 Truckee floods, the February 2023 pass closures, the
+smoke; Paterson = 80, Route 19, Route 20, 46, 4 and the bridge, the tolls (FAQ), downtown and the Falls district
+(FAQ), the hospital on Main Street (unnamed), the warehouses and the Broadway bus terminal, the Meadowlands stadium
+that hosted the World Cup final this summer, the Dominican, Peruvian, Turkish and Arab blocks and the Florida family
+lane (FAQ), port cars from Newark (FAQ), William Paterson/Montclair State move-in (FAQ), Clifton/Wayne/Newark (FAQ),
+Floyd, Irene, Ida and the April 2007 flood (FAQ), the January 2016 blizzard and the snowbanks; Fayetteville =
+95/295/Business 95, Bragg Boulevard and the All American Freeway, Raeford, Skibo and Ramsey, Fort Bragg PCS outside
+the gates (FAQ), a deployed owner's handoff (FAQ), the medical center and the veterans hospital (FAQ), the tire plant
+(unnamed), Fayetteville State/Methodist move-in (FAQ), Haymount and downtown with the Market House (FAQ), Spring
+Lake/Hope Mills/Southern Pines (FAQ), Florence and Matthew with the Cape Fear above sixty feet (FAQ), the February
+2014 ice, the April 2011 tornado, All American Week, the dogwood festival. Long-sentence passes
+(`patches/fix_batch48_long.py`, 111 splits; all five came up CLEAR on the first re-audit) plus a fresh-wording pass
+(`patches/fix_batch48_overlap.py`, 92 rewrites over two rounds: the first drafts had reused the Batch 47 variants of
+the basics, options, why, quote, non-running and storm blocks, so Newport News opened at 32.0% against Norfolk and
+Paterson at 27.5% against Nashua; every page got its own wording, plus the Newport News and Fayetteville
+checklists) brought all five to CLEAR with no local terms missing and 19.3–20.7% overlap (Paterson 20.7, Newport
+News 20.6, Fayetteville 20.6, Sparks 20.4, Duluth 19.3, measured before the hub patch touched every page).
+Integration (`patches/batch48_states.py`): Virginia block regenerated (5) with the quick note, the shipbuilder
+sentence linked ("and the city has its own page now"), the chip, and the PCS FAQ pointing at the Newport News page
+for Fort Eustis and Langley (resynced; the 19-word Naval Station sentence left by Batch 46 was split while there);
+Minnesota block (4) with the quick note, the Duluth paragraph linked ("It has its own page now."), the chip, and
+the Duluth FAQ pointing at the page for the flat meeting spots (resynced); Nevada block (3) with the quick note now
+linking all three cities, the industrial-center sentence linked ("Sparks has its own page now."), the chip, and the
+industrial-center FAQ pointing at the Sparks page (resynced); New Jersey block (2) with the North Jersey sentence
+("Newark and Paterson have their own pages now.") and the Parkway FAQ pointing at the Paterson page for the 80 side
+(resynced; the New Jersey page has no Paterson town chip, so none was linked); North Carolina block (6) with the
+quick note, the Fort Bragg sentence linked ("The city has its own page now."), the chip, and the PCS FAQ pointing at
+the Fayetteville page for the gates and the PCS season (resynced). Neighbor city pages: the first plain prose
+mention linked on Norfolk and Virginia Beach (Newport News) and on St. Paul and Bloomington (Duluth). Sparks,
+Paterson and Fayetteville have no plain prose mention on any neighbor page, so their inbound links are the nearby
+chips, the state pages and the hub. Nearby chips regenerated wherever the NEARBY tables changed (Norfolk, Virginia
+Beach, Chesapeake, Richmond, St. Paul, Bloomington, Rochester MN, Fargo, Green Bay, Sacramento, Newark, Manhattan,
+the Bronx, Yonkers, Raleigh, Durham, Charlotte, Greensboro and Winston-Salem re-cut explicitly; Las Vegas,
+Henderson, Stockton, San Francisco, Oakland, San Jose and Fresno gained Sparks; Staten Island gained Paterson);
+see-all 205 on every built page; hub rows for VA, MN, NV, NJ, NC regenerated; hub counts 205 ("Two hundred five" /
+"two hundred five local pages"); sitemap +5 (273 URLs, lastmod 2026-11-02); `audit_site.py` clean over 292 pages
+apart from the Gilbert note; `test_new_pages.cjs` passes on the five pages, the five state pages and the hub.
+Open: the Corpus Christi legacy page still lacks the "See all" line (expected until its rebuild row arrives); the
+Nashua 802 and Cheyenne 304 lines still await the owner's word.
+
 ## Florida Google Business Profile links (this delivery)
 A fourth "Directions → Open in Google Maps" row was added to the office card on Gainesville, Jacksonville,
 Tallahassee and Daytona Beach using the maps.app.goo.gl links you sent. The builders carry `map_link=` so rebuilds keep it.
@@ -1424,7 +1512,7 @@ Tallahassee and Daytona Beach using the maps.app.goo.gl links you sent. The buil
 
 ## Verification run (all green)
 - `audit_content.py` on the 3 new pages: CLEAR.
-- `audit_site.py` over 287 pages (50 state + 200 city + 37 core, latest run after Batch 47 on Nov 2, 2026): links/anchors resolve, tags balanced, JSON-LD valid, GTM ×2, one H1, one canonical,
+- `audit_site.py` over 292 pages (50 state + 205 city + 37 core, latest run after Batch 48 on Nov 2, 2026): links/anchors resolve, tags balanced, JSON-LD valid, GTM ×2, one H1, one canonical,
   no orphans, hub/state/city interlinked, sitemap complete, ZIP lock + consent gate on every tool page.
   (One pre-existing note: Gilbert's "the number one thing that delays…" is not a superiority claim.)
 - `test_new_pages.cjs` (Playwright) on Tulsa, Norman, Edmond, Gainesville + home, vehicle-quote, Texas: desktop & mobile

@@ -938,6 +938,48 @@ for _k, _vs in {'portland-maine':[A+'nashua-new-hampshire'], 'warwick-rhode-isla
     for _v in _vs:
         if _k in NEARBY and _v not in NEARBY[_k]: NEARBY[_k].append(_v)
 
+# ---- Batch 48 (Nov 2, 2026): Newport News (VA); Duluth (MN); Sparks (NV); Paterson (NJ); Fayetteville (NC) ----
+#      NOTE: all five states already had City Pages blocks (regens only; no new hub block). Two Fayettevilles now exist (AR since
+#      the early batches, NC now): the chips carry the state, and neighbor linking by the bare word "Fayetteville" is never done.
+#      Duluth GA is an Atlanta suburb, so "Duluth" is never linked without reading the mention first. The Sparks row spelled the
+#      city "Spraks"; built as Sparks. Area codes all match their states.
+register('auto-transport-newport-news-virginia', 'Newport News', 'VA')
+register('auto-transport-duluth-minnesota', 'Duluth', 'MN')
+register('auto-transport-sparks-nevada', 'Sparks', 'NV')
+register('auto-transport-paterson-new-jersey', 'Paterson', 'NJ')
+register('auto-transport-fayetteville-north-carolina', 'Fayetteville', 'NC')
+_s('newport-news-virginia', [A+x for x in ['norfolk-virginia','virginia-beach-virginia','chesapeake-virginia','richmond-virginia','raleigh-north-carolina','durham-north-carolina','baltimore-maryland','columbia-maryland']])
+_s('duluth-minnesota', [A+x for x in ['st-paul-minnesota','bloomington-minnesota','rochester-minnesota','fargo-north-dakota','madison-wisconsin','milwaukee-wisconsin','green-bay-wisconsin','bismarck-north-dakota']])
+_s('sparks-nevada', [A+x for x in ['sacramento-california','stockton-california','san-francisco-california','oakland-california','san-jose-california','fresno-california','las-vegas-nevada','salt-lake-city-utah']])
+_s('paterson-new-jersey', [A+x for x in ['newark-new-jersey','manhattan-new-york','bronx-new-york','yonkers-new-york','staten-island-new-york','brooklyn-new-york','queens-new-york','allentown-pennsylvania']])
+_s('fayetteville-north-carolina', [A+x for x in ['raleigh-north-carolina','durham-north-carolina','charlotte-north-carolina','greensboro-north-carolina','winston-salem-north-carolina','richmond-virginia','charleston-south-carolina','virginia-beach-virginia']])
+# explicit re-cuts (8 max)
+NEARBY['norfolk-virginia'] = [A+x for x in ['virginia-beach-virginia','chesapeake-virginia','newport-news-virginia','richmond-virginia','raleigh-north-carolina','durham-north-carolina','greensboro-north-carolina','baltimore-maryland']]
+NEARBY['virginia-beach-virginia'] = [A+x for x in ['norfolk-virginia','chesapeake-virginia','newport-news-virginia','richmond-virginia','raleigh-north-carolina','durham-north-carolina','baltimore-maryland','columbia-maryland']]
+NEARBY['chesapeake-virginia'] = [A+x for x in ['norfolk-virginia','virginia-beach-virginia','newport-news-virginia','richmond-virginia','raleigh-north-carolina','durham-north-carolina','columbia-maryland','baltimore-maryland']]
+NEARBY['richmond-virginia'] = [A+x for x in ['virginia-beach-virginia','norfolk-virginia','chesapeake-virginia','newport-news-virginia','columbia-maryland','baltimore-maryland','raleigh-north-carolina','durham-north-carolina']]
+NEARBY['st-paul-minnesota'] = [A+x for x in ['bloomington-minnesota','rochester-minnesota','duluth-minnesota','fargo-north-dakota','sioux-falls-south-dakota','madison-wisconsin','ankeny-iowa','sioux-city-iowa']]
+NEARBY['bloomington-minnesota'] = [A+x for x in ['st-paul-minnesota','rochester-minnesota','duluth-minnesota','ankeny-iowa','sioux-city-iowa','sioux-falls-south-dakota','fargo-north-dakota','madison-wisconsin']]
+NEARBY['rochester-minnesota'] = [A+x for x in ['st-paul-minnesota','bloomington-minnesota','duluth-minnesota','madison-wisconsin','ankeny-iowa','davenport-iowa','sioux-falls-south-dakota','milwaukee-wisconsin']]
+NEARBY['fargo-north-dakota'] = [A+x for x in ['bismarck-north-dakota','st-paul-minnesota','bloomington-minnesota','duluth-minnesota','sioux-falls-south-dakota','sioux-city-iowa','omaha-nebraska','ankeny-iowa']]
+NEARBY['green-bay-wisconsin'] = [A+x for x in ['milwaukee-wisconsin','madison-wisconsin','kenosha-wisconsin','chicago-illinois','duluth-minnesota','st-paul-minnesota','detroit-michigan','indianapolis-indiana']]
+NEARBY['sacramento-california'] = [A+x for x in ['sparks-nevada','san-francisco-california','oakland-california','san-jose-california','stockton-california','portland-oregon','salt-lake-city-utah','fresno-california']]
+NEARBY['newark-new-jersey'] = [A+x for x in ['manhattan-new-york','paterson-new-jersey','staten-island-new-york','brooklyn-new-york','yonkers-new-york','philadelphia-pennsylvania','allentown-pennsylvania','stamford-connecticut']]
+NEARBY['manhattan-new-york'] = [A+x for x in ['brooklyn-new-york','queens-new-york','bronx-new-york','newark-new-jersey','paterson-new-jersey','yonkers-new-york','staten-island-new-york','philadelphia-pennsylvania']]
+NEARBY['bronx-new-york'] = [A+x for x in ['manhattan-new-york','yonkers-new-york','queens-new-york','brooklyn-new-york','newark-new-jersey','paterson-new-jersey','stamford-connecticut','boston-massachusetts']]
+NEARBY['yonkers-new-york'] = [A+x for x in ['bronx-new-york','manhattan-new-york','queens-new-york','newark-new-jersey','paterson-new-jersey','stamford-connecticut','albany-new-york','boston-massachusetts']]
+NEARBY['raleigh-north-carolina'] = [A+x for x in ['durham-north-carolina','charlotte-north-carolina','greensboro-north-carolina','winston-salem-north-carolina','fayetteville-north-carolina','virginia-beach-virginia','richmond-virginia','charleston-south-carolina']]
+NEARBY['durham-north-carolina'] = [A+x for x in ['raleigh-north-carolina','charlotte-north-carolina','fayetteville-north-carolina','greensboro-north-carolina','winston-salem-north-carolina','virginia-beach-virginia','richmond-virginia','atlanta-georgia']]
+NEARBY['charlotte-north-carolina'] = [A+x for x in ['raleigh-north-carolina','durham-north-carolina','greensboro-north-carolina','winston-salem-north-carolina','fayetteville-north-carolina','charleston-south-carolina','atlanta-georgia','richmond-virginia']]
+NEARBY['greensboro-north-carolina'] = [A+x for x in ['winston-salem-north-carolina','durham-north-carolina','raleigh-north-carolina','charlotte-north-carolina','fayetteville-north-carolina','richmond-virginia','virginia-beach-virginia','atlanta-georgia']]
+NEARBY['winston-salem-north-carolina'] = [A+x for x in ['greensboro-north-carolina','charlotte-north-carolina','durham-north-carolina','raleigh-north-carolina','fayetteville-north-carolina','richmond-virginia','charleston-south-carolina','atlanta-georgia']]
+# appends (lists under 8)
+for _k, _vs in {'las-vegas-nevada':[A+'sparks-nevada'], 'henderson-nevada':[A+'sparks-nevada'], 'stockton-california':[A+'sparks-nevada'],
+               'san-francisco-california':[A+'sparks-nevada'], 'oakland-california':[A+'sparks-nevada'], 'san-jose-california':[A+'sparks-nevada'],
+               'fresno-california':[A+'sparks-nevada'], 'staten-island-new-york':[A+'paterson-new-jersey']}.items():
+    for _v in _vs:
+        if _k in NEARBY and _v not in NEARBY[_k]: NEARBY[_k].append(_v)
+
 # ---- Oct 27, 2026 SEO pass: the legacy Corpus Christi page (old-generation template, pending a rebuild row)
 #      is registered so the hub, the Texas City Pages block, the sitemap and the counts include it. It is NOT
 #      rebuilt by localpage (no builder); patches/seo_pass_2026_10.py left its own breadcrumb/schema in place.
