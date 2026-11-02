@@ -1713,6 +1713,62 @@ lists and Henderson's block regenerated to seven chips. Open: the Corpus Christi
 all" line (expected until its rebuild row arrives); the Casper 304, Cheyenne 304 and Nashua 802 lines await the
 owner's word.
 
+## Google-facing audit of every city page (Nov 2, 2026)
+A new `tools/audit_google.py` runs over all 218 city pages, the 50 state pages and the hub and checks what Search
+Console, the Rich Results test and a Maps embed would complain about: lang/charset/viewport; one title and one
+description per page, both unique site-wide; one self-referencing canonical that matches the clean URL, with og:url
+and og:title in step and og:image on disk; no robots noindex (meta or `_headers`); every JSON-LD block parses;
+exactly one FAQPage per page whose question names and answer texts mirror the visible `<details>` verbatim, with no
+HTML in answers and no duplicate questions; no Review/AggregateRating; exactly one Google Maps iframe (lazy, titled,
+referrerpolicy) whose embed coordinates fall inside the page's state, whose GBP name says Ship Guy and whose place
+id and src are unique site-wide (address-query embeds are accepted and checked against the office card); one local
+number per page used in every tel: link and matching the displayed format, never another city's number; the office
+card carries the city, the state code and a ZIP; internal links use the canonical forms (/city/<slug>/ with the
+slash, state pages without .html); no http:// links or resources, every src on disk, every img with alt, no
+duplicate ids, no placeholder strings; nearby chips unique with no self link and the right "See all N"; the
+breadcrumb points at the right state page; identical Q&A pairs are not marked up on more than one page; the
+sitemap carries every page URL once with a valid, non-future lastmod and no dead URLs; robots.txt names the sitemap
+and blocks nothing that matters. Result: ALL CLEAR on the first full pass after two one-line edits: Gilbert's
+"number one thing that delays an East Valley delivery" became "most common" (the long-standing over-claim note is
+retired), and Austin's semicolon ("fob with the driver; a phone key alone can fail") became a clause, mirrored in
+its FAQ JSON-LD. Also run: `audit_site.py` (clean), `audit_content.py` over the 217 template pages (181 CLEAR; the
+36 others are house-rule drift on pre-rule pages, not Google problems, see below), `overlap.py --all` (268 pages,
+median 22.8%, max 33.1% on Montana vs North Dakota and 30.2% on Norfolk vs Newport News, all of it the shared basics,
+options, why and FAQ scaffolding, nothing near-duplicate), a hidden-text scan (only the form's hidden date label and
+consent error, nothing cloaked), a sitemap-vs-noindex cross-check (the 18 Ads landing pages are noindex and absent
+from the sitemap, as intended), and an eyeball of all 155 GBP embed coordinates against the cities (all plausible).
+Findings for the owner, none of them site errors:
+- 63 city pages still carry an address-query map (`google.com/maps?q=<office address>&output=embed`) rather than a
+  Google Business Profile embed, because no GBP row has arrived for them: Albuquerque, Anaheim, Anchorage, Arlington,
+  Atlanta, Augusta ME, Aurora IL, Austin, Baltimore, Boca Raton, Boston, Charlotte, Chicago, Cleveland, Dallas,
+  Detroit, Durham, El Paso, Evansville, Fort Myers, Fort Wayne, Fort Worth, Gilbert, Henderson, Honolulu, Houston,
+  Indianapolis, Joliet, Kapaa, Kenosha, Key West, Las Vegas, Lexington, Long Beach, Los Angeles, Louisville, Manhattan,
+  Miami, Mobile, Naples, New Orleans, Oakland, Oklahoma City, Orlando, Philadelphia, Phoenix, Port St. Lucie, Portland
+  OR, Raleigh, Riverside, Sacramento, Salt Lake City, San Antonio, San Diego, San Francisco, San Jose, Santa Ana,
+  St. Petersburg, Tampa, Tucson, Tuscaloosa, West Palm Beach, Wichita. The maps work; they just do not show the
+  listing. Send the embed iframes and the pages get the GBP map like the other 155.
+- The 155 GBP listings carry three different business names in Google: "Ship Guy Auto Transports" (92 listings),
+  "ShipGuy Auto Transports" (60: Akron, Albany, Athens, Augusta GA, Aurora CO, Bakersfield, Baton Rouge, Boise,
+  Bridgeport, the Bronx, Brooklyn, Chandler, Chula Vista, Colorado Springs, Columbia MO, Columbus GA, Dayton, Denver,
+  Dover, Fayetteville AR, Fort Smith, Fremont, Glendale, Green Bay, Hartford, Hilo, Huntsville, Independence, Irvine,
+  Kahului, Lee's Summit, Lewiston, Little Rock, Macon, Madison, Meridian, Mesa, Montgomery, Nampa, New Haven,
+  Norwalk, Olathe, Overland Park, Owensboro, Portland ME, Rochester NY, Rockford, San Bernardino, Savannah,
+  Shreveport, Springfield MA, Springfield MO, St. Louis, Stamford, Staten Island, Stockton, Syracuse, Waterbury,
+  Wilmington, Worcester) and "Ship Guy Auto Transport" (2: Carson City, Knoxville). The site calls the company
+  "Ship Guy Auto Transport" everywhere. That is a Google Business Profile cleanup (one name on every listing), not a
+  site change; the embeds will keep working either way.
+- House-rule drift on 34 pre-rule pages (not a Google matter): the broker disclosure sits in the third sentence of
+  the intro instead of the first two, because those pages open with a two-sentence hook (Albuquerque, Augusta ME,
+  Austin, Baltimore, Cleveland, Dallas, Daytona Beach, Detroit, Durham, El Paso, Fort Myers, Fort Worth, Henderson,
+  Houston, Indianapolis, Jacksonville, Kansas City, Key West, Las Vegas, Los Angeles, Louisville, Milwaukee, Oakland,
+  Philadelphia, Portland OR, Provo, Sacramento, Salt Lake City, San Francisco, San Jose, Tallahassee, West Jordan,
+  West Valley City, Wichita). Each needs a hand rewrite of its opening, not a mechanical swap (the hook's second
+  sentence usually refers back to the first). Two proper nouns also trip the banned-token scan and were left alone:
+  "Dr. Phillips" (the Orlando neighborhood) and "Mercedes-Benz U.S. International" (Tuscaloosa, which also names the
+  company; the newer pages leave companies unnamed).
+- Still open from earlier batches: the Corpus Christi legacy page (old template, address embed with no listing name,
+  no "See all" line) awaits its rebuild row; the Casper 304, Cheyenne 304 and Nashua 802 lines await the owner.
+
 ## Florida Google Business Profile links (this delivery)
 A fourth "Directions → Open in Google Maps" row was added to the office card on Gainesville, Jacksonville,
 Tallahassee and Daytona Beach using the maps.app.goo.gl links you sent. The builders carry `map_link=` so rebuilds keep it.
@@ -1729,6 +1785,7 @@ Tallahassee and Daytona Beach using the maps.app.goo.gl links you sent. The buil
 
 ## Verification run (all green)
 - `audit_content.py` on the 3 new pages: CLEAR.
+- `audit_google.py` over 218 city + 50 state pages + the hub (Nov 2, 2026): head tags, canonicals, OG, FAQ schema mirrors, map embeds inside their states and unique, phones and addresses consistent, link forms canonical, images alt, sitemap/robots/headers clean — ALL CLEAR
 - `audit_site.py` over 305 pages (50 state + 218 city + 37 core, latest run after Batch 50 on Nov 2, 2026): links/anchors resolve, tags balanced, JSON-LD valid, GTM ×2, one H1, one canonical,
   no orphans, hub/state/city interlinked, sitemap complete, ZIP lock + consent gate on every tool page.
   (One pre-existing note: Gilbert's "the number one thing that delays…" is not a superiority claim.)
