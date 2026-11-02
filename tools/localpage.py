@@ -791,6 +791,32 @@ for _k, _vs in {'green-bay-wisconsin':['auto-transport-st-paul-minnesota'],
     for _v in _vs:
         if _k in NEARBY and _v not in NEARBY[_k]: NEARBY[_k].append(_v)
 
+# ---- Batch 44 (Nov 2, 2026): Missoula (MT); Greensboro (NC); Fargo (ND) ----
+#      NOTE: Missoula and Fargo are their states' first city pages (first City Pages blocks on MT and ND; new hub blocks
+#      Montana before Nebraska and North Dakota before Ohio). Pass-through markets: stats rows "3–6 Days" to match the state pages.
+register('auto-transport-missoula-montana', 'Missoula', 'MT')
+register('auto-transport-greensboro-north-carolina', 'Greensboro', 'NC')
+register('auto-transport-fargo-north-dakota', 'Fargo', 'ND')
+_s('missoula-montana', ['auto-transport-spokane-washington','auto-transport-seattle-washington','auto-transport-boise-idaho','auto-transport-meridian-idaho','auto-transport-nampa-idaho','auto-transport-salt-lake-city-utah','auto-transport-portland-oregon','auto-transport-fargo-north-dakota'])
+_s('greensboro-north-carolina', ['auto-transport-durham-north-carolina','auto-transport-raleigh-north-carolina','auto-transport-charlotte-north-carolina','auto-transport-richmond-virginia','auto-transport-chesapeake-virginia','auto-transport-virginia-beach-virginia','auto-transport-atlanta-georgia','auto-transport-augusta-georgia'])
+_s('fargo-north-dakota', ['auto-transport-st-paul-minnesota','auto-transport-sioux-city-iowa','auto-transport-omaha-nebraska','auto-transport-ankeny-iowa','auto-transport-green-bay-wisconsin','auto-transport-madison-wisconsin','auto-transport-milwaukee-wisconsin','auto-transport-missoula-montana'])
+# explicit re-cuts (8 max)
+NEARBY['boise-idaho'] = ['auto-transport-meridian-idaho','auto-transport-nampa-idaho','auto-transport-salt-lake-city-utah','auto-transport-portland-oregon','auto-transport-spokane-washington','auto-transport-seattle-washington','auto-transport-missoula-montana','auto-transport-west-valley-city-utah']
+NEARBY['salt-lake-city-utah'] = ['auto-transport-provo-utah','auto-transport-west-jordan-utah','auto-transport-west-valley-city-utah','auto-transport-boise-idaho','auto-transport-denver-colorado','auto-transport-las-vegas-nevada','auto-transport-phoenix-arizona','auto-transport-missoula-montana']
+NEARBY['richmond-virginia'] = ['auto-transport-virginia-beach-virginia','auto-transport-chesapeake-virginia','auto-transport-columbia-maryland','auto-transport-baltimore-maryland','auto-transport-raleigh-north-carolina','auto-transport-durham-north-carolina','auto-transport-greensboro-north-carolina','auto-transport-charlotte-north-carolina']
+NEARBY['virginia-beach-virginia'] = ['auto-transport-chesapeake-virginia','auto-transport-richmond-virginia','auto-transport-raleigh-north-carolina','auto-transport-durham-north-carolina','auto-transport-baltimore-maryland','auto-transport-columbia-maryland','auto-transport-charlotte-north-carolina','auto-transport-greensboro-north-carolina']
+NEARBY['st-paul-minnesota'] = ['auto-transport-fargo-north-dakota','auto-transport-madison-wisconsin','auto-transport-ankeny-iowa','auto-transport-sioux-city-iowa','auto-transport-milwaukee-wisconsin','auto-transport-green-bay-wisconsin','auto-transport-omaha-nebraska','auto-transport-chicago-illinois']
+NEARBY['sioux-city-iowa'] = ['auto-transport-omaha-nebraska','auto-transport-ankeny-iowa','auto-transport-st-paul-minnesota','auto-transport-fargo-north-dakota','auto-transport-davenport-iowa','auto-transport-kansas-city-missouri','auto-transport-overland-park-kansas','auto-transport-denver-colorado']
+# appends (lists under 8)
+for _k, _vs in {'spokane-washington':['auto-transport-missoula-montana'], 'seattle-washington':['auto-transport-missoula-montana'],
+               'meridian-idaho':['auto-transport-missoula-montana'], 'nampa-idaho':['auto-transport-missoula-montana'],
+               'durham-north-carolina':['auto-transport-greensboro-north-carolina'], 'raleigh-north-carolina':['auto-transport-greensboro-north-carolina'],
+               'charlotte-north-carolina':['auto-transport-greensboro-north-carolina'], 'chesapeake-virginia':['auto-transport-greensboro-north-carolina'],
+               'augusta-georgia':['auto-transport-greensboro-north-carolina'],
+               'green-bay-wisconsin':['auto-transport-fargo-north-dakota']}.items():
+    for _v in _vs:
+        if _k in NEARBY and _v not in NEARBY[_k]: NEARBY[_k].append(_v)
+
 # ---- Oct 27, 2026 SEO pass: the legacy Corpus Christi page (old-generation template, pending a rebuild row)
 #      is registered so the hub, the Texas City Pages block, the sitemap and the counts include it. It is NOT
 #      rebuilt by localpage (no builder); patches/seo_pass_2026_10.py left its own breadcrumb/schema in place.

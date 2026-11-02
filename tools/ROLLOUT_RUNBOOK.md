@@ -1105,6 +1105,55 @@ New Jersey (before New Mexico) blocks inserted; hub counts 179; sitemap +6 (247 
 pages and the hub. Open: the Corpus Christi legacy page still lacks the "See all" line (expected until its rebuild
 row arrives).
 
+## Batch 44 — Missoula, Greensboro, Fargo (Nov 2, 2026)
+| City | URL | Phone | Office |
+|---|---|---|---|
+| Missoula, MT | /city/auto-transport-missoula-montana/ | (406) 797-6768 | 2829 Great Northern Loop #951, Missoula, MT 59808 (off West Broadway, west of Reserve Street) |
+| Greensboro, NC | /city/auto-transport-greensboro-north-carolina/ | (336) 551-9433 | 111 W Lewis St #745, Greensboro, NC 27406 (south end of downtown, a block off South Elm) |
+| Fargo, ND | /city/auto-transport-fargo-north-dakota/ | (701) 380-8189 | 1630 1st Ave N #445, Fargo, ND 58102 (the Railyard offices, a mile west of Broadway) |
+
+GBP embeds on all three (rows saved to `tools/rows/batch44_rows.txt` on arrival). Hours MT (Missoula), ET (Greensboro),
+CT (Fargo). Missoula and Fargo are pass-through markets, so their stats rows read "3–6 Days" and their intros,
+lane fine print, and FAQs carry the same honest windows as the Montana and North Dakota state pages (a one-week
+date range is the ask); Greensboro reads "1–3 Days". Missoula and Fargo are their states' FIRST city pages: Montana
+got its first City Pages block (after The Corridors, before Billings & Bozeman) and North Dakota its first (before
+Fargo & Bismarck); both states' pass-through quick notes stay as they were. Pricing: Missoula = a stop on the
+Seattle-to-Chicago road (Spokane $230–$350 at 200 miles, Seattle $400–$570, Salt Lake $450–$650 via Butte and 15,
+Denver $650–$920 via Billings and 25, Fargo $680–$960, Chicago $1,000–$1,400, all consistent with the Montana table
+from Billings); Greensboro = the 85/40 crossroads (Raleigh and Charlotte $140–$240, Richmond $230–$350, Atlanta
+$310–$450, Orlando $460–$660 via 85/77/95, Chicago $550–$800 to match the NC table); Fargo = the North Dakota table's
+Fargo rows (Minneapolis and Sioux Falls $250–$380, Omaha $400–$580, Chicago $470–$680, Kansas City $450–$650,
+Dallas $780–$1,100, Phoenix $950–$1,350) plus Bismarck, Milwaukee and Denver. Angles: Missoula = 90/93/12/200, the
+Reserve Street exit and the North Reserve, Brooks and fairgrounds handoffs, Lookout and Homestake with the chain-up
+wait (FAQ), the honest 3–6 day window (FAQ), the Rattlesnake and University District lot handoffs (FAQ), the
+university and the Forest Service with the fire lab and the smokejumper base (FAQ), UM move-in and Griz Saturdays
+with the Cat-Griz game (FAQ), Lolo/Hamilton/the Flathead at 5–10 days (FAQ), the inversions, the 2017 Lolo Peak
+fire, the 2018 Clark Fork rise, Malmstrom and Fort Harrison; Greensboro = 40/85/73/840 with the Urban Loop closing
+in 2023, Wendover and Gate City with the Coliseum and Friendly Center handoffs, Fisher Park and Irving Park under
+the oaks (FAQ), why pickups are quick (FAQ), Cone, the FedEx hub, HondaJet and the Boom plant (FAQ, unnamed), UNCG
+and A&T move-in (FAQ), the High Point furniture market weeks (FAQ), High Point/Winston-Salem/Burlington (FAQ), the
+December 2002 ice storm (FAQ), the April 2018 tornado and Michael in 2018, Volvo/Lincoln/Syngenta/Qorvo and the
+Liberty battery plant (unnamed), Fort Liberty two hours down 421; Fargo = 94/29 with the Winnipeg border leg, Main,
+13th, 32nd, 45th and University Drive with the West Acres and Fargodome handoffs, Hawthorne and Roosevelt lot
+handoffs (FAQ), the honest 3–6 day window (FAQ), Sanford/Essentia/Microsoft/Bobcat/CNH/Scheels (FAQ, unnamed), NDSU
+move-in (FAQ), West Fargo/Moorhead/Grand Forks (FAQ), the blizzard gates (FAQ), Bison Saturdays and the playoffs
+(FAQ), the 2009 crest and the diversion channel, block heaters and half-charged EVs. Long-sentence fixes were made
+inline in each builder (no separate fix script this batch); standard blocks were written fresh, and the three pages
+came in at 16.2–18.0% overlap with all three CLEAR.
+Integration (`patches/batch44_states.py`): Montana block inserted (1) with the overview sentence linked, the
+Missoula section lead given its "own page now" sentence, the chip, and the student FAQ (resynced); North Dakota
+block inserted (1) with the section lead linked, the Fargo paragraph given its "own page now" sentence, the chip,
+and the student FAQ (resynced); North Carolina block regenerated (4) with the quick note and the Triad lead linked
+and the chip. Neighbor city pages: the first plain prose mention linked on Spokane (Missoula), Charlotte and Durham
+(Greensboro), St. Paul (Fargo). The Greensboro mentions on Athens (Greensboro, GA) and Tuscaloosa (Greensboro
+Avenue) are not this Greensboro and stay unlinked. Nearby chips regenerated wherever the NEARBY tables changed
+(Boise, Salt Lake City, Richmond, Virginia Beach, St. Paul and Sioux City re-cut explicitly; Spokane, Seattle,
+Meridian, Nampa, Durham, Raleigh, Charlotte, Chesapeake, Augusta and Green Bay appended); see-all 182 on every built
+page; the North Carolina hub row regenerated and Montana (before Nebraska) and North Dakota (before Ohio) blocks
+inserted; hub counts 182; sitemap +3 (250 URLs, lastmod 2026-11-02); `audit_site.py` clean apart from the Gilbert
+note; `test_new_pages.cjs` passes on the three pages, the three state pages and the hub. Open: the Corpus Christi
+legacy page still lacks the "See all" line (expected until its rebuild row arrives).
+
 ## Florida Google Business Profile links (this delivery)
 A fourth "Directions → Open in Google Maps" row was added to the office card on Gainesville, Jacksonville,
 Tallahassee and Daytona Beach using the maps.app.goo.gl links you sent. The builders carry `map_link=` so rebuilds keep it.
@@ -1121,7 +1170,7 @@ Tallahassee and Daytona Beach using the maps.app.goo.gl links you sent. The buil
 
 ## Verification run (all green)
 - `audit_content.py` on the 3 new pages: CLEAR.
-- `audit_site.py` over 266 pages (50 state + 179 city + 37 core, latest run after Batch 43 on Nov 2, 2026): links/anchors resolve, tags balanced, JSON-LD valid, GTM ×2, one H1, one canonical,
+- `audit_site.py` over 269 pages (50 state + 182 city + 37 core, latest run after Batch 44 on Nov 2, 2026): links/anchors resolve, tags balanced, JSON-LD valid, GTM ×2, one H1, one canonical,
   no orphans, hub/state/city interlinked, sitemap complete, ZIP lock + consent gate on every tool page.
   (One pre-existing note: Gilbert's "the number one thing that delays…" is not a superiority claim.)
 - `test_new_pages.cjs` (Playwright) on Tulsa, Norman, Edmond, Gainesville + home, vehicle-quote, Texas: desktop & mobile
