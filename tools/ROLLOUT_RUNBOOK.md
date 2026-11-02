@@ -1496,6 +1496,123 @@ apart from the Gilbert note; `test_new_pages.cjs` passes on the five pages, the 
 Open: the Corpus Christi legacy page still lacks the "See all" line (expected until its rebuild row arrives); the
 Nashua 802 and Cheyenne 304 lines still await the owner's word.
 
+## Batch 49 — Salem, Memphis, Minneapolis, Rapid City, Columbia (SC), Burlington, Huntington (Nov 2, 2026)
+| City | URL | Phone | Office |
+|---|---|---|---|
+| Salem, OR | /city/auto-transport-salem-oregon/ | (503) 782-6495 | 216 Commercial St NE #435, Salem, OR 97301 (Commercial Street downtown, a few blocks from the Capitol and Riverfront Park) |
+| Memphis, TN | /city/auto-transport-memphis-tennessee/ | (901) 698-5860 | 340 B Monroe Ave #325, Memphis, TN 38105 (Monroe Avenue at the east edge of downtown, by the medical district) |
+| Minneapolis, MN | /city/auto-transport-minneapolis-minnesota/ | (763) 314-2219 | 400 S 4th St Ste 574, Minneapolis, MN 55415 (the Grain Exchange block on 4th Street, a block from the Government Center) |
+| Rapid City, SD | /city/auto-transport-rapid-city-south-dakota/ | (605) 633-5817 | 402 St Joseph St #435, Rapid City, SD 57701 (the 400 block of St. Joseph downtown, a block off Main, a mile west of SD Mines) |
+| Columbia, SC | /city/auto-transport-columbia-south-carolina/ | (803) 721-2691 | 2191 Pickens St Suite 533, Columbia, SC 29201 (the BullStreet District beside the ballpark, north of the State House) |
+| Burlington, VT | /city/auto-transport-burlington-vermont/ | (802) 302-7127 | 12-22 North St #325, Burlington, VT 05401 (North Street in the Old North End, a few blocks up from the waterfront) |
+| Huntington, WV | /city/auto-transport-huntington-west-virginia/ | (304) 689-5163 | 1000 5th Ave #438, Huntington, WV 25701 (5th Avenue at 10th Street downtown, two blocks from Pullman Square) |
+
+GBP embeds on all seven (rows saved to `tools/rows/batch49_rows.txt` on arrival; the Memphis row spelled the state
+"Tenneesee", built as Tennessee; several names carried trailing spaces, trimmed). Area codes: Minneapolis carries
+763 (the Twin Cities' northwest-suburb code; the core is 612), a metro number and not flagged; Burlington is 802,
+which is right for Vermont and makes the Batch 47 Nashua 802 line look like it was meant for a Vermont office;
+the other five match their states. Office locations verified by web search: 216 Commercial St NE is the downtown
+Commercial Street block near the Capitol; 340 Monroe Ave is the east edge of downtown Memphis toward the medical
+district; 400 S 4th St is the Grain Exchange Building; 402 St Joseph St is the 400 block of downtown Rapid City
+(the 500–900 blocks are the core; the School of Mines campus at 501 E St Joseph is about a mile east, so the page
+says "a mile from SD Mines" and "the engineering school east of downtown"); 2191 Pickens St is the 2100 block
+beside Bennet at BullStreet (2180) and Segra Park; 12-22 North St is the west end of North Street in the Old North
+End; 1000 5th Ave is 5th Avenue at 10th Street, two blocks from Pullman Square (3rd Avenue at 10th). Hours PT
+(Salem), CT (Memphis, Minneapolis), MT (Rapid City), ET (Columbia, Burlington, Huntington). Stats rows: "1–3 Days"
+for Salem, Memphis, Minneapolis and Columbia; "2–5 Days" for Rapid City and Burlington; "2–4 Days" for Huntington
+(each matching its state page's figure, with the page explaining the pass-through or end-of-the-line pool).
+Tennessee and Vermont get their first City Pages blocks (inserted before the "Nashville" and "Burlington"
+eyebrows) and their first hub blocks (Tennessee before Texas, Vermont before Virginia), so the hub now carries all
+50 states. Name collisions: three Columbias are live (MD, MO, SC), Salem sits inside Winston-Salem, and Burlington
+NC/MA and Huntington NY/Beach exist in prose, so no neighbor page is linked on the bare words Salem, Columbia,
+Burlington or Huntington; the chips carry the state. Pricing: Salem = Portland suburb on the short lanes, a stop on
+the 5 pool on the long ones (Portland $130–$220, Eugene $140–$230, Seattle $240–$360, Spokane $340–$490, Boise
+$400–$570, Sacramento $450–$650, San Francisco $490–$700, Salt Lake $580–$840, Los Angeles $680–$950, Phoenix
+$900–$1,250); Memphis = the 40/55 crossroads (Little Rock $170–$280, Nashville, Jackson and Birmingham $230–$350,
+St. Louis $280–$420, Atlanta and Louisville $340–$490, Dallas $400–$580, Chicago $450–$650, Houston $480–$700);
+Minneapolis = the St. Paul table (Rochester $160–$260, Duluth $200–$310, Fargo and Des Moines $250–$380, Milwaukee
+$320–$460, Omaha and Chicago $340–$490, Kansas City $380–$540, Denver $650–$900, Phoenix $950–$1,350); Rapid City =
+above Sioux Falls on every lane (Cheyenne $300–$440, Billings $310–$450, Bismarck $320–$460, Sioux Falls $330–$480,
+Denver $360–$520 per the South Dakota page, Omaha $430–$620, Minneapolis $450–$650, Salt Lake and Kansas City
+$520–$750, Phoenix $800–$1,150); Columbia = close to Charlotte (Augusta $150–$240, Charlotte and Charleston
+$170–$280, Fayetteville and Savannah $200–$310, Atlanta and Raleigh $230–$350, Jacksonville $280–$410, Washington
+$400–$580, New York $500–$730 per the South Carolina page); Burlington = the Vermont state table (Albany $200–$320,
+Manchester $220–$340, Boston $230–$350, Hartford $240–$360, Portland ME $250–$380, New York $270–$400, Philadelphia
+$340–$490, Washington $450–$650, Chicago $650–$900, Orlando $900–$1,250); Huntington = with Charleston on most
+lanes (Charleston $120–$200, Lexington $200–$320, Columbus and Cincinnati $220–$340, Louisville and Dayton
+$250–$380, Pittsburgh and Cleveland $280–$410, Charlotte $300–$440, Atlanta $440–$630). Angles: Salem = 5 and the
+Kuebler/Mission/Market exits, the Salem Parkway, 22 and the bridges to West Salem, the Capitol Mall and the state
+hiring calendar (FAQ), the legislature's long and short sessions, Willamette/Chemeketa move-in (FAQ), the hospital
+and the food plants (unnamed), the kettle chip plant (unnamed), the state fair on 17th Street (FAQ), the February
+2021 ice (an inch, half the city dark ten days, FAQ), the September 2020 fires and the worst air in the world (FAQ),
+the June 2021 heat dome, Fairmount vs West Salem (FAQ), Keizer/Woodburn/Corvallis (FAQ); Memphis = 40 and 55 and
+the two bridges with the 2021 crack closure (FAQ), the 240 loop, Poplar, the bluff, Harbor Town, Midtown and
+Central Gardens, Germantown and Collierville gates, the Mississippi suburbs, the overnight shipper's hub and its
+November peak (unnamed, FAQ), the medical district, the Stanton truck plant (unnamed), the Millington personnel
+command (FAQ), Memphis in May, the 1994 and 2022 ice, the tornado watches; Minneapolis = 94/35W (the 2007 bridge),
+394, Hiawatha, the Crosstown, 100, Hennepin, Lake Street, Nicollet Mall and the skyways, the headquarters and the
+relocation packages (unnamed, FAQ), the county/Phillips/university/veterans hospitals (unnamed, FAQ), U of M
+move-in at the University Avenue lots (FAQ), the Guard's airlift wing, the snow emergencies and the towing (FAQ),
+the 1991 Halloween blizzard, the 2019 cold, the April 2018 storm, the May 2011 North Minneapolis tornado, the 2010
+roof collapse, the state fair in Falcon Heights, Aquatennial, the marathon, Vikings Sundays, Uptown and the lake
+parkways vs the grids (FAQ), St. Paul/Edina/St. Cloud (FAQ); Rapid City = 90 and the 190 spur, the Gap, 16 into
+the Hills, 44 and 79, Main/St. Joseph and the bronze presidents, the 2–5 day window (FAQ), Ellsworth PCS at the
+Box Elder lots (FAQ), SD Mines move-in (FAQ), the regional hospital (unnamed), the rally and the carriers off every
+road but 90 (FAQ), the stock show, the Central States Fair, the 2013 Atlas blizzard and the 90 gates (FAQ), the
+wind advisories, the hail, the 1972 flood and the greenway, the canyon roads vs the grids (FAQ), the Hills towns
+(FAQ); Columbia = 26/20/77 and Malfunction Junction (rebuilding through 2030), the 126 spur, Gervais/Assembly/
+Harden/Two Notch/Garners Ferry, Fort Jackson (trainees without cars, cadre PCS at Gate 2, graduation Thursdays,
+FAQ), USC move-in and Williams-Brice Saturdays (FAQ), the hospital system, the veterans hospital and the West
+Columbia hospital (unnamed, FAQ), the Blythewood truck plant (unnamed), the insurance offices, the 2015 flood with
+Gills Creek and the canal breach (FAQ), the 2014 ice, the 26 reversals, Hugo, the State Fair, Soda City, the
+Vista/Five Points/Shandon (FAQ), Lexington/Irmo/Sumter (FAQ); Burlington = 89 exits 13–17, the 189 spur, Route 7
+and 2, the Beltline, the Main Street grade, Church Street, the ferries, the end-of-the-line window (FAQ), UVM
+move-in at the Colchester Avenue lots (FAQ), the medical center (unnamed), the Essex Junction chip plant (unnamed,
+FAQ), the Guard's fighter wing (FAQ), the two colleges, the ski towns, the snowbirds, the jazz festival, the
+marathon, the fair, the foliage, mud season (FAQ), the 1998 ice storm, the 2023 floods, the 2011 lake record, the
+2019 Halloween windstorm, the hill vs the North Ends (FAQ), Winooski/Essex/Montpelier/Stowe (FAQ); Huntington =
+64, Route 60 on 3rd and 5th, 52 and the Tolsia, the three bridges and which one a trailer takes, Hal Greer, the 2–4
+day window (FAQ), Marshall move-in and the November 14 memorial (FAQ), the two hospitals and the medical school
+(unnamed, FAQ), the port, the rail shops, the West End alloy plant, the Kentucky refinery and the new steel mill
+upriver (all unnamed, FAQ), the 1937 flood and the floodwall, Guyandotte, the ice on 64 and the river fog (FAQ),
+the 2012 derecho, the South Side grade (FAQ), Barboursville/Kenova/Ashland/Charleston (FAQ). Long-sentence pass
+(`patches/fix_batch49_long.py`, 204 splits over two rounds) plus a fresh-wording pass (`patches/fix_batch49_overlap.py`,
+145 rewrites over three rounds: the five pages drafted together after the context reset shared their basics,
+options, why, checklist, rate-footnote and FAQ blocks with each other and opened at 21–29% (Minneapolis 28.8), so
+each got its own wording; Salem got a smaller pass; the third round is the Rapid City office fact fix) brought all
+seven to CLEAR with no local terms missing and 13.5–22.9% overlap (Salem 22.9, Memphis 22.2, Minneapolis 20.0,
+Burlington 15.7, Huntington 14.4, Columbia 14.2, Rapid City 13.7, measured before the hub patch touched every
+page). Integration (`patches/batch49_states.py`): Oregon block regenerated (3) with the quick note, the "Salem is
+the capital" sentence linked ("It has its own page now."), the chip, and the student FAQ pointing at the Salem page
+for Willamette and Chemeketa (resynced); Tennessee's first block before the "Nashville" eyebrow, the "no city page
+yet" note retired, the Memphis section lead linked (and "more air cargo than any city in the world" softened to
+"almost any"), the chip, and the "Do you serve Memphis?" FAQ pointing at the page (resynced); Minnesota block (5)
+with the quick note, the "Minneapolis's older neighborhoods" sentence linked ("The city has its own page now."),
+the chip, and the corporate FAQ pointing at the Minneapolis page for the west metro (resynced); South Dakota block
+(2) with the "Sioux Falls and Rapid City schedule in 2 to 5 days" sentence linked ("and both have their own
+pages"), the chip, the Ellsworth FAQ pointing at the page for the Box Elder lots, and the 20-word pass-through FAQ
+sentence split while there (resynced); South Carolina block (2) with the quick note, the Columbia section lead
+linked ("It has its own page now."), the chip, and the PCS FAQ pointing at the Columbia page for the Fort Jackson
+gates (resynced); Vermont's first block before the "Burlington" eyebrow, the small-market note extended
+("Burlington has its own page."), the section lead linked, the chip, and the Florida FAQ pointing at the page for
+the lane table (resynced); West Virginia block (2) with the quick note, the Huntington paragraph linked ("The city
+has its own page now."), the chip, and the Marshall FAQ pointing at the page for the campus lots (resynced).
+Neighbor city pages: the first plain prose mention linked on Little Rock, Jackson MS, Tuscaloosa, Huntsville, St.
+Louis and Shreveport (Memphis), on St. Paul, Bloomington, Fargo, Madison, Sioux Falls, Ankeny and the new Rapid
+City page (Minneapolis), and on Sioux Falls and Billings (Rapid City); every first mention was read and is the
+right city. Nearby chips regenerated wherever the NEARBY tables changed (Portland, Eugene, Vancouver, Little Rock,
+Jackson MS, Tuscaloosa, St. Louis, Shreveport, Louisville, St. Paul, Bloomington, Rochester MN, Duluth, Fargo,
+Madison, Ankeny, Sioux Falls, Billings, Cheyenne, Bismarck, Charleston SC, Charlotte, Augusta, Fayetteville NC,
+Greensboro, Boston, Nashua, Albany, Charleston WV, Lexington and Columbus re-cut explicitly; Huntsville,
+Springfield MO and Evansville gained Memphis; Savannah gained Columbia; Portland ME gained Burlington; Cincinnati
+gained Huntington); see-all 212 on every built page; hub rows for OR, MN, SD, SC, WV regenerated and the Tennessee
+and Vermont blocks added (50 state blocks); hub counts 212 ("Two hundred twelve" / "two hundred twelve local
+pages"); sitemap +7 (280 URLs, lastmod 2026-11-02); `audit_site.py` clean over 299 pages apart from the Gilbert
+note; `test_new_pages.cjs` passes on the seven pages, the seven state pages and the hub. Lesson kept from Batch 48
+and relearned: pages drafted in one sitting share their standard blocks even when each sentence is new, so the
+overlap pass is part of the recipe, not a repair. Open: the Corpus Christi legacy page still lacks the "See all"
+line (expected until its rebuild row arrives); the Nashua 802 and Cheyenne 304 lines still await the owner's word.
+
 ## Florida Google Business Profile links (this delivery)
 A fourth "Directions → Open in Google Maps" row was added to the office card on Gainesville, Jacksonville,
 Tallahassee and Daytona Beach using the maps.app.goo.gl links you sent. The builders carry `map_link=` so rebuilds keep it.
@@ -1512,7 +1629,7 @@ Tallahassee and Daytona Beach using the maps.app.goo.gl links you sent. The buil
 
 ## Verification run (all green)
 - `audit_content.py` on the 3 new pages: CLEAR.
-- `audit_site.py` over 292 pages (50 state + 205 city + 37 core, latest run after Batch 48 on Nov 2, 2026): links/anchors resolve, tags balanced, JSON-LD valid, GTM ×2, one H1, one canonical,
+- `audit_site.py` over 299 pages (50 state + 212 city + 37 core, latest run after Batch 49 on Nov 2, 2026): links/anchors resolve, tags balanced, JSON-LD valid, GTM ×2, one H1, one canonical,
   no orphans, hub/state/city interlinked, sitemap complete, ZIP lock + consent gate on every tool page.
   (One pre-existing note: Gilbert's "the number one thing that delays…" is not a superiority claim.)
 - `test_new_pages.cjs` (Playwright) on Tulsa, Norman, Edmond, Gainesville + home, vehicle-quote, Texas: desktop & mobile

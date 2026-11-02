@@ -980,6 +980,64 @@ for _k, _vs in {'las-vegas-nevada':[A+'sparks-nevada'], 'henderson-nevada':[A+'s
     for _v in _vs:
         if _k in NEARBY and _v not in NEARBY[_k]: NEARBY[_k].append(_v)
 
+# ---- Batch 49 (Nov 2, 2026): Salem (OR); Memphis (TN); Minneapolis (MN); Rapid City (SD); Columbia (SC); Burlington (VT); Huntington (WV) ----
+#      NOTE: Memphis and Burlington are their states' first city pages (first City Pages blocks on TN and VT; new hub blocks
+#      Tennessee before Texas and Vermont before Virginia). Name collisions: three Columbias (MD, MO, SC), "Salem" sits inside
+#      "Winston-Salem", Burlington NC/MA and Huntington NY/Beach exist as towns and streets, so none of those four is ever linked
+#      on the bare word. Windows: Rapid City "2–5 Days" and Burlington "2–5 Days" (SD and VT pages), Huntington "2–4 Days" (WV page).
+#      The Memphis row spelled the state "Tenneesee"; Minneapolis carries a 763 (northwest-metro) area code, left as given.
+register('auto-transport-salem-oregon', 'Salem', 'OR')
+register('auto-transport-memphis-tennessee', 'Memphis', 'TN')
+register('auto-transport-minneapolis-minnesota', 'Minneapolis', 'MN')
+register('auto-transport-rapid-city-south-dakota', 'Rapid City', 'SD')
+register('auto-transport-columbia-south-carolina', 'Columbia', 'SC')
+register('auto-transport-burlington-vermont', 'Burlington', 'VT')
+register('auto-transport-huntington-west-virginia', 'Huntington', 'WV')
+_s('salem-oregon', [A+x for x in ['portland-oregon','eugene-oregon','vancouver-washington','seattle-washington','bellevue-washington','sacramento-california','boise-idaho','spokane-washington']])
+_s('memphis-tennessee', [A+x for x in ['little-rock-arkansas','jackson-mississippi','tuscaloosa-alabama','huntsville-alabama','st-louis-missouri','shreveport-louisiana','louisville-kentucky','springfield-missouri']])
+_s('minneapolis-minnesota', [A+x for x in ['st-paul-minnesota','bloomington-minnesota','rochester-minnesota','duluth-minnesota','fargo-north-dakota','madison-wisconsin','sioux-falls-south-dakota','ankeny-iowa']])
+_s('rapid-city-south-dakota', [A+x for x in ['sioux-falls-south-dakota','billings-montana','cheyenne-wyoming','bismarck-north-dakota','denver-colorado','sioux-city-iowa','omaha-nebraska','fargo-north-dakota']])
+_s('columbia-south-carolina', [A+x for x in ['charleston-south-carolina','charlotte-north-carolina','augusta-georgia','fayetteville-north-carolina','savannah-georgia','greensboro-north-carolina','atlanta-georgia','raleigh-north-carolina']])
+_s('burlington-vermont', [A+x for x in ['albany-new-york','boston-massachusetts','nashua-new-hampshire','worcester-massachusetts','springfield-massachusetts','hartford-connecticut','portland-maine','manhattan-new-york']])
+_s('huntington-west-virginia', [A+x for x in ['charleston-west-virginia','lexington-kentucky','cincinnati-ohio','columbus-ohio','louisville-kentucky','dayton-ohio','pittsburgh-pennsylvania','akron-ohio']])
+# explicit re-cuts (8 max)
+NEARBY['portland-oregon'] = [A+x for x in ['vancouver-washington','salem-oregon','eugene-oregon','seattle-washington','bellevue-washington','spokane-washington','sacramento-california','boise-idaho']]
+NEARBY['eugene-oregon'] = [A+x for x in ['salem-oregon','portland-oregon','vancouver-washington','seattle-washington','sacramento-california','san-francisco-california','boise-idaho','spokane-washington']]
+NEARBY['vancouver-washington'] = [A+x for x in ['portland-oregon','salem-oregon','seattle-washington','spokane-washington','boise-idaho','sacramento-california','bellevue-washington','eugene-oregon']]
+NEARBY['little-rock-arkansas'] = [A+x for x in ['memphis-tennessee','fayetteville-arkansas','fort-smith-arkansas','tulsa-oklahoma','dallas-texas','st-louis-missouri','springfield-missouri','shreveport-louisiana']]
+NEARBY['jackson-mississippi'] = [A+x for x in ['gulfport-mississippi','memphis-tennessee','new-orleans-louisiana','baton-rouge-louisiana','mobile-alabama','shreveport-louisiana','little-rock-arkansas','metairie-louisiana']]
+NEARBY['tuscaloosa-alabama'] = [A+x for x in ['mobile-alabama','memphis-tennessee','atlanta-georgia','new-orleans-louisiana','huntsville-alabama','montgomery-alabama','jackson-mississippi','louisville-kentucky']]
+NEARBY['st-louis-missouri'] = [A+x for x in ['columbia-missouri','kansas-city-missouri','springfield-missouri','springfield-illinois','chicago-illinois','indianapolis-indiana','louisville-kentucky','memphis-tennessee']]
+NEARBY['shreveport-louisiana'] = [A+x for x in ['dallas-texas','fort-worth-texas','little-rock-arkansas','memphis-tennessee','baton-rouge-louisiana','houston-texas','new-orleans-louisiana','jackson-mississippi']]
+NEARBY['louisville-kentucky'] = [A+x for x in ['lexington-kentucky','evansville-indiana','owensboro-kentucky','indianapolis-indiana','cincinnati-ohio','st-louis-missouri','memphis-tennessee','chicago-illinois']]
+NEARBY['st-paul-minnesota'] = [A+x for x in ['minneapolis-minnesota','bloomington-minnesota','rochester-minnesota','duluth-minnesota','fargo-north-dakota','sioux-falls-south-dakota','madison-wisconsin','ankeny-iowa']]
+NEARBY['bloomington-minnesota'] = [A+x for x in ['minneapolis-minnesota','st-paul-minnesota','rochester-minnesota','duluth-minnesota','ankeny-iowa','sioux-falls-south-dakota','fargo-north-dakota','madison-wisconsin']]
+NEARBY['rochester-minnesota'] = [A+x for x in ['minneapolis-minnesota','st-paul-minnesota','bloomington-minnesota','duluth-minnesota','madison-wisconsin','ankeny-iowa','sioux-falls-south-dakota','davenport-iowa']]
+NEARBY['duluth-minnesota'] = [A+x for x in ['minneapolis-minnesota','st-paul-minnesota','bloomington-minnesota','rochester-minnesota','fargo-north-dakota','madison-wisconsin','green-bay-wisconsin','bismarck-north-dakota']]
+NEARBY['fargo-north-dakota'] = [A+x for x in ['bismarck-north-dakota','minneapolis-minnesota','st-paul-minnesota','bloomington-minnesota','duluth-minnesota','sioux-falls-south-dakota','sioux-city-iowa','omaha-nebraska']]
+NEARBY['madison-wisconsin'] = [A+x for x in ['milwaukee-wisconsin','green-bay-wisconsin','kenosha-wisconsin','chicago-illinois','minneapolis-minnesota','st-paul-minnesota','rockford-illinois','davenport-iowa']]
+NEARBY['ankeny-iowa'] = [A+x for x in ['davenport-iowa','sioux-city-iowa','omaha-nebraska','lincoln-nebraska','kansas-city-missouri','minneapolis-minnesota','st-paul-minnesota','chicago-illinois']]
+NEARBY['sioux-falls-south-dakota'] = [A+x for x in ['sioux-city-iowa','omaha-nebraska','fargo-north-dakota','minneapolis-minnesota','st-paul-minnesota','bloomington-minnesota','rochester-minnesota','rapid-city-south-dakota']]
+NEARBY['billings-montana'] = [A+x for x in ['great-falls-montana','missoula-montana','bismarck-north-dakota','rapid-city-south-dakota','cheyenne-wyoming','denver-colorado','salt-lake-city-utah','spokane-washington']]
+NEARBY['cheyenne-wyoming'] = [A+x for x in ['denver-colorado','aurora-colorado','colorado-springs-colorado','salt-lake-city-utah','billings-montana','rapid-city-south-dakota','omaha-nebraska','sioux-falls-south-dakota']]
+NEARBY['bismarck-north-dakota'] = [A+x for x in ['fargo-north-dakota','billings-montana','rapid-city-south-dakota','st-paul-minnesota','bloomington-minnesota','sioux-falls-south-dakota','sioux-city-iowa','great-falls-montana']]
+NEARBY['charleston-south-carolina'] = [A+x for x in ['columbia-south-carolina','savannah-georgia','augusta-georgia','charlotte-north-carolina','jacksonville-florida','atlanta-georgia','raleigh-north-carolina','greensboro-north-carolina']]
+NEARBY['charlotte-north-carolina'] = [A+x for x in ['raleigh-north-carolina','durham-north-carolina','greensboro-north-carolina','winston-salem-north-carolina','fayetteville-north-carolina','columbia-south-carolina','charleston-south-carolina','atlanta-georgia']]
+NEARBY['augusta-georgia'] = [A+x for x in ['atlanta-georgia','columbia-south-carolina','athens-georgia','savannah-georgia','macon-georgia','charlotte-north-carolina','columbus-georgia','charleston-south-carolina']]
+NEARBY['fayetteville-north-carolina'] = [A+x for x in ['raleigh-north-carolina','durham-north-carolina','charlotte-north-carolina','greensboro-north-carolina','winston-salem-north-carolina','columbia-south-carolina','richmond-virginia','charleston-south-carolina']]
+NEARBY['greensboro-north-carolina'] = [A+x for x in ['winston-salem-north-carolina','durham-north-carolina','raleigh-north-carolina','charlotte-north-carolina','fayetteville-north-carolina','richmond-virginia','columbia-south-carolina','atlanta-georgia']]
+NEARBY['boston-massachusetts'] = [A+x for x in ['nashua-new-hampshire','worcester-massachusetts','cranston-rhode-island','manhattan-new-york','hartford-connecticut','portland-maine','albany-new-york','burlington-vermont']]
+NEARBY['nashua-new-hampshire'] = [A+x for x in ['boston-massachusetts','worcester-massachusetts','portland-maine','cranston-rhode-island','burlington-vermont','springfield-massachusetts','hartford-connecticut','albany-new-york']]
+NEARBY['albany-new-york'] = [A+x for x in ['syracuse-new-york','boston-massachusetts','burlington-vermont','yonkers-new-york','manhattan-new-york','rochester-new-york','hartford-connecticut','springfield-massachusetts']]
+NEARBY['charleston-west-virginia'] = [A+x for x in ['huntington-west-virginia','columbus-ohio','lexington-kentucky','cincinnati-ohio','pittsburgh-pennsylvania','dayton-ohio','louisville-kentucky','akron-ohio']]
+NEARBY['lexington-kentucky'] = [A+x for x in ['louisville-kentucky','huntington-west-virginia','charleston-west-virginia','cincinnati-ohio','indianapolis-indiana','cleveland-ohio','charlotte-north-carolina','owensboro-kentucky']]
+NEARBY['columbus-ohio'] = [A+x for x in ['cincinnati-ohio','dayton-ohio','cleveland-ohio','akron-ohio','indianapolis-indiana','huntington-west-virginia','charleston-west-virginia','pittsburgh-pennsylvania']]
+# appends (lists under 8)
+for _k, _vs in {'huntsville-alabama':[A+'memphis-tennessee'], 'springfield-missouri':[A+'memphis-tennessee'], 'evansville-indiana':[A+'memphis-tennessee'],
+               'savannah-georgia':[A+'columbia-south-carolina'], 'portland-maine':[A+'burlington-vermont'], 'cincinnati-ohio':[A+'huntington-west-virginia']}.items():
+    for _v in _vs:
+        if _k in NEARBY and _v not in NEARBY[_k]: NEARBY[_k].append(_v)
+
 # ---- Oct 27, 2026 SEO pass: the legacy Corpus Christi page (old-generation template, pending a rebuild row)
 #      is registered so the hub, the Texas City Pages block, the sitemap and the counts include it. It is NOT
 #      rebuilt by localpage (no builder); patches/seo_pass_2026_10.py left its own breadcrumb/schema in place.
