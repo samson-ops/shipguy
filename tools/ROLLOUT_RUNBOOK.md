@@ -1613,6 +1613,106 @@ and relearned: pages drafted in one sitting share their standard blocks even whe
 overlap pass is part of the recipe, not a repair. Open: the Corpus Christi legacy page still lacks the "See all"
 line (expected until its rebuild row arrives); the Nashua 802 and Cheyenne 304 lines still await the owner's word.
 
+## Batch 50 — Casper, Pawtucket, Bozeman, Carson City, Rio Rancho, Knoxville (Nov 2, 2026)
+| City | URL | Phone | Office |
+|---|---|---|---|
+| Casper, WY | /city/auto-transport-casper-wyoming/ | (304) 635-5787 | 444 S Center St #33, Casper, WY 82601 (the 400 block of South Center Street, the south end of downtown) |
+| Pawtucket, RI | /city/auto-transport-pawtucket-rhode-island/ | (401) 298-9783 | 716 Narragansett Park Dr #225, Pawtucket, RI 02861 (the Narragansett Business Park off Newport Avenue, on the old racetrack ground at the East Providence line) |
+| Bozeman, MT | /city/auto-transport-bozeman-montana/ | (406) 413-9740 | 219 N 19th Ave #477, Bozeman, MT 59718 (the Kiln coworking building on North 19th, two blocks north of Main) |
+| Carson City, NV | /city/auto-transport-carson-city-nevada/ | (775) 369-8161 | 111 W Proctor St #225, Carson City, NV 89701 (West Proctor Street, a block off Carson Street near the Capitol) |
+| Rio Rancho, NM | /city/auto-transport-rio-rancho-new-mexico/ | (505) 407-5664 | 661 Quantum Rd NE #325, Rio Rancho, NM 87124 (the Rio Rancho Midtown Offices on Quantum Road off Northern Boulevard, Vista Hills) |
+| Knoxville, TN | /city/auto-transport-knoxville-tennessee/ | (865) 390-4490 | 129 S Gay St #522, Knoxville, TN 37902 (the 100 block of Gay Street downtown, at the Old City end) |
+
+GBP embeds on all six (rows saved to `tools/rows/batch50_rows.txt` on arrival; the Knoxville row spelled the state
+"Tenneesee", built as Tennessee; several names carried trailing spaces, trimmed; the Carson City and Knoxville
+embeds carry the GBP name "Ship Guy Auto Transport" in the singular, the other four "Transports"). Area codes:
+Casper carries 304 (West Virginia; Wyoming is 307), flagged to the owner like the Cheyenne 304 line and used as
+given; the other five match their states. Office locations verified by web search: 444 S Center St is the 400
+block at the south end of downtown Casper (the 500 block holds the sporting-goods store and the bars); 716
+Narragansett Park Dr is in the Narragansett Business Park off Route 1A, adjacent to the East Providence line
+(the public television station and the shredding firm share the park); 219 N 19th Ave is the Kiln coworking
+building on the North 19th corridor; 111 W Proctor St is the office building that also houses the federal
+commercial service, a block west of Carson Street; 661 Quantum Rd NE is the Rio Rancho Midtown Offices coworking
+space in Vista Hills; 129 S Gay St is the 100 block between the Emporium and the Old City. Hours MT (Casper,
+Bozeman, Rio Rancho), ET (Pawtucket, Knoxville), PT (Carson City). Stats rows: "3–6 Days" for Casper and Bozeman
+(the Wyoming and Montana pages' pass-through figure, each page explaining the 25 and 90 pools); "2–4 Days" for
+Rio Rancho (the Albuquerque figure); "1–3 Days" for Pawtucket, Carson City and Knoxville. All six states already
+carried City Pages blocks, so this batch adds no hub block (50 states still). Names are unique in prose, so the
+neighbor links were read and placed on Cheyenne (Casper), Billings (Bozeman), Sparks (Carson City), Albuquerque
+(Rio Rancho) and Cincinnati, Huntsville and Lexington (Knoxville); Pawtucket has no plain prose mention anywhere
+and rides the chips, the state page and the hub. Pricing: Casper = Cheyenne plus the hundred eighty miles off the
+80 lane (Cheyenne $230–$350, Fort Collins $250–$380, Denver and Billings $300–$440, Rapid City $340–$490, Salt
+Lake $450–$650, Omaha $520–$750, Kansas City $560–$800, Dallas $720–$1,000, Phoenix $800–$1,150); Pawtucket =
+the Cranston/Providence table (Worcester $130–$210, Boston $150–$240, Hartford $160–$260, Springfield $170–$280,
+New Haven $180–$290, Portland ME and Manhattan $220–$340, Philadelphia $260–$390, Washington $340–$490, Orlando
+$820–$1,180); Bozeman = the Montana table's Bozeman end (Billings $150–$240 per the Billings row, Great Falls
+$220–$340, Missoula $230–$350, Spokane $380–$540, Salt Lake $400–$570, Boise $430–$620, Denver $500–$720, Seattle
+$560–$800, Las Vegas and Minneapolis $650–$920); Carson City = the Reno/Sparks table plus a Reno row (Reno
+$110–$190, Sacramento $180–$290, San Francisco $230–$350, Boise $380–$540, Salt Lake $390–$550, Las Vegas
+$400–$560, Los Angeles $400–$570, Portland $460–$670, Phoenix $600–$850, Denver $650–$920); Rio Rancho = the
+Albuquerque table (Santa Fe $150–$240 through Houston $620–$880); Knoxville = below Nashville on the Carolina
+and Ohio Valley lanes (Chattanooga $150–$240, Asheville $170–$280, Nashville $200–$310, Lexington and Atlanta
+$220–$340, Cincinnati and Louisville $270–$400, Charlotte $280–$410, Memphis $360–$520, Orlando $500–$730).
+Angles: Casper = 25 and the Center/Poplar/Wyoming Boulevard/Hat Six exits, the Yellowstone Highway, 220, the
+mountain road, the oil-field hiring cycle (FAQ), the state's largest hospital (unnamed), Casper College (FAQ),
+the Guard, the college rodeo finals and the fair (FAQ), the 2017 eclipse, the Bordeaux wind closures and the 25
+gates (FAQ), the April 2016 blizzard, the grids vs the mountain (FAQ), Mills/Glenrock/Riverton (FAQ), the 3–6 day
+window (FAQ); Pawtucket = 95 and the S-curves, Newport Avenue, Main Street and the Blackstone bridges, Slater
+Mill, the toy company's move to Boston (unnamed, FAQ), the closed city hospital and the Providence hospitals
+(FAQ), the Providence colleges (FAQ), the soccer stadium on the Seekonk (FAQ), the plastics compounder and the
+tour company (unnamed), Woodlawn and Central Falls vs Darlington and Oak Hill (FAQ), the 2013 and 2022 blizzards
+and the 2010 floods (FAQ), Seekonk/East Providence/Woonsocket (FAQ); Bozeman = 90 and Bozeman Pass, 191 and the
+Gallatin Canyon, Bridger Canyon, 19th Avenue, the transplants, Montana State move-in (FAQ), the hospital and the
+software and laser firms (unnamed, FAQ), the wader and backpack makers (unnamed), the ski towns and Big Sky
+(FAQ), the pass closures and the January 2024 cold (FAQ), the 2020 Bridger foothills fire, the 2022 flood, the
+park traffic and Bobcat Saturdays (FAQ), the subdivisions the maps lag (FAQ), the 3–6 day window (FAQ); Carson
+City = the 580 freeway finished in 2017, 395, 50 and Spooner, Carson Street, the Capitol and the 120-day session
+(FAQ), the regional hospital and the industrial parks (unnamed), the Guard's state headquarters and the Fallon
+air station (FAQ), the California transplants, Nevada Day (FAQ), Spooner and Donner (FAQ), the Washoe Zephyr
+(FAQ), the 1997 and 2017 floods, the Waterfall, Caldor and Tamarack fires, the west side vs the lake (FAQ),
+Dayton/Minden/Tahoe (FAQ); Rio Rancho = 528 and the river bridges, 25 at Bernalillo, Southern/Northern/Unser,
+the Estates' dirt roads, the chip plant's packages (unnamed, FAQ), the two hospitals (unnamed), the base and the
+labs across the river (FAQ), the campuses, the pueblos and the casino, balloon week (FAQ), the spring wind and
+the monsoon arroyos (FAQ), the 2006 snow and the 2011 freeze, the paved streets vs the Estates and Corrales
+(FAQ), Corrales/Bernalillo/Placitas (FAQ), the 2–4 day window (FAQ); Knoxville = 40 and 75 sharing the road, the
+2009 downtown rebuild, 640, 275, 140, Alcoa Highway, Kingston Pike, the gorge restrictions since Helene (FAQ),
+UT move-in and the hundred-thousand-seat Saturdays (FAQ), the power authority and the Oak Ridge laboratory
+(unnamed in the running prose, FAQ), the hospital systems, the Maryville plants and the truck-stop chain
+(unnamed), the Guard's tanker wing, the Fort and Sequoyah Hills vs Bearden and Farragut (FAQ), the 2015 ice and
+the 2024 snow (FAQ), the 2019 flood, the 2016 Gatlinburg fire, Maryville/Oak Ridge/Gatlinburg (FAQ).
+Long-sentence pass (`patches/fix_batch50_long.py`, 311 edits over two rounds, two of them localterm tweaks) brought all six to CLEAR with no
+local terms missing. No fresh-wording pass was needed this time: every standard block (bond line, glance lead,
+rate intro and footnote, cost-guide line, military and state-to-state lines, NOTE, options, basics and checklist,
+how-it-works line, why, cost/move-in/employer/non-running/storm/quote FAQs, CTA) was written six different ways
+from the start, and the pages measured 13.4–18.5% overlap on the first run (Bozeman 18.5, Casper 17.8,
+Knoxville 17.2, Pawtucket 16.5, Carson City 14.1, Rio Rancho 13.4, before the hub patch). Integration
+(`patches/batch50_states.py`): Wyoming block regenerated (2) with the pass-through note extended ("Cheyenne and
+Casper have their own pages."), the Casper paragraph linked ("and it has its own page now"), the chip, and the
+pass-through FAQ pointing at the Casper page for the 25 side (resynced); Rhode Island block (3) with the quick
+note, the mill-towns sentence linked ("Pawtucket has its own page now."), the chip, and the corridor FAQ pointing
+at the page for the Blackstone Valley end (resynced); Montana block (4) with the pass-through note extended to
+name all four city pages, the Bozeman lead linked, the chip, and the student FAQ pointing at the page for the
+stadium lots (resynced); Nevada block (4) with the quick note, the California-transplants sentence linked ("The
+capital has its own page now."), the chip, and the Tahoe FAQ pointing at the page for Spooner and the Nevada
+shore (resynced); New Mexico block (4) with the quick note, a west-mesa sentence added to the Balloon Fiesta
+line, the chip, the PCS FAQ pointing at the page for the chip plant and the families across the river, and the
+intro's "three cities with their own pages" (19 words, pre-existing) recut to "the four city pages" (resynced);
+Tennessee block (2) with the quick note, the football-Saturdays sentence linked ("and the city has its own page
+now"), the chip, and the student FAQ pointing at the page for the game-day lots (resynced). Nearby chips
+regenerated wherever the NEARBY tables changed (Cheyenne, Billings, Great Falls, Missoula, Rapid City, Sparks,
+Albuquerque, Santa Fe, Cranston, Warwick, Worcester, Memphis and Lexington re-cut explicitly; Las Cruces,
+Huntsville, New Haven and Henderson re-cut explicitly too, see the lesson below); see-all 218 on every built
+page; hub rows for WY, RI, MT, NV, NM, TN regenerated; hub counts 218 ("Two hundred eighteen" / "two hundred
+eighteen local pages"); sitemap +6 (286 URLs, lastmod 2026-11-02); `audit_site.py` clean over 305 pages apart
+from the Gilbert note; `test_new_pages.cjs` passes on the six pages, the six state pages, the hub and the
+regenerated Henderson page. Lesson: `localpage._load_nearby()` seeds NEARBY from the finished pages at import,
+so an unguarded `NEARBY[k].append(...)` in a batch block stacks another copy on every import once the chip is on
+the page (Henderson picked up four Carson City chips across the hub runs before it was caught). Appends must be
+guarded (`if v not in NEARBY[k]`) or the list set explicitly; the four Batch 50 appends were converted to explicit
+lists and Henderson's block regenerated to seven chips. Open: the Corpus Christi legacy page still lacks the "See
+all" line (expected until its rebuild row arrives); the Casper 304, Cheyenne 304 and Nashua 802 lines await the
+owner's word.
+
 ## Florida Google Business Profile links (this delivery)
 A fourth "Directions → Open in Google Maps" row was added to the office card on Gainesville, Jacksonville,
 Tallahassee and Daytona Beach using the maps.app.goo.gl links you sent. The builders carry `map_link=` so rebuilds keep it.
@@ -1629,7 +1729,7 @@ Tallahassee and Daytona Beach using the maps.app.goo.gl links you sent. The buil
 
 ## Verification run (all green)
 - `audit_content.py` on the 3 new pages: CLEAR.
-- `audit_site.py` over 299 pages (50 state + 212 city + 37 core, latest run after Batch 49 on Nov 2, 2026): links/anchors resolve, tags balanced, JSON-LD valid, GTM ×2, one H1, one canonical,
+- `audit_site.py` over 305 pages (50 state + 218 city + 37 core, latest run after Batch 50 on Nov 2, 2026): links/anchors resolve, tags balanced, JSON-LD valid, GTM ×2, one H1, one canonical,
   no orphans, hub/state/city interlinked, sitemap complete, ZIP lock + consent gate on every tool page.
   (One pre-existing note: Gilbert's "the number one thing that delays…" is not a superiority claim.)
 - `test_new_pages.cjs` (Playwright) on Tulsa, Norman, Edmond, Gainesville + home, vehicle-quote, Texas: desktop & mobile

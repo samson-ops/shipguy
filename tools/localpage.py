@@ -1038,6 +1038,47 @@ for _k, _vs in {'huntsville-alabama':[A+'memphis-tennessee'], 'springfield-misso
     for _v in _vs:
         if _k in NEARBY and _v not in NEARBY[_k]: NEARBY[_k].append(_v)
 
+# ---- Batch 50 (Nov 2, 2026): Casper (WY); Pawtucket (RI); Bozeman (MT); Carson City (NV); Rio Rancho (NM); Knoxville (TN) ----
+#      NOTE: all six states already carry City Pages blocks (Cheyenne; Cranston/Warwick; Billings/Great Falls/Missoula;
+#      Las Vegas/Henderson/Sparks; Albuquerque/Las Cruces/Santa Fe; Memphis), so this batch adds no hub block. Windows:
+#      Casper and Bozeman "3–6 Days" (the WY and MT pages' pass-through figure), Rio Rancho "2–4 Days" (the Albuquerque
+#      figure), Pawtucket, Carson City and Knoxville "1–3 Days". The Knoxville row spelled the state "Tenneesee"; Casper
+#      carries a 304 (West Virginia) area code like the Cheyenne line, flagged to the owner and used as given.
+#      Names are unique (no Casper, Pawtucket, Bozeman, Carson City, Rio Rancho or Knoxville collisions in prose), but
+#      "Carson" alone is a Reno-area surname and street, so neighbor links use the full "Carson City" only.
+register('auto-transport-casper-wyoming', 'Casper', 'WY')
+register('auto-transport-pawtucket-rhode-island', 'Pawtucket', 'RI')
+register('auto-transport-bozeman-montana', 'Bozeman', 'MT')
+register('auto-transport-carson-city-nevada', 'Carson City', 'NV')
+register('auto-transport-rio-rancho-new-mexico', 'Rio Rancho', 'NM')
+register('auto-transport-knoxville-tennessee', 'Knoxville', 'TN')
+_s('casper-wyoming', [A+x for x in ['cheyenne-wyoming','billings-montana','rapid-city-south-dakota','denver-colorado','aurora-colorado','colorado-springs-colorado','salt-lake-city-utah','sioux-falls-south-dakota']])
+_s('pawtucket-rhode-island', [A+x for x in ['cranston-rhode-island','warwick-rhode-island','boston-massachusetts','worcester-massachusetts','hartford-connecticut','new-haven-connecticut','springfield-massachusetts','manhattan-new-york']])
+_s('bozeman-montana', [A+x for x in ['billings-montana','missoula-montana','great-falls-montana','spokane-washington','boise-idaho','salt-lake-city-utah','meridian-idaho','seattle-washington']])
+_s('carson-city-nevada', [A+x for x in ['sparks-nevada','sacramento-california','stockton-california','san-francisco-california','san-jose-california','fresno-california','las-vegas-nevada','salt-lake-city-utah']])
+_s('rio-rancho-new-mexico', [A+x for x in ['albuquerque-new-mexico','santa-fe-new-mexico','las-cruces-new-mexico','el-paso-texas','denver-colorado','phoenix-arizona','tucson-arizona','colorado-springs-colorado']])
+_s('knoxville-tennessee', [A+x for x in ['memphis-tennessee','lexington-kentucky','louisville-kentucky','cincinnati-ohio','atlanta-georgia','huntsville-alabama','charlotte-north-carolina','winston-salem-north-carolina']])
+# explicit re-cuts (8 max)
+NEARBY['cheyenne-wyoming'] = [A+x for x in ['denver-colorado','casper-wyoming','aurora-colorado','colorado-springs-colorado','salt-lake-city-utah','billings-montana','rapid-city-south-dakota','omaha-nebraska']]
+NEARBY['billings-montana'] = [A+x for x in ['bozeman-montana','great-falls-montana','missoula-montana','bismarck-north-dakota','rapid-city-south-dakota','casper-wyoming','cheyenne-wyoming','salt-lake-city-utah']]
+NEARBY['great-falls-montana'] = [A+x for x in ['billings-montana','bozeman-montana','missoula-montana','spokane-washington','bismarck-north-dakota','salt-lake-city-utah','boise-idaho','fargo-north-dakota']]
+NEARBY['missoula-montana'] = [A+x for x in ['bozeman-montana','great-falls-montana','billings-montana','spokane-washington','seattle-washington','boise-idaho','meridian-idaho','salt-lake-city-utah']]
+NEARBY['rapid-city-south-dakota'] = [A+x for x in ['sioux-falls-south-dakota','billings-montana','casper-wyoming','cheyenne-wyoming','bismarck-north-dakota','denver-colorado','omaha-nebraska','fargo-north-dakota']]
+NEARBY['sparks-nevada'] = [A+x for x in ['carson-city-nevada','sacramento-california','stockton-california','san-francisco-california','oakland-california','san-jose-california','las-vegas-nevada','salt-lake-city-utah']]
+NEARBY['albuquerque-new-mexico'] = [A+x for x in ['rio-rancho-new-mexico','santa-fe-new-mexico','las-cruces-new-mexico','el-paso-texas','phoenix-arizona','tucson-arizona','denver-colorado','oklahoma-city-oklahoma']]
+NEARBY['santa-fe-new-mexico'] = [A+x for x in ['albuquerque-new-mexico','rio-rancho-new-mexico','las-cruces-new-mexico','el-paso-texas','colorado-springs-colorado','denver-colorado','phoenix-arizona','tucson-arizona']]
+NEARBY['cranston-rhode-island'] = [A+x for x in ['warwick-rhode-island','pawtucket-rhode-island','boston-massachusetts','worcester-massachusetts','hartford-connecticut','new-haven-connecticut','springfield-massachusetts','manhattan-new-york']]
+NEARBY['warwick-rhode-island'] = [A+x for x in ['cranston-rhode-island','pawtucket-rhode-island','boston-massachusetts','worcester-massachusetts','hartford-connecticut','new-haven-connecticut','springfield-massachusetts','manhattan-new-york']]
+NEARBY['worcester-massachusetts'] = [A+x for x in ['boston-massachusetts','nashua-new-hampshire','cranston-rhode-island','warwick-rhode-island','pawtucket-rhode-island','springfield-massachusetts','hartford-connecticut','albany-new-york']]
+NEARBY['memphis-tennessee'] = [A+x for x in ['little-rock-arkansas','jackson-mississippi','knoxville-tennessee','tuscaloosa-alabama','huntsville-alabama','st-louis-missouri','shreveport-louisiana','louisville-kentucky']]
+NEARBY['lexington-kentucky'] = [A+x for x in ['louisville-kentucky','knoxville-tennessee','huntington-west-virginia','charleston-west-virginia','cincinnati-ohio','indianapolis-indiana','charlotte-north-carolina','owensboro-kentucky']]
+# the four lists that were under 8 are re-cut explicitly (an unguarded append here would stack a copy on every import,
+# because _load_nearby() seeds NEARBY from the finished pages)
+NEARBY['las-cruces-new-mexico'] = [A+x for x in ['el-paso-texas','albuquerque-new-mexico','tucson-arizona','phoenix-arizona','denver-colorado','san-antonio-texas','santa-fe-new-mexico','rio-rancho-new-mexico']]
+NEARBY['huntsville-alabama'] = [A+x for x in ['tuscaloosa-alabama','montgomery-alabama','atlanta-georgia','louisville-kentucky','lexington-kentucky','mobile-alabama','memphis-tennessee','knoxville-tennessee']]
+NEARBY['new-haven-connecticut'] = [A+x for x in ['bridgeport-connecticut','hartford-connecticut','waterbury-connecticut','norwalk-connecticut','stamford-connecticut','boston-massachusetts','cranston-rhode-island','pawtucket-rhode-island']]
+NEARBY['henderson-nevada'] = [A+x for x in ['las-vegas-nevada','phoenix-arizona','gilbert-arizona','salt-lake-city-utah','riverside-california','sparks-nevada','carson-city-nevada']]
+
 # ---- Oct 27, 2026 SEO pass: the legacy Corpus Christi page (old-generation template, pending a rebuild row)
 #      is registered so the hub, the Texas City Pages block, the sitemap and the counts include it. It is NOT
 #      rebuilt by localpage (no builder); patches/seo_pass_2026_10.py left its own breadcrumb/schema in place.
