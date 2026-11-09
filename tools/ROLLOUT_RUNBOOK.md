@@ -1835,6 +1835,108 @@ passes on the seven pages, the five state pages and the hub. Open: the Corpus Ch
 "See all" line (expected until its rebuild row arrives); the Casper 304, Cheyenne 304 and Nashua 802 lines and the
 GBP name normalization await the owner's word.
 
+## Batch 52 — Lakewood, Elizabeth, Hampton, Suffolk, Gresham (Nov 9, 2026)
+| City | URL | Phone | Office |
+|---|---|---|---|
+| Lakewood, NJ | /city/auto-transport-lakewood-new-jersey/ | (732) 479-7353 | 1776 Ave of the States #443, Lakewood, NJ 08701 (Independence Plaza in the Lakewood Industrial Park off Cedar Bridge Avenue, near the ballpark) |
+| Elizabeth, NJ | /city/auto-transport-elizabeth-new-jersey/ | (908) 774-9448 | 30 Union St #322, Elizabeth, NJ 07202 (Union Street at West Jersey Street, a few blocks from Broad Street and the train station) |
+| Hampton, VA | /city/auto-transport-hampton-virginia/ | (757) 551-9799 | 4410 E Claiborne Square Suite 594, Hampton, VA 23666 (the office building at Peninsula Town Center, Coliseum Central, off Mercury Boulevard and I-64) |
+| Suffolk, VA | /city/auto-transport-suffolk-virginia/ | (757) 829-7254 | 425 W Washington St #477, Suffolk, VA 23434 (West Washington Street downtown, across from City Hall and beside the library) |
+| Gresham, OR | /city/auto-transport-gresham-oregon/ | (503) 783-8394 | 1333 NW Eastman Pkwy #478, Gresham, OR 97030 (Eastman Parkway beside the City Hall light-rail station, across from the Town Fair center) |
+
+GBP embeds on all five (rows saved to `tools/rows/batch52_rows.txt` on arrival; trailing spaces trimmed; the Hampton
+address cell arrived as "Suite 594  Hampton" with two spaces and no comma, normalized; four embeds carry the GBP name
+"Ship Guy Auto Transport" in the singular and Gresham's says "Transports"). Area codes: all five match their states
+(732 and 908 NJ, 757 VA twice, 503 OR). Office locations verified by web search: 1776 Avenue of the States is the
+Independence Plaza office building inside the Lakewood Industrial Park (Cedar Bridge Avenue side, a short walk from
+the minor-league ballpark); 30 Union Street sits at West Jersey Street in Midtown Elizabeth, blocks from Broad Street
+and the Elizabeth station; 4410 E Claiborne Square is the Class A office building at Peninsula Town Center in
+Coliseum Central; 425 W Washington Street is the downtown Suffolk block across from City Hall and next to the Morgan
+Memorial Library; 1333 NW Eastman Parkway is the street address of Gresham City Hall (the City Hall MAX station is
+beside it), so the page describes the location as given and the owner should double-check that GBP listing. Hours
+ET (Lakewood, Elizabeth, Hampton, Suffolk), PT (Gresham). Stats rows: "1–3 Days" on all five. All three states
+already carried City Pages blocks, so this batch adds no hub block (50 states still). Name collisions were read
+before linking: "Elizabeth" is also the Elizabeth River (on its own page and the Norfolk and Chesapeake pages),
+"Hampton" sits inside "Hampton Roads" and "Hampton Boulevard" on every Hampton Roads page, "Suffolk" is a Long
+Island county on the New York pages, and "Lakewood" is also in Colorado, Ohio and Washington, so every link to the
+four eastern pages was placed by `link_phrase` on a read sentence, never by `link_first`: Newark ("Elizabeth and
+the port towns to the south"), Newport News ("Hampton next door ships with the same trucks" and "to Suffolk" on
+the Monitor-Merrimac sentence), Virginia Beach ("over to Hampton" in the intro and "Norfolk, Portsmouth, Suffolk,
+and the Peninsula"), Chesapeake ("Portsmouth, Norfolk, Suffolk, and Virginia Beach surround the city"). The new
+pages link back by phrase too: Elizabeth → Newark (the pricing sentence), Hampton → Newport News ("covered on its
+own page") and Suffolk (the 664 sentence), Suffolk → Chesapeake (the same-trucks sentence), Gresham → Portland (the
+pricing sentence); `link_first` was safe only for Gresham on the Portland page and Newark on the Lakewood page
+(its one Newark mention is the fly-and-ship line). Pricing: Lakewood = the New Jersey page's New York and
+Philadelphia rows plus the Shore's Florida lane (New York and Philadelphia $150–$240, Hartford $200–$320,
+Baltimore $210–$330, Washington $230–$350, Boston $260–$390, Pittsburgh $330–$470, Charlotte $470–$680, Orlando
+$750–$1,070, Miami $820–$1,170); Elizabeth = Newark's table with the port exit on it (New York $100–$170, Allentown
+and Philadelphia $160–$260, Hartford $190–$300, Baltimore $220–$340, Washington and Boston $240–$360, Pittsburgh
+$330–$470, Chicago $560–$820, Orlando $760–$1,080); Hampton = the Newport News table (Richmond $150–$240,
+Washington $220–$340, Raleigh $230–$350, Baltimore $240–$360, Philadelphia $260–$390, Charlotte $300–$440, New York
+$340–$490, Atlanta $440–$630, Jacksonville $450–$650, Orlando $520–$750); Suffolk = the Chesapeake table a notch
+under on the Carolina lanes and a notch over toward Richmond (Richmond $160–$260, Raleigh $220–$340, Washington
+$230–$350, Baltimore $250–$380, Philadelphia $270–$400, Charlotte $290–$420, New York $350–$510, Atlanta $430–$620,
+Jacksonville $440–$630, Orlando $510–$740); Gresham = the Portland table (Eugene $180–$290, Seattle $220–$340,
+Spokane $320–$460, Boise $370–$530, Sacramento $480–$700, San Francisco $520–$750, Salt Lake $560–$820, Los Angeles
+$700–$980, Denver $850–$1,200, Phoenix $900–$1,250). Angles: Lakewood = Route 9 and the Parkway's exits 88 and 91
+(the truck ban north of 105, FAQ), Route 70 and Cedar Bridge, the industrial park and Independence Plaza, the old
+grid between Route 9 and the lake vs the new developments past Cross Street (FAQ), the yeshiva (largest outside
+Israel) and Georgian Court (FAQ), the Sabbath and holiday calendar with no handoffs Friday afternoon to Saturday
+night and the pre-holiday peaks (FAQ), the yellow buses from seven to nine and three to five (FAQ), Leisure Village
+and the Manchester villages' Florida lane (FAQ), the joint base at Lakehurst, the Brooklyn/Monsey/Baltimore/Chicago
+arrivals, Sandy 2012, the January 2016 two feet, Ida, the April 2025 pines wildfire (FAQ), Toms River/Jackson/the
+Shore and the mainland-side island handoffs (FAQ); Elizabeth = the Turnpike's exits 13 and 13A, the Goethals (2018
+twin spans), 1 and 9 on the viaduct, 27, 28 and 439, the port (largest on the East Coast) and the customs release
+(FAQ), the airport and the refinery (FAQ), Elmora and Peterstown's permit parking and double-parked streets (FAQ),
+Elizabethport and Bayway, Kean and the county college (FAQ), the Portuguese and Latin American arrivals and the
+Miami lane, the joint base, the port's August–October peak and the container trucks on North and Dowd, Ida's flash
+flood down the Elizabeth River (FAQ), Sandy's surge up the Arthur Kill, the Goethals wind closures and the Staten
+Island pickups (FAQ), Union/Linden/Staten Island (FAQ); Hampton = 64 and its exits to the bridge-tunnel, 664 to
+the Monitor-Merrimac, Mercury Boulevard and Coliseum Central, Peninsula Town Center, Langley and the joint base
+(FAQ), the research center and the shipbuilder next door (unnamed, FAQ), Fort Monroe (closed 2011, now a national
+monument), Phoebus, Wythe and the Fox Hill lanes vs the north-side subdivisions (FAQ), Hampton University and
+homecoming (FAQ), the hospital and the veterans' hospital (unnamed), the bridge-tunnel widening to 2027 (FAQ),
+the hurricane/nor'easter/tide weather and Isabel (FAQ), Poquoson/Yorktown/Fort Monroe (FAQ); Suffolk = 58 as the
+bypass and the Bowers Hill interchange, 460, 13 and 32, 664 through Harbour View, four hundred square miles of city
+with a downtown in the middle, the villages on the state roads (FAQ), the peanut plant and the mascot, the
+warehouses along 58 and the defense complex in Harbour View (FAQ), the Navy and shipyard families who buy in Harbour
+View (FAQ), the Peanut Fest on the airport grounds each October and the harvest (FAQ), the Carolina-lane price
+notch explained (FAQ), the Driver tornado of 2008, Isabel 2003, the swamp fires, the evacuation flow on 58 and 460
+(FAQ), the fall fog, Smithfield/Franklin/the Carolina line (FAQ); Gresham = 84 and its exits to Troutdale where
+the Gorge begins, the Mount Hood Highway (26) through Powell and Burnside, 205 ten minutes west, Eastman Parkway
+and the MAX, Rockwood vs the Butte and Persimmon (FAQ), the two chip fabs on Stark and Glisan and the aerospace
+plant on Sandy Boulevard (unnamed, FAQ), the Troutdale package hub, Mount Hood Community College (FAQ), the east
+wind and the January 2024 ice storm (FAQ), the Gorge closures (FAQ), the 2017 Gorge fire and the 2020 smoke, the
+ski traffic on 26 (FAQ), the Rockwood arrivals from Latin America, Ukraine and the Pacific islands, the Air Guard
+wing, Troutdale/Sandy/Happy Valley (FAQ).
+Long-sentence pass: `patches/fix_batch52_long.py` edits the BUILDERS rather than the built HTML (123 rewrites in one
+round; the Lakewood Parkway FAQ kept and split, and "winch" added to the Lakewood preparation list so no local term
+is missing), so a rebuild reproduces the final pages; all five then audit CLEAR with no local terms missing and
+metas of 139–158 characters. No fresh-wording pass was needed: every standard block was written five different ways
+from the start, and the pages measured 16.4–21.7% overlap before the hub patch (Elizabeth 21.7, Hampton 21.5,
+Gresham 19.7, Suffolk 19.4, Lakewood 16.4). Integration (`patches/batch52_states.py`): New Jersey block regenerated
+(4) with the North Jersey grid sentence naming and linking Elizabeth ("Newark, Paterson, and Elizabeth have their
+own pages now"), a pointer to the Elizabeth page for the port exits and release lots in the port paragraph, a
+Lakewood sentence in the Shore section (the Sabbath and school-bus calendar), and the Parkway FAQ pointing at the
+Lakewood page for exits 88 and 91 (resynced; the New Jersey quick note is the tolls note and was left alone);
+Virginia block (7) with the quick note (Hampton and Suffolk added), the intro's stale "the city page" recut to "the
+city pages", "The Hampton page covers Langley" after the joint-base sentence, the wide-suburbs sentence linking
+Suffolk ("All three have their own pages now"), both chips, the PCS FAQ split so Newport News covers Fort Eustis
+and Hampton covers Langley, and the tunnels FAQ pointing at the Suffolk page for the Monitor-Merrimac side
+(resynced); Oregon block (4) with the quick note (Gresham added), "and so is Gresham on the east side" on the
+valley-grid sentence, a Troutdale pointer in the Gorge section, and the Gorge FAQ pointing at the Gresham page for
+the Troutdale end (resynced). Nearby chips regenerated on every built page (the see-all count inside the block
+moved 225 → 230) with explicit re-cuts for Newark, Paterson, Staten Island, Manhattan, Norfolk, Chesapeake,
+Virginia Beach, Newport News, Richmond, Portland, Vancouver and Salem (no appends); hub rows for NJ, VA, OR
+regenerated; hub counts 230 ("Two hundred thirty" / "two hundred thirty local pages"); sitemap +5 (298 URLs,
+lastmod 2026-11-09); `audit_site.py` ALL CLEAR over 317 pages; `audit_google.py` ALL CLEAR over 230 city + 50
+state pages + the hub (GBP names now 94 "Ship Guy Auto Transports", 60 "ShipGuy Auto Transports", 12 "Ship Guy
+Auto Transport"); `vehicle-quote.html` and `vehicle-quote/index.html` still byte-identical; `test_new_pages.cjs`
+passes on the five pages, the three state pages and the hub. Open: the Gresham GBP address is City Hall's street
+address and wants a look from the owner; the Corpus Christi legacy page still lacks the "See all" line (expected
+until its rebuild row arrives); the Casper 304, Cheyenne 304 and Nashua 802 lines and the GBP name normalization
+await the owner's word.
+
 ## Google-facing audit of every city page (Nov 2, 2026)
 A new `tools/audit_google.py` runs over all 218 city pages, the 50 state pages and the hub and checks what Search
 Console, the Rich Results test and a Maps embed would complain about: lang/charset/viewport; one title and one
@@ -1907,8 +2009,8 @@ Tallahassee and Daytona Beach using the maps.app.goo.gl links you sent. The buil
 
 ## Verification run (all green)
 - `audit_content.py` on the 3 new pages: CLEAR.
-- `audit_google.py` over 225 city + 50 state pages + the hub (latest run after Batch 51 on Nov 9, 2026): head tags, canonicals, OG, FAQ schema mirrors, map embeds inside their states and unique, phones and addresses consistent, link forms canonical, images alt, sitemap/robots/headers clean — ALL CLEAR
-- `audit_site.py` over 312 pages (50 state + 225 city + 37 core, latest run after Batch 51 on Nov 9, 2026): links/anchors resolve, tags balanced, JSON-LD valid, GTM ×2, one H1, one canonical,
+- `audit_google.py` over 230 city + 50 state pages + the hub (latest run after Batch 52 on Nov 9, 2026): head tags, canonicals, OG, FAQ schema mirrors, map embeds inside their states and unique, phones and addresses consistent, link forms canonical, images alt, sitemap/robots/headers clean — ALL CLEAR
+- `audit_site.py` over 317 pages (50 state + 230 city + 37 core, latest run after Batch 52 on Nov 9, 2026): links/anchors resolve, tags balanced, JSON-LD valid, GTM ×2, one H1, one canonical,
   no orphans, hub/state/city interlinked, sitemap complete, ZIP lock + consent gate on every tool page.
   (One pre-existing note: Gilbert's "the number one thing that delays…" is not a superiority claim.)
 - `test_new_pages.cjs` (Playwright) on Tulsa, Norman, Edmond, Gainesville + home, vehicle-quote, Texas: desktop & mobile

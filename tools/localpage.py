@@ -1126,6 +1126,39 @@ NEARBY['spokane-washington'] = [A+x for x in ['spokane-valley-washington','seatt
 NEARBY['vancouver-washington'] = [A+x for x in ['portland-oregon','salem-oregon','seattle-washington','kent-washington','bellevue-washington','spokane-washington','eugene-oregon','boise-idaho']]
 NEARBY['missoula-montana'] = [A+x for x in ['bozeman-montana','great-falls-montana','billings-montana','spokane-washington','spokane-valley-washington','seattle-washington','boise-idaho','meridian-idaho']]
 
+# ---- Batch 52 (Nov 9, 2026): Lakewood (NJ); Elizabeth (NJ); Hampton (VA); Suffolk (VA); Gresham (OR) ----
+#      NOTE: all three states already carry City Pages blocks (Newark/Paterson; Virginia Beach/Chesapeake/Richmond/Norfolk/
+#      Newport News; Portland/Eugene/Salem), so this batch adds no hub block. Windows: "1–3 Days" on all five (the Shore end
+#      of the Parkway allows trucks south of exit 105, the port corridor, Hampton Roads, and the Portland metro). Name
+#      collisions: "Elizabeth" is the Elizabeth River on the Norfolk and Chesapeake pages and "Elizabeth City" on the Carolina
+#      side, "Hampton" is "Hampton Roads" on every Virginia page and "Hampton Boulevard" in Norfolk, "Suffolk" is a Long Island
+#      county on the New York pages, and "Lakewood" is a Colorado, Ohio and Washington city — all four are linked by exact
+#      phrase only, never by bare link_first. The Gresham row's address (1333 NW Eastman Pkwy) is Gresham City Hall's street
+#      address, flagged to the owner and used as given.
+register('auto-transport-lakewood-new-jersey', 'Lakewood', 'NJ')
+register('auto-transport-elizabeth-new-jersey', 'Elizabeth', 'NJ')
+register('auto-transport-hampton-virginia', 'Hampton', 'VA')
+register('auto-transport-suffolk-virginia', 'Suffolk', 'VA')
+register('auto-transport-gresham-oregon', 'Gresham', 'OR')
+_s('lakewood-new-jersey', [A+x for x in ['elizabeth-new-jersey','newark-new-jersey','staten-island-new-york','brooklyn-new-york','manhattan-new-york','paterson-new-jersey','philadelphia-pennsylvania','allentown-pennsylvania']])
+_s('elizabeth-new-jersey', [A+x for x in ['newark-new-jersey','staten-island-new-york','manhattan-new-york','brooklyn-new-york','queens-new-york','paterson-new-jersey','yonkers-new-york','lakewood-new-jersey']])
+_s('hampton-virginia', [A+x for x in ['newport-news-virginia','norfolk-virginia','virginia-beach-virginia','chesapeake-virginia','suffolk-virginia','richmond-virginia','raleigh-north-carolina','baltimore-maryland']])
+_s('suffolk-virginia', [A+x for x in ['chesapeake-virginia','norfolk-virginia','virginia-beach-virginia','newport-news-virginia','hampton-virginia','richmond-virginia','raleigh-north-carolina','durham-north-carolina']])
+_s('gresham-oregon', [A+x for x in ['portland-oregon','vancouver-washington','salem-oregon','eugene-oregon','seattle-washington','kent-washington','bellevue-washington','boise-idaho']])
+# explicit re-cuts (8 max; explicit lists, never appends)
+NEARBY['newark-new-jersey'] = [A+x for x in ['elizabeth-new-jersey','manhattan-new-york','paterson-new-jersey','staten-island-new-york','brooklyn-new-york','yonkers-new-york','lakewood-new-jersey','philadelphia-pennsylvania']]
+NEARBY['paterson-new-jersey'] = [A+x for x in ['newark-new-jersey','elizabeth-new-jersey','manhattan-new-york','bronx-new-york','yonkers-new-york','staten-island-new-york','brooklyn-new-york','queens-new-york']]
+NEARBY['staten-island-new-york'] = [A+x for x in ['brooklyn-new-york','manhattan-new-york','elizabeth-new-jersey','newark-new-jersey','queens-new-york','bronx-new-york','yonkers-new-york','paterson-new-jersey']]
+NEARBY['manhattan-new-york'] = [A+x for x in ['brooklyn-new-york','queens-new-york','bronx-new-york','newark-new-jersey','elizabeth-new-jersey','paterson-new-jersey','yonkers-new-york','staten-island-new-york']]
+NEARBY['norfolk-virginia'] = [A+x for x in ['virginia-beach-virginia','chesapeake-virginia','hampton-virginia','newport-news-virginia','suffolk-virginia','richmond-virginia','raleigh-north-carolina','baltimore-maryland']]
+NEARBY['chesapeake-virginia'] = [A+x for x in ['norfolk-virginia','virginia-beach-virginia','suffolk-virginia','newport-news-virginia','hampton-virginia','richmond-virginia','raleigh-north-carolina','baltimore-maryland']]
+NEARBY['virginia-beach-virginia'] = [A+x for x in ['norfolk-virginia','chesapeake-virginia','newport-news-virginia','hampton-virginia','suffolk-virginia','richmond-virginia','raleigh-north-carolina','baltimore-maryland']]
+NEARBY['newport-news-virginia'] = [A+x for x in ['hampton-virginia','norfolk-virginia','virginia-beach-virginia','chesapeake-virginia','suffolk-virginia','richmond-virginia','raleigh-north-carolina','baltimore-maryland']]
+NEARBY['richmond-virginia'] = [A+x for x in ['virginia-beach-virginia','norfolk-virginia','chesapeake-virginia','newport-news-virginia','hampton-virginia','suffolk-virginia','baltimore-maryland','raleigh-north-carolina']]
+NEARBY['portland-oregon'] = [A+x for x in ['gresham-oregon','vancouver-washington','salem-oregon','eugene-oregon','seattle-washington','bellevue-washington','kent-washington','boise-idaho']]
+NEARBY['vancouver-washington'] = [A+x for x in ['portland-oregon','gresham-oregon','salem-oregon','seattle-washington','kent-washington','bellevue-washington','eugene-oregon','boise-idaho']]
+NEARBY['salem-oregon'] = [A+x for x in ['portland-oregon','eugene-oregon','vancouver-washington','gresham-oregon','seattle-washington','bellevue-washington','sacramento-california','boise-idaho']]
+
 # ---- Oct 27, 2026 SEO pass: the legacy Corpus Christi page (old-generation template, pending a rebuild row)
 #      is registered so the hub, the Texas City Pages block, the sitemap and the counts include it. It is NOT
 #      rebuilt by localpage (no builder); patches/seo_pass_2026_10.py left its own breadcrumb/schema in place.
