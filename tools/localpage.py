@@ -1079,6 +1079,53 @@ NEARBY['huntsville-alabama'] = [A+x for x in ['tuscaloosa-alabama','montgomery-a
 NEARBY['new-haven-connecticut'] = [A+x for x in ['bridgeport-connecticut','hartford-connecticut','waterbury-connecticut','norwalk-connecticut','stamford-connecticut','boston-massachusetts','cranston-rhode-island','pawtucket-rhode-island']]
 NEARBY['henderson-nevada'] = [A+x for x in ['las-vegas-nevada','phoenix-arizona','gilbert-arizona','salt-lake-city-utah','riverside-california','sparks-nevada','carson-city-nevada']]
 
+# ---- Batch 51 (Nov 9, 2026): Lancaster (PA); Harrisburg (PA); Cary (NC); Chattanooga (TN); Morgantown (WV); Kent (WA); Spokane Valley (WA) ----
+#      NOTE: all five states already carry City Pages blocks (Allentown/Bethlehem/Erie/Philadelphia/Pittsburgh/Reading;
+#      Charlotte/Durham/Fayetteville/Greensboro/Raleigh/Winston-Salem; Memphis/Knoxville; Charleston/Huntington;
+#      Bellevue/Seattle/Spokane/Vancouver), so this batch adds no hub block. Windows: Morgantown "2–4 Days" (the WV
+#      pass-through figure used by Charleston and Huntington), the other six "1–3 Days". The Chattanooga row spelled the
+#      state "Tenneesee" again (flagged, used as given). Name collisions: "Lancaster" is also a Reading street (Lancaster
+#      Pike) and a Philadelphia avenue, "Kent" is a Seattle staging yard in prose and a county in DE and MI, "Spokane
+#      Valley" must stay a full phrase (the Spokane page says "the Valley" alone) — neighbor links read the mention first.
+register('auto-transport-lancaster-pennsylvania', 'Lancaster', 'PA')
+register('auto-transport-harrisburg-pennsylvania', 'Harrisburg', 'PA')
+register('auto-transport-cary-north-carolina', 'Cary', 'NC')
+register('auto-transport-chattanooga-tennessee', 'Chattanooga', 'TN')
+register('auto-transport-morgantown-west-virginia', 'Morgantown', 'WV')
+register('auto-transport-kent-washington', 'Kent', 'WA')
+register('auto-transport-spokane-valley-washington', 'Spokane Valley', 'WA')
+_s('lancaster-pennsylvania', [A+x for x in ['harrisburg-pennsylvania','reading-pennsylvania','philadelphia-pennsylvania','allentown-pennsylvania','bethlehem-pennsylvania','wilmington-delaware','baltimore-maryland','columbia-maryland']])
+_s('harrisburg-pennsylvania', [A+x for x in ['lancaster-pennsylvania','reading-pennsylvania','allentown-pennsylvania','bethlehem-pennsylvania','philadelphia-pennsylvania','pittsburgh-pennsylvania','baltimore-maryland','columbia-maryland']])
+_s('cary-north-carolina', [A+x for x in ['raleigh-north-carolina','durham-north-carolina','fayetteville-north-carolina','greensboro-north-carolina','winston-salem-north-carolina','charlotte-north-carolina','richmond-virginia','virginia-beach-virginia']])
+_s('chattanooga-tennessee', [A+x for x in ['knoxville-tennessee','atlanta-georgia','huntsville-alabama','athens-georgia','macon-georgia','tuscaloosa-alabama','memphis-tennessee','lexington-kentucky']])
+_s('morgantown-west-virginia', [A+x for x in ['pittsburgh-pennsylvania','charleston-west-virginia','huntington-west-virginia','columbus-ohio','akron-ohio','cleveland-ohio','germantown-maryland','baltimore-maryland']])
+_s('kent-washington', [A+x for x in ['seattle-washington','bellevue-washington','vancouver-washington','portland-oregon','spokane-washington','spokane-valley-washington','salem-oregon','boise-idaho']])
+_s('spokane-valley-washington', [A+x for x in ['spokane-washington','seattle-washington','bellevue-washington','kent-washington','missoula-montana','boise-idaho','meridian-idaho','portland-oregon']])
+# explicit re-cuts (8 max; explicit lists, never appends — _load_nearby() seeds NEARBY from the finished pages on import)
+NEARBY['allentown-pennsylvania'] = [A+x for x in ['philadelphia-pennsylvania','bethlehem-pennsylvania','reading-pennsylvania','harrisburg-pennsylvania','lancaster-pennsylvania','manhattan-new-york','newark-new-jersey','wilmington-delaware']]
+NEARBY['bethlehem-pennsylvania'] = [A+x for x in ['allentown-pennsylvania','reading-pennsylvania','philadelphia-pennsylvania','harrisburg-pennsylvania','lancaster-pennsylvania','newark-new-jersey','manhattan-new-york','wilmington-delaware']]
+NEARBY['reading-pennsylvania'] = [A+x for x in ['philadelphia-pennsylvania','allentown-pennsylvania','lancaster-pennsylvania','harrisburg-pennsylvania','bethlehem-pennsylvania','wilmington-delaware','baltimore-maryland','pittsburgh-pennsylvania']]
+NEARBY['philadelphia-pennsylvania'] = [A+x for x in ['wilmington-delaware','allentown-pennsylvania','bethlehem-pennsylvania','reading-pennsylvania','lancaster-pennsylvania','harrisburg-pennsylvania','newark-new-jersey','baltimore-maryland']]
+NEARBY['pittsburgh-pennsylvania'] = [A+x for x in ['philadelphia-pennsylvania','harrisburg-pennsylvania','morgantown-west-virginia','erie-pennsylvania','cleveland-ohio','akron-ohio','columbus-ohio','buffalo-new-york']]
+NEARBY['wilmington-delaware'] = [A+x for x in ['philadelphia-pennsylvania','dover-delaware','baltimore-maryland','lancaster-pennsylvania','reading-pennsylvania','allentown-pennsylvania','newark-new-jersey','columbia-maryland']]
+NEARBY['germantown-maryland'] = [A+x for x in ['columbia-maryland','baltimore-maryland','wilmington-delaware','philadelphia-pennsylvania','dover-delaware','harrisburg-pennsylvania','lancaster-pennsylvania','richmond-virginia']]
+NEARBY['raleigh-north-carolina'] = [A+x for x in ['cary-north-carolina','durham-north-carolina','charlotte-north-carolina','greensboro-north-carolina','winston-salem-north-carolina','fayetteville-north-carolina','richmond-virginia','virginia-beach-virginia']]
+NEARBY['durham-north-carolina'] = [A+x for x in ['raleigh-north-carolina','cary-north-carolina','charlotte-north-carolina','fayetteville-north-carolina','greensboro-north-carolina','winston-salem-north-carolina','virginia-beach-virginia','richmond-virginia']]
+NEARBY['fayetteville-north-carolina'] = [A+x for x in ['raleigh-north-carolina','cary-north-carolina','durham-north-carolina','charlotte-north-carolina','greensboro-north-carolina','winston-salem-north-carolina','columbia-south-carolina','richmond-virginia']]
+NEARBY['greensboro-north-carolina'] = [A+x for x in ['winston-salem-north-carolina','durham-north-carolina','raleigh-north-carolina','cary-north-carolina','charlotte-north-carolina','fayetteville-north-carolina','richmond-virginia','columbia-south-carolina']]
+NEARBY['knoxville-tennessee'] = [A+x for x in ['chattanooga-tennessee','memphis-tennessee','lexington-kentucky','louisville-kentucky','cincinnati-ohio','atlanta-georgia','huntsville-alabama','charlotte-north-carolina']]
+NEARBY['atlanta-georgia'] = [A+x for x in ['chattanooga-tennessee','athens-georgia','macon-georgia','augusta-georgia','columbus-georgia','charlotte-north-carolina','tuscaloosa-alabama','jacksonville-florida']]
+NEARBY['huntsville-alabama'] = [A+x for x in ['chattanooga-tennessee','tuscaloosa-alabama','montgomery-alabama','atlanta-georgia','memphis-tennessee','knoxville-tennessee','louisville-kentucky','lexington-kentucky']]
+NEARBY['athens-georgia'] = [A+x for x in ['atlanta-georgia','augusta-georgia','macon-georgia','chattanooga-tennessee','charlotte-north-carolina','savannah-georgia','columbus-georgia']]
+NEARBY['macon-georgia'] = [A+x for x in ['atlanta-georgia','columbus-georgia','savannah-georgia','augusta-georgia','athens-georgia','chattanooga-tennessee','jacksonville-florida','charleston-south-carolina']]
+NEARBY['charleston-west-virginia'] = [A+x for x in ['huntington-west-virginia','morgantown-west-virginia','columbus-ohio','lexington-kentucky','cincinnati-ohio','pittsburgh-pennsylvania','dayton-ohio','louisville-kentucky']]
+NEARBY['huntington-west-virginia'] = [A+x for x in ['charleston-west-virginia','morgantown-west-virginia','lexington-kentucky','cincinnati-ohio','columbus-ohio','louisville-kentucky','dayton-ohio','pittsburgh-pennsylvania']]
+NEARBY['seattle-washington'] = [A+x for x in ['bellevue-washington','kent-washington','spokane-washington','spokane-valley-washington','portland-oregon','vancouver-washington','eugene-oregon','boise-idaho']]
+NEARBY['bellevue-washington'] = [A+x for x in ['seattle-washington','kent-washington','portland-oregon','vancouver-washington','spokane-washington','spokane-valley-washington','eugene-oregon','boise-idaho']]
+NEARBY['spokane-washington'] = [A+x for x in ['spokane-valley-washington','seattle-washington','bellevue-washington','kent-washington','boise-idaho','meridian-idaho','missoula-montana','portland-oregon']]
+NEARBY['vancouver-washington'] = [A+x for x in ['portland-oregon','salem-oregon','seattle-washington','kent-washington','bellevue-washington','spokane-washington','eugene-oregon','boise-idaho']]
+NEARBY['missoula-montana'] = [A+x for x in ['bozeman-montana','great-falls-montana','billings-montana','spokane-washington','spokane-valley-washington','seattle-washington','boise-idaho','meridian-idaho']]
+
 # ---- Oct 27, 2026 SEO pass: the legacy Corpus Christi page (old-generation template, pending a rebuild row)
 #      is registered so the hub, the Texas City Pages block, the sitemap and the counts include it. It is NOT
 #      rebuilt by localpage (no builder); patches/seo_pass_2026_10.py left its own breadcrumb/schema in place.

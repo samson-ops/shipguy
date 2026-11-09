@@ -1713,6 +1713,128 @@ lists and Henderson's block regenerated to seven chips. Open: the Corpus Christi
 all" line (expected until its rebuild row arrives); the Casper 304, Cheyenne 304 and Nashua 802 lines await the
 owner's word.
 
+## Batch 51 — Lancaster, Harrisburg, Cary, Chattanooga, Morgantown, Kent, Spokane Valley (Nov 9, 2026)
+| City | URL | Phone | Office |
+|---|---|---|---|
+| Lancaster, PA | /city/auto-transport-lancaster-pennsylvania/ | (717) 373-2385 | 800 New Holland Avenue Rear #547, Lancaster, PA 17601 (New Holland Avenue northeast of downtown, minutes from Route 30 and the train station) |
+| Harrisburg, PA | /city/auto-transport-harrisburg-pennsylvania/ | (717) 420-1853 | 922 N 3rd St #477, Harrisburg, PA 17102 (the Midtown coworking building on North Third, blocks from the Capitol and the Broad Street Market) |
+| Cary, NC | /city/auto-transport-cary-north-carolina/ | (919) 439-1535 | 167 E Chatham St #542, Cary, NC 27511 (the Rogers building downtown, a short walk from the depot and the downtown park) |
+| Chattanooga, TN | /city/auto-transport-chattanooga-tennessee/ | (423) 205-3243 | 1100 Market St Ste 770, Chattanooga, TN 37402 (the eleven-story innovation-district building at Eleventh and Market, beside Warehouse Row) |
+| Morgantown, WV | /city/auto-transport-morgantown-west-virginia/ | (304) 632-6352 | 7839 University Town Centre Dr #323, Morgantown, WV 26501 (University Town Centre in Granville, across the river from campus, off I-79 exit 155) |
+| Kent, WA | /city/auto-transport-kent-washington/ | (253) 525-1531 | 20024 85th Ave S #420A, Kent, WA 98031 (Building C of the Northwest Corporate Park in the north valley, a mile from the 212th Street ramps onto 167) |
+| Spokane Valley, WA | /city/auto-transport-spokane-valley-washington/ | (509) 287-4409 | 2818 N Sullivan Rd #535, Spokane Valley, WA 99216 (the Sullivan Business Center, the former utility-meter maker's campus north of the river, a mile up from I-90) |
+
+GBP embeds on all seven (rows saved to `tools/rows/batch51_rows.txt` on arrival; the Chattanooga row spelled the
+state "Tenneesee" again, built as Tennessee; trailing spaces trimmed; six embeds carry the GBP name "Ship Guy Auto
+Transport" in the singular and Harrisburg's says "Transports"). Area codes: all seven match their states (717 PA,
+919 NC, 423 TN, 304 WV, 253 and 509 WA). Office locations verified by web search: 800 New Holland Avenue is the
+medical and professional stretch of New Holland Avenue between downtown and the Route 30 interchange (the 802
+building next door holds clinics); 922 N 3rd St is the Pursuit coworking building in Midtown Harrisburg at Forster
+and Third; 167 E Chatham St is the Rogers building (Cary Founded coworking) in historic downtown Cary; 1100 Market
+St is the Edney Innovation Center at Eleventh and Market, beside Warehouse Row (Society of Work on the sixth floor,
+suite 770 on the seventh); 7839 University Town Centre Dr is the far end of the University Town Centre shopping
+district in Granville, off I-79 exit 155; 20024 85th Ave S is Building C of the Northwest Corporate Park (Cubework
+Kent), 300,000 square feet of warehouse at 85th and 200th in the Kent Valley North submarket; 2818 N Sullivan Rd is
+the Sullivan Business Center (Burbity Workspaces suite 100, the former Itron campus) on the edge of the Spokane
+Business and Industrial Park. Hours ET (Lancaster, Harrisburg, Cary, Chattanooga, Morgantown), PT (Kent, Spokane
+Valley). Stats rows: "2–4 Days" for Morgantown (the West Virginia pass-through figure that Charleston and
+Huntington also carry, the glance explaining that the Pittsburgh trucks often beat it) and "1–3 Days" for the
+other six. All five states already carried City Pages blocks, so this batch adds no hub block (50 states still).
+Name collisions were read before linking: "Lancaster" is the Reading office street (Lancaster Pike) and a
+Philadelphia avenue, so Reading's 222 sentence was linked by phrase and Philadelphia was left alone; "Spokane"
+would match inside "Spokane Valley" on the new page, so the Havana-line sentence was linked by phrase; the Spokane
+page's "the Valley" became a linked "Spokane Valley"; "Kent" was linked only on Seattle's staging sentence.
+Neighbor links placed by `link_first`: Allentown, Bethlehem, Pittsburgh and Lancaster (Harrisburg); Raleigh (Cary)
+and Cary (Raleigh); Knoxville and Huntsville (Chattanooga) and Chattanooga (Knoxville); Pittsburgh and Charleston
+WV (Morgantown) and Morgantown (Pittsburgh); Seattle (Kent) and Kent (Seattle). Pricing: Lancaster = inside the
+Philadelphia/Baltimore/Harrisburg triangle (Harrisburg $130–$210, Philadelphia and Baltimore $150–$240, Washington
+$180–$290, New York $210–$320, Richmond $240–$360, Pittsburgh $250–$380, Boston $300–$440, Charlotte $400–$580,
+Orlando $700–$1,000); Harrisburg = the Pennsylvania page's Harrisburg rows plus Pittsburgh and Cleveland on the
+Turnpike (Baltimore $150–$240, Philadelphia and Washington $170–$280, New York $220–$340, Pittsburgh $230–$350,
+Richmond $240–$360, Cleveland $290–$420, Boston $320–$470, Charlotte $400–$580, Orlando $700–$1,000); Cary = the
+Raleigh table shifted a few miles west (Wilmington $200–$310, Charlotte and Richmond $220–$340, Virginia Beach
+$230–$350, Washington $260–$390, Atlanta $360–$520, Philadelphia $370–$540, New York $430–$620, Nashville
+$440–$630, Orlando $470–$680); Chattanooga = below Nashville and Knoxville on the Georgia and Alabama lanes
+(Knoxville $150–$240 per the Knoxville row, Huntsville $160–$260, Atlanta $170–$280, Nashville $190–$300,
+Birmingham $200–$310, Asheville $260–$390, Memphis $330–$480, Charlotte $340–$490, Jacksonville $390–$560, Orlando
+$470–$690); Morgantown = the West Virginia page's Pittsburgh row plus the 68 and 79 lanes (Pittsburgh $150–$240,
+Charleston $210–$320, Columbus $230–$350, Cleveland/Baltimore/Washington $240–$360, Cincinnati $280–$410,
+Philadelphia $320–$470, Charlotte $360–$520, Orlando $660–$940); Kent = the Seattle table a notch lower where the
+carriers start the day (Portland $210–$330, Spokane $260–$390, Boise $430–$620, Sacramento $560–$820, San
+Francisco and Salt Lake $600–$880, Los Angeles $800–$1,150, Denver $850–$1,200, Phoenix $900–$1,300, Chicago
+$1,100–$1,550); Spokane Valley = the Spokane table ten miles east (Missoula $220–$340, Seattle $260–$390, Portland
+$320–$460, Boise $370–$530, Salt Lake $500–$730, Sacramento $650–$920, Denver $750–$1,050, Los Angeles
+$800–$1,150, Minneapolis $900–$1,250, Chicago $1,050–$1,450). Angles: Lancaster = Route 30 as the freeway loop
+and the tourist strip, 283 and 222 to the Turnpike, the pikes, the buggies and the farm lanes (FAQ), the row
+houses and Cabbage Hill (FAQ), the hospital system and the flooring maker (unnamed), Franklin and Marshall and
+Millersville (FAQ), the Lititz production campus, the retirement villages and the snowbirds, the Gap, the Hershey
+and Carlisle collector-car meets (FAQ), the October tourist weekends (FAQ), the January 2016 county-record blizzard
+(FAQ), Lee on the Conestoga, Agnes at Columbia, the February 2016 tornado, Lititz/Ephrata/Columbia (FAQ);
+Harrisburg = 81, 83, 283 and the Turnpike's two exits, the Eisenhower Interchange, Front Street and the bridges,
+the Walnut Street Bridge since the 1996 ice, the warehouse belt from Carlisle to Grantville (FAQ), the state,
+the medical center and the chocolate company in Hershey (unnamed), the Navy supply command, the War College,
+the depot and the Gap (FAQ), the campuses, Midtown and Allison Hill vs the ring (FAQ), the Farm Show and the
+Outdoor Show (FAQ), Kipona and Artsfest, the Hershey meet and the Carlisle shows (FAQ), Agnes 1972 and Lee 2011
+on the Susquehanna (FAQ), the 2016 blizzard; Cary = 40, 540, the US 1/64 freeway, the two parkways, the
+covenants and the gates (FAQ), the software campus and the game studio (unnamed, FAQ), the insurer, the Park, the
+laptop maker, the hospital, the Triangle campuses (FAQ), Fort Bragg and Seymour Johnson, Lazy Daze, the Diwali
+and lantern festivals, the soccer park, the State Fair and the football Saturdays on Trinity Road (FAQ), the
+December 2002 ice storm (FAQ), the January 2000 snow, Fran and Florence, the April pollen (FAQ),
+Apex/Morrisville/Holly Springs (FAQ); Chattanooga = 24 off Monteagle, 75 and the split, 59 at Wildwood, 27 and
+the Olgiati, 153, the Ridge Cut, the river bridges, the German plant and the warehouses at Enterprise South
+(unnamed company, FAQ), the power authority and the two insurers, the three hospital systems, the university and
+the college in Collegedale (FAQ), the bakery, the fiber and the remote workers, Lookout and Signal mountains vs
+the valleys (FAQ), the Ironman calendar and the August 2027 half world championship (FAQ), the regatta, Nightfall,
+the Sunday market, the new South Broad ballpark, the April 2011 and Easter 2020 tornadoes (FAQ), Monteagle fog and
+ice (FAQ), the 1993 blizzard, Fort Oglethorpe/Ringgold/Cleveland (FAQ); Morgantown = 79 and the Star City,
+Westover and Goshen Road exits, 68 to Cheat Lake and Coopers Rock, 43 to Uniontown, 705 and Patteson Drive, the
+PRT, Sunnyside and South Park vs Suncrest and Cheat Lake (FAQ), WVU's 23,500 students and the mid-August move-in
+(FAQ), sixty-thousand-seat Saturdays (FAQ), the two hospital systems, the federal safety institute and the energy
+lab (unnamed), the fingerprint center in Clarksburg (FAQ), the gas crews, the summer-league ballclub, the
+Pittsburgh commuters, the 2–4 day window explained (FAQ), the 2010 and 2016 snows and Sandy's October snow (FAQ),
+the 1985 Cheat flood, Cheat Lake/Fairmont/Clarksburg (FAQ); Kent = 167 and its four Kent exits, 516 over both
+hills, the West and East Valley highways, the valley yards where the Sound carriers stage (FAQ), the rocket
+company's headquarters off 212th, the aerospace campus, the coffee roaster, the Renton jet plant (all unnamed,
+FAQ), the warehouse district, the colleges, the hundred-language schools, Lewis-McChord forty minutes south (FAQ),
+the East Hill and West Hill vs the valley (FAQ), Cornucopia Days, the hockey arena, the drag races at the raceway
+(FAQ), the Lake Meridian fireworks, the December 2025 Green River flood that closed 167 for most of a week (FAQ),
+the 2009 dam scare and the sandbag winters, the February 2019 snows and the December 2022 ice (FAQ), the 2021
+heat dome and the 2020 smoke; Spokane Valley = 90 and its nine exits, Trent and the rail crossings, Sullivan,
+Pines, Argonne and Barker, Sprague's dealer strip and Appleway, the 2003 incorporation, the industrial park (FAQ),
+the aluminum and paper mills, the dealers' weekly shipments (FAQ), the former meter-maker's campus, the hospital,
+Fairchild, Opportunity and Veradale vs Ponderosa and the Saltese slopes (FAQ), Valleyfest and the county fair at
+Broadway and Havana (FAQ), the ballclub, Hoopfest weekend, the lake and ski traffic, the November 2015 windstorm
+(FAQ), the 1996 ice storm, December 2008's five feet, the 1991 firestorm, the 2023 fires and the August smoke
+(FAQ), Coeur d'Alene and Post Falls (FAQ), the Valley-beats-downtown window (FAQ).
+Long-sentence pass: `patches/fix_batch51_long.py` edits the BUILDERS rather than the built HTML (185 rewrites over
+three rounds, plus the Lancaster meta recut so `short_meta()` keeps a second clause), so a rebuild reproduces the
+final pages; all seven then audit CLEAR with no local terms missing. No fresh-wording pass was needed: every
+standard block was written seven different ways from the start, and the pages measured 17.4–20.5% overlap before
+the hub patch (Lancaster 20.5, Spokane Valley 20.1, Harrisburg 18.5, Chattanooga 18.3, Morgantown 18.3, Cary 17.9,
+Kent 17.4). Integration (`patches/batch51_states.py`): Pennsylvania block regenerated (8) with the quick note
+(Harrisburg and Lancaster added, York moved to the pass-through list), the intro's stale "four city pages" and "the
+city page" recut to "the eight city pages", the Harrisburg capital sentence and the Lancaster Amish-country
+sentence linked ("has its own page now"), both chips, and the warehouse FAQ pointing at the Harrisburg page for
+the lots and the show weeks (resynced); North Carolina block (7) with the quick note, a Cary sentence added to the
+40 corridor paragraph, and the student FAQ's Triangle line split so the Cary page covers the planned communities
+(resynced; Cary had no chip or prose mention before); Tennessee block (3) with the quick note, the German-plant
+sentence linked, the chip, and the ice FAQ pointing at the Chattanooga page for Monteagle (resynced); West
+Virginia block (3) with the quick note, the Morgantown lead linked, the chip, and the Pittsburgh-lane FAQ pointing
+at the page (resynced); Washington block (6) with the quick note, a Kent sentence added to the suburbs paragraph,
+"so does Spokane Valley next door" added to the Spokane paragraph, both chips, and the eastern-Washington FAQ
+pointing at the Spokane Valley page (resynced). Nearby chips regenerated on every built page (the see-all count
+inside the block moved 218 → 225) with explicit re-cuts for Allentown, Bethlehem, Reading, Philadelphia,
+Pittsburgh, Wilmington, Germantown, Raleigh, Durham, Fayetteville, Greensboro, Knoxville, Atlanta, Huntsville,
+Athens, Macon, Charleston WV, Huntington, Seattle, Bellevue, Spokane, Vancouver and Missoula (no appends, per the
+Batch 50 lesson; Reading, Germantown, Athens and Macon filled toward 8); hub rows for PA, NC, TN, WV, WA
+regenerated; hub counts 225 ("Two hundred twenty-five" / "two hundred twenty-five local pages"); sitemap +7 (293
+URLs, lastmod 2026-11-09); `audit_site.py` ALL CLEAR over 312 pages; `audit_google.py` ALL CLEAR over 225 city +
+50 state pages + the hub (GBP names now 93 "Ship Guy Auto Transports", 60 "ShipGuy Auto Transports", 8 "Ship Guy
+Auto Transport"); `vehicle-quote.html` and `vehicle-quote/index.html` still byte-identical; `test_new_pages.cjs`
+passes on the seven pages, the five state pages and the hub. Open: the Corpus Christi legacy page still lacks the
+"See all" line (expected until its rebuild row arrives); the Casper 304, Cheyenne 304 and Nashua 802 lines and the
+GBP name normalization await the owner's word.
+
 ## Google-facing audit of every city page (Nov 2, 2026)
 A new `tools/audit_google.py` runs over all 218 city pages, the 50 state pages and the hub and checks what Search
 Console, the Rich Results test and a Maps embed would complain about: lang/charset/viewport; one title and one
@@ -1785,8 +1907,8 @@ Tallahassee and Daytona Beach using the maps.app.goo.gl links you sent. The buil
 
 ## Verification run (all green)
 - `audit_content.py` on the 3 new pages: CLEAR.
-- `audit_google.py` over 218 city + 50 state pages + the hub (Nov 2, 2026): head tags, canonicals, OG, FAQ schema mirrors, map embeds inside their states and unique, phones and addresses consistent, link forms canonical, images alt, sitemap/robots/headers clean — ALL CLEAR
-- `audit_site.py` over 305 pages (50 state + 218 city + 37 core, latest run after Batch 50 on Nov 2, 2026): links/anchors resolve, tags balanced, JSON-LD valid, GTM ×2, one H1, one canonical,
+- `audit_google.py` over 225 city + 50 state pages + the hub (latest run after Batch 51 on Nov 9, 2026): head tags, canonicals, OG, FAQ schema mirrors, map embeds inside their states and unique, phones and addresses consistent, link forms canonical, images alt, sitemap/robots/headers clean — ALL CLEAR
+- `audit_site.py` over 312 pages (50 state + 225 city + 37 core, latest run after Batch 51 on Nov 9, 2026): links/anchors resolve, tags balanced, JSON-LD valid, GTM ×2, one H1, one canonical,
   no orphans, hub/state/city interlinked, sitemap complete, ZIP lock + consent gate on every tool page.
   (One pre-existing note: Gilbert's "the number one thing that delays…" is not a superiority claim.)
 - `test_new_pages.cjs` (Playwright) on Tulsa, Norman, Edmond, Gainesville + home, vehicle-quote, Texas: desktop & mobile
